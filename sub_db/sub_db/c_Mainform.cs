@@ -35,6 +35,10 @@ namespace sub_db
 			this.Text				= $"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}";
 			notifyIcon_Main.Text	= this.Text;
 
+			// 读取配置文件
+			c_Settings_.read_config();
+
+			// 加载多语言模板
 			c_Languages_.read_languages_list();
 			c_Languages_.change_language_to_default();
 		}

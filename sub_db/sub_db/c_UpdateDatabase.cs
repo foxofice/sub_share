@@ -142,11 +142,19 @@ namespace sub_db
 
 			void load_func()
 			{
+				c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Clear();
+				c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add("");
+
+				SortedSet<string> source_list = new SortedSet<string>();
+				c_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Clear();
+
 				c_Common_.SetProgressValue(0);
 
 				string[] dirs_type = Directory.GetDirectories(c_Config_.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
 				foreach(string dir_type in dirs_type)
 				{
+					c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add(Path.GetFileName(dir_type));
+
 					string[] dirs_year = Directory.GetDirectories(dir_type, "*.*", SearchOption.TopDirectoryOnly);
 					for(int i_year=0; i_year<dirs_year.Length; ++i_year)
 					{
@@ -237,6 +245,8 @@ namespace sub_db
 							string[] dirs_source = Directory.GetDirectories(dir_video, "*.*", SearchOption.TopDirectoryOnly);
 							foreach(string dir_source in dirs_source)
 							{
+								source_list.Add(Path.GetFileName(dir_source));
+
 								string[] dirs_sub_name = Directory.GetDirectories(dir_source, "*.*", SearchOption.TopDirectoryOnly);
 								foreach(string dir_sub_name in dirs_sub_name)
 								{
@@ -323,6 +333,9 @@ namespace sub_db
 						}	// for dirs_video
 					}	// for dirs_year
 				}	// for dirs_type
+
+				foreach(string source in source_list)
+					c_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Add(source);
 
 				c_Common_.SetProgressValue(0);
 			}

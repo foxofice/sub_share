@@ -287,8 +287,6 @@
 		private System.Windows.Forms.RadioButton radioButton_Time_EarlierThan;
 		private System.Windows.Forms.RadioButton radioButton_Time_Equal;
 		private System.Windows.Forms.RadioButton radioButton_Time_LaterThan;
-		private System.Windows.Forms.ComboBox comboBox_Type;
-		private System.Windows.Forms.ComboBox comboBox_Source;
 		private System.Windows.Forms.TextBox textBox_SubName;
 		private System.Windows.Forms.TextBox textBox_Extension;
 		private System.Windows.Forms.TextBox textBox_Providers;
@@ -304,5 +302,7 @@
 		internal System.Windows.Forms.CheckBox checkBox_Time;
 		internal System.Windows.Forms.LinkLabel linkLabel_Reset;
 		internal System.Windows.Forms.Button button_Search;
+		internal System.Windows.Forms.ComboBox comboBox_Type;
+		internal System.Windows.Forms.ComboBox comboBox_Source;
 	}
 }

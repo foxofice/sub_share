@@ -7,7 +7,7 @@ using System.IO;
 
 namespace sub_db
 {
-	internal class c_Settings_
+	internal class c_Config_
 	{
 		static string				m_s_OPTION__SUBS_PATH		= "subs_path";		// 字幕列表路径
 		static string				m_s_OPTION__UPDATA_DB_TIME	= "updata_db_time";	// 最后更新数据库的时间

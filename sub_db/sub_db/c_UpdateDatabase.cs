@@ -124,11 +124,11 @@ namespace sub_db
 			//if(m_is_stopping)
 			//	return;
 
-			if(!Directory.Exists(c_Settings_.m_s_subs_path))
+			if(!Directory.Exists(c_Config_.m_s_subs_path))
 			{
 				void func()
 				{
-					append_log(	$"{c_Languages_.txt(55)} {c_Settings_.m_s_subs_path}",	// 找不到字幕路径
+					append_log(	$"{c_Languages_.txt(55)} {c_Config_.m_s_subs_path}",	// 找不到字幕路径
 								Color.Red );
 					lock_controls(true);
 				}
@@ -145,7 +145,7 @@ namespace sub_db
 
 			void load_func()
 			{
-				string[] dirs_type = Directory.GetDirectories(c_Settings_.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
+				string[] dirs_type = Directory.GetDirectories(c_Config_.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
 				foreach(string dir_type in dirs_type)
 				{
 					string[] dirs_year = Directory.GetDirectories(dir_type, "*.*", SearchOption.TopDirectoryOnly);

@@ -34,7 +34,7 @@ namespace sub_db
 			this.Text		= $"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}";
 
 			// 读取配置文件
-			c_Settings_.read_config();
+			c_Config_.read_config();
 
 			// 加载多语言模板
 			c_Languages_.read_languages_list();
@@ -142,5 +142,15 @@ namespace sub_db
 			c_Forms_.active_form(m_About);
 		}
 		#endregion
+
+		private void DataGridView_Main_ColumnWidthChanged(object sender, DataGridViewColumnEventArgs e)
+		{
+
+		}
+
+		private void DataGridView_Main_ColumnDisplayIndexChanged(object sender, DataGridViewColumnEventArgs e)
+		{
+
+		}
 	};
 }	// namespace sub_db

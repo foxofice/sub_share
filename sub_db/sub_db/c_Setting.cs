@@ -56,9 +56,9 @@ namespace sub_db
 		 *==============================================================*/
 		private void Button_OK_Click(object sender, EventArgs e)
 		{
-			c_Settings_.m_s_subs_path = textBox_subs_path.Text;
+			c_Config_.m_s_subs_path = textBox_subs_path.Text;
 
-			c_Settings_.write_config();
+			c_Config_.write_config();
 			this.Close();
 		}
 		#endregion
@@ -68,7 +68,7 @@ namespace sub_db
 		 *==============================================================*/
 		internal void	update_UI()
 		{
-			textBox_subs_path.Text = c_Settings_.m_s_subs_path;
+			textBox_subs_path.Text = c_Config_.m_s_subs_path;
 		}
 	};
 }	// namespace sub_db

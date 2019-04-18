@@ -32,16 +32,16 @@
 			this.textBox_Filter = new System.Windows.Forms.TextBox();
 			this.label_Filter = new System.Windows.Forms.Label();
 			this.linkLabel_FilterHelp = new System.Windows.Forms.LinkLabel();
-			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
 			this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_UpdateDB = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSplitButton_Languages = new System.Windows.Forms.ToolStripSplitButton();
 			this.toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_About = new System.Windows.Forms.ToolStripButton();
+			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Search)).BeginInit();
 			this.toolStrip_Main.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Search)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dataGridView_Main
@@ -59,6 +59,8 @@
 			this.dataGridView_Main.RowTemplate.Height = 23;
 			this.dataGridView_Main.Size = new System.Drawing.Size(784, 506);
 			this.dataGridView_Main.TabIndex = 2;
+			this.dataGridView_Main.ColumnDisplayIndexChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnDisplayIndexChanged);
+			this.dataGridView_Main.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnWidthChanged);
 			// 
 			// textBox_Filter
 			// 
@@ -91,18 +93,6 @@
 			this.linkLabel_FilterHelp.Text = "？";
 			this.linkLabel_FilterHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_FilterHelp_LinkClicked);
 			// 
-			// pictureBox_Search
-			// 
-			this.pictureBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox_Search.Image = global::sub_db.Resource1.Search;
-			this.pictureBox_Search.Location = new System.Drawing.Point(739, 30);
-			this.pictureBox_Search.Name = "pictureBox_Search";
-			this.pictureBox_Search.Size = new System.Drawing.Size(16, 16);
-			this.pictureBox_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-			this.pictureBox_Search.TabIndex = 5;
-			this.pictureBox_Search.TabStop = false;
-			this.pictureBox_Search.Click += new System.EventHandler(this.PictureBox_Search_Click);
-			// 
 			// toolStrip_Main
 			// 
 			this.toolStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -116,6 +106,11 @@
 			this.toolStrip_Main.Size = new System.Drawing.Size(784, 25);
 			this.toolStrip_Main.TabIndex = 7;
 			this.toolStrip_Main.Text = "toolStrip1";
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
 			// 
 			// toolStripButton_UpdateDB
 			// 
@@ -143,11 +138,6 @@
 			this.toolStripButton_Settings.Text = "设置";
 			this.toolStripButton_Settings.Click += new System.EventHandler(this.ToolStripButton_Settings_Click);
 			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-			// 
 			// toolStripButton_About
 			// 
 			this.toolStripButton_About.Image = global::sub_db.Resource1.About;
@@ -156,6 +146,18 @@
 			this.toolStripButton_About.Size = new System.Drawing.Size(52, 22);
 			this.toolStripButton_About.Text = "关于";
 			this.toolStripButton_About.Click += new System.EventHandler(this.ToolStripButton_About_Click);
+			// 
+			// pictureBox_Search
+			// 
+			this.pictureBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox_Search.Image = global::sub_db.Resource1.Search;
+			this.pictureBox_Search.Location = new System.Drawing.Point(739, 30);
+			this.pictureBox_Search.Name = "pictureBox_Search";
+			this.pictureBox_Search.Size = new System.Drawing.Size(16, 16);
+			this.pictureBox_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+			this.pictureBox_Search.TabIndex = 5;
+			this.pictureBox_Search.TabStop = false;
+			this.pictureBox_Search.Click += new System.EventHandler(this.PictureBox_Search_Click);
 			// 
 			// c_Mainform
 			// 
@@ -174,9 +176,9 @@
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.c_Mainform_FormClosing);
 			this.Load += new System.EventHandler(this.c_Mainform_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Search)).EndInit();
 			this.toolStrip_Main.ResumeLayout(false);
 			this.toolStrip_Main.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Search)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

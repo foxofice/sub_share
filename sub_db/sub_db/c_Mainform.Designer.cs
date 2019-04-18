@@ -57,7 +57,7 @@
 			this.dataGridView_Main.Name = "dataGridView_Main";
 			this.dataGridView_Main.ReadOnly = true;
 			this.dataGridView_Main.RowTemplate.Height = 23;
-			this.dataGridView_Main.Size = new System.Drawing.Size(784, 506);
+			this.dataGridView_Main.Size = new System.Drawing.Size(1008, 674);
 			this.dataGridView_Main.TabIndex = 2;
 			this.dataGridView_Main.ColumnDisplayIndexChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnDisplayIndexChanged);
 			this.dataGridView_Main.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnWidthChanged);
@@ -68,7 +68,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.textBox_Filter.Location = new System.Drawing.Point(83, 28);
 			this.textBox_Filter.Name = "textBox_Filter";
-			this.textBox_Filter.Size = new System.Drawing.Size(650, 21);
+			this.textBox_Filter.Size = new System.Drawing.Size(874, 21);
 			this.textBox_Filter.TabIndex = 1;
 			this.textBox_Filter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Filter_KeyPress);
 			// 
@@ -85,7 +85,7 @@
 			// 
 			this.linkLabel_FilterHelp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.linkLabel_FilterHelp.AutoSize = true;
-			this.linkLabel_FilterHelp.Location = new System.Drawing.Point(761, 31);
+			this.linkLabel_FilterHelp.Location = new System.Drawing.Point(985, 31);
 			this.linkLabel_FilterHelp.Name = "linkLabel_FilterHelp";
 			this.linkLabel_FilterHelp.Size = new System.Drawing.Size(17, 12);
 			this.linkLabel_FilterHelp.TabIndex = 4;
@@ -103,7 +103,7 @@
             this.toolStripButton_About});
 			this.toolStrip_Main.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip_Main.Name = "toolStrip_Main";
-			this.toolStrip_Main.Size = new System.Drawing.Size(784, 25);
+			this.toolStrip_Main.Size = new System.Drawing.Size(1008, 25);
 			this.toolStrip_Main.TabIndex = 7;
 			this.toolStrip_Main.Text = "toolStrip1";
 			// 
@@ -151,7 +151,7 @@
 			// 
 			this.pictureBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.pictureBox_Search.Image = global::sub_db.Resource1.Search;
-			this.pictureBox_Search.Location = new System.Drawing.Point(739, 30);
+			this.pictureBox_Search.Location = new System.Drawing.Point(963, 30);
 			this.pictureBox_Search.Name = "pictureBox_Search";
 			this.pictureBox_Search.Size = new System.Drawing.Size(16, 16);
 			this.pictureBox_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -163,7 +163,7 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(784, 561);
+			this.ClientSize = new System.Drawing.Size(1008, 729);
 			this.Controls.Add(this.toolStrip_Main);
 			this.Controls.Add(this.pictureBox_Search);
 			this.Controls.Add(this.linkLabel_FilterHelp);
@@ -175,6 +175,7 @@
 			this.Text = "Subtitles DataBase";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.c_Mainform_FormClosing);
 			this.Load += new System.EventHandler(this.c_Mainform_Load);
+			this.ResizeEnd += new System.EventHandler(this.c_Mainform_ResizeEnd);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).EndInit();
 			this.toolStrip_Main.ResumeLayout(false);
 			this.toolStrip_Main.PerformLayout();

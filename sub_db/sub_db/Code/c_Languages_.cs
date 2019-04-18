@@ -29,6 +29,9 @@ namespace sub_db
 		 *==============================================================*/
 		internal static void	read_languages_list()
 		{
+			if(!Directory.Exists(c_Path_.m_k_LANGUAGE_DIR))
+				return;
+
 			string[] files = Directory.GetFiles(c_Path_.m_k_LANGUAGE_DIR,
 												"*.txt",
 												SearchOption.TopDirectoryOnly);
@@ -110,12 +113,15 @@ namespace sub_db
 		 *==============================================================*/
 		internal static void	change_language(int index)
 		{
-			m_s_current_language_idx = index;
-
 			var mainform	= c_Mainform.m_s_mainform;
 			var about		= c_Mainform.m_s_mainform.m_About;
 			var setting		= c_Mainform.m_s_mainform.m_Setting;
 			var update_db	= c_Mainform.m_s_mainform.m_UpdateDatabase;
+
+			((ToolStripMenuItem)mainform.toolStripSplitButton_Languages.DropDownItems[m_s_current_language_idx]).Checked = false;
+			((ToolStripMenuItem)mainform.toolStripSplitButton_Languages.DropDownItems[index]).Checked = true;
+
+			m_s_current_language_idx = index;
 
 			// 托盘图标
 			mainform.toolStripButton_UpdateDB.Text			= txt(10);	// 更新数据库
@@ -179,12 +185,15 @@ namespace sub_db
 		 *==============================================================*/
 		internal static string	txt(int num)
 		{
-			var txt_list = m_s_LanguagesList[m_s_current_language_idx].m_txt;
+			if(m_s_current_language_idx < m_s_LanguagesList.Count)
+			{
+				var txt_list = m_s_LanguagesList[m_s_current_language_idx].m_txt;
 
-			if(txt_list.ContainsKey(num))
-				return txt_list[num];
-			else
-				return "(no msg)";
+				if(txt_list.ContainsKey(num))
+					return txt_list[num];
+			}
+
+			return "(no msg)";
 		}
 	}
 }	// namespace sub_db

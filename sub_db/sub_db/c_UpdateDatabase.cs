@@ -93,7 +93,7 @@ namespace sub_db
 		/*==============================================================
 		 * 追加日志
 		 *==============================================================*/
-		void append_log(string txt, Color color = default)
+		internal void append_log(string txt, Color color = default)
 		{
 			if(color == default)
 				color = Color.Black;
@@ -121,9 +121,6 @@ namespace sub_db
 		 *==============================================================*/
 		void update_db_thread()
 		{
-			//if(m_is_stopping)
-			//	return;
-
 			if(!Directory.Exists(c_Config_.m_s_subs_path))
 			{
 				void func()
@@ -145,15 +142,21 @@ namespace sub_db
 
 			void load_func()
 			{
+				c_Common_.SetProgressValue(0);
+
 				string[] dirs_type = Directory.GetDirectories(c_Config_.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
 				foreach(string dir_type in dirs_type)
 				{
 					string[] dirs_year = Directory.GetDirectories(dir_type, "*.*", SearchOption.TopDirectoryOnly);
-					foreach(string dir_year in dirs_year)
+					for(int i_year=0; i_year<dirs_year.Length; ++i_year)
 					{
+						string dir_year = dirs_year[i_year];
+
 						string[] dirs_video = Directory.GetDirectories(dir_year, "*.*", SearchOption.TopDirectoryOnly);
-						foreach(string dir_video in dirs_video)
+						for(int i_video=0; i_video<dirs_video.Length; ++i_video)
 						{
+							string dir_video = dirs_video[i_video];
+
 							void update_label()
 							{
 								label_Log.Text = dir_video;
@@ -231,10 +234,10 @@ namespace sub_db
 								}	// for
 							}
 
-							string[] dirs_matches = Directory.GetDirectories(dir_video, "*.*", SearchOption.TopDirectoryOnly);
-							foreach(string dir_matches in dirs_matches)
+							string[] dirs_source = Directory.GetDirectories(dir_video, "*.*", SearchOption.TopDirectoryOnly);
+							foreach(string dir_source in dirs_source)
 							{
-								string[] dirs_sub_name = Directory.GetDirectories(dir_matches, "*.*", SearchOption.TopDirectoryOnly);
+								string[] dirs_sub_name = Directory.GetDirectories(dir_source, "*.*", SearchOption.TopDirectoryOnly);
 								foreach(string dir_sub_name in dirs_sub_name)
 								{
 									if(m_is_stopping)
@@ -297,7 +300,7 @@ namespace sub_db
 
 									sub_info.m_time			= date;
 									sub_info.m_type			= Path.GetFileName(dir_type);
-									sub_info.m_match		= Path.GetFileName(dir_matches);
+									sub_info.m_source		= Path.GetFileName(dir_source);
 									sub_info.m_sub_name		= Path.GetFileName(dir_sub_name);
 
 									foreach(string extension in extension_list)
@@ -311,10 +314,17 @@ namespace sub_db
 									sub_info.m_providers	= providers;
 									sub_info.m_desc			= desc;
 								}	// for dirs_sub_name
-							}	// for dirs_matches
+							}	// for dirs_source
+
+							// 进度条
+							int progress_value =	c_Common_.m_k_MAX_PROGRESS_VALUE * i_year / dirs_year.Length	+
+													c_Common_.m_k_MAX_PROGRESS_VALUE * (i_video + 1) / (dirs_year.Length * dirs_video.Length);
+							c_Common_.SetProgressValue(progress_value);
 						}	// for dirs_video
 					}	// for dirs_year
 				}	// for dirs_type
+
+				c_Common_.SetProgressValue(0);
 			}
 
 			c_Forms_.Invoke(load_func);
@@ -324,6 +334,9 @@ namespace sub_db
 			void done_func()
 			{
 				sw.Stop();
+
+				c_Config_.m_s_last_updata_db_time = DateTime.Now;
+				c_Config_.write_config();
 
 				lock_controls(true);
 
@@ -343,7 +356,11 @@ namespace sub_db
 				}
 
 				c_Data_.update_DataTable();
+
+				c_Mainform.m_s_mainform.m_DataGridView_event_enable = false;
 				c_Mainform.m_s_mainform.dataGridView_Main.DataSource = c_Data_.m_s_dt;
+				c_Mainform.m_s_mainform.update_columns_style();
+				c_Mainform.m_s_mainform.m_DataGridView_event_enable = true;
 
 				//c_Mainform.m_s_mainform.dataGridView_Main.Columns["extension"].Width = 50;
 

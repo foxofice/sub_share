@@ -146,6 +146,6 @@
 		internal System.Windows.Forms.ColumnHeader columnHeader_Log;
 		internal System.Windows.Forms.PictureBox pictureBox_Start;
 		internal System.Windows.Forms.PictureBox pictureBox_Stop;
-		private System.Windows.Forms.ProgressBar progressBar_Update;
+		internal System.Windows.Forms.ProgressBar progressBar_Update;
 	}
 }

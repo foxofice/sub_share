@@ -17,10 +17,13 @@ namespace sub_db
 			InitializeComponent();
 		}
 
-		internal static c_Mainform	m_s_mainform		= null;
-		internal c_About			m_About				= new c_About();
-		internal c_Setting			m_Setting			= new c_Setting();
-		internal c_UpdateDatabase	m_UpdateDatabase	= new c_UpdateDatabase();
+		internal static c_Mainform	m_s_mainform				= null;
+		internal c_About			m_About						= new c_About();
+		internal c_Setting			m_Setting					= new c_Setting();
+		internal c_UpdateDatabase	m_UpdateDatabase			= new c_UpdateDatabase();
+
+		// DataGridView 的事件是否有效
+		internal bool				m_DataGridView_event_enable	= true;
 
 		#region Winform 事件
 		/*==============================================================
@@ -58,6 +61,19 @@ namespace sub_db
 		}
 
 		/*==============================================================
+		 * 调整窗口结束
+		 *==============================================================*/
+		private void c_Mainform_ResizeEnd(object sender, EventArgs e)
+		{
+			c_Config_.m_s_window_width	= this.Width;
+			c_Config_.m_s_window_height	= this.Height;
+			c_Config_.m_s_window_x		= this.DesktopLocation.X;
+			c_Config_.m_s_window_y		= this.DesktopLocation.Y;
+
+			c_Config_.write_config();
+		}
+
+		/*==============================================================
 		 * 查找（回车）
 		 *==============================================================*/
 		private void TextBox_Filter_KeyPress(object sender, KeyPressEventArgs e)
@@ -74,7 +90,12 @@ namespace sub_db
 			c_Data_.m_s_lock.EnterReadLock();
 
 			if(textBox_Filter.TextLength == 0)
+			{
+				m_DataGridView_event_enable = false;
 				dataGridView_Main.DataSource = c_Data_.m_s_dt;
+				update_columns_style();
+				m_DataGridView_event_enable = true;
+			}
 			else
 			{
 				try
@@ -91,7 +112,10 @@ namespace sub_db
 						c_Data_.m_s_dt_search.Rows.Add(dr_tmp);
 					}
 
+					m_DataGridView_event_enable = false;
 					dataGridView_Main.DataSource = c_Data_.m_s_dt_search;
+					update_columns_style();
+					m_DataGridView_event_enable = true;
 				}
 				catch(Exception ex)
 				{
@@ -114,6 +138,34 @@ namespace sub_db
 			catch(Exception)
 			{
 			}
+		}
+
+		/*==============================================================
+		 * 调整列宽
+		 *==============================================================*/
+		private void DataGridView_Main_ColumnWidthChanged(object sender, DataGridViewColumnEventArgs e)
+		{
+			if(!m_DataGridView_event_enable)
+				return;
+
+			for(int i=0; i<(int)c_Data_.e_ColumnName.MAX; ++i)
+				c_Config_.m_s_column_width[i] = dataGridView_Main.Columns[((c_Data_.e_ColumnName)i).ToString()].Width;
+
+			c_Config_.write_config();
+		}
+
+		/*==============================================================
+		 * 调整列顺序
+		 *==============================================================*/
+		private void DataGridView_Main_ColumnDisplayIndexChanged(object sender, DataGridViewColumnEventArgs e)
+		{
+			if(!m_DataGridView_event_enable)
+				return;
+
+			for(int i=0; i<(int)c_Data_.e_ColumnName.MAX; ++i)
+				c_Config_.m_s_column_idx[i] = dataGridView_Main.Columns[((c_Data_.e_ColumnName)i).ToString()].DisplayIndex;
+
+			c_Config_.write_config();
 		}
 		#endregion
 
@@ -143,14 +195,31 @@ namespace sub_db
 		}
 		#endregion
 
-		private void DataGridView_Main_ColumnWidthChanged(object sender, DataGridViewColumnEventArgs e)
+		/*==============================================================
+		 * 更新 dataGridView_Main 的各列样式
+		 *==============================================================*/
+		internal void	update_columns_style()
 		{
+			m_DataGridView_event_enable = false;
 
-		}
+			for(int i=0; i<c_Config_.m_s_column_width.Length; ++i)
+			{
+				if(c_Config_.m_s_column_width[i] > 0)
+					dataGridView_Main.Columns[((c_Data_.e_ColumnName)i).ToString()].Width = c_Config_.m_s_column_width[i];
+			}
 
-		private void DataGridView_Main_ColumnDisplayIndexChanged(object sender, DataGridViewColumnEventArgs e)
-		{
+			SortedDictionary<int, string> sort_list = new SortedDictionary<int, string>();
 
+			for(int i=0; i<c_Config_.m_s_column_idx.Length; ++i)
+			{
+				if(c_Config_.m_s_column_idx[i] >= 0)
+					sort_list.Add(c_Config_.m_s_column_idx[i], ((c_Data_.e_ColumnName)i).ToString());
+			}
+
+			foreach(var kvp in sort_list)
+				dataGridView_Main.Columns[kvp.Value].DisplayIndex = kvp.Key;
+
+			m_DataGridView_event_enable = true;
 		}
 	};
 }	// namespace sub_db

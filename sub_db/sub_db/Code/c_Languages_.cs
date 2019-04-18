@@ -117,6 +117,7 @@ namespace sub_db
 			var about		= c_Mainform.m_s_mainform.m_About;
 			var setting		= c_Mainform.m_s_mainform.m_Setting;
 			var update_db	= c_Mainform.m_s_mainform.m_UpdateDatabase;
+			var adv_search	= c_Mainform.m_s_mainform.m_Search;
 
 			((ToolStripMenuItem)mainform.toolStripSplitButton_Languages.DropDownItems[m_s_current_language_idx]).Checked = false;
 			((ToolStripMenuItem)mainform.toolStripSplitButton_Languages.DropDownItems[index]).Checked = true;
@@ -125,16 +126,18 @@ namespace sub_db
 
 			// 托盘图标
 			mainform.toolStripButton_UpdateDB.Text			= txt(10);	// 更新数据库
-			mainform.toolStripSplitButton_Languages.Text	= txt(11);	// 语言(Languages)
-			mainform.toolStripButton_Settings.Text			= txt(12);	// 设置
-			mainform.toolStripButton_About.Text				= txt(13);	// 关于
+			mainform.toolStripButton_Search.Text			= txt(11);	// 高级查找
+			mainform.toolStripSplitButton_Languages.Text	= txt(12);	// 语言(Languages)
+			mainform.toolStripButton_Settings.Text			= txt(13);	// 设置
+			mainform.toolStripButton_About.Text				= txt(14);	// 关于
 
 			// mainform
-			mainform.label_Filter.Text			= txt(20);	// 查询语句：
+			mainform.label_Filter.Text			= txt(20);							// 查询语句：
+			c_Forms_.m_s_Tooltip.SetToolTip(mainform.pictureBox_Search, txt(22));	// 查找
 
 			// about
 			about.Text							= string.Format("{0:s} {1:s} {2:s}",
-																txt(13),	// 关于
+																txt(14),	// 关于
 																c_Common_.m_k_PROGRAM_NAME,
 																c_Common_.m_k_VERSION);
 
@@ -145,7 +148,7 @@ namespace sub_db
 			about.button_OK.Text				= txt(0);	// 确定
 
 			// setting
-			setting.Text						= txt(12);	// 设置
+			setting.Text						= txt(13);	// 设置
 			setting.label_subs_path.Text		= txt(40);	// 字幕路径：
 			setting.button_OK.Text				= txt(0);	// 确定
 
@@ -154,6 +157,18 @@ namespace sub_db
 			c_Forms_.m_s_Tooltip.SetToolTip(update_db.pictureBox_Stop,	txt(51));	// 停止更新数据库
 			update_db.columnHeader_Time.Text	= txt(52);	// 时间
 			update_db.columnHeader_Log.Text		= txt(53);	// 日志
+
+			// search
+			adv_search.label_Name.Text			= txt(70);	// 影片名称：
+			adv_search.label_SubName.Text		= txt(71);	// 字幕名称：
+			adv_search.label_Extension.Text		= txt(72);	// 字幕文件后缀：
+			adv_search.label_Providers.Text		= txt(73);	// 提供者/字幕组：
+			adv_search.label_Desc.Text			= txt(74);	// 描述：
+			adv_search.label_Type.Text			= txt(75);	// 类型：
+			adv_search.label_Source.Text		= txt(76);	// 片源：
+			adv_search.checkBox_Time.Text		= txt(77);	// 影片放送日期
+			adv_search.linkLabel_Reset.Text		= txt(78);	// 重置搜索条件
+			adv_search.button_Search.Text		= txt(79);	// 搜索
 		}
 
 		/*==============================================================

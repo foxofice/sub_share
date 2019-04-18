@@ -26,7 +26,7 @@ namespace sub_db
 		{
 			this.Icon				= c_Image_.img2icon(Resource1.Logo);
 			this.Text				= string.Format("{0:s} {1:s} {2:s}",
-													c_Languages_.txt(13),	// 关于
+													c_Languages_.txt(14),	// 关于
 													c_Common_.m_k_PROGRAM_NAME,
 													c_Common_.m_k_VERSION);
 

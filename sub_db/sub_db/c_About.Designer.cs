@@ -85,10 +85,10 @@
 			this.linkLabel_Website.AutoSize = true;
 			this.linkLabel_Website.Location = new System.Drawing.Point(12, 337);
 			this.linkLabel_Website.Name = "linkLabel_Website";
-			this.linkLabel_Website.Size = new System.Drawing.Size(209, 12);
+			this.linkLabel_Website.Size = new System.Drawing.Size(227, 12);
 			this.linkLabel_Website.TabIndex = 2;
 			this.linkLabel_Website.TabStop = true;
-			this.linkLabel_Website.Text = "https://github.com/foxofice/sub_db";
+			this.linkLabel_Website.Text = "https://github.com/foxofice/sub_share";
 			this.linkLabel_Website.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_Website_LinkClicked);
 			// 
 			// c_About

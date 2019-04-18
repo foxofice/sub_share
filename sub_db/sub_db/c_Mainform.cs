@@ -18,9 +18,10 @@ namespace sub_db
 		}
 
 		internal static c_Mainform	m_s_mainform				= null;
-		internal c_About			m_About						= new c_About();
-		internal c_Setting			m_Setting					= new c_Setting();
 		internal c_UpdateDatabase	m_UpdateDatabase			= new c_UpdateDatabase();
+		internal c_Search			m_Search					= new c_Search();
+		internal c_Setting			m_Setting					= new c_Setting();
+		internal c_About			m_About						= new c_About();
 
 		// DataGridView 的事件是否有效
 		internal bool				m_DataGridView_event_enable	= true;
@@ -79,7 +80,7 @@ namespace sub_db
 		private void TextBox_Filter_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if(e.KeyChar == '\r')
-				PictureBox_Search_Click(null, null);
+				do_search();
 		}
 
 		/*==============================================================
@@ -87,43 +88,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void PictureBox_Search_Click(object sender, EventArgs e)
 		{
-			c_Data_.m_s_lock.EnterReadLock();
-
-			if(textBox_Filter.TextLength == 0)
-			{
-				m_DataGridView_event_enable = false;
-				dataGridView_Main.DataSource = c_Data_.m_s_dt;
-				update_columns_style();
-				m_DataGridView_event_enable = true;
-			}
-			else
-			{
-				try
-				{
-					DataRow[] dr_list = c_Data_.m_s_dt.Select(textBox_Filter.Text);
-
-					c_Data_.m_s_dt_search.Rows.Clear();
-					foreach(DataRow dr in dr_list)
-					{
-						DataRow dr_tmp = c_Data_.m_s_dt_search.NewRow();
-						for(int i=0; i<c_Data_.m_s_dt_search.Columns.Count; ++i)
-							dr_tmp[i] = dr[i];
-
-						c_Data_.m_s_dt_search.Rows.Add(dr_tmp);
-					}
-
-					m_DataGridView_event_enable = false;
-					dataGridView_Main.DataSource = c_Data_.m_s_dt_search;
-					update_columns_style();
-					m_DataGridView_event_enable = true;
-				}
-				catch(Exception ex)
-				{
-					MessageBox.Show(ex.Message);
-				}
-			}
-
-			c_Data_.m_s_lock.ExitReadLock();
+			do_search();
 		}
 
 		/*==============================================================
@@ -179,6 +144,14 @@ namespace sub_db
 		}
 
 		/*==============================================================
+		 * 高级查找
+		 *==============================================================*/
+		private void ToolStripButton_Search_Click(object sender, EventArgs e)
+		{
+			c_Forms_.active_form(m_Search);
+		}
+
+		/*==============================================================
 		 * 设置
 		 *==============================================================*/
 		private void ToolStripButton_Settings_Click(object sender, EventArgs e)
@@ -220,6 +193,50 @@ namespace sub_db
 				dataGridView_Main.Columns[kvp.Value].DisplayIndex = kvp.Key;
 
 			m_DataGridView_event_enable = true;
+		}
+
+		/*==============================================================
+		 * 根据条件查找数据
+		 *==============================================================*/
+		internal void	do_search()
+		{
+			c_Data_.m_s_lock.EnterReadLock();
+
+			if(textBox_Filter.TextLength == 0)
+			{
+				m_DataGridView_event_enable = false;
+				dataGridView_Main.DataSource = c_Data_.m_s_dt;
+				update_columns_style();
+				m_DataGridView_event_enable = true;
+			}
+			else
+			{
+				try
+				{
+					DataRow[] dr_list = c_Data_.m_s_dt.Select(textBox_Filter.Text);
+
+					c_Data_.m_s_dt_search.Rows.Clear();
+					foreach(DataRow dr in dr_list)
+					{
+						DataRow dr_tmp = c_Data_.m_s_dt_search.NewRow();
+						for(int i=0; i<c_Data_.m_s_dt_search.Columns.Count; ++i)
+							dr_tmp[i] = dr[i];
+
+						c_Data_.m_s_dt_search.Rows.Add(dr_tmp);
+					}
+
+					m_DataGridView_event_enable = false;
+					dataGridView_Main.DataSource = c_Data_.m_s_dt_search;
+					update_columns_style();
+					m_DataGridView_event_enable = true;
+				}
+				catch(Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+				}
+			}
+
+			c_Data_.m_s_lock.ExitReadLock();
 		}
 	};
 }	// namespace sub_db

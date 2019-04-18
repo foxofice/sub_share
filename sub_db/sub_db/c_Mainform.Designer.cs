@@ -35,6 +35,7 @@
 			this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_UpdateDB = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton_Search = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSplitButton_Languages = new System.Windows.Forms.ToolStripSplitButton();
 			this.toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_About = new System.Windows.Forms.ToolStripButton();
@@ -58,7 +59,7 @@
 			this.dataGridView_Main.ReadOnly = true;
 			this.dataGridView_Main.RowTemplate.Height = 23;
 			this.dataGridView_Main.Size = new System.Drawing.Size(1008, 674);
-			this.dataGridView_Main.TabIndex = 2;
+			this.dataGridView_Main.TabIndex = 4;
 			this.dataGridView_Main.ColumnDisplayIndexChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnDisplayIndexChanged);
 			this.dataGridView_Main.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnWidthChanged);
 			// 
@@ -69,7 +70,7 @@
 			this.textBox_Filter.Location = new System.Drawing.Point(83, 28);
 			this.textBox_Filter.Name = "textBox_Filter";
 			this.textBox_Filter.Size = new System.Drawing.Size(874, 21);
-			this.textBox_Filter.TabIndex = 1;
+			this.textBox_Filter.TabIndex = 2;
 			this.textBox_Filter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Filter_KeyPress);
 			// 
 			// label_Filter
@@ -78,7 +79,7 @@
 			this.label_Filter.Location = new System.Drawing.Point(12, 31);
 			this.label_Filter.Name = "label_Filter";
 			this.label_Filter.Size = new System.Drawing.Size(65, 12);
-			this.label_Filter.TabIndex = 0;
+			this.label_Filter.TabIndex = 1;
 			this.label_Filter.Text = "查询语句：";
 			// 
 			// linkLabel_FilterHelp
@@ -88,7 +89,7 @@
 			this.linkLabel_FilterHelp.Location = new System.Drawing.Point(985, 31);
 			this.linkLabel_FilterHelp.Name = "linkLabel_FilterHelp";
 			this.linkLabel_FilterHelp.Size = new System.Drawing.Size(17, 12);
-			this.linkLabel_FilterHelp.TabIndex = 4;
+			this.linkLabel_FilterHelp.TabIndex = 3;
 			this.linkLabel_FilterHelp.TabStop = true;
 			this.linkLabel_FilterHelp.Text = "？";
 			this.linkLabel_FilterHelp.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_FilterHelp_LinkClicked);
@@ -97,6 +98,7 @@
 			// 
 			this.toolStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton_UpdateDB,
+            this.toolStripButton_Search,
             this.toolStripSplitButton_Languages,
             this.toolStripButton_Settings,
             this.toolStripSeparator1,
@@ -104,7 +106,7 @@
 			this.toolStrip_Main.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip_Main.Name = "toolStrip_Main";
 			this.toolStrip_Main.Size = new System.Drawing.Size(1008, 25);
-			this.toolStrip_Main.TabIndex = 7;
+			this.toolStrip_Main.TabIndex = 0;
 			this.toolStrip_Main.Text = "toolStrip1";
 			// 
 			// toolStripSeparator1
@@ -120,6 +122,15 @@
 			this.toolStripButton_UpdateDB.Size = new System.Drawing.Size(88, 22);
 			this.toolStripButton_UpdateDB.Text = "更新数据库";
 			this.toolStripButton_UpdateDB.Click += new System.EventHandler(this.ToolStripButton_UpdateDB_Click);
+			// 
+			// toolStripButton_Search
+			// 
+			this.toolStripButton_Search.Image = global::sub_db.Resource1.Search;
+			this.toolStripButton_Search.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton_Search.Name = "toolStripButton_Search";
+			this.toolStripButton_Search.Size = new System.Drawing.Size(76, 22);
+			this.toolStripButton_Search.Text = "高级查找";
+			this.toolStripButton_Search.Click += new System.EventHandler(this.ToolStripButton_Search_Click);
 			// 
 			// toolStripSplitButton_Languages
 			// 
@@ -150,7 +161,7 @@
 			// pictureBox_Search
 			// 
 			this.pictureBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox_Search.Image = global::sub_db.Resource1.Search;
+			this.pictureBox_Search.Image = global::sub_db.Resource1.exec;
 			this.pictureBox_Search.Location = new System.Drawing.Point(963, 30);
 			this.pictureBox_Search.Name = "pictureBox_Search";
 			this.pictureBox_Search.Size = new System.Drawing.Size(16, 16);
@@ -186,17 +197,18 @@
 		}
 
 		#endregion
-		private System.Windows.Forms.TextBox textBox_Filter;
 		private System.Windows.Forms.LinkLabel linkLabel_FilterHelp;
 		internal System.Windows.Forms.Label label_Filter;
 		internal System.Windows.Forms.DataGridView dataGridView_Main;
-		private System.Windows.Forms.PictureBox pictureBox_Search;
 		private System.Windows.Forms.ToolStrip toolStrip_Main;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
 		internal System.Windows.Forms.ToolStripSplitButton toolStripSplitButton_Languages;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_UpdateDB;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_Settings;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_About;
+		internal System.Windows.Forms.ToolStripButton toolStripButton_Search;
+		internal System.Windows.Forms.PictureBox pictureBox_Search;
+		internal System.Windows.Forms.TextBox textBox_Filter;
 	}
 }
 

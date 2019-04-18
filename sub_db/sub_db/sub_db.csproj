@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\c_Common_.cs" />
+    <Compile Include="Code\c_Data_.cs" />
     <Compile Include="Code\c_Path_.cs" />
     <Compile Include="Code\c_Forms_.cs" />
     <Compile Include="Code\c_Image_.cs" />
@@ -90,6 +91,12 @@
     <Compile Include="c_Setting.Designer.cs">
       <DependentUpon>c_Setting.cs</DependentUpon>
     </Compile>
+    <Compile Include="c_UpdateDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="c_UpdateDatabase.Designer.cs">
+      <DependentUpon>c_UpdateDatabase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource1.Designer.cs">
@@ -105,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="c_Setting.resx">
       <DependentUpon>c_Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="c_UpdateDatabase.resx">
+      <DependentUpon>c_UpdateDatabase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +171,11 @@
     <Content Include="Files\Languages\02-Traditional_Chinese.txt" />
     <Content Include="Files\Languages\03-English.txt" />
     <Content Include="logo.ico" />
+    <None Include="Pic\Search.png" />
+    <None Include="Pic\Stop2.Png" />
+    <None Include="Pic\Start2.Png" />
+    <None Include="Pic\Stop.png" />
+    <None Include="Pic\Start.png" />
     <None Include="Pic\Logo.png" />
     <None Include="Pic\Settings.png" />
     <None Include="Pic\About.png" />

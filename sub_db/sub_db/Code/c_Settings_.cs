@@ -9,11 +9,11 @@ namespace sub_db
 {
 	internal class c_Settings_
 	{
-		// 字幕列表路径
-		static string			m_s_OPTION__SUBS_PATH	= "subs_path";
+		static string				m_s_OPTION__SUBS_PATH		= "subs_path";		// 字幕列表路径
+		static string				m_s_OPTION__UPDATA_DB_TIME	= "updata_db_time";	// 最后更新数据库的时间
 
-		// 字幕列表路径
-		static internal string	m_s_subs_path			= "../subs_list";
+		static internal string		m_s_subs_path				= "../subs_list";	// 字幕列表路径
+		static internal DateTime	m_s_updata_db_time			= DateTime.MinValue;// 最后更新数据库的时间
 
 		/*==============================================================
 		 * 读取配置文件
@@ -45,6 +45,12 @@ namespace sub_db
 					m_s_subs_path = w2;
 					continue;
 				}
+
+				if(w1 == m_s_OPTION__UPDATA_DB_TIME.ToLower())
+				{
+					DateTime.TryParse(w2, out m_s_updata_db_time);
+					continue;
+				}
 			}	// for
 		}
 
@@ -57,6 +63,11 @@ namespace sub_db
 
 			lines.Add("// 字幕路径");
 			lines.Add(string.Format("subs_path: {0:s}", m_s_subs_path));
+			lines.Add("");
+
+			lines.Add("// 最后更新数据库的时间");
+			lines.Add(string.Format("updata_db_time: {0:s}", m_s_updata_db_time.ToString()));
+			lines.Add("");
 
 			File.WriteAllLines(c_Path_.m_k_CONFIG_FILENAME, lines, Encoding.UTF8);
 		}

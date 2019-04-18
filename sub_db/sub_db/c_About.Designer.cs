@@ -105,6 +105,7 @@
 			this.Name = "c_About";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "关于 Subtitles DataBase";
+			this.TopMost = true;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.c_About_FormClosing);
 			this.Load += new System.EventHandler(this.c_About_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Icon)).EndInit();

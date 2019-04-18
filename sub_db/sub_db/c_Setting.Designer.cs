@@ -81,9 +81,13 @@
 			this.Controls.Add(this.textBox_subs_path);
 			this.Controls.Add(this.label_subs_path);
 			this.Controls.Add(this.button_OK);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
+			this.MinimizeBox = false;
 			this.Name = "c_Setting";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "设置";
+			this.TopMost = true;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.c_Setting_FormClosing);
 			this.Load += new System.EventHandler(this.c_Setting_Load);
 			this.ResumeLayout(false);

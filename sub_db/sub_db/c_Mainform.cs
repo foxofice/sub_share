@@ -17,9 +17,10 @@ namespace sub_db
 			InitializeComponent();
 		}
 
-		internal static c_Mainform	m_s_mainform	= null;
-		internal c_About			m_About			= new c_About();
-		internal c_Setting			m_Setting		= new c_Setting();
+		internal static c_Mainform	m_s_mainform		= null;
+		internal c_About			m_About				= new c_About();
+		internal c_Setting			m_Setting			= new c_Setting();
+		internal c_UpdateDatabase	m_UpdateDatabase	= new c_UpdateDatabase();
 
 		#region Winform 事件
 		/*==============================================================
@@ -27,13 +28,10 @@ namespace sub_db
 		 *==============================================================*/
 		private void c_Mainform_Load(object sender, EventArgs e)
 		{
-			m_s_mainform			= this;
+			m_s_mainform	= this;
 
-			this.Icon				= c_Image_.img2icon(Resource1.Logo);
-			notifyIcon_Main.Icon	= c_Image_.img2icon(Resource1.Logo);
-
-			this.Text				= $"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}";
-			notifyIcon_Main.Text	= this.Text;
+			this.Icon		= c_Image_.img2icon(Resource1.Logo);
+			this.Text		= $"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}";
 
 			// 读取配置文件
 			c_Settings_.read_config();
@@ -48,8 +46,60 @@ namespace sub_db
 		 *==============================================================*/
 		private void c_Mainform_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			e.Cancel = true;
-			this.Hide();
+			if(MessageBox.Show(	c_Languages_.txt(21),	// 是否要退出程序？
+								$"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}",
+								MessageBoxButtons.YesNo,
+								MessageBoxIcon.Question,
+								MessageBoxDefaultButton.Button2 ) == DialogResult.No)
+			{
+				e.Cancel = true;
+				return;
+			}
+		}
+
+		/*==============================================================
+		 * 查找（回车）
+		 *==============================================================*/
+		private void TextBox_Filter_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if(e.KeyChar == '\r')
+				PictureBox_Search_Click(null, null);
+		}
+
+		/*==============================================================
+		 * 查找（按钮）
+		 *==============================================================*/
+		private void PictureBox_Search_Click(object sender, EventArgs e)
+		{
+			c_Data_.m_s_lock.EnterReadLock();
+
+			if(textBox_Filter.TextLength == 0)
+				dataGridView_Main.DataSource = c_Data_.m_s_dt;
+			else
+			{
+				try
+				{
+					DataRow[] dr_list = c_Data_.m_s_dt.Select(textBox_Filter.Text);
+
+					c_Data_.m_s_dt_search.Rows.Clear();
+					foreach(DataRow dr in dr_list)
+					{
+						DataRow dr_tmp = c_Data_.m_s_dt_search.NewRow();
+						for(int i=0; i<c_Data_.m_s_dt_search.Columns.Count; ++i)
+							dr_tmp[i] = dr[i];
+
+						c_Data_.m_s_dt_search.Rows.Add(dr_tmp);
+					}
+
+					dataGridView_Main.DataSource = c_Data_.m_s_dt_search;
+				}
+				catch(Exception ex)
+				{
+					MessageBox.Show(ex.Message);
+				}
+			}
+
+			c_Data_.m_s_lock.ExitReadLock();
 		}
 
 		/*==============================================================
@@ -67,38 +117,19 @@ namespace sub_db
 		}
 		#endregion
 
-		#region 托盘图标
-		/*==============================================================
-		 * 双击托盘图标
-		 *==============================================================*/
-		private void NotifyIcon_Main_DoubleClick(object sender, EventArgs e)
-		{
-			if(!this.Visible)
-				c_Forms_.active_form(this);
-			else
-				this.Hide();
-		}
-
-		/*==============================================================
-		 * 打开
-		 *==============================================================*/
-		private void ToolStripMenuItem_Open_Click(object sender, EventArgs e)
-		{
-			c_Forms_.active_form(this);
-		}
-
+		#region 顶部菜单
 		/*==============================================================
 		 * 更新数据库
 		 *==============================================================*/
-		private void ToolStripMenuItem_UpdateDB_Click(object sender, EventArgs e)
+		private void ToolStripButton_UpdateDB_Click(object sender, EventArgs e)
 		{
-			// TODO:
+			c_Forms_.active_form(m_UpdateDatabase);
 		}
 
 		/*==============================================================
 		 * 设置
 		 *==============================================================*/
-		private void ToolStripMenuItem_Settings_Click(object sender, EventArgs e)
+		private void ToolStripButton_Settings_Click(object sender, EventArgs e)
 		{
 			c_Forms_.active_form(m_Setting);
 		}
@@ -106,26 +137,9 @@ namespace sub_db
 		/*==============================================================
 		 * 关于
 		 *==============================================================*/
-		private void ToolStripMenuItem_About_Click(object sender, EventArgs e)
+		private void ToolStripButton_About_Click(object sender, EventArgs e)
 		{
 			c_Forms_.active_form(m_About);
-		}
-
-		/*==============================================================
-		 * 退出程序
-		 *==============================================================*/
-		private void ToolStripMenuItem_Exit_Click(object sender, EventArgs e)
-		{
-			if(MessageBox.Show(	c_Languages_.txt(21),	// 是否要退出程序？
-								$"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}",
-								MessageBoxButtons.YesNo,
-								MessageBoxIcon.Question,
-								MessageBoxDefaultButton.Button2 ) == DialogResult.No)
-				return;
-
-			notifyIcon_Main.Visible = false;
-
-			c_Common_.quit_program();
 		}
 		#endregion
 	};

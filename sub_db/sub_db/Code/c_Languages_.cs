@@ -78,7 +78,7 @@ namespace sub_db
 			}	// for
 
 			// 更新 UI
-			c_Mainform.m_s_mainform.ToolStripMenuItem_Languages.DropDownItems.Clear();
+			c_Mainform.m_s_mainform.toolStripSplitButton_Languages.DropDownItems.Clear();
 
 			for(int i=0; i<m_s_LanguagesList.Count; ++i)
 			{
@@ -89,7 +89,7 @@ namespace sub_db
 
 				item.Click += Language_Click;
 
-				c_Mainform.m_s_mainform.ToolStripMenuItem_Languages.DropDownItems.Add(item);
+				c_Mainform.m_s_mainform.toolStripSplitButton_Languages.DropDownItems.Add(item);
 			}	// for
 		}
 
@@ -115,32 +115,39 @@ namespace sub_db
 			var mainform	= c_Mainform.m_s_mainform;
 			var about		= c_Mainform.m_s_mainform.m_About;
 			var setting		= c_Mainform.m_s_mainform.m_Setting;
+			var update_db	= c_Mainform.m_s_mainform.m_UpdateDatabase;
 
 			// 托盘图标
-			mainform.ToolStripMenuItem_Open.Text		= txt(1);	// 打开
-			mainform.ToolStripMenuItem_UpdateDB.Text	= txt(10);	// 更新数据库
-			mainform.ToolStripMenuItem_Languages.Text	= txt(11);	// 语言(Languages)
-			mainform.ToolStripMenuItem_Settings.Text	= txt(12);	// 设置
-			mainform.ToolStripMenuItem_About.Text		= txt(13);	// 关于
-			mainform.ToolStripMenuItem_Exit.Text		= txt(14);	// 退出程序
+			mainform.toolStripButton_UpdateDB.Text			= txt(10);	// 更新数据库
+			mainform.toolStripSplitButton_Languages.Text	= txt(11);	// 语言(Languages)
+			mainform.toolStripButton_Settings.Text			= txt(12);	// 设置
+			mainform.toolStripButton_About.Text				= txt(13);	// 关于
 
 			// mainform
-			mainform.label_Filter.Text					= txt(20);	// 查询语句：
+			mainform.label_Filter.Text			= txt(20);	// 查询语句：
 
 			// about
-			about.Text									= string.Format("{0:s} {1:s} {2:s}",
-																		txt(13),	// 关于
-																		c_Common_.m_k_PROGRAM_NAME,
-																		c_Common_.m_k_VERSION);
-			about.label_ChangeLog.Text					= string.Format("{0:s} {1:s}",
-																		c_Common_.m_k_PROGRAM_NAME,
-																		txt(30));	// 更新日志
-			about.button_OK.Text						= txt(0);	// 确定
+			about.Text							= string.Format("{0:s} {1:s} {2:s}",
+																txt(13),	// 关于
+																c_Common_.m_k_PROGRAM_NAME,
+																c_Common_.m_k_VERSION);
+
+			about.label_ChangeLog.Text			= string.Format("{0:s} {1:s}",
+																c_Common_.m_k_PROGRAM_NAME,
+																txt(30));	// 更新日志
+
+			about.button_OK.Text				= txt(0);	// 确定
 
 			// setting
-			setting.Text								= txt(12);	// 设置
-			setting.label_subs_path.Text				= txt(40);	// 字幕路径：
-			setting.button_OK.Text						= txt(0);	// 确定
+			setting.Text						= txt(12);	// 设置
+			setting.label_subs_path.Text		= txt(40);	// 字幕路径：
+			setting.button_OK.Text				= txt(0);	// 确定
+
+			// update_database
+			c_Forms_.m_s_Tooltip.SetToolTip(update_db.pictureBox_Start,	txt(50));	// 开始更新数据库
+			c_Forms_.m_s_Tooltip.SetToolTip(update_db.pictureBox_Stop,	txt(51));	// 停止更新数据库
+			update_db.columnHeader_Time.Text	= txt(52);	// 时间
+			update_db.columnHeader_Log.Text		= txt(53);	// 日志
 		}
 
 		/*==============================================================

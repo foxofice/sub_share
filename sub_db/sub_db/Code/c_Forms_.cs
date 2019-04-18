@@ -9,6 +9,8 @@ namespace sub_db
 {
 	internal class c_Forms_
 	{
+		internal static ToolTip	m_s_Tooltip	= new ToolTip();
+
 		/*==============================================================
 		 * 执行委托
 		 *==============================================================*/

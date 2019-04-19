@@ -353,6 +353,12 @@ namespace sub_db
 
 				lock_controls(true);
 
+				c_Data_.data2dt();
+
+				append_log(string.Format(	c_Languages_.txt(59),	// 正在把数据写入到文件 {0:s} ...
+											c_Path_.m_k_DB_FILENAME ));
+				c_Data_.m_s_dt.WriteXml(c_Path_.m_k_DB_FILENAME);
+
 				if(m_is_stopping)
 				{
 					append_log(	string.Format(	$"{c_Languages_.txt(56)}{c_Languages_.txt(58)}",	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
@@ -368,14 +374,12 @@ namespace sub_db
 								Color.Green );
 				}
 
-				c_Data_.update_DataTable();
-
 				c_Mainform.m_s_mainform.m_DataGridView_event_enable = false;
 				c_Mainform.m_s_mainform.dataGridView_Main.DataSource = c_Data_.m_s_dt;
 				c_Mainform.m_s_mainform.update_columns_style();
 				c_Mainform.m_s_mainform.m_DataGridView_event_enable = true;
 
-				//c_Mainform.m_s_mainform.dataGridView_Main.Columns["extension"].Width = 50;
+				c_Mainform.m_s_mainform.update_status();
 
 				m_is_stopping = false;
 			}

@@ -33,16 +33,19 @@
 			this.label_Filter = new System.Windows.Forms.Label();
 			this.linkLabel_FilterHelp = new System.Windows.Forms.LinkLabel();
 			this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_UpdateDB = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_Search = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSplitButton_Languages = new System.Windows.Forms.ToolStripSplitButton();
 			this.toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_About = new System.Windows.Forms.ToolStripButton();
 			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
+			this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
+			this.toolStripStatusLabel_ItemsCount = new System.Windows.Forms.ToolStripStatusLabel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).BeginInit();
 			this.toolStrip_Main.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Search)).BeginInit();
+			this.statusStrip_Main.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// dataGridView_Main
@@ -58,7 +61,7 @@
 			this.dataGridView_Main.Name = "dataGridView_Main";
 			this.dataGridView_Main.ReadOnly = true;
 			this.dataGridView_Main.RowTemplate.Height = 23;
-			this.dataGridView_Main.Size = new System.Drawing.Size(1008, 674);
+			this.dataGridView_Main.Size = new System.Drawing.Size(1008, 649);
 			this.dataGridView_Main.TabIndex = 4;
 			this.dataGridView_Main.ColumnDisplayIndexChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnDisplayIndexChanged);
 			this.dataGridView_Main.ColumnWidthChanged += new System.Windows.Forms.DataGridViewColumnEventHandler(this.DataGridView_Main_ColumnWidthChanged);
@@ -109,11 +112,6 @@
 			this.toolStrip_Main.TabIndex = 0;
 			this.toolStrip_Main.Text = "toolStrip1";
 			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-			// 
 			// toolStripButton_UpdateDB
 			// 
 			this.toolStripButton_UpdateDB.Image = global::sub_db.Resource1.DB_Refresh;
@@ -149,6 +147,11 @@
 			this.toolStripButton_Settings.Text = "设置";
 			this.toolStripButton_Settings.Click += new System.EventHandler(this.ToolStripButton_Settings_Click);
 			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
 			// toolStripButton_About
 			// 
 			this.toolStripButton_About.Image = global::sub_db.Resource1.About;
@@ -170,11 +173,28 @@
 			this.pictureBox_Search.TabStop = false;
 			this.pictureBox_Search.Click += new System.EventHandler(this.PictureBox_Search_Click);
 			// 
+			// statusStrip_Main
+			// 
+			this.statusStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel_ItemsCount});
+			this.statusStrip_Main.Location = new System.Drawing.Point(0, 707);
+			this.statusStrip_Main.Name = "statusStrip_Main";
+			this.statusStrip_Main.Size = new System.Drawing.Size(1008, 22);
+			this.statusStrip_Main.TabIndex = 6;
+			this.statusStrip_Main.Text = "statusStrip1";
+			// 
+			// toolStripStatusLabel_ItemsCount
+			// 
+			this.toolStripStatusLabel_ItemsCount.Name = "toolStripStatusLabel_ItemsCount";
+			this.toolStripStatusLabel_ItemsCount.Size = new System.Drawing.Size(55, 17);
+			this.toolStripStatusLabel_ItemsCount.Text = "0 条记录";
+			// 
 			// c_Mainform
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1008, 729);
+			this.Controls.Add(this.statusStrip_Main);
 			this.Controls.Add(this.toolStrip_Main);
 			this.Controls.Add(this.pictureBox_Search);
 			this.Controls.Add(this.linkLabel_FilterHelp);
@@ -191,6 +211,8 @@
 			this.toolStrip_Main.ResumeLayout(false);
 			this.toolStrip_Main.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Search)).EndInit();
+			this.statusStrip_Main.ResumeLayout(false);
+			this.statusStrip_Main.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -209,6 +231,8 @@
 		internal System.Windows.Forms.ToolStripButton toolStripButton_Search;
 		internal System.Windows.Forms.PictureBox pictureBox_Search;
 		internal System.Windows.Forms.TextBox textBox_Filter;
+		private System.Windows.Forms.StatusStrip statusStrip_Main;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_ItemsCount;
 	}
 }
 

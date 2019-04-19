@@ -43,6 +43,9 @@ namespace sub_db
 			// 加载多语言模板
 			c_Languages_.read_languages_list();
 			c_Languages_.change_language_to_default();
+
+			// 加载数据库文件
+			c_Data_.read_data_from_file();
 		}
 
 		/*==============================================================
@@ -237,6 +240,17 @@ namespace sub_db
 			}
 
 			c_Data_.m_s_lock.ExitReadLock();
+
+			update_status();
+		}
+
+		/*==============================================================
+		 * 更新状态栏
+		 *==============================================================*/
+		internal void	update_status()
+		{
+			toolStripStatusLabel_ItemsCount.Text = string.Format(	c_Languages_.txt(23),	// {0:d} 条记录
+																	dataGridView_Main.Rows.Count );
 		}
 	};
 }	// namespace sub_db

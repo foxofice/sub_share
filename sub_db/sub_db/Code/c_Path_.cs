@@ -10,6 +10,7 @@ namespace sub_db
 	{
 		internal const string	m_k_CHANGELOG_FILENAME	= "Files/changelog.txt";
 		internal const string	m_k_CONFIG_FILENAME		= "Files/config.txt";
+		internal const string	m_k_DB_FILENAME			= "Files/db.xml";
 
 		internal const string	m_k_LANGUAGE_DIR		= "Files/Languages";
 	};

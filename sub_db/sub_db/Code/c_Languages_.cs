@@ -124,7 +124,7 @@ namespace sub_db
 
 			m_s_current_language_idx = index;
 
-			// 托盘图标
+			// 顶部菜单按钮
 			mainform.toolStripButton_UpdateDB.Text			= txt(10);	// 更新数据库
 			mainform.toolStripButton_Search.Text			= txt(11);	// 高级查找
 			mainform.toolStripSplitButton_Languages.Text	= txt(12);	// 语言(Languages)
@@ -134,6 +134,8 @@ namespace sub_db
 			// mainform
 			mainform.label_Filter.Text			= txt(20);							// 查询语句：
 			c_Forms_.m_s_Tooltip.SetToolTip(mainform.pictureBox_Search, txt(22));	// 查找
+
+			mainform.update_status();
 
 			// about
 			about.Text							= string.Format("{0:s} {1:s} {2:s}",
@@ -155,6 +157,7 @@ namespace sub_db
 			// update_database
 			c_Forms_.m_s_Tooltip.SetToolTip(update_db.pictureBox_Start,	txt(50));	// 开始更新数据库
 			c_Forms_.m_s_Tooltip.SetToolTip(update_db.pictureBox_Stop,	txt(51));	// 停止更新数据库
+			update_db.Text						= txt(10);	// 更新数据库
 			update_db.columnHeader_Time.Text	= txt(52);	// 时间
 			update_db.columnHeader_Log.Text		= txt(53);	// 日志
 

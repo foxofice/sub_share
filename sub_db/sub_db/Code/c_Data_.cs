@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Data;
+using System.IO;
 
 namespace sub_db
 {
@@ -57,9 +58,9 @@ namespace sub_db
 		};
 
 		/*==============================================================
-		 * 更新 DataTable
+		 * 自动创建表结构
 		 *==============================================================*/
-		internal static void	update_DataTable()
+		internal static void	auto_create_schema()
 		{
 			if(m_s_dt.Columns.Count == 0)
 			{
@@ -86,6 +87,14 @@ namespace sub_db
 					m_s_dt_search.Columns.Add(columns_desc[i], Type.GetType(columns_desc[i + 1]));
 				}
 			}
+		}
+
+		/*==============================================================
+		 * m_s_all_subs -> DataTable
+		 *==============================================================*/
+		internal static void	data2dt()
+		{
+			auto_create_schema();
 
 			m_s_lock.EnterWriteLock();
 
@@ -112,6 +121,53 @@ namespace sub_db
 			}	// for
 
 			m_s_lock.ExitWriteLock();
+		}
+
+		/*==============================================================
+		 * 从数据库文件读取数据
+		 *==============================================================*/
+		internal static void	read_data_from_file()
+		{
+			if(!File.Exists(c_Path_.m_k_DB_FILENAME))
+				return;
+
+			auto_create_schema();
+
+			m_s_dt.Rows.Clear();
+			m_s_dt.ReadXml(c_Path_.m_k_DB_FILENAME);
+
+			m_s_lock.EnterWriteLock();
+
+			m_s_all_subs.Clear();
+
+			foreach(DataRow dr in m_s_dt.Rows)
+			{
+				c_SubInfo sub_info = new c_SubInfo();
+				m_s_all_subs.Add(sub_info);
+
+				sub_info.m_name_chs		= (string)dr[e_ColumnName.name_chs.ToString()];
+				sub_info.m_name_cht		= (string)dr[e_ColumnName.name_cht.ToString()];
+				sub_info.m_name_jp		= (string)dr[e_ColumnName.name_jp.ToString()];
+				sub_info.m_name_en		= (string)dr[e_ColumnName.name_en.ToString()];
+				sub_info.m_name_rome	= (string)dr[e_ColumnName.name_rome.ToString()];
+
+				sub_info.m_time			= (DateTime)dr[e_ColumnName.time.ToString()];
+				sub_info.m_type			= (string)dr[e_ColumnName.type.ToString()];
+				sub_info.m_source		= (string)dr[e_ColumnName.source.ToString()];
+				sub_info.m_sub_name		= (string)dr[e_ColumnName.sub_name.ToString()];
+				sub_info.m_extension	= (string)dr[e_ColumnName.extension.ToString()];
+				sub_info.m_providers	= (string)dr[e_ColumnName.providers.ToString()];
+				sub_info.m_desc			= (string)dr[e_ColumnName.desc.ToString()];
+			}	// for
+
+			m_s_lock.ExitWriteLock();
+
+			c_Mainform.m_s_mainform.m_DataGridView_event_enable = false;
+			c_Mainform.m_s_mainform.dataGridView_Main.DataSource = m_s_dt;
+			c_Mainform.m_s_mainform.update_columns_style();
+			c_Mainform.m_s_mainform.m_DataGridView_event_enable = true;
+
+			c_Mainform.m_s_mainform.update_status();
 		}
 	};
 }	// namespace sub_db

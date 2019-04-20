@@ -33,6 +33,7 @@ namespace sub_db
 		const string	m_s_OPTION__COLUMN__EXTENSION__WIDTH	= "column.extension.width";
 		const string	m_s_OPTION__COLUMN__PROVIDERS__WIDTH	= "column.providers.width";
 		const string	m_s_OPTION__COLUMN__DESC__WIDTH			= "column.desc.width";
+		const string	m_s_OPTION__COLUMN__PATH__WIDTH			= "column.path.width";
 
 		const string	m_s_OPTION__COLUMN__NAME_CHS__IDX		= "column.name_chs.idx";
 		const string	m_s_OPTION__COLUMN__NAME_CHT__IDX		= "column.name_cht.idx";
@@ -47,6 +48,7 @@ namespace sub_db
 		const string	m_s_OPTION__COLUMN__EXTENSION__IDX		= "column.extension.idx";
 		const string	m_s_OPTION__COLUMN__PROVIDERS__IDX		= "column.providers.idx";
 		const string	m_s_OPTION__COLUMN__DESC__IDX			= "column.desc.idx";
+		const string	m_s_OPTION__COLUMN__PATH__IDX			= "column.path.idx";
 
 		//==============================
 
@@ -62,11 +64,11 @@ namespace sub_db
 		// 数据网格的样式（width = 宽度、idx = 显示顺序索引）
 		static internal int[]	m_s_column_width	= new int[(int)c_Data_.e_ColumnName.MAX]
 		{
-			-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+			-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 		};
 		static internal int[]	m_s_column_idx		= new int[(int)c_Data_.e_ColumnName.MAX]
 		{
-			-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+			-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
 		};
 
 		/*==============================================================
@@ -202,6 +204,12 @@ namespace sub_db
 					continue;
 				}
 
+				if(w1 == m_s_OPTION__COLUMN__PATH__WIDTH.ToLower())
+				{
+					int.TryParse(w2, out m_s_column_width[(int)c_Data_.e_ColumnName.path]);
+					continue;
+				}
+
 				if(w1 == m_s_OPTION__COLUMN__NAME_CHS__IDX.ToLower())
 				{
 					int.TryParse(w2, out m_s_column_idx[(int)c_Data_.e_ColumnName.name_chs]);
@@ -273,6 +281,12 @@ namespace sub_db
 					int.TryParse(w2, out m_s_column_idx[(int)c_Data_.e_ColumnName.desc]);
 					continue;
 				}
+
+				if(w1 == m_s_OPTION__COLUMN__PATH__IDX.ToLower())
+				{
+					int.TryParse(w2, out m_s_column_idx[(int)c_Data_.e_ColumnName.path]);
+					continue;
+				}
 			}	// for
 
 			var mainform = c_Mainform.m_s_mainform;
@@ -331,6 +345,7 @@ namespace sub_db
 			lines.Add($"{m_s_OPTION__COLUMN__EXTENSION__WIDTH}: {m_s_column_width[(int)c_Data_.e_ColumnName.extension]}");
 			lines.Add($"{m_s_OPTION__COLUMN__PROVIDERS__WIDTH}: {m_s_column_width[(int)c_Data_.e_ColumnName.providers]}");
 			lines.Add($"{m_s_OPTION__COLUMN__DESC__WIDTH}: {m_s_column_width[(int)c_Data_.e_ColumnName.desc]}");
+			lines.Add($"{m_s_OPTION__COLUMN__PATH__WIDTH}: {m_s_column_width[(int)c_Data_.e_ColumnName.path]}");
 			lines.Add("");
 			lines.Add($"{m_s_OPTION__COLUMN__NAME_CHS__IDX}: {m_s_column_idx[(int)c_Data_.e_ColumnName.name_chs]}");
 			lines.Add($"{m_s_OPTION__COLUMN__NAME_CHT__IDX}: {m_s_column_idx[(int)c_Data_.e_ColumnName.name_cht]}");
@@ -345,6 +360,7 @@ namespace sub_db
 			lines.Add($"{m_s_OPTION__COLUMN__EXTENSION__IDX}: {m_s_column_idx[(int)c_Data_.e_ColumnName.extension]}");
 			lines.Add($"{m_s_OPTION__COLUMN__PROVIDERS__IDX}: {m_s_column_idx[(int)c_Data_.e_ColumnName.providers]}");
 			lines.Add($"{m_s_OPTION__COLUMN__DESC__IDX}: {m_s_column_idx[(int)c_Data_.e_ColumnName.desc]}");
+			lines.Add($"{m_s_OPTION__COLUMN__PATH__IDX}: {m_s_column_idx[(int)c_Data_.e_ColumnName.path]}");
 
 			File.WriteAllLines(c_Path_.m_k_CONFIG_FILENAME, lines, Encoding.UTF8);
 		}

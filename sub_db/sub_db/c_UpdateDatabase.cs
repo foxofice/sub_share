@@ -165,6 +165,9 @@ namespace sub_db
 						{
 							string dir_video = dirs_video[i_video];
 
+							// 路径
+							string path = dir_video.Substring(c_Config_.m_s_subs_path.Length + 1).Replace("\\", "/");
+
 							void update_label()
 							{
 								label_Log.Text = dir_video;
@@ -323,6 +326,8 @@ namespace sub_db
 
 									sub_info.m_providers	= providers;
 									sub_info.m_desc			= desc;
+
+									sub_info.m_path			= path;
 								}	// for dirs_sub_name
 							}	// for dirs_source
 

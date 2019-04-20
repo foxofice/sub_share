@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace sub_db
 {
@@ -168,6 +169,66 @@ namespace sub_db
 		private void ToolStripButton_About_Click(object sender, EventArgs e)
 		{
 			c_Forms_.active_form(m_About);
+		}
+
+		/*==============================================================
+		 * 打开本地文件夹
+		 *==============================================================*/
+		private void ToolStripButton_Folder_Click(object sender, EventArgs e)
+		{
+			if(dataGridView_Main.SelectedCells.Count == 0)
+				return;
+
+			DataTable dt = (DataTable)dataGridView_Main.DataSource;
+			if(dt == null)
+				return;
+
+			DataRow dr = ((DataRowView)dataGridView_Main.SelectedCells[0].OwningRow.DataBoundItem).Row;
+
+			string dir = string.Format("{0:s}/{1:s}/{2:s}/{3:s}",
+										c_Config_.m_s_subs_path.Replace("\\", "/"),
+										(string)dr[c_Data_.e_ColumnName.path.ToString()],
+										(string)dr[c_Data_.e_ColumnName.source.ToString()],
+										(string)dr[c_Data_.e_ColumnName.sub_name.ToString()]);
+
+			if(!Directory.Exists(dir))
+			{
+				MessageBox.Show(string.Format(c_Languages_.txt(24), dir));	// 找不到文件夹 {0:s}
+				return;
+			}
+
+			c_Path_.open_dir(dir);
+		}
+
+		/*==============================================================
+		 * 打开远程链接
+		 *==============================================================*/
+		private void ToolStripButton_URL_Click(object sender, EventArgs e)
+		{
+			if(dataGridView_Main.SelectedCells.Count == 0)
+				return;
+
+			DataTable dt = (DataTable)dataGridView_Main.DataSource;
+			if(dt == null)
+				return;
+
+			DataRow dr = ((DataRowView)dataGridView_Main.SelectedCells[0].OwningRow.DataBoundItem).Row;
+
+			string dir = string.Format("{0:s}/{1:s}/{2:s}/{3:s}",
+										c_Config_.m_s_subs_path.Replace("\\", "/"),
+										(string)dr[c_Data_.e_ColumnName.path.ToString()],
+										(string)dr[c_Data_.e_ColumnName.source.ToString()],
+										(string)dr[c_Data_.e_ColumnName.sub_name.ToString()]);
+
+			string url = $"https://github.com/foxofice/sub_share/tree/master/subs_list/{dir}";
+
+			try
+			{
+				System.Diagnostics.Process.Start(url);
+			}
+			catch(Exception)
+			{
+			}
 		}
 		#endregion
 

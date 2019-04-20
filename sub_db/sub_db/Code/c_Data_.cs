@@ -28,6 +28,8 @@ namespace sub_db
 			internal string		m_extension	= "";					// 字幕后缀名（多种格式时用;分割，例如：.ass;.srt）
 			internal string		m_providers	= "";					// 字幕组/提供者
 			internal string		m_desc		= "";					// 字幕说明
+
+			internal string		m_path		= "";					// 路径
 		};
 
 		// 字幕列表（按文件顺序读取）
@@ -53,6 +55,7 @@ namespace sub_db
 			extension,
 			providers,
 			desc,
+			path,
 
 			MAX,
 		};
@@ -79,6 +82,7 @@ namespace sub_db
 					e_ColumnName.extension.ToString(),	"System.String",
 					e_ColumnName.providers.ToString(),	"System.String",
 					e_ColumnName.desc.ToString(),		"System.String",
+					e_ColumnName.path.ToString(),		"System.String",
 				};
 
 				for(int i=0; i<columns_desc.Length; i+=2)
@@ -116,6 +120,7 @@ namespace sub_db
 				dr[e_ColumnName.extension.ToString()]	= sub_info.m_extension;
 				dr[e_ColumnName.providers.ToString()]	= sub_info.m_providers;
 				dr[e_ColumnName.desc.ToString()]		= sub_info.m_desc;
+				dr[e_ColumnName.path.ToString()]		= sub_info.m_path;
 
 				m_s_dt.Rows.Add(dr);
 			}	// for
@@ -158,6 +163,7 @@ namespace sub_db
 				sub_info.m_extension	= (string)dr[e_ColumnName.extension.ToString()];
 				sub_info.m_providers	= (string)dr[e_ColumnName.providers.ToString()];
 				sub_info.m_desc			= (string)dr[e_ColumnName.desc.ToString()];
+				sub_info.m_path			= (string)dr[e_ColumnName.path.ToString()];
 			}	// for
 
 			m_s_lock.ExitWriteLock();

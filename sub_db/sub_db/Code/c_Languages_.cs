@@ -130,6 +130,8 @@ namespace sub_db
 			mainform.toolStripSplitButton_Languages.Text	= txt(12);	// 语言(Languages)
 			mainform.toolStripButton_Settings.Text			= txt(13);	// 设置
 			mainform.toolStripButton_About.Text				= txt(14);	// 关于
+			mainform.toolStripButton_Folder.Text			= txt(15);	// 打开本地文件夹
+			mainform.toolStripButton_URL.Text				= txt(16);	// 打开远程链接
 
 			// mainform
 			mainform.label_Filter.Text			= txt(20);							// 查询语句：

@@ -1,0 +1,494 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: Seto no Hanayome
+Original Script: HKG&CASO
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 864
+PlayResY: 480
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default2,Arial,18,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,0,2,3,2,20,20,20,1
+Style: Default,Arial,18,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,0,2,3,2,20,20,20,1
+Style: *Default,FZShaoEr-M11,32,&H00FFFFFF,&H00DFC2EE,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,2,1,2,10,10,10,1
+Style: *Default2,FZShaoEr-M11,26,&H00FFFFFF,&H00DFC2EE,&H00000000,&H90000000,0,0,0,0,100,100,0,0,1,2,1,8,10,10,10,1
+Style: logo,DFNMingXBold-B5,24,&H0083E7E0,&H0000FFFF,&H20000000,&H00A9C9C2,0,0,0,0,100,100,0,0,1,0,1,2,10,10,10,1
+Style: name,DFNMingXBold-B5,35,&H0083E7E0,&H0000FFFF,&H20333333,&H00A9C9C2,0,0,0,0,100,100,0,0,1,1,1,5,10,10,10,1
+Style: op_jap,DFGBrushRD-W7,27,&H00FFFFFF,&H90FFFFFF,&HFFE2C400,&H00222222,0,0,0,0,100,100,1,0,1,1,2,8,30,30,12,1
+Style: op_chi,FZShaoEr-M11,30,&H00FFFFFF,&H90FFFFFF,&HFF000000,&H00222222,0,0,0,0,100,100,1,0,0,1,2,2,30,30,10,1
+Style: ed_jap,DFPSNGyoSho-W5,28,&H00FFFFFF,&H004080FF,&H00000000,&H00000000,-1,0,0,0,100,100,1,0,1,2,0,8,30,30,10,1
+Style: ed_chi,FZXingKai-S04,33,&H00FFFFFF,&H80000000,&H00000000,&H00000000,0,0,0,0,100,100,1,0,1,2,0,2,30,30,6,1
+Style: in_jap,DFPenJi-W4,26,&H00D3D3F4,&H606D6F92,&H005A5C87,&H605A5C87,-1,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: in_chi,FZXingKai-S04,26,&H00D3D3F4,&H606D6F92,&H005A5C87,&H605A5C87,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.57,0:00:10.67,Default,NTP,0,0,0,,這怪物 金色雙瞳貫穿黑夜 以捕獲獵物
+Dialogue: 0,0:00:19.62,0:00:20.57,Default,NTP,0,0,0,,就在附近
+Dialogue: 0,0:00:21.22,0:00:22.44,Default,NTP,0,0,0,,盯上我了
+Dialogue: 0,0:00:27.17,0:00:29.99,Default,NTP,0,0,0,,不要！
+Dialogue: 0,0:00:34.78,0:00:36.99,Default,NTP,0,0,0,,離開瀨戶幾十里
+Dialogue: 0,0:00:37.45,0:00:39.58,Default,NTP,0,0,0,,浸泡在洗兒湯裏的彩之國
+Dialogue: 0,0:00:37.45,0:00:39.58,Default2,NTP,0,0,0,,註：即琦玉
+Dialogue: 0,0:00:40.19,0:00:42.44,Default,NTP,0,0,0,,世上無情之人何其多
+Dialogue: 0,0:00:40.19,0:00:42.44,Default2,NTP,0,0,0,,注：这句话是日谚渡る世間は鬼ばかり的变形 意为世上还有好人在
+Dialogue: 0,0:00:42.80,0:00:45.24,Default,NTP,0,0,0,,相爭不下 少年必死
+Dialogue: 0,0:00:45.71,0:00:48.25,Default,NTP,0,0,0,,男子漢永澄 十歲又四
+Dialogue: 0,0:00:48.74,0:00:51.69,Default,NTP,0,0,0,,戀愛之路 荊棘滿途
+Dialogue: 0,0:02:24.97,0:02:28.47,Default,NTP,0,0,0,,{\1c&H000000&\3c&Hffffff&\shad0}小貓故事
+Dialogue: 0,0:02:34.57,0:02:35.63,Default,NTP,0,0,0,,我搶
+Dialogue: 0,0:02:36.39,0:02:37.48,Default,NTP,0,0,0,,你在幹什麼啊 留奈
+Dialogue: 0,0:02:37.61,0:02:39.84,Default,NTP,0,0,0,,這是我留在最後才吃的啊
+Dialogue: 0,0:02:40.13,0:02:43.00,Default,NTP,0,0,0,,有什麼嘛  本小姐喜歡吃嘛
+Dialogue: 0,0:02:43.13,0:02:45.50,Default,NTP,0,0,0,,作為僕人 你應該滿心歡喜地讓菜給我才對
+Dialogue: 0,0:02:46.38,0:02:49.64,Default,NTP,0,0,0,,啊 留奈  煎荷包蛋也很好吃哦
+Dialogue: 0,0:02:51.19,0:02:53.38,Default,NTP,0,0,0,,不知不覺間  我的座位已經換到了這裏
+Dialogue: 0,0:02:54.30,0:02:56.91,Default,NTP,0,0,0,,永澄 不介意的話 吃這個吧
+Dialogue: 0,0:02:57.11,0:02:57.88,Default,NTP,0,0,0,,小燦
+Dialogue: 0,0:02:57.95,0:02:59.18,Default,NTP,0,0,0,,這個我也要了
+Dialogue: 0,0:03:06.22,0:03:07.75,Default,NTP,0,0,0,,孩子他媽 再來一碗
+Dialogue: 0,0:03:08.34,0:03:11.45,Default,NTP,0,0,0,,真拿你們沒辦法 還有很多
+Dialogue: 0,0:03:11.48,0:03:12.50,Default,NTP,0,0,0,,和和氣氣地吃吧
+Dialogue: 0,0:03:12.51,0:03:13.67,Default,NTP,0,0,0,,是~
+Dialogue: 0,0:03:14.26,0:03:15.79,Default,NTP,0,0,0,,小燦也加番茄醬嗎？
+Dialogue: 0,0:03:24.95,0:03:25.65,Default,NTP,0,0,0,,孩子他媽…
+Dialogue: 0,0:03:25.84,0:03:27.92,Default,NTP,0,0,0,,哎呀 真討厭
+Dialogue: 0,0:03:30.29,0:03:34.21,Default,NTP,0,0,0,,咦  說起來 小卷怎麼不在呢？
+Dialogue: 0,0:03:34.49,0:03:37.03,Default,NTP,0,0,0,,拜託你們也注意到我也不在啊
+Dialogue: 0,0:03:37.06,0:03:41.99,Default,NTP,0,0,0,,呃？說啥呢 孩子他爸不是一直就在這裏 討厭~
+Dialogue: 0,0:03:43.28,0:03:45.33,Default,NTP,0,0,0,,算了 這已經是我的日常生活了啊
+Dialogue: 0,0:03:49.79,0:03:53.26,Default,NTP,0,0,0,,不要 不要！
+Dialogue: 0,0:03:53.88,0:03:55.38,Default,NTP,0,0,0,,剛才是小卷的聲音…
+Dialogue: 0,0:03:58.77,0:04:01.16,Default,NTP,0,0,0,,小卷那傢伙 被貓逮住了
+Dialogue: 0,0:04:01.70,0:04:03.66,Default,NTP,0,0,0,,別光看啊 快來救我！
+Dialogue: 0,0:04:05.37,0:04:08.23,Default,NTP,0,0,0,,哇 好可愛 這是只小貓哦
+Dialogue: 0,0:04:08.30,0:04:09.10,Default,NTP,0,0,0,,來 你們看…
+Dialogue: 0,0:04:10.82,0:04:13.35,Default,NTP,0,0,0,,咦？怎麼了  小燦 留奈
+Dialogue: 0,0:04:13.83,0:04:15.87,Default,NTP,0,0,0,,難道說 連小貓都怕？
+Dialogue: 0,0:04:16.68,0:04:17.58,Default,NTP,0,0,0,,不要緊的
+Dialogue: 0,0:04:17.81,0:04:20.06,Default,NTP,0,0,0,,看 這貓還這麼小呢
+Dialogue: 0,0:04:20.24,0:04:21.68,Default,NTP,0,0,0,,用不著那麼害怕啦
+Dialogue: 0,0:04:21.88,0:04:23.69,Default,NTP,0,0,0,,我…我才不怕呢
+Dialogue: 0,0:04:23.88,0:04:25.42,Default,NTP,0,0,0,,本小姐作為頂級偶像
+Dialogue: 0,0:04:25.43,0:04:28.07,Default,NTP,0,0,0,,怎麼會怕區區一隻小動物啊
+Dialogue: 0,0:04:28.12,0:04:28.46,Default,NTP,0,0,0,,來
+Dialogue: 0,0:04:33.35,0:04:35.91,Default,NTP,0,0,0,,它在嘗味道 嘗味道啊！
+Dialogue: 0,0:04:36.35,0:04:37.62,Default,NTP,0,0,0,,果然還是害怕啊
+Dialogue: 0,0:04:37.87,0:04:40.78,Default,NTP,0,0,0,,有什麼辦法嘛  誰叫我們是人魚…
+Dialogue: 0,0:04:40.79,0:04:43.50,Default,NTP,0,0,0,,在貓看來 我們只是餌食啊…
+Dialogue: 0,0:04:45.42,0:04:47.84,Default,NTP,0,0,0,,海上居民都害怕貓嗎？
+Dialogue: 0,0:04:47.99,0:04:49.31,Default,NTP,0,0,0,,十…十有八九
+Dialogue: 0,0:04:50.04,0:04:50.71,Default,NTP,0,0,0,,嗯…
+Dialogue: 0,0:04:55.39,0:04:56.91,Default,NTP,0,0,0,,哇 好可愛
+Dialogue: 0,0:04:57.04,0:04:59.12,Default,NTP,0,0,0,,可愛吧 這貓是這附近的
+Dialogue: 0,0:04:59.26,0:05:00.75,Default,NTP,0,0,0,,現在都混得很熟了
+Dialogue: 0,0:05:01.12,0:05:04.77,Default,NTP,0,0,0,,真是的 校內可是嚴禁帶小動物的哦
+Dialogue: 0,0:05:04.79,0:05:07.14,Default,NTP,0,0,0,,要不要我教你社會的規則啊…
+Dialogue: 0,0:05:08.43,0:05:10.39,Default2,NTP,0,0,0,,其實 很喜歡貓
+Dialogue: 0,0:05:08.61,0:05:09.90,Default,NTP,0,0,0,,喵 小巡
+Dialogue: 0,0:05:10.86,0:05:13.34,Default,NTP,0,0,0,,但…但是也不能放著不管
+Dialogue: 0,0:05:13.46,0:05:17.53,Default,NTP,0,0,0,,總…總之就先寄放在我們班到放學吧
+Dialogue: 0,0:05:18.02,0:05:18.62,Default,NTP,0,0,0,,說得對
+Dialogue: 0,0:05:18.90,0:05:20.39,Default,NTP,0,0,0,,照顧這貓就交給我吧
+Dialogue: 0,0:05:20.53,0:05:23.01,Default,NTP,0,0,0,,小巡我照顧貓的功夫在這一帶可是廣受好評的
+Dialogue: 0,0:05:23.02,0:05:25.82,Default,NTP,0,0,0,,那隻貓 很受大家歡迎呢
+Dialogue: 0,0:05:26.08,0:05:29.08,Default,NTP,0,0,0,,那麼兇暴的生物竟然比本小姐還受歡迎
+Dialogue: 0,0:05:29.21,0:05:30.23,Default,NTP,0,0,0,,無法接受啊
+Dialogue: 0,0:05:31.81,0:05:35.13,Default,NTP,0,0,0,,那只海蟑螂竟然把貓帶到學校來了
+Dialogue: 0,0:05:35.19,0:05:36.39,Default,NTP,0,0,0,,他想搞什麼陰謀啊
+Dialogue: 0,0:05:39.76,0:05:40.92,Default,NTP,0,0,0,,喂 三河
+Dialogue: 0,0:05:43.90,0:05:44.31,Default,NTP,0,0,0,,猿
+Dialogue: 0,0:05:44.50,0:05:45.67,Default,NTP,0,0,0,,在 少主有何吩咐
+Dialogue: 0,0:05:46.01,0:05:48.18,Default,NTP,0,0,0,,世上最帥的人是誰
+Dialogue: 0,0:05:48.47,0:05:50.03,Default,NTP,0,0,0,,自然是少主您
+Dialogue: 0,0:05:50.20,0:05:52.92,Default,NTP,0,0,0,,世上最富有的人是誰？
+Dialogue: 0,0:05:53.02,0:05:54.61,Default,NTP,0,0,0,,自然是少主您
+Dialogue: 0,0:05:54.69,0:05:57.71,Default,NTP,0,0,0,,那麼 世上跟小燦最般配的人是誰？
+Dialogue: 0,0:05:57.89,0:06:00.17,Default,NTP,0,0,0,,自然是少主您
+Dialogue: 0,0:06:00.19,0:06:00.58,Default,NTP,0,0,0,,嗯 很好
+Dialogue: 0,0:06:01.18,0:06:03.28,Default,NTP,0,0,0,,有什麼事嗎 滿潮永澄
+Dialogue: 0,0:06:03.46,0:06:04.67,Default,NTP,0,0,0,,拜託回答的時候正常一點
+Dialogue: 0,0:06:04.91,0:06:05.71,Default,NTP,0,0,0,,比起那個…
+Dialogue: 0,0:06:07.86,0:06:10.38,Default,NTP,0,0,0,,多可愛的小貓啊 你覺得怎樣？
+Dialogue: 0,0:06:11.73,0:06:12.69,Default,NTP,0,0,0,,很可愛…
+Dialogue: 0,0:06:17.62,0:06:18.56,Default,NTP,0,0,0,,Dash！
+Dialogue: 0,0:06:20.30,0:06:21.31,Default,NTP,0,0,0,,這下有趣了
+Dialogue: 0,0:06:23.11,0:06:25.00,Default,NTP,0,0,0,,魚人全都拿貓沒辦法
+Dialogue: 0,0:06:25.35,0:06:28.15,Default,NTP,0,0,0,,這麼說 小燦的爸爸也…
+Dialogue: 0,0:06:28.31,0:06:30.43,Default,NTP,0,0,0,,永澄 你在幹什麼？
+Dialogue: 0,0:06:31.64,0:06:32.95,Default,NTP,0,0,0,,啊 政先生…
+Dialogue: 0,0:06:35.76,0:06:38.99,Default,NTP,0,0,0,,原來是小貓啊 眼神還這麼純潔
+Dialogue: 0,0:06:39.32,0:06:41.75,Default,NTP,0,0,0,,咦 政先生不怕貓麼？
+Dialogue: 0,0:06:42.31,0:06:45.64,Default,NTP,0,0,0,,嘛 我小時候害怕得不得了
+Dialogue: 0,0:06:46.87,0:06:49.04,Default,NTP,0,0,0,,現在也說不上很擅長應付就是了…
+Dialogue: 0,0:06:50.19,0:06:51.84,Default,NTP,0,0,0,,政先生的兒童時代…
+Dialogue: 0,0:06:51.86,0:06:52.57,Default,NTP,0,0,0,,畜生王八蛋
+Dialogue: 0,0:06:53.98,0:07:00.21,Default,NTP,0,0,0,,「小時怕到死 長大超輕鬆 」人類不也是一樣麼？
+Dialogue: 0,0:07:03.64,0:07:04.44,Default,NTP,0,0,0,,政先生
+Dialogue: 0,0:07:05.11,0:07:08.31,Default,NTP,0,0,0,,我還得準備上課的東西 那先失陪了
+Dialogue: 0,0:07:09.43,0:07:13.88,Default,NTP,0,0,0,,原來如此 （魚人）長大以後就不怕貓了
+Dialogue: 0,0:07:14.25,0:07:19.19,Default,NTP,0,0,0,,什麼啊  如果能嚇到小燦的爸爸那才有趣呢
+Dialogue: 0,0:07:20.14,0:07:22.12,Default,NTP,0,0,0,,你叫我嗎？ 孑孓
+Dialogue: 0,0:07:22.97,0:07:25.37,Default,NTP,0,0,0,,想用什麼嚇我啊？
+Dialogue: 0,0:07:25.97,0:07:28.01,Default,NTP,0,0,0,,能做到的話就儘管來啊 喂
+Dialogue: 0,0:07:28.50,0:07:30.30,Default,NTP,0,0,0,,沒事…沒事…
+Dialogue: 0,0:07:31.73,0:07:34.25,Default,NTP,0,0,0,,嗯？ 你手裏拿著什麼？
+Dialogue: 0,0:07:34.33,0:07:35.66,Default,NTP,0,0,0,,啊 這…這是…
+Dialogue: 0,0:07:35.78,0:07:36.74,Default,NTP,0,0,0,,讓我看看
+Dialogue: 0,0:07:39.11,0:07:40.03,Default,NTP,0,0,0,,這是…
+Dialogue: 0,0:07:40.69,0:07:41.31,Default,NTP,0,0,0,,是貓
+Dialogue: 0,0:07:43.39,0:07:46.61,Default,NTP,0,0,0,,把…把動物帶到學校是不行的…
+Dialogue: 0,0:07:47.26,0:07:49.04,Default,NTP,0,0,0,,啊…那要沒收嗎？
+Dialogue: 0,0:07:49.05,0:07:51.06,Default,NTP,0,0,0,,沒有那個必要…
+Dialogue: 0,0:07:52.51,0:07:54.69,Default,NTP,0,0,0,,老師要沒收吧 要沒收這個吧
+Dialogue: 0,0:07:52.64,0:07:56.12,Default,NTP,0,0,0,,啊 別過來 小心我殺了你
+Dialogue: 0,0:07:56.41,0:08:01.37,Default,NTP,0,0,0,,啊哈哈哈 小燦爸爸明明是大人居然還怕貓啊
+Dialogue: 0,0:08:01.53,0:08:04.52,Default,NTP,0,0,0,,呃？ 瀨戶老師一臉兇相
+Dialogue: 0,0:08:04.53,0:08:06.00,Default,NTP,0,0,0,,原來還有這個弱點啊
+Dialogue: 0,0:08:06.24,0:08:07.91,Default,NTP,0,0,0,,人不可貌相啊
+Dialogue: 0,0:08:08.40,0:08:09.40,Default,NTP,0,0,0,,永澄…
+Dialogue: 0,0:08:10.73,0:08:14.12,Default,NTP,0,0,0,,小燦  我不會放開小貓的 過來吧
+Dialogue: 0,0:08:14.40,0:08:16.37,Default,NTP,0,0,0,,那個 永澄
+Dialogue: 0,0:08:16.84,0:08:21.41,Default,NTP,0,0,0,,爸爸他是大人但是還怕貓是有很深很深的原因的
+Dialogue: 0,0:08:21.72,0:08:22.26,Default,NTP,0,0,0,,原因？
+Dialogue: 0,0:08:23.10,0:08:25.80,Default,NTP,0,0,0,,這是爸爸小時候的事…
+Dialogue: 0,0:08:26.00,0:08:28.22,Default,NTP,0,0,0,,小燦爸爸的兒童時代…
+Dialogue: 0,0:08:29.30,0:08:33.52,Default,NTP,0,0,0,,貌似是 爸爸在午睡的時候 有隻貓來了
+Dialogue: 0,0:08:35.35,0:08:39.05,Default,NTP,0,0,0,,咬了耳朵一口 然後化膿 差點連耳朵都丟了
+Dialogue: 0,0:08:40.11,0:08:42.25,Default,NTP,0,0,0,,自從那以後 就有對貓恐懼癥了
+Dialogue: 0,0:08:42.48,0:08:43.15,Default,NTP,0,0,0,,哦…
+Dialogue: 0,0:08:44.39,0:08:47.75,Default,NTP,0,0,0,,好了 都給我坐好 班會要開始了
+Dialogue: 0,0:08:48.43,0:08:49.98,Default,NTP,0,0,0,,說曹操曹操到呢 瀨戶老師
+Dialogue: 0,0:08:55.57,0:08:57.11,Default,NTP,0,0,0,,他惡狠狠地盯著我
+Dialogue: 0,0:08:57.86,0:09:01.23,Default,NTP,0,0,0,,平時被他追得最慘的可是我啊
+Dialogue: 0,0:09:02.40,0:09:04.99,Default,NTP,0,0,0,,但是~有了這傢伙~
+Dialogue: 0,0:09:09.11,0:09:12.83,Default,NTP,0,0,0,,我是組長 要不卑不亢
+Dialogue: 0,0:09:13.15,0:09:14.79,Default,NTP,0,0,0,,要怎麼辦 老大？
+Dialogue: 0,0:09:14.94,0:09:18.25,Default,NTP,0,0,0,,那該死的孑孓 把我若毛了
+Dialogue: 0,0:09:19.12,0:09:22.67,Default,NTP,0,0,0,,要讓他嘗嘗把我惹毛的後果
+Dialogue: 0,0:09:22.76,0:09:26.82,Default,NTP,0,0,0,,絕對支持 我對那海蟑螂也到了容忍的極限了
+Dialogue: 0,0:09:27.32,0:09:30.52,Default,NTP,0,0,0,,出動我的直屬「親衛隊」
+Dialogue: 0,0:09:30.56,0:09:32.99,Default,NTP,0,0,0,,什麼？ 那支「親衛隊」？
+Dialogue: 0,0:09:33.23,0:09:35.13,Default,NTP,0,0,0,,沒錯 隨你差遣
+Dialogue: 0,0:09:37.97,0:09:41.93,Default,NTP,0,0,0,,區區孑孓 竟然把老子當笨蛋耍
+Dialogue: 0,0:09:42.15,0:09:45.68,Default,NTP,0,0,0,,不可原諒 不可原諒  不可原諒！
+Dialogue: 0,0:09:46.17,0:09:48.81,Default,NTP,0,0,0,,得讓那混蛋 嘗點苦頭
+Dialogue: 0,0:10:02.40,0:10:05.36,Default,NTP,0,0,0,,什麼  今天男子體操授課的內容？
+Dialogue: 0,0:10:05.87,0:10:10.87,Default,NTP,0,0,0,,瀨戶內中學的留學生突然要過來參加我們的課
+Dialogue: 0,0:10:11.32,0:10:13.13,Default,NTP,0,0,0,,瀨戶內來的留學生…
+Dialogue: 0,0:10:13.42,0:10:16.52,Default,NTP,0,0,0,,我想去參加臨時女子保健體育課~
+Dialogue: 0,0:10:16.53,0:10:16.84,Default,NTP,0,0,0,,去死吧
+Dialogue: 0,0:10:17.40,0:10:19.63,Default,NTP,0,0,0,,過來這邊作自我介紹吧
+Dialogue: 0,0:10:21.74,0:10:24.26,Default,NTP,0,0,0,,我們是從瀨戶內中學來的：鮪郎~魚
+Dialogue: 0,0:10:21.74,0:10:24.26,Default,NTP,0,0,0,,{\fs26}{\pos(590,434)}「金槍魚」
+Dialogue: 0,0:10:24.34,0:10:25.46,Default,NTP,0,0,0,,鯵太郎~魚
+Dialogue: 0,0:10:24.34,0:10:25.46,Default,NTP,0,0,0,,{\fs26}{\pos(405,434)}「竹莢魚」
+Dialogue: 0,0:10:25.70,0:10:26.67,Default,NTP,0,0,0,,鰤夫~魚
+Dialogue: 0,0:10:25.70,0:10:26.67,Default,NTP,0,0,0,,{\fs26}{\pos(406,434)}「鰤魚」
+Dialogue: 0,0:10:27.17,0:10:29.01,Default,NTP,0,0,0,,請大家多多關照~魚
+Dialogue: 0,0:10:30.15,0:10:31.84,Default,NTP,0,0,0,,我…我的名字叫鰤夫
+Dialogue: 0,0:10:32.08,0:10:34.71,Default,NTP,0,0,0,,是急先鋒和喬裝打扮的高手~魚
+Dialogue: 0,0:10:34.95,0:10:37.23,Default,NTP,0,0,0,,只有我這樣的絕對強者
+Dialogue: 0,0:10:37.30,0:10:40.03,Default,NTP,0,0,0,,才能擔任這些身經百戰的猛將…
+Dialogue: 0,0:10:40.23,0:10:41.26,Default,NTP,0,0,0,,的領袖~魚
+Dialogue: 0,0:10:42.87,0:10:45.62,Default,NTP,0,0,0,,嘿嘿 我是鯵太郎~魚
+Dialogue: 0,0:10:46.12,0:10:47.57,Default,NTP,0,0,0,,情報收集是我的拿手絕活
+Dialogue: 0,0:10:47.94,0:10:49.34,Default,NTP,0,0,0,,同時也精通網絡銷售
+Dialogue: 0,0:10:49.45,0:10:54.00,Default,NTP,0,0,0,,從限定版DVD到手辦 全都能收集~魚
+Dialogue: 0,0:10:56.90,0:11:00.85,Default,NTP,0,0,0,,久等了 我叫鮪郎~魚
+Dialogue: 0,0:11:01.11,0:11:03.94,Default,NTP,0,0,0,,雖然滿是瘦肉 卻有飽和脂肪
+Dialogue: 0,0:11:03.99,0:11:06.84,Default,NTP,0,0,0,,可是最適合做壽司和刺身的人~魚
+Dialogue: 0,0:11:07.09,0:11:08.90,Default,NTP,0,0,0,,不過不要濫捕哦
+Dialogue: 0,0:11:10.36,0:11:11.05,Default,NTP,0,0,0,,我們是…
+Dialogue: 0,0:11:11.18,0:11:12.96,Default,NTP,0,0,0,,瀨戶豪三郎直屬的…
+Dialogue: 0,0:11:13.06,0:11:15.90,Default,NTP,0,0,0,,連哭著的小鬼都嚇閉嘴的神出鬼沒親衛隊
+Dialogue: 0,0:11:16.03,0:11:19.63,Default,NTP,0,0,0,,其名為：鰓呼吸三兄弟
+Dialogue: 0,0:11:20.81,0:11:24.46,Default,NTP,0,0,0,,好了 這周又要搞些什麼事件出來呢？
+Dialogue: 0,0:11:29.10,0:11:30.97,Default,NTP,0,0,0,,大家要和睦相處啊
+Dialogue: 0,0:11:31.46,0:11:33.29,Default,NTP,0,0,0,,這…這些人絕對是魚人族
+Dialogue: 0,0:11:33.40,0:11:34.78,Default,NTP,0,0,0,,陰謀 肯定有陰謀
+Dialogue: 0,0:11:34.93,0:11:37.94,Default,NTP,0,0,0,,話說回來他們「人化」的功夫太差勁了
+Dialogue: 0,0:11:38.04,0:11:42.43,Default,NTP,0,0,0,,今天就分紅白兩組 進行足球比賽
+Dialogue: 0,0:11:45.38,0:11:47.34,Default,NTP,0,0,0,,話說你那身衣服就不能想想辦法嗎？
+Dialogue: 0,0:11:47.59,0:11:50.31,Default,NTP,0,0,0,,這麼寬敞明亮的地方 我沒這個肯定受不了啊
+Dialogue: 0,0:11:50.81,0:11:52.57,Default,NTP,0,0,0,,你去旁邊看就算了
+Dialogue: 0,0:11:52.98,0:11:56.74,Default,NTP,0,0,0,,你就等著瞧吧 我的功勞肯定是你的10倍
+Dialogue: 0,0:11:59.66,0:12:00.64,Default,NTP,0,0,0,,比賽開始
+Dialogue: 0,0:12:01.47,0:12:02.85,Default,NTP,0,0,0,,這樣就行了？ 小卷
+Dialogue: 0,0:12:03.27,0:12:07.33,Default,NTP,0,0,0,,對 用比賽為借口趁機修理那海蟑螂一頓
+Dialogue: 0,0:12:07.73,0:12:09.92,Default,NTP,0,0,0,,這可是我完美的戰略啊
+Dialogue: 0,0:12:10.38,0:12:12.01,Default,NTP,0,0,0,,給我好好幹 三兄弟
+Dialogue: 0,0:12:12.41,0:12:14.41,Default,NTP,0,0,0,,魚魚魚魚魚
+Dialogue: 0,0:12:17.05,0:12:20.58,Default,NTP,0,0,0,,喂 滿潮永澄是哪條粉腸~魚 快點告訴我~魚
+Dialogue: 0,0:12:20.59,0:12:21.58,Default,NTP,0,0,0,,啊 就是那傢伙
+Dialogue: 0,0:12:26.79,0:12:29.35,Default,NTP,0,0,0,,膽敢用貓來嚇唬我們老大~魚
+Dialogue: 0,0:12:30.00,0:12:32.48,Default,NTP,0,0,0,,竟然敢踢本少爺 活得不耐煩啦？
+Dialogue: 0,0:12:32.49,0:12:33.71,Default,NTP,0,0,0,,囉嗦 你這NASA混蛋
+Dialogue: 0,0:12:34.01,0:12:35.25,Default,NTP,0,0,0,,笨蛋…
+Dialogue: 0,0:12:35.59,0:12:39.75,Default,NTP,0,0,0,,要搞定永澄 為什麼老大不命令我上？
+Dialogue: 0,0:12:40.01,0:12:42.27,Default,NTP,0,0,0,,藤代你會吃掉那傢伙吧
+Dialogue: 0,0:12:42.52,0:12:43.17,Default,NTP,0,0,0,,不行嗎？
+Dialogue: 0,0:12:43.55,0:12:45.06,Default,NTP,0,0,0,,還得為小姐想想
+Dialogue: 0,0:12:45.60,0:12:47.79,Default,NTP,0,0,0,,看我把你們全部都剁成三塊
+Dialogue: 0,0:12:47.80,0:12:49.53,Default,NTP,0,0,0,,這傢伙怎麼這麼經打啊
+Dialogue: 0,0:12:50.07,0:12:53.69,Default,NTP,0,0,0,,三河 你的確連我的份也努力了
+Dialogue: 0,0:12:56.19,0:12:59.65,Default2,NTP,0,0,0,,午休
+Dialogue: 0,0:12:56.42,0:12:57.45,Default,NTP,0,0,0,,肚子餓了
+Dialogue: 0,0:12:57.80,0:12:59.57,Default,NTP,0,0,0,,笨--蛋！
+Dialogue: 0,0:12:59.90,0:13:01.76,Default,NTP,0,0,0,,你們怎麼搞錯對像啦
+Dialogue: 0,0:13:02.27,0:13:05.25,Default,NTP,0,0,0,,快給我好好修理那該死的孑孓啊
+Dialogue: 0,0:13:05.63,0:13:06.92,Default,NTP,0,0,0,,對…對不起 老大
+Dialogue: 0,0:13:07.36,0:13:09.99,Default,NTP,0,0,0,,卷 這次你來打頭陣
+Dialogue: 0,0:13:10.00,0:13:10.44,Default,NTP,0,0,0,,是
+Dialogue: 0,0:13:10.67,0:13:12.36,Default,NTP,0,0,0,,這次要讓他好好吃點苦頭哦 小的們
+Dialogue: 0,0:13:12.38,0:13:12.77,Default,NTP,0,0,0,,魚！
+Dialogue: 0,0:13:14.55,0:13:17.14,Default,NTP,0,0,0,,來了 那就是海蟑螂  給我上！
+Dialogue: 0,0:13:19.72,0:13:21.17,Default,NTP,0,0,0,,給我站住
+Dialogue: 0,0:13:21.33,0:13:22.81,Default,NTP,0,0,0,,你這沙丁魚乾
+Dialogue: 0,0:13:31.53,0:13:34.02,Default,NTP,0,0,0,,怎麼連你們都退後了
+Dialogue: 0,0:13:34.03,0:13:35.91,Default,NTP,0,0,0,,我們也很害怕啊~魚
+Dialogue: 0,0:13:35.91,0:13:38.95,Default,NTP,0,0,0,,那樣老大叫你們親衛隊來還有什麼用啊
+Dialogue: 0,0:13:39.03,0:13:40.06,Default,NTP,0,0,0,,我搞不明白啦
+Dialogue: 0,0:13:40.15,0:13:41.95,Default,NTP,0,0,0,,但是 請你聽聽啊
+Dialogue: 0,0:13:43.26,0:13:45.17,Default,NTP,0,0,0,,多麼兇狠的叫聲啊
+Dialogue: 0,0:13:45.20,0:13:47.68,Default,NTP,0,0,0,,今天這傢伙相當猖狂啊
+Dialogue: 0,0:13:47.88,0:13:50.00,Default,NTP,0,0,0,,竟然在向我們招手
+Dialogue: 0,0:13:50.14,0:13:52.23,Default,NTP,0,0,0,,這簡直就是死神的招手啊~魚
+Dialogue: 0,0:13:54.49,0:13:56.91,Default,NTP,0,0,0,,多麼恐怖的怪物啊~魚！
+Dialogue: 0,0:13:57.29,0:13:59.98,Default,NTP,0,0,0,,好 你們就猜拳決定誰上吧
+Dialogue: 0,0:13:59.99,0:14:02.39,Default,NTP,0,0,0,,這簡直就是叫我們去送死啊~魚
+Dialogue: 0,0:14:02.48,0:14:04.89,Default,NTP,0,0,0,,現在不顯示出我們瀨戶內組的鬥志的話
+Dialogue: 0,0:14:05.13,0:14:06.87,Default,NTP,0,0,0,,我們可是被小瞧到底了
+Dialogue: 0,0:14:07.16,0:14:09.06,Default,NTP,0,0,0,,動作快 別磨蹭
+Dialogue: 0,0:14:09.42,0:14:10.73,Default,NTP,0,0,0,,石頭剪子布~魚
+Dialogue: 0,0:14:10.74,0:14:11.92,Default,NTP,0,0,0,,他們在幹什麼啊
+Dialogue: 0,0:14:12.53,0:14:13.15,Default,NTP,0,0,0,,啊 喂
+Dialogue: 0,0:14:16.27,0:14:18.88,Default,NTP,0,0,0,,啊 怪物被解放了
+Dialogue: 0,0:14:19.74,0:14:21.89,Default,NTP,0,0,0,,他們 應該進展順利吧
+Dialogue: 0,0:14:21.90,0:14:23.77,Default,NTP,0,0,0,,老大 請快點逃啊
+Dialogue: 0,0:14:25.33,0:14:27.55,Default,NTP,0,0,0,,靠 妖怪追過來了
+Dialogue: 0,0:14:28.82,0:14:30.28,Default2,NTP,0,0,0,,事實上是這樣…
+Dialogue: 0,0:14:31.04,0:14:34.06,Default,NTP,0,0,0,,妖怪追過來了
+Dialogue: 0,0:14:34.83,0:14:35.78,Default2,NTP,0,0,0,,魚人眼裏
+Dialogue: 0,0:14:37.48,0:14:39.47,Default,NTP,0,0,0,,猛衝啊
+Dialogue: 0,0:14:39.83,0:14:41.04,Default2,NTP,0,0,0,,但事實上…
+Dialogue: 0,0:14:42.63,0:14:44.61,Default,NTP,0,0,0,,猛衝啊
+Dialogue: 0,0:14:47.25,0:14:48.95,Default,NTP,0,0,0,,站住 你們就是剛才那幫…
+Dialogue: 0,0:14:55.15,0:14:55.73,Default,NTP,0,0,0,,我扔
+Dialogue: 0,0:15:00.73,0:15:02.83,Default,NTP,0,0,0,,鮪郎被逮住啦~魚
+Dialogue: 0,0:15:03.34,0:15:05.51,Default,NTP,0,0,0,,鮪郎！ 鮪郎！
+Dialogue: 0,0:15:05.52,0:15:06.45,Default,NTP,0,0,0,,住手 鰤夫
+Dialogue: 0,0:15:06.63,0:15:07.99,Default,NTP,0,0,0,,鮪郎已經不行啦~魚
+Dialogue: 0,0:15:08.78,0:15:11.39,Default,NTP,0,0,0,,稍…稍微冷靜點  我把貓抓走就是啦
+Dialogue: 0,0:15:11.40,0:15:13.10,Default,NTP,0,0,0,,沒錯 快冷靜下來 呆瓜
+Dialogue: 0,0:15:13.11,0:15:14.19,Default,NTP,0,0,0,,這個時候我們要…
+Dialogue: 0,0:15:14.22,0:15:15.07,Default,NTP,0,0,0,,冷靜！
+Dialogue: 0,0:15:15.72,0:15:17.10,Default,NTP,0,0,0,,快聯絡消防局！
+Dialogue: 0,0:15:18.56,0:15:19.06,Default,NTP,0,0,0,,我按
+Dialogue: 0,0:15:26.63,0:15:28.49,Default,NTP,0,0,0,,發生火災 發生火災
+Dialogue: 0,0:15:28.94,0:15:31.04,Default,NTP,0,0,0,,火災現場  磯野第八中學
+Dialogue: 0,0:15:31.65,0:15:34.26,Default,NTP,0,0,0,,磯野消防隊全隊 出動！
+Dialogue: 0,0:15:35.31,0:15:37.07,Default,NTP,0,0,0,,緊急狀況  緊急狀況
+Dialogue: 0,0:15:35.31,0:15:37.07,Default,NTP,0,0,0,,{\fs26}{\pos(430,434)}Emergency      Emergency
+Dialogue: 0,0:15:37.26,0:15:41.37,Default,NTP,0,0,0,,快把援軍派過來 申請緊急出動啊
+Dialogue: 0,0:15:42.29,0:15:44.26,Default,NTP,0,0,0,,上浮 請注意
+Dialogue: 0,0:15:44.33,0:15:46.58,Default,NTP,0,0,0,,Urgent order is for all units segregated…
+Dialogue: 0,0:15:47.05,0:15:49.62,Default,NTP,0,0,0,,{\fs26}{\pos(425,434)}Emergency！       Code Red        Code Red
+Dialogue: 0,0:15:47.05,0:15:49.62,Default,NTP,0,0,0,,緊急狀況！  紅色警報  紅色警報
+Dialogue: 0,0:15:49.94,0:15:51.18,Default,NTP,0,0,0,,{\fs26}{\pos(432,434)}Stand by for take off
+Dialogue: 0,0:15:49.94,0:15:51.18,Default,NTP,0,0,0,,準備起飛
+Dialogue: 0,0:15:51.46,0:15:52.48,Default,NTP,0,0,0,,{\fs26}{\pos(430,434)}This is not a drill
+Dialogue: 0,0:15:51.46,0:15:52.48,Default,NTP,0,0,0,,這不是演習
+Dialogue: 0,0:15:52.57,0:15:54.44,Default,NTP,0,0,0,,{\fs26}{\pos(425,434)}I repeat This is not a drill
+Dialogue: 0,0:15:52.57,0:15:54.44,Default,NTP,0,0,0,,重複一次 這不是演習
+Dialogue: 0,0:15:54.73,0:15:57.40,Default,NTP,0,0,0,,目的地 磯野第八中學
+Dialogue: 0,0:15:58.56,0:16:04.55,Default,NTP,0,0,0,,學生們請不要奔跑 請根據老師的指示 迅速避難
+Dialogue: 0,0:16:05.23,0:16:07.93,Default,NTP,0,0,0,,大家 不要驚慌 按規矩來
+Dialogue: 0,0:16:08.11,0:16:11.65,Default,NTP,0,0,0,,請…請按順序到操場避難
+Dialogue: 0,0:16:12.90,0:16:14.88,Default,NTP,0,0,0,,已經夠驚慌的了
+Dialogue: 0,0:16:29.35,0:16:31.86,Default,NTP,0,0,0,,很危險 請不要入內
+Dialogue: 0,0:16:32.07,0:16:35.22,Default,NTP,0,0,0,,鮪郎他 鮪郎還在裏面啊！
+Dialogue: 0,0:16:38.36,0:16:41.77,Default,NTP,0,0,0,,老…老大 夠了 請你走吧
+Dialogue: 0,0:16:42.55,0:16:44.17,Default,NTP,0,0,0,,我已經不行了
+Dialogue: 0,0:16:44.63,0:16:46.41,Default,NTP,0,0,0,,鮪郎 振作點！
+Dialogue: 0,0:16:46.59,0:16:52.56,Default,NTP,0,0,0,,真想再看一次 瀨戶那藍藍的大海…
+Dialogue: 0,0:16:53.83,0:16:58.07,Default,NTP,0,0,0,,這…這是騙人的
+Dialogue: 0,0:16:58.39,0:17:03.17,Default,NTP,0,0,0,,鮪郎他…鮪郎他…消防隊怎麼還沒到啊！
+Dialogue: 0,0:17:03.68,0:17:06.20,Default,NTP,0,0,0,,快給我救救他啊！
+Dialogue: 0,0:17:06.82,0:17:08.00,Default,NTP,0,0,0,,總算抓到了
+Dialogue: 0,0:17:08.32,0:17:09.42,Default,NTP,0,0,0,,老公！
+Dialogue: 0,0:17:12.84,0:17:14.49,Default,NTP,0,0,0,,真是的 看你們都幹了些什麼
+Dialogue: 0,0:17:14.83,0:17:16.36,Default,NTP,0,0,0,,身為男子漢你們不覺得羞恥嗎
+Dialogue: 0,0:17:16.63,0:17:17.96,Default,NTP,0,0,0,,別以為道個歉就沒事了
+Dialogue: 0,0:17:15.22,0:17:17.15,Default,NTP,0,0,0,,對不起 這是誤報 真的抱歉了
+Dialogue: 0,0:17:17.70,0:17:19.76,Default,NTP,0,0,0,,既然是誤報就最好了
+Dialogue: 0,0:17:19.10,0:17:21.36,Default,NTP,0,0,0,,下次不會再犯了 請原諒我們
+Dialogue: 0,0:17:22.90,0:17:26.11,Default,NTP,0,0,0,,啊 真是的 這回鬧得可真厲害啊
+Dialogue: 0,0:17:26.49,0:17:28.37,Default,NTP,0,0,0,,永澄你有反省嗎？
+Dialogue: 0,0:17:28.51,0:17:33.03,Default,NTP,0,0,0,,嗯 從最根本上說 把貓帶到學校是我不對
+Dialogue: 0,0:17:34.04,0:17:37.57,Default,NTP,0,0,0,,但是 追著岳父大人到處跑真好玩啊
+Dialogue: 0,0:17:38.47,0:17:40.80,Default,NTP,0,0,0,,真是的 永澄你果然沒在反省
+Dialogue: 0,0:17:41.48,0:17:42.31,Default,NTP,0,0,0,,抱歉 抱歉
+Dialogue: 0,0:17:42.85,0:17:44.31,Default,NTP,0,0,0,,剛才的你們都聽到了嗎？
+Dialogue: 0,0:17:44.48,0:17:45.26,Default,NTP,0,0,0,,魚 魚！
+Dialogue: 0,0:17:45.27,0:17:48.62,Default,NTP,0,0,0,,這樣下去 我們海上居民就要被瞧不起啦
+Dialogue: 0,0:17:48.93,0:17:53.48,Default,NTP,0,0,0,,這是最後的機會！ 被那隻貓弄得這麼狼狽
+Dialogue: 0,0:17:53.71,0:17:56.32,Default,NTP,0,0,0,,這次要讓它看看瀨戶內的人的毅力
+Dialogue: 0,0:17:56.48,0:17:57.19,Default,NTP,0,0,0,,魚魚！
+Dialogue: 0,0:17:57.61,0:17:59.75,Default,NTP,0,0,0,,好 就按照之前計劃的那樣做
+Dialogue: 0,0:17:59.92,0:18:01.21,Default,NTP,0,0,0,,鰤夫 上！
+Dialogue: 0,0:18:01.46,0:18:01.85,Default,NTP,0,0,0,,魚！
+Dialogue: 0,0:18:02.73,0:18:04.38,Default,NTP,0,0,0,,哎~ ~ ~呀
+Dialogue: 0,0:18:05.01,0:18:05.54,Default,NTP,0,0,0,,呃？
+Dialogue: 0,0:18:05.89,0:18:08.93,Default,NTP,0,0,0,,我的心臟啊…胸口好痛…
+Dialogue: 0,0:18:08.98,0:18:10.82,Default,NTP,0,0,0,,誰來救救我…
+Dialogue: 0,0:18:13.36,0:18:16.23,Default,NTP,0,0,0,,鰤夫 你在這裏幹什麼？
+Dialogue: 0,0:18:16.89,0:18:17.43,Default,NTP,0,0,0,,露餡了…
+Dialogue: 0,0:18:18.64,0:18:22.01,Default,NTP,0,0,0,,不愧是我女兒 竟然一眼看穿那個偽裝
+Dialogue: 0,0:18:22.11,0:18:23.17,Default,NTP,0,0,0,,加油啊~魚
+Dialogue: 0,0:18:23.47,0:18:24.99,Default,NTP,0,0,0,,要堅持啊~魚
+Dialogue: 0,0:18:25.43,0:18:28.87,Default,NTP,0,0,0,,你認錯鰤了 我只是一個病弱的少女而已~魚
+Dialogue: 0,0:18:29.01,0:18:30.71,Default,NTP,0,0,0,,叫鰤夫的鰤魚 除了你還有誰啊
+Dialogue: 0,0:18:31.40,0:18:34.56,Default,NTP,0,0,0,,初…初次見面 我叫鰤托妮~魚
+Dialogue: 0,0:18:34.96,0:18:35.98,Default,NTP,0,0,0,,接得好！
+Dialogue: 0,0:18:38.07,0:18:39.07,Default,NTP,0,0,0,,算了 隨便你了
+Dialogue: 0,0:18:40.04,0:18:41.53,Default,NTP,0,0,0,,話說 你怎麼了 鰤托妮
+Dialogue: 0,0:18:41.88,0:18:43.87,Default,NTP,0,0,0,,我… 我的胸口好痛~魚
+Dialogue: 0,0:18:44.09,0:18:45.54,Default,NTP,0,0,0,,不要緊把 鰤托妮
+Dialogue: 0,0:18:46.08,0:18:47.53,Default,NTP,0,0,0,,為什麼我會附和它啊…
+Dialogue: 0,0:18:57.81,0:18:59.25,Default,NTP,0,0,0,,你在幹什麼啊 笨蛋
+Dialogue: 0,0:19:05.14,0:19:06.44,Default,NTP,0,0,0,,幹掉好 鰤夫
+Dialogue: 0,0:19:06.56,0:19:07.82,Default,NTP,0,0,0,,不對 是鰤托妮
+Dialogue: 0,0:19:07.98,0:19:11.66,Default,NTP,0,0,0,,和貓在陸地上戰鬥失敗是自然
+Dialogue: 0,0:19:12.58,0:19:15.08,Default,NTP,0,0,0,,掉進水裏就不能自由暢遊的臭貓
+Dialogue: 0,0:19:15.09,0:19:17.07,Default,NTP,0,0,0,,根本不會是我們魚人的對手啊
+Dialogue: 0,0:19:17.44,0:19:21.32,Default,NTP,0,0,0,,怎麼樣了孑孓  貓對我們來說是不足為懼啊
+Dialogue: 0,0:19:30.86,0:19:31.70,Default,NTP,0,0,0,,永澄
+Dialogue: 0,0:19:33.22,0:19:37.07,Default,NTP,0,0,0,,從根本上說 把小貓帶來是我的責任
+Dialogue: 0,0:19:38.13,0:19:38.67,Default,NTP,0,0,0,,所以…
+Dialogue: 0,0:19:43.58,0:19:44.37,Default,NTP,0,0,0,,小燦
+Dialogue: 0,0:19:44.56,0:19:46.35,Default,NTP,0,0,0,,在水裏就是我的工作了
+Dialogue: 0,0:19:47.56,0:19:48.23,Default,NTP,0,0,0,,小燦
+Dialogue: 0,0:19:49.78,0:19:52.23,Default,NTP,0,0,0,,你搞什麼啊 小燦 那可是隻貓啊
+Dialogue: 0,0:20:01.31,0:20:03.79,Default,NTP,0,0,0,,不要亂動 不然就救不了你啦
+Dialogue: 0,0:20:06.68,0:20:07.42,Default,NTP,0,0,0,,小卷
+Dialogue: 0,0:20:08.51,0:20:12.72,Default,NTP,0,0,0,,它救過我一命啊 有恩必報
+Dialogue: 0,0:20:12.91,0:20:15.45,Default,NTP,0,0,0,,這才是我們人魚的作風啊
+Dialogue: 0,0:20:22.84,0:20:24.68,Default,NTP,0,0,0,,貓好可怕…貓…
+Dialogue: 0,0:20:30.87,0:20:34.75,Default,NTP,0,0,0,,小卷 謝謝你
+Dialogue: 0,0:20:36.71,0:20:40.31,Default,NTP,0,0,0,,燦小姐…沒什麼啦
+Dialogue: 0,0:20:41.19,0:20:41.82,Default,NTP,0,0,0,,小燦！
+Dialogue: 0,0:20:43.16,0:20:45.80,Default,NTP,0,0,0,,小燦 快把貓給我
+Dialogue: 0,0:20:45.96,0:20:46.96,Default,NTP,0,0,0,,永澄
+Dialogue: 0,0:20:47.58,0:20:49.81,Default,NTP,0,0,0,,你很怕貓吧 快
+Dialogue: 0,0:20:55.04,0:20:56.93,Default,NTP,0,0,0,,有點擔心 過來看看情況
+Dialogue: 0,0:20:57.55,0:20:58.82,Default,NTP,0,0,0,,竟然是這樣子
+Dialogue: 0,0:20:59.36,0:21:02.22,Default,NTP,0,0,0,,你們這群不吸取教訓的笨蛋
+Dialogue: 0,0:21:02.45,0:21:03.66,Default,NTP,0,0,0,,真是的 小心眼！
+Dialogue: 0,0:21:03.99,0:21:05.72,Default,NTP,0,0,0,,看來有必要再管教多一次
+Dialogue: 0,0:21:06.22,0:21:09.14,Default,NTP,0,0,0,,你也是 這樣下去你再過多久都克服不了貓恐懼癥啦
+Dialogue: 0,0:21:09.38,0:21:10.35,Default,NTP,0,0,0,,給我好好反省
+Dialogue: 0,0:21:10.75,0:21:11.95,Default,NTP,0,0,0,,我明白了…
+Dialogue: 0,0:21:13.09,0:21:15.09,Default,NTP,0,0,0,,相反  那兩個孩子
+Dialogue: 0,0:21:15.57,0:21:17.16,Default,NTP,0,0,0,,給人的感覺很不錯呢
+Dialogue: 0,0:21:19.57,0:21:20.03,Default,NTP,0,0,0,,好痛
+Dialogue: 0,0:21:24.45,0:21:32.91,Default,NTP,0,0,0,,這怪物 金色雙瞳貫穿黑夜 以捕獲獵物
+Dialogue: 0,0:21:34.72,0:21:36.41,Default,NTP,0,0,0,,不要！
+Dialogue: 0,0:21:40.45,0:21:43.08,Default,NTP,0,0,0,,這傢伙看了很喜歡小卷呢
+Dialogue: 0,0:21:43.45,0:21:45.00,Default,NTP,0,0,0,,對吧 小燦 留奈
+Dialogue: 0,0:21:45.26,0:21:46.27,Default,NTP,0,0,0,,是這樣吧…
+Dialogue: 0,0:21:48.79,0:21:51.16,Default,NTP,0,0,0,,所以說 快救我啊
+Dialogue: 0,0:21:52.96,0:21:55.32,Default,NTP,0,0,0,,我受夠了 海蟑螂
+Dialogue: 0,0:23:27.43,0:23:30.57,Default,NTP,0,0,0,,回想起來 自從暑假那天以來 我都是過著連續戰鬥的生活
+Dialogue: 0,0:23:30.83,0:23:31.91,Default,NTP,0,0,0,,現在想好好考慮一下
+Dialogue: 0,0:23:32.17,0:23:33.36,Default,NTP,0,0,0,,這個是戰鬥動畫嗎？
+Dialogue: 0,0:23:33.46,0:23:36.63,Default,NTP,0,0,0,,不 至少得重新變回那開心而羞澀的青春愛情故事
+Dialogue: 0,0:23:36.71,0:23:38.02,Default,NTP,0,0,0,,好 和小燦約會約會
+Dialogue: 0,0:23:38.03,0:23:39.47,Default,NTP,0,0,0,,剛這樣想 出現在我面前的你
+Dialogue: 0,0:23:39.61,0:23:41.63,Default,NTP,0,0,0,,帶著漂亮眼睛的你 到底是誰？
+Dialogue: 0,0:23:39.61,0:23:41.96,Default,NTP,0,0,0,,{\1c&H000000&\3c&Hffffff&\shad0}{\an8}問君芳名
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:59.50,0:01:05.54,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}夏の風が　髪を撫でる
+Dialogue: 0,0:01:05.67,0:01:12.57,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}気のせいかな　恋の予感…
+Dialogue: 0,0:01:26.26,0:01:32.06,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}キラキラ熱い夏の浜辺
+Dialogue: 0,0:01:32.07,0:01:37.31,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}麦わら帽子も　ラララ　脱げずにいたの
+Dialogue: 0,0:01:37.31,0:01:41.81,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}晩生な　a lonely maiden
+Dialogue: 0,0:01:43.56,0:01:49.16,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}不思議な導き　潮の満ち引き
+Dialogue: 0,0:01:49.39,0:01:55.14,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}夢見るみたいに出会えたら　Ah-
+Dialogue: 0,0:01:55.16,0:01:57.98,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}わたしはRomantic
+Dialogue: 0,0:01:58.07,0:02:00.89,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}あなたもRomantic
+Dialogue: 0,0:02:00.92,0:02:03.76,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}世界じゅうRomantic
+Dialogue: 0,0:02:03.80,0:02:06.74,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}日焼けだって気にしないで
+Dialogue: 0,0:02:06.74,0:02:08.70,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}Summer Summer Love
+Dialogue: 0,0:02:08.72,0:02:10.64,op_jap,NTP,0,0,0,,{\fad(100,150)}{\be1}キメたいの
+Dialogue: 0,0:00:59.50,0:01:05.54,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}夏日和風輕撫著頭髮
+Dialogue: 0,0:01:05.67,0:01:12.57,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}是我的錯覺嗎  有種戀愛的預感…
+Dialogue: 0,0:01:26.26,0:01:32.06,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}炎熱的夏天  在這閃閃發光的海邊
+Dialogue: 0,0:01:32.07,0:01:37.31,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}lalala  有一個戴著麥秸草帽的
+Dialogue: 0,0:01:37.31,0:01:41.81,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}晚熟的寂寞少女
+Dialogue: 0,0:01:43.56,0:01:49.16,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}有種不可思議的指引  潮起潮落
+Dialogue: 0,0:01:49.39,0:01:55.14,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}引出了像做夢般的邂逅　Ah-
+Dialogue: 0,0:01:55.16,0:01:57.98,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}我很羅曼蒂克
+Dialogue: 0,0:01:58.07,0:02:00.89,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}你也很羅曼蒂克
+Dialogue: 0,0:02:00.92,0:02:03.76,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}全世界都羅曼蒂克
+Dialogue: 0,0:02:03.80,0:02:06.74,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}曬傷了也毫不在意
+Dialogue: 0,0:02:06.74,0:02:08.70,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}Summer Summer Love
+Dialogue: 0,0:02:08.72,0:02:10.64,op_chi,NTP,0,0,0,,{\fad(100,150)}{\be1}我想下定決心
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:21:58.56,0:22:00.94,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan恋して
+Dialogue: 0,0:21:58.56,0:22:00.94,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan戀愛吧
+Dialogue: 0,0:22:01.37,0:22:03.64,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Danよくなる
+Dialogue: 0,0:22:01.37,0:22:03.64,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan變得更好
+Dialogue: 0,0:22:04.18,0:22:06.54,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Danすべてが
+Dialogue: 0,0:22:04.18,0:22:06.54,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan全部都
+Dialogue: 0,0:22:06.69,0:22:09.33,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Yes All Right
+Dialogue: 0,0:22:06.69,0:22:09.33,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Yes All Right
+Dialogue: 0,0:22:09.43,0:22:11.59,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}3ミリ短いだけで
+Dialogue: 0,0:22:09.43,0:22:11.59,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}只有3厘米長的劉海
+Dialogue: 0,0:22:11.60,0:22:15.01,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}なんてだか落ち着かない前髪
+Dialogue: 0,0:22:11.60,0:22:15.01,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}總是安分不下來
+Dialogue: 0,0:22:15.16,0:22:17.17,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}いつから近い視線
+Dialogue: 0,0:22:15.16,0:22:17.17,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}不知從何時起 你那相近的視線
+Dialogue: 0,0:22:17.28,0:22:20.72,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}こんなに意識していたのかな
+Dialogue: 0,0:22:17.28,0:22:20.72,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}總令我如此心動
+Dialogue: 0,0:22:20.82,0:22:22.84,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}ひとりで聴いてた歌も
+Dialogue: 0,0:22:20.82,0:22:22.84,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}就連獨自在聽的歌曲
+Dialogue: 0,0:22:22.91,0:22:26.34,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}片方君に渡すイヤフォン
+Dialogue: 0,0:22:22.91,0:22:26.34,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}也要把耳機分你一邊
+Dialogue: 0,0:22:26.46,0:22:28.55,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}重なるハートの音が
+Dialogue: 0,0:22:26.46,0:22:28.55,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}重疊的心跳聲
+Dialogue: 0,0:22:28.64,0:22:32.00,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}いつもと違う世界をくれる
+Dialogue: 0,0:22:28.64,0:22:32.00,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}給了我另一片新天地
+Dialogue: 0,0:22:32.43,0:22:37.59,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}ときめきにできることがあるはず
+Dialogue: 0,0:22:32.43,0:22:37.59,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}能讓自己心跳不已的事情應有很多
+Dialogue: 0,0:22:38.11,0:22:45.76,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}退屈な心に  君が教えてくれた
+Dialogue: 0,0:22:38.11,0:22:45.76,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}這是你所教我的 豐富了我那寂寞的心
+Dialogue: 0,0:22:46.12,0:22:50.26,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}好きになって 好きになって 好きになって
+Dialogue: 0,0:22:46.12,0:22:50.26,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}喜歡上吧 喜歡上吧 喜歡上吧
+Dialogue: 0,0:22:50.27,0:22:57.16,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}なにもかも変われる  どこまでも 大丈夫
+Dialogue: 0,0:22:50.27,0:22:57.16,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}一切都會變化 無論到何處都沒問題
+Dialogue: 0,0:22:57.46,0:23:01.52,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}笑いあって キスしちゃって 夢见ちゃって
+Dialogue: 0,0:22:57.46,0:23:01.52,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}一起歡笑 熱烈親吻 做個美夢
+Dialogue: 0,0:23:01.57,0:23:09.28,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}感じあう幸せ これからはじまる これが未来
+Dialogue: 0,0:23:01.57,0:23:09.28,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}互相感覺到的幸福 即將開始 這就是未來
+Dialogue: 0,0:23:10.55,0:23:12.89,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan戀して
+Dialogue: 0,0:23:10.55,0:23:12.89,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan戀愛吧
+Dialogue: 0,0:23:13.35,0:23:15.74,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Danよくなる
+Dialogue: 0,0:23:13.35,0:23:15.74,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan變得更好
+Dialogue: 0,0:23:16.22,0:23:18.50,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Danすべてが
+Dialogue: 0,0:23:16.22,0:23:18.50,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Dan Dan Dan全部都
+Dialogue: 0,0:23:18.67,0:23:21.21,ed_jap,NTP,0,0,0,,{\fad(150,150)}{\be1}Yes All Right
+Dialogue: 0,0:23:18.67,0:23:21.21,ed_chi,NTP,0,0,0,,{\fad(150,150)}{\be1}Yes All Right
+

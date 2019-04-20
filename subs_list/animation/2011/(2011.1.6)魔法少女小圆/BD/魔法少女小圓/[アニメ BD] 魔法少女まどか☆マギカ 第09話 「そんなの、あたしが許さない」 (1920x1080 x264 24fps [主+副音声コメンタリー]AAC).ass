@@ -1,0 +1,397 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 
+Original Script: 
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 640
+PlayResY: 360
+Timer: 100.0000
+Synch Point: 
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: title,DFYuanMedium-B5,20,&H00FFFFFF,&HF0000000,&HB89B9B9B,&HD0000000,0,0,0,0,100,100,0,0,1,3,5,2,30,30,10,1
+Style: next,DFYuanMedium-B5,25,&H001A15E2,&HF0000000,&H00FFFFFF,&HF0000000,0,0,0,0,100,100,0,0,1,5,0,2,30,30,10,1
+Style: opjp,A-OTF Maru Folk Pro M,26,&H00FFFFFF,&HFF000000,&H009983FA,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: opcn,DFYuanMedium-B5,16,&H00FFFFFF,&HFF000000,&H009983FA,&HF0000000,0,0,0,0,100,100,0,0,1,2,0,8,10,10,10,1
+Style: Default,DFNYuanMXBold-B5,23,&H00FFFFFF,&H00FFFFFF,&H00D244DB,&H00D244DB,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: edjp,EPSON 丸ゴシック体Ｍ,22,&H00FFFFFF,&H00838383,&H00000000,&H005E5E5E,-1,0,0,0,100,100,0,0,1,2,0,3,10,10,8,1
+Style: edcn,DFYuanMedium-B5,16,&H00FFFFFF,&H00838383,&H00000000,&H005E5E5E,0,0,0,0,100,100,0,0,1,2,0,3,10,10,8,1
+Style: staff,DFYuanMedium-B5,14,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,1,0,8,10,10,10,1
+Style: pos,DFYuanMedium-B5,20,&H00000000,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.93,0:00:06.02,Default,NTP,0,0,0,,{\blur10}祈求別人幸福的同時
+Dialogue: 0,0:00:06.70,0:00:08.86,Default,NTP,0,0,0,,{\blur10}卻不得不去詛咒其他的人
+Dialogue: 0,0:00:09.88,0:00:13.74,Default,NTP,0,0,0,,{\blur10}我們魔法少女就是這樣的構造吧
+Dialogue: 0,0:00:16.62,0:00:19.45,Default,NTP,0,0,0,,{\blur10}我還真是個笨蛋
+Dialogue: 0,0:00:33.32,0:00:33.94,Default,NTP,0,0,0,,{\blur10}小爽！
+Dialogue: 0,0:00:46.89,0:00:49.72,Default,NTP,0,0,0,,{\blur10}什麼啊 你到底是什麼啊
+Dialogue: 0,0:00:50.27,0:00:51.79,Default,NTP,0,0,0,,{\blur10}對小爽做了什麼
+Dialogue: 0,0:00:56.02,0:00:56.83,Default,NTP,0,0,0,,{\blur10}退下
+Dialogue: 0,0:01:03.85,0:01:04.81,Default,NTP,0,0,0,,{\blur10}抓住
+Dialogue: 0,0:01:04.98,0:01:05.62,Default,NTP,0,0,0,,{\blur10}幹什麼
+Dialogue: 0,0:01:07.29,0:01:07.81,Default,NTP,0,0,0,,{\blur10}別管了
+Dialogue: 0,0:01:15.63,0:01:16.35,Default,NTP,0,0,0,,{\blur10}這傢伙是…
+Dialogue: 0,0:01:16.86,0:01:19.91,Default,NTP,0,0,0,,{\blur10}鬆開我的手的話你的時間也會停止
+Dialogue: 0,0:01:20.50,0:01:21.11,Default,NTP,0,0,0,,{\blur10}小心
+Dialogue: 0,0:01:21.57,0:01:22.83,Default,NTP,0,0,0,,{\blur10}到底怎麼了啊
+Dialogue: 0,0:01:23.02,0:01:24.45,Default,NTP,0,0,0,,{\blur10}那個魔女是怎麼回事啊
+Dialogue: 0,0:01:24.74,0:01:26.54,Default,NTP,0,0,0,,{\blur10}曾經叫做美樹爽的東西
+Dialogue: 0,0:01:27.27,0:01:28.95,Default,NTP,0,0,0,,{\blur10}你看到最後了吧
+Dialogue: 0,0:01:29.67,0:01:30.41,Default,NTP,0,0,0,,{\blur10}要逃走嗎
+Dialogue: 0,0:01:31.02,0:01:32.98,Default,NTP,0,0,0,,{\blur10}不願意的話就丟掉那多餘的累贅
+Dialogue: 0,0:01:33.48,0:01:35.04,Default,NTP,0,0,0,,{\blur10}現在就殺死那魔女吧
+Dialogue: 0,0:01:35.92,0:01:36.67,Default,NTP,0,0,0,,{\blur10}如果你做得到話
+Dialogue: 0,0:01:36.84,0:01:37.60,Default,NTP,0,0,0,,{\blur10}少開玩笑了
+Dialogue: 0,0:01:38.19,0:01:40.55,Default,NTP,0,0,0,,{\blur10}現在的你只會拖後腿
+Dialogue: 0,0:01:41.24,0:01:42.15,Default,NTP,0,0,0,,{\blur10}暫時撤退吧
+Dialogue: 0,0:01:57.14,0:02:00.46,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}交わした約束忘れないよ
+Dialogue: 0,0:01:57.14,0:02:00.46,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}無法忘記交換過的約定
+Dialogue: 0,0:02:00.46,0:02:02.81,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}目を閉じ確かめる
+Dialogue: 0,0:02:00.46,0:02:02.81,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}而閉上眼睛再次確定
+Dialogue: 0,0:02:02.81,0:02:08.32,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}押し寄せた闇 振り払って進むよ
+Dialogue: 0,0:02:02.81,0:02:08.32,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}驅散聚集的黑暗繼續前進吧
+Dialogue: 0,0:02:19.78,0:02:24.35,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}いつになったらなくした未来を
+Dialogue: 0,0:02:19.78,0:02:24.35,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}要到什麼時候 失去的未來
+Dialogue: 0,0:02:24.40,0:02:30.49,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}私ここでまた見ることできるの？
+Dialogue: 0,0:02:24.40,0:02:30.49,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}我才能在這裡再次眺望
+Dialogue: 0,0:02:30.73,0:02:35.22,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}溢れ出した不安の影を
+Dialogue: 0,0:02:30.73,0:02:35.22,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}無數次撕裂漫溢的不安的陰影
+Dialogue: 0,0:02:35.31,0:02:40.73,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}何度でも裂いてこの世界歩んでこう
+Dialogue: 0,0:02:35.31,0:02:40.73,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}在這世界上不斷前行
+Dialogue: 0,0:02:40.95,0:02:46.42,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}とめどなく刻まれた
+Dialogue: 0,0:02:40.95,0:02:46.42,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}打上無盡的刻印的
+Dialogue: 0,0:02:46.47,0:02:51.91,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}時は今始まり告げ
+Dialogue: 0,0:02:46.47,0:02:51.91,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}時間此刻宣告著開始
+Dialogue: 0,0:02:51.96,0:02:57.01,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}変わらない思いをのせ
+Dialogue: 0,0:02:51.96,0:02:57.01,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}乘載著不變的思念
+Dialogue: 0,0:02:57.07,0:03:02.49,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}閉ざされた扉開けよう
+Dialogue: 0,0:02:57.07,0:03:02.49,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}去打開閉鎖的門扉吧
+Dialogue: 0,0:03:02.56,0:03:08.28,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}目覚めた心は走り出した 未来を描くため
+Dialogue: 0,0:03:02.56,0:03:08.28,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}甦醒的心為了描繪未來而奔跑
+Dialogue: 0,0:03:08.28,0:03:13.47,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}難しい道で立ち止まっても空は
+Dialogue: 0,0:03:08.28,0:03:13.47,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}即使在泥濘的路上停滯不前天空也
+Dialogue: 0,0:03:13.56,0:03:18.26,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}きれいな青さでいつも待っててくれる
+Dialogue: 0,0:03:13.56,0:03:18.26,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}帶著美麗的蔚藍一直等待著我
+Dialogue: 0,0:03:18.26,0:03:20.42,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}だから怖くない
+Dialogue: 0,0:03:18.26,0:03:20.42,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}所以不用害怕
+Dialogue: 0,0:03:20.47,0:03:23.47,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}もう何があっても
+Dialogue: 0,0:03:20.47,0:03:23.47,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}無論發生什麼
+Dialogue: 0,0:03:22.16,0:03:24.93,title,NTP,0,0,0,,{\pos(320,240)\fad(200,0)\blur2}第9話    那種事，我不允許
+Dialogue: 0,0:03:23.52,0:03:26.20,opjp,NTP,0,0,0,,{\fad(100,100)\blur5}挫けない
+Dialogue: 0,0:03:23.52,0:03:26.20,opcn,NTP,0,0,0,,{\fad(100,100)\blur5}也不會氣餒
+Dialogue: 0,0:03:27.49,0:03:31.61,staff,NTP,0,0,0,,{\fad(300,350)\an2}本字幕由華盟字幕社&澄空學園字幕組製作
+Dialogue: 0,0:03:31.61,0:03:37.71,staff,NTP,0,0,0,,{\fad(300,350)\fs12}片源：ＸＯ  翻譯：リボーン / detectivexsc  校對：mafuyu / 豆奶  後期：yulius / 阿爽 / 9416-kun
+Dialogue: 0,0:03:51.02,0:03:52.01,Default,NTP,0,0,0,,{\blur10}小爽
+Dialogue: 0,0:03:53.07,0:03:54.87,Default,NTP,0,0,0,,{\blur10}小爽 怎麼了
+Dialogue: 0,0:03:56.59,0:03:58.20,Default,NTP,0,0,0,,{\blur10}{\pos(326,326)\fs16\b1}soul gem
+Dialogue: 0,0:03:56.59,0:03:58.20,Default,NTP,0,0,0,,{\blur10}喂 靈魂寶石呢
+Dialogue: 0,0:03:58.69,0:04:00.15,Default,NTP,0,0,0,,{\blur10}小爽她怎麼了
+Dialogue: 0,0:04:00.58,0:04:04.31,Default,NTP,0,0,0,,{\blur10}{\pos(412,326)\fs16\b1}grief seed
+Dialogue: 0,0:04:00.58,0:04:04.31,Default,NTP,0,0,0,,{\blur10}她的靈魂寶石在變成悲歎之種後
+Dialogue: 0,0:04:04.77,0:04:06.36,Default,NTP,0,0,0,,{\blur10}孕育出魔女消失了
+Dialogue: 0,0:04:11.07,0:04:13.17,Default,NTP,0,0,0,,{\blur10}騙人…的吧
+Dialogue: 0,0:04:13.71,0:04:17.51,Default,NTP,0,0,0,,{\blur10}是事實 也是靈魂寶石最後的秘密
+Dialogue: 0,0:04:18.51,0:04:21.33,Default,NTP,0,0,0,,{\blur10}在這寶石被完全污染變成漆黑的時候
+Dialogue: 0,0:04:21.69,0:04:25.72,Default,NTP,0,0,0,,{\blur10}我們就會變成悲歎之種 作為魔女而重生
+Dialogue: 0,0:04:27.84,0:04:32.35,Default,NTP,0,0,0,,{\blur10}這就是成為魔法少女的人所無法逃避的命運
+Dialogue: 0,0:04:34.51,0:04:35.24,Default,NTP,0,0,0,,{\blur10}騙人的
+Dialogue: 0,0:04:36.82,0:04:38.50,Default,NTP,0,0,0,,{\blur10}騙人的吧 喂
+Dialogue: 0,0:04:46.38,0:04:48.53,Default,NTP,0,0,0,,{\blur10}怎麼會 為什麼…
+Dialogue: 0,0:04:49.30,0:04:53.11,Default,NTP,0,0,0,,{\blur10}小爽想要從魔女手中保護大家
+Dialogue: 0,0:04:54.01,0:04:56.20,Default,NTP,0,0,0,,{\blur10}想要成為正義的一方
+Dialogue: 0,0:04:56.73,0:04:59.33,Default,NTP,0,0,0,,{\blur10}她這樣想才成為魔法少女的
+Dialogue: 0,0:05:00.19,0:05:01.16,Default,NTP,0,0,0,,{\blur10}但是卻…
+Dialogue: 0,0:05:01.42,0:05:05.37,Default,NTP,0,0,0,,{\blur10}因為同時也背負了與那願望相應的詛咒
+Dialogue: 0,0:05:06.25,0:05:10.38,Default,NTP,0,0,0,,{\blur10}她會因救了別人而從此相應地詛咒著別人而活下去
+Dialogue: 0,0:05:22.74,0:05:25.70,Default,NTP,0,0,0,,{\blur10}你以為你是誰啊
+Dialogue: 0,0:05:26.21,0:05:28.29,Default,NTP,0,0,0,,{\blur10}告訴我們實情就了不起了嗎
+Dialogue: 0,0:05:29.76,0:05:32.03,Default,NTP,0,0,0,,{\blur10}為什麼你能說得這麼得意
+Dialogue: 0,0:05:32.52,0:05:33.66,Default,NTP,0,0,0,,{\blur10}這傢伙是小爽的
+Dialogue: 0,0:05:35.69,0:05:37.41,Default,NTP,0,0,0,,{\blur10}小爽的摯友啊
+Dialogue: 0,0:05:39.45,0:05:40.92,Default,NTP,0,0,0,,{\blur10}這次終於理解了吧
+Dialogue: 0,0:05:41.86,0:05:44.96,Default,NTP,0,0,0,,{\blur10}你所憧憬的東西的真面目 是什麼樣的
+Dialogue: 0,0:05:47.20,0:05:50.67,Default,NTP,0,0,0,,{\blur10}既然特地將屍體帶了回來 就小心處理吧
+Dialogue: 0,0:05:51.65,0:05:55.46,Default,NTP,0,0,0,,{\blur10}不注意而隨便放置的話 之後會變得很麻煩的
+Dialogue: 0,0:05:55.82,0:05:57.39,Default,NTP,0,0,0,,{\blur10}你還算是人嗎
+Dialogue: 0,0:05:57.83,0:05:58.97,Default,NTP,0,0,0,,{\blur10}當然不是
+Dialogue: 0,0:06:00.80,0:06:01.53,Default,NTP,0,0,0,,{\blur10}你也一樣
+Dialogue: 0,0:06:19.31,0:06:22.04,Default,NTP,0,0,0,,{\blur10}可以進來嗎 我有話要說
+Dialogue: 0,0:06:23.16,0:06:24.17,Default,NTP,0,0,0,,{\blur10}你還活著呢
+Dialogue: 0,0:06:27.26,0:06:30.14,Default,NTP,0,0,0,,{\blur10}小炎說的話都是真的嗎
+Dialogue: 0,0:06:30.78,0:06:32.97,Default,NTP,0,0,0,,{\blur10}沒有需要訂正的錯誤呢
+Dialogue: 0,0:06:35.42,0:06:40.04,Default,NTP,0,0,0,,{\blur10}那你是為了讓大家變成魔女才把魔法少女…
+Dialogue: 0,0:06:40.52,0:06:42.41,Default,NTP,0,0,0,,{\blur10}希望你不要誤會
+Dialogue: 0,0:06:42.80,0:06:46.68,Default,NTP,0,0,0,,{\blur10}我們並不是對人類有惡意
+Dialogue: 0,0:06:47.40,0:06:50.37,Default,NTP,0,0,0,,{\blur10}一切都是為了延續這宇宙的壽命
+Dialogue: 0,0:06:51.42,0:06:54.65,Default,NTP,0,0,0,,{\blur10}{\pos(337,326)\fs16\b1}entropy
+Dialogue: 0,0:06:51.42,0:06:54.65,Default,NTP,0,0,0,,{\blur10}小圓 你知道「熵」這個詞嗎
+Dialogue: 0,0:06:56.25,0:06:57.30,Default,NTP,0,0,0,,{\blur10}簡單地打個比方就是
+Dialogue: 0,0:06:57.67,0:07:02.63,Default,NTP,0,0,0,,{\blur10}燃燒樹木所得到的熱量 並不等於培育樹木所付出的勞力
+Dialogue: 0,0:07:03.35,0:07:06.73,Default,NTP,0,0,0,,{\blur10}能量變換形式時會發生損耗
+Dialogue: 0,0:07:07.08,0:07:10.34,Default,NTP,0,0,0,,{\blur10}宇宙全體的能量在單向地不斷減少
+Dialogue: 0,0:07:11.35,0:07:16.35,Default,NTP,0,0,0,,{\blur10}所以我們尋求著不被熱力學法則所束縛的能量
+Dialogue: 0,0:07:16.94,0:07:20.33,Default,NTP,0,0,0,,{\blur10}這樣找到的就是魔法少女的魔力
+Dialogue: 0,0:07:22.85,0:07:25.72,Default,NTP,0,0,0,,{\blur10}你到底…
+Dialogue: 0,0:07:26.16,0:07:32.28,Default,NTP,0,0,0,,{\blur10}我們的文明發明了將智慧生命體的感情轉換成能量的技術
+Dialogue: 0,0:07:33.21,0:07:37.72,Default,NTP,0,0,0,,{\blur10}不過不巧的是 我們自身卻未擁有感情
+Dialogue: 0,0:07:38.27,0:07:41.31,Default,NTP,0,0,0,,{\blur10}於是就調查了這宇宙中的各種種族
+Dialogue: 0,0:07:41.50,0:07:43.42,Default,NTP,0,0,0,,{\blur10}從而找到了你們人類
+Dialogue: 0,0:07:47.20,0:07:50.11,Default,NTP,0,0,0,,{\blur10}考慮到人類的個體數和繁殖力
+Dialogue: 0,0:07:50.31,0:07:52.69,Default,NTP,0,0,0,,{\blur10}一個人所能產生的感情能量
+Dialogue: 0,0:07:53.02,0:07:57.48,Default,NTP,0,0,0,,{\blur10}遠超那個體的誕生和成長所需的能量
+Dialogue: 0,0:07:58.22,0:08:02.81,Default,NTP,0,0,0,,{\blur10}你們的靈魂足以成為推翻熵的能量源
+Dialogue: 0,0:08:04.43,0:08:10.60,Default,NTP,0,0,0,,{\blur10}擷取效率最高的是青春期少女的希望和絕望的轉換
+Dialogue: 0,0:08:11.43,0:08:16.58,Default,NTP,0,0,0,,{\blur10}成為靈魂寶石的你們的靈魂燃盡變成悲歎之種的瞬間
+Dialogue: 0,0:08:16.80,0:08:18.95,Default,NTP,0,0,0,,{\blur10}會釋放出龐大的能量
+Dialogue: 0,0:08:19.47,0:08:23.72,Default,NTP,0,0,0,,{\blur10}{\pos(376,326)\fs16\b1}incubator
+Dialogue: 0,0:08:19.47,0:08:23.72,Default,NTP,0,0,0,,{\blur10}回收那些就是我們孵化者的任務
+Dialogue: 0,0:08:24.84,0:08:27.77,Default,NTP,0,0,0,,{\blur10}我們是消耗品嗎
+Dialogue: 0,0:08:28.47,0:08:31.30,Default,NTP,0,0,0,,{\blur10}要我們為了你們而死嗎
+Dialogue: 0,0:08:31.99,0:08:34.54,Default,NTP,0,0,0,,{\blur10}這宇宙中有多少文明在聚集著
+Dialogue: 0,0:08:34.85,0:08:38.18,Default,NTP,0,0,0,,{\blur10}一瞬間會消耗掉多少能量你知道嗎
+Dialogue: 0,0:08:38.91,0:08:42.18,Default,NTP,0,0,0,,{\blur10}你們人類總有一天也會離開這個星球
+Dialogue: 0,0:08:42.18,0:08:44.21,Default,NTP,0,0,0,,{\blur10}加入我們的行列之中吧
+Dialogue: 0,0:08:44.68,0:08:45.77,Default,NTP,0,0,0,,{\blur10}到了那個時候
+Dialogue: 0,0:08:45.96,0:08:48.57,Default,NTP,0,0,0,,{\blur10}把一個枯竭的宇宙交給你們也會很困擾的吧
+Dialogue: 0,0:08:49.15,0:08:53.82,Default,NTP,0,0,0,,{\blur10}長遠來看的話 這對你們來說應該也是有益的交易呢
+Dialogue: 0,0:08:55.33,0:08:59.64,Default,NTP,0,0,0,,{\blur10}別說傻話了 就因為那種莫名其妙的理由
+Dialogue: 0,0:09:00.09,0:09:03.84,Default,NTP,0,0,0,,{\blur10}麻美姐死了 小爽變成了那樣
+Dialogue: 0,0:09:04.98,0:09:07.81,Default,NTP,0,0,0,,{\blur10}太過分了 太殘酷了
+Dialogue: 0,0:09:09.42,0:09:13.53,Default,NTP,0,0,0,,{\blur10}我們也是以你們的同意為前提才訂下契約的
+Dialogue: 0,0:09:13.97,0:09:16.90,Default,NTP,0,0,0,,{\blur10}這樣應該就足夠有良心了吧
+Dialogue: 0,0:09:17.20,0:09:19.16,Default,NTP,0,0,0,,{\blur10}大家都只是被騙了而已吧
+Dialogue: 0,0:09:19.53,0:09:23.02,Default,NTP,0,0,0,,{\blur10}欺騙這個行為本身我們就無法理解
+Dialogue: 0,0:09:23.57,0:09:27.02,Default,NTP,0,0,0,,{\blur10}由於認識的差異產生的判斷失誤而後悔的時候
+Dialogue: 0,0:09:27.26,0:09:30.21,Default,NTP,0,0,0,,{\blur10}不知為何人類就會憎恨別人呢
+Dialogue: 0,0:09:30.98,0:09:34.08,Default,NTP,0,0,0,,{\blur10}我跟不上你說的話
+Dialogue: 0,0:09:34.71,0:09:36.65,Default,NTP,0,0,0,,{\blur10}完全無法認同
+Dialogue: 0,0:09:37.03,0:09:41.33,Default,NTP,0,0,0,,{\blur10}你們人類的價值觀才是 我們也很難理解呢
+Dialogue: 0,0:09:41.82,0:09:43.81,Default,NTP,0,0,0,,{\blur10}現在就有69億人
+Dialogue: 0,0:09:44.04,0:09:47.42,Default,NTP,0,0,0,,{\blur10}而且持續每4秒就會增加10人的你們
+Dialogue: 0,0:09:47.74,0:09:50.98,Default,NTP,0,0,0,,{\blur10}為什麼會為了單一個體的生死如此大驚小怪呢
+Dialogue: 0,0:09:51.78,0:09:57.62,Default,NTP,0,0,0,,{\blur10}你那樣想的話 果然你就是我們的敵人呢
+Dialogue: 0,0:09:58.36,0:10:00.87,Default,NTP,0,0,0,,{\blur10}我本來是想來辯解的喲
+Dialogue: 0,0:10:01.30,0:10:06.78,Default,NTP,0,0,0,,{\blur10}想讓你理解你們的犧牲會帶來多麼美妙的事情
+Dialogue: 0,0:10:07.26,0:10:08.85,Default,NTP,0,0,0,,{\blur10}看來是白費工夫了呢
+Dialogue: 0,0:10:09.30,0:10:10.52,Default,NTP,0,0,0,,{\blur10}那是當然的吧
+Dialogue: 0,0:10:11.08,0:10:11.65,Default,NTP,0,0,0,,{\blur10}小圓
+Dialogue: 0,0:10:12.19,0:10:15.23,Default,NTP,0,0,0,,{\blur10}總有一天你會成為最棒的魔法少女
+Dialogue: 0,0:10:15.44,0:10:17.62,Default,NTP,0,0,0,,{\blur10}然後成為最邪惡的魔女的吧
+Dialogue: 0,0:10:17.93,0:10:22.21,Default,NTP,0,0,0,,{\blur10}那時我們應該就會得到前所未見的大量能量
+Dialogue: 0,0:10:22.83,0:10:25.06,Default,NTP,0,0,0,,{\blur10}如果你有為了這宇宙而死的想法的話
+Dialogue: 0,0:10:25.37,0:10:26.59,Default,NTP,0,0,0,,{\blur10}隨時跟我說好了
+Dialogue: 0,0:10:26.96,0:10:27.87,Default,NTP,0,0,0,,{\blur10}我會等著的
+Dialogue: 0,0:10:47.99,0:10:50.17,Default,NTP,0,0,0,,{\blur10}做到如此程度來保持屍體的新鮮
+Dialogue: 0,0:10:50.37,0:10:51.75,Default,NTP,0,0,0,,{\blur10}你到底有什麼打算
+Dialogue: 0,0:10:58.66,0:11:01.13,Default,NTP,0,0,0,,{\blur10}拿回這傢伙的靈魂寶石的方法呢？
+Dialogue: 0,0:11:01.65,0:11:03.90,Default,NTP,0,0,0,,{\blur10}據我所知是沒有的
+Dialogue: 0,0:11:06.26,0:11:10.43,Default,NTP,0,0,0,,{\blur10}那就是說你也有不知道的事情的意思嗎
+Dialogue: 0,0:11:10.97,0:11:13.50,Default,NTP,0,0,0,,{\blur10}魔法少女是推翻常理的存在
+Dialogue: 0,0:11:14.05,0:11:16.76,Default,NTP,0,0,0,,{\blur10}無論你們做到了多麼不合常理的事情
+Dialogue: 0,0:11:17.17,0:11:18.49,Default,NTP,0,0,0,,{\blur10}都沒什麼好驚訝的
+Dialogue: 0,0:11:19.02,0:11:20.26,Default,NTP,0,0,0,,{\blur10}做得到呢
+Dialogue: 0,0:11:20.81,0:11:21.96,Default,NTP,0,0,0,,{\blur10}沒有先例呢
+Dialogue: 0,0:11:22.41,0:11:24.39,Default,NTP,0,0,0,,{\blur10}所以我也不知道方法
+Dialogue: 0,0:11:24.97,0:11:27.21,Default,NTP,0,0,0,,{\blur10}不湊巧 沒辦法給你建議了
+Dialogue: 0,0:11:32.03,0:11:32.77,Default,NTP,0,0,0,,{\blur10}不需要
+Dialogue: 0,0:11:34.26,0:11:38.66,Default,NTP,0,0,0,,{\blur10}誰需要…你的幫助啊
+Dialogue: 0,0:11:45.99,0:11:49.31,Default,NTP,0,0,0,,{\blur10}小圓 今早臉色不太好呢
+Dialogue: 0,0:11:49.93,0:11:50.97,Default,NTP,0,0,0,,{\blur10}不要緊嗎
+Dialogue: 0,0:11:51.65,0:11:54.45,Default,NTP,0,0,0,,{\blur10}嗯 稍微有點睡眠不足
+Dialogue: 0,0:11:54.96,0:11:58.87,Default,NTP,0,0,0,,{\blur10}話說回來 今天小爽也請假嗎
+Dialogue: 0,0:11:59.46,0:12:01.84,Default,NTP,0,0,0,,{\blur10}稍後應該去探望一下吧
+Dialogue: 0,0:12:02.80,0:12:04.79,Default,NTP,0,0,0,,{\blur10}但是我可以去嗎
+Dialogue: 0,0:12:05.02,0:12:09.15,Default,NTP,0,0,0,,{\blur10}現在跟小爽有些不太好說話呢
+Dialogue: 0,0:12:09.71,0:12:11.95,Default,NTP,0,0,0,,{\blur10}仁美 其實呢
+Dialogue: 0,0:12:12.12,0:12:13.35,Default,NTP,0,0,0,,{\blur10}才剛過了一晚
+Dialogue: 0,0:12:13.88,0:12:16.33,Default,NTP,0,0,0,,{\blur10}是悠閒地上學的時候嗎
+Dialogue: 0,0:12:22.33,0:12:23.43,Default,NTP,0,0,0,,{\blur10}小圓？
+Dialogue: 0,0:12:23.72,0:12:27.08,Default,NTP,0,0,0,,{\blur10}稍微有些話要說 可以露個臉嗎
+Dialogue: 0,0:12:30.33,0:12:32.11,Default,NTP,0,0,0,,{\blur10}仁美 抱歉
+Dialogue: 0,0:12:32.40,0:12:35.22,Default,NTP,0,0,0,,{\blur10}今天我也要請假
+Dialogue: 0,0:12:36.45,0:12:38.32,Default,NTP,0,0,0,,{\blur10}怎麼這樣 小圓等等…
+Dialogue: 0,0:12:46.84,0:12:48.98,Default,NTP,0,0,0,,{\blur10}那個 要說的是…
+Dialogue: 0,0:12:49.57,0:12:52.65,Default,NTP,0,0,0,,{\blur10}你不想救美樹爽嗎
+Dialogue: 0,0:12:53.85,0:12:55.78,Default,NTP,0,0,0,,{\blur10}能救得了…嗎
+Dialogue: 0,0:12:55.85,0:12:58.24,Default,NTP,0,0,0,,{\blur10}救不了的話就不管了嗎
+Dialogue: 0,0:13:01.15,0:13:03.03,Default,NTP,0,0,0,,{\blur10}這問法有些奇怪呢
+Dialogue: 0,0:13:03.42,0:13:05.22,Default,NTP,0,0,0,,{\blur10}雖然也許你會覺得很傻
+Dialogue: 0,0:13:05.95,0:13:06.74,Default,NTP,0,0,0,,{\blur10}我呢
+Dialogue: 0,0:13:07.18,0:13:10.90,Default,NTP,0,0,0,,{\blur10}是不是真的能夠得到救贖 在得到確認之前
+Dialogue: 0,0:13:10.95,0:13:12.19,Default,NTP,0,0,0,,{\blur10}我不想放棄
+Dialogue: 0,0:13:15.97,0:13:17.82,Default,NTP,0,0,0,,{\blur10}那傢伙雖然變成魔女了
+Dialogue: 0,0:13:18.25,0:13:21.01,Default,NTP,0,0,0,,{\blur10}但也許還記得朋友的聲音
+Dialogue: 0,0:13:21.38,0:13:25.38,Default,NTP,0,0,0,,{\blur10}如果呼喚她的話 也許能找回人類時的記憶
+Dialogue: 0,0:13:26.25,0:13:27.71,Default,NTP,0,0,0,,{\blur10}如果能做得到的話
+Dialogue: 0,0:13:28.54,0:13:29.82,Default,NTP,0,0,0,,{\blur10}大概就是你了
+Dialogue: 0,0:13:32.53,0:13:33.93,Default,NTP,0,0,0,,{\blur10}能順利嗎
+Dialogue: 0,0:13:33.98,0:13:35.45,Default,NTP,0,0,0,,{\blur10}這種事鬼才知道
+Dialogue: 0,0:13:38.46,0:13:40.43,Default,NTP,0,0,0,,{\blur10}就是因為不知道才要做啊
+Dialogue: 0,0:13:40.63,0:13:44.65,Default,NTP,0,0,0,,{\blur10}說不定把那魔女一切兩半之後
+Dialogue: 0,0:13:44.95,0:13:47.27,Default,NTP,0,0,0,,{\blur10}裡面滾出來的不是悲歎之種
+Dialogue: 0,0:13:47.36,0:13:50.51,Default,NTP,0,0,0,,{\blur10}而是小爽的靈魂寶石
+Dialogue: 0,0:13:51.26,0:13:52.65,Default,NTP,0,0,0,,{\blur10}不是有這麼回事嗎
+Dialogue: 0,0:13:52.89,0:13:56.23,Default,NTP,0,0,0,,{\blur10}所謂最後愛和勇氣會勝利的故事
+Dialogue: 0,0:13:59.33,0:14:00.47,Default,NTP,0,0,0,,{\blur10}好好想想的話
+Dialogue: 0,0:14:00.89,0:14:05.85,Default,NTP,0,0,0,,{\blur10}我也是憧憬著那樣才成為魔法少女的呢
+Dialogue: 0,0:14:06.56,0:14:08.28,Default,NTP,0,0,0,,{\blur10}雖然完全忘記了
+Dialogue: 0,0:14:08.85,0:14:11.04,Default,NTP,0,0,0,,{\blur10}小爽讓我想起了這個
+Dialogue: 0,0:14:13.08,0:14:16.07,Default,NTP,0,0,0,,{\blur10}如果不想來的話我也不勉強你
+Dialogue: 0,0:14:16.52,0:14:19.27,Default,NTP,0,0,0,,{\blur10}因為這非常冒險呢
+Dialogue: 0,0:14:19.93,0:14:25.06,Default,NTP,0,0,0,,{\blur10}我也不能保證無論發生什麼都能保護你
+Dialogue: 0,0:14:25.64,0:14:28.01,Default,NTP,0,0,0,,{\blur10}不 我幫你
+Dialogue: 0,0:14:28.59,0:14:29.86,Default,NTP,0,0,0,,{\blur10}希望你能讓我幫你
+Dialogue: 0,0:14:34.60,0:14:36.51,Default,NTP,0,0,0,,{\blur10}我叫鹿目圓
+Dialogue: 0,0:14:38.53,0:14:42.02,Default,NTP,0,0,0,,{\blur10}真是的 真會讓人亂了步調呢
+Dialogue: 0,0:14:43.58,0:14:46.57,Default,NTP,0,0,0,,{\blur10}我是佐倉杏子 多多關照呢
+Dialogue: 0,0:14:58.30,0:14:59.08,Default,NTP,0,0,0,,{\blur10}對不起
+Dialogue: 0,0:14:59.72,0:15:02.56,Default,NTP,0,0,0,,{\blur10}我感覺不舒服 想去保健室
+Dialogue: 0,0:15:03.98,0:15:05.93,Default,NTP,0,0,0,,{\blur10}這個班級的保健委員是誰
+Dialogue: 0,0:15:06.39,0:15:08.39,Default,NTP,0,0,0,,{\blur10}鹿目同學今天請假了
+Dialogue: 0,0:15:09.49,0:15:11.30,Default,NTP,0,0,0,,{\blur10}那麼就讓班長陪你去…
+Dialogue: 0,0:15:20.95,0:15:23.73,Default,NTP,0,0,0,,{\blur10}小炎會不會也來幫忙呢
+Dialogue: 0,0:15:24.33,0:15:26.40,Default,NTP,0,0,0,,{\blur10}那傢伙不是這種人
+Dialogue: 0,0:15:26.73,0:15:28.01,Default,NTP,0,0,0,,{\blur10}不是朋友嗎
+Dialogue: 0,0:15:30.78,0:15:31.66,Default,NTP,0,0,0,,{\blur10}不是呢
+Dialogue: 0,0:15:32.53,0:15:34.93,Default,NTP,0,0,0,,{\blur10}不過算是利害一致吧
+Dialogue: 0,0:15:35.34,0:15:39.44,Default,NTP,0,0,0,,{\blur10}只是為了打倒彼此一個人都解決不了的對手才在一起的
+Dialogue: 0,0:15:40.85,0:15:45.29,Default,NTP,0,0,0,,{\blur10}{\pos(278,326)\fs16\b1}walpurgisnacht
+Dialogue: 0,0:15:40.85,0:15:45.29,Default,NTP,0,0,0,,{\blur10}再過幾天 魔女之夜將會來到這座城市
+Dialogue: 0,0:15:47.62,0:15:48.91,Default,NTP,0,0,0,,{\blur10}{\pos(307,326)\fs16\b1}walpurgis
+Dialogue: 0,0:15:47.62,0:15:48.91,Default,NTP,0,0,0,,{\blur10}魔女？
+Dialogue: 0,0:15:49.56,0:15:51.65,Default,NTP,0,0,0,,{\blur10}超特級的巨大魔女
+Dialogue: 0,0:15:54.39,0:15:57.09,Default,NTP,0,0,0,,{\blur10}無論是我還是她 估計一個人都解決不了
+Dialogue: 0,0:15:57.96,0:16:03.24,Default,NTP,0,0,0,,{\blur10}所以才結成共同戰線 總之就是那種關係
+Dialogue: 0,0:16:11.07,0:16:11.77,Default,NTP,0,0,0,,{\blur10}就是這裡吧
+Dialogue: 0,0:16:20.83,0:16:25.61,Default,NTP,0,0,0,,{\blur10}真的是小爽嗎 不會是其它魔女吧
+Dialogue: 0,0:16:25.89,0:16:27.92,Default,NTP,0,0,0,,{\blur10}魔力的類型和昨天一樣
+Dialogue: 0,0:16:28.50,0:16:29.95,Default,NTP,0,0,0,,{\blur10}肯定是那傢伙
+Dialogue: 0,0:16:45.43,0:16:47.61,Default,NTP,0,0,0,,{\blur10}好了 我再問你一遍
+Dialogue: 0,0:16:48.58,0:16:50.24,Default,NTP,0,0,0,,{\blur10}真的做好心理準備了嗎
+Dialogue: 0,0:16:50.65,0:16:52.79,Default,NTP,0,0,0,,{\blur10}好像已經習慣了
+Dialogue: 0,0:16:53.29,0:16:59.83,Default,NTP,0,0,0,,{\blur10}我一直只是跟在後面 從來沒有幫上過忙
+Dialogue: 0,0:17:00.51,0:17:02.69,Default,NTP,0,0,0,,{\blur10}但還是拜託了 帶上我吧
+Dialogue: 0,0:17:03.67,0:17:06.07,Default,NTP,0,0,0,,{\blur10}你真是個奇怪的傢伙
+Dialogue: 0,0:17:15.14,0:17:17.06,Default,NTP,0,0,0,,{\blur10}喂 杏子
+Dialogue: 0,0:17:17.22,0:17:17.91,Default,NTP,0,0,0,,{\blur10}嗯？
+Dialogue: 0,0:17:18.42,0:17:22.84,Default,NTP,0,0,0,,{\blur10}總是讓別人戰鬥 自己卻什麼都不做的我
+Dialogue: 0,0:17:24.83,0:17:26.05,Default,NTP,0,0,0,,{\blur10}是不是很卑鄙
+Dialogue: 0,0:17:26.35,0:17:28.97,Default,NTP,0,0,0,,{\blur10}你為什麼會想要成為魔法少女
+Dialogue: 0,0:17:29.16,0:17:30.32,Default,NTP,0,0,0,,{\blur10}為什麼…
+Dialogue: 0,0:17:31.92,0:17:32.90,Default,NTP,0,0,0,,{\blur10}別小看我們
+Dialogue: 0,0:17:33.58,0:17:36.77,Default,NTP,0,0,0,,{\blur10}這工作呢 可不是誰都能勝任
+Dialogue: 0,0:17:36.87,0:17:37.34,Default,NTP,0,0,0,,{\blur10}但是…
+Dialogue: 0,0:17:38.12,0:17:41.31,Default,NTP,0,0,0,,{\blur10}每天好吃好喝 被幸福的家人所圍繞
+Dialogue: 0,0:17:41.89,0:17:44.61,Default,NTP,0,0,0,,{\blur10}這樣過著沒有任何不方便的生活的人啊
+Dialogue: 0,0:17:45.13,0:17:48.19,Default,NTP,0,0,0,,{\blur10}只是因為一時興起而想要成為魔法少女的話
+Dialogue: 0,0:17:48.87,0:17:50.37,Default,NTP,0,0,0,,{\blur10}那種事我不允許
+Dialogue: 0,0:17:50.99,0:17:52.95,Default,NTP,0,0,0,,{\blur10}我會第一個去幹掉她的
+Dialogue: 0,0:17:56.08,0:17:58.38,Default,NTP,0,0,0,,{\blur10}所謂要冒著生命危險啊
+Dialogue: 0,0:17:58.98,0:18:01.98,Default,NTP,0,0,0,,{\blur10}是除此之外別無他法的人才會做的事
+Dialogue: 0,0:18:02.55,0:18:07.00,Default,NTP,0,0,0,,{\blur10}不是這樣的人攪和進來只是在玩耍 是胡鬧
+Dialogue: 0,0:18:07.62,0:18:09.09,Default,NTP,0,0,0,,{\blur10}是這樣的嗎
+Dialogue: 0,0:18:09.56,0:18:15.75,Default,NTP,0,0,0,,{\blur10}你也許也會有即使不情願 也不得不賭命去戰鬥的那一天吧
+Dialogue: 0,0:18:16.43,0:18:18.68,Default,NTP,0,0,0,,{\blur10}到那時候再考慮就可以了
+Dialogue: 0,0:18:19.36,0:18:19.78,Default,NTP,0,0,0,,{\blur10}嗯
+Dialogue: 0,0:18:32.49,0:18:34.11,Default,NTP,0,0,0,,{\blur10}杏子為什麼…
+Dialogue: 0,0:18:35.27,0:18:36.79,Default,NTP,0,0,0,,{\blur10}被發現了 來了
+Dialogue: 0,0:18:53.60,0:18:55.98,Default,NTP,0,0,0,,{\blur10}聽好 就按照商量好的
+Dialogue: 0,0:18:56.07,0:18:57.20,Default,NTP,0,0,0,,{\blur10}嗯…嗯
+Dialogue: 0,0:18:58.51,0:19:02.04,Default,NTP,0,0,0,,{\blur10}小爽 是我啊 小圓啊
+Dialogue: 0,0:19:02.82,0:19:04.66,Default,NTP,0,0,0,,{\blur10}喂 聽得到嗎
+Dialogue: 0,0:19:05.49,0:19:07.00,Default,NTP,0,0,0,,{\blur10}聽得出我的聲音嗎
+Dialogue: 0,0:19:10.29,0:19:12.25,Default,NTP,0,0,0,,{\blur10}不要退縮 繼續呼喚
+Dialogue: 0,0:19:14.42,0:19:16.48,Default,NTP,0,0,0,,{\blur10}小爽 住手啊
+Dialogue: 0,0:19:16.66,0:19:18.59,Default,NTP,0,0,0,,{\blur10}求求你 回想起來
+Dialogue: 0,0:19:18.90,0:19:22.05,Default,NTP,0,0,0,,{\blur10}這樣的事小爽也應該討厭的
+Dialogue: 0,0:19:22.41,0:19:25.17,Default,NTP,0,0,0,,{\blur10}小爽是要成為正義的一方的吧
+Dialogue: 0,0:19:25.71,0:19:28.94,Default,NTP,0,0,0,,{\blur10}喂求求你了 變回原來的小爽吧
+Dialogue: 0,0:19:33.42,0:19:37.11,Default,NTP,0,0,0,,{\blur10}不聽勸告也該適可而止啊 小爽
+Dialogue: 0,0:19:47.02,0:19:47.70,Default,NTP,0,0,0,,{\blur10}杏子！
+Dialogue: 0,0:19:49.92,0:19:53.52,Default,NTP,0,0,0,,{\blur10}沒關係 這種程度算不上什麼
+Dialogue: 0,0:19:54.03,0:19:57.31,Default,NTP,0,0,0,,{\blur10}你繼續呼喚小爽
+Dialogue: 0,0:19:57.89,0:20:00.09,Default,NTP,0,0,0,,{\blur10}住手 快住手啊
+Dialogue: 0,0:20:00.72,0:20:03.56,Default,NTP,0,0,0,,{\blur10}小爽 快意識到我們吧
+Dialogue: 0,0:20:09.37,0:20:11.33,Default,NTP,0,0,0,,{\blur10}這是先前的報復嗎
+Dialogue: 0,0:20:11.88,0:20:16.39,Default,NTP,0,0,0,,{\blur10}說起來我們 剛開始時是互相廝殺的關係呢
+Dialogue: 0,0:20:17.42,0:20:18.70,Default,NTP,0,0,0,,{\blur10}我說你太嫩了
+Dialogue: 0,0:20:19.50,0:20:24.51,Default,NTP,0,0,0,,{\blur10}但那時無論我怎麼打垮你 你不都又站起來了嗎
+Dialogue: 0,0:20:25.65,0:20:29.63,Default,NTP,0,0,0,,{\blur10}很生氣吧 全都無法原諒吧
+Dialogue: 0,0:20:31.30,0:20:32.05,Default,NTP,0,0,0,,{\blur10}我明白的
+Dialogue: 0,0:20:33.91,0:20:36.27,Default,NTP,0,0,0,,{\blur10}如果這樣你就能滿意的話 那就快點醒過來啊
+Dialogue: 0,0:20:49.04,0:20:52.43,Default,NTP,0,0,0,,{\blur10}小爽 拜託你了…
+Dialogue: 0,0:20:54.28,0:20:55.31,Default,NTP,0,0,0,,{\blur10}小爽！
+Dialogue: 0,0:20:59.15,0:21:02.13,Default,NTP,0,0,0,,{\blur10}你不是說你相信著的嘛
+Dialogue: 0,0:21:02.53,0:21:05.58,Default,NTP,0,0,0,,{\blur10}用這力量可以讓大家得到幸福
+Dialogue: 0,0:21:16.05,0:21:17.64,Default,NTP,0,0,0,,{\blur10}拜託了 神啊
+Dialogue: 0,0:21:18.93,0:21:20.93,Default,NTP,0,0,0,,{\blur10}都已經是這樣的人生了
+Dialogue: 0,0:21:21.96,0:21:25.82,Default,NTP,0,0,0,,{\blur10}至少讓我做一次幸福的夢吧
+Dialogue: 0,0:21:34.38,0:21:34.97,Default,NTP,0,0,0,,{\blur10}杏子
+Dialogue: 0,0:21:39.32,0:21:39.89,Default,NTP,0,0,0,,{\blur10}喲
+Dialogue: 0,0:21:41.13,0:21:42.04,Default,NTP,0,0,0,,{\blur10}你…
+Dialogue: 0,0:21:42.64,0:21:43.90,Default,NTP,0,0,0,,{\blur10}那孩子就拜託了
+Dialogue: 0,0:21:44.67,0:21:47.08,Default,NTP,0,0,0,,{\blur10}讓她陪我一起犯傻了
+Dialogue: 0,0:21:50.10,0:21:53.01,Default,NTP,0,0,0,,{\blur10}你是主張不帶著絆腳石戰鬥的吧
+Dialogue: 0,0:21:54.17,0:21:56.71,Default,NTP,0,0,0,,{\blur10}沒事 那才是對的
+Dialogue: 0,0:21:57.65,0:22:02.09,Default,NTP,0,0,0,,{\blur10}只要將唯一想守護的東西守護到底就可以了
+Dialogue: 0,0:22:04.36,0:22:05.17,Default,NTP,0,0,0,,{\blur10}為什麼呢
+Dialogue: 0,0:22:06.13,0:22:09.95,Default,NTP,0,0,0,,{\blur10}我到現在為止明明都應該這麼做的
+Dialogue: 0,0:22:13.40,0:22:14.21,Default,NTP,0,0,0,,{\blur10}走吧
+Dialogue: 0,0:22:15.42,0:22:17.17,Default,NTP,0,0,0,,{\blur10}這傢伙由我來對付
+Dialogue: 0,0:22:21.13,0:22:22.88,Default,NTP,0,0,0,,{\blur10}別擔心了小爽
+Dialogue: 0,0:22:24.51,0:22:27.57,Default,NTP,0,0,0,,{\blur10}獨自一個人很寂寞吧
+Dialogue: 0,0:22:28.66,0:22:31.09,Default,NTP,0,0,0,,{\blur10}好吧 就讓我陪你一起上路吧
+Dialogue: 0,0:22:31.70,0:22:32.33,Default,NTP,0,0,0,,{\blur10}小爽
+Dialogue: 0,0:22:56.85,0:22:57.45,Default,NTP,0,0,0,,{\blur10}杏子
+Dialogue: 0,0:23:09.18,0:23:13.75,Default,NTP,0,0,0,,{\blur10}佐倉杏子真的有救出美樹爽的希望嗎
+Dialogue: 0,0:23:14.06,0:23:17.38,Default,NTP,0,0,0,,{\blur10}怎麼會 那當然是不可能的啊
+Dialogue: 0,0:23:18.02,0:23:21.17,Default,NTP,0,0,0,,{\blur10}那麼你為什麼沒有阻止她
+Dialogue: 0,0:23:21.52,0:23:24.39,Default,NTP,0,0,0,,{\blur10}若是無謂的犧牲的話我當然會阻止的
+Dialogue: 0,0:23:25.14,0:23:29.04,Default,NTP,0,0,0,,{\blur10}但是這次她的退場是有很大意義的
+Dialogue: 0,0:23:30.07,0:23:34.89,Default,NTP,0,0,0,,{\blur10}這樣能夠面對魔女之夜的魔法少女就只有你一個了
+Dialogue: 0,0:23:36.09,0:23:38.71,Default,NTP,0,0,0,,{\blur10}當然一個人是毫無勝算的
+Dialogue: 0,0:23:39.39,0:23:43.72,Default,NTP,0,0,0,,{\blur10}為了保護這座城市 小圓只能成為魔法少女
+Dialogue: 0,0:23:45.95,0:23:48.26,Default,NTP,0,0,0,,{\blur10}我不會讓你得逞的 絕對
+Dialogue: 0,0:24:15.61,0:24:19.98,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}生鏽的心 無聲的世界
+Dialogue: 0,0:24:15.61,0:24:19.98,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}錆び付いだ心 音もない世界
+Dialogue: 0,0:24:19.98,0:24:22.98,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}在看著什麼呢？
+Dialogue: 0,0:24:19.98,0:24:22.98,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}何を見てるの？
+Dialogue: 0,0:24:23.26,0:24:30.49,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}只是一再重複 找尋那張說著再見的面孔
+Dialogue: 0,0:24:23.26,0:24:30.49,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}まだねを言える顏を探すよ それを繰り返すだけ
+Dialogue: 0,0:24:30.70,0:24:32.64,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}注意到的話
+Dialogue: 0,0:24:30.70,0:24:32.64,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}気付けばそこには
+Dialogue: 0,0:24:32.70,0:24:37.64,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}會發現一個獨自哭泣的背影
+Dialogue: 0,0:24:32.70,0:24:37.64,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}ひとりきりで泣く後ろ姿
+Dialogue: 0,0:24:37.84,0:24:42.00,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}痛苦的地方 寂寞的地方
+Dialogue: 0,0:24:37.84,0:24:42.00,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}辛いような 寂しいような場所
+Dialogue: 0,0:24:42.00,0:24:46.00,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}只要手牽著手就好
+Dialogue: 0,0:24:42.00,0:24:46.00,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}手を繋いでいたいんだ
+Dialogue: 0,0:24:46.62,0:24:50.10,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}無數次呼喊你的名字
+Dialogue: 0,0:24:46.62,0:24:50.10,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}何度でも名前を呼ぶよ
+Dialogue: 0,0:24:50.10,0:24:53.60,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}哪怕是對著不確定的未來
+Dialogue: 0,0:24:50.10,0:24:53.60,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}不確かな未來でも
+Dialogue: 0,0:24:53.80,0:25:01.51,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}光是想到那些放不下的東西 心就好痛
+Dialogue: 0,0:24:53.80,0:25:01.51,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}離せないもの思うだけ 心が痛いよ
+Dialogue: 0,0:25:01.74,0:25:05.28,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}就在這裡 就在這裡
+Dialogue: 0,0:25:01.74,0:25:05.28,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}ここにいるよ ここにいるよ
+Dialogue: 0,0:25:05.51,0:25:10.77,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}歸宿就在這裡吧？
+Dialogue: 0,0:25:05.51,0:25:10.77,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}歸る場所はここだよ？
+Dialogue: 0,0:25:11.09,0:25:19.52,edcn,NTP,0,0,0,,{\fad(100,100)\blur5\}不論何時都不會改變 把思念留在這裡
+Dialogue: 0,0:25:11.09,0:25:19.52,edjp,NTP,0,0,0,,{\fad(100,100)\blur5\}いつだって変わらない 思いを殘すの
+Dialogue: 0,0:25:27.43,0:25:29.46,Default,NTP,0,0,0,,{\blur10}誰都 不會相信未來
+Dialogue: 0,0:25:31.19,0:25:33.53,Default,NTP,0,0,0,,{\blur10}誰都 無法接受未來
+Dialogue: 0,0:25:35.26,0:25:39.10,next,NTP,0,0,0,,{\fad(500,0)\pos(320,220)\blur5}第10話  不會再依靠任何人
+

@@ -2,6 +2,7 @@
 <hr />
 
 此计划是为了改进目前字幕的共享和下载方式，让共享字幕、搜索字幕、下载字幕变得更简便，制作了`Subtitles DataBase`工具。
+
 <img src="doc/01.png" />
 
 Subtitles DataBase 有几处需要说明的地方：
@@ -10,7 +11,7 @@ Subtitles DataBase 有几处需要说明的地方：
 
    `高级查找`：使用各种条件搜索
 
-      <img src="doc/02.png" />
+<img src="doc/02.png" />
 
    `查询语句`：使用类似 SQL 的语法进行查询
 
@@ -18,7 +19,7 @@ Subtitles DataBase 有几处需要说明的地方：
 
       如果不熟悉 SQL 的用户，可以使用「高级查找」界面，效果差不多
 
-      <img src="doc/03.png" />
+<img src="doc/03.png" />
 
 **如果你是收藏党，打算下载所有字幕到本地计算机，可以：**
 
@@ -56,6 +57,8 @@ Subtitles DataBase 有几处需要说明的地方：
 例如：
 
    subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Charlotte 夏洛特][简繁日双语字幕][01-13][TVrip][1080P].txt
+
+**以上参数说明**
 
 `<type>` 分类（例如：animation、movie 等，可自定添加。animation 表示动画。那么问题来了，里番的英文是什么呢？也欢迎大家提交里番字幕）
 

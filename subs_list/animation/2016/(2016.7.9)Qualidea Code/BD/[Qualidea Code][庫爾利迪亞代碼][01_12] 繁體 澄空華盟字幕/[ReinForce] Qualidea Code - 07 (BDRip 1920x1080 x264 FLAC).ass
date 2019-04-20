@@ -1,0 +1,407 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: Qualidea Code 07
+Original Script: SumiSora&CASO
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00
+Collisions: Reverse
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+Synch Point: 
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4 Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, TertiaryColour, BackColour, Bold, Italic, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, AlphaLevel, Encoding
+Style: Default,FZZhunYuan-M02,48,&HFFFFFF,&H0000FF,&H639A64,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: staff,FZZhunYuan-M02,40,&HF3F3F3,&H0000FF,&H639A64,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: OPJP,DFPMinchoP-W5,33,&HFFFFFF,&H0000FF,&H72D2D6,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: OPCN,方正宋三_GBK,38,&HFFFFFF,&H0000FF,&H72D2D6,&H000000,0,0,0,0,100,2,0,0,1,0,1
+Style: EDJP,DFPHSMincho-W3,33,&HFFFFFF,&H0000FF,&H000000,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: EDCN,方正宋三_GBK,38,&HFFFFFF,&H0000FF,&H000000,&H000000,0,0,0,0,100,2,0,0,1,0,1
+Style: INJP,DFMaruGothic-SB,33,&HFFFFFF,&H0000FF,&H008AFF,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: INCN,文鼎特粗圆简,33,&HFFFFFF,&H0000FF,&H008AFF,&H000000,0,0,0,0,100,2,0,0,1,0,1
+Style: title,方正宋黑_GBK,45,&HFFFFFF,&H0000FF,&H000000,&H000000,0,0,0,0,100,2,0,0,1,0,1
+Style: next title,方正宋黑_GBK,60,&H0F0F11,&H0000FF,&H000000,&H000000,0,0,0,0,100,2,0,0,1,0,1
+Style: PW,FZZhunYuan-M02,30,&H808486,&H8B81CC,&HFFFFFF,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: PW2,FZDaHei-B02,20,&H686A6A,&H8B81CC,&HFFFFFF,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: PW3,FZDaHei-B02,18,&HCEDADA,&H8B81CC,&HFFFFFF,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: PW4,FZDaHei-B02,50,&HF7FB48,&H8B81CC,&HF5FA4A,&H000000,0,0,0,0,100,2,0,0,1,0,1
+Style: PW5,FZHei-B01,28,&HFFFFFF,&H0000FF,&H639A64,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: PW6,FZZhunYuan-M02,20,&H000000,&H0000FF,&H639A64,&H000000,0,0,0,0,100,2,0,0,1,0,0
+Style: PW7,@方正宋黑_GBK,70,&H000000,&H0000FF,&H50EF8A,&H000000,0,0,0,0,100,2,0,-90,1,0,1
+
+[Events]
+Format: Marked, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: Marked=0,0:00:13.86,0:00:14.78,Default,NTP,0,0,0,!Effect,小螢
+Dialogue: Marked=0,0:00:19.42,0:00:23.04,Default,NTP,0,0,0,!Effect,為什麼只有我去不同的避難所
+Dialogue: Marked=0,0:00:23.46,0:00:25.46,Default,NTP,0,0,0,!Effect,不和小螢在一起的話
+Dialogue: Marked=0,0:00:26.12,0:00:26.96,Default,NTP,0,0,0,!Effect,我會害怕的啊
+Dialogue: Marked=0,0:00:28.54,0:00:29.30,Default,NTP,0,0,0,!Effect,沒關係
+Dialogue: Marked=0,0:00:30.92,0:00:32.51,Default,NTP,0,0,0,!Effect,肯定  不…
+Dialogue: Marked=0,0:00:33.08,0:00:34.36,Default,NTP,0,0,0,!Effect,絕對會再見面的
+Dialogue: Marked=0,0:00:35.04,0:00:35.78,Default,NTP,0,0,0,!Effect,真的？
+Dialogue: Marked=0,0:00:36.52,0:00:37.28,Default,NTP,0,0,0,!Effect,真的哦
+Dialogue: Marked=0,0:00:38.14,0:00:40.14,Default,NTP,0,0,0,!Effect,我有騙過公主嗎
+Dialogue: Marked=0,0:00:41.58,0:00:42.30,Default,NTP,0,0,0,!Effect,沒有
+Dialogue: Marked=0,0:00:43.32,0:00:45.98,Default,NTP,0,0,0,!Effect,等戰爭結束之後  再在這裡見面吧
+Dialogue: Marked=0,0:00:46.38,0:00:48.00,Default,NTP,0,0,0,!Effect,嗯  絕對的哦
+Dialogue: Marked=0,0:00:48.30,0:00:48.80,Default,NTP,0,0,0,!Effect,嗯
+Dialogue: Marked=0,0:00:49.82,0:00:50.54,Default,NTP,0,0,0,!Effect,約好了
+Dialogue: Marked=0,0:00:51.92,0:00:52.82,Default,NTP,0,0,0,!Effect,對了
+Dialogue: Marked=0,0:00:54.98,0:00:56.24,Default,NTP,0,0,0,!Effect,約好的
+Dialogue: Marked=0,0:00:57.68,0:00:59.08,Default,NTP,0,0,0,!Effect,所以我…
+Dialogue: Marked=0,0:01:19.96,0:01:21.85,Default,NTP,0,0,0,!Effect,前方禁止通行哦
+Dialogue: Marked=0,0:01:23.36,0:01:23.94,Default,NTP,0,0,0,!Effect,來吧
+Dialogue: Marked=0,0:01:30.58,0:01:31.90,Default,NTP,0,0,0,!Effect,就讓你們見識下…
+Dialogue: Marked=0,0:01:33.70,0:01:34.56,Default,NTP,0,0,0,!Effect,人類的力量吧
+Dialogue: Marked=0,0:02:10.44,0:02:13.90,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}Let  me  think　また一つunknown  face
+Dialogue: Marked=0,0:02:10.44,0:02:13.90,OPJP,NTP,0,0,0,!Effect,{\be30}Let  me  think　また一つunknown  face
+Dialogue: Marked=0,0:02:10.44,0:02:13.90,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}Let  me  think  又是一個未解的身影
+Dialogue: Marked=0,0:02:10.44,0:02:13.90,OPCN,NTP,0,0,0,!Effect,{\be30}Let  me  think  又是一個未解的身影
+Dialogue: Marked=0,0:02:14.06,0:02:20.50,OPJP,NTP,0,0,0,!Effect,{\be30}鳴りやまなくて　なんかバイオリズム狂ってく
+Dialogue: Marked=0,0:02:14.06,0:02:20.50,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}鳴りやまなくて　なんかバイオリズム狂ってく
+Dialogue: Marked=0,0:02:14.06,0:02:20.50,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}在側不斷呻吟  讓我的律動不再安寧
+Dialogue: Marked=0,0:02:14.06,0:02:20.50,OPCN,NTP,0,0,0,!Effect,{\be30}在側不斷呻吟  讓我的律動不再安寧
+Dialogue: Marked=0,0:02:21.24,0:02:25.51,OPJP,NTP,0,0,0,!Effect,{\be30}On  the  way　進むしかないのはわかってるよ
+Dialogue: Marked=0,0:02:21.24,0:02:25.51,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}On  the  way　進むしかないのはわかってるよ
+Dialogue: Marked=0,0:02:21.24,0:02:25.51,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}On  the  way  清楚我已無法後退
+Dialogue: Marked=0,0:02:21.24,0:02:25.51,OPCN,NTP,0,0,0,!Effect,{\be30}On  the  way  清楚我已無法後退
+Dialogue: Marked=0,0:02:25.66,0:02:30.98,OPJP,NTP,0,0,0,!Effect,{\be30}差し迫った焦燥感、雑音は黙ってて
+Dialogue: Marked=0,0:02:25.66,0:02:30.98,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}逼近的焦躁感  噪音給我閉嘴
+Dialogue: Marked=0,0:02:25.66,0:02:30.98,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}差し迫った焦燥感、雑音は黙ってて
+Dialogue: Marked=0,0:02:25.66,0:02:30.98,OPCN,NTP,0,0,0,!Effect,{\be30}逼近的焦躁感  噪音給我閉嘴
+Dialogue: Marked=0,0:02:31.32,0:02:33.65,OPJP,NTP,0,0,0,!Effect,{\be30}My  judgementに説明は要らない
+Dialogue: Marked=0,0:02:31.32,0:02:33.65,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}My  judgement  不再需要說明
+Dialogue: Marked=0,0:02:31.32,0:02:33.65,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}My  judgementに説明は要らない
+Dialogue: Marked=0,0:02:31.32,0:02:33.65,OPCN,NTP,0,0,0,!Effect,{\be30}My  judgement  不再需要說明
+Dialogue: Marked=0,0:02:33.70,0:02:35.87,OPJP,NTP,0,0,0,!Effect,{\be30}彼の正義なんてもう(I  don't  know!)
+Dialogue: Marked=0,0:02:33.70,0:02:35.87,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}他的正義也已經（I  don't  know）
+Dialogue: Marked=0,0:02:33.70,0:02:35.87,OPCN,NTP,0,0,0,!Effect,{\be30}他的正義也已經（I  don't  know）
+Dialogue: Marked=0,0:02:33.70,0:02:35.87,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}彼の正義なんてもう(I  don't  know!)
+Dialogue: Marked=0,0:02:35.92,0:02:38.31,OPJP,NTP,0,0,0,!Effect,{\be30}全部Shut  out!  It's  my  turn!
+Dialogue: Marked=0,0:02:35.92,0:02:38.31,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}全都Shut  out!  It's  my  turn!
+Dialogue: Marked=0,0:02:35.92,0:02:38.31,OPCN,NTP,0,0,0,!Effect,{\be30}全都Shut  out!  It's  my  turn!
+Dialogue: Marked=0,0:02:35.92,0:02:38.31,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}全部Shut  out!  It's  my  turn!
+Dialogue: Marked=0,0:02:38.36,0:02:42.15,OPJP,NTP,0,0,0,!Effect,{\be30}常識も正論も、関係なし
+Dialogue: Marked=0,0:02:38.36,0:02:42.15,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}不再去管那些大道理
+Dialogue: Marked=0,0:02:38.36,0:02:42.15,OPCN,NTP,0,0,0,!Effect,{\be30}不再去管那些大道理
+Dialogue: Marked=0,0:02:38.36,0:02:42.15,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}常識も正論も、関係なし
+Dialogue: Marked=0,0:02:42.52,0:02:47.36,OPJP,NTP,0,0,0,!Effect,{\be30}Come  on!  brave  freak  out　叫び出す心拍数シンクロして
+Dialogue: Marked=0,0:02:42.52,0:02:47.36,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}Come  on!  brave  freak  out  讓心跳隨尖叫喧囂
+Dialogue: Marked=0,0:02:42.52,0:02:47.36,OPCN,NTP,0,0,0,!Effect,{\be30}Come  on!  brave  freak  out  讓心跳隨尖叫喧囂
+Dialogue: Marked=0,0:02:42.52,0:02:47.36,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}Come  on!  brave  freak  out　叫び出す心拍数シンクロして
+Dialogue: Marked=0,0:02:47.50,0:02:51.92,OPJP,NTP,0,0,0,!Effect,{\be30}僕の確信に間違いなんてないんだよ
+Dialogue: Marked=0,0:02:47.50,0:02:51.92,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}讓我為我的確信自傲
+Dialogue: Marked=0,0:02:47.50,0:02:51.92,OPCN,NTP,0,0,0,!Effect,{\be30}讓我為我的確信自傲
+Dialogue: Marked=0,0:02:47.50,0:02:51.92,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}僕の確信に間違いなんてないんだよ
+Dialogue: Marked=0,0:02:52.14,0:02:55.50,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}ほらbrave  freak  out　今立ち向かっていけ
+Dialogue: Marked=0,0:02:52.14,0:02:55.50,OPJP,NTP,0,0,0,!Effect,{\be30}ほらbrave  freak  out　今立ち向かっていけ
+Dialogue: Marked=0,0:02:52.14,0:02:55.50,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}來吧  brave  freak  out  現在我們勇敢向前
+Dialogue: Marked=0,0:02:52.14,0:02:55.50,OPCN,NTP,0,0,0,!Effect,{\be30}來吧  brave  freak  out  現在我們勇敢向前
+Dialogue: Marked=0,0:02:55.68,0:03:01.54,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}全部ゼロになってしまうエンディングは許さない
+Dialogue: Marked=0,0:02:55.68,0:03:01.54,OPJP,NTP,0,0,0,!Effect,{\be30}全部ゼロになってしまうエンディングは許さない
+Dialogue: Marked=0,0:02:55.68,0:03:01.54,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}不再允許一切歸零的結局出現
+Dialogue: Marked=0,0:02:55.68,0:03:01.54,OPCN,NTP,0,0,0,!Effect,{\be30}不再允許一切歸零的結局出現
+Dialogue: Marked=0,0:03:01.76,0:03:09.57,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}守りたいものだけ守りたいのがわがままなんて言わせはしない
+Dialogue: Marked=0,0:03:01.76,0:03:09.57,OPJP,NTP,0,0,0,!Effect,{\be30}守りたいものだけ守りたいのがわがままなんて言わせはしない
+Dialogue: Marked=0,0:03:01.76,0:03:09.57,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}守護只因我願意守護  哪能讓你說成任性
+Dialogue: Marked=0,0:03:01.76,0:03:09.57,OPCN,NTP,0,0,0,!Effect,{\be30}守護只因我願意守護  哪能讓你說成任性
+Dialogue: Marked=0,0:03:09.62,0:03:12.06,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}世界を敵にしても
+Dialogue: Marked=0,0:03:09.62,0:03:12.06,OPJP,NTP,0,0,0,!Effect,{\be30}世界を敵にしても
+Dialogue: Marked=0,0:03:09.62,0:03:12.06,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}即便與世界為敵
+Dialogue: Marked=0,0:03:09.62,0:03:12.06,OPCN,NTP,0,0,0,!Effect,{\be30}即便與世界為敵
+Dialogue: Marked=0,0:03:16.46,0:03:17.84,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}That's  right!
+Dialogue: Marked=0,0:03:16.46,0:03:17.84,OPJP,NTP,0,0,0,!Effect,{\be30}That's  right!
+Dialogue: Marked=0,0:03:16.46,0:03:17.84,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}That's  right
+Dialogue: Marked=0,0:03:16.46,0:03:17.84,OPCN,NTP,0,0,0,!Effect,{\be30}That's  right
+Dialogue: Marked=0,0:03:18.26,0:03:21.10,OPJP,NTP,0,0,0,!Effect,{\pos(640,20)\bord12\3c&H20C322&\be90}ねえ、信じてるよ　さあ行こうか？
+Dialogue: Marked=0,0:03:18.26,0:03:21.10,OPJP,NTP,0,0,0,!Effect,{\be30}ねえ、信じてるよ　さあ行こうか？
+Dialogue: Marked=0,0:03:18.26,0:03:21.10,OPCN,NTP,0,0,0,!Effect,{\pos(640,700)\bord12\3c&H20C322&\be90}我相信你  所以一起來吧
+Dialogue: Marked=0,0:03:18.26,0:03:21.10,OPCN,NTP,0,0,0,!Effect,{\be30}我相信你  所以一起來吧
+Dialogue: Marked=0,0:03:25.71,0:03:27.03,Default,NTP,0,0,0,!Effect,我們走灣岸高速吧
+Dialogue: Marked=0,0:03:27.41,0:03:29.31,Default,NTP,0,0,0,!Effect,應該會比下面要快
+Dialogue: Marked=0,0:03:29.63,0:03:30.23,Default,NTP,0,0,0,!Effect,我知道了
+Dialogue: Marked=0,0:03:30.47,0:03:31.45,Default,NTP,0,0,0,!Effect,但是  相對的
+Dialogue: Marked=0,0:03:31.77,0:03:33.11,Default,NTP,0,0,0,!Effect,頭頂就沒有遮蔽物了
+Dialogue: Marked=0,0:03:33.51,0:03:34.11,Default,NTP,0,0,0,!Effect,敵人會…
+Dialogue: Marked=0,0:03:34.89,0:03:36.93,Default,NTP,0,0,0,!Effect,對我的世界而言這樣反而更好
+Dialogue: Marked=0,0:03:37.41,0:03:38.17,Default,NTP,0,0,0,!Effect,你無需顧慮
+Dialogue: Marked=0,0:03:42.81,0:03:45.89,Default,NTP,0,0,0,!Effect,那邊好帶勁  未解從天而降啊
+Dialogue: Marked=0,0:03:45.95,0:03:47.30,Default,NTP,0,0,0,!Effect,嗯  好帶勁
+Dialogue: Marked=0,0:03:47.35,0:03:50.00,Default,NTP,0,0,0,!Effect,就是  帶勁帶勁  真心帶勁啊
+Dialogue: Marked=0,0:03:50.05,0:03:51.83,Default,NTP,0,0,0,!Effect,我們兩個說得好像不是一個意思啊
+Dialogue: Marked=0,0:03:53.07,0:03:53.81,Default,NTP,0,0,0,!Effect,明日葉  前面
+Dialogue: Marked=0,0:03:54.55,0:03:55.47,Default,NTP,0,0,0,!Effect,我明白
+Dialogue: Marked=0,0:03:57.27,0:03:59.39,Default,NTP,0,0,0,!Effect,這些傢伙的迎接還真是熱情
+Dialogue: Marked=0,0:04:21.99,0:04:23.85,Default,NTP,0,0,0,!Effect,喂  別那麼亂來好不
+Dialogue: Marked=0,0:04:24.81,0:04:26.34,Default,NTP,0,0,0,!Effect,下一個在哪！
+Dialogue: Marked=0,0:04:26.39,0:04:27.37,Default,NTP,0,0,0,!Effect,話根本聽不進去…
+Dialogue: Marked=0,0:04:36.59,0:04:39.17,Default,NTP,0,0,0,!Effect,好了  下一個
+Dialogue: Marked=0,0:04:39.71,0:04:40.95,Default,NTP,0,0,0,!Effect,喂  明日葉
+Dialogue: Marked=0,0:04:41.89,0:04:42.57,Default,NTP,0,0,0,!Effect,明日葉…
+Dialogue: Marked=0,0:04:43.63,0:04:44.40,Default,NTP,0,0,0,!Effect,明日葉？
+Dialogue: Marked=0,0:04:45.27,0:04:45.91,Default,NTP,0,0,0,!Effect,明日葉妹妹？
+Dialogue: Marked=0,0:04:52.13,0:04:52.70,Default,NTP,0,0,0,!Effect,凜堂學姐
+Dialogue: Marked=0,0:04:52.79,0:04:53.63,Default,NTP,0,0,0,!Effect,敵人數量很多啊
+Dialogue: Marked=0,0:04:53.81,0:04:55.41,Default,NTP,0,0,0,!Effect,別說話  當心咬到舌頭
+Dialogue: Marked=0,0:04:56.37,0:04:57.29,Default,NTP,0,0,0,!Effect,一之太刀
+Dialogue: Marked=0,0:04:57.83,0:04:58.59,Default,NTP,0,0,0,!Effect,空喰
+Dialogue: Marked=0,0:05:03.89,0:05:05.89,Default,NTP,0,0,0,!Effect,只要我還能看見  你就放心吧
+Dialogue: Marked=0,0:05:14.97,0:05:16.57,Default,NTP,0,0,0,!Effect,一定要趕到
+Dialogue: Marked=0,0:05:18.35,0:05:21.09,Default,NTP,0,0,0,!Effect,嗯  那我等著你哦
+Dialogue: Marked=0,0:05:23.23,0:05:23.73,Default,NTP,0,0,0,!Effect,公主
+Dialogue: Marked=0,0:05:27.15,0:05:28.45,Default,NTP,0,0,0,!Effect,我醒來時
+Dialogue: Marked=0,0:05:29.87,0:05:31.37,Default,NTP,0,0,0,!Effect,那裡沒有任何人
+Dialogue: Marked=0,0:05:32.29,0:05:33.83,Default,NTP,0,0,0,!Effect,因為冬眠時的事故
+Dialogue: Marked=0,0:05:34.57,0:05:36.69,Default,NTP,0,0,0,!Effect,我失去了自己
+Dialogue: Marked=0,0:05:37.79,0:05:41.53,Default,NTP,0,0,0,!Effect,收養我的是管理局直屬的特務機關
+Dialogue: Marked=0,0:05:42.53,0:05:43.09,Default,NTP,0,0,0,!Effect,我…
+Dialogue: Marked=0,0:05:43.25,0:05:45.84,Default,NTP,0,0,0,!Effect,躲到哪去了  給我出來
+Dialogue: Marked=0,0:05:46.27,0:05:47.45,Default,NTP,0,0,0,!Effect,既然不出來…
+Dialogue: Marked=0,0:05:52.97,0:05:53.67,Default,NTP,0,0,0,!Effect,這樣…
+Dialogue: Marked=0,0:05:57.71,0:05:58.69,Default,NTP,0,0,0,!Effect,沒有殺死他
+Dialogue: Marked=0,0:05:59.41,0:06:01.11,Default,NTP,0,0,0,!Effect,把他送到更生設施去
+Dialogue: Marked=0,0:06:01.39,0:06:01.89,Default,NTP,0,0,0,!Effect,是
+Dialogue: Marked=0,0:06:03.81,0:06:06.33,Default,NTP,0,0,0,!Effect,暗中處理一些防衛三都市的髒活
+Dialogue: Marked=0,0:06:07.17,0:06:08.57,Default,NTP,0,0,0,!Effect,就是我的工作
+Dialogue: Marked=0,0:06:09.13,0:06:10.78,Default,NTP,0,0,0,!Effect,下一個目標可是個名人啊
+Dialogue: Marked=0,0:06:11.31,0:06:11.87,Default,NTP,0,0,0,!Effect,是誰
+Dialogue: Marked=0,0:06:12.89,0:06:15.49,Default,NTP,0,0,0,!Effect,神奈川首席  綜合排行榜第一位
+Dialogue: Marked=0,0:06:16.17,0:06:17.41,Default,NTP,0,0,0,!Effect,天河舞姬
+Dialogue: Marked=0,0:06:21.33,0:06:22.50,Default,NTP,0,0,0,!Effect,喂
+Dialogue: Marked=0,0:06:23.47,0:06:24.94,Default,NTP,0,0,0,!Effect,凜堂學姐  那是…
+Dialogue: Marked=0,0:06:24.99,0:06:26.43,Default,NTP,0,0,0,!Effect,我  我在這
+Dialogue: Marked=0,0:06:26.55,0:06:27.19,Default,NTP,0,0,0,!Effect,千種霞嗎
+Dialogue: Marked=0,0:06:27.33,0:06:29.97,Default,NTP,0,0,0,!Effect,他在那裡是遇到什麼事了嗎
+Dialogue: Marked=0,0:06:30.13,0:06:31.43,Default,NTP,0,0,0,!Effect,我們沒時間和他磨蹭
+Dialogue: Marked=0,0:06:31.65,0:06:32.41,Default,NTP,0,0,0,!Effect,凜堂學姐？
+Dialogue: Marked=0,0:06:34.29,0:06:37.13,Default,NTP,0,0,0,!Effect,我本來是去東京的  沒想到中途被襲擊了
+Dialogue: Marked=0,0:06:37.67,0:06:38.64,Default,NTP,0,0,0,!Effect,遇到你們真是…
+Dialogue: Marked=0,0:06:38.69,0:06:41.43,Default,NTP,0,0,0,!Effect,那還真是慘啊  那我們東京見
+Dialogue: Marked=0,0:06:58.43,0:06:59.51,Default,NTP,0,0,0,!Effect,你想殺我嗎
+Dialogue: Marked=0,0:07:00.09,0:07:01.62,Default,NTP,0,0,0,!Effect,那點程度你還死不了
+Dialogue: Marked=0,0:07:01.85,0:07:04.19,Default,NTP,0,0,0,!Effect,能別用你們神奈川的標準來要求我好嗎
+Dialogue: Marked=0,0:07:04.55,0:07:06.29,Default,NTP,0,0,0,!Effect,你們根本不是人好吧
+Dialogue: Marked=0,0:07:07.41,0:07:09.01,Default,NTP,0,0,0,!Effect,霞前輩  你沒事吧
+Dialogue: Marked=0,0:07:09.79,0:07:10.88,Default,NTP,0,0,0,!Effect,真的謝謝你
+Dialogue: Marked=0,0:07:11.27,0:07:12.93,Default,NTP,0,0,0,!Effect,看來神奈川也還有人有人性啊
+Dialogue: Marked=0,0:07:17.39,0:07:18.68,Default,NTP,0,0,0,!Effect,抱歉  讓我過去
+Dialogue: Marked=0,0:07:20.01,0:07:21.23,Default,NTP,0,0,0,!Effect,愛離你沒事吧
+Dialogue: Marked=0,0:07:21.45,0:07:22.60,Default,NTP,0,0,0,!Effect,嗯  總算是
+Dialogue: Marked=0,0:07:23.15,0:07:24.19,Default,NTP,0,0,0,!Effect,現在情況怎麼樣
+Dialogue: Marked=0,0:07:24.51,0:07:25.75,Default,NTP,0,0,0,!Effect,說實話不樂觀
+Dialogue: Marked=0,0:07:25.89,0:07:26.77,Default,NTP,0,0,0,!Effect,簡直亂成一團
+Dialogue: Marked=0,0:07:27.15,0:07:29.71,Default,NTP,0,0,0,!Effect,由於從平流層發起的直接攻擊
+Dialogue: Marked=0,0:07:29.99,0:07:33.69,Default,NTP,0,0,0,!Effect,東京市上空開了個直徑約500米的大洞
+Dialogue: Marked=0,0:07:34.03,0:07:35.21,Default,NTP,0,0,0,!Effect,未解就是從那裡襲來的
+Dialogue: Marked=0,0:07:35.45,0:07:36.78,Default,NTP,0,0,0,!Effect,壁障什麼時候恢復
+Dialogue: Marked=0,0:07:37.15,0:07:39.91,Default,NTP,0,0,0,!Effect,因中央裝置遭到破壞  短時無法修復
+Dialogue: Marked=0,0:07:40.62,0:07:41.31,Default,NTP,0,0,0,!Effect,愛離…
+Dialogue: Marked=0,0:07:41.61,0:07:42.50,Default,NTP,0,0,0,!Effect,我來吧
+Dialogue: Marked=0,0:07:43.09,0:07:45.61,Default,NTP,0,0,0,!Effect,各位請著手重建被破壞了的聯絡網
+Dialogue: Marked=0,0:07:45.95,0:07:47.27,Default,NTP,0,0,0,!Effect,給我1200秒
+Dialogue: Marked=0,0:07:47.51,0:07:49.26,Default,NTP,0,0,0,!Effect,在這段時間裡幫我壓制住敵人
+Dialogue: Marked=0,0:07:49.59,0:07:50.09,Default,NTP,0,0,0,!Effect,是！
+Dialogue: Marked=0,0:07:50.97,0:07:52.15,Default,NTP,0,0,0,!Effect,舞姬  你要撐住
+Dialogue: Marked=0,0:07:52.69,0:07:54.03,Default,NTP,0,0,0,!Effect,我會一定會解決的
+Dialogue: Marked=0,0:08:07.01,0:08:10.19,Default,NTP,0,0,0,!Effect,不要告訴我說  這就沒了
+Dialogue: Marked=0,0:08:11.85,0:08:14.79,Default,NTP,0,0,0,!Effect,就憑你們也敢招惹我們人類嗎
+Dialogue: Marked=0,0:08:15.75,0:08:19.03,Default,NTP,0,0,0,!Effect,就憑這點力量  殺了我們這麼多人嗎
+Dialogue: Marked=0,0:08:21.03,0:08:22.50,Default,NTP,0,0,0,!Effect,就憑你們這種程序
+Dialogue: Marked=0,0:08:26.95,0:08:28.97,Default,NTP,0,0,0,!Effect,這裡是我的領域
+Dialogue: Marked=0,0:08:29.23,0:08:30.71,Default,NTP,0,0,0,!Effect,在我的世界裡
+Dialogue: Marked=0,0:08:34.13,0:08:36.09,Default,NTP,0,0,0,!Effect,沒有你們的立足之地！
+Dialogue: Marked=0,0:09:08.11,0:09:10.21,Default,NTP,0,0,0,!Effect,BOSS登場了嗎
+Dialogue: Marked=0,0:09:11.92,0:09:15.97,title,NTP,0,0,0,!Effect,{\fsp30\pos(656,293)}救濟的偏執狂
+Dialogue: Marked=0,0:09:11.92,0:09:15.97,title,NTP,0,0,0,!Effect,{\fs37\pos(747,240)\fsp5}Paranoia
+Dialogue: Marked=0,0:09:18.53,0:09:20.10,Default,NTP,0,0,0,!Effect,開始說明被害情況
+Dialogue: Marked=0,0:09:20.73,0:09:24.67,Default,NTP,0,0,0,!Effect,現今  出現在千葉與神奈川的零散未解部隊已撤退
+Dialogue: Marked=0,0:09:25.14,0:09:28.27,Default,NTP,0,0,0,!Effect,海螢的戰鬥也已基本結束
+Dialogue: Marked=0,0:09:28.57,0:09:33.40,Default,NTP,0,0,0,!Effect,只是東京上空還在與敵方空降部隊進行著戰鬥
+Dialogue: Marked=0,0:09:33.93,0:09:36.49,Default,NTP,0,0,0,!Effect,儘管非戰鬥人員的撤退已經完畢了  但…
+Dialogue: Marked=0,0:09:37.41,0:09:38.53,Default,NTP,0,0,0,!Effect,愛離  怎麼樣
+Dialogue: Marked=0,0:09:41.53,0:09:43.73,Default,NTP,0,0,0,!Effect,離重啟還有845秒
+Dialogue: Marked=0,0:09:45.13,0:09:47.51,Default,NTP,0,0,0,!Effect,一定要撐住啊  舞姬
+Dialogue: Marked=0,0:09:50.83,0:09:52.45,Default,NTP,0,0,0,!Effect,公主  您一定要平安無事
+Dialogue: Marked=0,0:09:52.59,0:09:53.81,Default,NTP,0,0,0,!Effect,又來了
+Dialogue: Marked=0,0:09:54.15,0:09:55.45,Default,NTP,0,0,0,!Effect,她怎麼可能會出事
+Dialogue: Marked=0,0:09:55.93,0:09:57.26,Default,NTP,0,0,0,!Effect,她要是都被打敗了
+Dialogue: Marked=0,0:09:57.31,0:09:58.84,Default,NTP,0,0,0,!Effect,那關東也就完蛋了
+Dialogue: Marked=0,0:09:58.97,0:09:59.91,Default,NTP,0,0,0,!Effect,霞前輩…
+Dialogue: Marked=0,0:09:59.99,0:10:03.47,Default,NTP,0,0,0,!Effect,沒錯  但這是兩碼事
+Dialogue: Marked=0,0:10:04.81,0:10:05.93,Default,NTP,0,0,0,!Effect,我居然會留下公主獨自一人
+Dialogue: Marked=0,0:10:06.51,0:10:08.11,Default,NTP,0,0,0,!Effect,我到底是做了怎樣的蠢事
+Dialogue: Marked=0,0:10:12.47,0:10:13.92,Default,NTP,0,0,0,!Effect,我不是公主教信者
+Dialogue: Marked=0,0:10:13.97,0:10:15.31,Default,NTP,0,0,0,!Effect,對這種事也不是很理解
+Dialogue: Marked=0,0:10:15.87,0:10:17.89,Default,NTP,0,0,0,!Effect,真不知道你為什麼能這麼入迷
+Dialogue: Marked=0,0:10:20.85,0:10:21.63,Default,NTP,0,0,0,!Effect,約定
+Dialogue: Marked=0,0:10:22.89,0:10:23.95,Default,NTP,0,0,0,!Effect,我和她有過約定
+Dialogue: Marked=0,0:10:25.13,0:10:25.79,Default,NTP,0,0,0,!Effect,就因為這個？
+Dialogue: Marked=0,0:10:26.67,0:10:28.00,Default,NTP,0,0,0,!Effect,還需要其他的嗎
+Dialogue: Marked=0,0:10:29.69,0:10:32.33,Default,NTP,0,0,0,!Effect,公主完成了約定
+Dialogue: Marked=0,0:10:33.35,0:10:35.55,Default,NTP,0,0,0,!Effect,她相信我會回來
+Dialogue: Marked=0,0:10:35.73,0:10:37.97,Default,NTP,0,0,0,!Effect,十年裡一直等著我
+Dialogue: Marked=0,0:10:46.69,0:10:48.98,Default,NTP,0,0,0,!Effect,然後公主讓我…
+Dialogue: Marked=0,0:10:49.57,0:10:50.93,Default,NTP,0,0,0,!Effect,找回了自己
+Dialogue: Marked=0,0:11:04.45,0:11:05.87,Default,NTP,0,0,0,!Effect,我下手了哦  小螢
+Dialogue: Marked=0,0:11:06.37,0:11:06.87,Default,NTP,0,0,0,!Effect,嗯
+Dialogue: Marked=0,0:11:13.17,0:11:14.69,Default,NTP,0,0,0,!Effect,對不起  公主
+Dialogue: Marked=0,0:11:14.95,0:11:15.45,Default,NTP,0,0,0,!Effect,嗯？
+Dialogue: Marked=0,0:11:15.75,0:11:16.33,Default,NTP,0,0,0,!Effect,你說什麼
+Dialogue: Marked=0,0:11:17.23,0:11:19.71,Default,NTP,0,0,0,!Effect,讓你等了這麼久
+Dialogue: Marked=0,0:11:20.39,0:11:21.09,Default,NTP,0,0,0,!Effect,沒關係
+Dialogue: Marked=0,0:11:21.99,0:11:23.57,Default,NTP,0,0,0,!Effect,我們不是約定過了嗎
+Dialogue: Marked=0,0:11:27.53,0:11:29.63,Default,NTP,0,0,0,!Effect,那麼  再做一個約定吧
+Dialogue: Marked=0,0:11:32.23,0:11:33.03,Default,NTP,0,0,0,!Effect,我…
+Dialogue: Marked=0,0:11:39.89,0:11:41.63,Default,NTP,0,0,0,!Effect,青生  螢  你們聽得到嗎
+Dialogue: Marked=0,0:11:42.57,0:11:44.01,Default,NTP,0,0,0,!Effect,太好了  終於接通了
+Dialogue: Marked=0,0:11:44.17,0:11:45.45,Default,NTP,0,0,0,!Effect,之前為什麼…
+Dialogue: Marked=0,0:11:45.79,0:11:46.87,Default,NTP,0,0,0,!Effect,我向你們說明一下情況
+Dialogue: Marked=0,0:11:47.21,0:11:48.70,Default,NTP,0,0,0,!Effect,說實話情況相當不好
+Dialogue: Marked=0,0:11:48.75,0:11:50.25,Default,NTP,0,0,0,!Effect,但已漸漸在好轉
+Dialogue: Marked=0,0:11:51.11,0:11:54.38,Default,NTP,0,0,0,!Effect,只不過舞姬現在還在東京戰鬥
+Dialogue: Marked=0,0:11:54.87,0:11:56.83,Default,NTP,0,0,0,!Effect,就算是她  再這樣下去…
+Dialogue: Marked=0,0:11:57.44,0:11:59.62,Default,NTP,0,0,0,!Effect,敵人涌入的上空空洞
+Dialogue: Marked=0,0:12:00.02,0:12:02.29,Default,NTP,0,0,0,!Effect,只要把那裡堵住  敵人應該就會撤退了
+Dialogue: Marked=0,0:12:02.70,0:12:04.02,Default,NTP,0,0,0,!Effect,還有300秒
+Dialogue: Marked=0,0:12:04.28,0:12:05.66,Default,NTP,0,0,0,!Effect,拜託了  請幫幫舞姬
+Dialogue: Marked=0,0:12:10.94,0:12:12.47,Default,NTP,0,0,0,!Effect,八重垣  停車
+Dialogue: Marked=0,0:12:13.08,0:12:13.62,Default,NTP,0,0,0,!Effect,什麼？
+Dialogue: Marked=0,0:12:13.76,0:12:15.00,Default,NTP,0,0,0,!Effect,你想快點到吧
+Dialogue: Marked=0,0:12:19.46,0:12:21.54,Default,NTP,0,0,0,!Effect,現在我們在這裡
+Dialogue: Marked=0,0:12:22.12,0:12:25.61,Default,NTP,0,0,0,!Effect,根據情報  那個傻瓜戰鬥的地方在這裡
+Dialogue: Marked=0,0:12:26.24,0:12:28.40,Default,NTP,0,0,0,!Effect,街上到處是未解
+Dialogue: Marked=0,0:12:28.74,0:12:32.86,Default,NTP,0,0,0,!Effect,不可能的  如果不能像東京的那些人飛在空中的話
+Dialogue: Marked=0,0:12:35.96,0:12:37.72,Default,NTP,0,0,0,!Effect,老哥  還活著？
+Dialogue: Marked=0,0:12:37.84,0:12:38.42,Default,NTP,0,0,0,!Effect,明日葉
+Dialogue: Marked=0,0:12:39.02,0:12:40.54,Default,NTP,0,0,0,!Effect,終於連上了
+Dialogue: Marked=0,0:12:40.78,0:12:43.74,Default,NTP,0,0,0,!Effect,突然人就不見了  真心嚇死人
+Dialogue: Marked=0,0:12:43.96,0:12:46.13,Default,NTP,0,0,0,!Effect,我還擔心你死了呢
+Dialogue: Marked=0,0:12:47.22,0:12:48.14,Default,NTP,0,0,0,!Effect,以後我會注意的
+Dialogue: Marked=0,0:12:48.88,0:12:50.34,Default,NTP,0,0,0,!Effect,你現在在哪？
+Dialogue: Marked=0,0:12:51.50,0:12:53.26,Default,NTP,0,0,0,!Effect,已經到東京了啊
+Dialogue: Marked=0,0:12:54.12,0:12:55.80,Default,NTP,0,0,0,!Effect,在個有狗像的地方
+Dialogue: Marked=0,0:12:56.00,0:12:56.89,Default,NTP,0,0,0,!Effect,涉谷嗎
+Dialogue: Marked=0,0:13:03.48,0:13:04.46,Default,NTP,0,0,0,!Effect,凜堂  八重垣
+Dialogue: Marked=0,0:13:04.78,0:13:05.82,Default,NTP,0,0,0,!Effect,再陪我一會兒
+Dialogue: Marked=0,0:13:07.24,0:13:08.52,Default,NTP,0,0,0,!Effect,願意相信我嗎
+Dialogue: Marked=0,0:13:09.14,0:13:10.94,Default,NTP,0,0,0,!Effect,你有能讓人相信的人性嗎
+Dialogue: Marked=0,0:13:11.82,0:13:12.32,Default,NTP,0,0,0,!Effect,不過
+Dialogue: Marked=0,0:13:13.36,0:13:14.80,Default,NTP,0,0,0,!Effect,我信任你的想像力
+Dialogue: Marked=0,0:13:15.46,0:13:17.06,Default,NTP,0,0,0,!Effect,有方法去公主那裡的話就快說
+Dialogue: Marked=0,0:13:18.08,0:13:19.84,Default,NTP,0,0,0,!Effect,明日葉  幫我一下
+Dialogue: Marked=0,0:13:43.84,0:13:44.80,Default,NTP,0,0,0,!Effect,這是…
+Dialogue: Marked=0,0:13:51.30,0:13:55.48,Default,NTP,0,0,0,!Effect,實在是有些麻煩了啊
+Dialogue: Marked=0,0:13:56.14,0:13:58.53,Default,NTP,0,0,0,!Effect,B點恢復70%
+Dialogue: Marked=0,0:13:58.92,0:14:01.86,Default,NTP,0,0,0,!Effect,C點重新啟動  現在正前往支援B點
+Dialogue: Marked=0,0:14:02.24,0:14:05.26,Default,NTP,0,0,0,!Effect,已獲得守門人權限的障壁重構許可
+Dialogue: Marked=0,0:14:02.24,0:14:05.26,Default,NTP,0,0,0,!Effect,{\fs38\pos(515,655)}Gatekeeper
+Dialogue: Marked=0,0:14:05.44,0:14:06.52,Default,NTP,0,0,0,!Effect,開始倒數
+Dialogue: Marked=0,0:14:06.94,0:14:08.08,Default,NTP,0,0,0,!Effect,還有180秒
+Dialogue: Marked=0,0:14:09.54,0:14:10.16,Default,NTP,0,0,0,!Effect,舞姬
+Dialogue: Marked=0,0:14:11.90,0:14:12.55,Default,NTP,0,0,0,!Effect,好了嗎
+Dialogue: Marked=0,0:14:13.58,0:14:14.26,Default,NTP,0,0,0,!Effect,沒問題
+Dialogue: Marked=0,0:14:14.88,0:14:15.44,Default,NTP,0,0,0,!Effect,明日葉
+Dialogue: Marked=0,0:14:15.74,0:14:17.62,Default,NTP,0,0,0,!Effect,OK  準備好了喲
+Dialogue: Marked=0,0:14:17.84,0:14:18.52,Default,NTP,0,0,0,!Effect,八重垣
+Dialogue: Marked=0,0:14:18.72,0:14:19.22,Default,NTP,0,0,0,!Effect,是
+Dialogue: Marked=0,0:14:21.22,0:14:21.74,Default,NTP,0,0,0,!Effect,公主
+Dialogue: Marked=0,0:14:25.20,0:14:26.02,Default,NTP,0,0,0,!Effect,我來了！
+Dialogue: Marked=0,0:14:31.54,0:14:34.22,Default,NTP,0,0,0,!Effect,3  2  1
+Dialogue: Marked=0,0:14:35.78,0:14:36.56,Default,NTP,0,0,0,!Effect,就是現在  明日葉
+Dialogue: Marked=0,0:14:36.92,0:14:37.65,Default,NTP,0,0,0,!Effect,好  好
+Dialogue: Marked=0,0:15:00.78,0:15:01.28,Default,NTP,0,0,0,!Effect,公主
+Dialogue: Marked=0,0:15:10.20,0:15:11.60,Default,NTP,0,0,0,!Effect,敵人變強了
+Dialogue: Marked=0,0:15:12.06,0:15:14.72,Default,NTP,0,0,0,!Effect,不對  是我的力量變弱了
+Dialogue: Marked=0,0:15:16.06,0:15:17.42,Default,NTP,0,0,0,!Effect,是那傢伙搞的鬼嗎
+Dialogue: Marked=0,0:15:20.26,0:15:24.38,Default,NTP,0,0,0,!Effect,我的世界是能觸碰到視線內的東西
+Dialogue: Marked=0,0:15:25.68,0:15:28.33,Default,NTP,0,0,0,!Effect,這是為了能觸及到公主的力量
+Dialogue: Marked=0,0:15:29.10,0:15:29.83,Default,NTP,0,0,0,!Effect,下一個
+Dialogue: Marked=0,0:15:31.04,0:15:32.82,Default,NTP,0,0,0,!Effect,現在如果趕不上的話
+Dialogue: Marked=0,0:15:33.26,0:15:35.44,Default,NTP,0,0,0,!Effect,那就等於我毫無存在價值
+Dialogue: Marked=0,0:15:57.58,0:15:58.52,Default,NTP,0,0,0,!Effect,明日葉  最後一個
+Dialogue: Marked=0,0:15:58.82,0:15:59.96,Default,NTP,0,0,0,!Effect,盡全力去打吧
+Dialogue: Marked=0,0:16:00.26,0:16:01.04,Default,NTP,0,0,0,!Effect,瞭解
+Dialogue: Marked=0,0:16:01.12,0:16:03.12,Default,NTP,0,0,0,!Effect,公主親就拜託了啊
+Dialogue: Marked=0,0:16:04.64,0:16:05.33,Default,NTP,0,0,0,!Effect,螢…
+Dialogue: Marked=0,0:16:11.94,0:16:12.88,Default,NTP,0,0,0,!Effect,好厲害
+Dialogue: Marked=0,0:16:15.02,0:16:16.06,Default,NTP,0,0,0,!Effect,公主！
+Dialogue: Marked=0,0:16:28.70,0:16:30.10,Default,NTP,0,0,0,!Effect,還早著呢
+Dialogue: Marked=0,0:16:43.30,0:16:44.32,Default,NTP,0,0,0,!Effect,小螢
+Dialogue: Marked=0,0:16:58.46,0:16:59.68,Default,NTP,0,0,0,!Effect,小螢
+Dialogue: Marked=0,0:17:59.90,0:18:01.88,Default,NTP,0,0,0,!Effect,抱歉來晚了  公主
+Dialogue: Marked=0,0:18:07.88,0:18:09.03,Default,NTP,0,0,0,!Effect,小螢
+Dialogue: Marked=0,0:18:16.10,0:18:17.20,Default,NTP,0,0,0,!Effect,真做得出來啊
+Dialogue: Marked=0,0:18:18.82,0:18:19.54,Default,NTP,0,0,0,!Effect,你們這些混蛋！
+Dialogue: Marked=0,0:18:23.48,0:18:24.50,Default,NTP,0,0,0,!Effect,灰飛煙滅吧
+Dialogue: Marked=0,0:18:25.98,0:18:26.84,Default,NTP,0,0,0,!Effect,一之太刀
+Dialogue: Marked=0,0:18:27.30,0:18:27.98,Default,NTP,0,0,0,!Effect,空喰
+Dialogue: Marked=0,0:18:32.36,0:18:33.27,Default,NTP,0,0,0,!Effect,二之太刀
+Dialogue: Marked=0,0:18:33.72,0:18:34.44,Default,NTP,0,0,0,!Effect,閃塵
+Dialogue: Marked=0,0:18:47.06,0:18:48.26,Default,NTP,0,0,0,!Effect,障壁重新啟動！
+Dialogue: Marked=0,0:19:05.20,0:19:07.26,Default,NTP,0,0,0,!Effect,障壁重新啟動成功
+Dialogue: Marked=0,0:19:07.82,0:19:10.76,Default,NTP,0,0,0,!Effect,未解開始逐漸從上空撤退
+Dialogue: Marked=0,0:19:11.46,0:19:13.84,Default,NTP,0,0,0,!Effect,新宿方面的通信和影像恢復
+Dialogue: Marked=0,0:19:14.18,0:19:16.28,Default,NTP,0,0,0,!Effect,離障壁完全封鎖還有30秒
+Dialogue: Marked=0,0:19:17.70,0:19:19.68,Default,NTP,0,0,0,!Effect,來自代碼的監視數據傳過來了
+Dialogue: Marked=0,0:19:20.06,0:19:20.78,Default,NTP,0,0,0,!Effect,快確認
+Dialogue: Marked=0,0:19:21.20,0:19:22.92,Default,NTP,0,0,0,!Effect,讓救援隊準備隨時對應
+Dialogue: Marked=0,0:19:23.10,0:19:23.60,Default,NTP,0,0,0,!Effect,是
+Dialogue: Marked=0,0:19:30.70,0:19:31.74,Default,NTP,0,0,0,!Effect,三之太刀
+Dialogue: Marked=0,0:19:32.22,0:19:33.12,Default,NTP,0,0,0,!Effect,千重
+Dialogue: Marked=0,0:20:05.76,0:20:06.70,Default,NTP,0,0,0,!Effect,那就是最後一個
+Dialogue: Marked=0,0:20:07.36,0:20:08.36,Default,NTP,0,0,0,!Effect,三之太刀
+Dialogue: Marked=0,0:20:09.03,0:20:09.78,Default,NTP,0,0,0,!Effect,小螢
+Dialogue: Marked=0,0:20:13.46,0:20:14.53,Default,NTP,0,0,0,!Effect,在做什麼啊
+Dialogue: Marked=0,0:20:16.22,0:20:16.74,Default,NTP,0,0,0,!Effect,公主？
+Dialogue: Marked=0,0:20:18.12,0:20:18.78,Default,NTP,0,0,0,!Effect,聽我說
+Dialogue: Marked=0,0:20:19.58,0:20:20.38,Default,NTP,0,0,0,!Effect,好奇怪…
+Dialogue: Marked=0,0:20:21.22,0:20:21.72,Default,NTP,0,0,0,!Effect,我…
+Dialogue: Marked=0,0:20:22.38,0:20:23.50,Default,NTP,0,0,0,!Effect,凜堂  天河
+Dialogue: Marked=0,0:20:24.28,0:20:25.81,Default,NTP,0,0,0,!Effect,公主  什麼？
+Dialogue: Marked=0,0:20:25.86,0:20:26.50,Default,NTP,0,0,0,!Effect,相信我
+Dialogue: Marked=0,0:20:44.18,0:20:45.90,Default,NTP,0,0,0,!Effect,在幹什麼啊  那兩個人
+Dialogue: Marked=0,0:20:47.14,0:20:48.12,Default,NTP,0,0,0,!Effect,千種霞
+Dialogue: Marked=0,0:20:49.02,0:20:50.36,Default,NTP,0,0,0,!Effect,你能聽到的吧
+Dialogue: Marked=0,0:20:51.42,0:20:53.38,Default,NTP,0,0,0,!Effect,不對  這是…
+Dialogue: Marked=0,0:20:54.28,0:20:55.06,Default,NTP,0,0,0,!Effect,世界是…
+Dialogue: Marked=0,0:21:30.94,0:21:34.20,Default,NTP,0,0,0,!Effect,凜堂前輩  天河前輩
+Dialogue: Marked=0,0:21:55.94,0:22:03.26,EDJP,NTP,0,0,0,!Effect,{\be10}一人では届かない世界を見に行こう
+Dialogue: Marked=0,0:21:55.94,0:22:03.26,EDCN,NTP,0,0,0,!Effect,{\be10}去看看一個人無法企及的世界吧
+Dialogue: Marked=0,0:22:11.36,0:22:16.04,EDJP,NTP,0,0,0,!Effect,{\be10}崩れ落ちてく瓦礫の下に
+Dialogue: Marked=0,0:22:11.36,0:22:16.04,EDCN,NTP,0,0,0,!Effect,{\be10}在漸漸崩塌的瓦礫下
+Dialogue: Marked=0,0:22:16.26,0:22:20.38,EDJP,NTP,0,0,0,!Effect,{\be10}忘れ去られた遠い記憶
+Dialogue: Marked=0,0:22:16.26,0:22:20.38,EDCN,NTP,0,0,0,!Effect,{\be10}那被淡忘的遙遠記憶
+Dialogue: Marked=0,0:22:21.08,0:22:25.70,EDJP,NTP,0,0,0,!Effect,{\be10}星空映した水面のように
+Dialogue: Marked=0,0:22:21.08,0:22:25.70,EDCN,NTP,0,0,0,!Effect,{\be10}彷彿星空照映的水面
+Dialogue: Marked=0,0:22:25.86,0:22:30.02,EDJP,NTP,0,0,0,!Effect,{\be10}澄んだ瞳僕を見つめてた
+Dialogue: Marked=0,0:22:25.86,0:22:30.02,EDCN,NTP,0,0,0,!Effect,{\be10}清澈的瞳孔凝視著我
+Dialogue: Marked=0,0:22:30.20,0:22:39.36,EDJP,NTP,0,0,0,!Effect,{\be10}やっと会えたね　ずっと待っていたよ
+Dialogue: Marked=0,0:22:30.20,0:22:39.36,EDCN,NTP,0,0,0,!Effect,{\be10}經過漫長的等待  終於相見了
+Dialogue: Marked=0,0:22:39.88,0:22:48.60,EDJP,NTP,0,0,0,!Effect,{\be10}壊れかけてた　時間が今動き出した
+Dialogue: Marked=0,0:22:39.88,0:22:48.60,EDCN,NTP,0,0,0,!Effect,{\be10}眼看壞掉的時間  又動了起來
+Dialogue: Marked=0,0:22:48.86,0:22:53.42,EDJP,NTP,0,0,0,!Effect,{\be10}大切なものは　全部全部君が
+Dialogue: Marked=0,0:22:48.86,0:22:53.42,EDCN,NTP,0,0,0,!Effect,{\be10\pos(640,720)}珍貴的是你愛的一切
+Dialogue: Marked=0,0:22:53.70,0:22:58.40,EDJP,NTP,0,0,0,!Effect,{\be10}愛すること　愛されることの喜びも
+Dialogue: Marked=0,0:22:53.70,0:22:58.40,EDCN,NTP,0,0,0,!Effect,{\be10}以及被愛的那份欣喜
+Dialogue: Marked=0,0:22:58.52,0:23:01.65,EDJP,NTP,0,0,0,!Effect,{\be10}幼い頃交わし合った約束が
+Dialogue: Marked=0,0:22:58.52,0:23:01.65,EDCN,NTP,0,0,0,!Effect,{\be10}兒時許下的那個約定
+Dialogue: Marked=0,0:23:01.70,0:23:07.90,EDJP,NTP,0,0,0,!Effect,{\be10}君と僕を繋いでる　いつでも
+Dialogue: Marked=0,0:23:01.70,0:23:07.90,EDCN,NTP,0,0,0,!Effect,{\be10}將我們永遠緊系一起
+Dialogue: Marked=0,0:23:08.68,0:23:15.84,EDJP,NTP,0,0,0,!Effect,{\be10}一人では届かない世界を見に行こう
+Dialogue: Marked=0,0:23:08.68,0:23:15.84,EDCN,NTP,0,0,0,!Effect,{\be10}去看看一個人無法企及的世界吧
+Dialogue: Marked=0,0:23:27.10,0:23:28.04,Default,NTP,0,0,0,!Effect,我知道的哦
+Dialogue: Marked=0,0:23:28.20,0:23:30.50,Default,NTP,0,0,0,!Effect,不不  一點都不好
+Dialogue: Marked=0,0:23:30.36,0:23:35.91,next title,NTP,0,0,0,!Effect,{\fsp40\fad(647,0)}{\fs73\t(489,5535,\fs57))\pos(670,306)}反轉的感覺質
+Dialogue: Marked=0,0:23:30.36,0:23:35.91,next title,NTP,0,0,0,!Effect,{\fsp10\fad(647,0)\move(805,240,790,250,489,5535)}{\fs63\t(489,5535,\fs47,))\pos(805,240)}Qualia
+Dialogue: Marked=0,0:23:30.52,0:23:33.64,Default,NTP,0,0,0,!Effect,說到底  我只關心自己的妹妹
+Dialogue: Marked=0,0:23:31.82,0:23:35.70,Default,NTP,0,0,0,!Effect,我不認可這種做法和這種世界！
+

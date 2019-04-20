@@ -1,0 +1,392 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 
+Original Script: 
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+Synch Point: 
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: ED1-Romaji-furigana,Day Roman,24,&H00FFFFFF,&H0095A79B,&H3E000000,&H00FFFFFF,0,0,0,0,105,110,1,0,1,1,0,8,40,40,25,1
+Style: TS#001C,Iwata New Gothic Pro-CP B,50,&H00FFFFFF,&H00003FFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,10,10,10,1
+Style: ED2-Romaji,Gunmetal,48,&HC8050617,&HFF95A79B,&H00FBFBFC,&HC8051007,0,0,0,0,98,110,1,0,1,1,0,8,40,40,25,1
+Style: ED2-English,Gunmetal,38,&HC8050617,&H001F110B,&H03FFFFFF,&HC8051007,0,0,0,0,98,110,2,0,1,1,0,2,40,40,25,1
+Style: ED1-Romaji,Day Roman,48,&H00FFFFFF,&H0095A79B,&H3E000000,&H00FFFFFF,0,0,0,0,105,110,1,0,1,2,0,8,40,40,25,1
+Style: ED1-English,Day Roman,44,&H00FFFFFF,&H001F110B,&H3E000000,&H00FFFFFF,0,0,0,0,105,110,0,0,1,2,0,2,40,40,25,1
+Style: ED3-Romaji,Tribal Garamond,42,&H0FBDC15F,&HC8DF7E29,&H03FFFFFF,&H00FFFFFF,0,0,0,0,105,110,1,0,1,2,0,8,40,40,25,1
+Style: ED2-Romaji - FX,Tribal Garamond,26,&HFFFFFFFF,&H00051007,&H323F738E,&H00FFFFFF,0,0,0,0,105,120,0,0,1,1,0,8,40,40,25,1
+Style: ED3-English,Tribal Garamond,42,&H0FBDC15F,&HC8DF7E29,&H03FFFFFF,&H00FFFFFF,0,0,0,0,105,110,1,0,1,2,0,2,40,40,25,1
+Style: Title Logo,Roosevelt,80,&H005A06AD,&H000000FF,&H00F3B500,&H00000000,0,0,0,0,100,100,2,0,1,6,0,2,10,10,10,1
+Style: OP1-Eng - FX,Black Box,25,&H00FFFFFF,&HFF020201,&H0A5E5957,&H3DFFFFFF,0,0,0,0,98,120,0,0,1,0,0,1,40,40,32,1
+Style: OP1-Romji - FX,Black Box,25,&H00FFFFFF,&HFF020201,&H0A5E5957,&H3DFFFFFF,0,0,0,0,98,120,0,0,1,0,0,7,40,40,44,1
+Style: OP1-Romaji,Flamingo,46,&H00FFFFFF,&H0095A79B,&H001A1D1B,&H3DFFFFFF,-1,0,0,0,98,110,0,0,1,1,0,9,40,40,30,1
+Style: OP1-English,Flamingo,44,&H00FFFFFF,&H7F5E5A58,&H001B191A,&H3D5E5A58,-1,0,0,0,96,110,0,0,1,1,0,3,40,40,30,1
+Style: OP2-English,Flamingo,44,&H00FFFFFF,&H7F5E5A58,&H001B191A,&H3D5E5A58,-1,0,0,0,96,110,0,0,1,1,0,3,40,230,24,1
+Style: OP2-Romaji,Flamingo,46,&H00FFFFFF,&H0095A79B,&H001A1D1B,&H3DFFFFFF,-1,0,0,0,98,110,0,0,1,1,0,7,230,40,24,1
+Style: OP3FX,Flamingo,46,&H00FFFFFF,&H0095A79B,&H001A1D1B,&H3DFFFFFF,-1,0,0,0,98,110,0,0,1,0,0,5,40,40,30,1
+Style: Default,FZZhunYuan-M02S,42,&H00FFFFFF,&H000000FF,&H00F49813,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: Default - Top,Rosario,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,8,100,100,28,1
+Style: Default - Italic,Rosario,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,-1,0,0,100,100,0,0,1,2,0,2,100,100,28,1
+Style: Title,FZZhunYuan-M02S,80,&H00FFFFFF,&H000000FF,&H00F4A81A,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,230,1
+Style: OPEDEG,FZZhunYuan-M02S,40,&H00FFFFFF,&H000000FF,&H00E5987E,&H00000000,0,0,0,0,100,100,0,0,1,2,2,8,10,10,5,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:01:39.95,0:01:43.62,Default,,0,0,0,,兵分兩路吧 薇薇和李奧納多從右邊繞到前面去
+Dialogue: 0,0:01:43.92,0:01:44.50,Default,,0,0,0,,是
+Dialogue: 0,0:01:50.90,0:01:51.42,Default,Chaika,0,0,0,,食物 掉落
+Dialogue: 0,0:01:51.62,0:01:52.59,Default,Toru,0,0,0,,別管了
+Dialogue: 0,0:01:58.18,0:01:59.64,Default,Guy,0,0,0,,到底去哪了
+Dialogue: 0,0:02:03.39,0:02:04.34,Default,Vivi,0,0,0,,基列特大人
+Dialogue: 0,0:02:04.34,0:02:06.35,Default,Leonardo,0,0,0,,這裏沒有發現
+Dialogue: 0,0:02:06.75,0:02:08.80,Default,Gillette,0,0,0,,以這一片為中心再找找看吧
+Dialogue: 0,0:02:08.90,0:02:09.78,Default,All,0,0,0,,是
+Dialogue: 0,0:02:23.22,0:02:24.64,Default,Toru,0,0,0,,只是裝飾品嗎？
+Dialogue: 0,0:02:28.33,0:02:29.52,Default,Toru,0,0,0,,這裏是…
+Dialogue: 0,0:02:31.94,0:02:33.04,Default,Toru,0,0,0,,是劇場啊
+Dialogue: 0,0:02:33.67,0:02:36.88,Default,Leonardo,0,0,0,,沒有躲進 附近的房屋和商店的跡象
+Dialogue: 0,0:02:37.20,0:02:39.76,Default,Girl,0,0,0,,要藏身的話就只有躲進這間劇場了吧
+Dialogue: 0,0:02:41.05,0:02:44.10,Default,Guy,0,0,0,,哦 看啊 這劍的光輝
+Dialogue: 0,0:02:44.81,0:02:48.42,Default,Guy,0,0,0,,會將正義之刃收入其中的
+Dialogue: 0,0:02:49.19,0:02:51.52,Default,Guy,0,0,0,,還是敵人的心臟
+Dialogue: 0,0:02:51.82,0:02:55.99,Default,Guy,0,0,0,,來吧 站起來吧
+Dialogue: 0,0:02:58.55,0:02:59.36,Default,Toru,0,0,0,,戲劇嗎
+Dialogue: 0,0:03:01.57,0:03:02.32,Default,Chaika,0,0,0,,棺材？
+Dialogue: 0,0:03:02.32,0:03:06.95,Default,Guy,0,0,0,,上吧 打倒禁斷皇帝賈茲
+Dialogue: 0,0:03:07.20,0:03:08.12,Default,Chaika,0,0,0,,父親…
+Dialogue: 0,0:03:08.73,0:03:10.96,Default,Toru,0,0,0,,好像是「討伐賈茲皇帝」的戲劇啊
+Dialogue: 0,0:03:11.11,0:03:13.38,Default,Chaika,0,0,0,,托魯 我想要看戲
+Dialogue: 0,0:03:13.46,0:03:15.46,Default,Toru,0,0,0,,別鬧了 會被發現的哦
+Dialogue: 0,0:03:15.61,0:03:18.76,Default,Toru,0,0,0,,除了等戲劇結束 混在觀眾裏一起離開之外就沒別的辦法
+Dialogue: 0,0:03:20.03,0:03:21.70,Default,Guy,0,0,0,,這…很難辦
+Dialogue: 0,0:03:21.80,0:03:24.44,Default,Gillette,0,0,0,,賊人已入侵的可能性很高
+Dialogue: 0,0:03:24.54,0:03:27.47,Default,Gillette,0,0,0,,難道不應該暫時中止表演嗎
+Dialogue: 0,0:03:26.83,0:03:27.31,OPEDEG,Toru,0,0,0,,這個聲音
+Dialogue: 0,0:03:27.79,0:03:32.97,Default,Guy,0,0,0,,今晚的戲劇是專門為領主大人以及親族準備的
+Dialogue: 0,0:03:33.22,0:03:35.06,Default,Guy,0,0,0,,一旦中止了的話
+Dialogue: 0,0:03:35.06,0:03:37.02,Default,,0,0,0,,領主大人就顏面無存了
+Dialogue: 0,0:03:37.68,0:03:39.03,Default,Toru,0,0,0,,總之你先藏起來
+Dialogue: 0,0:03:40.11,0:03:43.07,Default,Toru,0,0,0,,聽好了 在我回來之前都不許出來啊
+Dialogue: 0,0:03:43.22,0:03:44.70,Default,Chaika,0,0,0,,托魯 什麼時候回來
+Dialogue: 0,0:03:44.90,0:03:47.20,Default,,0,0,0,,總之 先找個藏身的地方
+Dialogue: 0,0:03:51.72,0:03:53.71,Default,Gillette,0,0,0,,既然戲劇不能中止
+Dialogue: 0,0:03:54.00,0:03:56.13,Default,,0,0,0,,就在不影響觀眾的前提下搜索吧
+Dialogue: 0,0:03:56.54,0:03:58.38,Default,Gillette,0,0,0,,要把觀眾的安全放在第一位
+Dialogue: 0,0:03:58.96,0:03:59.67,Default,All,0,0,0,,是
+Dialogue: 0,0:04:04.59,0:04:05.84,Default,Toru,0,0,0,,是化妝室嗎
+Dialogue: 0,0:04:09.72,0:04:12.18,Default,Girl,0,0,0,,哎呀 讓一讓 讓一讓
+Dialogue: 0,0:04:13.81,0:04:16.73,Default,Toru,0,0,0,,完了 這樣就無法行動…
+Dialogue: 0,0:04:19.43,0:04:22.03,Default,Girl,0,0,0,,嗯 托魯他們就在裏面
+Dialogue: 0,0:04:22.07,0:04:22.57,Default,Girl,0,0,0,,嗯
+Dialogue: 0,0:04:32.27,0:04:33.71,Default,Vivi,0,0,0,,你在幹什麼啊
+Dialogue: 0,0:04:34.16,0:04:35.75,Default,Guy,0,0,0,,這裏就拜託你們了
+Dialogue: 0,0:04:38.36,0:04:40.00,Default,Girl,0,0,0,,人真多啊
+Dialogue: 0,0:04:40.57,0:04:43.01,Default,Girl,0,0,0,,雖然 我不認為他們會躲在這裏
+Dialogue: 0,0:04:43.41,0:04:44.30,Default,Vivi,0,0,0,,不過不可大意
+Dialogue: 0,0:04:44.60,0:04:48.43,Default,Vivi,0,0,0,,亂破師這種人為了鑽空子什麼都幹得出來
+Dialogue: 0,0:04:49.01,0:04:53.02,Default,Girl,0,0,0,,舞者們 換完妝以後趕緊到後台準備
+Dialogue: 0,0:04:53.13,0:04:54.44,Default,Girls,0,0,0,,是
+Dialogue: 0,0:04:55.13,0:04:57.66,Default,Girl,0,0,0,,你們兩個怎麼還是這副打扮啊
+Dialogue: 0,0:04:58.38,0:04:59.90,Default,Girl,0,0,0,,不…我們並不是…
+Dialogue: 0,0:05:00.01,0:05:01.32,Default,Girl,0,0,0,,趕緊換衣服啊
+Dialogue: 0,0:05:01.37,0:05:03.07,Default,Girl,0,0,0,,觀眾們可不會等的哦
+Dialogue: 0,0:05:06.49,0:05:09.07,Default,Vivi,0,0,0,,等她們出去了再進來吧
+Dialogue: 0,0:05:09.66,0:05:12.45,Default,Toru,0,0,0,,這些傢伙…可惡
+Dialogue: 0,0:05:14.54,0:05:15.79,Default,Guy,0,0,0,,差不多要等到第三幕了
+Dialogue: 0,0:05:16.04,0:05:19.25,Default,Guy,0,0,0,,【幼主】嗎 額…啊 找到了
+Dialogue: 0,0:05:19.54,0:05:20.79,Default,Guy,0,0,0,,好嘞 搬走吧
+Dialogue: 0,0:05:23.03,0:05:25.13,Default,Guys,0,0,0,,嘿咻~~
+Dialogue: 0,0:05:25.51,0:05:27.43,Default,Girl,0,0,0,,來 趕緊的 趕緊的
+Dialogue: 0,0:05:27.93,0:05:28.89,Default,Girl,0,0,0,,我說你啊
+Dialogue: 0,0:05:32.77,0:05:34.14,Default,Girl,0,0,0,,這個忘記了
+Dialogue: 0,0:05:33.90,0:05:37.27,Default,Toru,0,0,0,,不得了 不好意思
+Dialogue: 0,0:05:45.29,0:05:47.09,Default,Akari,0,0,0,,你在這裏幹什麼呢
+Dialogue: 0,0:05:48.81,0:05:51.79,Default,Akari,0,0,0,,街上停著基列特隊的車輛
+Dialogue: 0,0:05:51.79,0:05:56.25,Default,Akari,0,0,0,,你們買東西又沒回來我還以為你們被他們找上了
+Dialogue: 0,0:05:56.67,0:06:00.00,Default,Akari,0,0,0,,沒想到你居然是為了解放隱藏的性癖
+Dialogue: 0,0:06:00.00,0:06:02.18,Default,Toru,0,0,0,,等等 阿卡莉 先聽我說
+Dialogue: 0,0:06:02.18,0:06:03.75,Default,Akari,0,0,0,,不要想當然 兄長大人
+Dialogue: 0,0:06:04.25,0:06:05.64,Default,Akari,0,0,0,,有穿女裝的興趣的話
+Dialogue: 0,0:06:05.64,0:06:07.64,Default,,0,0,0,,雖然會有各種各樣的親近辦法
+Dialogue: 0,0:06:09.12,0:06:13.54,Default,Akari,0,0,0,,但唯一的問題是
+Dialogue: 0,0:06:13.54,0:06:15.22,Default,Toru,0,0,0,,聽我說啊 喂
+Dialogue: 0,0:06:16.89,0:06:18.19,Default,Akari,0,0,0,,果然是因為基列特隊嗎
+Dialogue: 0,0:06:18.54,0:06:19.55,Default,Toru,0,0,0,,嗯
+Dialogue: 0,0:06:19.55,0:06:22.67,Default,Toru,0,0,0,,我是想著不論如何都要撐到戲劇演完
+Dialogue: 0,0:06:22.67,0:06:24.84,Default,Girl,0,0,0,,托魯 你看著可傻了
+Dialogue: 0,0:06:28.15,0:06:29.41,Default,Toru,0,0,0,,嘉依卡和棺材不見了
+Dialogue: 0,0:06:29.41,0:06:30.63,Default,Akari,0,0,0,,什麼
+Dialogue: 0,0:06:30.63,0:06:33.16,Default,Guy,0,0,0,,終於打倒了賈茲皇帝
+Dialogue: 0,0:06:33.51,0:06:35.69,Default,Guy,0,0,0,,來 將棺材搬到這
+Dialogue: 0,0:06:39.15,0:06:41.88,Default,Guy,0,0,0,,來吧 這是慶祝的宴會
+Dialogue: 0,0:06:41.88,0:06:43.63,Default,Guy,0,0,0,,起舞吧 起舞吧
+Dialogue: 0,0:06:50.80,0:06:53.26,Default,Chaika,0,0,0,,停止 要求
+Dialogue: 0,0:06:53.81,0:06:55.26,Default,Akari,0,0,0,,嘉依卡就在那裏面嗎
+Dialogue: 0,0:06:55.26,0:06:56.10,Default,Toru,0,0,0,,嗯
+Dialogue: 0,0:06:56.83,0:06:58.02,Default,Akari,0,0,0,,按照劇情走向
+Dialogue: 0,0:06:58.02,0:07:00.02,Default,,0,0,0,,接下來像是要打開棺材安放遺體了
+Dialogue: 0,0:07:01.49,0:07:03.95,Default,Girl,0,0,0,,強搶了就跑 怎麼樣？
+Dialogue: 0,0:07:03.95,0:07:07.89,Default,Toru,0,0,0,,基列特隊也在
+Dialogue: 0,0:07:07.89,0:07:09.82,Default,Toru,0,0,0,,我課不覺得能跑得掉
+Dialogue: 0,0:07:10.17,0:07:11.19,Default,Akari,0,0,0,,怎麼辦
+Dialogue: 0,0:07:14.12,0:07:15.62,Default,Vivi,0,0,0,,怎麼樣 合適嗎
+Dialogue: 0,0:07:17.29,0:07:18.75,Default,Girl,0,0,0,,挺好的啊
+Dialogue: 0,0:07:18.75,0:07:21.49,Default,Girl,0,0,0,,打扮成這樣攻略基列特大人試試看
+Dialogue: 0,0:07:21.49,0:07:23.83,Default,Vivi,0,0,0,,你…你在說什麼啊
+Dialogue: 0,0:07:26.15,0:07:28.01,Default,Vivi,0,0,0,,抱…抱歉 芷依塔
+Dialogue: 0,0:07:28.01,0:07:29.92,Default,Zita,0,0,0,,薇薇 看這個
+Dialogue: 0,0:07:30.87,0:07:32.34,Default,Vivi,0,0,0,,是那個亂破師的…
+Dialogue: 0,0:07:32.34,0:07:33.77,Default,Vivi,0,0,0,,來吧 將這不詳的屍體
+Dialogue: 0,0:07:33.77,0:07:35.77,Default,,0,0,0,,收入棺材之中吧
+Dialogue: 0,0:07:36.36,0:07:39.01,Default,Vivi,0,0,0,,打開這具棺材
+Dialogue: 0,0:07:39.01,0:07:43.56,Default,Toru,0,0,0,,等等 等等 等等
+Dialogue: 0,0:07:46.39,0:07:49.15,Default,Toru,0,0,0,,啊 趕上了真是太好了
+Dialogue: 0,0:07:49.59,0:07:53.18,Default,Toru,0,0,0,,達到了皇帝
+Dialogue: 0,0:07:53.18,0:07:57.37,Default,Toru,0,0,0,,被封印的女神終於要復活了
+Dialogue: 0,0:07:57.59,0:07:58.33,Default,Both,0,0,0,,誒？
+Dialogue: 0,0:07:58.90,0:08:00.88,Default,Girl,0,0,0,,女神大人萬歲
+Dialogue: 0,0:08:00.88,0:08:03.55,Default,Akari,0,0,0,,來吧 大家一同迎接她吧
+Dialogue: 0,0:08:03.55,0:08:07.92,Default,Akari,0,0,0,,和平女神 嘉依…嘉依曼努西大人
+Dialogue: 0,0:08:08.50,0:08:12.59,Default,Toru,0,0,0,,嘉依曼努西大人 請在我們面前現身吧
+Dialogue: 0,0:08:19.39,0:08:20.25,Default,Chaika,0,0,0,,托魯？
+Dialogue: 0,0:08:20.25,0:08:21.23,Default,Toru,0,0,0,,配合我們的台詞
+Dialogue: 0,0:08:23.90,0:08:26.31,Default,Toru,0,0,0,,請把 嘉依曼努西大人
+Dialogue: 0,0:08:31.47,0:08:35.02,Default,Chaika,0,0,0,,我是…我是…
+Dialogue: 0,0:08:35.02,0:08:36.66,Default,Chaika,0,0,0,,女神 嘉依曼努西
+Dialogue: 0,0:08:36.66,0:08:39.49,Default,Both,0,0,0,,萬歲 萬歲
+Dialogue: 0,0:08:39.85,0:08:42.25,Default,Guy,0,0,0,,什麼玩意 我怎麼不知道有女神
+Dialogue: 0,0:08:42.25,0:08:45.66,Default,Girl,0,0,0,,會不會是領主大人來了所以改劇本了
+Dialogue: 0,0:08:45.66,0:08:47.75,Default,Guy,0,0,0,,總這先配合著演下去吧
+Dialogue: 0,0:08:48.75,0:08:50.33,Default,All,0,0,0,,嘉依曼努西大人
+Dialogue: 0,0:08:50.92,0:08:52.13,Default,Both,0,0,0,,嘉依曼努西萬歲
+Dialogue: 0,0:08:53.51,0:08:55.61,Default,Guy,0,0,0,,哦 真美啊
+Dialogue: 0,0:08:55.61,0:08:57.61,Default,Girl,0,0,0,,就像是真的女神呢
+Dialogue: 0,0:08:57.61,0:08:58.35,Default,Gillette,0,0,0,,那個是…
+Dialogue: 0,0:08:58.77,0:09:00.30,Default,Gillette,0,0,0,,尼克拉 舞台
+Dialogue: 0,0:09:00.30,0:09:01.99,Default,Gillette,0,0,0,,觀眾席就交給李奧納多
+Dialogue: 0,0:09:05.46,0:09:06.86,Default,Gillette,0,0,0,,到此為止了
+Dialogue: 0,0:09:07.73,0:09:10.44,Default,Gillette,0,0,0,,大大方方登上舞台倒是讓我出乎意料了
+Dialogue: 0,0:09:10.44,0:09:12.19,Default,Gillette,0,0,0,,不過鬧劇已經結束了
+Dialogue: 0,0:09:12.19,0:09:13.95,Default,Gillette,0,0,0,,你們逃不了了
+Dialogue: 0,0:09:15.74,0:09:19.46,Default,Gillette,0,0,0,,禁斷皇帝的女兒嘉依卡中的一員
+Dialogue: 0,0:09:19.46,0:09:22.33,Default,Gillette,0,0,0,,你們的存在將成為戰亂的火種
+Dialogue: 0,0:09:22.74,0:09:25.33,Default,Gillette,0,0,0,,乖乖跟我們走吧
+Dialogue: 0,0:09:35.14,0:09:39.09,Default,Toru,0,0,0,,哎呀真是的 安德雷你喝醉了吧
+Dialogue: 0,0:09:39.09,0:09:41.97,Default,Toru,0,0,0,,真是磨人的小妖精
+Dialogue: 0,0:09:41.97,0:09:47.02,Default,Akari,0,0,0,,真好笑 安德雷的玩笑話總是能讓我笑個不停
+Dialogue: 0,0:09:47.61,0:09:50.72,Default,Toru,0,0,0,,好了 把玩具一員的劍收起來吧
+Dialogue: 0,0:09:50.72,0:09:53.90,Default,Toru,0,0,0,,今夜可是女神大人復活的慶典哦
+Dialogue: 0,0:09:53.90,0:09:55.15,Default,Gillette,0,0,0,,說什麼呢
+Dialogue: 0,0:09:55.59,0:09:56.65,Default,Nikolai,0,0,0,,什麼情況…
+Dialogue: 0,0:09:56.65,0:10:00.24,Default,Akari,0,0,0,,哎呀呀 達尼爾大叔也來了呢
+Dialogue: 0,0:10:00.24,0:10:02.12,Default,Nikolai,0,0,0,,達尼爾？
+Dialogue: 0,0:10:02.12,0:10:05.87,Default,Akari,0,0,0,,今天可不能喝太多掉進池塘裏哦
+Dialogue: 0,0:10:05.87,0:10:08.16,Default,Toru,0,0,0,,來吧 跳起舞來吧
+Dialogue: 0,0:10:08.16,0:10:10.88,Default,Toru,0,0,0,,為女神大人獻上熱鬧的宴會
+Dialogue: 0,0:10:10.88,0:10:12.38,Default,Guy,0,0,0,,喂 去伴舞 去伴舞
+Dialogue: 0,0:10:14.21,0:10:15.71,Default,Gillette,0,0,0,,等一等…你們…
+Dialogue: 0,0:10:15.71,0:10:16.97,Default,Gillette,0,0,0,,這可不是演戲…
+Dialogue: 0,0:10:18.68,0:10:19.22,Default,Nikolai,0,0,0,,等等
+Dialogue: 0,0:10:19.70,0:10:21.66,Default,Toru,0,0,0,,等等趁著亂趕緊逃了
+Dialogue: 0,0:10:21.66,0:10:22.22,Default,Chaika,0,0,0,,嗯
+Dialogue: 0,0:10:22.66,0:10:23.70,Default,Vivi,0,0,0,,基列特大人
+Dialogue: 0,0:10:23.70,0:10:24.85,Default,Gillette,0,0,0,,不要讓嘉依卡跑了
+Dialogue: 0,0:10:27.97,0:10:30.02,Default,Zita,0,0,0,,現身吧 漂浮之物
+Dialogue: 0,0:10:30.02,0:10:31.98,Default,Zita,0,0,0,,<漂浮者>
+Dialogue: 0,0:10:37.79,0:10:38.86,Default,Toru,0,0,0,,嘉依卡 開槍
+Dialogue: 0,0:10:40.26,0:10:43.12,Default,Chaika,0,0,0,,吾將紅蓮施捨予 引來火焰吧
+Dialogue: 0,0:10:43.43,0:10:45.08,Default,Chaika,0,0,0,,<燃烧者>
+Dialogue: 0,0:11:04.98,0:11:07.00,Default,Gillette,0,0,0,,不是 不是的
+Dialogue: 0,0:11:07.00,0:11:08.56,Default,Gillette,0,0,0,,這根本不是演戲
+Dialogue: 0,0:11:08.56,0:11:09.60,Default,Gillette,0,0,0,,大家快逃
+Dialogue: 0,0:11:09.60,0:11:10.30,Default,Gillette,0,0,0,,起火了
+Dialogue: 0,0:11:10.30,0:11:12.19,Default,Guy,0,0,0,,喂 謝幕了
+Dialogue: 0,0:11:15.08,0:11:16.81,Default,Gillette,0,0,0,,這並不是演戲
+Dialogue: 0,0:11:16.81,0:11:19.73,Default,Gillette,0,0,0,,快逃 快逃啊
+Dialogue: 0,0:11:21.73,0:11:25.16,Default,Gillette,0,0,0,,這好像是家有幾百年歷史的劇場
+Dialogue: 0,0:11:25.16,0:11:29.26,Default,Gillette,0,0,0,,戰爭中也奇跡般地保存了下來
+Dialogue: 0,0:11:29.26,0:11:30.75,Default,Chaika,0,0,0,,我 反省
+Dialogue: 0,0:11:31.35,0:11:35.00,Default,Chaika,0,0,0,,劇場 失火 我深刻反省
+Dialogue: 0,0:11:39.93,0:11:41.53,Default,Toru,0,0,0,,與你無關啦
+Dialogue: 0,0:12:17.91,0:12:18.80,Default,Guy,0,0,0,,這是…
+Dialogue: 0,0:12:22.22,0:12:23.09,Default,Toru,0,0,0,,什麼…
+Dialogue: 0,0:12:23.62,0:12:25.97,Default,Toru,0,0,0,,有那個騎士的同伴在這裏嗎
+Dialogue: 0,0:12:25.97,0:12:26.92,Default,Akari,0,0,0,,是
+Dialogue: 0,0:12:27.82,0:12:31.53,Default,Akari,0,0,0,,在街上聽到的傳聞未必就是假的啊
+Dialogue: 0,0:12:31.53,0:12:34.92,Default,Chaika,0,0,0,,遺體 就在附近的希沙姆遺跡？
+Dialogue: 0,0:12:34.92,0:12:38.11,Default,Akari,0,0,0,,兄長大人 落在那些傢伙後面就不妙了
+Dialogue: 0,0:12:38.11,0:12:39.53,Default,Toru,0,0,0,,也是啊
+Dialogue: 0,0:12:39.53,0:12:41.04,Default,Toru,0,0,0,,芙蕾多妮卡 稍微麻煩你下行不？
+Dialogue: 0,0:12:41.04,0:12:42.15,Default,Fredrica,0,0,0,,不要…
+Dialogue: 0,0:12:48.09,0:12:49.62,Default,Toru,0,0,0,,逃掉了…
+Dialogue: 0,0:12:50.63,0:12:53.70,Default,Vivi,0,0,0,,被那個女亂破師偷襲了嗎
+Dialogue: 0,0:12:53.70,0:12:54.83,Default,Guy,0,0,0,,我太大意了
+Dialogue: 0,0:12:55.17,0:12:59.70,Default,Guy,0,0,0,,在被攻擊之前好像看到了什麼非常美好的東西
+Dialogue: 0,0:12:59.70,0:13:01.21,Default,Guy,0,0,0,,可我卻想不起來了
+Dialogue: 0,0:13:01.77,0:13:07.09,Default,Vivi,0,0,0,,基列特大人
+Dialogue: 0,0:13:07.65,0:13:10.06,Default,Gillette,0,0,0,,嗯 快點去比較好
+Dialogue: 0,0:13:11.24,0:13:14.27,Default,Chaika,0,0,0,,遺體 絕對不會讓出
+Dialogue: 0,0:13:20.43,0:13:21.27,Default,Toru,0,0,0,,就是那個啊
+Dialogue: 0,0:13:22.51,0:13:25.81,Default,Akari,0,0,0,,根據傳言 遺體好像就在那座聖堂裏
+Dialogue: 0,0:13:25.81,0:13:27.24,Default,Chaika,0,0,0,,嗯 快走吧
+Dialogue: 0,0:13:29.99,0:13:32.68,Default,Vivi,0,0,0,,聞著傳言的味道來了呢
+Dialogue: 0,0:13:32.68,0:13:35.12,Default,Vivi,0,0,0,,可惜你們已經到此為止了
+Dialogue: 0,0:13:35.12,0:13:36.71,Default,Toru,0,0,0,,那可不一定
+Dialogue: 0,0:13:43.55,0:13:44.26,Default,Chaika,0,0,0,,托魯
+Dialogue: 0,0:13:44.26,0:13:46.40,Default,Chaika,0,0,0,,遺體 不讓給任何人
+Dialogue: 0,0:13:49.89,0:13:50.43,Default,Toru,0,0,0,,嘉依卡
+Dialogue: 0,0:14:06.17,0:14:08.29,Default,Toru,0,0,0,,嘉依卡 沒事吧
+Dialogue: 0,0:14:08.29,0:14:09.78,Default,Chaika,0,0,0,,當然
+Dialogue: 0,0:14:12.58,0:14:14.04,Default,Chaika,0,0,0,,為什麼 是你
+Dialogue: 0,0:14:14.30,0:14:15.61,Default,Toru,0,0,0,,我怎麼知道
+Dialogue: 0,0:14:15.61,0:14:17.28,Default,Chaika,0,0,0,,放手 立刻
+Dialogue: 0,0:14:17.28,0:14:19.02,Default,Chaika,0,0,0,,為什麼你在這裏
+Dialogue: 0,0:14:19.02,0:14:20.67,Default,Chaika,0,0,0,,塞爾瑪和大衛在哪裏
+Dialogue: 0,0:14:20.67,0:14:22.03,Default,Chaika,0,0,0,,這是哪裏
+Dialogue: 0,0:14:22.03,0:14:24.56,Default,Toru,0,0,0,,我還想問呢
+Dialogue: 0,0:14:24.56,0:14:26.84,Default,Toru,0,0,0,,可惡 嘉依卡在哪
+Dialogue: 0,0:14:27.59,0:14:29.01,Default,Chaika,0,0,0,,嘉依卡是我
+Dialogue: 0,0:14:29.01,0:14:30.10,Default,Chaika,0,0,0,,就在這裏
+Dialogue: 0,0:14:30.10,0:14:33.81,Default,Toru,0,0,0,,不是說你 是說白色的那個
+Dialogue: 0,0:14:37.97,0:14:40.12,Default,Toru,0,0,0,,喂 你不要緊吧
+Dialogue: 0,0:14:40.12,0:14:41.52,Default,Chaika,0,0,0,,不要你多管閒事
+Dialogue: 0,0:14:47.13,0:14:49.48,Default,Chaika,0,0,0,,敵人的同情不接受
+Dialogue: 0,0:14:51.25,0:14:52.28,Default,Toru,0,0,0,,嘉依卡
+Dialogue: 0,0:14:53.99,0:14:55.54,Default,Chaika,0,0,0,,下落中
+Dialogue: 0,0:14:56.97,0:15:00.90,Default,Gillette,0,0,0,,等我從這裏出去一定會抓捕你們
+Dialogue: 0,0:15:00.90,0:15:04.13,Default,Gillette,0,0,0,,但現在從這裏出去才是最優先的
+Dialogue: 0,0:15:04.45,0:15:05.88,Default,Gillette,0,0,0,,來把手給我
+Dialogue: 0,0:15:05.88,0:15:09.47,Default,Chaika,0,0,0,,比起抓住你 收放開繩子更難辦到
+Dialogue: 0,0:15:09.47,0:15:11.54,Default,Chaika,0,0,0,,掉落的恐懼 很大
+Dialogue: 0,0:15:11.54,0:15:14.92,Default,Gillette,0,0,0,,但是這樣下去你胡掉進泥沼裏
+Dialogue: 0,0:15:14.92,0:15:15.57,Default,Gillette,0,0,0,,手給我
+Dialogue: 0,0:15:15.57,0:15:17.35,Default,Toru,0,0,0,,從嘉依卡身旁離開！
+Dialogue: 0,0:15:17.35,0:15:18.44,Default,Toru,0,0,0,,等著我 嘉依卡
+Dialogue: 0,0:15:18.44,0:15:19.32,Default,Toru,0,0,0,,我馬上就過去
+Dialogue: 0,0:15:19.32,0:15:20.48,Default,Chaika,0,0,0,,托魯
+Dialogue: 0,0:15:26.28,0:15:28.44,Default,Toru,0,0,0,,來 嘉依卡 抓住我
+Dialogue: 0,0:15:28.44,0:15:33.18,Default,Chaika,0,0,0,,不行 一旦放手 落進去的可能性…
+Dialogue: 0,0:15:39.88,0:15:42.45,Default,Toru,0,0,0,,喂 把手放開啊
+Dialogue: 0,0:15:42.45,0:15:43.63,Default,Gillette,0,0,0,,抱歉 那我可做不到
+Dialogue: 0,0:15:43.63,0:15:46.29,Default,Gillette,0,0,0,,我可是打算在這裏就抓住你們的
+Dialogue: 0,0:15:46.29,0:15:50.63,Default,Toru,0,0,0,,呵呵 能辦到的話你就試試看啊
+Dialogue: 0,0:15:48.80,0:15:51.38,Default,Gillette,0,0,0,,那兩個傢伙是笨蛋嗎
+Dialogue: 0,0:15:51.38,0:15:52.80,Default,Toru,0,0,0,,放手啊你
+Dialogue: 0,0:15:52.80,0:15:55.39,Default,Gillette,0,0,0,,我兩隻手臂都…
+Dialogue: 0,0:15:56.66,0:15:59.10,Default,Chaika,0,0,0,,真想幫她就放手
+Dialogue: 0,0:16:04.17,0:16:05.61,Default,Chaika,0,0,0,,笨蛋 哪有這樣的
+Dialogue: 0,0:16:05.61,0:16:07.53,Default,Chaika,0,0,0,,而且對我 直接攻擊
+Dialogue: 0,0:16:07.53,0:16:10.76,Default,Chaika,0,0,0,,誰管你 親媽什麼的都是什麼鬼
+Dialogue: 0,0:16:10.76,0:16:12.89,Default,Chaika,0,0,0,,你從頭頂掉下來扯平
+Dialogue: 0,0:16:12.89,0:16:14.98,Default,Chaika,0,0,0,,我 滿身泥漿 責任追究
+Dialogue: 0,0:16:14.98,0:16:18.88,Default,Chaika,0,0,0,,滿身泥漿 我 同樣 扯平
+Dialogue: 0,0:16:20.78,0:16:21.67,Default,Toru,0,0,0,,嘉依卡
+Dialogue: 0,0:16:22.84,0:16:23.96,Default,Toru,0,0,0,,抓住這個
+Dialogue: 0,0:16:23.96,0:16:24.87,Default,Gillette,0,0,0,,不會讓你逃走了
+Dialogue: 0,0:16:25.47,0:16:26.38,Default,Chaika,0,0,0,,嗯
+Dialogue: 0,0:16:27.06,0:16:28.64,Default,Chaika,0,0,0,,這個 你想用嗎
+Dialogue: 0,0:16:28.64,0:16:31.14,Default,Chaika,0,0,0,,拒絕使用 我自己解決
+Dialogue: 0,0:16:31.14,0:16:33.13,Default,Chaika,0,0,0,,你能 自己解決？
+Dialogue: 0,0:16:33.59,0:16:35.36,Default,Akari,0,0,0,,兄長大人 你沒事吧
+Dialogue: 0,0:16:35.36,0:16:36.43,Default,Toru,0,0,0,,阿卡莉
+Dialogue: 0,0:16:36.43,0:16:37.30,Default,Akari,0,0,0,,兄長就來救你
+Dialogue: 0,0:16:37.30,0:16:37.65,Default,Toru,0,0,0,,等等
+Dialogue: 0,0:16:37.65,0:16:39.65,Default,,0,0,0,,拉我上去之前先幹掉那傢伙
+Dialogue: 0,0:16:42.30,0:16:45.07,Default,Gillette,0,0,0,,別這樣 即便做了這種事
+Dialogue: 0,0:16:45.07,0:16:48.10,Default,Gillette,0,0,0,,我的部下也會很快抓住你們
+Dialogue: 0,0:16:48.10,0:16:53.58,Default,Gillette,0,0,0,,你們幫主這個小丫頭也不會有什麼好事的
+Dialogue: 0,0:16:54.27,0:16:55.12,Default,Toru,0,0,0,,沒事了吧
+Dialogue: 0,0:16:55.12,0:16:56.97,Default,Akari,0,0,0,,簡直像個小泥人啊
+Dialogue: 0,0:17:03.45,0:17:05.93,Default,Toru,0,0,0,,阿卡莉 你和嘉依卡一起去
+Dialogue: 0,0:17:05.93,0:17:06.85,Default,Akari,0,0,0,,知道了
+Dialogue: 0,0:17:14.02,0:17:14.69,Default,Nikolai,0,0,0,,隊長
+Dialogue: 0,0:17:14.69,0:17:16.55,Default,Gillette,0,0,0,,不用管我 抓住他們
+Dialogue: 0,0:17:17.40,0:17:19.43,Default,Nikolai,0,0,0,,這次你們逃不掉了
+Dialogue: 0,0:17:20.20,0:17:21.39,Default,Toru,0,0,0,,這可不好說哦
+Dialogue: 0,0:17:29.42,0:17:31.60,Default,Nikolai,0,0,0,,別放手啊 李奧納多
+Dialogue: 0,0:17:36.97,0:17:37.87,Default,Nikolai,0,0,0,,你這混蛋
+Dialogue: 0,0:17:37.87,0:17:39.91,Default,Toru,0,0,0,,活該啊
+Dialogue: 0,0:17:39.91,0:17:44.12,Default,Toru,0,0,0,,在我們拿到寶物之前你們就在泥沼裏好好玩吧
+Dialogue: 0,0:17:48.12,0:17:49.01,Default,Toru,0,0,0,,混蛋
+Dialogue: 0,0:17:49.01,0:17:50.17,Default,Nikolai,0,0,0,,放棄吧 完了
+Dialogue: 0,0:17:50.17,0:17:51.15,Default,Toru,0,0,0,,可惡
+Dialogue: 0,0:17:51.15,0:17:52.30,Default,Vivi,0,0,0,,基列特大人
+Dialogue: 0,0:17:52.30,0:17:54.34,Default,Gillette,0,0,0,,薇薇 你們去追嘉依卡
+Dialogue: 0,0:17:54.34,0:17:55.09,Default,Vivi,0,0,0,,是
+Dialogue: 0,0:17:55.47,0:17:57.26,Default,Girl,0,0,0,,薇薇來看這個
+Dialogue: 0,0:18:00.28,0:18:02.22,Default,Vivi,0,0,0,,哼 那些傻瓜
+Dialogue: 0,0:18:03.81,0:18:06.51,Default,Akari,0,0,0,,等下 嘉依卡 這樣不行
+Dialogue: 0,0:18:07.50,0:18:09.73,Default,Chaika,0,0,0,,追蹤線索 不可殘留
+Dialogue: 0,0:18:13.91,0:18:14.82,Default,Girl,0,0,0,,馬特烏斯先生
+Dialogue: 0,0:18:18.93,0:18:19.78,Default,Matheus,0,0,0,,這是…
+Dialogue: 0,0:18:20.15,0:18:22.10,Default,Vivi,0,0,0,,腳印只到這裏呢
+Dialogue: 0,0:18:22.10,0:18:23.58,Default,Vivi,0,0,0,,果然還是意識到了
+Dialogue: 0,0:18:23.58,0:18:25.30,Default,Girl,0,0,0,,走了哪一邊呢
+Dialogue: 0,0:18:25.30,0:18:26.70,Default,Matheus,0,0,0,,兵分兩路吧
+Dialogue: 0,0:18:26.70,0:18:30.21,Default,Vivi,0,0,0,,嗯 我和芷依塔從小路繞過去吧
+Dialogue: 0,0:18:30.21,0:18:31.04,Default,Matheus,0,0,0,,知道了
+Dialogue: 0,0:18:35.95,0:18:39.21,Default,Akari,0,0,0,,這個遺跡好像被水路包圍著的樣子
+Dialogue: 0,0:18:40.43,0:18:43.25,Default,Akari,0,0,0,,從這裏開始游泳去聖堂吧
+Dialogue: 0,0:18:43.25,0:18:44.08,Default,Chaika,0,0,0,,嗯
+Dialogue: 0,0:18:59.22,0:19:01.38,Default,Akari,0,0,0,,那傢伙我來處理
+Dialogue: 0,0:19:01.38,0:19:02.76,Default,Akari,0,0,0,,你先去聖堂吧
+Dialogue: 0,0:19:02.76,0:19:03.66,Default,Chaika,0,0,0,,嗯
+Dialogue: 0,0:19:24.26,0:19:25.01,Default,Matheus,0,0,0,,這是…
+Dialogue: 0,0:19:51.79,0:19:54.12,Default,Chaika,0,0,0,,聖堂 到達
+Dialogue: 0,0:19:54.12,0:19:56.67,Default,Chaika,0,0,0,,遺體 大概 再次
+Dialogue: 0,0:19:58.38,0:20:00.26,Default,Chaika,0,0,0,,你 果然 笨蛋
+Dialogue: 0,0:20:00.94,0:20:03.40,Default,Chaika,0,0,0,,帶路 辛苦了
+Dialogue: 0,0:20:03.40,0:20:04.97,Default,Chaika,0,0,0,,遺體 是我的
+Dialogue: 0,0:20:04.97,0:20:06.93,Default,Chaika,0,0,0,,我不會讓出遺體的
+Dialogue: 0,0:20:06.93,0:20:10.52,Default,Chaika,0,0,0,,沒有機會 你一個人什麼都做不到
+Dialogue: 0,0:20:15.15,0:20:18.40,Default,Vivi,0,0,0,,辛苦了 遺體已經由我們兩人回收了
+Dialogue: 0,0:20:18.92,0:20:21.19,Default,Vivi,0,0,0,,接下來只要抓住你們就可以了
+Dialogue: 0,0:20:21.19,0:20:22.32,Default,Vivi,0,0,0,,覺悟吧
+Dialogue: 0,0:20:38.39,0:20:39.30,Default,Chaika,0,0,0,,托魯
+Dialogue: 0,0:20:39.30,0:20:39.88,Default,Toru,0,0,0,,趕上了
+Dialogue: 0,0:20:40.47,0:20:42.13,Default,Nikolai,0,0,0,,這裏是…聖堂嗎
+Dialogue: 0,0:20:42.49,0:20:43.26,Default,Akari,0,0,0,,嘉依卡
+Dialogue: 0,0:20:43.26,0:20:44.57,Default,Chaika,0,0,0,,阿卡莉
+Dialogue: 0,0:20:44.57,0:20:47.64,Default,Girl,0,0,0,,誒 難道說在打架嗎
+Dialogue: 0,0:20:47.64,0:20:50.52,Default,Girl,0,0,0,,那樣的話讓我也加入就好了
+Dialogue: 0,0:20:51.96,0:20:53.44,Default,Girl,0,0,0,,給你這個 我帶來了
+Dialogue: 0,0:20:53.44,0:20:53.98,Default,Chaika,0,0,0,,感謝
+Dialogue: 0,0:20:54.38,0:20:55.56,Default,Gillette,0,0,0,,完了
+Dialogue: 0,0:20:56.22,0:20:56.56,Default,Toru,0,0,0,,嘉依卡
+Dialogue: 0,0:20:56.92,0:20:57.61,Default,Chaika,0,0,0,,嗯
+Dialogue: 0,0:20:58.29,0:21:00.17,Default,Chaika,0,0,0,,吾將紅蓮施捨予
+Dialogue: 0,0:21:00.17,0:21:01.82,Default,Chaika,0,0,0,,Whirl, 引來火焰吧flames!
+Dialogue: 0,0:21:01.82,0:21:03.36,Default,Chaika,0,0,0,,<燃烧者>
+Dialogue: 0,0:21:07.31,0:21:08.14,Default,Nikolai,0,0,0,,逃走了
+Dialogue: 0,0:21:08.14,0:21:10.33,Default,Girl,0,0,0,,隊長！那些傢伙…
+Dialogue: 0,0:21:10.33,0:21:13.62,Default,Nikolai,0,0,0,,隊長…
+Dialogue: 0,0:21:15.66,0:21:20.17,Default,Zita,0,0,0,,不行了 不行了
+Dialogue: 0,0:21:20.70,0:21:23.30,Default,Vivi,0,0,0,,那些傢伙 絕對饒不了他們
+Dialogue: 0,0:21:23.67,0:21:26.76,Default,Zita,0,0,0,,對不起…
+Dialogue: 0,0:21:27.93,0:21:32.22,Default,Chaika,0,0,0,,我 發誓 遺體 奪回
+Dialogue: 0,0:21:32.81,0:21:35.81,Default,Chaika,0,0,0,,必定 復仇 宿命
+Dialogue: 0,0:21:37.83,0:21:38.96,Default,Chaika,0,0,0,,遺體
+Dialogue: 0,0:21:38.96,0:21:39.81,Default,Toru,0,0,0,,這是
+Dialogue: 0,0:21:40.10,0:21:41.96,Default,Chaika,0,0,0,,奇眼鳥
+Dialogue: 0,0:21:41.96,0:21:44.74,Default,Akari,0,0,0,,兄長大人 剛剛我忘記說了
+Dialogue: 0,0:21:45.25,0:21:49.01,Default,Akari,0,0,0,,這個遺跡好像有何奇眼鳥一同生活的人馬
+Dialogue: 0,0:21:49.01,0:21:50.01,Default,Toru,0,0,0,,這樣啊
+Dialogue: 0,0:21:50.01,0:21:53.09,Default,Toru,0,0,0,,所有這裏會有奇眼鳥的宮殿
+Dialogue: 0,0:21:53.09,0:21:54.45,Default,Toru,0,0,0,,原來如此
+Dialogue: 0,0:21:58.89,0:22:02.63,Default,Chaika,0,0,0,,遺跡起火 我深刻反省
+Dialogue: 0,0:22:06.26,0:22:07.80,Default,Toru,0,0,0,,與你無關啦
+Dialogue: 1,0:01:45.08,0:01:48.53,Title,Title,0,0,0,L1,{=1}被盯上的棺材
+

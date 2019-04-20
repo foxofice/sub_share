@@ -5,23 +5,28 @@
 <img src="doc/01.png" />
 
 Subtitles DataBase 有几处需要说明的地方：
-`更新数据库`：根据本地数据生成数据库（主要给字幕上传者使用）
 
-`高级查找`：使用各种条件搜索
-<img src="doc/02.png" />
+   `更新数据库`：根据本地数据生成数据库（主要给字幕上传者使用）
 
-`查询语句`：使用类似 SQL 的语法进行查询
+   `高级查找`：使用各种条件搜索
 
-比如 `[time] >= '2010.1.1' and [time] <= '2011.1.1' and [extension] like '%srt%'`
+      <img src="doc/02.png" />
 
-如果不熟悉 SQL 的用户，可以使用「高级查找」界面，效果差不多
-<img src="doc/03.png" />
+   `查询语句`：使用类似 SQL 的语法进行查询
+
+      比如 `[time] >= '2010.1.1' and [time] <= '2011.1.1' and [extension] like '%srt%'`
+
+      如果不熟悉 SQL 的用户，可以使用「高级查找」界面，效果差不多
+
+      <img src="doc/03.png" />
 
 **如果你是收藏党，打算下载所有字幕到本地计算机，可以：**
-你可以检出我们的整个git仓库（包含「Subtitles DataBase」工具及源代码、仓库中的所有字幕文件）
+
+   你可以检出我们的整个git仓库（包含「Subtitles DataBase」工具及源代码、仓库中的所有字幕文件）
 
 **如果你只是追番党，不打算下载所有字幕文件到本地计算机，可以：**
-只下载`Subtitles DataBase`工具（不到1M），选定需要的记录后，点击顶部菜单的`打开远程链接`就会在网站上显示你需要的结果
+
+   只下载`Subtitles DataBase`工具（不到1M），选定需要的记录后，点击顶部菜单的`打开远程链接`就会在网站上显示你需要的结果
 <hr />
 
 【格式】
@@ -29,22 +34,28 @@ Subtitles DataBase 有几处需要说明的地方：
 提交字幕一般的格式如下（也可以直接参考git仓库中已提交的字幕）：
 
 **影片说明文件（可忽略，但不建议忽略）**
+
 `sub_list/<type>/<year>/(<date>)<name>/info.txt`
 
 例如：
-subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte
+
+   subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte
 
 **字幕文件**
-`sub_list/<type>/<year>/(<date>)<name>/<source>/<sub_name>/<字幕文件>`
+
+   `sub_list/<type>/<year>/(<date>)<name>/<source>/<sub_name>/<字幕文件>`
 
 例如：
-subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Charlotte 夏洛特][简繁日双语字幕][01-13][TVrip][1080P]/[kamigami] Charlotte - 01 [1920×1080 x264 AAC Sub(Chs,Cht,Jap)].Chs-Jap.ass
+
+   subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Charlotte 夏洛特][简繁日双语字幕][01-13][TVrip][1080P]/[kamigami] Charlotte - 01 [1920×1080 x264 AAC Sub(Chs,Cht,Jap)].Chs-Jap.ass
 
 **字幕补充说明（可忽略，用途添加字幕提供者/字幕组、字幕说明等）**
-`sub_list/<type>/<year>/(<date>)<name>/<source>/<sub_name>.txt`
+
+   `sub_list/<type>/<year>/(<date>)<name>/<source>/<sub_name>.txt`
 
 例如：
-subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Charlotte 夏洛特][简繁日双语字幕][01-13][TVrip][1080P].txt
+
+   subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Charlotte 夏洛特][简繁日双语字幕][01-13][TVrip][1080P].txt
 
 `<type>` 分类（例如：animation、movie 等，可自定添加。animation 表示动画。那么问题来了，里番的英文是什么呢？也欢迎大家提交里番字幕）
 
@@ -59,13 +70,14 @@ subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Char
 `<sub_name>` 一整套字幕的名称
 
 `<字幕文件>` 例如 01.ass
-                                                                                                     |
 
 最简单的例子可以参考：
-`subs_list/animation/2003/(2003.10.4)暗与帽子与书之旅人`
+
+   `subs_list/animation/2003/(2003.10.4)暗与帽子与书之旅人`
 
 有个复杂的例子（包括 info.txt、各种字幕说明），可以参考：
-`subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte`
+
+   `subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte`
 
 **为了多语言兼容性，提交的所有文本格式的文件，请尽量使用 `UTF8` 编码**
 <hr />

@@ -1,0 +1,109 @@
+# VobSub index file, v7 (do not modify this line!)
+# 
+# To repair desyncronization, you can insert gaps this way:
+# (it usually happens after vob id changes)
+# 
+#	 delay: [sign]hh:mm:ss:ms
+# 
+# Where:
+#	 [sign]: +, - (optional)
+#	 hh: hours (0 <= hh)
+#	 mm/ss: minutes/seconds (0 <= mm/ss <= 59)
+#	 ms: milliseconds (0 <= ms <= 999)
+# 
+#	 Note: You can't position a sub before the previous with a negative value.
+# 
+# You can also modify timestamps or delete a few subs you don't like.
+# Just make sure they stay in increasing order.
+
+
+# Settings
+
+# Original frame size
+size: 720x480
+
+# Origin, relative to the upper-left corner, can be overloaded by aligment
+org: 0, 0
+
+# Image scaling (hor,ver), origin is at the upper-left corner or at the alignment coord (x, y)
+scale: 100%, 100%
+
+# Alpha blending
+alpha: 100%
+
+# Smoothing for very blocky images (use OLD for no filtering)
+smooth: OFF
+
+# In millisecs
+fadein/out: 50, 50
+
+# Force subtitle placement relative to (org.x, org.y)
+align: OFF at LEFT TOP
+
+# For correcting non-progressive desync. (in millisecs or hh:mm:ss:ms)
+# Note: Not effective in DirectVobSub, use "delay: ... " instead.
+time offset: 0
+
+# ON: displays only forced subtitles, OFF: shows everything
+forced subs: OFF
+
+# The original palette of the DVD
+palette: 0000e1, e83f07, 000000, fdfdfd, 11eb10, ea12eb, faff1a, 095d76, 7c7c7c, e0e0e0, 701f03, 077307, 00006c, cc0ae9, d2ab0f, 7c8a43
+
+# Custom colors (transp idxs and the four colors)
+custom colors: OFF, tridx: 0010, colors: 56df48, 56df30, 56dee4, 56df10
+
+# Language index in use
+langidx: 0
+
+# Chinese
+id: zh, index: 0
+# Decomment next line to activate alternative name in DirectVobSub / Windows Media Player 6.x
+# alt: Chinese
+# Vob/Cell ID: 3, 1 (PTS: 0)
+timestamp: 00:00:01:200, filepos: 000000000
+timestamp: 00:00:08:307, filepos: 000001000
+timestamp: 00:00:10:243, filepos: 000002000
+timestamp: 00:00:12:912, filepos: 000003000
+timestamp: 00:00:14:747, filepos: 000004000
+timestamp: 00:00:15:948, filepos: 000004800
+timestamp: 00:00:17:850, filepos: 000005000
+timestamp: 00:00:19:886, filepos: 000005800
+timestamp: 00:00:20:820, filepos: 000006800
+timestamp: 00:00:23:623, filepos: 000008000
+timestamp: 00:00:27:894, filepos: 000009000
+timestamp: 00:00:31:163, filepos: 000009800
+timestamp: 00:00:34:634, filepos: 00000b000
+timestamp: 00:00:36:569, filepos: 00000c000
+timestamp: 00:00:39:405, filepos: 00000d000
+timestamp: 00:00:43:809, filepos: 00000e000
+timestamp: 00:00:46:846, filepos: 00000f000
+timestamp: 00:00:49:882, filepos: 000010000
+timestamp: 00:00:53:219, filepos: 000011000
+timestamp: 00:00:58:090, filepos: 000011800
+timestamp: 00:01:02:528, filepos: 000013000
+# Vob/Cell ID: 3, 2 (PTS: 66566)
+timestamp: 00:01:07:400, filepos: 000014000
+timestamp: 00:01:13:072, filepos: 000015000
+timestamp: 00:01:15:942, filepos: 000016800
+timestamp: 00:01:24:183, filepos: 000018000
+# Vob/Cell ID: 3, 3 (PTS: 88588)
+timestamp: 00:01:29:288, filepos: 000019800
+timestamp: 00:01:35:127, filepos: 00001a800
+timestamp: 00:01:36:228, filepos: 00001c000
+timestamp: 00:01:38:864, filepos: 00001d000
+timestamp: 00:01:41:233, filepos: 00001e800
+timestamp: 00:01:44:804, filepos: 00001f800
+timestamp: 00:01:51:143, filepos: 000021000
+timestamp: 00:01:52:545, filepos: 000022000
+timestamp: 00:01:55:247, filepos: 000023800
+timestamp: 00:01:59:619, filepos: 000025000
+# Vob/Cell ID: 3, 4 (PTS: 125625)
+timestamp: 00:02:06:258, filepos: 000026800
+timestamp: 00:02:12:665, filepos: 000027800
+timestamp: 00:02:16:902, filepos: 000029000
+timestamp: 00:02:18:204, filepos: 00002a800
+timestamp: 00:02:19:805, filepos: 00002c000
+timestamp: 00:02:20:606, filepos: 00002d800
+timestamp: 00:02:22:274, filepos: 00002e800
+

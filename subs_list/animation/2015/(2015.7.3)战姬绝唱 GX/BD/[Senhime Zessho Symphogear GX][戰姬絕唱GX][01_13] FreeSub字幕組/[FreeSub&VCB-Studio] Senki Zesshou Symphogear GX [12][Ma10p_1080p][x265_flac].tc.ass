@@ -1,0 +1,499 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: FreeSub
+Original Script: 
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+Synch Point: 
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: 屏幕镶字-1,FZXiaoBiaoSong-B05,45,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,23,1
+Style: 屏幕镶字-2,FZSong III-Z05,72,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,3,3,2,5,10,10,10,1
+Style: 屏幕镶字-3,FZMM,100,&H001F2723,&H000000FF,&H00B1E8CF,&H00000000,-1,0,0,0,100,100,0,-12,1,60,0,2,10,10,10,1
+Style: 屏幕镶字-4,Hiragino Sans GB W3,50,&H005E5E5E,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,3,3,0,3,15,15,15,1
+Style: 屏幕镶字-5,HYChaoCuYuanJ,120,&H0032343B,&H000000FF,&H00678BAC,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,15,15,15,1
+Style: 屏幕镶字-6,HYChaoCuYuanJ,120,&H0009111C,&H000000FF,&H0031527F,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,15,15,15,1
+Style: Default,FZZhunYuan-M02,45,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: ED-Bayonet_Charge-Chris-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H003D2DD8,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,3,10,10,10,1
+Style: ED-Bayonet_Charge-Chris-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H003D2DD8,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: ED-Bayonet_Charge-Tsubasa-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00CC5F56,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,3,10,10,10,1
+Style: ED-Bayonet_Charge-Tsubasa-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00CC5F56,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: ED-Glorious_Break-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00999999,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,3,10,10,10,1
+Style: ED-Glorious_Break-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00999999,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: ED-Rebirth_Day-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H003D2DD8,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,3,10,10,10,1
+Style: ED-Rebirth_Day-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H003D2DD8,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: End-Rainbow-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00999999,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,3,10,10,10,1
+Style: End-Rainbow-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00999999,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: EPtitle,FZDaBiaoSong-B06,50,&H00FFFFFF,&H000000FF,&H53313131,&H00000000,0,0,0,0,100,100,0,0,1,1,1,7,10,10,6,1
+Style: In-Char-Hibiki-CH-Left,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00729CF1,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,7,10,10,10,1
+Style: In-Char-Hibiki-CH-Right,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00729CF1,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,9,10,10,10,1
+Style: In-Char-Hibiki-JP-Left,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00729CF1,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Char-Hibiki-JP-Right,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00729CF1,&H00000000,0,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Char-IGNITE-Hibiki-CH-Left,FZXiaoBiaoSong-B05,40,&H19729CF1,&H000000FF,&H00060930,&H50000000,-1,0,0,0,100,100,1,0,1,2,2,7,10,10,10,1
+Style: In-Char-IGNITE-Hibiki-JP-Left,EPSON Mincho Bold,35,&H00729CF1,&H000000FF,&H00060930,&H00000000,0,0,0,0,100,100,0,0,1,2,2,7,10,10,10,1
+Style: In-Char-IGNITE-Chris-CH-Left,FZXiaoBiaoSong-B05,40,&H193D2DD8,&H000000FF,&H00060930,&H50000000,-1,0,0,0,100,100,1,0,1,2,2,7,10,10,10,1
+Style: In-Char-IGNITE-Chris-JP-Left,EPSON Mincho Bold,35,&H003D2DD8,&H000000FF,&H00060930,&H00000000,0,0,0,0,100,100,0,0,1,2,2,7,10,10,10,1
+Style: In-Char-IGNITE-Maria-CH-Right,FZXiaoBiaoSong-B05,40,&H19B1ADE7,&H000000FF,&H00060930,&H50000000,-1,0,0,0,100,100,1,0,1,2,2,9,10,10,10,1
+Style: In-Char-IGNITE-Maria-JP-Right,EPSON Mincho Bold,35,&H00B1ADE7,&H000000FF,&H00060930,&H00000000,0,0,0,0,100,100,0,0,1,2,2,9,10,10,10,1
+Style: In-Char-IGNITE-Tsubasa-CH,FZXiaoBiaoSong-B05,40,&H19CC5F56,&H000000FF,&H00060930,&H50000000,-1,0,0,0,100,100,1,0,1,2,2,9,10,10,10,1
+Style: In-Char-IGNITE-Tsubasa-JP,EPSON Mincho Bold,35,&H00CC5F56,&H000000FF,&H00060930,&H00000000,0,0,0,0,100,100,0,0,1,2,2,9,10,10,10,1
+Style: In-Char-Kirika-CH-Left,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00649C54,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,7,10,10,10,1
+Style: In-Char-Kirika-JP-Left,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00649C54,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Char-Chris-CH-Left,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H003D2DD8,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,7,10,10,10,1
+Style: In-Char-Chris-JP-Left,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H003D2DD8,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Char-Kyaroru-CH-Right,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H004D206D,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,9,10,10,10,1
+Style: In-Char-Kyaroru-JP-Right,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H004D206D,&H00000000,0,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Char-Maria-CH-Right,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00B1ADE7,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,9,10,10,10,1
+Style: In-Char-Maria-JP-Right,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00B1ADE7,&H00000000,0,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Char-Shirabe-CH-Left,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H007F00FF,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,7,10,10,10,1
+Style: In-Char-Shirabe-JP-Left,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H007F00FF,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Char-Tsubasa-CH-Right,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00CC5F56,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,9,10,10,10,1
+Style: In-Char-Tsubasa-JP-Right,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00CC5F56,&H00000000,0,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Exterminate-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00646464,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,7,10,10,10,1
+Style: In-Exterminate-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00646464,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: In-Glorious_Break-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00646464,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,7,10,10,10,1
+Style: In-Glorious_Break-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00646464,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: In-Unison-Bayonet_Charge-Chris-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H003D2DD8,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,9,10,10,10,1
+Style: In-Unison-Bayonet_Charge-Chris-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H003D2DD8,&H00000000,0,0,0,0,100,100,0,0,1,3,0,9,10,10,10,1
+Style: In-Unison-Bayonet_Charge-Tsubasa-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00CC5F56,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,7,10,10,10,1
+Style: In-Unison-Bayonet_Charge-Tsubasa-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00CC5F56,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: In-Unison-Beef-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00EE68C4,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,9,10,10,10,1
+Style: In-Unison-Beef-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00EE68C4,&H00000000,0,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Unison-FIS-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00008FC4,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,9,10,10,10,1
+Style: In-Unison-FIS-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00008FC4,&H00000000,0,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Unison-Haijimari-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00999999,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,7,10,10,10,1
+Style: In-Unison-Haijimari-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00999999,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Unison-IGNITE-Just_loving-Kirika-CH,FZXiaoBiaoSong-B05,35,&H19649C54,&H000000FF,&H00060930,&H50000000,-1,0,0,0,100,100,0,0,1,2,2,9,10,10,10,1
+Style: In-Unison-IGNITE-Just_loving-Kirika-JP,EPSON Mincho Bold,30,&H00649C54,&H000000FF,&H00060930,&H00000000,0,0,0,0,100,100,0,0,1,2,2,9,10,10,10,1
+Style: In-Unison-IGNITE-Just_loving-Shirabe-CH,FZXiaoBiaoSong-B05,35,&H197F00FF,&H000000FF,&H00060930,&H50000000,-1,0,0,0,100,100,0,0,1,2,2,7,10,10,10,1
+Style: In-Unison-IGNITE-Just_loving-Shirabe-JP,EPSON Mincho Bold,30,&H007F00FF,&H000000FF,&H00060930,&H00000000,0,0,0,0,100,100,0,0,1,2,2,7,10,10,10,1
+Style: In-Unison-IGNITE-Radiant_Force-CH,FZXiaoBiaoSong-B05,40,&H19FF00EC,&H000000FF,&H00060930,&H50000000,-1,0,0,0,100,100,1,0,1,2,2,9,10,10,10,1
+Style: In-Unison-IGNITE-Radiant_Force-JP,EPSON Mincho Bold,35,&H00FF00EC,&H000000FF,&H00060930,&H00000000,0,0,0,0,100,100,0,0,1,2,2,9,10,10,10,1
+Style: In-Unison-Just_loving-Kirika-CH,FZXiaoBiaoSong-B05,35,&H19FFFFFF,&H000000FF,&H00649C54,&H50000000,-1,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Unison-Just_loving-Kirika-JP,EPSON Mincho Bold,30,&H00FFFFFF,&H000000FF,&H00649C54,&H00000000,0,0,0,0,100,100,0,0,1,2,1,9,10,10,10,1
+Style: In-Unison-Just_loving-Shirabe-CH,FZXiaoBiaoSong-B05,35,&H19FFFFFF,&H000000FF,&H007F00FF,&H50000000,-1,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Unison-Just_loving-Shirabe-JP,EPSON Mincho Bold,30,&H00FFFFFF,&H000000FF,&H007F00FF,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Unison-Live-CH,FZXiaoBiaoSong-B05,40,&H19AEAEDB,&H000000FF,&H00CC5F56,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,3,10,10,10,1
+Style: In-Unison-Live-JP,EPSON Mincho Bold,35,&H00B1ADE7,&H000000FF,&H00CC5F56,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: In-Unison-Radiant_Force-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00FF00EC,&H50000000,-1,0,0,0,100,100,1,0,1,2,1,7,10,10,10,1
+Style: In-Unison-Radiant_Force-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00FF00EC,&H00000000,0,0,0,0,100,100,0,0,1,2,1,7,10,10,10,1
+Style: OP-Exterminate-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00CC5F56,&H50000000,-1,0,0,0,100,100,1,0,1,2,2,1,10,10,10,1
+Style: OP-Exterminate-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H00E4AAA3,&H00CC5F56,&H00000000,0,0,0,0,100,100,0,0,1,2,2,9,10,10,10,1
+Style: OP-Rebirth_Day-CH,FZXiaoBiaoSong-B05,40,&H19FFFFFF,&H000000FF,&H00646464,&H50000000,-1,0,0,0,100,100,1,0,1,3,0,7,10,10,10,1
+Style: OP-Rebirth_Day-JP,EPSON Mincho Bold,35,&H00FFFFFF,&H000000FF,&H00646464,&H00000000,0,0,0,0,100,100,0,0,1,3,0,7,10,10,10,1
+Style: Seiei-Hibiki,Latin Runes v.2.0,50,&H00FFFFFF,&H000000FF,&H00729CF1,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Seiei-Kirika,Cuneiforme,45,&H00FFFFFF,&H000000FF,&H00649C54,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Seiei-Chris,Latin Runes v.2.0,50,&H00FFFFFF,&H000000FF,&H003D2DD8,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Seiei-Maria,P22 Kells Square,45,&H00FFFFFF,&H000000FF,&H00B1ADE7,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Seiei-Shirabe,Cuneiforme,45,&H00FFFFFF,&H000000FF,&H007F00FF,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Seiei-Tsubasa,Electroharmonix,45,&H00FFFFFF,&H000000FF,&H00CC5F56,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Staff,FZDaBiaoSong-B06,45,&H19FFFFFF,&H000000FF,&H00000000,&H50000000,-1,0,0,0,100,100,0,0,1,2,0,8,10,10,10,1
+Style: uppernote,MFRooneySans-Medium,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: Zesshou-All,Gill Sans Nova SemiBold,45,&H00FFFFFF,&H000000FF,&H00999999,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Zesshou-FIS,Gill Sans Nova SemiBold,45,&H00FFFFFF,&H000000FF,&H00008FC4,&H00000000,0,0,0,0,100,100,0,0,1,4,0,8,10,10,10,1
+Style: Tip,FZZhunYuan-M02,35,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,1,0,7,15,15,15,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:11.60,0:00:14.22,Default,,0,0,0,,毀滅世界之歌是存在的
+Dialogue: 0,0:00:31.82,0:00:32.45,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}MUM
+Dialogue: 0,0:00:33.44,0:00:34.64,Default,,0,0,0,,請快想起來吧
+Dialogue: 0,0:00:35.48,0:00:37.59,Default,,0,0,0,,你那沾滿鮮血的手
+Dialogue: 0,0:00:38.37,0:00:42.10,Default,,0,0,0,,為什麼你會妄想憑著你那雙手拯救世界呢
+Dialogue: 0,0:00:42.84,0:00:44.99,Default,,0,0,0,,即使如此 我
+Dialogue: 0,0:00:45.51,0:00:49.36,Default,,0,0,0,,沒錯 你祈願拯救世界
+Dialogue: 0,0:00:49.83,0:00:51.73,Default,,0,0,0,,只是因為你想拯救自己
+Dialogue: 0,0:00:53.02,0:00:55.31,Default,,0,0,0,,瑪利亞 那不是{\fnMFRooneySans-Medium\fs54\b0} MUM
+Dialogue: 0,0:00:55.48,0:00:59.03,Default,,0,0,0,,我們知道{\fnMFRooneySans-Medium\fs54\b0} MUM {\r\be5}此刻正沉睡在某地
+Dialogue: 0,0:00:59.38,0:01:00.74,Default,,0,0,0,,在這城堡裡的一定是…
+Dialogue: 0,0:01:01.13,0:01:02.46,Default,,0,0,0,,那種事我是知道的
+Dialogue: 0,0:01:03.12,0:01:04.35,Default,,0,0,0,,那是冒牌的{\fnMFRooneySans-Medium\fs54\b0} MUM
+Dialogue: 0,0:01:05.06,0:01:07.62,Default,,0,0,0,,可是 她所說的是事實啊
+Dialogue: 0,0:01:08.51,0:01:10.25,Default,,0,0,0,,你想要被救贖吧
+Dialogue: 0,0:01:10.78,0:01:13.34,Default,,0,0,0,,從過於耀眼的銀色光輝之中
+Dialogue: 0,0:01:19.65,0:01:21.35,Default,,0,0,0,,小切 瑪利亞 快走
+Dialogue: 0,0:01:21.81,0:01:23.08,Default,,0,0,0,,到底怎麼了
+Dialogue: 0,0:01:23.17,0:01:26.31,Default,,0,0,0,,不清楚 但現在我只能這麼做
+Dialogue: 0,0:01:26.95,0:01:29.88,Default,,0,0,0,,實在實在是太像陷阱了
+Dialogue: 0,0:01:31.57,0:01:33.53,Staff,,0,0,0,,{\fad(460,460)}本字幕由{\fs55}自由字幕組{\fs45}製作
+Dialogue: 0,0:01:33.53,0:01:35.49,Staff,,0,0,0,,{\fad(460,460)}翻譯：小靜 哈米  校對：哈米  時間軸：YUI 鏡黑  後期：小黑
+Dialogue: 0,0:01:38.69,0:01:41.07,Default,,0,0,0,,世界的分解現象 依然在擴大
+Dialogue: 0,0:01:41.37,0:01:43.18,Default,,0,0,0,,不久將會抵達市區
+Dialogue: 0,0:01:45.11,0:01:48.40,Default,,0,0,0,,這就是 計劃的最終階段
+Dialogue: 0,0:01:52.27,0:01:53.92,Default,,0,0,0,,你受了這麼重的傷啊
+Dialogue: 0,0:01:55.30,0:01:57.78,Default,,0,0,0,,阻止卡羅爾是我的戰鬥
+Dialogue: 0,0:01:58.55,0:02:00.48,Default,,0,0,0,,我必須送她最後一程
+Dialogue: 0,0:02:06.36,0:02:09.14,Default,,0,0,0,,為什麼區區鍊金術師竟然在唱歌
+Dialogue: 0,0:02:10.36,0:02:13.16,Default,,0,0,0,,七個行星七個音階
+Dialogue: 0,0:02:13.45,0:02:18.12,Default,,0,0,0,,鍊金術師深奧的宇宙調和則是音樂的調和
+Dialogue: 0,0:02:18.85,0:02:21.49,Default,,0,0,0,,領會自和聲的絕對真理
+Dialogue: 0,0:02:21.92,0:02:22.87,Default,,0,0,0,,什麼意思
+Dialogue: 0,0:02:23.15,0:02:25.52,Default,,0,0,0,,我說既然其誕生的根源相同
+Dialogue: 0,0:02:25.93,0:02:28.20,Default,,0,0,0,,那就沒什麼可大驚小怪的
+Dialogue: 0,0:02:30.01,0:02:36.70,Default,,0,0,0,,在史前文明時期 為了克服巴別塔詛咒所引發的相互理解的不完善
+Dialogue: 0,0:02:37.02,0:02:40.06,Default,,0,0,0,,人類尋求著全新的手段
+Dialogue: 0,0:02:40.81,0:02:46.03,Default,,0,0,0,,若說通過熟知萬象而同世界調和的是鍊金術
+Dialogue: 0,0:02:46.62,0:02:50.42,Default,,0,0,0,,試著超越語言 連接整個世界的就是
+Dialogue: 0,0:02:50.85,0:02:51.48,Default,,0,0,0,,歌聲
+Dialogue: 0,0:02:52.07,0:02:58.06,Default,,0,0,0,,鍊金術和歌聲都是為了恢復失去統一的語言而創造出來的
+Dialogue: 0,0:02:59.00,0:02:59.69,Default,,0,0,0,,怎麼會
+Dialogue: 0,0:03:00.32,0:03:02.81,Default,,0,0,0,,雖然起源並沒有明確
+Dialogue: 0,0:03:03.18,0:03:06.00,Default,,0,0,0,,不過憑你們幾個應該也很容易就能推測出來吧
+Dialogue: 0,0:03:08.92,0:03:12.66,Default,,0,0,0,,這種時候 就算耍手段也不奇怪
+Dialogue: 0,0:03:14.36,0:03:15.80,Default,,0,0,0,,陷阱中的陷阱
+Dialogue: 0,0:03:16.36,0:03:19.37,Default,,0,0,0,,莫非 誘導著我們的正是
+Dialogue: 0,0:03:19.80,0:03:21.38,Default,,0,0,0,,威爾博士
+Dialogue: 0,0:03:22.04,0:03:23.96,Default,,0,0,0,,正如各位所見
+Dialogue: 0,0:03:24.62,0:03:30.84,Default,,0,0,0,,失血過多導致無法隨心所欲完全掌握城堡的機能令我頭痛不已
+Dialogue: 0,0:03:30.91,0:03:34.40,Default,,0,0,0,,接下來 在戰場上跟我來一場交易吧
+Dialogue: 0,0:03:40.45,0:03:42.35,Default,,0,0,0,,鏡之城的控制裝置
+Dialogue: 0,0:03:42.97,0:03:44.91,Default,,0,0,0,,也就是說 只要破壞這個的話
+Dialogue: 0,0:03:45.25,0:03:48.76,Default,,0,0,0,,你的腦迴路到底是幾世紀前的
+Dialogue: 0,0:03:48.84,0:03:52.08,Default,,0,0,0,,那樣做只會導致失去控制的
+Dialogue: 0,0:03:52.33,0:03:53.54,Default,,0,0,0,,那該怎麼辦
+Dialogue: 0,0:03:59.97,0:04:02.24,Default,,0,0,0,,在你們磨磨唧唧的時候
+Dialogue: 0,0:04:02.58,0:04:07.50,Default,,0,0,0,,也別忘了世界還在繼續分解著啊
+Dialogue: 0,0:04:12.22,0:04:15.25,Default,,0,0,0,,歌聲 歌聲會毀滅世界什麼的
+Dialogue: 0,0:04:15.91,0:04:20.49,Default,,0,0,0,,東京的中心即是遍布的{\fnMFRooneySans-Medium\fs54\b0} Ley Line {\r\be5}的終點
+Dialogue: 0,0:04:21.12,0:04:22.51,Default,,0,0,0,,反過來想一想
+Dialogue: 0,0:04:22.78,0:04:27.49,Default,,0,0,0,,以此處為起點 向全世界傳播歌聲也是可行的
+Dialogue: 0,0:04:27.93,0:04:31.25,Default,,0,0,0,,正是為此 才破壞各地作為安全裝置的要石
+Dialogue: 0,0:04:31.70,0:04:33.51,Default,,0,0,0,,已經無計可施了嗎
+Dialogue: 0,0:04:35.31,0:04:36.52,Default,,0,0,0,,絕不會無計可施
+Dialogue: 0,0:04:38.10,0:04:39.85,Default,,0,0,0,,就算用盡萬種方法
+Dialogue: 0,0:04:40.56,0:04:44.05,Default,,0,0,0,,也總會有第一萬零一種方法來解決
+Dialogue: 0,0:04:46.94,0:04:47.72,Default,,0,0,0,,瑪利亞小姐
+Dialogue: 0,0:04:55.65,0:04:57.77,Default,,0,0,0,,趁我們擋住的時候
+Dialogue: 0,0:04:58.13,0:04:59.65,Default,,0,0,0,,迅速解決吧
+Dialogue: 0,0:04:59.86,0:05:03.15,Default,,0,0,0,,我不是說了因為失血過多而堅持不了嗎
+Dialogue: 0,0:05:03.36,0:05:05.34,Default,,0,0,0,,小孩子的話語總是那麼任性
+Dialogue: 0,0:05:07.49,0:05:10.79,Default,,0,0,0,,原來你還活著啊 威爾博士 你在幹什麼
+Dialogue: 0,0:05:11.18,0:05:14.52,Default,,0,0,0,,在更改城堡的程序
+Dialogue: 0,0:05:14.84,0:05:19.53,Default,,0,0,0,,鍊金術的工程是分解和解析 然後
+Dialogue: 0,0:05:20.80,0:05:25.55,Default,,0,0,0,,莫非你想要反轉機能 再構築被分解的世界嗎
+Dialogue: 0,0:05:26.13,0:05:30.36,Default,,0,0,0,,怎麼可能 城堡的構造怎麼可能承受得住那種運用呢
+Dialogue: 0,0:05:30.72,0:05:32.70,Default,,0,0,0,,會把你們統統吞噬掉
+Dialogue: 0,0:05:32.93,0:05:35.10,Default,,0,0,0,,沒錯 爆炸
+Dialogue: 0,0:05:36.52,0:05:39.48,Default,,0,0,0,,無論哪種結果分解都是阻止得了的
+Dialogue: 0,0:05:40.38,0:05:43.87,Default,,0,0,0,,能讓你討厭實在是太棒了
+Dialogue: 0,0:05:48.10,0:05:49.14,Default,,0,0,0,,威爾博士
+Dialogue: 0,0:05:55.65,0:05:56.14,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}MUM
+Dialogue: 0,0:06:00.86,0:06:03.10,Default,,0,0,0,,世界的分解不會停止
+Dialogue: 0,0:06:03.50,0:06:05.86,Default,,0,0,0,,豈能因為小事化為泡影
+Dialogue: 0,0:06:06.19,0:06:09.01,Default,,0,0,0,,我一定會阻止的 借助艾爾芙娜茵的意念
+Dialogue: 0,0:06:09.31,0:06:09.90,Default,,0,0,0,,快住手
+Dialogue: 0,0:06:10.33,0:06:13.86,Default,,0,0,0,,啟動{\fnMFRooneySans-Medium\fs54\b0} IGNITE {\r\be5}模組 恐怕會被卡羅爾所利用
+Dialogue: 0,0:06:22.42,0:06:26.43,Default,,0,0,0,,粗大的致命一擊 就讓我來深深插入
+Dialogue: 0,0:06:29.56,0:06:31.37,Default,,0,0,0,,你才不是什麼{\fnMFRooneySans-Medium\fs54\b0} MUM {\r\be5}呢
+Dialogue: 0,0:06:46.77,0:06:51.07,Default,,0,0,0,,我是菲尼 沒錯 擁有終結之名的人
+Dialogue: 0,0:06:53.13,0:06:55.82,Default,,0,0,0,,原來如此 你就是我
+Dialogue: 0,0:06:56.78,0:07:00.44,Default,,0,0,0,,在錯誤的道路上走到盡頭的 我們的結局
+Dialogue: 0,0:07:00.81,0:07:04.33,Default,,0,0,0,,可是 黑歷史就是用來抹消的
+Dialogue: 0,0:07:04.99,0:07:09.82,Default,,0,0,0,,在城堡爆炸之前 讓我們戰勝這份罪孽逃脫吧
+Dialogue: 0,0:07:28.91,0:07:29.77,Default,,0,0,0,,瑪利亞小姐
+Dialogue: 0,0:07:30.04,0:07:32.82,Default,,0,0,0,,能不能把通信器交給威爾博士
+Dialogue: 0,0:07:33.10,0:07:33.60,Default,,0,0,0,,什麼
+Dialogue: 0,0:07:34.52,0:07:36.14,Default,,0,0,0,,我要透過自己的方式去戰鬥
+Dialogue: 0,0:07:36.92,0:07:37.52,Default,,0,0,0,,博士
+Dialogue: 0,0:07:39.37,0:07:43.28,Default,,0,0,0,,請把這個終端連上城堡 我來支援你
+Dialogue: 0,0:07:43.28,0:07:46.36,Default,,0,0,0,,真令人心動 不過能做到嗎
+Dialogue: 0,0:07:48.08,0:07:49.98,Default,,0,0,0,,是嗎 利用光球
+Dialogue: 0,0:07:50.55,0:07:52.83,Default,,0,0,0,,只要將{\fnMFRooneySans-Medium\fs54\b0} Ley Line {\r\be5}的模型數據還原
+Dialogue: 0,0:07:53.20,0:07:53.98,Default,,0,0,0,,從這裡也可以
+Dialogue: 0,0:07:54.42,0:07:54.95,Default,,0,0,0,,藤堯
+Dialogue: 0,0:07:55.46,0:07:57.30,Default,,0,0,0,,納茲塔夏教授的遺物
+Dialogue: 0,0:07:57.68,0:07:59.61,Default,,0,0,0,,只是一味被他們利用的話還真是讓人不甘心呢
+Dialogue: 0,0:08:00.09,0:08:01.33,Default,,0,0,0,,一定要反擊回去
+Dialogue: 0,0:08:01.60,0:08:05.09,Default,,0,0,0,,演算工作就由我來接管 抑制負荷
+Dialogue: 0,0:08:05.43,0:08:09.59,Default,,0,0,0,,請將所掌握的城堡機能 全部用於再構築
+Dialogue: 0,0:08:26.21,0:08:28.81,Default,,0,0,0,,我再三犯下的罪 就由我一人承擔
+Dialogue: 0,0:08:29.30,0:08:33.05,Default,,0,0,0,,調 切歌 這裡交給我 你們去支援其他人
+Dialogue: 0,0:08:37.62,0:08:39.45,Default,,0,0,0,,想要能夠克服這份罪孽
+Dialogue: 0,0:08:39.63,0:08:41.94,Default,,0,0,0,,必須三人一起才能做到
+Dialogue: 0,0:08:43.92,0:08:46.14,Default,,0,0,0,,謝謝 你們兩個
+Dialogue: 0,0:08:47.12,0:08:50.56,Default,,0,0,0,,博士 就算拼上我們的性命也要誓死守護
+Dialogue: 0,0:08:51.06,0:08:53.09,Default,,0,0,0,,所以 就請博士拯救世界
+Dialogue: 0,0:09:00.40,0:09:04.23,Default,,0,0,0,,住手 不許妨礙我
+Dialogue: 0,0:09:04.78,0:09:06.09,Default,,0,0,0,,住手
+Dialogue: 0,0:09:12.67,0:09:14.73,Default,,0,0,0,,和翼共演的舞台讓我很開心
+Dialogue: 0,0:09:15.57,0:09:17.16,Default,,0,0,0,,如果還有下一次 到時
+Dialogue: 0,0:09:17.80,0:09:20.08,Default,,0,0,0,,真想和你一起合唱到天明
+Dialogue: 0,0:09:20.61,0:09:22.17,Default,,0,0,0,,瑪利亞 你在說什麼
+Dialogue: 0,0:09:23.22,0:09:27.67,Default,,0,0,0,,連拚死戰鬥的對手都能成為朋友的克莉絲前輩也很厲害
+Dialogue: 0,0:09:28.09,0:09:29.47,Default,,0,0,0,,好崇拜你喔
+Dialogue: 0,0:09:29.96,0:09:32.34,Default,,0,0,0,,你也能做到 已經做到了
+Dialogue: 0,0:09:32.81,0:09:36.94,Default,,0,0,0,,很抱歉 那天在毫不知情的情況下說你偽善
+Dialogue: 0,0:09:37.53,0:09:39.91,Default,,0,0,0,,其實應該當面跟你道歉的
+Dialogue: 0,0:09:40.40,0:09:42.53,Default,,0,0,0,,那種事根本沒放在心上 所以
+Dialogue: 0,0:09:46.27,0:09:50.52,Default,,0,0,0,,求你們快住手吧 不要妨礙我和爸爸
+Dialogue: 0,0:09:51.72,0:09:55.16,Default,,0,0,0,,我要用自己的鍊金術守護世界
+Dialogue: 0,0:09:55.56,0:09:57.53,Default,,0,0,0,,決不能讓卡羅爾毀滅世界
+Dialogue: 0,0:10:13.04,0:10:17.61,Default,,0,0,0,,賽蓮娜
+Dialogue: 0,0:10:22.20,0:10:24.66,Default,,0,0,0,,住手
+Dialogue: 0,0:11:07.20,0:11:09.02,Default,,0,0,0,,觀測到分解領域的修復
+Dialogue: 0,0:11:11.30,0:11:13.36,Default,,0,0,0,,不過 瑪利亞小姐她們
+Dialogue: 0,0:11:15.28,0:11:19.34,Default,,0,0,0,,難道我們只有付出代價才能維繫未來嗎
+Dialogue: 0,0:11:34.38,0:11:37.21,Default,,0,0,0,,城堡 被託付的命題
+Dialogue: 0,0:11:41.28,0:11:42.03,Default,,0,0,0,,大家
+Dialogue: 0,0:11:42.44,0:11:44.30,Default,,0,0,0,,為什麼 可惡
+Dialogue: 0,0:11:49.36,0:11:50.72,Default,,0,0,0,,快投降吧
+Dialogue: 0,0:11:51.21,0:11:55.13,Default,,0,0,0,,你所描繪的未來已經崩壞 沒有價值了
+Dialogue: 0,0:11:57.09,0:11:57.67,Default,,0,0,0,,未來
+Dialogue: 0,0:11:58.55,0:12:00.28,Default,,0,0,0,,快住手吧
+Dialogue: 0,0:12:01.06,0:12:02.63,Default,,0,0,0,,求你了 卡羅爾
+Dialogue: 0,0:12:03.33,0:12:07.20,Default,,0,0,0,,我們的爸爸一定沒有期待這種事情
+Dialogue: 0,0:12:11.29,0:12:16.14,Default,,0,0,0,,他在被施以火刑時 要我們多去了解這個世界
+Dialogue: 0,0:12:16.84,0:12:19.71,Default,,0,0,0,,絕不是為了讓我們做這樣的事情
+Dialogue: 0,0:12:19.75,0:12:21.47,Default,,0,0,0,,這我知道
+Dialogue: 0,0:12:21.80,0:12:25.55,Default,,0,0,0,,但是 爸爸被殺的恨要怎麼消除
+Dialogue: 0,0:12:26.19,0:12:30.27,Default,,0,0,0,,爸爸被殺的我們的悲傷 要怎麼消除
+Dialogue: 0,0:12:31.34,0:12:36.44,Default,,0,0,0,,爸爸只是給出了命題 卻沒有告訴我們答案不是嗎
+Dialogue: 0,0:12:38.24,0:12:39.11,Default,,0,0,0,,那是
+Dialogue: 0,0:12:40.89,0:12:45.74,Default,,0,0,0,,你們的父親是不是有什麼重要的事情要傳達給你們
+Dialogue: 0,0:12:47.80,0:12:49.73,Default,,0,0,0,,我認為人在性命攸關的那一瞬間
+Dialogue: 0,0:12:50.63,0:12:53.36,Default,,0,0,0,,所說出來的一定就是最想傳達的話語
+Dialogue: 0,0:12:55.59,0:13:00.77,Default,,0,0,0,,身為鍊金術師的爸爸 最想要傳達的話語
+Dialogue: 0,0:13:03.68,0:13:05.94,Default,,0,0,0,,既然如此 那除了真理就別無其它了
+Dialogue: 0,0:13:07.12,0:13:15.98,Default,,0,0,0,,鍊金術的終點 就是通過熟知萬象 調和世界
+Dialogue: 0,0:13:17.52,0:13:18.55,Default,,0,0,0,,居然是調和
+Dialogue: 0,0:13:19.29,0:13:22.26,Default,,0,0,0,,是要我接受這個拒絕了爸爸的世界嗎
+Dialogue: 0,0:13:22.78,0:13:25.83,Default,,0,0,0,,才沒說 爸爸怎麼會說過這樣的話
+Dialogue: 0,0:13:27.84,0:13:30.11,Default,,0,0,0,,那麼就由我來回答
+Dialogue: 0,0:13:34.92,0:13:37.43,Default,,0,0,0,,命題的答案是 原諒
+Dialogue: 0,0:13:39.80,0:13:45.53,Default,,0,0,0,,原諒世界的行徑 就是爸爸要傳達給我們的
+Dialogue: 0,0:13:52.20,0:13:52.71,Default,,0,0,0,,喂
+Dialogue: 0,0:13:56.80,0:14:03.78,Default,,0,0,0,,鏡之城嚴重損壞 萬象默示錄完成的未來瓦解了
+Dialogue: 0,0:14:08.58,0:14:12.53,Default,,0,0,0,,既然如此 只能拋棄過去 蹂躪現在了
+Dialogue: 0,0:14:18.18,0:14:20.59,Default,,0,0,0,,不可以 這麼做的話
+Dialogue: 0,0:14:20.59,0:14:23.25,Default,,0,0,0,,和爸爸的記憶也會被焚燒殆盡的
+Dialogue: 0,0:14:23.85,0:14:29.00,Default,,0,0,0,,難道是要燒掉所有的記憶 煉化為戰鬥的力量嗎
+Dialogue: 0,0:14:32.62,0:14:33.84,Default,,0,0,0,,卡羅爾你要幹什麼
+Dialogue: 0,0:14:34.47,0:14:35.76,Default,,0,0,0,,復仇
+Dialogue: 0,0:14:44.60,0:14:46.83,Default,,0,0,0,,如今只有復仇這一條道路了
+Dialogue: 0,0:14:47.79,0:14:52.83,Default,,0,0,0,,復仇的火焰在徹底燒盡所有的記憶之前 都不會消失嗎
+Dialogue: 0,0:14:55.32,0:14:59.08,Default,,0,0,0,,艾爾芙娜茵才沒有想要復仇呢
+Dialogue: 0,0:14:59.76,0:15:03.23,Default,,0,0,0,,嗯 艾爾芙娜茵的願望是…
+Dialogue: 0,0:15:04.29,0:15:06.24,Default,,0,0,0,,要用{\fnMFRooneySans-Medium\fs54\b0} IGNITE {\r\be5}嗎 你是認真的嗎
+Dialogue: 0,0:15:09.12,0:15:10.05,Default,,0,0,0,,響小姐
+Dialogue: 0,0:15:10.83,0:15:13.38,Default,,0,0,0,,這可是毫無勝算的賭博啊
+Dialogue: 0,0:15:13.72,0:15:17.60,Default,,0,0,0,,但我並不討厭 目前這狀況也只能如此了
+Dialogue: 0,0:15:19.68,0:15:23.20,Default,,0,0,0,,這份力量是艾爾芙娜茵賜予我們的
+Dialogue: 0,0:15:23.96,0:15:25.59,Default,,0,0,0,,所以何須懷疑
+Dialogue: 0,0:15:26.17,0:15:29.18,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}IGNITE {\r\be5}模組 雙拔劍
+Dialogue: 0,0:16:12.56,0:16:16.27,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}IGNITE {\r\be5}模組中的三個保險裝置 已連續解開兩個
+Dialogue: 0,0:16:16.89,0:16:19.30,Default,,0,0,0,,正從黑化階段轉為白化階段
+Dialogue: 0,0:16:21.81,0:16:24.22,Default,,0,0,0,,隨著輸出的增加 風險也隨之增加
+Dialogue: 0,0:16:29.10,0:16:34.34,Default,,0,0,0,,靠蠻力嗎 的確是你們的可愛風格 不過
+Dialogue: 0,0:16:38.41,0:16:40.42,Default,,0,0,0,,這可是{\fnMFRooneySans-Medium\fs54\b0} IGNITE {\r\be5}的第二階段啊
+Dialogue: 0,0:16:41.99,0:16:43.92,Default,,0,0,0,,接下來輪到我唱了
+Dialogue: 0,0:16:55.06,0:16:56.35,Default,,0,0,0,,輸出進一步增加了
+Dialogue: 0,0:16:57.03,0:16:59.54,Default,,0,0,0,,到底是多強的共鳴能量啊
+Dialogue: 0,0:16:57.03,0:16:59.54,uppernote,,0,0,0,,{\pos(742,665)}Phonic Gain
+Dialogue: 0,0:16:59.61,0:17:02.24,Default,,0,0,0,,但我等的就是這一瞬間
+Dialogue: 0,0:17:04.10,0:17:08.31,Default,,0,0,0,,拔劍 所有保險裝置 解除
+Dialogue: 0,0:17:15.66,0:17:17.73,Default,,0,0,0,,轉換為最終階段——赤化階段
+Dialogue: 0,0:17:26.61,0:17:29.23,Default,,0,0,0,,用{\fnMFRooneySans-Medium\fs54\b0} IGNITE {\r\be5}的輸出制服對方
+Dialogue: 0,0:17:29.24,0:17:32.90,Default,,0,0,0,,將這巨大的共鳴能量集中起來一舉擊破
+Dialogue: 0,0:17:29.24,0:17:32.90,uppernote,,0,0,0,,{\pos(582,665)}Phonic Gain
+Dialogue: 0,0:17:33.09,0:17:36.93,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}S2CA · Tri-Burst
+Dialogue: 0,0:17:40.73,0:17:42.49,Default,,0,0,0,,這樣下去會爆炸的
+Dialogue: 0,0:17:42.96,0:17:45.78,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}IGNITE {\r\be5}的最大輸出我可是一清二楚
+Dialogue: 0,0:17:46.42,0:17:50.00,Default,,0,0,0,,正因此我才就那麼丟在那裡棄之不用的 你們難道不懂嗎
+Dialogue: 0,0:17:52.19,0:17:54.46,Default,,0,0,0,,我的歌聲可是僅憑一個人
+Dialogue: 0,0:17:54.46,0:17:59.46,Default,,0,0,0,,就能凌駕70億絕唱的 共鳴能量
+Dialogue: 0,0:17:54.46,0:17:59.46,uppernote,,0,0,0,,{\pos(820,665)}Phonic Gain
+Dialogue: 0,0:18:04.70,0:18:05.89,Default,,0,0,0,,輕而易舉
+Dialogue: 0,0:18:16.05,0:18:18.48,Default,,0,0,0,,就算用盡萬種方法
+Dialogue: 0,0:18:19.46,0:18:22.23,Default,,0,0,0,,也總會有第一萬零一種方法來解決
+Dialogue: 0,0:18:22.77,0:18:31.07,Zesshou-FIS,,0,0,0,,{\blur10\fad(100,100)}Gatrandis babel ziggurat edenal
+Dialogue: 0,0:18:31.44,0:18:38.68,Zesshou-FIS,,0,0,0,,{\blur10\fad(100,100)}Emustolronzen fine el baral zizzl
+Dialogue: 0,0:18:36.59,0:18:37.63,Default,,0,0,0,,瑪利亞小姐
+Dialogue: 0,0:18:43.58,0:18:44.38,Default,,0,0,0,,威爾博士
+Dialogue: 0,0:18:45.26,0:18:48.43,Default,,0,0,0,,我守護住了 這一切
+Dialogue: 0,0:18:48.83,0:18:50.15,Default,,0,0,0,,難道你
+Dialogue: 0,0:18:50.62,0:18:57.42,Default,,0,0,0,,拯救你是為了讓全世界知道我的英雄行為
+Dialogue: 0,0:19:00.09,0:19:05.38,Default,,0,0,0,,快去把你那該死的恥辱公諸於眾吧
+Dialogue: 0,0:19:06.39,0:19:12.45,Default,,0,0,0,,還是說你還和那時候一樣 只是個一無是處的女人呢
+Dialogue: 0,0:19:17.41,0:19:18.92,Default,,0,0,0,,是愛啊
+Dialogue: 0,0:19:19.27,0:19:20.61,Default,,0,0,0,,為什麼還在說愛
+Dialogue: 0,0:19:21.58,0:19:25.77,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}Symphogear {\r\be5}的適應並沒有奇蹟的介入
+Dialogue: 0,0:19:26.43,0:19:32.42,Default,,0,0,0,,想要把那份力量占為己有的話 只要繼續努力去拿就行了
+Dialogue: 0,0:19:44.27,0:19:48.61,Default,,0,0,0,,瑪利亞 我是不是成為英雄了呢
+Dialogue: 0,0:19:49.64,0:19:52.83,Default,,0,0,0,,是啊 你是最差勁的
+Dialogue: 0,0:19:55.23,0:20:03.51,Zesshou-All,,0,0,0,,{\blur10\fad(100,100)}Gatrandis babel ziggurat edenal
+Dialogue: 0,0:20:04.23,0:20:13.38,Zesshou-All,,0,0,0,,{\blur10\fad(100,100)}Emustolronzen fine el zizzl
+Dialogue: 0,0:20:05.85,0:20:09.68,Default,,0,0,0,,不要自以為你們能夠阻止我
+Dialogue: 0,0:20:21.00,0:20:23.77,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}S2CA · Hexagon-Version
+Dialogue: 0,0:20:25.04,0:20:27.80,Default,,0,0,0,,這次一定要用永恆之槍集中
+Dialogue: 0,0:20:25.04,0:20:27.80,uppernote,,0,0,0,,{\pos(720,665)}Gungnir
+Dialogue: 0,0:20:28.03,0:20:29.63,Default,,0,0,0,,用銀之左腕來控制
+Dialogue: 0,0:20:28.03,0:20:29.63,uppernote,,0,0,0,,{\pos(600,665)}Airget-lamh
+Dialogue: 0,0:20:29.89,0:20:31.14,Default,,0,0,0,,重新配置
+Dialogue: 0,0:20:48.04,0:20:50.07,Default,,0,0,0,,最後的 奇蹟
+Dialogue: 0,0:20:50.75,0:20:54.53,Default,,0,0,0,,居然利用我所釋放的共鳴能量
+Dialogue: 0,0:20:50.75,0:20:54.53,uppernote,,0,0,0,,{\pos(815,665)}Phonic Gain
+Dialogue: 0,0:21:00.52,0:21:02.23,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}Generator
+Dialogue: 0,0:21:02.39,0:21:06.89,Default,,0,0,0,,{\fnMFRooneySans-Medium\fs54\b0}EX Drive
+Dialogue: 0,0:21:11.79,0:21:13.57,Default,,0,0,0,,怎 怎麼會
+Dialogue: 0,0:21:51.14,0:21:54.98,Default,,0,0,0,,這就是 奇蹟的樣子
+Dialogue: 0,0:00:00.46,0:00:03.70,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}どこまでも無限に続く空の下で
+Dialogue: 0,0:00:03.86,0:00:06.70,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}永遠を夢みてた
+Dialogue: 0,0:00:06.84,0:00:10.01,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}なぜたいせつなものばかり
+Dialogue: 0,0:00:10.02,0:00:14.86,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}すぐ壊れてしまうんだろう
+Dialogue: 0,0:00:15.91,0:00:20.03,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}Try to reach for the sky
+Dialogue: 0,0:00:22.35,0:00:26.65,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}Heaven knows I can change
+Dialogue: 0,0:00:27.82,0:00:30.90,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}こぼれたナミダが打ち砕かれては
+Dialogue: 0,0:00:31.04,0:00:34.01,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}現実と理想の隙間に落ちる
+Dialogue: 0,0:00:34.26,0:00:40.70,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}言葉にするたび遠ざかり歪んでく世界　もう戻れない
+Dialogue: 0,0:00:40.82,0:00:47.13,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}しあわせは儚く消えてしまうものじゃない
+Dialogue: 0,0:00:47.25,0:00:55.16,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}そう、ここにあると知ってても見えなくなるもの
+Dialogue: 0,0:00:56.83,0:01:00.06,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}繰り返し生まれて沈んでく太陽
+Dialogue: 0,0:01:00.23,0:01:03.11,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}いつか燃え尽きるまで
+Dialogue: 0,0:01:03.25,0:01:09.50,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}今、痛みさえも輝きに生まれ変わる
+Dialogue: 0,0:01:09.71,0:01:15.94,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}粉々に散らばる想いの欠片たち　もう一度拾い集め
+Dialogue: 0,0:01:16.15,0:01:24.85,OP-Rebirth_Day-JP,,0,0,0,,{\fad(100,100)\blur5}この胸に抱きしめた時　また物語が始まる
+Dialogue: 0,0:00:00.46,0:00:03.70,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}在無限延續著的天空下
+Dialogue: 0,0:00:03.86,0:00:06.70,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}幻想著永遠
+Dialogue: 0,0:00:06.84,0:00:10.01,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}為何重要的東西
+Dialogue: 0,0:00:10.02,0:00:14.86,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}總會轉瞬即逝呢
+Dialogue: 0,0:00:27.82,0:00:30.90,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}溢出的淚水紛繁零落
+Dialogue: 0,0:00:31.04,0:00:34.01,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}墜入現實與理想的縫隙
+Dialogue: 0,0:00:34.26,0:00:40.70,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}每每用言語去述說　這漸行扭曲的世界已無法復原
+Dialogue: 0,0:00:40.82,0:00:47.13,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}幸福並不是轉瞬即逝的東西
+Dialogue: 0,0:00:47.25,0:00:55.16,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}沒錯　而是就算知道在這裡也會逐漸消逝的東西
+Dialogue: 0,0:00:56.83,0:01:00.06,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}直到日復一日升起落下的太陽
+Dialogue: 0,0:01:00.23,0:01:03.11,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}燃燒殆盡的那個時刻
+Dialogue: 0,0:01:03.25,0:01:09.50,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}此刻　就連痛楚都重生成光輝
+Dialogue: 0,0:01:09.71,0:01:15.94,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}將紛繁零落的情感碎片再次收集
+Dialogue: 0,0:01:16.15,0:01:24.85,OP-Rebirth_Day-CH,,0,0,0,,{\fad(100,100)\blur5}擁入胸膛之時　故事便再度開始
+Dialogue: 0,0:07:14.64,0:07:21.80,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&H7F00FF&}真の正義　背った今　どれだけあの言葉が…？
+Dialogue: 0,0:07:22.07,0:07:29.49,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&HB1ADE7&}傷つくから　信ずことを　諦めてたあの日々…
+Dialogue: 0,0:07:29.49,0:07:37.13,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}書き残した　泣く事さえ　逃げ隠した手紙は…
+Dialogue: 0,0:07:37.35,0:07:41.04,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}此処にさあ上書け踏み締めて
+Dialogue: 0,0:07:41.04,0:07:45.75,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}「ありがとう」を覚悟へと
+Dialogue: 0,0:07:46.11,0:07:49.60,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}未来は現在{\fscx60\fscy60}――いま――{\r\blur5\3c&H649C54&}の向こうじゃなく
+Dialogue: 0,0:07:49.80,0:07:53.33,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&HB1ADE7&}乗り越えた過去の先にある
+Dialogue: 0,0:07:53.53,0:07:57.08,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}友達に教えられた旋律{\fscx60\fscy60}――フレーズ――
+Dialogue: 0,0:07:57.40,0:08:07.18,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}「夜明け告げる鐘の音は　鳴り響き渡るんだ」と
+Dialogue: 0,0:08:10.40,0:08:17.78,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&H7F00FF&}紡ぎ合えて　奏で合えて　分ち合えて良かった…
+Dialogue: 0,0:08:17.78,0:08:24.35,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&HB1ADE7&}足掻ききった　この答に　凛と立って誇ろう…
+Dialogue: 0,0:08:25.40,0:08:32.97,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}今日この日の　勇気の為　生まれてきた気がする…
+Dialogue: 0,0:08:33.03,0:08:34.88,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}天空へ舞い飛べ
+Dialogue: 0,0:09:51.21,0:09:54.65,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}夢が最後に出来た
+Dialogue: 0,0:09:54.83,0:09:58.42,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}世界を守りきること
+Dialogue: 0,0:09:58.59,0:10:02.13,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}笑顔の涙がいい
+Dialogue: 0,0:10:02.38,0:10:05.45,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}切に　{\3c&H7F00FF&}調べ　{\3c&HB1ADE7&}独奏{\fscx60\fscy60}――つらぬ――{\r\blur5\3c&HB1ADE7&}いて
+Dialogue: 0,0:10:05.46,0:10:17.34,In-Unison-FIS-JP,,0,0,0,,{\fad(100,100)\blur5}さあ…！暁月{\fscx60\fscy60}――あかつき――{\r\blur5\3c&H008FC4&}への前夜{\fscx60\fscy60}――イヴ――{\r\blur5\3c&H008FC4&}を読み歌え…！SERENADE!!
+Dialogue: 0,0:07:14.64,0:07:21.80,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&H7F00FF&}背負著　真正正義的如今　那話語該是…？
+Dialogue: 0,0:07:22.07,0:07:29.49,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&HB1ADE7&}多麼地傷人　放棄了　信任的那些日子…
+Dialogue: 0,0:07:29.49,0:07:37.13,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}連記下的　哭泣都　逃避遮掩的信…
+Dialogue: 0,0:07:37.35,0:07:41.04,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}就在此處寫下地址　堅實踏出吧
+Dialogue: 0,0:07:41.04,0:07:45.75,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}致對{\fnEPSON Mincho Bold\fs35\b0\fsp0}「{\r\blur5}感謝{\fnEPSON Mincho Bold\fs35\b0\fsp0}」{\r\blur5}的覺悟
+Dialogue: 0,0:07:46.11,0:07:49.60,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}未來並不是現在的彼岸
+Dialogue: 0,0:07:49.80,0:07:53.33,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&HB1ADE7&}而是存在於越過的過去的前方
+Dialogue: 0,0:07:53.53,0:07:57.08,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}朋友教會我的旋律{\fscx60\fscy60}{\fnEPSON Mincho Bold\fs35\b0\fsp0}――{\r\blur5\3c&H649C54&}{\fscx60\fscy60}樂句{\fnEPSON Mincho Bold\fs35\b0\fsp0}――
+Dialogue: 0,0:07:57.40,0:08:07.18,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}宣告「黎明的鐘聲　即將響徹天際」
+Dialogue: 0,0:08:10.40,0:08:17.78,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&H7F00FF&}能一起交織　一起奏響　一起分擔真是太好了…
+Dialogue: 0,0:08:17.78,0:08:24.35,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&HB1ADE7&}因掙扎至今的　這回答　而傲然挺立…
+Dialogue: 0,0:08:25.40,0:08:32.97,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}就好像我　是為了今天　這份勇氣而誕生…
+Dialogue: 0,0:08:33.03,0:08:34.88,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}向著天空飛舞
+Dialogue: 0,0:09:51.21,0:09:54.65,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}夢想就是將最終完成的
+Dialogue: 0,0:09:54.83,0:09:58.42,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}世界守護到底
+Dialogue: 0,0:09:58.59,0:10:02.13,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}流下歡笑的淚水吧
+Dialogue: 0,0:10:02.38,0:10:05.45,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5\3c&H649C54&}殷切　{\3c&H7F00FF&}奏響　{\3c&HB1ADE7&}獨奏{\fscx60\fscy60}{\fnEPSON Mincho Bold\fs35\b0\fsp0}――{\r\blur5\3c&HB1ADE7&}{\fscx60\fscy60}貫穿{\fnEPSON Mincho Bold\fs35\b0\fsp0}――
+Dialogue: 0,0:10:05.46,0:10:17.34,In-Unison-FIS-CH,,0,0,0,,{\fad(100,100)\blur5}來吧…！歌頌破曉前的黑夜吧…！小夜曲!!
+Dialogue: 0,0:15:52.56,0:16:02.24,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}掴んだこの力の意味の　重さ、使命、運命{\fscx60\fscy60}――さだめ――{\r\blur5}に負けない
+Dialogue: 0,0:16:02.67,0:16:07.70,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}守るために何かを傷つけてしまっても
+Dialogue: 0,0:16:07.87,0:16:12.38,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}辛さからもう目を背けやしない
+Dialogue: 0,0:16:12.44,0:16:17.41,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}もっと（Let's shout）覚悟を持って踏み込まなきゃ
+Dialogue: 0,0:16:17.59,0:16:22.78,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}グッと（Let's shout）未来に顔向け出来ない
+Dialogue: 0,0:16:23.01,0:16:25.53,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}涙（知って）　痛み（知って）
+Dialogue: 0,0:16:25.57,0:16:27.84,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}絶え抜いた先に紡ぐ
+Dialogue: 0,0:16:28.04,0:16:30.48,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}この手（その手）　伸ばす（その手）
+Dialogue: 0,0:16:30.62,0:16:34.90,In-Char-IGNITE-Hibiki-JP-Left,,0,0,0,,{\fad(100,100)\blur5}誰かの為にあると信じるため
+Dialogue: 0,0:15:52.56,0:16:02.24,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}不辜負手中這份力量所代表的　沉重、使命、命運{\fscx60\fscy60}{\fnEPSON Mincho Bold\fs35\b0\fsp0}――{\r\blur5}{\fscx60\fscy60}宿命{\fnEPSON Mincho Bold\fs35\b0\fsp0}――
+Dialogue: 0,0:16:02.67,0:16:07.70,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}無論為了守護而傷害了什麼
+Dialogue: 0,0:16:07.87,0:16:12.38,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}也不會再度去無視那份痛苦
+Dialogue: 0,0:16:12.44,0:16:17.41,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}必須懷著更多{\fnEPSON Mincho Bold\fs35\b0\fsp0}（Let's shout）{\r\blur5}的覺悟　奮勇向前
+Dialogue: 0,0:16:17.59,0:16:22.78,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}否則將無法輕快{\fnEPSON Mincho Bold\fs35\b0\fsp0}（Let's shout）{\r\blur5}面對未來
+Dialogue: 0,0:16:23.01,0:16:25.53,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}{\fnEPSON Mincho Bold\fs35\b0\fsp0}（{\r\blur5}知道{\fnEPSON Mincho Bold\fs35\b0\fsp0}）{\r\blur5}淚水{\fnEPSON Mincho Bold\fs35\b0\fsp0}　（{\r\blur5}知道{\fnEPSON Mincho Bold\fs35\b0\fsp0}）{\r\blur5}疼痛
+Dialogue: 0,0:16:25.57,0:16:27.84,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}在徹底終結前先行編織
+Dialogue: 0,0:16:28.04,0:16:30.48,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}這雙手{\fnEPSON Mincho Bold\fs35\b0\fsp0}（{\r\blur5}那雙手{\fnEPSON Mincho Bold\fs35\b0\fsp0}）　{\r\blur5}伸出的{\fnEPSON Mincho Bold\fs35\b0\fsp0}（{\r\blur5}那雙手{\fnEPSON Mincho Bold\fs35\b0\fsp0}）
+Dialogue: 0,0:16:30.62,0:16:34.90,In-Char-IGNITE-Hibiki-CH-Left,,0,0,0,,{\fad(100,100)\blur5}為了相信其一定為誰而存在
+Dialogue: 0,0:16:44.70,0:16:49.16,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}嗚呼、終焉への追走曲{\fscx60\fscy60}――カノン――{\r\blur5}が熏る
+Dialogue: 0,0:16:49.52,0:16:54.18,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}殺戮の福音に血反吐と散れ
+Dialogue: 0,0:16:54.36,0:16:58.97,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}微分子レベルまで解剖して
+Dialogue: 0,0:16:59.18,0:17:03.86,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}反逆を永劫に断つ
+Dialogue: 0,0:17:04.24,0:17:06.72,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}るLuりRぁ…宇宙が傾き
+Dialogue: 0,0:17:06.73,0:17:09.11,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}RゥるRiラ…太陽が凍る
+Dialogue: 0,0:17:09.12,0:17:13.23,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}Genocide&Genocide
+Dialogue: 0,0:17:18.74,0:17:21.08,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}血液一滴残らず
+Dialogue: 0,0:17:21.17,0:17:23.61,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}憎悪と力で掻き毟る
+Dialogue: 0,0:17:23.62,0:17:29.14,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}震え怖じよ…世界の崩れるLove song
+Dialogue: 0,0:17:31.33,0:17:35.78,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}奇跡など殺すと誓ったのだ
+Dialogue: 0,0:17:36.09,0:17:40.72,In-Char-Kyaroru-JP-Right,,0,0,0,,{\fad(100,100)\blur5}想い出など微塵も焼き消して
+Dialogue: 0,0:16:44.70,0:16:49.16,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}啊，引向終結的卡農曲香氣四溢
+Dialogue: 0,0:16:49.52,0:16:54.18,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}在殺戮的福音中吐血消散吧
+Dialogue: 0,0:16:54.36,0:16:58.97,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}一直解剖至粒子級別
+Dialogue: 0,0:16:59.18,0:17:03.86,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}將叛逆永遠扼殺
+Dialogue: 0,0:17:04.24,0:17:06.72,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}嚕嚕哩啦{\fnEPSON Mincho Bold\fs35\b0\fsp0}…{\r\blur5}宇宙在傾斜
+Dialogue: 0,0:17:06.73,0:17:09.11,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}嚕嚕哩啦{\fnEPSON Mincho Bold\fs35\b0\fsp0}…{\r\blur5}太陽在凍結
+Dialogue: 0,0:17:18.74,0:17:21.08,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}不留一滴血
+Dialogue: 0,0:17:21.17,0:17:23.61,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}用憎惡和力量摧毀一切
+Dialogue: 0,0:17:23.62,0:17:29.14,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}顫抖恐懼{\fnEPSON Mincho Bold\fs35\b0\fsp0}…{\r\blur5}世界的崩壞{\fnEPSON Mincho Bold\fs35\b0\fsp0}Love song
+Dialogue: 0,0:17:31.33,0:17:35.78,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}誓要將奇蹟抹殺
+Dialogue: 0,0:17:36.09,0:17:40.72,In-Char-Kyaroru-CH-Right,,0,0,0,,{\fad(100,100)\blur5}將記憶焚燒得一絲不剩
+Dialogue: 0,0:22:00.00,0:22:03.15,ED-Glorious_Break-JP,,0,0,0,,{\fad(0,100)\blur5}今、天に問い掛ける願い
+Dialogue: 0,0:22:03.33,0:22:06.75,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}もうひとふりの力を下さい…
+Dialogue: 0,0:22:06.80,0:22:09.99,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}背負う覚悟は胸に在るか
+Dialogue: 0,0:22:10.18,0:22:13.84,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}力とは何か
+Dialogue: 0,0:22:14.07,0:22:20.26,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}Reason why I can fight...!
+Dialogue: 0,0:22:31.45,0:22:35.92,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}ぬくもりより孤独が相応しい
+Dialogue: 0,0:22:36.03,0:22:40.56,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}そう言い聞かせ　心を殺しては
+Dialogue: 0,0:22:40.71,0:22:43.63,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}偽りの「強さ」に縋っていた
+Dialogue: 0,0:22:43.76,0:22:50.50,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}涙を　重ねる度　証明される現実は
+Dialogue: 0,0:22:50.66,0:22:57.80,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}何処までも残酷な結末{\fscx60\fscy60}――termination――
+Dialogue: 0,0:22:58.09,0:22:59.07,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}Desperate
+Dialogue: 0,0:22:59.08,0:23:04.01,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}抗えずに捻れてゆく祈りは
+Dialogue: 0,0:23:04.02,0:23:12.70,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}答えを求め　狂い咽ぶように　闇の果てへ…叫ぶ！
+Dialogue: 0,0:23:12.85,0:23:15.76,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}今、天に問いかける願い
+Dialogue: 0,0:23:15.92,0:23:18.92,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}もうひとふりの力を下さい…
+Dialogue: 0,0:23:18.98,0:23:21.03,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}求めてはいけない、と
+Dialogue: 0,0:23:21.04,0:23:26.06,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}拒みながら伸ばすこの手は
+Dialogue: 0,0:23:26.34,0:23:29.74,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}何度傷ついても
+Dialogue: 0,0:23:29.86,0:23:31.74,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}Glorious Break
+Dialogue: 0,0:23:31.80,0:23:38.29,ED-Glorious_Break-JP,,0,0,0,,{\fad(100,100)\blur5}衝動抱いて　輝き放とう
+Dialogue: 0,0:22:00.00,0:22:03.15,ED-Glorious_Break-CH,,0,0,0,,{\fad(0,100)\blur5}此刻，我向蒼天祈願
+Dialogue: 0,0:22:03.33,0:22:06.75,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}請再賜我振翅一揮的力量{\fnEPSON Mincho Bold\fs35\b0\fsp0}…
+Dialogue: 0,0:22:06.80,0:22:09.99,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}背負的覺悟是否已埋藏於心
+Dialogue: 0,0:22:10.18,0:22:13.84,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}所謂力量是什麼
+Dialogue: 0,0:22:14.07,0:22:20.26,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}{\fnEPSON Mincho Bold\fs35\b0\fsp0}Reason why I can fight...!
+Dialogue: 0,0:22:31.45,0:22:35.92,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}比起溫暖　更適合孤獨
+Dialogue: 0,0:22:36.03,0:22:40.56,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}我這樣勸說自己　讓心靈死去
+Dialogue: 0,0:22:40.71,0:22:43.63,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}更加依賴虛偽的{\fnEPSON Mincho Bold\fs35\b0\fsp0}「{\r\blur5}強大{\fnEPSON Mincho Bold\fs35\b0\fsp0}」
+Dialogue: 0,0:22:43.76,0:22:50.50,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}每當淚眼婆娑　所證明的現實
+Dialogue: 0,0:22:50.66,0:22:57.80,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}無論何處都是殘酷的結局{\fscx60\fscy60}{\fnEPSON Mincho Bold\fs35\b0\fsp0}――termination――
+Dialogue: 0,0:22:58.09,0:22:59.07,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}{\fnEPSON Mincho Bold\fs35\b0\fsp0}Desperate
+Dialogue: 0,0:22:59.08,0:23:04.01,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}不可抗拒　逐漸扭曲的祈願
+Dialogue: 0,0:23:04.02,0:23:12.70,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}尋求回應　狂亂的啜泣般　向黑暗的盡頭{\fnEPSON Mincho Bold\fs35\b0\fsp0}…{\r\blur5}叫喊{\fnEPSON Mincho Bold\fs35\b0\fsp0}！
+Dialogue: 0,0:23:12.85,0:23:15.76,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}此刻，我向蒼天祈願
+Dialogue: 0,0:23:15.92,0:23:18.92,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}請再賜我振翅一揮的力量{\fnEPSON Mincho Bold\fs35\b0\fsp0}…
+Dialogue: 0,0:23:18.98,0:23:21.03,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}{\fnEPSON Mincho Bold\fs35\b0\fsp0}「{\r\blur5}不可以祈求{\fnEPSON Mincho Bold\fs35\b0\fsp0}」
+Dialogue: 0,0:23:21.04,0:23:26.06,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}就算這樣回絕我　並將我伸出的手
+Dialogue: 0,0:23:26.34,0:23:29.74,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}一次一次傷害
+Dialogue: 0,0:23:29.86,0:23:31.74,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}{\fnEPSON Mincho Bold\fs35\b0\fsp0}Glorious Break
+Dialogue: 0,0:23:31.80,0:23:38.29,ED-Glorious_Break-CH,,0,0,0,,{\fad(100,100)\blur5}也要懷抱衝動　綻放光芒
+

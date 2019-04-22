@@ -33,18 +33,19 @@
 			this.label_Filter = new System.Windows.Forms.Label();
 			this.linkLabel_FilterHelp = new System.Windows.Forms.LinkLabel();
 			this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
-			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-			this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
-			this.toolStripStatusLabel_ItemsCount = new System.Windows.Forms.ToolStripStatusLabel();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_UpdateDB = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_Search = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSplitButton_Languages = new System.Windows.Forms.ToolStripSplitButton();
 			this.toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_About = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_Folder = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_URL = new System.Windows.Forms.ToolStripButton();
+			this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
+			this.toolStripStatusLabel_ItemsCount = new System.Windows.Forms.ToolStripStatusLabel();
 			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
+			this.toolStripStatusLabel_MovieCount = new System.Windows.Forms.ToolStripStatusLabel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).BeginInit();
 			this.toolStrip_Main.SuspendLayout();
 			this.statusStrip_Main.SuspendLayout();
@@ -118,32 +119,6 @@
 			this.toolStrip_Main.TabIndex = 0;
 			this.toolStrip_Main.Text = "toolStrip1";
 			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-			// 
-			// statusStrip_Main
-			// 
-			this.statusStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel_ItemsCount});
-			this.statusStrip_Main.Location = new System.Drawing.Point(0, 707);
-			this.statusStrip_Main.Name = "statusStrip_Main";
-			this.statusStrip_Main.Size = new System.Drawing.Size(1008, 22);
-			this.statusStrip_Main.TabIndex = 6;
-			this.statusStrip_Main.Text = "statusStrip1";
-			// 
-			// toolStripStatusLabel_ItemsCount
-			// 
-			this.toolStripStatusLabel_ItemsCount.Name = "toolStripStatusLabel_ItemsCount";
-			this.toolStripStatusLabel_ItemsCount.Size = new System.Drawing.Size(55, 17);
-			this.toolStripStatusLabel_ItemsCount.Text = "0 条记录";
-			// 
-			// toolStripSeparator2
-			// 
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-			// 
 			// toolStripButton_UpdateDB
 			// 
 			this.toolStripButton_UpdateDB.Image = global::sub_db.Resource1.DB_Refresh;
@@ -179,6 +154,11 @@
 			this.toolStripButton_Settings.Text = "设置";
 			this.toolStripButton_Settings.Click += new System.EventHandler(this.ToolStripButton_Settings_Click);
 			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
 			// toolStripButton_About
 			// 
 			this.toolStripButton_About.Image = global::sub_db.Resource1.About;
@@ -187,6 +167,11 @@
 			this.toolStripButton_About.Size = new System.Drawing.Size(52, 22);
 			this.toolStripButton_About.Text = "关于";
 			this.toolStripButton_About.Click += new System.EventHandler(this.ToolStripButton_About_Click);
+			// 
+			// toolStripSeparator2
+			// 
+			this.toolStripSeparator2.Name = "toolStripSeparator2";
+			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
 			// 
 			// toolStripButton_Folder
 			// 
@@ -208,6 +193,23 @@
 			this.toolStripButton_URL.Text = "打开远程链接";
 			this.toolStripButton_URL.Click += new System.EventHandler(this.ToolStripButton_URL_Click);
 			// 
+			// statusStrip_Main
+			// 
+			this.statusStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel_ItemsCount,
+            this.toolStripStatusLabel_MovieCount});
+			this.statusStrip_Main.Location = new System.Drawing.Point(0, 707);
+			this.statusStrip_Main.Name = "statusStrip_Main";
+			this.statusStrip_Main.Size = new System.Drawing.Size(1008, 22);
+			this.statusStrip_Main.TabIndex = 5;
+			this.statusStrip_Main.Text = "statusStrip1";
+			// 
+			// toolStripStatusLabel_ItemsCount
+			// 
+			this.toolStripStatusLabel_ItemsCount.Name = "toolStripStatusLabel_ItemsCount";
+			this.toolStripStatusLabel_ItemsCount.Size = new System.Drawing.Size(55, 17);
+			this.toolStripStatusLabel_ItemsCount.Text = "0 条记录";
+			// 
 			// pictureBox_Search
 			// 
 			this.pictureBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -219,6 +221,12 @@
 			this.pictureBox_Search.TabIndex = 5;
 			this.pictureBox_Search.TabStop = false;
 			this.pictureBox_Search.Click += new System.EventHandler(this.PictureBox_Search_Click);
+			// 
+			// toolStripStatusLabel_MovieCount
+			// 
+			this.toolStripStatusLabel_MovieCount.Name = "toolStripStatusLabel_MovieCount";
+			this.toolStripStatusLabel_MovieCount.Size = new System.Drawing.Size(55, 17);
+			this.toolStripStatusLabel_MovieCount.Text = "0 部影片";
 			// 
 			// c_Mainform
 			// 
@@ -267,6 +275,7 @@
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_Folder;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_URL;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_MovieCount;
 	}
 }
 

@@ -193,7 +193,7 @@ namespace sub_db
 
 			if(!Directory.Exists(dir))
 			{
-				MessageBox.Show(string.Format(c_Languages_.txt(24), dir));	// 找不到文件夹 {0:s}
+				MessageBox.Show(string.Format(c_Languages_.txt(25), dir));	// 找不到文件夹 {0:s}
 				return;
 			}
 
@@ -312,6 +312,18 @@ namespace sub_db
 		{
 			toolStripStatusLabel_ItemsCount.Text = string.Format(	c_Languages_.txt(23),	// {0:d} 条记录
 																	dataGridView_Main.Rows.Count );
+
+			DataTable dt = (DataTable)dataGridView_Main.DataSource;
+			if(dt != null)
+			{
+				HashSet<string> movies = new HashSet<string>();
+
+				foreach(DataRow dr in dt.Rows)
+					movies.Add((string)dr[c_Data_.e_ColumnName.path.ToString()]);
+
+				toolStripStatusLabel_MovieCount.Text = string.Format(	c_Languages_.txt(24),	// {0:d} 部影片
+																		movies.Count );
+			}
 		}
 	};
 }	// namespace sub_db

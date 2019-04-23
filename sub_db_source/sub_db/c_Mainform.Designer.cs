@@ -38,7 +38,6 @@
 			this.toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_About = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_Folder = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_URL = new System.Windows.Forms.ToolStripButton();
 			this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
@@ -99,12 +98,11 @@
             this.toolStripButton_UpdateDB,
             this.toolStripButton_Search,
             this.toolStripSplitButton_Languages,
+            this.toolStripButton_Folder,
+            this.toolStripButton_URL,
             this.toolStripButton_Settings,
             this.toolStripSeparator1,
-            this.toolStripButton_About,
-            this.toolStripSeparator2,
-            this.toolStripButton_Folder,
-            this.toolStripButton_URL});
+            this.toolStripButton_About});
 			this.toolStrip_Main.Location = new System.Drawing.Point(0, 0);
 			this.toolStrip_Main.Name = "toolStrip_Main";
 			this.toolStrip_Main.Size = new System.Drawing.Size(1008, 25);
@@ -160,29 +158,22 @@
 			this.toolStripButton_About.Text = "关于";
 			this.toolStripButton_About.Click += new System.EventHandler(this.ToolStripButton_About_Click);
 			// 
-			// toolStripSeparator2
-			// 
-			this.toolStripSeparator2.Name = "toolStripSeparator2";
-			this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-			// 
 			// toolStripButton_Folder
 			// 
-			this.toolStripButton_Folder.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.toolStripButton_Folder.Image = global::sub_db.Resource1.folder;
 			this.toolStripButton_Folder.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton_Folder.Name = "toolStripButton_Folder";
-			this.toolStripButton_Folder.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton_Folder.Text = "打开本地文件夹";
+			this.toolStripButton_Folder.Size = new System.Drawing.Size(174, 22);
+			this.toolStripButton_Folder.Text = "打开本地文件夹(Alt+Enter)";
 			this.toolStripButton_Folder.Click += new System.EventHandler(this.ToolStripButton_Folder_Click);
 			// 
 			// toolStripButton_URL
 			// 
-			this.toolStripButton_URL.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
 			this.toolStripButton_URL.Image = global::sub_db.Resource1.link;
 			this.toolStripButton_URL.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton_URL.Name = "toolStripButton_URL";
-			this.toolStripButton_URL.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton_URL.Text = "打开远程链接";
+			this.toolStripButton_URL.Size = new System.Drawing.Size(121, 22);
+			this.toolStripButton_URL.Text = "打开远程链接(F1)";
 			this.toolStripButton_URL.Click += new System.EventHandler(this.ToolStripButton_URL_Click);
 			// 
 			// statusStrip_Main
@@ -258,6 +249,8 @@
 			this.Name = "c_Mainform";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Subtitles DataBase";
+			this.Activated += new System.EventHandler(this.c_Mainform_Activated);
+			this.Deactivate += new System.EventHandler(this.c_Mainform_Deactivate);
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.c_Mainform_FormClosing);
 			this.Load += new System.EventHandler(this.c_Mainform_Load);
 			this.ResizeEnd += new System.EventHandler(this.c_Mainform_ResizeEnd);
@@ -286,7 +279,6 @@
 		internal System.Windows.Forms.TextBox textBox_Filter;
 		private System.Windows.Forms.StatusStrip statusStrip_Main;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_ItemsCount;
-		private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_Folder;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_URL;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_MovieCount;

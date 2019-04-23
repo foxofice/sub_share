@@ -79,6 +79,59 @@ namespace sub_db
 		}
 
 		/*==============================================================
+		 * 激活窗口时
+		 *==============================================================*/
+		private void c_Mainform_Activated(object sender, EventArgs e)
+		{
+			c_Common_.RegHotKey(this.Handle,
+								c_Common_.m_k_HOTKEY_OPEN_DIR_ID,
+								c_Common_.KeyModifiers.Alt,
+								Keys.Enter);
+
+			c_Common_.RegHotKey(this.Handle,
+								c_Common_.m_k_HOTKEY_OPEN_URL_ID,
+								c_Common_.KeyModifiers.None,
+								Keys.F1);
+		}
+
+		/*==============================================================
+		 * 取消激活窗口时
+		 *==============================================================*/
+		private void c_Mainform_Deactivate(object sender, EventArgs e)
+		{
+			c_Common_.UnregisterHotKey(this.Handle, c_Common_.m_k_HOTKEY_OPEN_DIR_ID);
+			c_Common_.UnregisterHotKey(this.Handle, c_Common_.m_k_HOTKEY_OPEN_URL_ID);
+		}
+
+		/*==============================================================
+		 * Win32 消息处理
+		 *==============================================================*/
+		protected override void WndProc(ref Message msg)
+		{
+			const int WM_HOTKEY = 0x312;
+
+			base.WndProc(ref msg);
+			switch(msg.Msg)
+			{
+			case WM_HOTKEY:
+				switch(msg.WParam.ToInt32())
+				{
+				case c_Common_.m_k_HOTKEY_OPEN_DIR_ID:
+					ToolStripButton_Folder_Click(null, null);
+					break;
+
+				case c_Common_.m_k_HOTKEY_OPEN_URL_ID:
+					ToolStripButton_URL_Click(null, null);
+					break;
+				}
+				break;
+
+			default:
+				break;
+			}	// switch
+		}
+
+		/*==============================================================
 		 * 查找（回车）
 		 *==============================================================*/
 		private void TextBox_Filter_KeyPress(object sender, KeyPressEventArgs e)
@@ -214,8 +267,7 @@ namespace sub_db
 
 			DataRow dr = ((DataRowView)dataGridView_Main.SelectedCells[0].OwningRow.DataBoundItem).Row;
 
-			string dir = string.Format("{0:s}/{1:s}/{2:s}/{3:s}",
-										c_Config_.m_s_subs_path.Replace("\\", "/"),
+			string dir = string.Format("{0:s}/{1:s}/{2:s}",
 										(string)dr[c_Data_.e_ColumnName.path.ToString()],
 										(string)dr[c_Data_.e_ColumnName.source.ToString()],
 										(string)dr[c_Data_.e_ColumnName.sub_name.ToString()]);

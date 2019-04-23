@@ -83,15 +83,29 @@ namespace sub_db
 		 *==============================================================*/
 		private void c_Mainform_Activated(object sender, EventArgs e)
 		{
+			// Alt + Enter
 			c_Common_.RegHotKey(this.Handle,
-								c_Common_.m_k_HOTKEY_OPEN_DIR_ID,
-								c_Common_.KeyModifiers.Alt,
+								(int)c_Common_.e_HotKeyID.OpenDir,
+								c_Common_.e_KeyModifiers.Alt,
 								Keys.Enter);
 
+			// F1
 			c_Common_.RegHotKey(this.Handle,
-								c_Common_.m_k_HOTKEY_OPEN_URL_ID,
-								c_Common_.KeyModifiers.None,
+								(int)c_Common_.e_HotKeyID.OpenURL,
+								c_Common_.e_KeyModifiers.None,
 								Keys.F1);
+
+			// F3
+			c_Common_.RegHotKey(this.Handle,
+								(int)c_Common_.e_HotKeyID.Search,
+								c_Common_.e_KeyModifiers.None,
+								Keys.F3);
+
+			// F5
+			c_Common_.RegHotKey(this.Handle,
+								(int)c_Common_.e_HotKeyID.UpdateDB,
+								c_Common_.e_KeyModifiers.None,
+								Keys.F5);
 		}
 
 		/*==============================================================
@@ -99,8 +113,8 @@ namespace sub_db
 		 *==============================================================*/
 		private void c_Mainform_Deactivate(object sender, EventArgs e)
 		{
-			c_Common_.UnregisterHotKey(this.Handle, c_Common_.m_k_HOTKEY_OPEN_DIR_ID);
-			c_Common_.UnregisterHotKey(this.Handle, c_Common_.m_k_HOTKEY_OPEN_URL_ID);
+			for(int i=1; i<(int)c_Common_.e_HotKeyID.MAX; ++i)
+				c_Common_.UnregisterHotKey(this.Handle, i);
 		}
 
 		/*==============================================================
@@ -116,12 +130,20 @@ namespace sub_db
 			case WM_HOTKEY:
 				switch(msg.WParam.ToInt32())
 				{
-				case c_Common_.m_k_HOTKEY_OPEN_DIR_ID:
+				case (int)c_Common_.e_HotKeyID.OpenDir:
 					ToolStripButton_Folder_Click(null, null);
 					break;
 
-				case c_Common_.m_k_HOTKEY_OPEN_URL_ID:
+				case (int)c_Common_.e_HotKeyID.OpenURL:
 					ToolStripButton_URL_Click(null, null);
+					break;
+
+				case (int)c_Common_.e_HotKeyID.Search:
+					ToolStripButton_Search_Click(null, null);
+					break;
+
+				case (int)c_Common_.e_HotKeyID.UpdateDB:
+					ToolStripButton_UpdateDB_Click(null, null);
 					break;
 				}
 				break;

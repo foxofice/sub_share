@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Threading;
 using System.IO;
 using System.Diagnostics;
+using System.Net;
 
 namespace sub_db
 {
@@ -52,19 +53,101 @@ namespace sub_db
 			columnHeader_Log.Width = listView_Log.Width - columnHeader_Time.Width - 21;
 		}
 
+		Stopwatch m_sw = new Stopwatch();
+
 		/*==============================================================
 		 * 开始
 		 *==============================================================*/
 		private void PictureBox_Start_Click(object sender, EventArgs e)
 		{
-			append_log(c_Languages_.txt(54));	// 执行数据库更新...
 			m_is_updating_database	= true;
 			m_is_stopping			= false;
 
 			lock_controls(false);
 
-			Thread th = new Thread(update_db_thread);
-			th.Start();
+			progressBar_Update.Value	= 0;
+			label_Log.Text				= "";
+
+			if(radioButton_UseLocalData.Checked)
+			{
+				append_log(c_Languages_.txt(54));	// 执行数据库更新...
+
+				Thread th = new Thread(update_db_thread);
+				th.Start();
+			}
+			else
+			{
+				append_log(c_Languages_.txt(55));	// 正在从远程服务器下载数据库文件...
+
+				WebClient wc = new WebClient();
+				wc.DownloadProgressChanged	+= Wc_DownloadProgressChanged;
+				wc.DownloadFileCompleted	+= Wc_DownloadFileCompleted;
+
+				m_sw.Restart();
+
+				wc.DownloadFileAsync(	new Uri("https://github.com/foxofice/sub_share/raw/master/Subtitles DataBase/Files/db.xml"),
+										c_Path_.m_k_DB_FILENAME + ".bak",
+										wc );
+			}
+		}
+
+		/*==============================================================
+		 * 异步下载完成时
+		 *==============================================================*/
+		private void Wc_DownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
+		{
+			m_sw.Stop();
+
+			if(!e.Cancelled)
+			{
+				if(File.Exists(c_Path_.m_k_DB_FILENAME))
+					File.Delete(c_Path_.m_k_DB_FILENAME);
+
+				File.Move(c_Path_.m_k_DB_FILENAME + ".bak", c_Path_.m_k_DB_FILENAME);
+
+				append_log(c_Languages_.txt(61));	// 下载数据库文件完成
+
+				c_Config_.m_s_last_updata_db_time = DateTime.Now;
+				c_Config_.write_config();
+
+				// 加载数据
+				c_Data_.read_data_from_file();
+			}
+
+			lock_controls(true);
+
+			if(m_is_stopping)
+			{
+				append_log(	string.Format(	$"{c_Languages_.txt(57)}{c_Languages_.txt(59)}",	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
+											c_Data_.m_s_all_subs.Count,
+											m_sw.Elapsed.ToString() ),
+							Color.Blue );
+			}
+			else
+			{
+				append_log(	string.Format(	$"{c_Languages_.txt(58)}{c_Languages_.txt(59)}",	// 更新数据库完成（合计 {0:d} 条数据，耗时 {1:s}）
+											c_Data_.m_s_all_subs.Count,
+											m_sw.Elapsed.ToString() ),
+							Color.Green );
+			}
+
+			m_is_stopping = false;
+		}
+
+		/*==============================================================
+		 * 异步下载进度
+		 *==============================================================*/
+		private void Wc_DownloadProgressChanged(object sender, DownloadProgressChangedEventArgs e)
+		{
+			if(m_is_stopping)
+			{
+				WebClient wc = (WebClient)e.UserState;
+				wc.CancelAsync();
+				return;
+			}
+
+			label_Log.Text = $"{e.BytesReceived}/{e.TotalBytesToReceive}({e.ProgressPercentage}%)";
+			c_Common_.SetProgressValue(e.ProgressPercentage * 100);
 		}
 
 		/*==============================================================
@@ -81,13 +164,16 @@ namespace sub_db
 		 *==============================================================*/
 		void lock_controls(bool enabled)
 		{
-			pictureBox_Start.Enabled	= enabled;
-			pictureBox_Start.Image		= enabled ? Resource1.Start : Resource1.Start2;
-			pictureBox_Stop.Enabled		= !enabled;
-			pictureBox_Stop.Image		= enabled ? Resource1.Stop2 : Resource1.Stop;
+			pictureBox_Start.Enabled			= enabled;
+			pictureBox_Start.Image				= enabled ? Resource1.Start : Resource1.Start2;
+			pictureBox_Stop.Enabled				= !enabled;
+			pictureBox_Stop.Image				= enabled ? Resource1.Stop2 : Resource1.Stop;
 
-			label_Log.Visible			= !enabled;
-			progressBar_Update.Visible	= !enabled;
+			radioButton_UseLocalData.Enabled	= enabled;
+			radioButton_UseRemoteData.Enabled	= enabled;
+
+			label_Log.Visible					= !enabled;
+			progressBar_Update.Visible			= !enabled;
 		}
 
 		/*==============================================================
@@ -125,7 +211,7 @@ namespace sub_db
 			{
 				void func()
 				{
-					append_log(	$"{c_Languages_.txt(55)} {c_Config_.m_s_subs_path}",	// 找不到字幕路径
+					append_log(	$"{c_Languages_.txt(56)} {c_Config_.m_s_subs_path}",	// 找不到本地字幕路径
 								Color.Red );
 					lock_controls(true);
 				}
@@ -133,8 +219,7 @@ namespace sub_db
 				return;
 			}
 
-			Stopwatch sw = new Stopwatch();
-			sw.Start();
+			m_sw.Restart();
 
 			long can_refresh_UI_tick = 0;
 
@@ -339,9 +424,9 @@ namespace sub_db
 							c_Common_.SetProgressValue(progress_value);
 						}	// for dirs_video
 
-						if(can_refresh_UI_tick <= sw.ElapsedMilliseconds)
+						if(can_refresh_UI_tick <= m_sw.ElapsedMilliseconds)
 						{
-							can_refresh_UI_tick = sw.ElapsedMilliseconds + 50;	// 50ms 刷新一次界面
+							can_refresh_UI_tick = m_sw.ElapsedMilliseconds + 50;	// 50ms 刷新一次界面
 							Application.DoEvents();
 						}
 					}	// for dirs_year
@@ -359,7 +444,7 @@ namespace sub_db
 
 			void done_func()
 			{
-				sw.Stop();
+				m_sw.Stop();
 
 				c_Config_.m_s_last_updata_db_time = DateTime.Now;
 				c_Config_.write_config();
@@ -368,22 +453,22 @@ namespace sub_db
 
 				c_Data_.data2dt();
 
-				append_log(string.Format(	c_Languages_.txt(59),	// 正在把数据写入到文件 {0:s} ...
+				append_log(string.Format(	c_Languages_.txt(60),	// 正在把数据写入到文件 {0:s} ...
 											c_Path_.m_k_DB_FILENAME ));
 				c_Data_.m_s_dt.WriteXml(c_Path_.m_k_DB_FILENAME);
 
 				if(m_is_stopping)
 				{
-					append_log(	string.Format(	$"{c_Languages_.txt(56)}{c_Languages_.txt(58)}",	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
+					append_log(	string.Format(	$"{c_Languages_.txt(57)}{c_Languages_.txt(59)}",	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
 												c_Data_.m_s_all_subs.Count,
-												sw.Elapsed.ToString() ),
+												m_sw.Elapsed.ToString() ),
 								Color.Blue );
 				}
 				else
 				{
-					append_log(	string.Format(	$"{c_Languages_.txt(57)}{c_Languages_.txt(58)}",	// 更新数据库完成（合计 {0:d} 条数据，耗时 {1:s}）
+					append_log(	string.Format(	$"{c_Languages_.txt(58)}{c_Languages_.txt(59)}",	// 更新数据库完成（合计 {0:d} 条数据，耗时 {1:s}）
 												c_Data_.m_s_all_subs.Count,
-												sw.Elapsed.ToString() ),
+												m_sw.Elapsed.ToString() ),
 								Color.Green );
 				}
 

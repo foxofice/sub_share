@@ -35,11 +35,11 @@
 			this.toolStripButton_UpdateDB = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_Search = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSplitButton_Languages = new System.Windows.Forms.ToolStripSplitButton();
+			this.toolStripButton_Folder = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton_URL = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_About = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton_Folder = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton_URL = new System.Windows.Forms.ToolStripButton();
 			this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel_ItemsCount = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabel_MovieCount = new System.Windows.Forms.ToolStripStatusLabel();
@@ -96,10 +96,10 @@
 			// 
 			this.toolStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton_UpdateDB,
-            this.toolStripButton_Search,
-            this.toolStripSplitButton_Languages,
             this.toolStripButton_Folder,
             this.toolStripButton_URL,
+            this.toolStripButton_Search,
+            this.toolStripSplitButton_Languages,
             this.toolStripButton_Settings,
             this.toolStripSeparator1,
             this.toolStripButton_About});
@@ -114,8 +114,8 @@
 			this.toolStripButton_UpdateDB.Image = global::sub_db.Resource1.DB_Refresh;
 			this.toolStripButton_UpdateDB.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton_UpdateDB.Name = "toolStripButton_UpdateDB";
-			this.toolStripButton_UpdateDB.Size = new System.Drawing.Size(88, 22);
-			this.toolStripButton_UpdateDB.Text = "更新数据库";
+			this.toolStripButton_UpdateDB.Size = new System.Drawing.Size(109, 22);
+			this.toolStripButton_UpdateDB.Text = "更新数据库(F5)";
 			this.toolStripButton_UpdateDB.Click += new System.EventHandler(this.ToolStripButton_UpdateDB_Click);
 			// 
 			// toolStripButton_Search
@@ -123,8 +123,8 @@
 			this.toolStripButton_Search.Image = global::sub_db.Resource1.Search;
 			this.toolStripButton_Search.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton_Search.Name = "toolStripButton_Search";
-			this.toolStripButton_Search.Size = new System.Drawing.Size(76, 22);
-			this.toolStripButton_Search.Text = "高级查找";
+			this.toolStripButton_Search.Size = new System.Drawing.Size(97, 22);
+			this.toolStripButton_Search.Text = "高级查找(F3)";
 			this.toolStripButton_Search.Click += new System.EventHandler(this.ToolStripButton_Search_Click);
 			// 
 			// toolStripSplitButton_Languages
@@ -134,29 +134,6 @@
 			this.toolStripSplitButton_Languages.Name = "toolStripSplitButton_Languages";
 			this.toolStripSplitButton_Languages.Size = new System.Drawing.Size(135, 22);
 			this.toolStripSplitButton_Languages.Text = "语言(Languages)";
-			// 
-			// toolStripButton_Settings
-			// 
-			this.toolStripButton_Settings.Image = global::sub_db.Resource1.Settings;
-			this.toolStripButton_Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton_Settings.Name = "toolStripButton_Settings";
-			this.toolStripButton_Settings.Size = new System.Drawing.Size(52, 22);
-			this.toolStripButton_Settings.Text = "设置";
-			this.toolStripButton_Settings.Click += new System.EventHandler(this.ToolStripButton_Settings_Click);
-			// 
-			// toolStripSeparator1
-			// 
-			this.toolStripSeparator1.Name = "toolStripSeparator1";
-			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-			// 
-			// toolStripButton_About
-			// 
-			this.toolStripButton_About.Image = global::sub_db.Resource1.About;
-			this.toolStripButton_About.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton_About.Name = "toolStripButton_About";
-			this.toolStripButton_About.Size = new System.Drawing.Size(52, 22);
-			this.toolStripButton_About.Text = "关于";
-			this.toolStripButton_About.Click += new System.EventHandler(this.ToolStripButton_About_Click);
 			// 
 			// toolStripButton_Folder
 			// 
@@ -175,6 +152,31 @@
 			this.toolStripButton_URL.Size = new System.Drawing.Size(121, 22);
 			this.toolStripButton_URL.Text = "打开远程链接(F1)";
 			this.toolStripButton_URL.Click += new System.EventHandler(this.ToolStripButton_URL_Click);
+			// 
+			// toolStripButton_Settings
+			// 
+			this.toolStripButton_Settings.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton_Settings.Image = global::sub_db.Resource1.Settings;
+			this.toolStripButton_Settings.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton_Settings.Name = "toolStripButton_Settings";
+			this.toolStripButton_Settings.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton_Settings.Text = "设置";
+			this.toolStripButton_Settings.Click += new System.EventHandler(this.ToolStripButton_Settings_Click);
+			// 
+			// toolStripSeparator1
+			// 
+			this.toolStripSeparator1.Name = "toolStripSeparator1";
+			this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+			// 
+			// toolStripButton_About
+			// 
+			this.toolStripButton_About.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton_About.Image = global::sub_db.Resource1.About;
+			this.toolStripButton_About.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton_About.Name = "toolStripButton_About";
+			this.toolStripButton_About.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton_About.Text = "关于";
+			this.toolStripButton_About.Click += new System.EventHandler(this.ToolStripButton_About_Click);
 			// 
 			// statusStrip_Main
 			// 

@@ -12,18 +12,33 @@ namespace sub_db
 	internal class c_Common_
 	{
 		internal const string	m_k_PROGRAM_NAME		= "Subtitles Database";
-		internal const string	m_k_VERSION				= "v0.09";
+		internal const string	m_k_VERSION				= "v0.10";
 
 		internal const int		m_k_MAX_PROGRESS_VALUE	= 10000;
 
-		internal const int		m_k_HOTKEY_OPEN_DIR_ID	= 1;	// 「打开本地文件夹」的热键 ID
-		internal const int		m_k_HOTKEY_OPEN_URL_ID	= 2;	// 「打开远程链接」的热键 ID
+		// 热键 ID
+		internal enum e_HotKeyID
+		{
+			OpenDir	= 1,	// 打开本地文件夹
+			OpenURL,		// 打开远程链接
+			Search,			// 查找
+			UpdateDB,		// 更新数据库
+
+			MAX,
+		};
 
 		[Flags()]
-		public enum KeyModifiers { None = 0, Alt = 1, Ctrl = 2, Shift = 4, WindowsKey = 8 }
+		public enum e_KeyModifiers
+		{
+			None		= 0,
+			Alt			= 1,
+			Ctrl		= 2,
+			Shift		= 4,
+			WindowsKey	= 8
+		};
 
 		[DllImport("user32.dll", SetLastError = true)]
-		public static extern bool RegisterHotKey(IntPtr hWnd, int id, KeyModifiers fsModifiers, Keys vk);
+		public static extern bool RegisterHotKey(IntPtr hWnd, int id, e_KeyModifiers fsModifiers, Keys vk);
 
 		[DllImport("user32.dll", SetLastError = true)]
 		public static extern bool UnregisterHotKey(IntPtr hWnd, int id);
@@ -45,7 +60,7 @@ namespace sub_db
 		/*==============================================================
 		 * 注册热键
 		 *==============================================================*/
-		internal static void	RegHotKey(IntPtr hwnd, int hotKeyId, KeyModifiers keyModifiers, Keys key)
+		internal static void	RegHotKey(IntPtr hwnd, int hotKeyId, e_KeyModifiers keyModifiers, Keys key)
 		{
 			if(!RegisterHotKey(hwnd, hotKeyId, keyModifiers, key))
 			{

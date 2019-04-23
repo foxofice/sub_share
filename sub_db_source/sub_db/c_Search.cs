@@ -196,7 +196,8 @@ namespace sub_db
 
 			this.Close();
 
-			c_Mainform.m_s_mainform.textBox_Filter.Text = sb.ToString();
+			c_Mainform.m_s_mainform.radioButton_SearchBySQL.Checked	= true;
+			c_Mainform.m_s_mainform.textBox_Filter.Text				= sb.ToString();
 			c_Mainform.m_s_mainform.do_search();
 		}
 		#endregion

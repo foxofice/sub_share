@@ -12,7 +12,7 @@ namespace sub_db
 	internal class c_Common_
 	{
 		internal const string	m_k_PROGRAM_NAME		= "Subtitles Database";
-		internal const string	m_k_VERSION				= "v0.11";
+		internal const string	m_k_VERSION				= "v0.12";
 
 		internal const int		m_k_MAX_PROGRESS_VALUE	= 10000;
 

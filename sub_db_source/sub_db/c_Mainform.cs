@@ -54,7 +54,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void c_Mainform_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if(MessageBox.Show(	c_Languages_.txt(21),	// 是否要退出程序？
+			if(MessageBox.Show(	c_Languages_.txt(1),	// 是否要退出程序？
 								$"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}",
 								MessageBoxButtons.YesNo,
 								MessageBoxIcon.Question,
@@ -275,9 +275,28 @@ namespace sub_db
 			}
 			else
 			{
+				string filter_string;
+
+				if(radioButton_SearchByName.Checked)
+				{
+					StringBuilder sb = new StringBuilder();
+
+					string fix_Name = c_SQL.fix_string(textBox_Filter.Text);
+
+					sb.Append($"[name_chs] like '%{fix_Name}%' or ");
+					sb.Append($"[name_cht] like '%{fix_Name}%' or ");
+					sb.Append($"[name_jp] like '%{fix_Name}%' or ");
+					sb.Append($"[name_en] like '%{fix_Name}%' or ");
+					sb.Append($"[name_rome] like '%{fix_Name}%'");
+
+					filter_string = sb.ToString();
+				}
+				else
+					filter_string = textBox_Filter.Text;
+
 				try
 				{
-					DataRow[] dr_list = c_Data_.m_s_dt.Select(textBox_Filter.Text);
+					DataRow[] dr_list = c_Data_.m_s_dt.Select(filter_string);
 
 					c_Data_.m_s_dt_search.Rows.Clear();
 					foreach(DataRow dr in dr_list)

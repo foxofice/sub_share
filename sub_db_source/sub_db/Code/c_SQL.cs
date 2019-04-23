@@ -11,9 +11,33 @@ namespace sub_db
 		/*==============================================================
 		 * 修正字符串（转义字符）
 		 *==============================================================*/
-		internal static string	fix_string(string str)
+		internal static string	fix_string(string str, bool fix_RowFilter = true)
 		{
-			return str.Replace("'", "''");
+			str = str.Replace("'", "''");
+
+			if(!fix_RowFilter)
+				return str;
+
+			StringBuilder sb = new StringBuilder();
+
+			foreach(char c in str)
+			{
+				switch(c)
+				{
+				case '*':
+				case '%':
+				case '[':
+				case ']':
+					sb.Append($"[{c}]");
+					break;
+
+				default:
+					sb.Append(c);
+					break;
+				}
+			}	// for
+
+			return sb.ToString();
 		}
 	};
 }	// namespace sub_db

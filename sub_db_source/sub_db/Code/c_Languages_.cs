@@ -134,7 +134,8 @@ namespace sub_db
 			mainform.toolStripButton_URL.Text				= txt(16);	// 打开远程链接
 
 			// mainform
-			mainform.label_Filter.Text			= txt(20);							// 查询语句：
+			mainform.radioButton_SearchByName.Text			= txt(20);	// 根据名称查找
+			mainform.radioButton_SearchBySQL.Text			= txt(21);	// 使用查询语句查找
 			c_Forms_.m_s_Tooltip.SetToolTip(mainform.pictureBox_Search, txt(22));	// 查找
 
 			mainform.update_status();

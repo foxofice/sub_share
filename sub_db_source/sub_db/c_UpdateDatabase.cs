@@ -136,6 +136,8 @@ namespace sub_db
 			Stopwatch sw = new Stopwatch();
 			sw.Start();
 
+			long can_refresh_UI_tick = 0;
+
 			c_Data_.m_s_lock.EnterWriteLock();
 
 			c_Data_.m_s_all_subs.Clear();
@@ -336,6 +338,12 @@ namespace sub_db
 													c_Common_.m_k_MAX_PROGRESS_VALUE * (i_video + 1) / (dirs_year.Length * dirs_video.Length);
 							c_Common_.SetProgressValue(progress_value);
 						}	// for dirs_video
+
+						if(can_refresh_UI_tick <= sw.ElapsedMilliseconds)
+						{
+							can_refresh_UI_tick = sw.ElapsedMilliseconds + 50;	// 50ms 刷新一次界面
+							Application.DoEvents();
+						}
 					}	// for dirs_year
 				}	// for dirs_type
 

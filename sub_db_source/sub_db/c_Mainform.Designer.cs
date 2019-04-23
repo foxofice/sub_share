@@ -30,7 +30,6 @@
 		{
 			this.dataGridView_Main = new System.Windows.Forms.DataGridView();
 			this.textBox_Filter = new System.Windows.Forms.TextBox();
-			this.label_Filter = new System.Windows.Forms.Label();
 			this.linkLabel_FilterHelp = new System.Windows.Forms.LinkLabel();
 			this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
 			this.toolStripButton_UpdateDB = new System.Windows.Forms.ToolStripButton();
@@ -44,8 +43,10 @@
 			this.toolStripButton_URL = new System.Windows.Forms.ToolStripButton();
 			this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel_ItemsCount = new System.Windows.Forms.ToolStripStatusLabel();
-			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
 			this.toolStripStatusLabel_MovieCount = new System.Windows.Forms.ToolStripStatusLabel();
+			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
+			this.radioButton_SearchByName = new System.Windows.Forms.RadioButton();
+			this.radioButton_SearchBySQL = new System.Windows.Forms.RadioButton();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).BeginInit();
 			this.toolStrip_Main.SuspendLayout();
 			this.statusStrip_Main.SuspendLayout();
@@ -74,20 +75,11 @@
 			// 
 			this.textBox_Filter.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.textBox_Filter.Location = new System.Drawing.Point(83, 28);
+			this.textBox_Filter.Location = new System.Drawing.Point(244, 28);
 			this.textBox_Filter.Name = "textBox_Filter";
-			this.textBox_Filter.Size = new System.Drawing.Size(874, 21);
+			this.textBox_Filter.Size = new System.Drawing.Size(713, 21);
 			this.textBox_Filter.TabIndex = 2;
 			this.textBox_Filter.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TextBox_Filter_KeyPress);
-			// 
-			// label_Filter
-			// 
-			this.label_Filter.AutoSize = true;
-			this.label_Filter.Location = new System.Drawing.Point(12, 31);
-			this.label_Filter.Name = "label_Filter";
-			this.label_Filter.Size = new System.Drawing.Size(65, 12);
-			this.label_Filter.TabIndex = 1;
-			this.label_Filter.Text = "查询语句：";
 			// 
 			// linkLabel_FilterHelp
 			// 
@@ -210,10 +202,16 @@
 			this.toolStripStatusLabel_ItemsCount.Size = new System.Drawing.Size(55, 17);
 			this.toolStripStatusLabel_ItemsCount.Text = "0 条记录";
 			// 
+			// toolStripStatusLabel_MovieCount
+			// 
+			this.toolStripStatusLabel_MovieCount.Name = "toolStripStatusLabel_MovieCount";
+			this.toolStripStatusLabel_MovieCount.Size = new System.Drawing.Size(55, 17);
+			this.toolStripStatusLabel_MovieCount.Text = "0 部影片";
+			// 
 			// pictureBox_Search
 			// 
 			this.pictureBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.pictureBox_Search.Image = global::sub_db.Resource1.exec;
+			this.pictureBox_Search.Image = global::sub_db.Resource1.Search;
 			this.pictureBox_Search.Location = new System.Drawing.Point(963, 30);
 			this.pictureBox_Search.Name = "pictureBox_Search";
 			this.pictureBox_Search.Size = new System.Drawing.Size(16, 16);
@@ -222,22 +220,39 @@
 			this.pictureBox_Search.TabStop = false;
 			this.pictureBox_Search.Click += new System.EventHandler(this.PictureBox_Search_Click);
 			// 
-			// toolStripStatusLabel_MovieCount
+			// radioButton_SearchByName
 			// 
-			this.toolStripStatusLabel_MovieCount.Name = "toolStripStatusLabel_MovieCount";
-			this.toolStripStatusLabel_MovieCount.Size = new System.Drawing.Size(55, 17);
-			this.toolStripStatusLabel_MovieCount.Text = "0 部影片";
+			this.radioButton_SearchByName.AutoSize = true;
+			this.radioButton_SearchByName.Checked = true;
+			this.radioButton_SearchByName.Location = new System.Drawing.Point(12, 29);
+			this.radioButton_SearchByName.Name = "radioButton_SearchByName";
+			this.radioButton_SearchByName.Size = new System.Drawing.Size(95, 16);
+			this.radioButton_SearchByName.TabIndex = 6;
+			this.radioButton_SearchByName.TabStop = true;
+			this.radioButton_SearchByName.Text = "根据名称查找";
+			this.radioButton_SearchByName.UseVisualStyleBackColor = true;
+			// 
+			// radioButton_SearchBySQL
+			// 
+			this.radioButton_SearchBySQL.AutoSize = true;
+			this.radioButton_SearchBySQL.Location = new System.Drawing.Point(119, 29);
+			this.radioButton_SearchBySQL.Name = "radioButton_SearchBySQL";
+			this.radioButton_SearchBySQL.Size = new System.Drawing.Size(119, 16);
+			this.radioButton_SearchBySQL.TabIndex = 7;
+			this.radioButton_SearchBySQL.Text = "使用查询语句查找";
+			this.radioButton_SearchBySQL.UseVisualStyleBackColor = true;
 			// 
 			// c_Mainform
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1008, 729);
+			this.Controls.Add(this.radioButton_SearchBySQL);
+			this.Controls.Add(this.radioButton_SearchByName);
 			this.Controls.Add(this.statusStrip_Main);
 			this.Controls.Add(this.toolStrip_Main);
 			this.Controls.Add(this.pictureBox_Search);
 			this.Controls.Add(this.linkLabel_FilterHelp);
-			this.Controls.Add(this.label_Filter);
 			this.Controls.Add(this.textBox_Filter);
 			this.Controls.Add(this.dataGridView_Main);
 			this.Name = "c_Mainform";
@@ -259,7 +274,6 @@
 
 		#endregion
 		private System.Windows.Forms.LinkLabel linkLabel_FilterHelp;
-		internal System.Windows.Forms.Label label_Filter;
 		internal System.Windows.Forms.DataGridView dataGridView_Main;
 		private System.Windows.Forms.ToolStrip toolStrip_Main;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
@@ -276,6 +290,8 @@
 		internal System.Windows.Forms.ToolStripButton toolStripButton_Folder;
 		internal System.Windows.Forms.ToolStripButton toolStripButton_URL;
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_MovieCount;
+		internal System.Windows.Forms.RadioButton radioButton_SearchByName;
+		internal System.Windows.Forms.RadioButton radioButton_SearchBySQL;
 	}
 }
 

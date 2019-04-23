@@ -141,40 +141,42 @@ namespace sub_db
 			mainform.update_status();
 
 			// about
-			about.Text							= string.Format("{0:s} {1:s} {2:s}",
-																txt(14),	// 关于
-																c_Common_.m_k_PROGRAM_NAME,
-																c_Common_.m_k_VERSION);
+			about.Text					= string.Format("{0:s} {1:s} {2:s}",
+														txt(14),	// 关于
+														c_Common_.m_k_PROGRAM_NAME,
+														c_Common_.m_k_VERSION);
 
-			about.label_ChangeLog.Text			= string.Format("{0:s} {1:s}",
-																c_Common_.m_k_PROGRAM_NAME,
-																txt(30));	// 更新日志
+			about.label_ChangeLog.Text	= string.Format("{0:s} {1:s}",
+														c_Common_.m_k_PROGRAM_NAME,
+														txt(30));	// 更新日志
 
-			about.button_OK.Text				= txt(0);	// 确定
+			about.button_OK.Text						= txt(0);	// 确定
 
 			// setting
-			setting.Text						= txt(13);	// 设置
-			setting.label_subs_path.Text		= txt(40);	// 字幕路径：
-			setting.button_OK.Text				= txt(0);	// 确定
+			setting.Text								= txt(13);	// 设置
+			setting.label_subs_path.Text				= txt(40);	// 字幕路径：
+			setting.button_OK.Text						= txt(0);	// 确定
 
 			// update_database
 			c_Forms_.m_s_Tooltip.SetToolTip(update_db.pictureBox_Start,	txt(50));	// 开始更新数据库
 			c_Forms_.m_s_Tooltip.SetToolTip(update_db.pictureBox_Stop,	txt(51));	// 停止更新数据库
-			update_db.Text						= txt(10);	// 更新数据库
-			update_db.columnHeader_Time.Text	= txt(52);	// 时间
-			update_db.columnHeader_Log.Text		= txt(53);	// 日志
+			update_db.Text								= txt(10);	// 更新数据库
+			update_db.columnHeader_Time.Text			= txt(52);	// 时间
+			update_db.columnHeader_Log.Text				= txt(53);	// 日志
+			update_db.radioButton_UseLocalData.Text		= txt(62);	// 使用本地字幕数据
+			update_db.radioButton_UseRemoteData.Text	= txt(63);	// 使用服务器字幕数据
 
 			// search
-			adv_search.label_Name.Text			= txt(70);	// 影片名称：
-			adv_search.label_SubName.Text		= txt(71);	// 字幕名称：
-			adv_search.label_Extension.Text		= txt(72);	// 字幕文件后缀：
-			adv_search.label_Providers.Text		= txt(73);	// 提供者/字幕组：
-			adv_search.label_Desc.Text			= txt(74);	// 描述：
-			adv_search.label_Type.Text			= txt(75);	// 类型：
-			adv_search.label_Source.Text		= txt(76);	// 片源：
-			adv_search.checkBox_Time.Text		= txt(77);	// 影片放送日期
-			adv_search.linkLabel_Reset.Text		= txt(78);	// 重置搜索条件
-			adv_search.button_Search.Text		= txt(79);	// 搜索
+			adv_search.label_Name.Text					= txt(70);	// 影片名称：
+			adv_search.label_SubName.Text				= txt(71);	// 字幕名称：
+			adv_search.label_Extension.Text				= txt(72);	// 字幕文件后缀：
+			adv_search.label_Providers.Text				= txt(73);	// 提供者/字幕组：
+			adv_search.label_Desc.Text					= txt(74);	// 描述：
+			adv_search.label_Type.Text					= txt(75);	// 类型：
+			adv_search.label_Source.Text				= txt(76);	// 片源：
+			adv_search.checkBox_Time.Text				= txt(77);	// 影片放送日期
+			adv_search.linkLabel_Reset.Text				= txt(78);	// 重置搜索条件
+			adv_search.button_Search.Text				= txt(79);	// 搜索
 		}
 
 		/*==============================================================

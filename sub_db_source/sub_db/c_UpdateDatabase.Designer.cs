@@ -73,7 +73,7 @@
 			// 
 			this.label_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.label_Log.AutoSize = true;
-			this.label_Log.Location = new System.Drawing.Point(223, 419);
+			this.label_Log.Location = new System.Drawing.Point(236, 419);
 			this.label_Log.Name = "label_Log";
 			this.label_Log.Size = new System.Drawing.Size(11, 12);
 			this.label_Log.TabIndex = 1;
@@ -84,10 +84,10 @@
 			// 
 			this.progressBar_Update.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.progressBar_Update.Location = new System.Drawing.Point(225, 439);
+			this.progressBar_Update.Location = new System.Drawing.Point(238, 439);
 			this.progressBar_Update.Maximum = 10000;
 			this.progressBar_Update.Name = "progressBar_Update";
-			this.progressBar_Update.Size = new System.Drawing.Size(397, 10);
+			this.progressBar_Update.Size = new System.Drawing.Size(384, 10);
 			this.progressBar_Update.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
 			this.progressBar_Update.TabIndex = 2;
 			this.progressBar_Update.Visible = false;
@@ -175,7 +175,7 @@
 		internal System.Windows.Forms.PictureBox pictureBox_Start;
 		internal System.Windows.Forms.PictureBox pictureBox_Stop;
 		internal System.Windows.Forms.ProgressBar progressBar_Update;
-		private System.Windows.Forms.RadioButton radioButton_UseLocalData;
-		private System.Windows.Forms.RadioButton radioButton_UseRemoteData;
+		internal System.Windows.Forms.RadioButton radioButton_UseLocalData;
+		internal System.Windows.Forms.RadioButton radioButton_UseRemoteData;
 	}
 }

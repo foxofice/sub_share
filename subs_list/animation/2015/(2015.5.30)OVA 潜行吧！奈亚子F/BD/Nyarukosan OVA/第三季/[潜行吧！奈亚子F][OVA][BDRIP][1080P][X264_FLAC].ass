@@ -1,0 +1,499 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 
+Original Script: 
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+Synch Point: 
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,SubSans,70,&H00FFFFFF,&HF0000000,&H00600090,&H80000000,-1,0,0,0,100,95,0,0,1,3,0,2,30,30,30,134
+Style: OPCN,方正粗黑宋简体,70,&H007D00D8,&HF0000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,3,0,1,3,0,2,30,30,30,134
+Style: OPJP,A-OTF Kakumin Pro B,70,&H007D00D8,&HF0000000,&H00FFFFFF,&H00000000,0,0,0,0,100,100,3,0,1,3,0,8,30,30,20,1
+Style: EDCN,SubLan,70,&H00FFFFFF,&HF0000000,&H00000000,&H00000000,-1,0,0,0,100,100,3,0,1,2,4,2,30,30,15,134
+Style: EDJP,FOT-Rodin Pro DB,70,&H00FFFFFF,&HF0000000,&H00000000,&H00000000,0,0,0,0,100,100,3,0,1,2,4,8,30,30,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:01:30.71,0:01:32.30,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}にゃんにゃんにゃにゃんにゃん　にゃんてこったい！
+Dialogue: 0,0:01:32.38,0:01:35.72,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}愛の可能性にゃんてもんを掘り下げたいんです
+Dialogue: 0,0:01:35.84,0:01:37.47,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}逃げにゃいでっ(Nyagain！！)
+Dialogue: 0,0:01:37.76,0:01:41.06,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}うー！にゃー！Once Nyagain！！ うー！にゃー！Once Nyagain！！
+Dialogue: 0,0:01:41.22,0:01:44.27,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}うー！にゃー！逃げにゃいでっ Nyagain！！
+Dialogue: 0,0:01:44.64,0:01:47.70,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真の戦いはこれからです(にゃんだい？)
+Dialogue: 0,0:01:48.10,0:01:50.77,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}だって何回も甦る(にゃんだい？)
+Dialogue: 0,0:01:50.82,0:01:52.52,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}敵の名は…
+Dialogue: 0,0:01:52.57,0:01:54.69,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}知ってるでしょ？(知らない！)
+Dialogue: 0,0:01:54.90,0:01:57.95,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}本心隠しちゃいけませんよ(そうにゃ！)
+Dialogue: 0,0:01:58.32,0:02:01.08,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}どんな遠くても巡り合って(そうにゃ！)
+Dialogue: 0,0:02:01.12,0:02:02.78,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}始まるのです
+Dialogue: 0,0:02:02.84,0:02:04.83,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}外伝なのです(そして？)
+Dialogue: 0,0:02:05.00,0:02:06.50,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}愛されたいもっともっと
+Dialogue: 0,0:02:06.66,0:02:08.54,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}愛されたいもっともっとね
+Dialogue: 0,0:02:08.63,0:02:11.67,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}恋したキミを頭から食べよう
+Dialogue: 0,0:02:12.00,0:02:15.09,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}ちょっと押さえて！その比喩いかんよ(あぶにゃい！)
+Dialogue: 0,0:02:15.42,0:02:18.22,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}おっと…心は暴走トレイン(あぶにゃい！)
+Dialogue: 0,0:02:18.30,0:02:22.10,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}止まらない　止められない！(止めない！)
+Dialogue: 0,0:02:22.18,0:02:25.47,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}はーい乱れた聖のビジョンで
+Dialogue: 0,0:02:25.56,0:02:28.56,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}生きとし生けるものたち
+Dialogue: 0,0:02:29.02,0:02:30.56,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}愛されたいもっともっと
+Dialogue: 0,0:02:30.69,0:02:32.27,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}愛されたいもっともっと
+Dialogue: 0,0:02:32.40,0:02:37.36,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}種族の壁越えたら(這いよれ！Oh my love)
+Dialogue: 0,0:02:37.53,0:02:40.70,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}三度目の正直は嘘でーす
+Dialogue: 0,0:02:40.95,0:02:44.16,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最初から正直に、ねっ？(こっちを向いてよ！)
+Dialogue: 0,0:02:44.41,0:02:47.50,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}大好きです　知ってますか？ 大好きです
+Dialogue: 0,0:02:47.83,0:02:51.08,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最初から正直な私は
+Dialogue: 0,0:02:51.25,0:02:52.88,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}にゃんにゃんにゃにゃんにゃん　にゃんてこったい！
+Dialogue: 0,0:02:52.96,0:02:56.21,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}愛の可能性にゃんてもんを掘り下げたいんです
+Dialogue: 0,0:02:56.34,0:02:58.72,OPJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}逃げにゃいでっ(Nyagain！！)
+Dialogue: 0,0:01:30.71,0:01:32.30,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喵喵喵喵喵 喵了个去！
+Dialogue: 0,0:01:32.38,0:01:35.72,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}探索所谓的爱的可能性
+Dialogue: 0,0:01:35.84,0:01:37.47,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}别跑了(Nyagain！！)
+Dialogue: 0,0:01:37.76,0:01:41.06,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}呜～！喵～！Once Nyagain！! 呜～！喵～！Once Nyagain！!
+Dialogue: 0,0:01:41.22,0:01:44.27,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}呜～！喵～！别跑啦 Nyagain！!
+Dialogue: 0,0:01:44.64,0:01:47.70,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真正的战斗即将开始（啥喵？)
+Dialogue: 0,0:01:48.10,0:01:50.77,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}无论多少次都能起死回生（啥喵？)
+Dialogue: 0,0:01:50.82,0:01:52.52,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}敌人的名字是…
+Dialogue: 0,0:01:52.57,0:01:54.69,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你知道的吧？(不知道！)
+Dialogue: 0,0:01:54.90,0:01:57.95,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}可不能隐藏真心哦（没错喵！)
+Dialogue: 0,0:01:58.32,0:02:01.08,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}无论多远千里来相逢（没错喵！)
+Dialogue: 0,0:02:01.12,0:02:02.78,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}开始了
+Dialogue: 0,0:02:02.84,0:02:04.83,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}所谓的外传(然后？)
+Dialogue: 0,0:02:05.00,0:02:06.50,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想要被爱多点多点
+Dialogue: 0,0:02:06.66,0:02:08.54,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想要被爱多点多一点
+Dialogue: 0,0:02:08.63,0:02:11.67,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}从脑袋开始品尝恋爱中的你
+Dialogue: 0,0:02:12.00,0:02:15.09,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}稍微缓缓！这个比喻不恰当(危险喵？)
+Dialogue: 0,0:02:15.42,0:02:18.22,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}且慢…心中就像暴走列车一般(危险喵？)
+Dialogue: 0,0:02:18.30,0:02:22.10,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}停不下来 停不下来！(不要停！)
+Dialogue: 0,0:02:22.18,0:02:25.47,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}来 凭借淫乱的神圣理想
+Dialogue: 0,0:02:25.56,0:02:28.56,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}存活于世的苍生万物
+Dialogue: 0,0:02:29.02,0:02:30.56,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想要被爱多点多点
+Dialogue: 0,0:02:30.69,0:02:32.27,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想要被爱多点多点
+Dialogue: 0,0:02:32.40,0:02:37.36,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}跨越种族的界限(潜行吧！Oh my love)
+Dialogue: 0,0:02:37.53,0:02:40.70,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}事不过三都是骗人的
+Dialogue: 0,0:02:40.95,0:02:44.16,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最开始就坦白交代 好吧!（朝我看！)
+Dialogue: 0,0:02:44.41,0:02:47.50,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最喜欢你了 知道吗？最喜欢你了
+Dialogue: 0,0:02:47.83,0:02:51.08,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最开始就坦白交代的我…
+Dialogue: 0,0:02:51.25,0:02:52.88,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喵喵喵喵喵 喵了个去！
+Dialogue: 0,0:02:52.96,0:02:56.21,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}探索所谓的爱的可能性
+Dialogue: 0,0:02:56.34,0:02:58.72,OPCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}别跑了(Nyagain！！)
+Dialogue: 0,0:26:27.12,0:26:31.33,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}宇宙の法則はたまた
+Dialogue: 0,0:26:31.42,0:26:35.13,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}生命の営みとか
+Dialogue: 0,0:26:35.30,0:26:41.72,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}ちょー自然な流れ　君とエンゲージ
+Dialogue: 0,0:26:56.94,0:27:00.07,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}ありふれてる Boy meets Girl
+Dialogue: 0,0:27:00.49,0:27:03.95,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}スペシャリテに変えるものは
+Dialogue: 0,0:27:04.12,0:27:10.87,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}簡単に　倒れない　至上の愛でしょう
+Dialogue: 0,0:27:11.37,0:27:14.84,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}走ってたって　眠ってたって
+Dialogue: 0,0:27:15.00,0:27:18.47,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}Merry-Go-Loveで 止められなくて
+Dialogue: 0,0:27:18.59,0:27:25.72,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}他の選択肢はないのです
+Dialogue: 0,0:27:26.64,0:27:30.85,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}ニュースなりたいカンケイ
+Dialogue: 0,0:27:30.94,0:27:34.65,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}熱愛発覚したいな
+Dialogue: 0,0:27:34.81,0:27:40.90,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}ぜんぶ　ぜんぶ　あげちゃう　これってエンゲージ
+Dialogue: 0,0:27:41.11,0:27:45.33,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}宇宙の法則はたまた
+Dialogue: 0,0:27:45.41,0:27:49.12,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}生命の営みとか
+Dialogue: 0,0:27:49.29,0:27:56.17,EDJP,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}ちょー自然な流れ　君とエンゲージ
+Dialogue: 0,0:26:27.12,0:26:31.33,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}宇宙的法则
+Dialogue: 0,0:26:31.42,0:26:35.13,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}亦或是生命的孕育
+Dialogue: 0,0:26:35.30,0:26:41.72,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}经历超自然的过程 最终与你结缘
+Dialogue: 0,0:26:56.94,0:27:00.07,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}司空见惯的 Boy meets Girl
+Dialogue: 0,0:27:00.49,0:27:03.95,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}变得如此与众不同
+Dialogue: 0,0:27:04.12,0:27:10.87,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}无法被轻易击垮 至高的爱
+Dialogue: 0,0:27:11.37,0:27:14.84,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}无论奔跑 或是安眠
+Dialogue: 0,0:27:15.00,0:27:18.47,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}Merry-Go-Love 停不下来
+Dialogue: 0,0:27:18.59,0:27:25.72,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}没有其他的选择
+Dialogue: 0,0:27:26.64,0:27:30.85,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想要与你成为上新闻的关系
+Dialogue: 0,0:27:30.94,0:27:34.65,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}爱意何时才会暴露
+Dialogue: 0,0:27:34.81,0:27:40.90,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}献上所有的一切 愿与你结缘
+Dialogue: 0,0:27:41.11,0:27:45.33,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}宇宙的法则
+Dialogue: 0,0:27:45.41,0:27:49.12,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}亦或是生命的孕育
+Dialogue: 0,0:27:49.29,0:27:56.17,EDCN,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}经历超自然的过程 最终与你结缘
+Dialogue: 0,0:00:35.07,0:00:36.33,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}八坂真寻
+Dialogue: 0,0:00:37.07,0:00:40.29,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你愿意娶八坂奈亚子托提普为妻
+Dialogue: 0,0:00:40.83,0:00:43.72,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}发誓一生都爱护着他吗
+Dialogue: 0,0:00:46.04,0:00:46.67,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我愿意
+Dialogue: 0,0:00:47.79,0:00:49.88,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}八坂奈亚子托提普
+Dialogue: 0,0:00:50.55,0:00:53.68,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你愿意嫁给八坂真寻
+Dialogue: 0,0:00:54.22,0:00:57.22,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}发誓一生都忠于他吗
+Dialogue: 0,0:00:58.50,0:00:59.35,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我愿意
+Dialogue: 0,0:01:00.22,0:01:02.48,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}现在 请献上誓约之吻吧
+Dialogue: 0,0:01:10.32,0:01:11.15,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻…
+Dialogue: 0,0:03:03.68,0:03:06.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}刚才梦到的都是啥…
+Dialogue: 0,0:03:08.93,0:03:09.89,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不对不对不对…
+Dialogue: 0,0:03:10.39,0:03:12.52,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}肯定又是奈亚子那家伙用了什么奇怪的机器
+Dialogue: 0,0:03:12.56,0:03:14.11,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}或者是啥更惊悚的东西
+Dialogue: 0,0:03:14.56,0:03:17.07,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}让我梦到对她有利的梦
+Dialogue: 0,0:03:17.57,0:03:19.19,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}没错一定是这样
+Dialogue: 0,0:03:19.90,0:03:21.78,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}看我不说她两句
+Dialogue: 0,0:03:23.41,0:03:24.49,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喂 奈亚子
+Dialogue: 0,0:03:25.41,0:03:26.66,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}潜行吧！奈亚子
+Dialogue: 0,0:03:27.12,0:03:29.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}至今为止完成的三件事
+Dialogue: 0,0:03:29.50,0:03:30.16,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}第一件
+Dialogue: 0,0:03:30.46,0:03:33.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不按套路出牌的克苏鲁神话对决
+Dialogue: 0,0:03:34.21,0:03:39.09,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}像你们这样的小不点 我绝不会认可你们是克苏鲁神话
+Dialogue: 0,0:03:41.63,0:03:42.34,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}第二件
+Dialogue: 0,0:03:42.59,0:03:46.26,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}朝着银河究极混沌中心的移民船团
+Dialogue: 0,0:03:46.51,0:03:47.93,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}遭到敌人袭击
+Dialogue: 0,0:03:49.27,0:03:51.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我想尽快阻止这场战争
+Dialogue: 0,0:03:52.23,0:03:55.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}为此我们将会歌唱
+Dialogue: 0,0:03:55.98,0:03:56.94,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}只要我们…
+Dialogue: 0,0:03:57.57,0:03:58.78,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}…还能歌唱
+Dialogue: 0,0:03:59.28,0:04:02.40,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}听我们歌唱吧！
+Dialogue: 0,0:04:03.07,0:04:03.66,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}(<ゝω·)☆Kira
+Dialogue: 0,0:04:03.95,0:04:05.56,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}我们！(呜～！)聚集靠近(喵～！)
+Dialogue: 0,0:04:03.95,0:04:05.56,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}我々!(うー!)寄れ依れ!(にゃー!)
+Dialogue: 0,0:04:04.78,0:04:05.49,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}第三件
+Dialogue: 0,0:04:05.62,0:04:07.24,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}世界はDark!(こずみっく!)
+Dialogue: 0,0:04:05.62,0:04:07.24,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}世界很黑暗！(cosmicl)
+Dialogue: 0,0:04:06.12,0:04:08.16,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}为了拯救我们的高中
+Dialogue: 0,0:04:07.28,0:04:14.12,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}(うー!にゃー!うー!にゃー!うー!にゃー!レッツにゃー!)
+Dialogue: 0,0:04:07.28,0:04:14.12,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}(呜～！喵～！呜～！喵～！呜～！喵～！Let's喵～！)
+Dialogue: 0,0:04:08.41,0:04:10.83,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}开始了学园潜行计划
+Dialogue: 0,0:04:08.41,0:04:10.83,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}school Haiyoru Proiect
+Dialogue: 0,0:04:11.50,0:04:13.83,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我们的Lovecraft Live！
+Dialogue: 0,0:04:14.21,0:04:17.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}心ぬるぬる異形の神々
+Dialogue: 0,0:04:14.21,0:04:17.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}心脏黏糊糊的异形众神
+Dialogue: 0,0:04:19.05,0:04:20.17,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这什么鬼东西
+Dialogue: 0,0:04:20.51,0:04:22.51,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}早上好啊！真寻
+Dialogue: 0,0:04:23.05,0:04:25.51,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我在问这是什么东西
+Dialogue: 0,0:04:26.09,0:04:28.14,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我们做的Fan Movie
+Dialogue: 0,0:04:28.89,0:04:31.27,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}打算把它上传到MigoMigo动画
+Dialogue: 0,0:04:31.72,0:04:34.64,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}下次真寻也一起来拍嘛
+Dialogue: 0,0:04:34.77,0:04:35.90,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}才不干
+Dialogue: 0,0:04:36.52,0:04:37.69,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不对
+Dialogue: 0,0:04:38.02,0:04:39.02,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喂 奈亚子
+Dialogue: 0,0:04:39.40,0:04:42.03,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}在在 请问您今天要来点奈亚子吗
+Dialogue: 0,0:04:42.65,0:04:44.86,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想要早安之吻的话现在在这里就行哦
+Dialogue: 0,0:04:46.36,0:04:48.99,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}果然今天早上的那个是你干的啊
+Dialogue: 0,0:04:49.37,0:04:51.04,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}啥？你指什么
+Dialogue: 0,0:04:51.45,0:04:54.66,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}反正肯定用了奇怪的机器让我做了那种梦
+Dialogue: 0,0:04:55.21,0:04:57.33,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}梦？什么梦
+Dialogue: 0,0:04:58.08,0:04:59.88,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}那是我和奈亚子…
+Dialogue: 0,0:05:00.59,0:05:02.84,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}恩 我和真寻怎么了
+Dialogue: 0,0:05:04.30,0:05:07.64,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}所以我是指…
+Dialogue: 0,0:05:13.10,0:05:14.17,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}怎么说呢…
+Dialogue: 0,0:05:14.43,0:05:19.02,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喵来如此 真寻也是男子高中生的日常啊
+Dialogue: 0,0:05:19.65,0:05:22.19,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}在健全而又淫荡的梦里
+Dialogue: 0,0:05:22.44,0:05:24.24,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}怀着热烈而又悲怆心情的真寻
+Dialogue: 0,0:05:24.44,0:05:25.99,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}一把抱住蓝天和我
+Dialogue: 0,0:05:26.20,0:05:27.66,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最终变成了神话
+Dialogue: 0,0:05:27.82,0:05:29.07,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我指性方面
+Dialogue: 0,0:05:29.24,0:05:30.99,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我没这么说吧
+Dialogue: 0,0:05:31.41,0:05:34.16,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}如果被宇宙级恶心而又纯爱的I want you了的话
+Dialogue: 0,0:05:34.45,0:05:36.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子会怀孕的
+Dialogue: 0,0:05:37.00,0:05:37.96,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}绝对！
+Dialogue: 0,0:05:38.58,0:05:39.71,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}像是说「呜～！」就必须接「喵～！」
+Dialogue: 0,0:05:40.13,0:05:43.38,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}说「San值」就必须接「危机」这般绝对
+Dialogue: 0,0:05:44.05,0:05:47.55,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}只能让你负起责任娶我了
+Dialogue: 0,0:05:48.01,0:05:52.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}所以真寻赶紧和我造第二个吧
+Dialogue: 0,0:05:51.97,0:05:55.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}为啥啊 别闹了
+Dialogue: 0,0:05:52.31,0:05:55.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我会激情四射的真寻的
+Dialogue: 0,0:05:55.14,0:05:56.35,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}来
+Dialogue: 0,0:05:57.10,0:06:00.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}少年 居然敢在没有我允许之下
+Dialogue: 0,0:06:00.56,0:06:03.36,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}在梦里和奈亚子卿卿我我打包回家
+Dialogue: 0,0:06:03.86,0:06:05.15,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}罪该万死
+Dialogue: 0,0:06:05.69,0:06:07.65,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}为啥还要你允许啊
+Dialogue: 0,0:06:08.45,0:06:09.28,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我说
+Dialogue: 0,0:06:10.20,0:06:10.87,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}少年
+Dialogue: 0,0:06:12.20,0:06:14.33,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}明明都和我订婚了
+Dialogue: 0,0:06:15.33,0:06:18.54,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}所以也算上我一个和奈亚子3P…
+Dialogue: 0,0:06:18.58,0:06:19.58,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}为啥啊
+Dialogue: 0,0:06:20.83,0:06:22.29,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真…真寻
+Dialogue: 0,0:06:23.75,0:06:24.34,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}莲太？
+Dialogue: 0,0:06:25.09,0:06:26.96,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我可是相信着的哦
+Dialogue: 0,0:06:27.67,0:06:33.01,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻最后一定会回到我身边的
+Dialogue: 0,0:06:33.26,0:06:34.85,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不 你不用信
+Dialogue: 0,0:06:35.22,0:06:37.27,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}比起这些 真寻～
+Dialogue: 0,0:06:38.52,0:06:39.60,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好痛
+Dialogue: 0,0:06:39.81,0:06:40.94,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你差不多一点
+Dialogue: 0,0:06:41.15,0:06:43.90,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}快快 快来和我生米煮成熟饭吧
+Dialogue: 0,0:06:44.94,0:06:46.82,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}少年 我也要
+Dialogue: 0,0:06:47.03,0:06:48.57,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真…真寻！
+Dialogue: 0,0:06:48.99,0:06:50.70,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻 我爱你
+Dialogue: 0,0:06:50.78,0:06:51.57,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}少年
+Dialogue: 0,0:06:51.61,0:06:53.53,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你们好狡猾 我也想要啊
+Dialogue: 0,0:06:53.95,0:06:55.79,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}吵死了吵死了吵死了
+Dialogue: 0,0:06:55.91,0:06:56.49,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}卡欧斯
+Dialogue: 0,0:06:56.66,0:06:57.41,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}梅吉翁
+Dialogue: 0,0:06:57.50,0:06:58.29,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}伊利斯
+Dialogue: 0,0:07:00.62,0:07:02.38,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你们脑袋冷静下来了么
+Dialogue: 0,0:07:02.96,0:07:03.79,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}是…
+Dialogue: 0,0:07:06.42,0:07:07.26,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}呀吼
+Dialogue: 0,0:07:07.76,0:07:09.09,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}早上好 八坂
+Dialogue: 0,0:07:09.97,0:07:12.76,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}怎么了 两个人放假的时候一起来我家
+Dialogue: 0,0:07:13.14,0:07:16.14,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真是的 亏我特意努力准备好了
+Dialogue: 0,0:07:16.51,0:07:18.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}多谢我两句不行吗
+Dialogue: 0,0:07:19.77,0:07:23.15,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}搞其所有人的票可是很辛苦的
+Dialogue: 0,0:07:24.90,0:07:27.82,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}看 现在很火的游乐设施
+Dialogue: 0,0:07:28.36,0:07:30.36,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}现实逃脱游戏
+Dialogue: 0,0:07:32.53,0:07:36.08,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}潜心开关ON
+Dialogue: 0,0:07:34.57,0:07:36.08,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}混沌来啦——！
+Dialogue: 0,0:07:39.54,0:07:41.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}连我都一起来合适吗
+Dialogue: 0,0:07:41.75,0:07:47.00,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}当了个然啦 真寻的妈妈不一起来的话快乐都减半了
+Dialogue: 0,0:07:47.84,0:07:48.42,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我很开心
+Dialogue: 0,0:07:51.09,0:07:53.89,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这样一步一步地提升好感度
+Dialogue: 0,0:07:54.14,0:07:57.05,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}「女友(暂定)」就会慢慢变成「女友」
+Dialogue: 0,0:07:57.51,0:08:00.77,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最后开花结果了
+Dialogue: 0,0:08:06.73,0:08:08.48,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}叹什么气呢
+Dialogue: 0,0:08:09.03,0:08:14.03,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}没 只是我一直在想 我是不是没拒绝权啊
+Dialogue: 0,0:08:14.91,0:08:15.53,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}别在意
+Dialogue: 0,0:08:16.37,0:08:18.74,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}开心点 好吗 真寻
+Dialogue: 0,0:08:19.29,0:08:23.08,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}就是就是 不玩个痛快快怎么行
+Dialogue: 0,0:08:24.62,0:08:27.29,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}看到了 就是那里
+Dialogue: 0,0:08:30.05,0:08:31.05,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}欢迎各位光临
+Dialogue: 0,0:08:31.42,0:08:34.72,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我是本游乐设施的导游
+Dialogue: 0,0:08:35.51,0:08:40.97,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}目前正在准备中 请稍候片刻
+Dialogue: 0,0:08:41.72,0:08:44.48,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}还有接待饮料 挺体贴的嘛
+Dialogue: 0,0:08:44.94,0:08:47.48,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}说不定这些细节就是人气高涨的秘密呢
+Dialogue: 0,0:08:48.69,0:08:50.86,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}除了我们没人啊
+Dialogue: 0,0:08:51.78,0:08:53.57,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}据说是为了让我们好好体验游乐设施
+Dialogue: 0,0:08:54.20,0:08:56.74,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}故意和其他游客错开了
+Dialogue: 0,0:08:58.91,0:09:04.16,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}久等了 那么就请两人一组完成任务
+Dialogue: 0,0:09:04.29,0:09:06.46,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}朝着终点进发吧
+Dialogue: 0,0:09:07.63,0:09:11.63,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}决定和谁组队之后 就各自选个们前进吧
+Dialogue: 0,0:09:12.26,0:09:14.26,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}组队…也就是说…
+Dialogue: 0,0:09:14.76,0:09:15.63,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}和奈亚子
+Dialogue: 0,0:09:16.34,0:09:17.43,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}和真寻
+Dialogue: 0,0:09:20.68,0:09:22.56,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}石头剪子…
+Dialogue: 0,0:09:25.98,0:09:27.19,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}太棒了！
+Dialogue: 0,0:09:27.48,0:09:31.27,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}一直都面带微笑潜行到真寻身边的是？
+Dialogue: 0,0:09:31.94,0:09:34.03,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}果然还得是我
+Dialogue: 0,0:09:42.24,0:09:44.33,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}做得还挺精致的嘛
+Dialogue: 0,0:09:44.75,0:09:46.71,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}一起加油吧 夏塔君
+Dialogue: 0,0:09:50.21,0:09:55.92,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}各位 别忘了要请第一名吃蛋糕哦
+Dialogue: 0,0:09:56.55,0:09:57.59,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}是～
+Dialogue: 0,0:09:57.90,0:10:00.09,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}从七个诅咒中逃脱
+Dialogue: 0,0:10:00.14,0:10:01.39,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}开始！
+Dialogue: 0,0:10:42.55,0:10:43.39,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}从七个诅咒中逃脱
+Dialogue: 0,0:10:43.43,0:10:45.14,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\an8}逃脱成功
+Dialogue: 0,0:10:45.56,0:10:48.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}太好了 第一名！
+Dialogue: 0,0:10:48.98,0:10:52.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}伴随着花瓣漂流的爱传递给奈亚子吗
+Dialogue: 0,0:10:52.56,0:10:54.48,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}湿着就去了
+Dialogue: 0,0:10:55.48,0:10:57.40,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}哎呀 真可惜 输了输了
+Dialogue: 0,0:10:59.82,0:11:03.07,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}没想到还有要穿泳衣的设施
+Dialogue: 0,0:11:05.16,0:11:10.16,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我已经没法做新郎了
+Dialogue: 0,0:11:11.12,0:11:12.67,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}是…是吗
+Dialogue: 0,0:11:14.75,0:11:18.13,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}啊 好慢啊 八坂 奈亚子
+Dialogue: 0,0:11:18.71,0:11:20.68,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}唉 最后一名吗
+Dialogue: 0,0:11:21.34,0:11:23.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}明明挺努力了
+Dialogue: 0,0:11:23.97,0:11:29.39,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}那么 就按照约定 让我们朝着蛋糕店前进吧
+Dialogue: 0,0:11:29.98,0:11:30.98,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}下手轻点啊
+Dialogue: 0,0:11:31.64,0:11:33.52,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真尽兴呢 夏塔君
+Dialogue: 0,0:11:35.82,0:11:37.40,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}小寻你们怎么样
+Dialogue: 0,0:11:37.90,0:11:40.15,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}当然很开心了
+Dialogue: 0,0:11:40.65,0:11:43.11,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}嗯 有了不错的回忆
+Dialogue: 0,0:11:44.03,0:11:46.20,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}是嘛 那真是太好了
+Dialogue: 0,0:11:56.42,0:11:57.88,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这是啥啊
+Dialogue: 0,0:11:59.21,0:12:02.51,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这些怪物不是这设施里的东西吧
+Dialogue: 0,0:12:03.56,0:12:06.01,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想要加害于真寻的家伙 恶即斩
+Dialogue: 0,0:12:06.40,0:12:09.01,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}破坏一切后再连结一切
+Dialogue: 0,0:12:11.33,0:12:15.31,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}就用我的宇宙CQC
+Dialogue: 0,0:12:16.81,0:12:17.44,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}咦？
+Dialogue: 0,0:12:18.36,0:12:19.02,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}消失了?
+Dialogue: 0,0:12:19.73,0:12:21.86,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}又是妨碍宇宙CQC的设备么
+Dialogue: 0,0:12:23.24,0:12:27.66,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这样的话 就用宇宙CQC Part 2
+Dialogue: 0,0:12:30.54,0:12:31.83,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喂 奈亚子
+Dialogue: 0,0:12:32.41,0:12:33.83,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}没…没事的！
+Dialogue: 0,0:12:34.29,0:12:36.67,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}还不用慌张
+Dialogue: 0,0:12:37.38,0:12:40.76,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这样的话 就用不吉利的混沌肉体战
+Dialogue: 0,0:12:41.13,0:12:43.42,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}青春臂勾！
+Dialogue: 0,0:12:44.38,0:12:46.80,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}为什么臂勾要用脚啊
+Dialogue: 0,0:12:51.27,0:12:51.81,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}怎么会
+Dialogue: 0,0:12:54.77,0:12:56.27,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好痛！
+Dialogue: 0,0:12:58.52,0:13:01.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好痛！ 好痛！好～痛！
+Dialogue: 0,0:13:04.32,0:13:07.82,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}宇宙纳米机器人终于奏效了呢
+Dialogue: 0,0:13:08.49,0:13:09.49,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你谁啊
+Dialogue: 0,0:13:09.91,0:13:13.41,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}快现身吧 我保证让你死得很难看
+Dialogue: 0,0:13:14.00,0:13:17.37,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我在奈亚拉托提普你身体里安装的宇宙纳米机器人
+Dialogue: 0,0:13:17.88,0:13:20.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}已经开始渗透你全身的每一处神经
+Dialogue: 0,0:13:20.84,0:13:23.09,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不断剥夺你的体力和记忆
+Dialogue: 0,0:13:24.84,0:13:27.34,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这种东西到底是什么时候…
+Dialogue: 0,0:13:33.47,0:13:34.56,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真是聪明
+Dialogue: 0,0:13:35.18,0:13:40.27,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}现在在奈亚拉托提普的体内 宇宙纳米机器人也在不停繁殖
+Dialogue: 0,0:13:41.07,0:13:45.86,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}大约还有一小时 就能布满奈亚拉托提普的全身
+Dialogue: 0,0:13:46.45,0:13:49.45,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}夺走所有的体力和记忆
+Dialogue: 0,0:13:50.78,0:13:57.46,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}最后留下的 只有空虚且丧失内心和语言的躯壳
+Dialogue: 0,0:13:59.42,0:14:01.04,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我最想要的是…
+Dialogue: 0,0:14:01.50,0:14:02.17,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}秘密哟
+Dialogue: 0,0:14:05.55,0:14:08.97,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我的体力和记忆…
+Dialogue: 0,0:14:10.76,0:14:11.43,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子
+Dialogue: 0,0:14:11.97,0:14:15.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻 在我失去体力和记忆之前
+Dialogue: 0,0:14:15.31,0:14:18.48,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}给我爱的歌颂 爱的风暴 爱的曝光吧
+Dialogue: 0,0:14:18.52,0:14:20.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你够了啊
+Dialogue: 0,0:14:20.48,0:14:21.23,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}哎哟
+Dialogue: 0,0:14:23.27,0:14:25.86,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}要说他讲的那个宇宙纳米机器人是什么玩意
+Dialogue: 0,0:14:26.15,0:14:29.24,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不是什么东西加了宇宙两个字都能为所欲为的吧
+Dialogue: 0,0:14:29.66,0:14:32.03,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}「宇」可是「宇宙真不得了」的「宇」啊
+Dialogue: 0,0:14:32.37,0:14:35.16,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}宇宙的技术都不是开玩笑的 我说真的
+Dialogue: 0,0:14:35.83,0:14:39.62,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚拉托提普是这个计划中的障碍
+Dialogue: 0,0:14:40.12,0:14:41.92,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}同时也是不可或缺的一部分
+Dialogue: 0,0:14:42.04,0:14:44.00,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}傻 你在说些什么呢
+Dialogue: 0,0:14:45.59,0:14:50.05,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}对了对了 要想和外界连系也是不可能的
+Dialogue: 0,0:14:52.47,0:14:56.39,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}现在的奈亚拉托提普和普通人类没两样
+Dialogue: 0,0:14:57.14,0:15:01.65,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}别妄想能用宇宙CQC或者空手道踢来解决
+Dialogue: 0,0:15:02.44,0:15:05.19,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你做这种事到底有什么目的
+Dialogue: 0,0:15:08.11,0:15:11.70,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}果然产自地球的娱乐种类繁多
+Dialogue: 0,0:15:12.45,0:15:18.50,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}走私的时候要是获得身为行星保护机构精英的你的协助…
+Dialogue: 0,0:15:19.75,0:15:21.00,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}谁会如你所愿啊
+Dialogue: 0,0:15:21.79,0:15:25.75,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}完成任务  能顺利走出去的话就是你们俩赢了
+Dialogue: 0,0:15:26.30,0:15:27.76,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}走不出去就是输了
+Dialogue: 0,0:15:30.09,0:15:33.47,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这是游戏 很有趣不是吗
+Dialogue: 0,0:15:34.05,0:15:36.35,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这可不是那种游戏啊
+Dialogue: 0,0:15:36.89,0:15:40.23,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}如果改变主意就说一声 那么我就告辞了
+Dialogue: 0,0:15:44.86,0:15:51.78,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不用担心 我一定会保护好真寻的
+Dialogue: 0,0:15:56.24,0:15:58.08,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我开动了
+Dialogue: 0,0:16:01.75,0:16:03.04,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好好吃
+Dialogue: 0,0:16:04.00,0:16:07.04,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}珠绪的蛋糕看起来真好吃 是叫什么名字？
+Dialogue: 0,0:16:07.63,0:16:08.84,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}听说是叫「Flower Snow」
+Dialogue: 0,0:16:09.51,0:16:12.68,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}翻译过来就是花雪
+Dialogue: 0,0:16:13.51,0:16:14.72,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}克子的蛋糕呢?
+Dialogue: 0,0:16:15.89,0:16:17.68,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}White Sincerely
+Dialogue: 0,0:16:18.35,0:16:20.52,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真好吃 好棒
+Dialogue: 0,0:16:21.27,0:16:22.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}怎么样 小寻
+Dialogue: 0,0:16:22.85,0:16:23.48,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好吃吗
+Dialogue: 0,0:16:24.02,0:16:25.04,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}嗯 很好吃
+Dialogue: 0,0:16:25.94,0:16:27.11,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}嗯 非常好吃
+Dialogue: 0,0:16:29.02,0:16:29.65,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这样啊
+Dialogue: 0,0:16:49.50,0:16:52.46,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}可恶 如此多的数量竟然要我们全部打倒
+Dialogue: 0,0:16:52.88,0:16:54.22,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这游戏根本玩不了吧
+Dialogue: 0,0:16:56.43,0:16:57.01,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子！
+Dialogue: 0,0:16:58.47,0:17:03.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}万万没想到 无法随心所欲地支配自己的身体
+Dialogue: 0,0:17:03.18,0:17:06.94,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}竟会让我如此烦躁
+Dialogue: 0,0:17:07.90,0:17:11.03,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子的力量越来越弱了
+Dialogue: 0,0:17:13.36,0:17:16.57,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}可恶 要是克子和莲太在这里就好了
+Dialogue: 0,0:17:17.99,0:17:20.83,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}克子和莲太是谁？
+Dialogue: 0,0:17:21.87,0:17:24.12,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子 你…
+Dialogue: 0,0:17:24.54,0:17:25.71,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻 危险
+Dialogue: 0,0:17:28.63,0:17:29.42,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子
+Dialogue: 0,0:17:31.00,0:17:32.71,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喂 撑住啊
+Dialogue: 0,0:17:32.88,0:17:34.76,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}没事吧 你回答我啊
+Dialogue: 0,0:17:42.68,0:17:44.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}今天玩的真开心
+Dialogue: 0,0:17:44.77,0:17:46.23,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子 八坂君
+Dialogue: 0,0:17:46.89,0:17:46.60,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}明天见
+Dialogue: 0,0:17:48.15,0:17:49.02,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}再见
+Dialogue: 0,0:17:51.02,0:17:53.65,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好了 我们也回去吧
+Dialogue: 0,0:17:56.95,0:18:00.07,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}是时候现出真身了吧 两位冒牌货
+Dialogue: 0,0:18:02.41,0:18:06.52,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不想把暮井同学和余市同学牵扯进来才一直忍到现在
+Dialogue: 0,0:18:07.33,0:18:10.42,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真正的奈亚子和少年在哪？
+Dialogue: 0,0:18:13.71,0:18:16.13,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}看来是没打算回答了
+Dialogue: 0,0:18:19.55,0:18:21.51,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}对不起 真寻
+Dialogue: 0,0:18:22.72,0:18:24.10,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我不重吗
+Dialogue: 0,0:18:24.93,0:18:26.64,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这不算什么啦
+Dialogue: 0,0:18:27.39,0:18:31.65,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你感冒倒下的时候我不也是这样将你背回屋里的吗
+Dialogue: 0,0:18:32.82,0:18:36.53,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}说的也是呢 还发生过这种事
+Dialogue: 0,0:18:38.74,0:18:42.66,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻 请告诉我
+Dialogue: 0,0:18:43.99,0:18:48.71,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我们以前都经历过些什么
+Dialogue: 0,0:18:49.58,0:18:51.00,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}经历过什么…
+Dialogue: 0,0:18:51.92,0:18:53.25,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}拜托了
+Dialogue: 0,0:18:55.05,0:18:56.17,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}发生了很多事哦
+Dialogue: 0,0:18:57.26,0:19:02.34,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}去拉莱耶啦 去塞拉艾诺图书馆啦 还去过幻梦境
+Dialogue: 0,0:19:03.76,0:19:04.81,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}想从哪里开始听？
+Dialogue: 0,0:19:06.01,0:19:09.64,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}全部 请全部告诉我吧
+Dialogue: 0,0:19:10.60,0:19:11.35,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好吧
+Dialogue: 0,0:19:12.31,0:19:16.69,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}说的也是 首先是去拉莱耶的时候啊…
+Dialogue: 0,0:19:21.74,0:19:23.62,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}至少想把奈亚子回收
+Dialogue: 0,0:19:23.91,0:19:27.91,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}作为我专用的Love玩偶来好好改造一番的
+Dialogue: 0,0:19:28.37,0:19:30.54,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}现在可不是说这些的时候啊
+Dialogue: 0,0:19:30.96,0:19:32.42,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}回到那间设施吧
+Dialogue: 0,0:19:32.83,0:19:34.63,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}要赶紧回去救他们才行
+Dialogue: 0,0:19:40.17,0:19:42.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}那时候真是糟透了
+Dialogue: 0,0:19:42.89,0:19:46.51,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}蕃神突然说要把我杀掉后自己也自杀
+Dialogue: 0,0:19:46.76,0:19:48.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}然后就向我袭来了
+Dialogue: 0,0:19:49.14,0:19:52.98,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不过 多亏你在那里 才捡回一条命
+Dialogue: 0,0:19:54.35,0:19:57.40,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}多亏了我在那里吗
+Dialogue: 0,0:19:59.03,0:20:00.61,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}嗯 是啊
+Dialogue: 0,0:20:01.45,0:20:02.95,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}接着…
+Dialogue: 0,0:20:02.99,0:20:03.82,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}太好了
+Dialogue: 0,0:20:06.74,0:20:11.71,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}看起来真寻没有在说痛苦不堪的回忆
+Dialogue: 0,0:20:12.92,0:20:17.88,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我还以为自己肯定整天给你添麻烦 被你讨厌了呢
+Dialogue: 0,0:20:18.63,0:20:21.17,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}笨蛋 这怎么可能呢
+Dialogue: 0,0:20:22.63,0:20:25.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我怎么可能讨厌…
+Dialogue: 0,0:20:28.06,0:20:32.89,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}那就是…出口吗
+Dialogue: 0,0:20:43.36,0:20:45.95,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好了我们来了 是要做什么
+Dialogue: 0,0:20:49.53,0:20:50.20,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}问题
+Dialogue: 0,0:20:50.87,0:20:51.50,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}猜谜吗
+Dialogue: 0,0:20:52.50,0:21:00.55,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}在24次元 最多能将多少个单位球毫不重合地排列在一起？
+Dialogue: 0,0:21:01.09,0:21:04.01,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}哈？这种问题怎么答的出来啊
+Dialogue: 0,0:21:04.68,0:21:07.51,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}限时为100秒 开始
+Dialogue: 0,0:21:19.77,0:21:22.36,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}怎么办 到底怎么办才好
+Dialogue: 0,0:21:27.91,0:21:28.99,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}剩余时间30秒
+Dialogue: 0,0:21:43.59,0:21:44.88,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}够了 你快住手
+Dialogue: 0,0:21:45.42,0:21:47.43,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我们输了 投降
+Dialogue: 0,0:21:48.30,0:21:49.22,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}一切都结束了
+Dialogue: 0,0:21:49.80,0:21:51.89,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}走私也好 其他也好 全部都听你的
+Dialogue: 0,0:21:52.47,0:21:56.77,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我会将奈亚子克子莲太一个个说服了来帮你
+Dialogue: 0,0:21:57.10,0:21:59.15,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}所以请把奈亚子恢复原状吧
+Dialogue: 0,0:21:59.60,0:22:00.86,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}听到了没！
+Dialogue: 0,0:22:01.52,0:22:02.69,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}回答我啊！
+Dialogue: 0,0:22:07.49,0:22:08.36,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻
+Dialogue: 0,0:22:11.20,0:22:16.96,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}那样做的话 真寻会变成罪犯的
+Dialogue: 0,0:22:19.79,0:22:20.88,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你在说什么呢
+Dialogue: 0,0:22:22.50,0:22:24.42,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不被发现就不算犯罪吗
+Dialogue: 0,0:22:26.21,0:22:31.85,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不行 我不想让真寻变成罪犯
+Dialogue: 0,0:22:32.39,0:22:35.52,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不对吧 刚才的话明明是你自己…
+Dialogue: 0,0:22:37.31,0:22:37.98,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}难道…
+Dialogue: 0,0:22:39.06,0:22:41.69,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不被发现就不算犯罪哦
+Dialogue: 0,0:22:42.11,0:22:44.23,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}连那时的记忆都…
+Dialogue: 0,0:22:46.57,0:22:47.78,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}没关系的
+Dialogue: 0,0:22:49.53,0:22:53.78,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}无论我失去多少记忆
+Dialogue: 0,0:22:54.58,0:22:59.66,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}喜欢真寻的这份心意是绝不会忘记的
+Dialogue: 0,0:23:02.54,0:23:07.30,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我…最喜欢真寻了
+Dialogue: 0,0:23:11.80,0:23:12.80,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}笨蛋
+Dialogue: 0,0:23:19.56,0:23:20.44,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}说话可要算话啊
+Dialogue: 0,0:23:22.06,0:23:24.61,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}嗯 我不会忘记
+Dialogue: 0,0:23:25.73,0:23:29.36,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}绝对一定肯定
+Dialogue: 0,0:23:40.46,0:23:41.08,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}看那边
+Dialogue: 0,0:23:42.17,0:23:42.87,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}小寻
+Dialogue: 0,0:23:44.46,0:23:45.17,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}奈亚子
+Dialogue: 0,0:23:46.96,0:23:48.84,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真是看到了养眼的东西
+Dialogue: 0,0:23:49.46,0:23:53.14,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}不枉我特意建造了那样的设施
+Dialogue: 0,0:23:55.01,0:23:56.47,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}现在还是再等等吧
+Dialogue: 0,0:23:57.06,0:24:00.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}当中可是蕴含了变得更美味的可能性呢
+Dialogue: 0,0:24:02.06,0:24:05.98,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}所以…慢慢结成果实吧
+Dialogue: 0,0:24:07.19,0:24:08.32,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}然后嘛…
+Dialogue: 0,0:24:17.33,0:24:18.33,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}路上小心
+Dialogue: 0,0:24:18.83,0:24:20.33,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}我们走了
+Dialogue: 0,0:24:22.12,0:24:25.13,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}老实说 昨天的事完全不记得了
+Dialogue: 0,0:24:26.50,0:24:29.34,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}好像是去了哪个游乐设施
+Dialogue: 0,0:24:30.09,0:24:32.59,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}醒过来时就已经倒在了空地
+Dialogue: 0,0:24:34.30,0:24:36.51,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}那天的记忆一片空白
+Dialogue: 0,0:24:38.10,0:24:40.18,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}对奈亚子来说好像也是一样
+Dialogue: 0,0:24:49.32,0:24:50.61,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}早上好 八坂
+Dialogue: 0,0:24:51.11,0:24:52.24,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}早上好 余市
+Dialogue: 0,0:24:52.57,0:24:54.03,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你们看新闻了吗
+Dialogue: 0,0:24:54.40,0:24:57.62,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}昨天我们去的游乐设施 一夜之间就没了踪影哦
+Dialogue: 0,0:24:58.07,0:25:00.54,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}到底怎么回事呢 好神秘
+Dialogue: 0,0:25:00.79,0:25:03.29,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}嗯 是啊
+Dialogue: 0,0:25:06.33,0:25:06.88,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这是什么
+Dialogue: 0,0:25:07.00,0:25:17.26,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02\fs50\an7}八坂真寻大人\N前略\N其实奈亚子的宇宙纳米机器人\N用你体内的宇宙抗体疫苗就能使其无效化\N所以 想救奈亚子需要你们进行体液的交换\N然后的事 你都明白了吧\N对了 关于走私一事 只是我的一个玩笑\N请别放在心上\N敬启\N银阿特子
+Dialogue: 0,0:25:08.38,0:25:09.63,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}八坂真寻大人
+Dialogue: 0,0:25:10.63,0:25:11.38,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}前略
+Dialogue: 0,0:25:11.84,0:25:13.97,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}其实奈亚子的宇宙纳米机器人
+Dialogue: 0,0:25:14.34,0:25:19.85,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}用你体内的宇宙抗体疫苗就能使其无效化
+Dialogue: 0,0:25:20.81,0:25:25.44,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}所以 想救奈亚子需要你们进行体液的交换
+Dialogue: 0,0:25:26.48,0:25:29.06,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}然后的事 你都明白了吧
+Dialogue: 0,0:25:30.36,0:25:34.61,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}对了 关于走私一事 只是我的一个玩笑
+Dialogue: 0,0:25:34.95,0:25:36.15,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}请别放在心上
+Dialogue: 0,0:25:36.78,0:25:37.99,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}这是什么啊
+Dialogue: 0,0:25:38.45,0:25:40.37,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}体…体…体液的交换
+Dialogue: 0,0:25:40.78,0:25:43.08,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}八坂君难道和奈亚子…
+Dialogue: 0,0:25:45.41,0:25:49.46,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻 你是什么时候在我的体内将液体…
+Dialogue: 0,0:25:51.96,0:25:55.97,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}少年 明明说好了让我怀上你的孩子
+Dialogue: 0,0:25:56.17,0:25:57.09,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}你给我等等
+Dialogue: 0,0:25:57.84,0:26:01.26,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻 也和我来交换体液啊
+Dialogue: 0,0:26:01.35,0:26:03.14,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}连你也来瞎掺和！
+Dialogue: 0,0:26:04.22,0:26:04.89,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}真寻
+Dialogue: 0,0:26:05.60,0:26:07.81,Default,NTP,0000,0000,0000,,{\fnFZZhunYuan-M02}怎 怎么了啊
+

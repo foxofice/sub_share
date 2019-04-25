@@ -58,7 +58,7 @@ namespace sub_db
 		/*==============================================================
 		 * 开始
 		 *==============================================================*/
-		private void PictureBox_Start_Click(object sender, EventArgs e)
+		internal void PictureBox_Start_Click(object sender, EventArgs e)
 		{
 			m_is_updating_database	= true;
 			m_is_stopping			= false;
@@ -131,7 +131,8 @@ namespace sub_db
 							Color.Green );
 			}
 
-			m_is_stopping = false;
+			m_is_stopping			= false;
+			m_is_updating_database	= false;
 		}
 
 		/*==============================================================
@@ -216,6 +217,8 @@ namespace sub_db
 					lock_controls(true);
 				}
 				c_Forms_.Invoke(func);
+
+				m_is_updating_database = false;
 				return;
 			}
 
@@ -482,6 +485,8 @@ namespace sub_db
 				m_is_stopping = false;
 			}
 			c_Forms_.Invoke(done_func);
+
+			m_is_updating_database = false;
 		}
 	};
 }	// namespace sub_db

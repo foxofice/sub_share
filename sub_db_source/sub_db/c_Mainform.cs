@@ -340,6 +340,28 @@ namespace sub_db
 		{
 			c_Data_.m_s_lock.EnterReadLock();
 
+			if(c_Data_.m_s_all_subs.Count == 0)
+			{
+				c_Data_.m_s_lock.ExitReadLock();
+
+				if(!m_UpdateDatabase.m_is_updating_database)
+				{
+					if(MessageBox.Show(	c_Languages_.txt(26),	// 本地没有任何数据，是否要下载最新的字幕索引？
+										$"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}",
+										MessageBoxButtons.YesNo,
+										MessageBoxIcon.Question,
+										MessageBoxDefaultButton.Button2 ) == DialogResult.Yes)
+					{
+						c_Forms_.active_form(m_UpdateDatabase);
+
+						m_UpdateDatabase.radioButton_UseRemoteData.Checked = true;
+						m_UpdateDatabase.PictureBox_Start_Click(null, null);
+					}
+				}
+
+				return;
+			}
+
 			if(textBox_Filter.TextLength == 0)
 			{
 				m_DataGridView_event_enable = false;

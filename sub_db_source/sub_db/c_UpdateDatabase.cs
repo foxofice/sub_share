@@ -230,218 +230,231 @@ namespace sub_db
 
 			c_Data_.m_s_all_subs.Clear();
 
-			void load_func()
+			SortedSet<string> source_list = new SortedSet<string>();
+
 			{
-				c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Clear();
-				c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add("");
-
-				SortedSet<string> source_list = new SortedSet<string>();
-				c_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Clear();
-
-				c_Common_.SetProgressValue(0);
-
-				string[] dirs_type = Directory.GetDirectories(c_Config_.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
-				foreach(string dir_type in dirs_type)
+				void func()
 				{
-					c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add(Path.GetFileName(dir_type));
+					c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Clear();
+					c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add("");
 
-					string[] dirs_year = Directory.GetDirectories(dir_type, "*.*", SearchOption.TopDirectoryOnly);
-					for(int i_year=0; i_year<dirs_year.Length; ++i_year)
-					{
-						string dir_year = dirs_year[i_year];
+					c_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Clear();
 
-						string[] dirs_video = Directory.GetDirectories(dir_year, "*.*", SearchOption.TopDirectoryOnly);
-						for(int i_video=0; i_video<dirs_video.Length; ++i_video)
-						{
-							string dir_video = dirs_video[i_video];
-
-							// 路径
-							string path = dir_video.Substring(c_Config_.m_s_subs_path.Length + 1).Replace("\\", "/");
-
-							void update_label()
-							{
-								label_Log.Text = dir_video;
-							}
-							c_Forms_.Invoke(update_label);
-
-							// 日期
-							string name_tmp = Path.GetFileName(dir_video);
-							int idx = name_tmp.IndexOf(")");
-							string[] date_vals = name_tmp.Substring(1, idx - 1).Split('.');
-
-							int year	= int.Parse(date_vals[0]);
-							int month	= (date_vals.Length >= 2) ? int.Parse(date_vals[1]) : 1;
-							int day		= (date_vals.Length >= 3) ? int.Parse(date_vals[2]) : 1;
-
-							DateTime date = new DateTime(year, month, day);
-
-							// 番名
-							string name_chs		= dir_video.Substring(idx + 1);
-							string name_cht		= "";
-							string name_jp		= "";
-							string name_en		= "";
-							string name_rome	= "";
-
-							// 读取 info.txt
-							string info_filename = Path.Combine(dir_video, "info.txt");
-
-							if(File.Exists(info_filename))
-							{
-								string[] lines = File.ReadAllLines(info_filename, Encoding.UTF8);
-								foreach(string line in lines)
-								{
-									if(line.Length < 2)
-										continue;
-
-									if(line[0] == '/' && line[1] == '/')
-										continue;
-
-									idx = line.IndexOf(":");
-									if(idx < 0)
-										continue;
-
-									string w1 = line.Substring(0, idx).Trim().ToLower();
-									string w2 = line.Substring(idx + 1).Trim();
-
-									if(w1 == "chs")
-									{
-										name_chs = w2.Trim();
-										continue;
-									}
-
-									if(w1 == "cht")
-									{
-										name_cht = w2.Trim();
-										continue;
-									}
-
-									if(w1 == "jp")
-									{
-										name_jp = w2.Trim();
-										continue;
-									}
-
-									if(w1 == "en")
-									{
-										name_en = w2.Trim();
-										continue;
-									}
-
-									if(w1 == "rome")
-									{
-										name_rome = w2.Trim();
-										continue;
-									}
-								}	// for
-							}
-
-							string[] dirs_source = Directory.GetDirectories(dir_video, "*.*", SearchOption.TopDirectoryOnly);
-							foreach(string dir_source in dirs_source)
-							{
-								source_list.Add(Path.GetFileName(dir_source));
-
-								string[] dirs_sub_name = Directory.GetDirectories(dir_source, "*.*", SearchOption.TopDirectoryOnly);
-								foreach(string dir_sub_name in dirs_sub_name)
-								{
-									if(m_is_stopping)
-										return;
-
-									string	providers	= "";	// 字幕组/提供者
-									string	desc		= "";	// 字幕说明
-
-									// 后缀名
-									SortedSet<string> extension_list = new SortedSet<string>();
-
-									string[] files = Directory.GetFiles(dir_sub_name, "*.*", SearchOption.TopDirectoryOnly);
-									foreach(string file in files)
-									{
-										string extension = Path.GetExtension(file).ToLower();
-										extension_list.Add(extension);
-									}	// for files
-
-									// xxx.txt
-									string desc_filename = dir_sub_name + ".txt";
-									if(File.Exists(desc_filename))
-									{
-										string file_txt = File.ReadAllText(desc_filename, Encoding.UTF8);
-										idx = file_txt.IndexOf("desc:", StringComparison.CurrentCultureIgnoreCase);
-										if(idx > 0)
-											desc = file_txt.Substring(idx + 5).Trim();
-
-										string[] lines = File.ReadAllLines(desc_filename, Encoding.UTF8);
-										foreach(string line in lines)
-										{
-											if(line.Length < 2)
-												continue;
-
-											if(line[0] == '/' && line[1] == '/')
-												continue;
-
-											idx = line.IndexOf(":");
-											if(idx < 0)
-												continue;
-
-											string w1 = line.Substring(0, idx).Trim().ToLower();
-											string w2 = line.Substring(idx + 1).Trim();
-
-											if(w1 == "providers")
-											{
-												providers = w2.Trim();
-												break;
-											}
-										}	// for
-									}
-
-									c_Data_.c_SubInfo sub_info = new c_Data_.c_SubInfo();
-									c_Data_.m_s_all_subs.Add(sub_info);
-
-									sub_info.m_name_chs		= name_chs;
-									sub_info.m_name_cht		= name_cht;
-									sub_info.m_name_jp		= name_jp;
-									sub_info.m_name_en		= name_en;
-									sub_info.m_name_rome	= name_rome;
-
-									sub_info.m_time			= date;
-									sub_info.m_type			= Path.GetFileName(dir_type);
-									sub_info.m_source		= Path.GetFileName(dir_source);
-									sub_info.m_sub_name		= Path.GetFileName(dir_sub_name);
-
-									foreach(string extension in extension_list)
-									{
-										if(sub_info.m_extension.Length > 0)
-											sub_info.m_extension += ";";
-
-										sub_info.m_extension += extension;
-									}
-
-									sub_info.m_providers	= providers;
-									sub_info.m_desc			= desc;
-
-									sub_info.m_path			= path;
-								}	// for dirs_sub_name
-							}	// for dirs_source
-
-							// 进度条
-							int progress_value =	c_Common_.m_k_MAX_PROGRESS_VALUE * i_year / dirs_year.Length	+
-													c_Common_.m_k_MAX_PROGRESS_VALUE * (i_video + 1) / (dirs_year.Length * dirs_video.Length);
-							c_Common_.SetProgressValue(progress_value);
-						}	// for dirs_video
-
-						if(can_refresh_UI_tick <= m_sw.ElapsedMilliseconds)
-						{
-							can_refresh_UI_tick = m_sw.ElapsedMilliseconds + 50;	// 50ms 刷新一次界面
-							Application.DoEvents();
-						}
-					}	// for dirs_year
-				}	// for dirs_type
-
-				foreach(string source in source_list)
-					c_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Add(source);
-
-				c_Common_.SetProgressValue(0);
+					c_Common_.SetProgressValue(0);
+				}
+				c_Forms_.Invoke(func);
 			}
 
-			c_Forms_.Invoke(load_func);
+			string[] dirs_type = Directory.GetDirectories(c_Config_.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
+			foreach(string dir_type in dirs_type)
+			{
+				void func()
+				{
+					c_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add(Path.GetFileName(dir_type));
+				}
+				c_Forms_.Invoke(func);
+
+				string[] dirs_year = Directory.GetDirectories(dir_type, "*.*", SearchOption.TopDirectoryOnly);
+				for(int i_year=0; i_year<dirs_year.Length; ++i_year)
+				{
+					string dir_year = dirs_year[i_year];
+
+					string[] dirs_video = Directory.GetDirectories(dir_year, "*.*", SearchOption.TopDirectoryOnly);
+					for(int i_video=0; i_video<dirs_video.Length; ++i_video)
+					{
+						string dir_video = dirs_video[i_video];
+
+						// 路径
+						string path = dir_video.Substring(c_Config_.m_s_subs_path.Length + 1).Replace("\\", "/");
+
+						void update_label()
+						{
+							label_Log.Text = dir_video;
+						}
+						c_Forms_.Invoke(update_label);
+
+						// 日期
+						string name_tmp = Path.GetFileName(dir_video);
+						int idx = name_tmp.IndexOf(")");
+						string[] date_vals = name_tmp.Substring(1, idx - 1).Split('.');
+
+						int year	= int.Parse(date_vals[0]);
+						int month	= (date_vals.Length >= 2) ? int.Parse(date_vals[1]) : 1;
+						int day		= (date_vals.Length >= 3) ? int.Parse(date_vals[2]) : 1;
+
+						DateTime date = new DateTime(year, month, day);
+
+						// 番名
+						//string name_chs	= name_tmp.Substring(idx + 1);
+						string name_chs		= "";
+						string name_cht		= "";
+						string name_jp		= "";
+						string name_en		= "";
+						string name_rome	= "";
+
+						// 读取 info.txt
+						string info_filename = Path.Combine(dir_video, "info.txt");
+
+						if(File.Exists(info_filename))
+						{
+							string[] lines = File.ReadAllLines(info_filename, Encoding.UTF8);
+							foreach(string line in lines)
+							{
+								if(line.Length < 2)
+									continue;
+
+								if(line[0] == '/' && line[1] == '/')
+									continue;
+
+								idx = line.IndexOf(":");
+								if(idx < 0)
+									continue;
+
+								string w1 = line.Substring(0, idx).Trim().ToLower();
+								string w2 = line.Substring(idx + 1).Trim();
+
+								if(w1 == "chs")
+								{
+									name_chs = w2.Trim();
+									continue;
+								}
+
+								if(w1 == "cht")
+								{
+									name_cht = w2.Trim();
+									continue;
+								}
+
+								if(w1 == "jp")
+								{
+									name_jp = w2.Trim();
+									continue;
+								}
+
+								if(w1 == "en")
+								{
+									name_en = w2.Trim();
+									continue;
+								}
+
+								if(w1 == "rome")
+								{
+									name_rome = w2.Trim();
+									continue;
+								}
+							}	// for
+						}
+
+						string[] dirs_source = Directory.GetDirectories(dir_video, "*.*", SearchOption.TopDirectoryOnly);
+						foreach(string dir_source in dirs_source)
+						{
+							source_list.Add(Path.GetFileName(dir_source));
+
+							string[] dirs_sub_name = Directory.GetDirectories(dir_source, "*.*", SearchOption.TopDirectoryOnly);
+							foreach(string dir_sub_name in dirs_sub_name)
+							{
+								if(m_is_stopping)
+									return;
+
+								string	providers	= "";	// 字幕组/提供者
+								string	desc		= "";	// 字幕说明
+
+								// 后缀名
+								SortedSet<string> extension_list = new SortedSet<string>();
+
+								string[] files = Directory.GetFiles(dir_sub_name, "*.*", SearchOption.TopDirectoryOnly);
+								foreach(string file in files)
+								{
+									string extension = Path.GetExtension(file).ToLower();
+									extension_list.Add(extension);
+								}	// for files
+
+								// xxx.txt
+								string desc_filename = dir_sub_name + ".txt";
+								if(File.Exists(desc_filename))
+								{
+									string file_txt = File.ReadAllText(desc_filename, Encoding.UTF8);
+									idx = file_txt.IndexOf("desc:", StringComparison.CurrentCultureIgnoreCase);
+									if(idx > 0)
+										desc = file_txt.Substring(idx + 5).Trim();
+
+									string[] lines = File.ReadAllLines(desc_filename, Encoding.UTF8);
+									foreach(string line in lines)
+									{
+										if(line.Length < 2)
+											continue;
+
+										if(line[0] == '/' && line[1] == '/')
+											continue;
+
+										idx = line.IndexOf(":");
+										if(idx < 0)
+											continue;
+
+										string w1 = line.Substring(0, idx).Trim().ToLower();
+										string w2 = line.Substring(idx + 1).Trim();
+
+										if(w1 == "providers")
+										{
+											providers = w2.Trim();
+											break;
+										}
+									}	// for
+								}
+
+								c_Data_.c_SubInfo sub_info = new c_Data_.c_SubInfo();
+								c_Data_.m_s_all_subs.Add(sub_info);
+
+								sub_info.m_name_chs		= name_chs;
+								sub_info.m_name_cht		= name_cht;
+								sub_info.m_name_jp		= name_jp;
+								sub_info.m_name_en		= name_en;
+								sub_info.m_name_rome	= name_rome;
+
+								sub_info.m_time			= date;
+								sub_info.m_type			= Path.GetFileName(dir_type);
+								sub_info.m_source		= Path.GetFileName(dir_source);
+								sub_info.m_sub_name		= Path.GetFileName(dir_sub_name);
+
+								foreach(string extension in extension_list)
+								{
+									if(sub_info.m_extension.Length > 0)
+										sub_info.m_extension += ";";
+
+									sub_info.m_extension += extension;
+								}
+
+								sub_info.m_providers	= providers;
+								sub_info.m_desc			= desc;
+
+								sub_info.m_path			= path;
+							}	// for dirs_sub_name
+						}	// for dirs_source
+
+						// 进度条
+						int progress_value =	c_Common_.m_k_MAX_PROGRESS_VALUE * i_year / dirs_year.Length	+
+												c_Common_.m_k_MAX_PROGRESS_VALUE * (i_video + 1) / (dirs_year.Length * dirs_video.Length);
+						c_Common_.SetProgressValue(progress_value);
+					}	// for dirs_video
+
+					if(can_refresh_UI_tick <= m_sw.ElapsedMilliseconds)
+					{
+						can_refresh_UI_tick = m_sw.ElapsedMilliseconds + 50;	// 50ms 刷新一次界面
+						Application.DoEvents();
+					}
+				}	// for dirs_year
+			}	// for dirs_type
+
+			{
+				void func()
+				{
+					foreach(string source in source_list)
+						c_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Add(source);
+
+					c_Common_.SetProgressValue(0);
+				}
+				c_Forms_.Invoke(func);
+			}
 
 			c_Data_.m_s_lock.ExitWriteLock();
 

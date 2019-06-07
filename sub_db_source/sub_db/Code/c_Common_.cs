@@ -12,7 +12,7 @@ namespace sub_db
 	internal class c_Common_
 	{
 		internal const string	m_k_PROGRAM_NAME		= "Subtitles Database";
-		internal const string	m_k_VERSION				= "v0.14";
+		internal const string	m_k_VERSION				= "v0.15";
 
 		internal const int		m_k_MAX_PROGRESS_VALUE	= 10000;
 
@@ -67,7 +67,9 @@ namespace sub_db
 				int errorCode = Marshal.GetLastWin32Error();
 
 				string err_txt = (errorCode == 1409) ? "热键被占用！" : $"注册热键失败！({errorCode})";
-				MessageBox.Show(err_txt);
+
+				c_Mainform.m_s_mainform.toolStripStatusLabel_ErrorMsg.Text		= err_txt;
+				c_Mainform.m_s_mainform.toolStripStatusLabel_ErrorMsg.Visible	= true;
 			}
 		}
 

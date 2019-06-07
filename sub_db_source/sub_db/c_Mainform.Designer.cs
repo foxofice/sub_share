@@ -33,10 +33,10 @@
 			this.linkLabel_FilterHelp = new System.Windows.Forms.LinkLabel();
 			this.toolStrip_Main = new System.Windows.Forms.ToolStrip();
 			this.toolStripButton_UpdateDB = new System.Windows.Forms.ToolStripButton();
-			this.toolStripButton_Search = new System.Windows.Forms.ToolStripButton();
-			this.toolStripSplitButton_Languages = new System.Windows.Forms.ToolStripSplitButton();
 			this.toolStripButton_Folder = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton_URL = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton_Search = new System.Windows.Forms.ToolStripButton();
+			this.toolStripSplitButton_Languages = new System.Windows.Forms.ToolStripSplitButton();
 			this.toolStripButton_Settings = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton_About = new System.Windows.Forms.ToolStripButton();
@@ -46,6 +46,7 @@
 			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
 			this.radioButton_SearchByName = new System.Windows.Forms.RadioButton();
 			this.radioButton_SearchBySQL = new System.Windows.Forms.RadioButton();
+			this.toolStripStatusLabel_ErrorMsg = new System.Windows.Forms.ToolStripStatusLabel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).BeginInit();
 			this.toolStrip_Main.SuspendLayout();
 			this.statusStrip_Main.SuspendLayout();
@@ -118,23 +119,6 @@
 			this.toolStripButton_UpdateDB.Text = "更新数据库(F5)";
 			this.toolStripButton_UpdateDB.Click += new System.EventHandler(this.ToolStripButton_UpdateDB_Click);
 			// 
-			// toolStripButton_Search
-			// 
-			this.toolStripButton_Search.Image = global::sub_db.Resource1.Search;
-			this.toolStripButton_Search.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton_Search.Name = "toolStripButton_Search";
-			this.toolStripButton_Search.Size = new System.Drawing.Size(97, 22);
-			this.toolStripButton_Search.Text = "高级查找(F3)";
-			this.toolStripButton_Search.Click += new System.EventHandler(this.ToolStripButton_Search_Click);
-			// 
-			// toolStripSplitButton_Languages
-			// 
-			this.toolStripSplitButton_Languages.Image = global::sub_db.Resource1.Languages;
-			this.toolStripSplitButton_Languages.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripSplitButton_Languages.Name = "toolStripSplitButton_Languages";
-			this.toolStripSplitButton_Languages.Size = new System.Drawing.Size(135, 22);
-			this.toolStripSplitButton_Languages.Text = "语言(Languages)";
-			// 
 			// toolStripButton_Folder
 			// 
 			this.toolStripButton_Folder.Image = global::sub_db.Resource1.folder;
@@ -152,6 +136,23 @@
 			this.toolStripButton_URL.Size = new System.Drawing.Size(121, 22);
 			this.toolStripButton_URL.Text = "打开远程链接(F1)";
 			this.toolStripButton_URL.Click += new System.EventHandler(this.ToolStripButton_URL_Click);
+			// 
+			// toolStripButton_Search
+			// 
+			this.toolStripButton_Search.Image = global::sub_db.Resource1.Search;
+			this.toolStripButton_Search.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton_Search.Name = "toolStripButton_Search";
+			this.toolStripButton_Search.Size = new System.Drawing.Size(97, 22);
+			this.toolStripButton_Search.Text = "高级查找(F3)";
+			this.toolStripButton_Search.Click += new System.EventHandler(this.ToolStripButton_Search_Click);
+			// 
+			// toolStripSplitButton_Languages
+			// 
+			this.toolStripSplitButton_Languages.Image = global::sub_db.Resource1.Languages;
+			this.toolStripSplitButton_Languages.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripSplitButton_Languages.Name = "toolStripSplitButton_Languages";
+			this.toolStripSplitButton_Languages.Size = new System.Drawing.Size(135, 22);
+			this.toolStripSplitButton_Languages.Text = "语言(Languages)";
 			// 
 			// toolStripButton_Settings
 			// 
@@ -182,7 +183,8 @@
 			// 
 			this.statusStrip_Main.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel_ItemsCount,
-            this.toolStripStatusLabel_MovieCount});
+            this.toolStripStatusLabel_MovieCount,
+            this.toolStripStatusLabel_ErrorMsg});
 			this.statusStrip_Main.Location = new System.Drawing.Point(0, 707);
 			this.statusStrip_Main.Name = "statusStrip_Main";
 			this.statusStrip_Main.Size = new System.Drawing.Size(1008, 22);
@@ -235,6 +237,14 @@
 			this.radioButton_SearchBySQL.Text = "使用查询语句查找";
 			this.radioButton_SearchBySQL.UseVisualStyleBackColor = true;
 			// 
+			// toolStripStatusLabel_ErrorMsg
+			// 
+			this.toolStripStatusLabel_ErrorMsg.ForeColor = System.Drawing.Color.Red;
+			this.toolStripStatusLabel_ErrorMsg.Name = "toolStripStatusLabel_ErrorMsg";
+			this.toolStripStatusLabel_ErrorMsg.Size = new System.Drawing.Size(63, 17);
+			this.toolStripStatusLabel_ErrorMsg.Text = "(err_msg)";
+			this.toolStripStatusLabel_ErrorMsg.Visible = false;
+			// 
 			// c_Mainform
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -286,6 +296,7 @@
 		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_MovieCount;
 		internal System.Windows.Forms.RadioButton radioButton_SearchByName;
 		internal System.Windows.Forms.RadioButton radioButton_SearchBySQL;
+		internal System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel_ErrorMsg;
 	}
 }
 

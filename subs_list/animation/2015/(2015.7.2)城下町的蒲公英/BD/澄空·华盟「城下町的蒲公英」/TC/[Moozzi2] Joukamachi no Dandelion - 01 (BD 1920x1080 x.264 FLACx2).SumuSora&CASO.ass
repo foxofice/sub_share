@@ -1,0 +1,545 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: Joukamachi no Dandelion 01
+Original Script: CASO&SumiSora
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,FZZhunYuan-M02,65,&H00FFFFFF,&H00000000,&H005B1AE6,&H64666666,-1,0,0,0,100,100,0,0,1,3,0,2,30,30,30,1
+Style: title,DFPWaWa-B5,80,&H00333333,&H00000000,&H00FFFFFF,&H64333333,-1,0,0,0,100,100,0,0,1,3,3,8,30,30,30,1
+Style: opjp,DFMaruGothic-SB,54,&H006700FF,&H000000FF,&H00FDFEF7,&HA0000000,-1,0,0,0,100,100,1,0,1,4,3,2,30,30,27,1
+Style: opcn,FZCuYuan-M03,60,&H006518E0,&H000000FF,&H00FDFEF7,&HA0000000,-1,0,0,0,100,100,3,0,1,4,3,8,30,30,27,1
+Style: edjp,DFPMaruMoji-SL,54,&H00FFFFFF,&H000000FF,&H0051B4EB,&HA0000000,-1,0,0,0,100,100,1,0,1,3,0,2,30,30,27,1
+Style: edcn,DFPGirlW5-B5,54,&H00FFFFFF,&H000000FF,&H0051B4EB,&HA0000000,-1,0,0,0,100,100,1,0,1,4,0,8,30,30,27,1
+Style: pos1,@FZDaBiaoSong-B06,38,&H00FFFFFF,&H00000000,&H00FFFFFF,&H64666666,-1,0,0,0,100,100,0,-90,1,1,0,5,30,30,30,1
+Style: pos2,FZZhunYuan-M02,38,&H00FFFFFF,&H00000000,&H00FFFFFF,&H64666666,-1,0,0,0,100,100,0,0,1,1,0,5,30,30,30,1
+Style: pos3,@FZDaHei-B02,38,&H00FFFFFF,&H00000000,&H00FFFFFF,&H64666666,-1,0,0,0,100,100,0,-90,1,1,0,5,30,30,30,1
+Style: pos4,@FZZongYi-M05,38,&H00FFFFFF,&H00000000,&H00FFFFFF,&H64666666,-1,0,0,0,100,100,0,-90,1,1,0,5,30,30,30,1
+Style: pos5,@FZZhunYuan-M02,38,&H00FFFFFF,&H00000000,&H00FFFFFF,&H64666666,-1,0,0,0,100,100,0,-90,1,1,0,5,30,30,30,1
+Style: pos6,FZXiaoBiaoSong-B05,38,&H00B16A5A,&H00000000,&H00FFFFFF,&H64666666,-1,0,0,0,100,100,0,0,1,0,0,5,30,30,30,1
+Style: pos7,FZDaHei-B02,38,&H00424242,&H00000000,&H00FFFFFF,&H64666666,-1,0,0,0,100,100,0,0,1,0,0,5,30,30,30,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:02:12.10,0:02:14.67,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Rock on!　ちゃんと見ててね
+Dialogue: 0,0:02:14.73,0:02:17.33,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}For you!　ちゃんと応えたい
+Dialogue: 0,0:02:17.37,0:02:19.95,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Cheer me!　ココロ奮わせ
+Dialogue: 0,0:02:20.00,0:02:22.65,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Let's go!　おそれずススメ
+Dialogue: 0,0:02:22.68,0:02:25.10,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Ring Ring!　さあ一緒に
+Dialogue: 0,0:02:25.32,0:02:30.63,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}あのね　伝えたいこと　綿毛乗せ飛ばしたら
+Dialogue: 0,0:02:30.63,0:02:35.70,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}みんなに屆くのかな　ほら見て？キレイ
+Dialogue: 0,0:02:35.88,0:02:41.21,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}きっと　トビラの向こう　一歩踏み出す勇気は
+Dialogue: 0,0:02:41.24,0:02:48.01,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}いつだってみんなが　支えていてくれるから
+Dialogue: 0,0:02:49.22,0:02:54.38,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}ありのままで描く　未來図はきっと
+Dialogue: 0,0:02:54.45,0:03:00.30,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}赤も　青も　白も　黄色も　混ざって　Rainbow Rainbow
+Dialogue: 0,0:03:00.40,0:03:00.92,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Let's sing!
+Dialogue: 0,0:03:00.92,0:03:06.15,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}見たことない世界　君を連れてくよ
+Dialogue: 0,0:03:06.26,0:03:11.24,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}大きく深呼吸　こわくないから
+Dialogue: 0,0:03:11.37,0:03:16.78,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}右手に勇気を　左手に愛を
+Dialogue: 0,0:03:16.82,0:03:21.30,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}他には　何もいらない
+Dialogue: 0,0:03:21.65,0:03:26.81,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}せーの！それではみなさんご一緒に
+Dialogue: 0,0:03:26.90,0:03:30.35,opjp,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Stand up!　Let's go!
+Dialogue: 0,0:02:12.10,0:02:14.67,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Rock on!  請好好關注著我
+Dialogue: 0,0:02:14.73,0:02:17.33,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}For you!  想要好好回應你
+Dialogue: 0,0:02:17.37,0:02:19.95,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Cheer me!  內心振奮不已
+Dialogue: 0,0:02:20.00,0:02:22.65,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Let's go!  勇往直前
+Dialogue: 0,0:02:22.68,0:02:25.10,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Ring Ring!  來吧  和我一起
+Dialogue: 0,0:02:25.32,0:02:30.63,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}若是將心意寄予蒲公英之上任其翱翔
+Dialogue: 0,0:02:30.63,0:02:35.70,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}能否傳遞至大家那呢  快看  多麼光鮮漂亮
+Dialogue: 0,0:02:35.88,0:02:41.21,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}敢於邁向門扉另一端的勇氣
+Dialogue: 0,0:02:41.24,0:02:48.01,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}無論何時都會給予我們前進的力量
+Dialogue: 0,0:02:49.22,0:02:54.38,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}遵循真意所描繪的未來藍圖
+Dialogue: 0,0:02:54.45,0:03:00.30,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}一定會是紅藍白黃所匯聚成的Rainbow Rainbow
+Dialogue: 0,0:03:00.40,0:03:00.92,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Let's sing!
+Dialogue: 0,0:03:00.92,0:03:06.15,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}我會帶你前往  那不曾見過的未知世界
+Dialogue: 0,0:03:06.26,0:03:11.24,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}做個大大的深呼吸  沒什麼好畏懼的
+Dialogue: 0,0:03:11.37,0:03:16.78,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}右手握緊勇氣  左手握住愛
+Dialogue: 0,0:03:16.82,0:03:21.30,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}其他什麼也不需要
+Dialogue: 0,0:03:21.65,0:03:26.81,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}好了  那麼大家一起
+Dialogue: 0,0:03:26.90,0:03:30.35,opcn,NTP,0,0,0,,{\fad(150,150)\be2\blur2}Stand up!  Let's go!
+Dialogue: 0,0:22:14.80,0:22:17.84,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}Pick me, Please.....
+Dialogue: 0,0:22:20.43,0:22:25.74,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}Should be done　スケジュールびっしりで目まぐるしいDays
+Dialogue: 0,0:22:26.06,0:22:30.79,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}レッスンやプランニングに高鳴るHeart Beat
+Dialogue: 0,0:22:30.86,0:22:36.17,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}守備範囲ガードしても　アクシデント遭遇したり
+Dialogue: 0,0:22:36.50,0:22:40.91,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}チェックボックス　マークを追加
+Dialogue: 0,0:22:41.30,0:22:46.47,edjp,NTP,0,0,0,,{\fad(100,100)\blur3\fs36\pos(1293,999)}かお
+Dialogue: 0,0:22:41.30,0:22:46.47,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}レンズに映った私　どんな表情
+Dialogue: 0,0:22:46.79,0:22:51.43,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}元気?ご機嫌?おすまし?　そっと素の顔を教えたい
+Dialogue: 0,0:22:51.43,0:22:53.34,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}ん～、、秘密、、、どっち!?!?
+Dialogue: 0,0:22:53.95,0:22:59.22,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}はにかむところなおんない　Honey{\fnArial}♥{\r\blur3}Come!!　ギュッとね守って
+Dialogue: 0,0:22:59.53,0:23:04.15,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}支えの手が羽根になるよ
+Dialogue: 0,0:23:04.34,0:23:09.71,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}はにかむココロ見せたら　Honey{\fnArial}♥{\r\blur3}Come!!　夢シェアできる?
+Dialogue: 0,0:23:09.78,0:23:14.65,edjp,NTP,0,0,0,,{\an1\fad(100,100)\blur3}きっとできる!　未來変わる!!
+Dialogue: 0,0:23:14.74,0:23:20.13,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}はにかむけど一緒にハッピー　Honey{\fnArial}♥{\r\blur3}Come!!　かなえてみたい
+Dialogue: 0,0:23:20.28,0:23:25.32,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}私推しのキミが大事　笑顔にさせてあげたい
+Dialogue: 0,0:23:25.77,0:23:29.83,edjp,NTP,0,0,0,,{\fad(100,100)\blur3\fs36\pos(903,999)}マニフェスト
+Dialogue: 0,0:23:25.77,0:23:29.83,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}屆け　純粋な所信表明　ハ・ニ・カ・ム
+Dialogue: 0,0:23:33.09,0:23:36.72,edjp,NTP,0,0,0,,{\fad(100,100)\blur3}Pick me, Please.....
+Dialogue: 0,0:22:14.80,0:22:17.84,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}Pick me, Please.....
+Dialogue: 0,0:22:20.43,0:22:25.74,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}Should be done  時間表排得滿滿的  讓人眼花繚亂的Days
+Dialogue: 0,0:22:26.06,0:22:30.79,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}Lesson還是Planning  心率激增
+Dialogue: 0,0:22:30.86,0:22:36.17,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}就算在處於防禦範圍  也會遭遇意外
+Dialogue: 0,0:22:36.50,0:22:40.91,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}為複選框追加標記
+Dialogue: 0,0:22:41.30,0:22:46.47,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}鏡頭中的我  是什麼樣的表情
+Dialogue: 0,0:22:46.79,0:22:51.43,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}充滿活力？高興？一本正經？  想偷偷地  把我的素顏  展示給你
+Dialogue: 0,0:22:51.43,0:22:53.34,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}嗯  這是秘密  究竟如何!?!?
+Dialogue: 0,0:22:53.95,0:22:59.22,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}無法改變自己的靦腆  Honey{\fnArial}♥{\r\blur3}Come!!  抱緊我保護我
+Dialogue: 0,0:22:59.53,0:23:04.15,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}支撐我的手  變成羽毛了呢
+Dialogue: 0,0:23:04.34,0:23:09.71,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}讓你見識我的靦腆  Honey{\fnArial}♥{\r\blur3}Come!!  能分享我的夢嗎？
+Dialogue: 0,0:23:09.78,0:23:14.65,edcn,NTP,0,0,0,,{\an7\fad(100,100)\blur3}一定能夠實現!  改變未來!!
+Dialogue: 0,0:23:14.74,0:23:20.13,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}雖然很靦腆  但是要一起Happy  Honey{\fnArial}♥{\r\blur3}Come!!  想要實現
+Dialogue: 0,0:23:20.28,0:23:25.32,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}本命是我的你最重要  好想給你帶來歡笑
+Dialogue: 0,0:23:25.77,0:23:29.83,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}傳達到吧  單純的宣言  Honey·Come
+Dialogue: 0,0:23:33.09,0:23:36.72,edcn,NTP,0,0,0,,{\fad(100,100)\blur3}Pick me, Please.....
+Dialogue: 0,0:00:09.06,0:00:11.41,Default,NTP,0,0,0,,真是的  打算睡到什麼時候啊
+Dialogue: 0,0:00:12.01,0:00:13.56,Default,NTP,0,0,0,,茜  光
+Dialogue: 0,0:00:15.28,0:00:16.97,Default,NTP,0,0,0,,再讓我睡10分鐘
+Dialogue: 0,0:00:17.22,0:00:18.83,Default,NTP,0,0,0,,大家都已經起床了哦
+Dialogue: 0,0:00:19.24,0:00:19.89,Default,NTP,0,0,0,,大家…
+Dialogue: 0,0:00:21.63,0:00:23.46,Default,NTP,0,0,0,,誒  不是吧  都這個時間了
+Dialogue: 0,0:00:25.31,0:00:26.60,Default,NTP,0,0,0,,抱歉  我先走一步
+Dialogue: 0,0:00:26.79,0:00:29.20,Default,NTP,0,0,0,,{\an8\fs63}啊  茜姐好狡猾
+Dialogue: 0,0:00:28.02,0:00:31.05,Default,NTP,0,0,0,,櫻田家的早晨每天都是戰爭
+Dialogue: 0,0:00:31.50,0:00:34.38,Default,NTP,0,0,0,,喂遙  你動作快點  輝快憋不住了
+Dialogue: 0,0:00:34.81,0:00:37.85,Default,NTP,0,0,0,,{\an8\fs63}兄長  我還憋得住
+Dialogue: 0,0:00:36.66,0:00:37.83,Default,NTP,0,0,0,,因為我們家
+Dialogue: 0,0:00:39.84,0:00:42.86,Default,NTP,0,0,0,,{\an8\fs63}真是的爸爸  地方都給你占了  稍微讓開點
+Dialogue: 0,0:00:40.71,0:00:41.65,Default,NTP,0,0,0,,家人眾多
+Dialogue: 0,0:00:42.20,0:00:44.19,Default,NTP,0,0,0,,廁所和化妝間都需要搶
+Dialogue: 0,0:00:45.32,0:00:46.47,Default,NTP,0,0,0,,給  久等了
+Dialogue: 0,0:00:46.89,0:00:48.17,Default,NTP,0,0,0,,謝謝  葵
+Dialogue: 0,0:00:48.96,0:00:52.10,Default,NTP,0,0,0,,今天是媽媽特製的蔬菜蛋包飯
+Dialogue: 0,0:00:52.31,0:00:53.91,Default,NTP,0,0,0,,大家別剩飯哦
+Dialogue: 0,0:00:54.09,0:00:55.60,Default,NTP,0,0,0,,我開動了
+Dialogue: 0,0:00:56.06,0:00:57.62,Default,NTP,0,0,0,,孩子他爸  現在可是吃飯時間
+Dialogue: 0,0:00:58.45,0:00:59.29,Default,NTP,0,0,0,,我知道
+Dialogue: 0,0:01:00.10,0:01:01.95,Default,NTP,0,0,0,,果然加了青豆
+Dialogue: 0,0:01:02.41,0:01:04.93,Default,NTP,0,0,0,,挑食的話是長不大的哦
+Dialogue: 0,0:01:05.69,0:01:09.44,Default,NTP,0,0,0,,母親  我不挑食一定能長得很高大吧
+Dialogue: 0,0:01:09.86,0:01:10.93,Default,NTP,0,0,0,,嗯  是的
+Dialogue: 0,0:01:11.40,0:01:12.88,Default,NTP,0,0,0,,栞  要細嚼慢咽
+Dialogue: 0,0:01:14.68,0:01:18.21,Default,NTP,0,0,0,,說起來  家裡衛生紙已經沒有存貨了
+Dialogue: 0,0:01:18.78,0:01:20.98,Default,NTP,0,0,0,,這周的購物負責人是誰來著
+Dialogue: 0,0:01:21.55,0:01:22.57,Default,NTP,0,0,0,,是修吧
+Dialogue: 0,0:01:23.57,0:01:24.64,Default,NTP,0,0,0,,哦  是我啊
+Dialogue: 0,0:01:27.18,0:01:28.83,Default,NTP,0,0,0,,今天回家的時候買回來
+Dialogue: 0,0:01:29.45,0:01:30.66,Default,NTP,0,0,0,,修  麻煩你了
+Dialogue: 0,0:01:31.12,0:01:33.50,Default,NTP,0,0,0,,有這群孝順的孩子在身邊真是好
+Dialogue: 0,0:01:33.82,0:01:34.79,Default,NTP,0,0,0,,哪裡哪裡
+Dialogue: 0,0:01:36.09,0:01:39.36,Default,NTP,0,0,0,,就是這樣  雖然有著不少麻煩的瑣事
+Dialogue: 0,0:01:39.78,0:01:42.43,Default,NTP,0,0,0,,不過兄妹9個人每天都其樂融融地在一起努力
+Dialogue: 0,0:01:43.86,0:01:46.93,Default,NTP,0,0,0,,單是這樣看的話  我們是個很普通的大家庭
+Dialogue: 0,0:01:47.75,0:01:50.35,Default,NTP,0,0,0,,不過其實我家還有個更特別的地方
+Dialogue: 0,0:01:48.73,0:01:50.88,Default,NTP,0,0,0,,{\an8\fs63}孩子他爸  好好吃飯
+Dialogue: 0,0:01:51.78,0:01:52.47,Default,NTP,0,0,0,,那就是…
+Dialogue: 0,0:01:52.71,0:01:54.43,Default,NTP,0,0,0,,你這樣又會讓接你的人久等了
+Dialogue: 0,0:01:55.57,0:01:57.09,Default,NTP,0,0,0,,為什麼戴著王冠
+Dialogue: 0,0:01:57.76,0:02:01.07,Default,NTP,0,0,0,,這個…不小心弄錯拿回來了  也算機會難得就…
+Dialogue: 0,0:02:01.46,0:02:03.01,Default,NTP,0,0,0,,爸爸就像是國王一樣
+Dialogue: 0,0:02:03.64,0:02:05.93,Default,NTP,0,0,0,,那個…我好歹也是真的國王
+Dialogue: 0,0:02:06.44,0:02:07.33,Default,NTP,0,0,0,,沒錯
+Dialogue: 0,0:02:08.01,0:02:11.23,Default,NTP,0,0,0,,我們的父親是這個國家的國王
+Dialogue: 0,0:03:42.31,0:03:46.82,title,NTP,0,0,0,,{\fad(500,0)\pos(960,120)\be2}櫻田家的{\1c671DD7}9{\r\be2}兄妹
+Dialogue: 0,0:03:48.74,0:03:49.95,Default,NTP,0,0,0,,一路順風  爸爸
+Dialogue: 0,0:03:50.39,0:03:51.11,Default,NTP,0,0,0,,一路順風
+Dialogue: 0,0:03:51.54,0:03:55.11,Default,NTP,0,0,0,,啊  對了  今天會在晚飯前回來
+Dialogue: 0,0:03:55.70,0:03:56.36,Default,NTP,0,0,0,,OK
+Dialogue: 0,0:03:56.82,0:03:57.82,Default,NTP,0,0,0,,一路順風
+Dialogue: 0,0:03:58.24,0:03:59.19,Default,NTP,0,0,0,,我出門了
+Dialogue: 0,0:04:01.44,0:04:03.99,Default,NTP,0,0,0,,抱歉了大家  每天早上都那麼吵鬧
+Dialogue: 0,0:04:04.40,0:04:05.17,Default,NTP,0,0,0,,抱歉
+Dialogue: 0,0:04:06.68,0:04:08.08,Default,NTP,0,0,0,,櫻花季也快結束了呢
+Dialogue: 0,0:04:08.62,0:04:11.76,Default,NTP,0,0,0,,嗯  這周末可能是賞花的最後機會了
+Dialogue: 0,0:04:12.26,0:04:13.18,Default,NTP,0,0,0,,賞花嗎
+Dialogue: 0,0:04:14.29,0:04:15.98,Default,NTP,0,0,0,,早上好
+Dialogue: 0,0:04:16.36,0:04:17.53,Default,NTP,0,0,0,,早上好
+Dialogue: 0,0:04:18.04,0:04:19.03,Default,NTP,0,0,0,,早上好
+Dialogue: 0,0:04:19.38,0:04:20.59,Default,NTP,0,0,0,,早上好…
+Dialogue: 0,0:04:21.23,0:04:23.22,Default,NTP,0,0,0,,所以大家一起帶上便當…
+Dialogue: 0,0:04:23.32,0:04:25.35,Default,NTP,0,0,0,,大家早上好
+Dialogue: 0,0:04:25.72,0:04:26.81,Default,NTP,0,0,0,,早上好
+Dialogue: 0,0:04:26.96,0:04:27.84,Default,NTP,0,0,0,,拜拜
+Dialogue: 0,0:04:29.88,0:04:30.67,Default,NTP,0,0,0,,拜拜…
+Dialogue: 0,0:04:33.45,0:04:35.80,Default,NTP,0,0,0,,你還是一如既往那麼怕生
+Dialogue: 0,0:04:36.22,0:04:37.33,Default,NTP,0,0,0,,就沒辦法改改嗎
+Dialogue: 0,0:04:38.09,0:04:40.03,Default,NTP,0,0,0,,奏  別多說她了
+Dialogue: 0,0:04:40.34,0:04:40.99,Default,NTP,0,0,0,,可是…
+Dialogue: 0,0:04:41.21,0:04:45.05,Default,NTP,0,0,0,,身為王族的我們住在普通的住宅街里
+Dialogue: 0,0:04:45.17,0:04:47.23,Default,NTP,0,0,0,,也是作為國王的父親的方針
+Dialogue: 0,0:04:47.78,0:04:51.58,Default,NTP,0,0,0,,因為他想儘可能地讓我們過普通的生活
+Dialogue: 0,0:04:52.01,0:04:53.84,Default,NTP,0,0,0,,不過其中也有不少麻煩事
+Dialogue: 0,0:04:55.20,0:04:55.98,Default,NTP,0,0,0,,比如說
+Dialogue: 0,0:05:02.00,0:05:04.53,Default,NTP,0,0,0,,周末的時候監視攝像頭的位置改動過了吧
+Dialogue: 0,0:05:04.69,0:05:06.32,Default,NTP,0,0,0,,好不容易全都記住了
+Dialogue: 0,0:05:06.67,0:05:08.06,Default,NTP,0,0,0,,全都記住真是厲害啊
+Dialogue: 0,0:05:08.38,0:05:10.07,Default,NTP,0,0,0,,因為不想被拍進去嘛
+Dialogue: 0,0:05:10.46,0:05:11.28,Default,NTP,0,0,0,,這是沒辦法的
+Dialogue: 0,0:05:11.98,0:05:15.38,Default,NTP,0,0,0,,你也知道這麼做是為了保護我們吧
+Dialogue: 0,0:05:16.07,0:05:18.06,Default,NTP,0,0,0,,我知道  但是…
+Dialogue: 0,0:05:18.92,0:05:21.45,Default,NTP,0,0,0,,光町內就有2000台以上是不是太多了
+Dialogue: 0,0:05:23.31,0:05:25.72,Default,NTP,0,0,0,,真虧你能把攝像頭的位置全部記住
+Dialogue: 0,0:05:26.21,0:05:29.42,Default,NTP,0,0,0,,我明明都把它們用來向國民展示自己了
+Dialogue: 0,0:05:29.70,0:05:30.41,Default,NTP,0,0,0,,展示？
+Dialogue: 0,0:05:30.97,0:05:34.73,Default,NTP,0,0,0,,因為我們都是下任國王選舉的候選人
+Dialogue: 0,0:05:34.90,0:05:37.78,Default,NTP,0,0,0,,真是的  為什麼要用選舉決定啊
+Dialogue: 0,0:05:37.88,0:05:41.28,Default,NTP,0,0,0,,這也是沒辦法的事  因為是父親決定的
+Dialogue: 0,0:05:42.87,0:05:44.21,Default,NTP,0,0,0,,誒  真要這麼做嗎
+Dialogue: 0,0:05:44.83,0:05:47.61,Default,NTP,0,0,0,,怎麼你們  以為我是在開玩笑嗎
+Dialogue: 0,0:05:48.47,0:05:50.07,Default,NTP,0,0,0,,之前我不就說過了
+Dialogue: 0,0:05:50.46,0:05:54.50,Default,NTP,0,0,0,,等葵高中畢業了就進行下任國王的選舉
+Dialogue: 0,0:05:55.32,0:05:57.98,Default,NTP,0,0,0,,4月進行發表  第二年3月進行投票
+Dialogue: 0,0:05:58.38,0:06:00.43,Default,NTP,0,0,0,,所剩時間不多了要好好加油哦
+Dialogue: 0,0:06:03.25,0:06:05.22,Default,NTP,0,0,0,,沒想到竟然是認真的…
+Dialogue: 0,0:06:05.29,0:06:07.26,Default,NTP,0,0,0,,啊  都這個時間了
+Dialogue: 0,0:06:07.50,0:06:08.73,Default,NTP,0,0,0,,學生會要遲到了
+Dialogue: 0,0:06:09.31,0:06:11.10,Default,NTP,0,0,0,,那我也去學校了
+Dialogue: 0,0:06:12.50,0:06:14.37,Default,NTP,0,0,0,,我們也走吧  茜
+Dialogue: 0,0:06:14.85,0:06:16.17,Default,NTP,0,0,0,,但是攝像頭…
+Dialogue: 0,0:06:16.55,0:06:19.26,Default,NTP,0,0,0,,那我先走幫你去吸引注意力吧
+Dialogue: 0,0:06:19.81,0:06:21.59,Default,NTP,0,0,0,,攝像頭的動作比較遲緩
+Dialogue: 0,0:06:22.15,0:06:23.10,Default,NTP,0,0,0,,拜託了
+Dialogue: 0,0:06:31.64,0:06:34.65,Default,NTP,0,0,0,,看來不光調整了位置  連性能也加強過了
+Dialogue: 0,0:06:36.74,0:06:40.74,pos1,NTP,0,0,0,,{\move(816,210,1350,210)\1cA269CF\fry-2}我不會輸的！
+Dialogue: 0,0:06:36.74,0:06:40.74,pos2,NTP,0,0,0,,{\move(550.5,142.5,1084.5,142.5)\1c624EAC\fs33\frz14}公正的一票創公正的社會
+Dialogue: 0,0:06:36.74,0:06:40.74,pos3,NTP,0,0,0,,{\move(292.5,292.5,826.5,292.5)\1c694B4C\fs33\bord2.25\fry-12}該出手時就出手的男人
+Dialogue: 0,0:06:36.74,0:06:40.74,pos1,NTP,0,0,0,,{\move(34.5,315,568.5,315)\1cA0BCE8\fs30\fry-20}安心安全的生活
+Dialogue: 0,0:06:36.74,0:06:40.74,pos5,NTP,0,0,0,,{\move(816,844.5,1350,844.5)\1cFFFFFF\3cBC759F\bord2.25\fry-10}創建溫柔城市  溫柔國家
+Dialogue: 0,0:06:36.74,0:06:40.74,pos4,NTP,0,0,0,,{\move(637.5,810,1171.5,810)\1c7FA8E2\bord2.25\fry-16}用這雙手保衛國家
+Dialogue: 0,0:06:36.74,0:06:40.74,pos5,NTP,0,0,0,,{\move(163.5,865.5,697.5,865.5)\1cFFFFFF\3c72A9DC\fs30\bord2.25\fry-16\frz-84}向著閃耀的世界
+Dialogue: 0,0:06:36.74,0:06:40.74,pos1,NTP,0,0,0,,{\move(-87,705,447,705)\1c9DB44B\fs30\bord2.25\fry-22}要託付將來的話
+Dialogue: 0,0:06:36.74,0:06:40.74,pos5,NTP,0,0,0,,{\move(-213,720,330,720)\1c87D09C\fs27\bord2.25\fry-26}以大家之力  為大家服務
+Dialogue: 0,0:06:36.74,0:06:40.74,pos6,NTP,0,0,0,,{\move(-240,273,294,273)\fs24\fry-30\frz6}櫻田王家
+Dialogue: 0,0:06:36.74,0:06:40.74,pos6,NTP,0,0,0,,{\move(-243,339,291,339)\fs33\fry-30\frz5}下任國王選舉
+Dialogue: 0,0:06:36.74,0:06:40.74,pos6,NTP,0,0,0,,{\move(-244.5,403.5,289.5,403.5)\fs27\fry-30\frz4}候選者海報布告欄
+Dialogue: 0,0:06:36.74,0:06:40.74,pos6,NTP,0,0,0,,{\move(-244.5,465,289.5,465)\fs24\fry-30\frz1}大家一起來投票吧
+Dialogue: 0,0:06:37.27,0:06:40.58,Default,NTP,0,0,0,,好不容易才剛發現了沒有攝像頭的路線
+Dialogue: 0,0:06:41.08,0:06:43.46,Default,NTP,0,0,0,,但是這樣下去的話真的要遲到了
+Dialogue: 0,0:06:45.65,0:06:46.34,Default,NTP,0,0,0,,既然如此
+Dialogue: 0,0:06:49.01,0:06:49.88,Default,NTP,0,0,0,,這樣好嗎  茜
+Dialogue: 0,0:06:50.26,0:06:53.05,Default,NTP,0,0,0,,你不是說這像耍詐一樣  儘量不想使用的嗎
+Dialogue: 0,0:06:53.71,0:06:56.98,Default,NTP,0,0,0,,但是不能讓姐姐也遲到啊
+Dialogue: 0,0:07:01.08,0:07:01.75,Default,NTP,0,0,0,,謝謝
+Dialogue: 0,0:07:05.06,0:07:05.61,Default,NTP,0,0,0,,把手給我
+Dialogue: 0,0:07:06.09,0:07:06.72,Default,NTP,0,0,0,,拜託你了
+Dialogue: 0,0:07:08.90,0:07:12.95,Default,NTP,0,0,0,,我們王族的人各自都擁有特殊能力
+Dialogue: 0,0:07:13.28,0:07:15.50,Default,NTP,0,0,0,,那就像是王族的證明一樣
+Dialogue: 0,0:07:16.09,0:07:21.33,Default,NTP,0,0,0,,我的能力是可以操縱自己以及和自己接觸之物的重力
+Dialogue: 0,0:07:21.86,0:07:24.18,Default,NTP,0,0,0,,茜  能再稍微飛得慢點嗎
+Dialogue: 0,0:07:24.76,0:07:25.82,Default,NTP,0,0,0,,誒  為什麼
+Dialogue: 0,0:07:26.42,0:07:29.64,Default,NTP,0,0,0,,因為  會看到…小褲褲
+Dialogue: 0,0:07:34.39,0:07:37.09,Default,NTP,0,0,0,,特殊能力的使用場合需多加注意
+Dialogue: 0,0:07:37.86,0:07:38.44,Default,NTP,0,0,0,,陛下
+Dialogue: 0,0:07:38.95,0:07:42.69,Default,NTP,0,0,0,,我已經說過很多次了  請不要把王冠帶出城
+Dialogue: 0,0:07:43.24,0:07:43.99,Default,NTP,0,0,0,,抱歉抱歉
+Dialogue: 0,0:07:44.66,0:07:47.17,Default,NTP,0,0,0,,我還以為丟失了  擔心得要死
+Dialogue: 0,0:07:47.81,0:07:49.46,Default,NTP,0,0,0,,楠你還真是愛瞎操心啊
+Dialogue: 0,0:07:49.91,0:07:50.49,Default,NTP,0,0,0,,陛下
+Dialogue: 0,0:07:51.29,0:07:52.62,Default,NTP,0,0,0,,孩子們的情況如何
+Dialogue: 0,0:07:53.39,0:07:56.81,Default,NTP,0,0,0,,是的  栞大人已經抵達了幼兒園
+Dialogue: 0,0:07:57.39,0:08:00.27,Default,NTP,0,0,0,,岬大人  遙大人  光大人  輝大人會在五分鐘內
+Dialogue: 0,0:08:00.73,0:08:02.98,Default,NTP,0,0,0,,修大人  奏大人也會在十分鐘內到達學校
+Dialogue: 0,0:08:03.55,0:08:04.13,Default,NTP,0,0,0,,是嗎
+Dialogue: 0,0:08:05.43,0:08:06.55,Default,NTP,0,0,0,,葵和茜呢
+Dialogue: 0,0:08:07.06,0:08:11.02,Default,NTP,0,0,0,,這個…也許是使用了能力所以攝像頭未能捕捉到
+Dialogue: 0,0:08:11.54,0:08:12.59,Default,NTP,0,0,0,,真拿她們沒轍
+Dialogue: 0,0:08:13.20,0:08:15.74,Default,NTP,0,0,0,,雖然老是添麻煩  不過還請你繼續關照了
+Dialogue: 0,0:08:16.62,0:08:17.87,Default,NTP,0,0,0,,我明白的  陛下
+Dialogue: 0,0:08:18.32,0:08:20.78,Default,NTP,0,0,0,,那麼差不多開始吧
+Dialogue: 0,0:08:21.98,0:08:23.41,Default,NTP,0,0,0,,國王的聽政現在開始
+Dialogue: 0,0:08:23.78,0:08:24.94,Default,NTP,0,0,0,,想要覲見的人到這裡來
+Dialogue: 0,0:08:25.36,0:08:25.86,Default,NTP,0,0,0,,是
+Dialogue: 0,0:08:29.49,0:08:30.42,Default,NTP,0,0,0,,趕上了
+Dialogue: 0,0:08:30.85,0:08:31.99,Default,NTP,0,0,0,,辛苦了  茜大人
+Dialogue: 0,0:08:32.39,0:08:34.29,Default,NTP,0,0,0,,每天早上都很不容易呢  茜大人
+Dialogue: 0,0:08:34.79,0:08:36.94,Default,NTP,0,0,0,,別故意在後面加大人了
+Dialogue: 0,0:08:38.17,0:08:41.96,Default,NTP,0,0,0,,不過  能躲開眾目睽睽的也只有學校和家裡了
+Dialogue: 0,0:08:42.16,0:08:43.68,Default,NTP,0,0,0,,畢竟這裡沒有攝像頭
+Dialogue: 0,0:08:44.04,0:08:44.60,Default,NTP,0,0,0,,嗯
+Dialogue: 0,0:08:46.05,0:08:47.58,Default,NTP,0,0,0,,啊  結束了
+Dialogue: 0,0:08:48.36,0:08:50.38,Default,NTP,0,0,0,,快樂的時間總是匆匆而逝呢
+Dialogue: 0,0:08:50.63,0:08:54.82,Default,NTP,0,0,0,,我想應該沒人比你更對學校生活依依不捨了
+Dialogue: 0,0:08:55.52,0:08:58.78,Default,NTP,0,0,0,,因為這裡沒人會對我有區別對待不是嗎
+Dialogue: 0,0:09:00.44,0:09:01.33,Default,NTP,0,0,0,,畢竟是朋友嘛
+Dialogue: 0,0:09:01.47,0:09:02.34,Default,NTP,0,0,0,,嗯嗯
+Dialogue: 0,0:09:02.55,0:09:04.65,Default,NTP,0,0,0,,茜  我來接你了
+Dialogue: 0,0:09:05.54,0:09:06.42,Default,NTP,0,0,0,,葵大人
+Dialogue: 0,0:09:06.87,0:09:07.96,Default,NTP,0,0,0,,{\an8\fs63}請和我結婚
+Dialogue: 0,0:09:07.64,0:09:09.33,Default,NTP,0,0,0,,也許只是我沒有人氣
+Dialogue: 0,0:09:12.52,0:09:13.98,Default,NTP,0,0,0,,姐姐真厲害
+Dialogue: 0,0:09:14.76,0:09:16.15,Default,NTP,0,0,0,,無論到哪都那麼受歡迎
+Dialogue: 0,0:09:16.84,0:09:17.81,Default,NTP,0,0,0,,是嗎
+Dialogue: 0,0:09:22.71,0:09:25.53,Default,NTP,0,0,0,,對  對不起  我背後沒有眼睛看不到
+Dialogue: 0,0:09:26.23,0:09:26.91,Default,NTP,0,0,0,,搶包賊
+Dialogue: 0,0:09:27.84,0:09:29.16,Default,NTP,0,0,0,,拜託了  誰幫我抓住他
+Dialogue: 0,0:09:30.79,0:09:31.69,Default,NTP,0,0,0,,我去一下
+Dialogue: 0,0:09:32.46,0:09:34.34,Default,NTP,0,0,0,,嗯  茜小心一點
+Dialogue: 0,0:09:36.15,0:09:39.42,Default,NTP,0,0,0,,正義必將獲勝
+Dialogue: 0,0:09:40.46,0:09:41.77,Default,NTP,0,0,0,,給我站住
+Dialogue: 0,0:09:42.75,0:09:43.61,Default,NTP,0,0,0,,是王家的三女
+Dialogue: 0,0:09:45.27,0:09:45.85,Default,NTP,0,0,0,,都說了
+Dialogue: 0,0:09:47.08,0:09:51.08,Default,NTP,0,0,0,,叫你站住！
+Dialogue: 0,0:09:54.25,0:09:55.65,Default,NTP,0,0,0,,啊  做過火了
+Dialogue: 0,0:09:56.34,0:09:59.40,Default,NTP,0,0,0,,可惡  看條內褲被抓太不合算了
+Dialogue: 0,0:09:59.65,0:10:00.42,Default,NTP,0,0,0,,{\an8\fs63}快給我進去
+Dialogue: 0,0:10:00.50,0:10:02.90,Default,NTP,0,0,0,,茜大人  請詳細說下逮捕犯人的經過
+Dialogue: 0,0:10:03.45,0:10:05.66,Default,NTP,0,0,0,,茜大人  有什麼想對犯人說的嗎
+Dialogue: 0,0:10:06.88,0:10:08.55,Default,NTP,0,0,0,,不  不要看…
+Dialogue: 0,0:10:09.08,0:10:10.16,Default,NTP,0,0,0,,就那麼討厭嗎
+Dialogue: 0,0:10:10.24,0:10:14.95,pos7,NTP,0,0,0,,{\fad(450,0)\bord2.25\pos(262.5,112.5)\fs48}茜大人的大功勞\N{\b0\fs37.5}成功抓住搶包賊
+Dialogue: 0,0:10:11.13,0:10:14.88,Default,NTP,0,0,0,,您剛剛看到的是茜大人抓獲搶包賊的新聞
+Dialogue: 0,0:10:15.66,0:10:20.58,Default,NTP,0,0,0,,能看到如此貴重VTR的  也只有在櫻田家新聞里了
+Dialogue: 0,0:10:21.15,0:10:22.80,Default,NTP,0,0,0,,果然還是覺得很難為情
+Dialogue: 0,0:10:23.20,0:10:25.49,Default,NTP,0,0,0,,每周都這樣被電視報道
+Dialogue: 0,0:10:26.09,0:10:28.10,Default,NTP,0,0,0,,茜那麼努力  被報道下也挺好
+Dialogue: 0,0:10:28.55,0:10:33.01,Default,NTP,0,0,0,,沒錯沒錯  讓國民知曉大家的事情也是件很重要的工作
+Dialogue: 0,0:10:34.19,0:10:36.12,Default,NTP,0,0,0,,而且明年還有選舉
+Dialogue: 0,0:10:36.66,0:10:39.06,Default,NTP,0,0,0,,真好啊  茜能上電視
+Dialogue: 0,0:10:39.38,0:10:43.69,Default,NTP,0,0,0,,那麼  接下來將根據最新的民意調查發表目前的支持率
+Dialogue: 0,0:10:44.15,0:10:46.32,Default,NTP,0,0,0,,有請王族專家真島先生
+Dialogue: 0,0:10:47.60,0:10:49.68,Default,NTP,0,0,0,,根據這次的調查結果
+Dialogue: 0,0:10:50.14,0:10:54.40,Default,NTP,0,0,0,,第一王女葵大人依然在各個年齡層中擁有超高人氣
+Dialogue: 0,0:10:55.81,0:10:58.59,Default,NTP,0,0,0,,第二王女奏大人的人氣也很高
+Dialogue: 0,0:10:59.92,0:11:00.74,Default,NTP,0,0,0,,{\an8\fs63}把桌子擦一下
+Dialogue: 0,0:10:59.16,0:11:03.38,Default,NTP,0,0,0,,果然以繼位來說年齡靠前的兄妹比較有利嗎
+Dialogue: 0,0:11:03.79,0:11:06.85,Default,NTP,0,0,0,,也不能這麼說  在別的調查中…
+Dialogue: 0,0:11:06.90,0:11:10.62,Default,NTP,0,0,0,,下任國王會從我們之間選出  但是…
+Dialogue: 0,0:11:11.07,0:11:14.49,Default,NTP,0,0,0,,要是最小的栞大人能當選似乎會很有趣呢
+Dialogue: 0,0:11:14.49,0:11:15.89,Default,NTP,0,0,0,,我也很支持她
+Dialogue: 0,0:11:15.92,0:11:17.07,Default,NTP,0,0,0,,是呢
+Dialogue: 0,0:11:17.07,0:11:18.74,Default,NTP,0,0,0,,是不是太隨便了
+Dialogue: 0,0:11:19.11,0:11:20.21,Default,NTP,0,0,0,,我認為下回的調查
+Dialogue: 0,0:11:20.35,0:11:25.36,Default,NTP,0,0,0,,會因搶包賊事件而使茜大人的支持率得到大幅提升
+Dialogue: 0,0:11:25.78,0:11:28.60,Default,NTP,0,0,0,,不要  別再播了
+Dialogue: 0,0:11:29.23,0:11:30.77,Default,NTP,0,0,0,,你也差不多該習慣了
+Dialogue: 0,0:11:31.37,0:11:34.32,Default,NTP,0,0,0,,哦  監視攝像頭拍得相當到位呢
+Dialogue: 0,0:11:34.90,0:11:36.81,Default,NTP,0,0,0,,真是的  饒了我吧
+Dialogue: 0,0:11:37.42,0:11:38.02,Default,NTP,0,0,0,,我回來了
+Dialogue: 0,0:11:38.33,0:11:39.18,Default,NTP,0,0,0,,啊  爸爸
+Dialogue: 0,0:11:39.37,0:11:40.26,Default,NTP,0,0,0,,歡迎回來
+Dialogue: 0,0:11:41.47,0:11:42.80,Default,NTP,0,0,0,,還真的挺早的呢
+Dialogue: 0,0:11:43.15,0:11:43.68,Default,NTP,0,0,0,,是的
+Dialogue: 0,0:11:44.33,0:11:46.48,Default,NTP,0,0,0,,你們周末有什麼安排嗎
+Dialogue: 0,0:11:46.88,0:11:48.88,Default,NTP,0,0,0,,誒  倒是沒有
+Dialogue: 0,0:11:49.34,0:11:50.72,Default,NTP,0,0,0,,要帶我們去哪玩嗎
+Dialogue: 0,0:11:50.87,0:11:54.82,Default,NTP,0,0,0,,不是  雖然有些突然  不過你們的電視演出定下來了
+Dialogue: 0,0:11:55.58,0:11:56.14,Default,NTP,0,0,0,,誒？
+Dialogue: 0,0:12:01.86,0:12:05.45,pos6,NTP,0,0,0,,{\pos(960,210)\fad(1000,0)\fs75\fsp9\1c70C7D5\3c73A0AB\bord2.25\shad3\be2}櫻田家庭新聞\N特別篇
+Dialogue: 0,0:12:03.28,0:12:05.20,Default,NTP,0,0,0,,觀眾朋友們  你們好
+Dialogue: 0,0:12:06.03,0:12:08.08,Default,NTP,0,0,0,,沒想到這周的「櫻田家庭新聞」
+Dialogue: 0,0:12:08.54,0:12:11.41,Default,NTP,0,0,0,,竟然請到了國王家裡兄弟姐妹全員
+Dialogue: 0,0:12:11.79,0:12:13.50,Default,NTP,0,0,0,,各位  請多多的指教
+Dialogue: 0,0:12:14.83,0:12:16.71,Default,NTP,0,0,0,,正如各位國民所知
+Dialogue: 0,0:12:17.13,0:12:19.92,Default,NTP,0,0,0,,王族之人擁有著特殊能力
+Dialogue: 0,0:12:20.30,0:12:25.01,Default,NTP,0,0,0,,今天想讓他們通過挑戰某項遊戲來展現這一能力
+Dialogue: 0,0:12:25.89,0:12:27.10,Default,NTP,0,0,0,,這種事我沒聽說過啊
+Dialogue: 0,0:12:28.60,0:12:29.52,Default,NTP,0,0,0,,這項遊戲就是
+Dialogue: 0,0:12:30.10,0:12:32.85,Default,NTP,0,0,0,,「千鈞一髮  拯救丹迪君！」
+Dialogue: 0,0:12:33.48,0:12:36.90,Default,NTP,0,0,0,,將在屋頂擺放著的扮演人角色的丹迪君
+Dialogue: 0,0:12:37.36,0:12:42.24,Default,NTP,0,0,0,,在規定時間內儘量多地回收並放入下面準備好的籮筐里
+Dialogue: 0,0:12:42.24,0:12:44.49,Default,NTP,0,0,0,,規則就是這麼簡單
+Dialogue: 0,0:12:44.95,0:12:48.16,Default,NTP,0,0,0,,我們也收到了國王發來的鼓勵的話語
+Dialogue: 0,0:12:48.91,0:12:51.33,Default,NTP,0,0,0,,希望大家不要惜存自己的力量
+Dialogue: 0,0:12:51.91,0:12:56.33,Default,NTP,0,0,0,,盡力讓國民們了解自己而努力
+Dialogue: 0,0:12:56.92,0:13:00.25,Default,NTP,0,0,0,,成績最差的人就讓他去打掃城堡里的廁所吧
+Dialogue: 0,0:13:01.42,0:13:02.84,Default,NTP,0,0,0,,打掃城堡里的廁所？
+Dialogue: 0,0:13:03.72,0:13:05.88,Default,NTP,0,0,0,,什麼嘛  那樣最後一名也無所謂嘛
+Dialogue: 0,0:13:06.22,0:13:08.30,Default,NTP,0,0,0,,比起引人注目  打掃廁所更好
+Dialogue: 0,0:13:09.18,0:13:10.60,Default,NTP,0,0,0,,規定時間60分鐘
+Dialogue: 0,0:13:10.93,0:13:13.06,Default,NTP,0,0,0,,各位  準備好了嗎
+Dialogue: 0,0:13:14.56,0:13:16.06,Default,NTP,0,0,0,,那麼遊戲開始
+Dialogue: 0,0:13:17.94,0:13:21.03,Default,NTP,0,0,0,,只是搭電梯上去就太沒本事了
+Dialogue: 0,0:13:23.24,0:13:25.07,Default,NTP,0,0,0,,看我來爬這座大樓
+Dialogue: 0,0:13:26.91,0:13:29.53,Default,NTP,0,0,0,,{\pos(1266,969)\fs54}limit over
+Dialogue: 0,0:13:26.91,0:13:29.53,Default,NTP,0,0,0,,三男  輝大人的能力是怪力超人
+Dialogue: 0,0:13:33.50,0:13:35.16,Default,NTP,0,0,0,,好  沖啊
+Dialogue: 0,0:13:35.41,0:13:38.92,Default,NTP,0,0,0,,發揮強大的力量  順利地攀登著大樓
+Dialogue: 0,0:13:41.34,0:13:43.59,Default,NTP,0,0,0,,突然發生了意外
+Dialogue: 0,0:13:45.67,0:13:47.59,Default,NTP,0,0,0,,只是看著的我們也提心弔膽呢
+Dialogue: 0,0:13:48.18,0:13:49.76,Default,NTP,0,0,0,,好  我也要上了
+Dialogue: 0,0:13:50.47,0:13:51.85,Default,NTP,0,0,0,,不要太勉強啊
+Dialogue: 0,0:13:52.01,0:13:54.64,Default,NTP,0,0,0,,我知道啦  好嘞
+Dialogue: 0,0:13:56.14,0:13:57.90,Default,NTP,0,0,0,,那就開始吧
+Dialogue: 0,0:14:01.27,0:14:01.82,Default,NTP,0,0,0,,好
+Dialogue: 0,0:14:03.57,0:14:06.11,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}God hand
+Dialogue: 0,0:14:03.57,0:14:06.11,Default,NTP,0,0,0,,五女  光大人的能力是生命操作
+Dialogue: 0,0:14:06.74,0:14:09.07,Default,NTP,0,0,0,,可以操控生物的成長
+Dialogue: 0,0:14:11.58,0:14:15.54,Default,NTP,0,0,0,,真是深謀遠慮呢  通過操控樹木的生長最早到達屋頂
+Dialogue: 0,0:14:16.25,0:14:17.96,Default,NTP,0,0,0,,不愧是光姐姐
+Dialogue: 0,0:14:20.67,0:14:21.84,Default,NTP,0,0,0,,咦  咦
+Dialogue: 0,0:14:22.38,0:14:24.05,Default,NTP,0,0,0,,長過頭了
+Dialogue: 0,0:14:24.05,0:14:24.96,Default,NTP,0,0,0,,真是遺憾
+Dialogue: 0,0:14:25.17,0:14:27.42,Default,NTP,0,0,0,,24小時以內無法回到原來大小
+Dialogue: 0,0:14:28.22,0:14:29.64,Default,NTP,0,0,0,,你在幹什麼啊
+Dialogue: 0,0:14:31.01,0:14:34.89,Default,NTP,0,0,0,,仔細想想  讓自己爬上去真是效率低下啊
+Dialogue: 0,0:14:41.15,0:14:42.82,Default,NTP,0,0,0,,那麼就拜託了
+Dialogue: 0,0:14:43.65,0:14:46.74,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}heaven's gate
+Dialogue: 0,0:14:43.65,0:14:46.74,Default,NTP,0,0,0,,次女  奏大人的能力是物質生成
+Dialogue: 0,0:14:47.24,0:14:49.32,Default,NTP,0,0,0,,能生成任何物質
+Dialogue: 0,0:14:49.82,0:14:53.08,Default,NTP,0,0,0,,但是與生成出來的物質同樣價值的金額
+Dialogue: 0,0:14:53.49,0:14:55.49,Default,NTP,0,0,0,,會直接從存摺中扣除啊
+Dialogue: 0,0:14:56.29,0:14:58.41,Default,NTP,0,0,0,,這次的無人飛行器會花掉200萬吧
+Dialogue: 0,0:15:02.75,0:15:03.50,Default,NTP,0,0,0,,辛苦了
+Dialogue: 0,0:15:05.75,0:15:08.63,Default,NTP,0,0,0,,感覺跟運動會的扔球入筐一樣
+Dialogue: 0,0:15:09.42,0:15:12.26,Default,NTP,0,0,0,,輝大人得4分  奏大人得了5分
+Dialogue: 0,0:15:12.72,0:15:14.14,Default,NTP,0,0,0,,我也要加油才行了
+Dialogue: 0,0:15:18.89,0:15:21.85,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}all for one
+Dialogue: 0,0:15:18.89,0:15:21.85,Default,NTP,0,0,0,,四女  岬大人的能力是情感分裂
+Dialogue: 0,0:15:22.56,0:15:25.57,Default,NTP,0,0,0,,最多能生成7個分身
+Dialogue: 0,0:15:26.32,0:15:27.44,Default,NTP,0,0,0,,拜託大家了
+Dialogue: 0,0:15:27.73,0:15:29.90,Default,NTP,0,0,0,,我坐電梯上去
+Dialogue: 0,0:15:30.07,0:15:32.03,Default,NTP,0,0,0,,那我就從緊急樓梯上
+Dialogue: 0,0:15:32.11,0:15:33.37,Default,NTP,0,0,0,,真麻煩~
+Dialogue: 0,0:15:33.45,0:15:34.78,Default,NTP,0,0,0,,遙也一起上去吧
+Dialogue: 0,0:15:34.87,0:15:36.37,Default,NTP,0,0,0,,能得到點心麼
+Dialogue: 0,0:15:36.41,0:15:37.79,Default,NTP,0,0,0,,慢慢來吧
+Dialogue: 0,0:15:40.66,0:15:41.33,Default,NTP,0,0,0,,是這樣嗎
+Dialogue: 0,0:15:42.67,0:15:44.96,Default,NTP,0,0,0,,對不起  我不明白
+Dialogue: 0,0:15:45.13,0:15:46.80,Default,NTP,0,0,0,,栞  你在說什麼呢
+Dialogue: 0,0:15:47.17,0:15:51.72,Default,NTP,0,0,0,,那個呢  難得消火栓先生告訴了我近道
+Dialogue: 0,0:15:52.18,0:15:53.14,Default,NTP,0,0,0,,但是不知道怎麼走
+Dialogue: 0,0:15:53.51,0:15:54.14,Default,NTP,0,0,0,,它說什麼了？
+Dialogue: 0,0:15:54.85,0:15:57.01,Default,NTP,0,0,0,,B2  貨用電梯
+Dialogue: 0,0:15:57.47,0:15:59.27,Default,NTP,0,0,0,,在27樓換乘
+Dialogue: 0,0:16:00.43,0:16:01.31,Default,NTP,0,0,0,,那個路線啊
+Dialogue: 0,0:16:01.60,0:16:02.73,Default,NTP,0,0,0,,姐姐你知道嗎？
+Dialogue: 0,0:16:03.31,0:16:05.69,Default,NTP,0,0,0,,之前有來參觀過一次
+Dialogue: 0,0:16:06.06,0:16:08.82,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}soulmate
+Dialogue: 0,0:16:06.06,0:16:08.82,Default,NTP,0,0,0,,六女  栞大人的能力是物體會話
+Dialogue: 0,0:16:09.11,0:16:12.24,Default,NTP,0,0,0,,不僅僅是生物  連無機物都可以進行會話
+Dialogue: 0,0:16:12.82,0:16:15.78,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}invisible work
+Dialogue: 0,0:16:12.82,0:16:15.78,Default,NTP,0,0,0,,長女  葵大人的能力是完全學習
+Dialogue: 0,0:16:16.20,0:16:18.45,Default,NTP,0,0,0,,只要記住一次就絕不會忘掉
+Dialogue: 0,0:16:20.16,0:16:21.04,Default,NTP,0,0,0,,那我也去吧
+Dialogue: 0,0:16:22.04,0:16:23.87,Default,NTP,0,0,0,,一直被拍著也沒啥用
+Dialogue: 0,0:16:24.54,0:16:25.88,Default,NTP,0,0,0,,我忘記了！
+Dialogue: 0,0:16:27.13,0:16:29.30,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}tranceporter
+Dialogue: 0,0:16:27.13,0:16:29.30,Default,NTP,0,0,0,,長男  修大人的能力是瞬間移動
+Dialogue: 0,0:16:29.76,0:16:33.47,Default,NTP,0,0,0,,可以在一瞬間將自己和自己所觸摸到的物體移動
+Dialogue: 0,0:16:33.59,0:16:37.43,Default,NTP,0,0,0,,大家開始發揮自己的能力  遊戲也火熱起來了
+Dialogue: 0,0:16:37.80,0:16:39.56,Default,NTP,0,0,0,,越來越目不暇接了
+Dialogue: 0,0:16:44.56,0:16:46.44,Default,NTP,0,0,0,,我不當最後一名的概率是…
+Dialogue: 0,0:16:48.02,0:16:49.61,Default,NTP,0,0,0,,就在這時遙大人也開始行動了
+Dialogue: 0,0:16:50.73,0:16:53.49,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}lots of next
+Dialogue: 0,0:16:50.73,0:16:53.49,Default,NTP,0,0,0,,次男  遙大人的能力是概率預知
+Dialogue: 0,0:16:53.90,0:16:56.53,Default,NTP,0,0,0,,可以掌握所有可能性的概率
+Dialogue: 0,0:16:58.78,0:16:59.33,Default,NTP,0,0,0,,姐姐
+Dialogue: 0,0:17:00.95,0:17:02.96,Default,NTP,0,0,0,,怎怎怎怎…怎麼辦  遙
+Dialogue: 0,0:17:03.08,0:17:05.46,Default,NTP,0,0,0,,我該怎麼辦才好
+Dialogue: 0,0:17:05.87,0:17:06.83,Default,NTP,0,0,0,,總之先冷靜下來
+Dialogue: 0,0:17:07.75,0:17:08.38,Default,NTP,0,0,0,,但是…
+Dialogue: 0,0:17:08.54,0:17:12.80,Default,NTP,0,0,0,,姐姐如果你什麼都不做的話  當最後一名的概率是87%
+Dialogue: 0,0:17:14.01,0:17:15.88,Default,NTP,0,0,0,,同樣的話我是74%
+Dialogue: 0,0:17:16.39,0:17:20.89,Default,NTP,0,0,0,,但是如果兩人合作的話  概率能降到25%
+Dialogue: 0,0:17:21.27,0:17:22.39,Default,NTP,0,0,0,,我預知出了這個結論
+Dialogue: 0,0:17:22.89,0:17:24.43,Default,NTP,0,0,0,,就算最後一名也無所謂
+Dialogue: 0,0:17:25.52,0:17:29.23,Default,NTP,0,0,0,,因為我不想再更加引人注目了  打掃廁所也無所謂
+Dialogue: 0,0:17:29.90,0:17:33.07,Default,NTP,0,0,0,,姐姐  你知道城堡里有多少個廁所嗎
+Dialogue: 0,0:17:34.82,0:17:36.28,Default,NTP,0,0,0,,我知道的也不是很詳細
+Dialogue: 0,0:17:36.99,0:17:40.20,Default,NTP,0,0,0,,那麼大的城堡里  把各個角落都算進去的話…
+Dialogue: 0,0:17:41.49,0:17:45.08,Default,NTP,0,0,0,,而且去城堡的話  會跟各種各樣的人見面
+Dialogue: 0,0:17:46.21,0:17:48.88,Default,NTP,0,0,0,,我會得第八給你看的
+Dialogue: 0,0:17:49.25,0:17:51.30,Default,NTP,0,0,0,,那我們一起加油吧
+Dialogue: 0,0:17:54.72,0:17:57.68,Default,NTP,0,0,0,,{\pos(1230,990)\fs50\bord2}gravity core
+Dialogue: 0,0:17:54.72,0:17:57.68,Default,NTP,0,0,0,,三女  茜大人的能力是重力制御
+Dialogue: 0,0:17:58.93,0:18:01.14,Default,NTP,0,0,0,,可以控制自身和
+Dialogue: 0,0:18:01.51,0:18:02.89,Default,NTP,0,0,0,,自身所觸碰到的物體的重力
+Dialogue: 0,0:18:04.68,0:18:06.18,Default,NTP,0,0,0,,為什麼這麼慢？
+Dialogue: 0,0:18:07.02,0:18:09.44,Default,NTP,0,0,0,,像平常一樣一口氣衝上屋頂不好麼
+Dialogue: 0,0:18:10.19,0:18:12.73,Default,NTP,0,0,0,,不行的啊  如果這樣做了
+Dialogue: 0,0:18:13.15,0:18:13.69,Default,NTP,0,0,0,,做了？
+Dialogue: 0,0:18:14.90,0:18:15.90,Default,NTP,0,0,0,,內褲會被看到的
+Dialogue: 0,0:18:16.70,0:18:17.82,Default,NTP,0,0,0,,真是拿你沒辦法
+Dialogue: 0,0:18:18.28,0:18:20.32,Default,NTP,0,0,0,,我來幫你蓋住吧
+Dialogue: 0,0:18:21.33,0:18:25.66,Default,NTP,0,0,0,,等下遙  就算是姐弟也有能幹和不能幹的事…
+Dialogue: 0,0:18:25.66,0:18:27.25,Default,NTP,0,0,0,,姐姐  冷靜點
+Dialogue: 0,0:18:28.04,0:18:30.17,Default,NTP,0,0,0,,那兩個孩子在幹什麼
+Dialogue: 0,0:18:30.42,0:18:31.84,Default,NTP,0,0,0,,這樣就50個了
+Dialogue: 0,0:18:32.75,0:18:33.96,Default,NTP,0,0,0,,真不愧是大哥
+Dialogue: 0,0:18:34.46,0:18:35.46,Default,NTP,0,0,0,,你也加油吧
+Dialogue: 0,0:18:36.01,0:18:36.47,Default,NTP,0,0,0,,是
+Dialogue: 0,0:18:37.34,0:18:38.63,Default,NTP,0,0,0,,讓開  讓開！
+Dialogue: 0,0:18:49.85,0:18:50.90,Default,NTP,0,0,0,,沒事吧  輝
+Dialogue: 0,0:18:54.23,0:18:56.11,Default,NTP,0,0,0,,謝謝你  大哥
+Dialogue: 0,0:18:57.78,0:19:00.16,Default,NTP,0,0,0,,話說回來  這裡是哪兒？
+Dialogue: 0,0:19:01.78,0:19:03.58,Default,NTP,0,0,0,,櫻花勝地呢
+Dialogue: 0,0:19:03.87,0:19:04.37,Default,NTP,0,0,0,,是的
+Dialogue: 0,0:19:05.70,0:19:08.41,Default,NTP,0,0,0,,看來我是非常想賞花呢
+Dialogue: 0,0:19:10.17,0:19:12.25,Default,NTP,0,0,0,,大哥  那是什麼
+Dialogue: 0,0:19:15.75,0:19:16.80,Default,NTP,0,0,0,,沒事吧  遙
+Dialogue: 0,0:19:17.30,0:19:20.84,Default,NTP,0,0,0,,怎麼可能沒事  如果哥哥不在的話現在就…
+Dialogue: 0,0:19:22.39,0:19:23.05,Default,NTP,0,0,0,,怎麼了？
+Dialogue: 0,0:19:23.22,0:19:25.01,Default,NTP,0,0,0,,姐姐  下面  下面
+Dialogue: 0,0:19:30.06,0:19:33.81,Default,NTP,0,0,0,,使用特殊能力的時候要注意呢
+Dialogue: 0,0:19:34.40,0:19:35.94,pos7,NTP,0,0,0,,{\pos(960,297)\fs60\1cFFFFFF}請稍等片刻
+Dialogue: 0,0:19:36.19,0:19:41.20,Default,NTP,0,0,0,,雖然還沒到規定時間  遊戲就此結束
+Dialogue: 0,0:19:41.61,0:19:45.24,Default,NTP,0,0,0,,第一名是修大人  最後一名是茜大人和光大人
+Dialogue: 0,0:19:47.66,0:19:49.04,Default,NTP,0,0,0,,我明明那麼努力的
+Dialogue: 0,0:19:49.25,0:19:51.16,Default,NTP,0,0,0,,光你只是站在樹上而已吧
+Dialogue: 0,0:19:51.79,0:19:55.96,Default,NTP,0,0,0,,那麼接下來發表國王選舉即時順位
+Dialogue: 0,0:19:57.75,0:19:59.59,Default,NTP,0,0,0,,因為才剛剛發表
+Dialogue: 0,0:20:00.05,0:20:01.97,Default,NTP,0,0,0,,所以票數並沒有拉開差距
+Dialogue: 0,0:20:03.84,0:20:04.93,Default,NTP,0,0,0,,我才第5位？
+Dialogue: 0,0:20:06.35,0:20:07.51,Default,NTP,0,0,0,,輸給栞了
+Dialogue: 0,0:20:08.18,0:20:10.56,Default,NTP,0,0,0,,為什麼  還沒有我的名字
+Dialogue: 0,0:20:10.85,0:20:12.64,Default,NTP,0,0,0,,接下來是第3位
+Dialogue: 0,0:20:14.10,0:20:15.02,Default,NTP,0,0,0,,奏大人！
+Dialogue: 0,0:20:17.19,0:20:18.32,Default,NTP,0,0,0,,對…對不起
+Dialogue: 0,0:20:18.65,0:20:19.53,Default,NTP,0,0,0,,為什麼要道歉
+Dialogue: 0,0:20:20.32,0:20:22.95,Default,NTP,0,0,0,,4月的順位發表中獲得第1名的到底是…
+Dialogue: 0,0:20:23.45,0:20:25.49,Default,NTP,0,0,0,,跟大眾預想一致的長女葵大人
+Dialogue: 0,0:20:25.99,0:20:28.54,Default,NTP,0,0,0,,還是這個月抓住搶包賊的茜大人
+Dialogue: 0,0:20:31.50,0:20:32.66,Default,NTP,0,0,0,,太好了
+Dialogue: 0,0:20:34.46,0:20:35.75,Default,NTP,0,0,0,,這一點也不好
+Dialogue: 0,0:20:36.96,0:20:40.17,Default,NTP,0,0,0,,明天開始打掃廁所  附帶福利內內內…
+Dialogue: 0,0:20:40.59,0:20:41.38,Default,NTP,0,0,0,,而且是第2名…
+Dialogue: 0,0:20:43.80,0:20:45.59,Default,NTP,0,0,0,,茜你不吃飯嗎
+Dialogue: 0,0:20:46.14,0:20:47.30,Default,NTP,0,0,0,,這是你最喜歡的漢堡肉喲
+Dialogue: 0,0:20:51.64,0:20:53.35,Default,NTP,0,0,0,,因為出生於王家
+Dialogue: 0,0:20:53.73,0:20:56.69,Default,NTP,0,0,0,,你們要受到必要以上的注目
+Dialogue: 0,0:20:57.44,0:20:59.73,Default,NTP,0,0,0,,其中也會受到傷害的吧
+Dialogue: 0,0:21:00.48,0:21:04.53,Default,NTP,0,0,0,,但是作為王族  需要承擔最低限度的義務和責任
+Dialogue: 0,0:21:05.57,0:21:07.20,Default,NTP,0,0,0,,你們是國家的象徵
+Dialogue: 0,0:21:08.37,0:21:09.45,Default,NTP,0,0,0,,同樣也是希望
+Dialogue: 0,0:21:10.83,0:21:13.75,Default,NTP,0,0,0,,雖然還不知道會是誰來繼承我
+Dialogue: 0,0:21:14.33,0:21:17.96,Default,NTP,0,0,0,,但希望各位都能擁有獲得這份資格的覺悟
+Dialogue: 0,0:21:18.38,0:21:22.17,Default,NTP,0,0,0,,孩子他爸你又把這東西帶回來了？
+Dialogue: 0,0:21:22.80,0:21:25.30,Default,NTP,0,0,0,,不  已經跟城堡那邊打過招呼了
+Dialogue: 0,0:21:29.64,0:21:32.93,Default,NTP,0,0,0,,在這種地方幹什麼呢  茜  會感冒的喲
+Dialogue: 0,0:21:33.68,0:21:36.39,Default,NTP,0,0,0,,我想成為田野里盛開的蒲公英
+Dialogue: 0,0:21:38.19,0:21:41.65,Default,NTP,0,0,0,,我不希望再被矚目  被監視
+Dialogue: 0,0:21:44.03,0:21:46.15,Default,NTP,0,0,0,,如果說要有一個辦法的話
+Dialogue: 0,0:21:46.86,0:21:48.24,Default,NTP,0,0,0,,那就是成為國王吧
+Dialogue: 0,0:21:49.74,0:21:52.20,Default,NTP,0,0,0,,那樣的話  也許就可以廢除監控錄像
+Dialogue: 0,0:21:52.45,0:21:55.04,Default,NTP,0,0,0,,把王家新聞腰斬了
+Dialogue: 0,0:21:59.21,0:22:01.46,Default,NTP,0,0,0,,姐姐  我要成為國王
+Dialogue: 0,0:22:03.30,0:22:04.26,Default,NTP,0,0,0,,成為國王
+Dialogue: 0,0:22:04.97,0:22:05.97,Default,NTP,0,0,0,,然後過上隱居生活
+Dialogue: 0,0:22:06.47,0:22:08.39,Default,NTP,0,0,0,,這好像有些矛盾…
+Dialogue: 0,0:23:40.72,0:23:42.32,Default,NTP,0,0,0,,我是櫻田家的次女奏
+Dialogue: 0,0:23:42.60,0:23:45.27,Default,NTP,0,0,0,,奏以前就是個不讓人操心的孩子呢
+Dialogue: 0,0:23:45.68,0:23:48.11,Default,NTP,0,0,0,,但是小時候憧憬著公主
+Dialogue: 0,0:23:48.44,0:23:51.66,Default,NTP,0,0,0,,用過像公主那樣「…的啦」的說話方式
+Dialogue: 0,0:23:51.83,0:23:53.52,Default,NTP,0,0,0,,那是年輕不懂事啊
+Dialogue: 0,0:23:53.73,0:23:54.95,Default,NTP,0,0,0,,雖然看起來很嚴厲
+Dialogue: 0,0:23:55.30,0:23:58.04,Default,NTP,0,0,0,,事實上是非常關心兄弟姐妹的溫柔的孩子
+Dialogue: 0,0:23:58.60,0:24:02.27,Default,NTP,0,0,0,,如果奏成為了國王  國民所有人都會勤懇認真
+Dialogue: 0,0:24:02.50,0:24:04.20,Default,NTP,0,0,0,,變成一個守秩序的國家吧
+Dialogue: 0,0:24:04.60,0:24:08.78,Default,NTP,0,0,0,,順帶一提我所憧憬的國王是尊嚴王菲利普二世
+Dialogue: 0,0:24:04.67,0:24:09.67,title,NTP,0,0,0,,{\an7\pos(387,480)\be2}「表{\1c671DD7}面{\r\be2}的好姐姐」
+Dialogue: 0,0:24:04.67,0:24:09.67,title,NTP,0,0,0,,{\an7\pos(387,810)\be2}「佐藤的{\1c671DD7}單{\r\be2}相思」
+

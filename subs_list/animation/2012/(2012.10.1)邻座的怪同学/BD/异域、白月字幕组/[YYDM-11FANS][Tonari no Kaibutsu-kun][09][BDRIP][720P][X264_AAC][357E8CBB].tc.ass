@@ -1,0 +1,474 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 漫游字幕
+Original Script: 漫游字幕组
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 1024
+PlayResY: 576
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,KaiTi,25,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,1,0,2,30,30,10,134
+Style: tk-warning,FZZhunYuan-M02S,22,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,8,10,10,10,1
+Style: tk-default,FZCuYuan-M03,33,&H00ECEDFB,&H000000FF,&H64561210,&HFF000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: tkopc,몺틇뗻폯쳥볲,28,&H00E64FC5,&H0051FFF6,&H00F8E6F8,&HFF000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: tkopj,mikachan,25,&H00E64FC5,&H0051FFF6,&H00F8E6F8,&HFF000000,0,0,0,0,100,100,0,0,1,2,2,8,10,10,10,1
+Style: tk-title,FZKaTong-M19,110,&H00FFFFFF,&H000000FF,&HFF000000,&HFF000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: tk-default2,FZCuYuan-M03,30,&H14ECEDFB,&H000000FF,&H64561210,&HFF000000,0,0,0,0,100,100,0,0,1,2,2,8,10,10,10,1
+Style: next title1,몺틇뗻폯쳥볲,65,&H00FFFFFF,&H000000FF,&HFF000000,&HFF000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: next title,몺틇뗻폯쳥볲,50,&H00FFFFFF,&H000000FF,&HFF000000,&HFF000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: edj,ＦＡ 丸ゴシックＭ,25,&H00FFFFFF,&H00D7B4F1,&H00A753A8,&H00EC85EF,0,0,0,0,100,100,0,0,1,2,2,8,10,10,10,1
+Style: edc,FZCuYuan-M03S,28,&H00FFFFFF,&H000000FF,&H00C16769,&H00FFB0AF,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:02:50.03,0:02:55.02,tk-warning,,0,0,0,,{\fad(450,450)\be3\blur3}本片字幕由異域字幕組(www.yydm.com)製作,僅供試看之用,如果喜歡本作品,請購買並支持正版!
+Dialogue: 0,0:02:55.09,0:02:59.94,tk-warning,,0,0,0,,{\fad(450,450)\be3\blur3}翻譯 明撒 小白花花 控妹 校譯 貓醬  時間 小鷗  後期 嵐豬  壓制 A4
+Dialogue: 0,0:00:01.00,0:00:02.70,tk-default2,NTP,0,0,0,,ゴルベーザ：ゴルベーザ (Golbeza) - 黑骑士
+Dialogue: 0,0:00:04.14,0:00:09.59,tk-default,NTP,0,0,0,,黑騎士朝子告訴你
+Dialogue: 0,0:00:11.13,0:00:12.00,tk-default,NTP,0,0,0,,文化祭
+Dialogue: 0,0:00:12.24,0:00:16.48,tk-default,NTP,0,0,0,,{\fs45\c&H01100B&\3c&HFFFFFF&\pos(824,246)\fn方正黑体_GBK}今天是文化祭☆
+Dialogue: 0,0:00:12.24,0:00:16.48,tk-default,NTP,0,0,0,,{\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(830,363)}我們班舉辦的還算成功
+Dialogue: 0,0:00:12.24,0:00:16.48,tk-default,NTP,0,0,0,,{\fs38\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(817,480)}不枉我們那麼認真的練習了！
+Dialogue: 0,0:00:12.24,0:00:16.48,tk-default,NTP,0,0,0,,{\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(790,524)}也參加了慶功宴！
+Dialogue: 0,0:00:22.00,0:00:25.43,tk-default,NTP,0,0,0,,{\move(200,600,200,338)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(200,600)}雖然選錯曲子
+Dialogue: 0,0:00:22.55,0:00:25.43,tk-default,NTP,0,0,0,,{\move(742,590,742,379)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(742,590)}有點鬱悶（笑）
+Dialogue: 0,0:00:24.75,0:00:25.43,tk-default,NTP,0,0,0,,{\move(369,540,369,476)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(369,540)}但是但是 今天有一件很開心的事情
+Dialogue: 0,0:00:28.80,0:00:34.25,tk-default,NTP,0,0,0,,{\move(776,555,776,0)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(776,555)}之前最好的朋友小水
+Dialogue: 0,0:00:29.68,0:00:34.74,tk-default,NTP,0,0,0,,{\move(771,555,771,35)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(771,555)}第一次和我說
+Dialogue: 0,0:00:30.25,0:00:35.41,tk-default,NTP,0,0,0,,{\move(769,600,769,85)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(769,600)}「我們是朋友哦☆」
+Dialogue: 0,0:00:32.20,0:00:37.52,tk-default,NTP,0,0,0,,{\move(627,580,627,35)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(627,580)}總覺得……
+Dialogue: 0,0:00:32.84,0:00:38.16,tk-default,NTP,0,0,0,,{\move(801,590,801,57)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(801,590)}今天好滿足
+Dialogue: 0,0:00:33.70,0:00:38.68,tk-default,NTP,0,0,0,,{\move(816,590,816,91)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(816,590)}有點睡不著了☆
+Dialogue: 0,0:00:35.25,0:00:38.68,tk-default,NTP,0,0,0,,{\move(608,590,608,248)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(608,590)}有朋友真好呢
+Dialogue: 0,0:00:38.14,0:00:38.68,tk-default,NTP,0,0,0,,{\move(584,585,584,553)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(584,585)}評論（1）
+Dialogue: 0,0:00:40.98,0:00:43.89,tk-default,NTP,0,0,0,,{\move(849,144,849,0)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(849,144)}前段時間辛苦了
+Dialogue: 0,0:00:41.04,0:00:46.11,tk-default,NTP,0,0,0,,{\move(803,272,803,70)\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(803,272)}很在意你的錯字和漏字
+Dialogue: 0,0:00:46.19,0:00:50.05,tk-default,NTP,0,0,0,,{\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(708,283)}還有、博客名字的黑騎士
+Dialogue: 0,0:00:46.19,0:00:50.05,tk-default,NTP,0,0,0,,{\fs40\c&H01100B&\3c&HFFFFFF&\fn方正黑体_GBK\pos(718,382)}那是什麼 水谷
+Dialogue: 0,0:02:19.98,0:02:25.05,tk-title,NTP,0,0,0,,{\fs150\pos(275,153)}0 {\fs70}和{\fs150} 1
+Dialogue: 0,0:02:29.31,0:02:30.59,tk-default,NTP,0,0,0,,面對他吧
+Dialogue: 0,0:02:32.00,0:02:33.58,tk-default,NTP,0,0,0,,如果捨棄不了的話
+Dialogue: 0,0:02:33.61,0:02:35.05,tk-default,NTP,0,0,0,,那還是不要再逃避了
+Dialogue: 0,0:02:56.47,0:02:58.23,tk-default,NTP,0,0,0,,睡醒了嗎 雫
+Dialogue: 0,0:02:59.34,0:03:01.33,tk-default,NTP,0,0,0,,為什麼春你會在這裏啊
+Dialogue: 0,0:03:01.33,0:03:04.51,tk-default,NTP,0,0,0,,因為夏目他們說要一起考前學習
+Dialogue: 0,0:03:04.78,0:03:06.13,tk-default,NTP,0,0,0,,所以來叫你了
+Dialogue: 0,0:03:06.32,0:03:07.94,tk-default,NTP,0,0,0,,你也差不多可以買個手機了啊
+Dialogue: 0,0:03:08.26,0:03:10.16,tk-default,NTP,0,0,0,,不 不是這個問題
+Dialogue: 0,0:03:11.98,0:03:13.79,tk-default,NTP,0,0,0,,這是非法私闖民宅啊
+Dialogue: 0,0:03:14.77,0:03:18.33,tk-default,NTP,0,0,0,,本來呢 我想好好地從大門口進來的
+Dialogue: 0,0:03:18.61,0:03:21.67,tk-default,NTP,0,0,0,,你父親他好像不知道今天是休學日
+Dialogue: 0,0:03:21.71,0:03:22.83,tk-default,NTP,0,0,0,,把他嚇了一跳
+Dialogue: 0,0:03:23.88,0:03:25.55,tk-default,NTP,0,0,0,,為什麼這個時候爸爸他會…
+Dialogue: 0,0:03:25.55,0:03:30.50,tk-default,NTP,0,0,0,,然後 他說「我在家的事情不准告訴雫」把我趕走了
+Dialogue: 0,0:03:40.13,0:03:43.56,tk-default,NTP,0,0,0,,爸爸 為什麼都這個點了你還在家裏呢
+Dialogue: 0,0:03:43.71,0:03:45.17,tk-default,NTP,0,0,0,,打擾了
+Dialogue: 0,0:03:50.40,0:03:51.69,tk-default,NTP,0,0,0,,倒閉了？！
+Dialogue: 0,0:03:53.92,0:03:56.80,tk-default,NTP,0,0,0,,店倒閉了？什麼時候
+Dialogue: 0,0:03:58.53,0:03:59.83,tk-default,NTP,0,0,0,,差不多兩個周前
+Dialogue: 0,0:04:00.12,0:04:01.58,tk-default,NTP,0,0,0,,為什麼不快點和我說啊
+Dialogue: 0,0:04:02.78,0:04:03.91,tk-default,NTP,0,0,0,,我想可能會把你嚇著
+Dialogue: 0,0:04:04.09,0:04:05.13,tk-default,NTP,0,0,0,,那是肯定的
+Dialogue: 0,0:04:05.96,0:04:07.79,tk-default,NTP,0,0,0,,可惡 是我大意了
+Dialogue: 0,0:04:08.17,0:04:10.85,tk-default,NTP,0,0,0,,這幾年看起來還算順利就大意了
+Dialogue: 0,0:04:11.69,0:04:13.89,tk-default,NTP,0,0,0,,我就知道早晚會這樣的呢
+Dialogue: 0,0:04:15.83,0:04:17.56,tk-default,NTP,0,0,0,,這樣也沒有辦法了
+Dialogue: 0,0:04:18.03,0:04:19.72,tk-default,NTP,0,0,0,,必須去和媽媽聯繫下
+Dialogue: 0,0:04:21.27,0:04:24.01,tk-default,NTP,0,0,0,,要說嗎 要和佳乃說嗎
+Dialogue: 0,0:04:26.89,0:04:28.05,tk-default,NTP,0,0,0,,那還用說嗎
+Dialogue: 0,0:04:28.21,0:04:28.95,tk-default,NTP,0,0,0,,你好
+Dialogue: 0,0:04:29.75,0:04:30.43,tk-default,NTP,0,0,0,,媽媽
+Dialogue: 0,0:04:30.43,0:04:32.69,tk-default,NTP,0,0,0,,你們好像在忙啊 叔叔
+Dialogue: 0,0:04:32.34,0:04:33.26,tk-default2,NTP,0,0,0,,我是雫
+Dialogue: 0,0:04:33.28,0:04:35.15,tk-default,NTP,0,0,0,,我還是回去好吧
+Dialogue: 0,0:04:34.88,0:04:36.30,tk-default2,NTP,0,0,0,,爸爸的店…
+Dialogue: 0,0:04:36.14,0:04:38.09,tk-default,NTP,0,0,0,,不 已經沒關繫了
+Dialogue: 0,0:04:38.09,0:04:41.17,tk-default,NTP,0,0,0,,倒不如說有你這樣看不懂氣氛的孩子在更好
+Dialogue: 0,0:04:41.58,0:04:42.66,tk-default,NTP,0,0,0,,又倒閉了？
+Dialogue: 0,0:04:42.94,0:04:46.03,tk-default,NTP,0,0,0,,那個男人到底想讓我工作到什麼時候啊
+Dialogue: 0,0:04:46.03,0:04:48.33,tk-default,NTP,0,0,0,,嗯 對不起啊 媽媽
+Dialogue: 0,0:04:50.21,0:04:54.47,tk-default,NTP,0,0,0,,嗯嗯 知道了 我轉達給他 拜拜
+Dialogue: 0,0:04:56.97,0:04:59.22,tk-default,NTP,0,0,0,,去死吧 你這廢物
+Dialogue: 0,0:04:59.63,0:05:00.66,tk-default,NTP,0,0,0,,好像是這麼說的
+Dialogue: 0,0:05:00.67,0:05:01.31,tk-default,NTP,0,0,0,,別這樣
+Dialogue: 0,0:05:01.32,0:05:04.94,tk-default,NTP,0,0,0,,不要擺出和你母親一樣的臉和聲音還有表情說出這種話
+Dialogue: 0,0:05:06.86,0:05:08.42,tk-default,NTP,0,0,0,,那麼我去換衣服了
+Dialogue: 0,0:05:08.89,0:05:11.80,tk-default,NTP,0,0,0,,店裏肯定什麼都沒有整理吧
+Dialogue: 0,0:05:12.82,0:05:14.88,tk-default,NTP,0,0,0,,春 不好意思 今天你先回去吧
+Dialogue: 0,0:05:16.37,0:05:19.34,tk-default,NTP,0,0,0,,好厲害啊雫 完全不為所動
+Dialogue: 0,0:05:19.80,0:05:22.08,tk-default,NTP,0,0,0,,畢竟這已經是第六次了
+Dialogue: 0,0:05:22.08,0:05:25.52,tk-default,NTP,0,0,0,,六次 叔叔你真是沒救了
+Dialogue: 0,0:05:27.33,0:05:31.03,tk-default,NTP,0,0,0,,是啊 什麼都不成事的大叔啊
+Dialogue: 0,0:05:32.19,0:05:33.48,tk-default,NTP,0,0,0,,我家呢
+Dialogue: 0,0:05:33.82,0:05:37.32,tk-default,NTP,0,0,0,,因為我老婆還在工作著 才可以維持家計
+Dialogue: 0,0:05:38.28,0:05:43.35,tk-default,NTP,0,0,0,,但果然會讓雫和隆也感到寂寞呢
+Dialogue: 0,0:05:44.16,0:05:47.10,tk-default,NTP,0,0,0,,明明都已經有答案了 卻還要讓別人那麼期待
+Dialogue: 0,0:05:47.16,0:05:48.80,tk-default,NTP,0,0,0,,那是最過分的事情吧
+Dialogue: 0,0:05:49.51,0:05:51.96,tk-default,NTP,0,0,0,,變成那麼冷淡的孩子
+Dialogue: 0,0:05:52.21,0:05:54.42,tk-default,NTP,0,0,0,,也交不到什麼朋友
+Dialogue: 0,0:05:54.49,0:05:59.40,tk-default,NTP,0,0,0,,不過她從小開始 就喜歡算術練習題勝過洋娃娃呢
+Dialogue: 0,0:05:59.91,0:06:01.22,tk-default,NTP,0,0,0,,雫有朋友哦
+Dialogue: 0,0:06:01.51,0:06:02.81,tk-default,NTP,0,0,0,,算上我一共三個人
+Dialogue: 0,0:06:02.81,0:06:04.22,tk-default,NTP,0,0,0,,誒？真的假的？
+Dialogue: 0,0:06:04.42,0:06:05.03,tk-default,NTP,0,0,0,,嗯
+Dialogue: 0,0:06:05.56,0:06:07.16,tk-default,NTP,0,0,0,,爸爸 準備好了嗎？
+Dialogue: 0,0:06:07.40,0:06:10.06,tk-default,NTP,0,0,0,,雫…像你這樣花樣年華的女孩子
+Dialogue: 0,0:06:10.06,0:06:12.28,tk-default,NTP,0,0,0,,準備得這麼快不太好吧
+Dialogue: 0,0:06:12.31,0:06:14.91,tk-default,NTP,0,0,0,,嗯？有空說這個
+Dialogue: 0,0:06:14.91,0:06:16.82,tk-default,NTP,0,0,0,,爸爸你才是 趕緊換衣服
+Dialogue: 0,0:06:16.83,0:06:17.78,tk-default,NTP,0,0,0,,好的
+Dialogue: 0,0:06:23.78,0:06:25.33,tk-default,NTP,0,0,0,,誒？我有啊
+Dialogue: 0,0:06:25.64,0:06:28.07,tk-default,NTP,0,0,0,,中學的時候 有交過女朋友
+Dialogue: 0,0:06:28.18,0:06:30.35,tk-default,NTP,0,0,0,,Σ(っ °Д °;)っ
+Dialogue: 0,0:06:30.35,0:06:33.39,tk-default,NTP,0,0,0,,誒？這…這是真的嗎？ 阿佐同學
+Dialogue: 0,0:06:34.09,0:06:37.40,tk-default,NTP,0,0,0,,嗯 因為聽說她喜歡我
+Dialogue: 0,0:06:37.80,0:06:39.48,tk-default,NTP,0,0,0,,然後我就主動去告白和她交往了
+Dialogue: 0,0:06:39.60,0:06:41.95,tk-default,NTP,0,0,0,,吉田 你還記得山瀨同學嗎？
+Dialogue: 0,0:06:42.02,0:06:44.55,tk-default,NTP,0,0,0,,我聽說你們一年級的時候是同班
+Dialogue: 0,0:06:44.55,0:06:49.19,tk-default,NTP,0,0,0,,我…我中學的時候認為大家長得都一個樣
+Dialogue: 0,0:06:49.27,0:06:52.57,tk-default,NTP,0,0,0,,話說 原來阿佐和我是同一所中學的啊
+Dialogue: 0,0:06:52.57,0:06:55.41,tk-default,NTP,0,0,0,,誒？你現在才知道 好傷心
+Dialogue: 0,0:06:56.78,0:06:57.69,tk-default,NTP,0,0,0,,然後呢
+Dialogue: 0,0:06:58.64,0:06:59.65,tk-default,NTP,0,0,0,,你們做了嗎？
+Dialogue: 0,0:07:02.62,0:07:05.25,tk-default,NTP,0,0,0,,你們在說什麼呢？在說什麼？
+Dialogue: 0,0:07:05.39,0:07:08.02,tk-default,NTP,0,0,0,,開玩笑開玩笑的 我馬上就被甩了
+Dialogue: 0,0:07:08.20,0:07:12.86,tk-default,NTP,0,0,0,,真是的 如果老說這種話題的話 我就要回去了
+Dialogue: 0,0:07:12.86,0:07:14.50,tk-default,NTP,0,0,0,,哈哈 抱歉抱歉啦
+Dialogue: 0,0:07:14.75,0:07:16.16,tk-default,NTP,0,0,0,,都說是開玩笑啦
+Dialogue: 0,0:07:16.92,0:07:18.54,tk-default,NTP,0,0,0,,那麼 吉田呢？
+Dialogue: 0,0:07:21.42,0:07:23.14,tk-default,NTP,0,0,0,,我是真的要回去了哦
+Dialogue: 0,0:07:25.86,0:07:28.25,tk-default,NTP,0,0,0,,比起那個 春同學怎麼樣了？
+Dialogue: 0,0:07:28.34,0:07:29.78,tk-default,NTP,0,0,0,,那之後和小水的發展…
+Dialogue: 0,0:07:29.78,0:07:31.88,tk-default,NTP,0,0,0,,啊？沒怎麼樣啊
+Dialogue: 0,0:07:32.19,0:07:35.11,tk-default,NTP,0,0,0,,好像啊 她現在在考慮一些事情呢
+Dialogue: 0,0:07:37.09,0:07:40.04,tk-default,NTP,0,0,0,,她說我的事情也是 接下來會好好考慮的
+Dialogue: 0,0:07:41.16,0:07:43.35,tk-default,NTP,0,0,0,,那個是什麼時候的事？
+Dialogue: 0,0:07:43.48,0:07:44.58,tk-default,NTP,0,0,0,,在文化祭的時候
+Dialogue: 0,0:07:44.62,0:07:46.14,tk-default,NTP,0,0,0,,一個月以前
+Dialogue: 0,0:07:46.64,0:07:49.46,tk-default,NTP,0,0,0,,啊 我總算有點明白了
+Dialogue: 0,0:07:50.04,0:07:51.96,tk-default,NTP,0,0,0,,兩個人一點進展都沒有的原因
+Dialogue: 0,0:07:52.87,0:07:54.82,tk-default2,NTP,0,0,0,,吉田 這個要怎麼做？
+Dialogue: 0,0:07:53.62,0:07:54.93,tk-default,NTP,0,0,0,,原因出在這個男人身上
+Dialogue: 0,0:07:55.13,0:07:57.35,tk-default,NTP,0,0,0,,很容易滿足於現狀
+Dialogue: 0,0:07:56.08,0:07:59.23,tk-default2,NTP,0,0,0,,這樣算 然後在這樣算
+Dialogue: 0,0:07:57.35,0:08:00.24,tk-default,NTP,0,0,0,,結果最後等於把事情都推給小水了嘛
+Dialogue: 0,0:07:59.23,0:08:01.00,tk-default2,NTP,0,0,0,,你講得簡單一點啦
+Dialogue: 0,0:08:00.91,0:08:02.12,tk-default,NTP,0,0,0,,要是放著不管的話
+Dialogue: 0,0:08:02.66,0:08:05.60,tk-default,NTP,0,0,0,,依小水的性格 大概沒多久就會完蛋了
+Dialogue: 0,0:08:06.29,0:08:07.57,tk-default,NTP,0,0,0,,看吧 得出答案了
+Dialogue: 0,0:08:09.61,0:08:11.45,tk-default,NTP,0,0,0,,如果是這麼簡單的話
+Dialogue: 0,0:08:11.46,0:08:12.96,tk-default,NTP,0,0,0,,啊？指什麼？
+Dialogue: 0,0:08:13.04,0:08:16.51,tk-default,NTP,0,0,0,,我雖然一直認為和喜歡的人交往是理所當然的
+Dialogue: 0,0:08:16.80,0:08:19.97,tk-default,NTP,0,0,0,,老實說 和現在的生活有什麼不同呢
+Dialogue: 0,0:08:20.01,0:08:21.64,tk-default,NTP,0,0,0,,啊 這個我懂
+Dialogue: 0,0:08:22.06,0:08:24.78,tk-default,NTP,0,0,0,,就是具體不知道要做什麼才好的那種感覺是吧
+Dialogue: 0,0:08:24.82,0:08:27.34,tk-default,NTP,0,0,0,,雖然是有一件想要做的事情
+Dialogue: 0,0:08:27.35,0:08:29.68,tk-default,NTP,0,0,0,,畢竟對方是水谷同學嘛
+Dialogue: 0,0:08:29.74,0:08:32.36,tk-default,NTP,0,0,0,,總覺得話題又偏向奇怪的方向了
+Dialogue: 0,0:08:34.84,0:08:37.37,tk-default,NTP,0,0,0,,啊 歡迎光臨 小雫
+Dialogue: 0,0:08:37.83,0:08:40.27,tk-default,NTP,0,0,0,,我…忘得一乾二淨
+Dialogue: 0,0:08:37.56,0:08:40.04,tk-default2,NTP,0,0,0,,聽說你家出了一點事情
+Dialogue: 0,0:08:41.12,0:08:44.94,tk-default,NTP,0,0,0,,對了 我和春說過會好好考慮的
+Dialogue: 0,0:08:45.21,0:08:46.88,tk-default,NTP,0,0,0,,啊 小水
+Dialogue: 0,0:08:47.43,0:08:49.28,tk-default,NTP,0,0,0,,你來了啊
+Dialogue: 0,0:08:49.45,0:08:51.35,tk-default,NTP,0,0,0,,不… 只是順路而已
+Dialogue: 0,0:08:51.79,0:08:54.19,tk-default,NTP,0,0,0,,因為我爸爸一直叫我快去 有點煩
+Dialogue: 0,0:08:54.78,0:08:55.83,tk-default,NTP,0,0,0,,這是我爸爸要我帶的…
+Dialogue: 0,0:08:56.24,0:08:57.93,tk-default,NTP,0,0,0,,啊 是甘屋的點心啊
+Dialogue: 0,0:08:58.55,0:09:00.62,tk-default,NTP,0,0,0,,莫非是一直在…等我嗎？
+Dialogue: 0,0:09:04.54,0:09:06.44,tk-default,NTP,0,0,0,,春 稍微過來一下
+Dialogue: 0,0:09:10.81,0:09:13.86,tk-default,NTP,0,0,0,,雖然是把他叫出來了 要怎麼辦
+Dialogue: 0,0:09:13.87,0:09:16.54,tk-default,NTP,0,0,0,,啊 你爸爸不要緊吧？
+Dialogue: 0,0:09:16.68,0:09:18.84,tk-default,NTP,0,0,0,,啊 店的事情？
+Dialogue: 0,0:09:19.45,0:09:21.71,tk-default,NTP,0,0,0,,爸爸叫了朋友過來幫忙
+Dialogue: 0,0:09:21.79,0:09:23.78,tk-default,NTP,0,0,0,,很快就收拾好了
+Dialogue: 0,0:09:24.46,0:09:26.45,tk-default,NTP,0,0,0,,你的爸爸說啊
+Dialogue: 0,0:09:26.72,0:09:31.27,tk-default,NTP,0,0,0,,因為媽媽也去工作 可能會讓你們覺得寂寞
+Dialogue: 0,0:09:31.72,0:09:32.95,tk-default,NTP,0,0,0,,是這樣的嗎？
+Dialogue: 0,0:09:33.28,0:09:34.17,tk-default,NTP,0,0,0,,是啊
+Dialogue: 0,0:09:34.43,0:09:38.43,tk-default,NTP,0,0,0,,我都和他說過要真這麼想的話就去好好地工作
+Dialogue: 0,0:09:39.64,0:09:42.59,tk-default,NTP,0,0,0,,我倒是想成為像媽媽那樣的人
+Dialogue: 0,0:09:42.90,0:09:45.35,tk-default,NTP,0,0,0,,快點成為一個靠自己能力賺錢的女人
+Dialogue: 0,0:09:46.13,0:09:48.45,tk-default,NTP,0,0,0,,啊 不過…水缸
+Dialogue: 0,0:09:48.85,0:09:49.64,tk-default,NTP,0,0,0,,烏龜？
+Dialogue: 0,0:09:49.68,0:09:51.38,tk-default,NTP,0,0,0,,不是 是水缸
+Dialogue: 0,0:09:52.51,0:09:54.50,tk-default,NTP,0,0,0,,家裏的院子裏有個大水缸…
+Dialogue: 0,0:09:54.77,0:09:57.12,tk-default,NTP,0,0,0,,以前說是要養金魚
+Dialogue: 0,0:09:57.79,0:10:00.20,tk-default,NTP,0,0,0,,結果還是沒能養成
+Dialogue: 0,0:10:00.64,0:10:03.21,tk-default,NTP,0,0,0,,雖然和金魚本身無關…
+Dialogue: 0,0:10:03.86,0:10:06.84,tk-default,NTP,0,0,0,,我特地讀了飼養書 還買了餌料
+Dialogue: 0,0:10:07.31,0:10:10.32,tk-default,NTP,0,0,0,,做了萬全的準備 所以覺得有點遺憾
+Dialogue: 0,0:10:12.92,0:10:15.09,tk-default,NTP,0,0,0,,如果一開始我就沒抱有期待的話
+Dialogue: 0,0:10:15.38,0:10:18.23,tk-default,NTP,0,0,0,,或許就不會這麼失望了
+Dialogue: 0,0:10:18.82,0:10:23.75,tk-default,NTP,0,0,0,,咦？那個時候 我該不會是覺得寂寞了吧？
+Dialogue: 0,0:10:23.79,0:10:27.16,tk-default,NTP,0,0,0,,啊 好吧 給你看一個好東西
+Dialogue: 0,0:10:28.16,0:10:29.01,tk-default,NTP,0,0,0,,過來一下
+Dialogue: 0,0:10:44.76,0:10:45.59,tk-default,NTP,0,0,0,,笨~蛋
+Dialogue: 0,0:10:46.02,0:10:49.25,tk-default,NTP,0,0,0,,寂寞這種事情是有了朋友之後才能感受得到的啊
+Dialogue: 0,0:11:04.87,0:11:05.50,tk-default,NTP,0,0,0,,春
+Dialogue: 0,0:11:06.37,0:11:08.35,tk-default,NTP,0,0,0,,不需要 我才不要小龍蝦！
+Dialogue: 0,0:11:08.36,0:11:11.89,tk-default,NTP,0,0,0,,誒？但是這裏有超大只的哦
+Dialogue: 0,0:11:12.40,0:11:15.35,tk-default,NTP,0,0,0,,我並不是想在水缸裏養寵物！
+Dialogue: 0,0:11:15.48,0:11:18.48,tk-default,NTP,0,0,0,,見到那傢伙的話 你一定會想要的啦
+Dialogue: 0,0:11:24.60,0:11:27.88,tk-default,NTP,0,0,0,,不好意思 我在找這本書…
+Dialogue: 0,0:11:28.05,0:11:33.09,tk-default,NTP,0,0,0,,那本書放在二樓右邊往裏的E區 我給你帶路吧
+Dialogue: 0,0:11:33.21,0:11:34.90,tk-default,NTP,0,0,0,,不 不用了
+Dialogue: 0,0:11:35.17,0:11:35.85,tk-default,NTP,0,0,0,,謝謝你
+Dialogue: 0,0:11:36.31,0:11:38.89,tk-default,NTP,0,0,0,,那個 樓梯在相反的方向
+Dialogue: 0,0:11:40.11,0:11:40.95,tk-default,NTP,0,0,0,,謝謝
+Dialogue: 0,0:11:44.31,0:11:47.48,tk-default,NTP,0,0,0,,那個學生是第五次來問了…
+Dialogue: 0,0:11:48.25,0:11:53.28,tk-default,NTP,0,0,0,,真麻煩 竟然要交普通書店裏沒有的資料的報告
+Dialogue: 0,0:11:55.93,0:11:58.46,tk-default,NTP,0,0,0,,哦 到了 奇跡啊
+Dialogue: 0,0:12:05.68,0:12:07.93,tk-default,NTP,0,0,0,,咦 山賢同學
+Dialogue: 0,0:12:09.50,0:12:10.71,tk-default,NTP,0,0,0,,你在找什麼嗎？
+Dialogue: 0,0:12:11.39,0:12:13.69,tk-default,NTP,0,0,0,,關於政治和經濟的景氣調節的資料
+Dialogue: 0,0:12:13.83,0:12:16.34,tk-default,NTP,0,0,0,,現代經濟？是要做報告嗎？
+Dialogue: 0,0:12:16.73,0:12:19.40,tk-default,NTP,0,0,0,,那樣的話 我想這本景氣指標的書不錯
+Dialogue: 0,0:12:20.86,0:12:21.74,tk-default,NTP,0,0,0,,多謝
+Dialogue: 0,0:12:24.07,0:12:25.98,tk-default,NTP,0,0,0,,我一直都想和你見一面
+Dialogue: 0,0:12:27.22,0:12:28.47,tk-default,NTP,0,0,0,,搞什麼啊 這個女人
+Dialogue: 0,0:12:28.80,0:12:30.41,tk-default,NTP,0,0,0,,難道是對我有意思嗎？
+Dialogue: 0,0:12:30.90,0:12:33.50,tk-default,NTP,0,0,0,,之前的模試 雖然英語分比你低
+Dialogue: 0,0:12:33.50,0:12:35.10,tk-default,NTP,0,0,0,,但綜合分數還是我第一
+Dialogue: 0,0:12:35.68,0:12:36.75,tk-default,NTP,0,0,0,,關我屁事啊
+Dialogue: 0,0:12:37.23,0:12:39.16,tk-default,NTP,0,0,0,,我說啊 水谷同學
+Dialogue: 0,0:12:39.67,0:12:42.75,tk-default,NTP,0,0,0,,不好意思 我並沒有打算和你一爭高下
+Dialogue: 0,0:12:42.96,0:12:46.35,tk-default,NTP,0,0,0,,像你那樣拚命地學習 有什麼意義嗎？
+Dialogue: 0,0:12:47.17,0:12:47.94,tk-default,NTP,0,0,0,,不好意思
+Dialogue: 0,0:12:48.08,0:12:50.30,tk-default,NTP,0,0,0,,在我看來 你也是個笨蛋
+Dialogue: 0,0:12:50.48,0:12:54.62,tk-default,NTP,0,0,0,,就算我不用那麼拚命 我也是人生贏家了
+Dialogue: 0,0:12:55.37,0:12:57.91,tk-default,NTP,0,0,0,,那就是你所謂的「不無聊的人生」？
+Dialogue: 0,0:12:59.69,0:13:03.49,tk-default,NTP,0,0,0,,學習成績好壞 全都取決於自己
+Dialogue: 0,0:13:04.88,0:13:07.13,tk-default,NTP,0,0,0,,嗯？原來是那種理由嗎？
+Dialogue: 0,0:13:08.60,0:13:11.16,tk-default,NTP,0,0,0,,你今天沒和春在一起嗎？
+Dialogue: 0,0:13:11.17,0:13:12.19,tk-default,NTP,0,0,0,,春？
+Dialogue: 0,0:13:12.65,0:13:15.62,tk-default,NTP,0,0,0,,他最近似乎迷上了在河邊垂釣了
+Dialogue: 0,0:13:15.62,0:13:18.17,tk-default,NTP,0,0,0,,什麼？現在都已經是11月了啊
+Dialogue: 0,0:13:18.28,0:13:21.96,tk-default,NTP,0,0,0,,說是如果釣到了大的小龍蝦 就送給我
+Dialogue: 0,0:13:23.40,0:13:26.01,tk-default,NTP,0,0,0,,雖然我覺得11月根本不會有什麼小龍蝦了
+Dialogue: 0,0:13:28.04,0:13:31.32,tk-default,NTP,0,0,0,,那傢伙的想法還停留在小學生的階段啊
+Dialogue: 0,0:13:31.76,0:13:34.56,tk-default,NTP,0,0,0,,可惡 為什麼要提到那傢伙的事情啊
+Dialogue: 0,0:13:35.31,0:13:37.60,tk-default,NTP,0,0,0,,咦？是我先提起的
+Dialogue: 0,0:13:37.73,0:13:40.55,tk-default,NTP,0,0,0,,沒辦法 因為只有這個是我們共通的話題
+Dialogue: 0,0:13:41.53,0:13:44.26,tk-default,NTP,0,0,0,,不是吧 為什麼我要拚命找話題啊
+Dialogue: 0,0:13:44.60,0:13:45.32,tk-default,NTP,0,0,0,,前段時間
+Dialogue: 0,0:13:46.15,0:13:50.13,tk-default,NTP,0,0,0,,聽了你說的那些話我覺得自己應該正視別人了
+Dialogue: 0,0:13:50.38,0:13:52.37,tk-default,NTP,0,0,0,,我說過那樣的話嗎？
+Dialogue: 0,0:13:53.05,0:13:55.60,tk-default,NTP,0,0,0,,話說 為什麼要和我說這種事？
+Dialogue: 0,0:13:55.92,0:13:58.02,tk-default,NTP,0,0,0,,嗯？問我問什麼…
+Dialogue: 0,0:13:58.95,0:14:02.29,tk-default,NTP,0,0,0,,因為文化祭的時候 被你說的那些話感動了
+Dialogue: 0,0:14:05.70,0:14:07.57,tk-default,NTP,0,0,0,,{\move(649,515,1022,515)\c&H01100B&\3c&HD09ED6&\pos(649,515)}藍莓巧克力
+Dialogue: 0,0:14:05.73,0:14:10.91,tk-default,NTP,0,0,0,,{\move(137,521,1022,521)\c&H01100B&\3c&HBBBEF9&\pos(137,521)}巧克力（熱賣）
+Dialogue: 0,0:14:06.43,0:14:08.18,tk-default,NTP,0,0,0,,啊 喂喂？吉田？
+Dialogue: 0,0:14:08.49,0:14:09.29,tk-default,NTP,0,0,0,,你在哪呢？
+Dialogue: 0,0:14:08.37,0:14:11.47,tk-default,NTP,0,0,0,,{\move(40,523,604,523)\c&H01100B&\3c&H4AE8EC&\pos(40,523)}南瓜麵包圈（很好吃哦）
+Dialogue: 0,0:14:09.67,0:14:10.88,tk-default,NTP,0,0,0,,和水谷同學在一起嗎？
+Dialogue: 0,0:14:11.84,0:14:13.45,tk-default,NTP,0,0,0,,什麼？河邊？
+Dialogue: 0,0:14:16.11,0:14:17.01,tk-default,NTP,0,0,0,,怎麼樣？
+Dialogue: 0,0:14:17.44,0:14:19.83,tk-default,NTP,0,0,0,,吉田說他一個人在河邊玩呢
+Dialogue: 0,0:14:20.23,0:14:22.54,tk-default,NTP,0,0,0,,說是水谷同學可能去了圖書館吧
+Dialogue: 0,0:14:23.76,0:14:26.00,tk-default,NTP,0,0,0,,那兩個傢伙真是悠閒啊 好羨慕啊
+Dialogue: 0,0:14:26.57,0:14:30.54,tk-default,NTP,0,0,0,,真是的 春同學又做出了莫名其妙的舉動了
+Dialogue: 0,0:14:30.67,0:14:32.29,tk-default,NTP,0,0,0,,所以小水才…
+Dialogue: 0,0:14:32.48,0:14:35.80,tk-default,NTP,0,0,0,,我只不過是正好出現在他身邊而已
+Dialogue: 0,0:14:35.84,0:14:37.82,tk-default,NTP,0,0,0,,會說出這種話啊
+Dialogue: 0,0:14:38.13,0:14:42.37,tk-default,NTP,0,0,0,,算了 我們就為了我們的期末考好好加油吧
+Dialogue: 0,0:14:42.39,0:14:43.33,tk-default,NTP,0,0,0,,說的沒錯
+Dialogue: 0,0:14:45.03,0:14:46.57,tk-default,NTP,0,0,0,,都說了有的…
+Dialogue: 0,0:14:46.57,0:14:47.58,tk-default,NTP,0,0,0,,不可能啦
+Dialogue: 0,0:14:47.80,0:14:48.75,tk-default,NTP,0,0,0,,不可能啦
+Dialogue: 0,0:14:54.70,0:14:58.59,tk-default,NTP,0,0,0,,夏目她啊 聽說被2班的北野告白了哦
+Dialogue: 0,0:14:58.59,0:15:00.94,tk-default,NTP,0,0,0,,誒 那不是美紀喜歡的人嗎
+Dialogue: 0,0:15:00.94,0:15:02.49,tk-default,NTP,0,0,0,,美紀好可憐
+Dialogue: 0,0:15:02.56,0:15:05.03,tk-default,NTP,0,0,0,,不覺得 這種事太多了嗎
+Dialogue: 0,0:15:05.04,0:15:08.66,tk-default,NTP,0,0,0,,夏目 她和男生搞好關係就好了呢
+Dialogue: 0,0:15:12.69,0:15:16.12,tk-default,NTP,0,0,0,,夏目同學 你在幹嘛啊 夏目同學
+Dialogue: 0,0:15:16.73,0:15:18.13,tk-default,NTP,0,0,0,,看那個
+Dialogue: 0,0:15:19.06,0:15:20.58,tk-default,NTP,0,0,0,,絕對是啦
+Dialogue: 0,0:15:21.08,0:15:22.88,tk-default,NTP,0,0,0,,那和她一起的是她男朋友？
+Dialogue: 0,0:15:23.80,0:15:25.70,tk-default,NTP,0,0,0,,一副請教學習的樣子
+Dialogue: 0,0:15:27.62,0:15:28.91,tk-default,NTP,0,0,0,,她們搞什麼啊
+Dialogue: 0,0:15:28.91,0:15:30.96,tk-default,NTP,0,0,0,,阿…阿佐同學
+Dialogue: 0,0:15:31.30,0:15:34.80,tk-default,NTP,0,0,0,,對不起 對不起 對不起
+Dialogue: 0,0:15:34.80,0:15:35.89,tk-default,NTP,0,0,0,,夏目同學？
+Dialogue: 0,0:15:35.89,0:15:37.45,tk-default,NTP,0,0,0,,都是因為我
+Dialogue: 0,0:15:37.72,0:15:38.72,tk-default,NTP,0,0,0,,對不起
+Dialogue: 0,0:15:40.94,0:15:41.91,tk-default,NTP,0,0,0,,就是說嘛
+Dialogue: 0,0:15:41.91,0:15:42.63,tk-default,NTP,0,0,0,,是吧
+Dialogue: 0,0:15:44.14,0:15:45.43,tk-default,NTP,0,0,0,,還是那個樣
+Dialogue: 0,0:15:49.44,0:15:51.77,tk-default,NTP,0,0,0,,這不是小夏目嗎
+Dialogue: 0,0:15:55.29,0:15:58.47,tk-default,NTP,0,0,0,,好難得啊 你在這種地方做什麼呢
+Dialogue: 0,0:16:06.09,0:16:07.22,tk-default,NTP,0,0,0,,我們走
+Dialogue: 0,0:16:11.05,0:16:11.73,tk-default,NTP,0,0,0,,怎麼了
+Dialogue: 0,0:16:25.89,0:16:27.96,tk-default,NTP,0,0,0,,你不上車嗎 山賢同學
+Dialogue: 0,0:16:28.90,0:16:30.61,tk-default,NTP,0,0,0,,不用 我要搭計程車
+Dialogue: 0,0:16:31.09,0:16:32.56,tk-default,NTP,0,0,0,,是哦 拜拜
+Dialogue: 0,0:16:43.46,0:16:46.17,tk-default,NTP,0,0,0,,喂 喂喂喂
+Dialogue: 0,0:16:47.81,0:16:50.49,tk-default,NTP,0,0,0,,對方可是那個啊 那個！
+Dialogue: 0,0:16:51.24,0:16:52.94,tk-default,NTP,0,0,0,,我到底在幹什麼
+Dialogue: 0,0:16:55.27,0:16:56.61,tk-default,NTP,0,0,0,,所以就說
+Dialogue: 0,0:16:56.95,0:17:00.56,tk-default,NTP,0,0,0,,既然無法放棄的話 那兼顧兩邊就好了嘛
+Dialogue: 0,0:17:00.70,0:17:01.92,tk-default,NTP,0,0,0,,哦 原來如此
+Dialogue: 0,0:17:01.93,0:17:05.38,tk-default,NTP,0,0,0,,{\fs45\fn方正苏新诗柳楷简体\pos(168,188)\frz33.81\c&H353D40&\3c&H859DA7&}優先順序
+Dialogue: 0,0:17:01.93,0:17:05.38,tk-default,NTP,0,0,0,,{\fn方正苏新诗柳楷简体\c&H353D40&\3c&H859DA7&\frz35.64\pos(331,227)}勉強（將來）     笨蛋
+Dialogue: 0,0:17:01.93,0:17:05.38,tk-default,NTP,0,0,0,,{\c&H353D40&\3c&H859DA7&\fn方正苏新诗柳楷简体\pos(377,398)\frz36.34}電子記事本       規則
+Dialogue: 0,0:17:01.93,0:17:05.38,tk-default,NTP,0,0,0,,{\fn方正苏新诗柳楷简体\c&H353D40&\3c&H859DA7&\frz36.1\pos(456,411)}家計             不能掙脫
+Dialogue: 0,0:17:01.93,0:17:05.38,tk-default,NTP,0,0,0,,{\fn方正苏新诗柳楷简体\c&H353D40&\3c&H859DA7&\pos(630,465)\frz35.23}戀愛是
+Dialogue: 0,0:17:02.42,0:17:05.47,tk-default,NTP,0,0,0,,真是的 為什麼非得只能是0或1啊
+Dialogue: 0,0:17:05.84,0:17:07.17,tk-default,NTP,0,0,0,,又不是機器人
+Dialogue: 0,0:17:07.74,0:17:10.55,tk-default,NTP,0,0,0,,話說我為什麼非得猜測這傢伙的心情啊
+Dialogue: 0,0:17:12.88,0:17:14.46,tk-default,NTP,0,0,0,,你講話好有趣
+Dialogue: 0,0:17:15.97,0:17:17.70,tk-default,NTP,0,0,0,,我…我先聲明
+Dialogue: 0,0:17:17.80,0:17:20.27,tk-default,NTP,0,0,0,,這不過是出於好意才幫你的
+Dialogue: 0,0:17:20.33,0:17:23.06,tk-default,NTP,0,0,0,,除此之外沒有任何意思啊
+Dialogue: 0,0:17:23.83,0:17:26.03,tk-default,NTP,0,0,0,,我知道了 謝謝你
+Dialogue: 0,0:17:30.00,0:17:30.69,tk-default,NTP,0,0,0,,可惡
+Dialogue: 0,0:17:33.96,0:17:35.67,tk-default,NTP,0,0,0,,為什麼偏偏是春…
+Dialogue: 0,0:17:38.99,0:17:41.57,tk-default,NTP,0,0,0,,喜歡春的女孩啊
+Dialogue: 0,0:17:58.80,0:18:00.05,tk-default,NTP,0,0,0,,每當我接觸他人
+Dialogue: 0,0:18:00.43,0:18:02.60,tk-default,NTP,0,0,0,,就會發覺會變得不像自己
+Dialogue: 0,0:18:07.42,0:18:08.60,tk-default,NTP,0,0,0,,宣佈
+Dialogue: 0,0:18:08.74,0:18:13.11,tk-default,NTP,0,0,0,,從今天開始 媽媽要代替沒用的爸爸去工作
+Dialogue: 0,0:18:13.16,0:18:15.07,tk-default,NTP,0,0,0,,路上小心
+Dialogue: 0,0:18:20.55,0:18:22.98,tk-default,NTP,0,0,0,,啊 喂 媽媽
+Dialogue: 0,0:18:23.44,0:18:25.85,tk-default,NTP,0,0,0,,雫考試得了100分哦
+Dialogue: 0,0:18:25.92,0:18:27.53,tk-default,NTP,0,0,0,,還有之前的考試也是
+Dialogue: 0,0:18:29.30,0:18:31.01,tk-default,NTP,0,0,0,,爸爸什麼地方沒用呢
+Dialogue: 0,0:18:32.37,0:18:33.64,tk-default,NTP,0,0,0,,這話真是不留情面
+Dialogue: 0,0:18:34.27,0:18:35.96,tk-default,NTP,0,0,0,,哦 雫
+Dialogue: 0,0:18:36.04,0:18:38.17,tk-default,NTP,0,0,0,,我們去買金魚吧 金魚！
+Dialogue: 0,0:18:38.18,0:18:40.34,tk-default,NTP,0,0,0,,沒能去祭典嘛
+Dialogue: 0,0:18:40.60,0:18:42.48,tk-default,NTP,0,0,0,,不用 我不要了
+Dialogue: 0,0:18:43.48,0:18:44.93,tk-default,NTP,0,0,0,,我已經不想養金魚了
+Dialogue: 0,0:18:48.01,0:18:50.64,tk-default,NTP,0,0,0,,為什麼非得只能是0或1啊
+Dialogue: 0,0:18:51.32,0:18:52.14,tk-default,NTP,0,0,0,,因為…
+Dialogue: 0,0:18:53.12,0:18:56.82,tk-default,NTP,0,0,0,,花時間在靠不住的東西上 不是很浪費嗎
+Dialogue: 0,0:19:00.02,0:19:02.31,tk-default,NTP,0,0,0,,誒 你們還沒回去嗎
+Dialogue: 0,0:19:02.50,0:19:04.93,tk-default,NTP,0,0,0,,哦 歡迎回來
+Dialogue: 0,0:19:05.01,0:19:07.55,tk-default,NTP,0,0,0,,正好來電話了
+Dialogue: 0,0:19:09.13,0:19:10.53,tk-default,NTP,0,0,0,,謝謝你打給我
+Dialogue: 0,0:19:11.86,0:19:14.38,tk-default,NTP,0,0,0,,春同學 你不冷嗎
+Dialogue: 0,0:19:15.49,0:19:18.12,tk-default,NTP,0,0,0,,小水 歡迎回來
+Dialogue: 0,0:19:19.91,0:19:21.00,tk-default,NTP,0,0,0,,雫！
+Dialogue: 0,0:19:21.82,0:19:24.66,tk-default,NTP,0,0,0,,春 你還在這種地方啊
+Dialogue: 0,0:19:24.91,0:19:28.80,tk-default,NTP,0,0,0,,剛才下柳同學他們也在 我們一起玩呢
+Dialogue: 0,0:19:28.97,0:19:32.93,tk-default,NTP,0,0,0,,下柳同學？一定很慌張吧
+Dialogue: 0,0:19:32.93,0:19:36.40,tk-default,NTP,0,0,0,,春這麼豪爽一定很有趣
+Dialogue: 0,0:19:36.45,0:19:37.37,tk-default,NTP,0,0,0,,是嗎
+Dialogue: 0,0:19:37.57,0:19:40.83,tk-default,NTP,0,0,0,,夏目同學才是 從剛才就太興奮了
+Dialogue: 0,0:19:40.89,0:19:43.20,tk-default,NTP,0,0,0,,話說這裏有小龍蝦嗎
+Dialogue: 0,0:19:43.25,0:19:46.63,tk-default,NTP,0,0,0,,小龍蝦啊 是有啦 不過都在睡覺
+Dialogue: 0,0:19:46.64,0:19:48.54,tk-default,NTP,0,0,0,,都在樹葉的下面
+Dialogue: 0,0:19:48.56,0:19:51.73,tk-default,NTP,0,0,0,,這傢伙根本忘了當初的目的吧
+Dialogue: 0,0:19:51.73,0:19:53.70,tk-default,NTP,0,0,0,,不過真的很開心
+Dialogue: 0,0:19:54.05,0:19:54.85,tk-default,NTP,0,0,0,,是嗎
+Dialogue: 0,0:19:55.35,0:19:57.11,tk-default,NTP,0,0,0,,雖然沒有小龍蝦
+Dialogue: 0,0:19:57.28,0:20:00.56,tk-default,NTP,0,0,0,,不過我會找到更好的東西送給雫 你不要擔心
+Dialogue: 0,0:20:02.01,0:20:04.00,tk-default,NTP,0,0,0,,啊…謝謝
+Dialogue: 0,0:20:05.33,0:20:09.77,tk-default,NTP,0,0,0,,話說回來 水缸已經被弟弟用來裝東西了
+Dialogue: 0,0:20:12.92,0:20:15.02,tk-default,NTP,0,0,0,,我認為毫無價值的東西
+Dialogue: 0,0:20:15.16,0:20:17.94,tk-default,NTP,0,0,0,,為什麼對他來說這麼有意義呢
+Dialogue: 0,0:20:19.63,0:20:24.82,tk-default,NTP,0,0,0,,於是 我又對春說的話抱有了希望
+Dialogue: 0,0:20:33.80,0:20:36.94,tk-default,NTP,0,0,0,,啊 不好意思 能稍微停一下嗎
+Dialogue: 0,0:20:38.09,0:20:39.52,tk-default,NTP,0,0,0,,得快點把東西還回去
+Dialogue: 0,0:20:39.78,0:20:42.55,tk-default,NTP,0,0,0,,然後就不再與那個女人有關聯…
+Dialogue: 0,0:21:03.29,0:21:05.35,tk-default,NTP,0,0,0,,喂 還不回去嗎
+Dialogue: 0,0:21:05.75,0:21:07.47,tk-default,NTP,0,0,0,,好的
+Dialogue: 0,0:21:08.19,0:21:10.12,tk-default,NTP,0,0,0,,我的書包丟在下面了
+Dialogue: 0,0:21:10.61,0:21:12.00,tk-default,NTP,0,0,0,,那我先走了
+Dialogue: 0,0:21:12.28,0:21:12.97,tk-default,NTP,0,0,0,,嗯
+Dialogue: 0,0:21:19.40,0:21:20.02,tk-default,NTP,0,0,0,,喂
+Dialogue: 0,0:21:24.30,0:21:29.21,tk-default,NTP,0,0,0,,春 幫我把這個還給水谷同學
+Dialogue: 0,0:21:31.18,0:21:33.85,tk-default,NTP,0,0,0,,為什麼雫的東西在你那
+Dialogue: 0,0:21:33.85,0:21:35.04,tk-default,NTP,0,0,0,,沒什麼啊
+Dialogue: 0,0:21:35.34,0:21:37.62,tk-default,NTP,0,0,0,,只是今天正好在圖書館碰見了
+Dialogue: 0,0:21:38.05,0:21:38.86,tk-default,NTP,0,0,0,,山賢
+Dialogue: 0,0:21:41.19,0:21:42.82,tk-default,NTP,0,0,0,,你喜歡上雫了嗎
+Dialogue: 0,0:21:46.06,0:21:47.95,tk-default,NTP,0,0,0,,是又如何 你有意見嗎
+Dialogue: 0,0:23:42.57,0:23:45.34,tk-default,NTP,0,0,0,,馬上就是寒假了呢
+Dialogue: 0,0:23:45.34,0:23:46.81,tk-default,NTP,0,0,0,,好期待啊
+Dialogue: 0,0:23:46.81,0:23:49.34,tk-default,NTP,0,0,0,,放假之前夏目同學要參加補習吧
+Dialogue: 0,0:23:49.57,0:23:50.61,tk-default,NTP,0,0,0,,是哦
+Dialogue: 0,0:23:50.91,0:23:52.74,tk-default,NTP,0,0,0,,之前就很想知道
+Dialogue: 0,0:23:53.14,0:23:55.56,tk-default,NTP,0,0,0,,夏目同學是怎麼進到這所學校的啊
+Dialogue: 0,0:23:56.19,0:23:57.66,tk-default,NTP,0,0,0,,一發藝哦
+Dialogue: 0,0:23:56.19,0:23:57.66,tk-default2,NTP,0,0,0,,就是只用一個動作就逗人發笑或讓人驚奇的表演叫做一發藝
+Dialogue: 0,0:24:00.31,0:24:02.77,tk-default,NTP,0,0,0,,啊 特別招收嗎
+Dialogue: 0,0:24:03.20,0:24:04.66,tk-default,NTP,0,0,0,,誒 吉田呢？
+Dialogue: 0,0:01:01.34,0:01:04.93,tkopj,NTP,0000,0000,0000,,今日もこの胸は張り詰めたまま
+Dialogue: 0,0:01:06.54,0:01:11.88,tkopj,NTP,0000,0000,0000,,放学後に 約まれて 君を見てる Lady Lady
+Dialogue: 0,0:01:11.88,0:01:15.42,tkopj,NTP,0000,0000,0000,,ずっとあしらいは揃わないまま
+Dialogue: 0,0:01:17.11,0:01:22.60,tkopj,NTP,0000,0000,0000,,続くから　内緒だよ　少し約め Lady Lady
+Dialogue: 0,0:01:23.07,0:01:25.68,tkopj,NTP,0000,0000,0000,,知りすぎて知らないから
+Dialogue: 0,0:01:28.39,0:01:32.15,tkopj,NTP,0000,0000,0000,,聞こえないフリが上手になって
+Dialogue: 0,0:01:32.63,0:01:37.40,tkopj,NTP,0000,0000,0000,,ねぇ深呼吸一つしたら眼を開けて
+Dialogue: 0,0:01:37.90,0:01:39.83,tkopj,NTP,0000,0000,0000,,自問自答やめて
+Dialogue: 0,0:01:39.83,0:01:43.52,tkopj,NTP,0000,0000,0000,,何気なくおはようって言っちゃてる
+Dialogue: 0,0:01:45.22,0:01:48.67,tkopj,NTP,0000,0000,0000,,飽きるくらい全部君がほしいよ
+Dialogue: 0,0:01:48.67,0:01:51.11,tkopj,NTP,0000,0000,0000,,ハートは涙でいっぱい
+Dialogue: 0,0:01:51.49,0:01:55.99,tkopj,NTP,0000,0000,0000,,恋のいろはとがまた分かってないんだ
+Dialogue: 0,0:01:56.72,0:01:59.23,tkopj,NTP,0000,0000,0000,,何度も繰り返すけど
+Dialogue: 0,0:01:59.23,0:02:01.76,tkopj,NTP,0000,0000,0000,,寸前でまだ次回へ
+Dialogue: 0,0:02:01.95,0:02:04.50,tkopj,NTP,0000,0000,0000,,sweetな乙女心は
+Dialogue: 0,0:02:04.51,0:02:08.08,tkopj,NTP,0000,0000,0000,,あいにく取り扱ってないのです
+Dialogue: 0,0:02:08.08,0:02:10.53,tkopj,NTP,0000,0000,0000,,ねぇ これが「I LOVE YOU」？
+Dialogue: 0,0:01:01.34,0:01:04.93,tkopc,NTP,0000,0000,0000,,今天也是心中悸動不停
+Dialogue: 0,0:01:06.54,0:01:11.88,tkopc,NTP,0000,0000,0000,,放學後仍一直看著你 Lady Lady
+Dialogue: 0,0:01:11.88,0:01:15.42,tkopc,NTP,0000,0000,0000,,步調總是無法一致
+Dialogue: 0,0:01:17.11,0:01:22.60,tkopc,NTP,0000,0000,0000,,但我還會繼續 這是秘密哦 一點點慢慢來 Lady Lady
+Dialogue: 0,0:01:23.07,0:01:25.68,tkopc,NTP,0000,0000,0000,,因為太過瞭解而毫不知情
+Dialogue: 0,0:01:28.39,0:01:32.15,tkopc,NTP,0000,0000,0000,,裝聽不到也越裝越好
+Dialogue: 0,0:01:32.63,0:01:37.40,tkopc,NTP,0000,0000,0000,,我說 深呼吸一次之後睜開眼睛
+Dialogue: 0,0:01:37.90,0:01:39.83,tkopc,NTP,0000,0000,0000,,別在那自問自答了
+Dialogue: 0,0:01:39.83,0:01:43.52,tkopc,NTP,0000,0000,0000,,若無其事地對他說「早上好」吧
+Dialogue: 0,0:01:45.22,0:01:48.67,tkopc,NTP,0000,0000,0000,,想要你的全部想要到自己都受不了
+Dialogue: 0,0:01:48.67,0:01:51.11,tkopc,NTP,0000,0000,0000,,心中載滿淚水
+Dialogue: 0,0:01:51.49,0:01:55.99,tkopc,NTP,0000,0000,0000,,還不知道戀愛的顏色
+Dialogue: 0,0:01:56.72,0:01:59.23,tkopc,NTP,0000,0000,0000,,不論重複多少次
+Dialogue: 0,0:01:59.23,0:02:01.76,tkopc,NTP,0000,0000,0000,,卻總在最後一刻退縮
+Dialogue: 0,0:02:01.95,0:02:04.50,tkopc,NTP,0000,0000,0000,,我那甜甜的少女心
+Dialogue: 0,0:02:04.51,0:02:08.08,tkopc,NTP,0000,0000,0000,,並沒有被操縱
+Dialogue: 0,0:02:08.08,0:02:10.53,tkopc,NTP,0000,0000,0000,,你說 這就是「I love you」?
+Dialogue: 0,0:22:18.27,0:22:25.36,edj,NTP,0000,0000,0000,,星の街路中　君と歩き町
+Dialogue: 0,0:22:25.93,0:22:32.53,edj,NTP,0000,0000,0000,,笑った途端白い息が凍えそう
+Dialogue: 0,0:22:32.60,0:22:39.62,edj,NTP,0000,0000,0000,,あ　どうして今日も冗談ばかりで
+Dialogue: 0,0:22:39.62,0:22:47.25,edj,NTP,0000,0000,0000,,相変わらず微妙な距離もどかしくて切ないけど
+Dialogue: 0,0:22:50.32,0:22:57.18,edj,NTP,0000,0000,0000,,巡る巡る冬の夜は今年は　あ　高いね
+Dialogue: 0,0:22:57.49,0:23:03.69,edj,NTP,0000,0000,0000,,味方だって　寂さだって　何だか嬉しくて
+Dialogue: 0,0:23:03.75,0:23:11.11,edj,NTP,0000,0000,0000,,「今日が回りしよう」君から言わないかな
+Dialogue: 0,0:23:11.56,0:23:18.57,edj,NTP,0000,0000,0000,,これが恋か恋じゃないかどっちだって構わない
+Dialogue: 0,0:23:18.77,0:23:24.96,edj,NTP,0000,0000,0000,,不器用でも喧嘩してもやっぱり君がいい
+Dialogue: 0,0:23:24.96,0:23:32.26,edj,NTP,0000,0000,0000,,降り出した雪に願いをかけるよ
+Dialogue: 0,0:23:33.01,0:23:40.66,edj,NTP,0000,0000,0000,,あとちょっとこのままで二人きり
+Dialogue: 0,0:22:18.27,0:22:25.36,edc,NTP,0000,0000,0000,,繁星點點的街道上 與你漫步而行
+Dialogue: 0,0:22:25.93,0:22:32.53,edc,NTP,0000,0000,0000,,歡笑間呵出的白色霧氣似乎一瞬就會被冰凍
+Dialogue: 0,0:22:32.60,0:22:39.62,edc,NTP,0000,0000,0000,,啊 今天你也總是說些玩笑話
+Dialogue: 0,0:22:39.62,0:22:47.25,edc,NTP,0000,0000,0000,,我們之間的微妙距離依然如此讓人焦躁苦悶
+Dialogue: 0,0:22:50.32,0:22:57.18,edc,NTP,0000,0000,0000,,斗轉星移今年的冬季 夜晚的天空很高呢
+Dialogue: 0,0:22:57.49,0:23:03.69,edc,NTP,0000,0000,0000,,因為有知己 就算會寂寞 仍有些莫名的開心
+Dialogue: 0,0:23:03.75,0:23:11.11,edc,NTP,0000,0000,0000,,「今天去哪裏轉轉吧」你會不會說出這樣的話呢
+Dialogue: 0,0:23:11.56,0:23:18.57,edc,NTP,0000,0000,0000,,無論這是否是戀愛都沒有關係
+Dialogue: 0,0:23:18.77,0:23:24.96,edc,NTP,0000,0000,0000,,就算很笨拙就算會吵架只要有你在就好
+Dialogue: 0,0:23:24.96,0:23:32.26,edc,NTP,0000,0000,0000,,向飄落的雪花許下心願
+Dialogue: 0,0:23:33.01,0:23:40.66,edc,NTP,0000,0000,0000,,就像這樣繼續在二人世界多停留一下吧
+Dialogue: 0,0:24:08.19,0:24:09.38,tk-default,NTP,0,0,0,,盯
+Dialogue: 0,0:24:09.44,0:24:11.29,tk-default,NTP,0,0,0,,還很暖和呢
+Dialogue: 0,0:24:11.87,0:24:14.61,tk-default,NTP,0,0,0,,哎呀 這是什麼 留信？
+Dialogue: 0,0:24:14.99,0:24:18.52,tk-default,NTP,0,0,0,,我去上學了 吉田
+Dialogue: 0,0:24:18.83,0:24:21.20,tk-default,NTP,0,0,0,,嗯…無家可歸？
+Dialogue: 0,0:24:18.10,0:24:22.10,next title,NTP,0,0,0,,{\frz337\pos(262,89)}下  回
+Dialogue: 0,0:24:18.10,0:24:22.10,next title1,NTP,0,0,0,,{\pos(710,204)\frz339.8}聖 誕 節
+

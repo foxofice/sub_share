@@ -1,0 +1,541 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 漫游字幕
+Original Script: 漫游字幕组
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,KaiTi,53,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,1,0,2,45,45,15,134
+Style: Drifters Normal JL,@FZZhunYuan-M02,68,&H00FDFEFE,&H000000FF,&H00040405,&H00000000,0,0,0,0,100,100,0,-90,1,2,0,2,15,15,23,1
+Style: Difters PS,Microsoft YaHei,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,1,8,10,10,10,1
+Style: Drifters Title,FZYaSong-B-GBK,98,&H00000000,&H000000FF,&H00EBEBFA,&H00F0F0F9,0,0,0,0,100,100,0,0,1,1,3,2,15,15,15,1
+Style: Drifters Top,@FZXingKai-S04,120,&H00000000,&H000000FF,&H00DAD7D3,&H00DDDADB,0,0,0,0,100,100,0,-90,1,4,1,5,15,15,15,1
+Style: Drifters Normal,FZDaHei-B02,68,&H00FDFEFE,&H000000FF,&H00040405,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,15,15,23,1
+Style: difters-ed1,FZZhunYuan-M02,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,4,1,8,15,15,15,1
+Style: difters-ed2,FZLiBian-S02,65,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,4,1,2,15,15,15,1
+Style: difters-op,SimHei,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,8,15,15,30,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:06.66,0:00:11.33,difters-op,,0,0,0,,發動引擎 給我動力
+Dialogue: 0,0:00:11.33,0:00:15.80,difters-op,,0,0,0,,踩下油門 奏響福音
+Dialogue: 0,0:00:15.82,0:00:16.51,difters-op,,0,0,0,,歌唱
+Dialogue: 0,0:00:15.82,0:00:16.51,difters-op,,0,0,0,,{\pos(960,72.6)\fs43.5}sing
+Dialogue: 0,0:00:26.35,0:00:30.25,difters-op,,0,0,0,,疾馳 在這蜿蜒曲折中突進
+Dialogue: 0,0:00:30.29,0:00:33.19,difters-op,,0,0,0,,已欲罷不能
+Dialogue: 0,0:00:33.31,0:00:36.69,difters-op,,0,0,0,,這是颶風般的快感
+Dialogue: 0,0:00:37.28,0:00:39.86,difters-op,,0,0,0,,感受到了我的愛
+Dialogue: 0,0:00:39.97,0:00:42.24,difters-op,,0,0,0,,感受到了這份愛
+Dialogue: 0,0:00:42.37,0:00:44.70,difters-op,,0,0,0,,正是狂奔的颶風
+Dialogue: 0,0:00:46.20,0:00:50.54,difters-op,,0,0,0,,即使已超速 也無法捕捉
+Dialogue: 0,0:00:50.92,0:00:55.30,difters-op,,0,0,0,,引擎全開 全身繃緊
+Dialogue: 0,0:00:55.58,0:00:56.05,difters-op,,0,0,0,,和我一同
+Dialogue: 0,0:00:55.58,0:00:56.05,difters-op,,0,0,0,,{\pos(960,72.6)\fs43.5}everybody
+Dialogue: 0,0:01:06.06,0:01:09.56,difters-op,,0,0,0,,疾馳 在這蜿蜒曲折中突進
+Dialogue: 0,0:01:09.56,0:01:12.98,difters-op,,0,0,0,,已欲罷不能
+Dialogue: 0,0:01:13.10,0:01:16.40,difters-op,,0,0,0,,這是颶風般的快感
+Dialogue: 0,0:01:17.03,0:01:19.28,difters-op,,0,0,0,,感受到了我的愛
+Dialogue: 0,0:01:19.53,0:01:21.82,difters-op,,0,0,0,,感受到了這份愛
+Dialogue: 0,0:01:21.95,0:01:24.20,difters-op,,0,0,0,,正是狂奔的颶風
+Dialogue: 0,0:01:28.16,0:01:30.04,Drifters Normal,,0,0,0,,{\an8\fs52.5}本字幕由悠哈璃羽字幕社提供  僅供試看學習之用  請於下載後24小時內刪除
+Dialogue: 0,0:01:28.16,0:01:30.04,Drifters Normal,,0,0,0,,{\fs48\pos(861.6,908.7)}翻譯：真田艾登 禮櫻鬼島村正
+Dialogue: 0,0:01:28.16,0:01:30.04,Drifters Normal,,0,0,0,,{\fs48\pos(984,980.7)}打軸/後期：奧州八爪魚BF 校對：岸城二貨
+Dialogue: 0,0:01:28.16,0:01:30.04,Drifters Normal,,0,0,0,,{\fs48\pos(861,1054.5)}壓制：甲斐之虎cz 繁化：紅葉
+Dialogue: 0,0:01:34.17,0:01:38.38,Drifters Normal,NTP,0,0,0,,{\c&H000000&\3c&HFFFFFF&\fad(450,0)\pos(1300.2,707.7)}第十一幕
+Dialogue: 0,0:01:34.17,0:01:38.38,Drifters Title,NTP,0,0,0,,{\fad(450,0)\pos(486,879)}手槍大名的冒險
+Dialogue: 0,0:01:34.17,0:01:38.38,Drifters Title,NTP,0,0,0,,{\pos(504,1005)\fad(450,0)}{\fs90}~火繩丸數數歌~
+Dialogue: 0,0:01:37.17,0:01:38.66,Drifters Normal,NTP,0,0,0,,停下 停下
+Dialogue: 0,0:01:41.08,0:01:41.86,Drifters Normal,NTP,0,0,0,,有何事
+Dialogue: 0,0:01:41.86,0:01:42.93,Drifters Normal,NTP,0,0,0,,誰家的馬車啊
+Dialogue: 0,0:01:43.40,0:01:46.68,Drifters Normal,NTP,0,0,0,,這可是大藩地伯爵 聖日爾曼的馬車
+Dialogue: 0,0:01:46.93,0:01:48.72,Drifters Normal,NTP,0,0,0,,不認識這個標誌麼
+Dialogue: 0,0:01:49.60,0:01:52.27,Drifters Normal,NTP,0,0,0,,你是在對著誰喊停下的
+Dialogue: 0,0:01:52.87,0:01:55.53,Drifters Normal,,0,0,0,,但是 這個馬車的數量 究竟...
+Dialogue: 0,0:01:56.00,0:01:59.32,Drifters Normal,,0,0,0,,那是怎麼回事 沒聽說過啊
+Dialogue: 0,0:01:59.65,0:02:02.48,Drifters Normal,NTP,0,0,0,,你的名字是？
+Dialogue: 0,0:02:03.56,0:02:06.32,Drifters Normal,NTP,0,0,0,,你可是喊停了聖日爾曼大人的馬車啊
+Dialogue: 0,0:02:06.37,0:02:09.62,Drifters Normal,NTP,0,0,0,,你明天肯定會被送往前線的
+Dialogue: 0,0:02:09.71,0:02:11.50,Drifters Normal,NTP,0,0,0,,把名字說出來吧
+Dialogue: 0,0:02:11.76,0:02:14.27,Drifters Normal,NTP,0,0,0,,請…請通過吧
+Dialogue: 0,0:02:14.94,0:02:16.04,Drifters Normal,NTP,0,0,0,,這樣就好了
+Dialogue: 0,0:02:16.27,0:02:19.44,Drifters Normal,NTP,0,0,0,,聖日爾曼大人已經對戰爭看不下去了
+Dialogue: 0,0:02:19.45,0:02:22.10,Drifters Normal,NTP,0,0,0,,終於決定要往這場戰爭中摻一腳了
+Dialogue: 0,0:02:22.23,0:02:25.27,Drifters Normal,NTP,0,0,0,,這之後還會不斷地有伯爵的馬車來
+Dialogue: 0,0:02:25.37,0:02:28.11,Drifters Normal,NTP,0,0,0,,這可是在拯救奧爾特啊
+Dialogue: 0,0:02:28.16,0:02:29.75,Drifters Normal,NTP,0,0,0,,哦 終於…
+Dialogue: 0,0:02:30.34,0:02:32.76,Drifters Normal,NTP,0,0,0,,把關口打開 快點
+Dialogue: 0,0:02:36.91,0:02:39.73,Drifters Normal,NTP,0,0,0,,關於往戰爭中摻一腳這件事
+Dialogue: 0,0:02:39.96,0:02:43.05,Drifters Normal,NTP,0,0,0,,我可沒有說錯任何一點喲
+Dialogue: 0,0:02:43.71,0:02:46.17,Drifters Normal,NTP,0,0,0,,祇是並非你們的同伴而已
+Dialogue: 0,0:02:46.80,0:02:48.78,Drifters Normal,,0,0,0,,好熱好熱...
+Dialogue: 0,0:02:48.87,0:02:49.94,Drifters Normal,,0,0,0,,好臭
+Dialogue: 0,0:02:50.28,0:02:52.53,Drifters Normal,,0,0,0,,好熱 好臭 要死了
+Dialogue: 0,0:02:52.58,0:02:54.28,Drifters Normal,,0,0,0,,好吵啊 傻逼 傻逼
+Dialogue: 0,0:02:54.38,0:02:56.14,Drifters Normal,,0,0,0,,矮人好臭 矮人...
+Dialogue: 0,0:02:56.16,0:02:58.21,Drifters Normal,,0,0,0,,吵死了 精靈才臭呢
+Dialogue: 0,0:02:58.65,0:03:01.45,Drifters Normal,,0,0,0,,剛剛是誰在摸我的屁股啊
+Dialogue: 0,0:03:01.68,0:03:03.48,Drifters Normal,,0,0,0,,這次在摸我的歐派
+Dialogue: 0,0:03:03.60,0:03:05.16,Drifters Normal,,0,0,0,,不....不是我喔
+Dialogue: 0,0:03:05.25,0:03:06.92,Drifters Normal,,0,0,0,,不 絕對就是你
+Dialogue: 0,0:03:07.06,0:03:09.36,Drifters Normal,,0,0,0,,那 那麼 你有證據嗎
+Dialogue: 0,0:03:09.64,0:03:10.81,Drifters Normal,,0,0,0,,吵死人啊
+Dialogue: 0,0:03:12.85,0:03:16.11,Drifters Normal,NTP,0,0,0,,這裡就是奧爾特的首都 威爾利那麼
+Dialogue: 0,0:03:16.76,0:03:18.08,Drifters Normal,,0,0,0,,真是寒酸的上洛啊
+Dialogue: 0,0:03:16.76,0:03:18.08,Difters PS,,0,0,0,,{\an8}註：上洛指到首都去
+Dialogue: 0,0:03:18.54,0:03:23.18,Drifters Normal,NTP,0,0,0,,是啊 但是 這裡可不能當我們的首都啊
+Dialogue: 0,0:03:23.98,0:03:26.51,Drifters Normal,,0,0,0,,雖然一眼看上去建築都很氣派
+Dialogue: 0,0:03:26.74,0:03:28.45,Drifters Normal,,0,0,0,,不過完全失去了生機
+Dialogue: 0,0:03:29.20,0:03:32.87,Drifters Normal,,0,0,0,,快看 明明應該是位於首都的繁華地帶
+Dialogue: 0,0:03:33.25,0:03:34.96,Drifters Normal,,0,0,0,,陳列的商品種類卻太過匱乏
+Dialogue: 0,0:03:35.54,0:03:36.91,Drifters Normal,,0,0,0,,物流已經停止了
+Dialogue: 0,0:03:37.50,0:03:39.91,Drifters Normal,,0,0,0,,街道上鎮子上也完全沒有年輕人
+Dialogue: 0,0:03:40.72,0:03:43.54,Drifters Normal,,0,0,0,,說到底 街上人也太少了
+Dialogue: 0,0:03:44.22,0:03:46.43,Drifters Normal,,0,0,0,,長期征戰導致勞動力不足
+Dialogue: 0,0:03:46.17,0:03:47.72,Drifters Normal JL,NTP,0,0,0,,{\frz360\pos(333.331,886.295)}{\fn方正准圆_GBK}我為了奧爾特
+Dialogue: 0,0:03:46.17,0:03:47.72,Drifters Normal JL,NTP,0,0,0,,{\frz360\pos(363,970.5)}{\fn方正准圆_GBK}服了十年的兵役
+Dialogue: 0,0:03:48.03,0:03:49.56,Drifters Normal,NTP,0,0,0,,呃 真是討厭啊
+Dialogue: 0,0:03:49.97,0:03:52.36,Drifters Normal,NTP,0,0,0,,對於這種慢慢邁向毀滅的國家
+Dialogue: 0,0:03:52.48,0:03:54.36,Drifters Normal,NTP,0,0,0,,就應該一把火就把它給滅了
+Dialogue: 0,0:03:54.66,0:03:56.34,Drifters Normal,NTP,0,0,0,,是啊
+Dialogue: 0,0:03:56.67,0:03:59.69,Drifters Normal,NTP,0,0,0,,不把這個國家的氣管一刀子割斷
+Dialogue: 0,0:03:59.82,0:04:02.18,Drifters Normal,NTP,0,0,0,,不把腦袋砍下來 就太可憐了
+Dialogue: 0,0:04:03.87,0:04:05.20,Drifters Normal,NTP,0,0,0,,庫烏爹達？
+Dialogue: 0,0:04:05.69,0:04:07.40,Drifters Normal,NTP,0,0,0,,庫烏爹達是什麼東西
+Dialogue: 0,0:04:07.72,0:04:09.50,Drifters Normal,NTP,0,0,0,,是南蠻的食物或是什麼嗎
+Dialogue: 0,0:04:09.82,0:04:10.76,Drifters Normal,NTP,0,0,0,,是武裝政變啊
+Dialogue: 0,0:04:11.45,0:04:14.82,Drifters Normal,NTP,0,0,0,,直接攻擊首都 奪取整個國家喲
+Dialogue: 0,0:04:15.01,0:04:17.26,Drifters Normal,NTP,0,0,0,,所有的準備都可以給你們做好
+Dialogue: 0,0:04:17.31,0:04:19.38,Drifters Normal,NTP,0,0,0,,把整個奧爾特都賣給你們喲
+Dialogue: 0,0:04:19.63,0:04:21.57,Drifters Normal,NTP,0,0,0,,是個好消息吧
+Dialogue: 0,0:04:21.72,0:04:23.55,Drifters Normal,NTP,0,0,0,,你們的頭目是誰
+Dialogue: 0,0:04:26.32,0:04:28.28,Drifters Normal,NTP,0,0,0,,雖說話題的流向有點奇怪
+Dialogue: 0,0:04:28.54,0:04:30.04,Drifters Normal,NTP,0,0,0,,但首領姑且是我
+Dialogue: 0,0:04:30.58,0:04:33.63,Drifters Normal,NTP,0,0,0,,你…你們的名字是什麼
+Dialogue: 0,0:04:34.11,0:04:38.10,Drifters Normal,NTP,0,0,0,,漂流者的話 我說不定會聽過你們的名字
+Dialogue: 0,0:04:38.42,0:04:41.66,Drifters Normal,NTP,0,0,0,,島津 中務少輔 豐久
+Dialogue: 0,0:04:41.70,0:04:43.60,Drifters Normal,NTP,0,0,0,,豐久 島津
+Dialogue: 0,0:04:43.60,0:04:44.95,Drifters Normal,NTP,0,0,0,,嗯……
+Dialogue: 0,0:04:45.06,0:04:48.19,Drifters Normal,NTP,0,0,0,,關原之戰 1600年
+Dialogue: 0,0:04:48.77,0:04:50.32,Drifters Normal,NTP,0,0,0,,那須與一 資隆
+Dialogue: 0,0:04:50.68,0:04:51.96,Drifters Normal,NTP,0,0,0,,阿拉 真是可愛
+Dialogue: 0,0:04:52.10,0:04:55.58,Drifters Normal,NTP,0,0,0,,源平合戰的弓兵 你很有名
+Dialogue: 0,0:04:55.74,0:04:57.31,Drifters Normal,NTP,0,0,0,,你呢
+Dialogue: 0,0:04:57.31,0:04:59.12,Drifters Normal,NTP,0,0,0,,織田信長
+Dialogue: 0,0:04:59.12,0:05:00.98,Drifters Normal,NTP,0,0,0,,你可是超級有名喲
+Dialogue: 0,0:05:00.98,0:05:04.28,Drifters Normal,NTP,0,0,0,,哈哈哈哈哈 當然啦 當然啦
+Dialogue: 0,0:05:04.50,0:05:09.21,Default,NTP,0,0,0,,{\fn@方正少兒_GBK\frz270\c&H071519&\3c&HECECF8&\fs97.5\}{\fs97.5\t($start,$end,\fs67.5)}{\move(390,702,591,483)}覆盆子探測器
+Dialogue: 0,0:05:04.69,0:05:06.20,Drifters Normal,NTP,0,0,0,,那個老爺子呢
+Dialogue: 0,0:05:06.39,0:05:07.30,Drifters Normal,NTP,0,0,0,,不太清楚他的名字呢
+Dialogue: 0,0:05:07.67,0:05:09.55,Drifters Normal,NTP,0,0,0,,是喜歡吃覆盆子的老爺子
+Dialogue: 0,0:05:10.38,0:05:14.93,Drifters Normal,NTP,0,0,0,,貌似你是從比我們更加遙遠的時代穿越過來的
+Dialogue: 0,0:05:15.62,0:05:17.22,Drifters Normal,NTP,0,0,0,,呵呵呵呵呵呵
+Dialogue: 0,0:05:17.75,0:05:20.98,Drifters Normal,NTP,0,0,0,,關原之戰以後島津家如何了 你想知道麼
+Dialogue: 0,0:05:21.37,0:05:23.34,Drifters Normal,NTP,0,0,0,,我來告訴你也是可以的喲
+Dialogue: 0,0:05:23.67,0:05:26.54,Drifters Normal,NTP,0,0,0,,那種事情就算不說也早已成定局了
+Dialogue: 0,0:05:27.57,0:05:28.50,Drifters Normal,NTP,0,0,0,,在烏頭阪的那一幕
+Dialogue: 0,0:05:28.80,0:05:32.88,Drifters Normal,NTP,0,0,0,,義弘叔父在我們爭取時間的時候就應該已經逃脫了
+Dialogue: 0,0:05:33.84,0:05:36.96,Drifters Normal,NTP,0,0,0,,祇要義弘大人回到薩州的話 就已經塵埃落定了
+Dialogue: 0,0:05:37.90,0:05:39.92,Drifters Normal,NTP,0,0,0,,島津會把德川家給滅門
+Dialogue: 0,0:05:40.64,0:05:42.60,Drifters Normal,NTP,0,0,0,,雖然不知道要過幾十年還是幾百年
+Dialogue: 0,0:05:43.58,0:05:46.60,Drifters Normal,NTP,0,0,0,,但最終 德川家肯定就會被島津的士兵給消滅
+Dialogue: 0,0:05:47.42,0:05:50.03,Drifters Normal,NTP,0,0,0,,這孩子怎麼了…
+Dialogue: 0,0:05:50.70,0:05:54.32,Drifters Normal,NTP,0,0,0,,為什麼能在那種敗逃的情況下 還堅信己方的勝利啊
+Dialogue: 0,0:05:54.98,0:05:56.34,Drifters Normal,NTP,0,0,0,,你到底有著怎麼樣的神經啊
+Dialogue: 0,0:05:57.10,0:06:00.28,Drifters Normal,NTP,0,0,0,,呀嘛 那個 他就是這種人來的
+Dialogue: 0,0:06:00.28,0:06:01.36,Drifters Normal,NTP,0,0,0,,抱歉啦 人妖
+Dialogue: 0,0:06:01.57,0:06:03.02,Drifters Normal,NTP,0,0,0,,話說回來 我呢 我呢
+Dialogue: 0,0:06:03.27,0:06:05.63,Drifters Normal,NTP,0,0,0,,我又是被後世如何津津樂道的
+Dialogue: 0,0:06:05.63,0:06:08.30,Drifters Normal,NTP,0,0,0,,你的事情就一言難盡了
+Dialogue: 0,0:06:08.30,0:06:11.99,Drifters Normal,NTP,0,0,0,,可以飛在天空中 發出奇怪的光線 還能變大
+Dialogue: 0,0:06:08.30,0:06:12.47,Difters PS,NTP,0,0,0,,出自「鬼武者」
+Dialogue: 0,0:06:11.99,0:06:13.72,Drifters Normal,NTP,0,0,0,,變大…
+Dialogue: 0,0:06:13.72,0:06:15.58,Drifters Normal,NTP,0,0,0,,想把這個世界換成魔界
+Dialogue: 0,0:06:13.72,0:06:15.58,Difters PS,NTP,0,0,0,,出自「戰國鬼才傳」
+Dialogue: 0,0:06:15.58,0:06:17.98,Drifters Normal,NTP,0,0,0,,身體被分成兩半還能泡茶
+Dialogue: 0,0:06:17.98,0:06:19.96,Drifters Normal,NTP,0,0,0,,你的話 武器比較出名啊
+Dialogue: 0,0:06:17.98,0:06:19.96,Difters PS,NTP,0,0,0,,出自「最終幻想」與一之弓
+Dialogue: 0,0:06:19.96,0:06:21.21,Drifters Normal,NTP,0,0,0,,武器麼
+Dialogue: 0,0:06:21.21,0:06:23.60,Drifters Normal,NTP,0,0,0,,未來到底發生了什麼
+Dialogue: 0,0:06:24.82,0:06:28.11,Drifters Normal,,0,0,0,,話說要是再多點準備時間就好了
+Dialogue: 0,0:06:28.65,0:06:30.48,Drifters Normal,,0,0,0,,火槍也還沒準備齊全
+Dialogue: 0,0:06:30.82,0:06:33.36,Drifters Normal,,0,0,0,,訓練方面幾乎是一上來就實戰了
+Dialogue: 0,0:06:33.83,0:06:36.86,Drifters Normal,,0,0,0,,那個人妖 也太急著實施計畫了
+Dialogue: 0,0:06:37.65,0:06:39.36,Drifters Normal,,0,0,0,,不 這樣也好
+Dialogue: 0,0:06:39.64,0:06:41.34,Drifters Normal,,0,0,0,,潮流是無法阻擋的
+Dialogue: 0,0:06:41.78,0:06:44.23,Drifters Normal,,0,0,0,,沒人能逆著時代潮流而上
+Dialogue: 0,0:06:44.64,0:06:49.34,Drifters Normal,,0,0,0,,不斷被捲入時代的洪流 因此而粉身碎骨的人也不計其數啊
+Dialogue: 0,0:06:49.34,0:06:51.34,Drifters Normal,,0,0,0,,即便如此那也挺好
+Dialogue: 0,0:06:51.42,0:06:53.59,Drifters Normal,,0,0,0,,不好啊喂 一點都不好
+Dialogue: 0,0:06:51.59,0:06:53.59,Drifters Normal,,0,0,0,,
+Dialogue: 0,0:06:53.59,0:06:57.62,Drifters Normal,NTP,0,0,0,,說起來 你居然會信用那個不男不女的傢伙還真是不可思議啊
+Dialogue: 0,0:06:58.06,0:07:00.92,Drifters Normal,NTP,0,0,0,,啊 這個世界偶爾還是會有那種傢伙的
+Dialogue: 0,0:07:01.46,0:07:02.81,Drifters Normal,NTP,0,0,0,,很簡單就會窩裡反的
+Dialogue: 0,0:07:03.68,0:07:07.08,Drifters Normal,NTP,0,0,0,,信義什麼的 忠誠什麼的 原本就沒有
+Dialogue: 0,0:07:08.14,0:07:13.53,Drifters Normal,NTP,0,0,0,,但是 他的窩裡反中並不包含仇恨 先祖情懷什麼的東西
+Dialogue: 0,0:07:13.83,0:07:15.71,Drifters Normal,NTP,0,0,0,,祇有利益和盤算得出的結論罷了
+Dialogue: 0,0:07:16.56,0:07:18.14,Drifters Normal,NTP,0,0,0,,所以那傢伙是可以信用的
+Dialogue: 0,0:07:18.45,0:07:20.80,Drifters Normal,NTP,0,0,0,,在他背叛某個人的期間
+Dialogue: 0,0:07:21.14,0:07:22.76,Drifters Normal,NTP,0,0,0,,但他的話也很奇怪啊
+Dialogue: 0,0:07:23.31,0:07:26.10,Drifters Normal,NTP,0,0,0,,不祇是打扮和外貌很奇怪 連內在也都很奇怪啊
+Dialogue: 0,0:07:26.10,0:07:28.32,Drifters Normal,NTP,0,0,0,,啊 那身打扮是不正常的啦
+Dialogue: 0,0:07:28.32,0:07:30.32,Drifters Normal,NTP,0,0,0,,很奇異啊 身心都很變態啊
+Dialogue: 0,0:07:30.32,0:07:32.34,Drifters Normal,NTP,0,0,0,,是個變態呢 變態
+Dialogue: 0,0:07:32.34,0:07:33.88,Drifters Normal,NTP,0,0,0,,我聽到了啊 日本人
+Dialogue: 0,0:07:33.88,0:07:36.00,Drifters Normal,NTP,0,0,0,,給我收斂一點
+Dialogue: 0,0:07:36.81,0:07:38.56,Drifters Normal,NTP,0,0,0,,聖日爾曼伯爵
+Dialogue: 0,0:07:38.57,0:07:43.39,Drifters Normal,NTP,0,0,0,,我想聽一下你用藩地伯爵許可權召開會議的理由
+Dialogue: 0,0:07:43.39,0:07:47.88,Drifters Normal,NTP,0,0,0,,為什麼你要在這般緊迫的狀況之下才召開此會議呢
+Dialogue: 0,0:07:49.17,0:07:51.06,Drifters Normal,NTP,0,0,0,,奧爾特
+Dialogue: 0,0:07:53.38,0:07:55.60,Drifters Normal,NTP,0,0,0,,倒閉 我是來告訴你們這件事情的
+Dialogue: 0,0:08:01.23,0:08:06.43,Drifters Normal,NTP,0,0,0,,這個國家是我們漂流者細心經營的東西
+Dialogue: 0,0:08:06.43,0:08:09.27,Drifters Normal,NTP,0,0,0,,我們把它借出去了半個世紀
+Dialogue: 0,0:08:09.27,0:08:11.48,Drifters Normal,NTP,0,0,0,,但是現在已經不能借了 抱歉
+Dialogue: 0,0:08:11.48,0:08:14.69,Drifters Normal,NTP,0,0,0,,那麼現在要求你們把它還回來
+Dialogue: 0,0:08:14.69,0:08:18.51,Drifters Normal,NTP,0,0,0,,從今天開始 奧爾特實驗帝國宣告結束
+Dialogue: 0,0:08:18.51,0:08:21.20,Drifters Normal,NTP,0,0,0,,閉店 店舖破產了
+Dialogue: 0,0:08:21.20,0:08:25.33,Drifters Normal,NTP,0,0,0,,從現在開始會有新的漂流者 豐久島津作為統領
+Dialogue: 0,0:08:25.33,0:08:28.55,Drifters Normal,NTP,0,0,0,,豁然開朗地努力向前邁進
+Dialogue: 0,0:08:28.55,0:08:34.41,Drifters Normal,NTP,0,0,0,,謝謝大家長久以來的光顧和利用 再見
+Dialogue: 0,0:08:34.41,0:08:38.33,Drifters Normal,NTP,0,0,0,,什…什麼 你在說什麼啊 聖日爾曼伯爵
+Dialogue: 0,0:08:38.33,0:08:39.85,Drifters Normal,NTP,0,0,0,,怎麼了 你
+Dialogue: 0,0:08:39.85,0:08:42.83,Drifters Normal,NTP,0,0,0,,我不是已經說得再明白不過了麼
+Dialogue: 0,0:08:42.83,0:08:44.91,Drifters Normal,NTP,0,0,0,,你是傻子麼
+Dialogue: 0,0:08:44.91,0:08:47.68,Drifters Normal,NTP,0,0,0,,話說回來你還真是一臉蠢樣啊
+Dialogue: 0,0:08:47.80,0:08:52.37,Drifters Normal,NTP,0,0,0,,衛兵 衛兵 聖日爾曼伯爵發瘋了 衛兵
+Dialogue: 0,0:08:52.37,0:08:55.02,Drifters Normal,NTP,0,0,0,,你喊破喉嚨也沒有衛兵會來的啦
+Dialogue: 0,0:08:55.02,0:08:56.92,Drifters Normal,NTP,0,0,0,,你是呆子麼
+Dialogue: 0,0:08:56.92,0:08:59.89,Drifters Normal,NTP,0,0,0,,話說回來你還真是一臉呆樣啊
+Dialogue: 0,0:09:14.22,0:09:16.31,Drifters Normal,NTP,0,0,0,,聖日爾曼 這可是叛亂啊
+Dialogue: 0,0:09:16.77,0:09:18.16,Drifters Normal,NTP,0,0,0,,反叛啊
+Dialogue: 0,0:09:18.16,0:09:19.70,Drifters Normal,NTP,0,0,0,,對誰？
+Dialogue: 0,0:09:19.70,0:09:22.08,Drifters Normal,NTP,0,0,0,,國父？還是黨派？
+Dialogue: 0,0:09:22.08,0:09:26.09,Drifters Normal,NTP,0,0,0,,贊成我的方案的人 舉手
+Dialogue: 0,0:09:26.09,0:09:28.57,Drifters Normal,NTP,0,0,0,,支持聖日爾曼伯爵
+Dialogue: 0,0:09:28.57,0:09:29.99,Drifters Normal,NTP,0,0,0,,我也是
+Dialogue: 0,0:09:29.99,0:09:31.72,Drifters Normal,NTP,0,0,0,,贊同伯爵
+Dialogue: 0,0:09:31.72,0:09:33.18,Drifters Normal,NTP,0,0,0,,什…什麼
+Dialogue: 0,0:09:34.26,0:09:38.29,Drifters Normal,NTP,0,0,0,,我怎麼會什麼都沒準備就來召開會議啊
+Dialogue: 0,0:09:38.29,0:09:40.09,Drifters Normal,NTP,0,0,0,,真是愚蠢
+Dialogue: 0,0:09:40.09,0:09:45.21,Drifters Normal,NTP,0,0,0,,喂喂 那邊的成員也快點把手舉起來吧
+Dialogue: 0,0:09:45.21,0:09:48.71,Drifters Normal,NTP,0,0,0,,我支持奧爾特的指揮中心進行解體
+Dialogue: 0,0:09:48.71,0:09:51.23,Drifters Normal,NTP,0,0,0,,嗯嗯 好的
+Dialogue: 0,0:09:51.23,0:09:52.41,Drifters Normal,NTP,0,0,0,,但是
+Dialogue: 0,0:09:52.41,0:09:53.41,Drifters Normal,NTP,0,0,0,,但是？
+Dialogue: 0,0:09:53.41,0:09:58.19,Drifters Normal,NTP,0,0,0,,對於把新的漂流者推上新國統領一事表示反對
+Dialogue: 0,0:09:58.65,0:10:02.95,Drifters Normal,NTP,0,0,0,,新國的全權應歸於黑王
+Dialogue: 0,0:10:02.95,0:10:08.14,Drifters Normal,NTP,0,0,0,,我們祇不過是祈求著黑王大人的允許而跪拜
+Dialogue: 0,0:10:08.14,0:10:13.95,Drifters Normal,NTP,0,0,0,,為其先驅者來促成廢滅人類世界這一事業而已
+Dialogue: 0,0:10:15.94,0:10:18.46,Drifters Normal,NTP,0,0,0,,拉斯普京 你成為廢棄者了麼
+Dialogue: 0,0:10:15.94,0:10:18.46,Difters PS,NTP,0,0,0,,{\an8}{\fs55}註：史實中，聖日耳曼活在18世紀，拉斯普京活在19-20世紀，兩人年代相差近百年。
+Dialogue: 0,0:10:18.46,0:10:22.92,Drifters Normal,NTP,0,0,0,,聖日爾曼伯爵 我們想到一塊去了啊
+Dialogue: 0,0:10:23.72,0:10:26.34,Drifters Normal,NTP,0,0,0,,你的打扮還是一如既往地像個笨蛋啊
+Dialogue: 0,0:10:27.85,0:10:31.12,Drifters Normal,NTP,0,0,0,,你覺得會稱心如意的話 那就大錯特錯了
+Dialogue: 0,0:10:41.24,0:10:42.70,Drifters Normal,NTP,0,0,0,,怎麼了 怎麼了
+Dialogue: 0,0:10:43.04,0:10:45.00,Drifters Normal,NTP,0,0,0,,和說好的完全不同嘛
+Dialogue: 0,0:10:45.95,0:10:48.16,Drifters Normal,NTP,0,0,0,,你們就是漂流者的各位麼
+Dialogue: 0,0:10:48.90,0:10:51.13,Drifters Normal,NTP,0,0,0,,貞德和吉爾德萊真是受你們照顧了
+Dialogue: 0,0:10:52.82,0:10:54.40,Drifters Normal,NTP,0,0,0,,我是拉斯普京
+Dialogue: 0,0:10:54.99,0:10:57.26,Drifters Normal,NTP,0,0,0,,黑王大人是很忙的
+Dialogue: 0,0:10:57.61,0:11:00.98,Drifters Normal,NTP,0,0,0,,說實話 他沒有空閒來管你們
+Dialogue: 0,0:11:02.50,0:11:05.85,Drifters Normal,NTP,0,0,0,,不管怎麼說 他可是接下來要滅亡這個世界的人
+Dialogue: 0,0:11:06.28,0:11:09.06,Drifters Normal,NTP,0,0,0,,所以 我出了此等策略
+Dialogue: 0,0:11:15.96,0:11:20.14,Drifters Normal,NTP,0,0,0,,我也往首都派遣了兵
+Dialogue: 0,0:11:21.70,0:11:24.45,Drifters Normal,NTP,0,0,0,,嘛 雖然都算是一種搗亂
+Dialogue: 0,0:11:25.23,0:11:27.94,Drifters Normal,NTP,0,0,0,,我深表歉意…
+Dialogue: 0,0:11:47.10,0:11:48.54,Drifters Normal,NTP,0,0,0,,哎呀
+Dialogue: 0,0:11:53.24,0:11:55.30,Drifters Normal,NTP,0,0,0,,你就是漂流者
+Dialogue: 0,0:11:55.30,0:11:59.17,Drifters Normal,NTP,0,0,0,,漂流者的頭目 豐久島津麼
+Dialogue: 0,0:11:59.17,0:12:02.83,Drifters Normal,NTP,0,0,0,,突如其來的拔刀 突如其來的襲擊
+Dialogue: 0,0:12:02.83,0:12:05.92,Drifters Normal,NTP,0,0,0,,可以看出你是從很是落後的蠻荒之地而來的
+Dialogue: 0,0:12:07.57,0:12:11.79,Drifters Normal,NTP,0,0,0,,我們的同志貞德還真是受你照顧了
+Dialogue: 0,0:12:11.82,0:12:14.50,Drifters Normal,NTP,0,0,0,,不回禮的話…
+Dialogue: 0,0:12:18.41,0:12:21.57,Drifters Normal,NTP,0,0,0,,啊 這還真狠啊
+Dialogue: 0,0:12:21.57,0:12:23.61,Drifters Normal,NTP,0,0,0,,雖然不知道你是誰 這還真是抱歉了
+Dialogue: 0,0:12:23.61,0:12:25.83,Drifters Normal,NTP,0,0,0,,被這麼一搞就麻煩了
+Dialogue: 0,0:12:26.27,0:12:30.82,Drifters Normal,NTP,0,0,0,,正要用策士的口吻自滿地誇耀之時
+Dialogue: 0,0:12:30.82,0:12:34.86,Drifters Normal,NTP,0,0,0,,全無視後在他的眼前把他的手下狠狠打一頓
+Dialogue: 0,0:12:34.86,0:12:37.78,Drifters Normal,NTP,0,0,0,,做出這般事情的話那傢伙就很沒面子了
+Dialogue: 0,0:12:37.83,0:12:40.10,Drifters Normal,NTP,0,0,0,,豐久不會去看氣氛的
+Dialogue: 0,0:12:40.10,0:12:42.36,Drifters Normal,NTP,0,0,0,,他不是不懂而是不去理會
+Dialogue: 0,0:12:42.36,0:12:44.76,Drifters Normal,NTP,0,0,0,,完全地不去理會氣氛
+Dialogue: 0,0:12:44.76,0:12:47.99,Drifters Normal,NTP,0,0,0,,恐怕與其說這是他與生俱來的
+Dialogue: 0,0:12:47.99,0:12:50.63,Drifters Normal,NTP,0,0,0,,不如說他是被教育成這樣的
+Dialogue: 0,0:12:50.63,0:12:55.03,Drifters Normal,NTP,0,0,0,,這是一個很強大的武器的同時也是一個很大的弱點
+Dialogue: 0,0:12:55.03,0:12:57.86,Drifters Normal,NTP,0,0,0,,根據場合 他會很輕易地就死去
+Dialogue: 0,0:12:57.86,0:12:59.75,Drifters Normal,NTP,0,0,0,,小豐久 等等 等等
+Dialogue: 0,0:12:59.75,0:13:01.57,Drifters Normal,NTP,0,0,0,,那個人會死的
+Dialogue: 0,0:13:07.98,0:13:11.73,Drifters Normal,NTP,0,0,0,,流下一滴冷汗的話可就輸了喲
+Dialogue: 0,0:13:12.24,0:13:15.67,Drifters Normal,NTP,0,0,0,,笑吧 不好好地笑可不行啊
+Dialogue: 0,0:13:15.96,0:13:18.25,Drifters Normal,NTP,0,0,0,,怎麼了啊 這位擺著謀士架子的大兄弟
+Dialogue: 0,0:13:18.25,0:13:20.15,Drifters Normal,NTP,0,0,0,,笑得好像有點僵硬啊
+Dialogue: 0,0:13:20.15,0:13:22.90,Drifters Normal,NTP,0,0,0,,我們這邊就跟你們說一聲吧
+Dialogue: 0,0:13:23.09,0:13:24.96,Drifters Normal,NTP,0,0,0,,真是謝謝了
+Dialogue: 0,0:13:24.96,0:13:27.72,Drifters Normal,NTP,0,0,0,,我們可是一開始就打算要打仗的
+Dialogue: 0,0:13:27.72,0:13:30.38,Drifters Normal,NTP,0,0,0,,妨礙我們的人會一個不留地全部打倒
+Dialogue: 0,0:13:30.38,0:13:33.43,Drifters Normal,NTP,0,0,0,,我們可不打算不流血就奪取這個國家
+Dialogue: 0,0:13:33.43,0:13:37.81,Drifters Normal,NTP,0,0,0,,其實你們是打算不流血就奪取這個國家的吧
+Dialogue: 0,0:13:38.12,0:13:41.52,Drifters Normal,NTP,0,0,0,,我們在的話 你其實應該是相當消沉的吧
+Dialogue: 0,0:13:41.52,0:13:45.99,Drifters Normal,NTP,0,0,0,,消沉起來人妖伯爵應該還比較可愛呢
+Dialogue: 0,0:13:46.19,0:13:49.57,Drifters Normal,NTP,0,0,0,,這一來我們就可以大肆宣揚你們廢棄物的威脅了
+Dialogue: 0,0:13:49.57,0:13:53.29,Drifters Normal,NTP,0,0,0,,為了拯救國家 漂流者又來助一臂之力了
+Dialogue: 0,0:13:53.29,0:13:56.40,Drifters Normal,NTP,0,0,0,,這不是一個冠冕堂皇的理由麼
+Dialogue: 0,0:13:56.40,0:13:57.75,Drifters Normal,NTP,0,0,0,,謝謝了
+Dialogue: 0,0:13:57.75,0:14:00.69,Drifters Normal,NTP,0,0,0,,喂喂 那張陰沉的臉是怎麼了啊
+Dialogue: 0,0:14:00.69,0:14:03.22,Drifters Normal,NTP,0,0,0,,像剛才那樣笑起來吧
+Dialogue: 0,0:14:03.22,0:14:04.72,Drifters Normal,NTP,0,0,0,,笑吧 喂
+Dialogue: 0,0:14:04.72,0:14:07.07,Drifters Normal,NTP,0,0,0,,就是這樣啊
+Dialogue: 0,0:14:13.42,0:14:16.58,Drifters Normal,NTP,0,0,0,,用戰爭來做個了結吧
+Dialogue: 0,0:14:23.10,0:14:25.85,Drifters Normal,NTP,0,0,0,,可惡 可惡
+Dialogue: 0,0:14:26.22,0:14:29.10,Drifters Normal,NTP,0,0,0,,可惡 那個傢伙
+Dialogue: 0,0:14:29.10,0:14:32.46,Drifters Normal,NTP,0,0,0,,拉斯普京 回答我 怎麼了
+Dialogue: 0,0:14:32.46,0:14:36.14,Drifters Normal,NTP,0,0,0,,威爾利那已經被漂流者們入侵了
+Dialogue: 0,0:14:36.14,0:14:39.90,Drifters Normal,NTP,0,0,0,,雖然我操縱了奧爾特的貴族 也讓士兵長驅進入了首都
+Dialogue: 0,0:14:39.90,0:14:42.36,Drifters Normal,NTP,0,0,0,,即使有足以迅速奪下威爾利那的兵力
+Dialogue: 0,0:14:42.36,0:14:44.69,Drifters Normal,NTP,0,0,0,,也沒有把那群傢伙加入計算之中
+Dialogue: 0,0:14:44.86,0:14:50.73,Drifters Normal,NTP,0,0,0,,沒想到那些傢伙下手這麼快而且又這麼直接
+Dialogue: 0,0:14:50.73,0:14:52.79,Drifters Normal,NTP,0,0,0,,那些傢伙腦袋有問題吧
+Dialogue: 0,0:14:52.79,0:14:55.25,Drifters Normal,NTP,0,0,0,,荒謬 一點都不正常
+Dialogue: 0,0:14:55.25,0:14:57.64,Drifters Normal,NTP,0,0,0,,不要慌 拉斯普京
+Dialogue: 0,0:14:57.64,0:14:59.81,Drifters Normal,NTP,0,0,0,,這可是戰爭
+Dialogue: 0,0:14:59.81,0:15:02.36,Drifters Normal,NTP,0,0,0,,會發生預料之外的事情的
+Dialogue: 0,0:15:02.36,0:15:03.69,Drifters Normal,NTP,0,0,0,,肯定會發生的
+Dialogue: 0,0:15:03.69,0:15:05.75,Drifters Normal,NTP,0,0,0,,因為這才就是戰爭啊
+Dialogue: 0,0:15:06.03,0:15:09.46,Drifters Normal,NTP,0,0,0,,交給我吧 我一定會拿下奧爾特
+Dialogue: 0,0:15:10.06,0:15:14.43,Drifters Normal,NTP,0,0,0,,然後我們也並不正常
+Dialogue: 0,0:15:14.43,0:15:15.88,Drifters Normal,NTP,0,0,0,,土方
+Dialogue: 0,0:15:16.92,0:15:18.64,Drifters Normal,NTP,0,0,0,,拉斯普京
+Dialogue: 0,0:15:19.44,0:15:22.64,Drifters Normal,NTP,0,0,0,,我認為已經無法奪取威爾利那了
+Dialogue: 0,0:15:22.64,0:15:25.31,Drifters Normal,NTP,0,0,0,,通過你們的判斷來改變目標吧
+Dialogue: 0,0:15:25.31,0:15:27.63,Drifters Normal,NTP,0,0,0,,進行破壞而非奪取
+Dialogue: 0,0:15:27.63,0:15:31.85,Drifters Normal,NTP,0,0,0,,盡可能地破壞和造成混亂
+Dialogue: 0,0:15:31.98,0:15:34.36,Drifters Normal,NTP,0,0,0,,盡可能地殺人
+Dialogue: 0,0:15:34.36,0:15:36.29,Drifters Normal,NTP,0,0,0,,盡可能地燃燒
+Dialogue: 0,0:15:36.29,0:15:38.98,Drifters Normal,NTP,0,0,0,,雖說是為了不讓漂流者拿下
+Dialogue: 0,0:15:38.98,0:15:42.16,Drifters Normal,NTP,0,0,0,,即使交給他們也要讓這個國家滿身蒼夷
+Dialogue: 0,0:15:42.53,0:15:43.68,Drifters Normal,NTP,0,0,0,,聽命
+Dialogue: 0,0:15:43.68,0:15:47.84,Drifters Normal,NTP,0,0,0,,聽命 令人敬畏的黑王大人
+Dialogue: 0,0:15:48.02,0:15:50.16,Drifters Normal,,0,0,0,,反正到最後結果都一樣
+Dialogue: 0,0:15:50.65,0:15:52.67,Drifters Normal,,0,0,0,,不論是現在 還是日後
+Dialogue: 0,0:15:52.79,0:15:54.06,Drifters Normal,,0,0,0,,絕不留一個活口
+Dialogue: 0,0:15:56.09,0:15:58.30,Drifters Normal,,0,0,0,,喂快給我起來 你個蠢貨
+Dialogue: 0,0:16:01.97,0:16:03.77,Drifters Normal,,0,0,0,,我… 在做什麼
+Dialogue: 0,0:16:03.85,0:16:06.16,Drifters Normal,,0,0,0,,什麼你個頭啊 你個蠢貨
+Dialogue: 0,0:16:06.52,0:16:09.25,Drifters Normal,,0,0,0,,黑王的軍隊 都兵臨城下了啊
+Dialogue: 0,0:16:09.60,0:16:12.09,Drifters Normal,,0,0,0,,多少人  衝進來多少人了啊
+Dialogue: 0,0:16:12.30,0:16:14.40,Drifters Normal,,0,0,0,,誰 誰知到啊 到底在說什麼
+Dialogue: 0,0:16:14.85,0:16:17.51,Drifters Normal,,0,0,0,,怎麼了…… 你們到底是誰
+Dialogue: 0,0:16:18.03,0:16:20.71,Drifters Normal,,0,0,0,,我… 我到底…
+Dialogue: 0,0:16:21.99,0:16:24.84,Drifters Normal,,0,0,0,,豐先生覺得麻煩的話 就會這樣二話不說先揍一拳
+Dialogue: 0,0:16:25.13,0:16:26.47,Drifters Normal,,0,0,0,,知道了 知道了
+Dialogue: 0,0:16:26.56,0:16:30.36,Drifters Normal,NTP,0,0,0,,把威爾利那的地圖拿來 快拿來
+Dialogue: 0,0:16:30.39,0:16:34.92,Drifters Normal,NTP,0,0,0,,忽然想起以前的事 一不小心就自大起來了
+Dialogue: 0,0:16:34.92,0:16:37.33,Drifters Normal,NTP,0,0,0,,如果失敗了的話就真是笑死人了
+Dialogue: 0,0:16:37.33,0:16:41.12,Drifters Normal,NTP,0,0,0,,那張自大的臉在這裡可是幾世紀難得一見的哦
+Dialogue: 0,0:16:41.15,0:16:43.68,Drifters Normal,NTP,0,0,0,,精靈族兩百 矮人族兩百
+Dialogue: 0,0:16:43.68,0:16:46.54,Drifters Normal,NTP,0,0,0,,敵人的數量不明確的話 還是無法做出對策
+Dialogue: 0,0:16:46.54,0:16:48.82,Drifters Normal,NTP,0,0,0,,畢竟需要混進馬車溜進來
+Dialogue: 0,0:16:48.82,0:16:50.76,Drifters Normal,NTP,0,0,0,,這已經是我們的最高戰力了
+Dialogue: 0,0:16:50.76,0:16:55.64,Drifters Normal,NTP,0,0,0,,我那些埋伏在帝都外面的士兵應該正往這邊趕來
+Dialogue: 0,0:16:55.64,0:16:58.31,Drifters Normal,NTP,0,0,0,,應該差不多要到了
+Dialogue: 0,0:16:58.31,0:17:00.39,Drifters Normal,NTP,0,0,0,,五百人的精英部隊
+Dialogue: 0,0:17:00.39,0:17:03.62,Drifters Normal,NTP,0,0,0,,死人妖 要帶就多帶點來啊
+Dialogue: 0,0:17:03.62,0:17:07.54,Drifters Normal,NTP,0,0,0,,單純的政變的話這點人就夠了啊 單純的
+Dialogue: 0,0:17:07.54,0:17:10.18,Drifters Normal,NTP,0,0,0,,而且這些已經是我領土裡的全部兵力了
+Dialogue: 0,0:17:10.18,0:17:14.04,Drifters Normal,NTP,0,0,0,,全部兵力 哈 五百人 哈
+Dialogue: 0,0:17:14.04,0:17:17.43,Drifters Normal,NTP,0,0,0,,你不是奧爾特裡的大領主嗎 這是怎麼一回事
+Dialogue: 0,0:17:17.43,0:17:19.28,Drifters Normal,NTP,0,0,0,,經過精心挑選當然祇有這麼多啦
+Dialogue: 0,0:17:19.30,0:17:22.33,Drifters Normal,NTP,0,0,0,,我的士兵和那些雜牌貨是不一樣 超猛的
+Dialogue: 0,0:17:22.33,0:17:24.86,Drifters Normal,NTP,0,0,0,,聖日爾曼伯爵的軍隊已經到達
+Dialogue: 0,0:17:24.86,0:17:25.96,Drifters Normal,NTP,0,0,0,,來了嗎
+Dialogue: 0,0:17:25.96,0:17:27.19,Drifters Normal,NTP,0,0,0,,祇是
+Dialogue: 0,0:17:27.19,0:17:28.45,Drifters Normal,NTP,0,0,0,,祇是？
+Dialogue: 0,0:17:31.28,0:17:33.50,Drifters Normal,NTP,0,0,0,,的確都很強壯
+Dialogue: 0,0:17:33.50,0:17:36.97,Drifters Normal,NTP,0,0,0,,但是總覺得哪裡不對
+Dialogue: 0,0:17:36.97,0:17:39.45,Drifters Normal,NTP,0,0,0,,為什麼全部人都裸著上身
+Dialogue: 0,0:17:41.39,0:17:43.59,Drifters Normal,NTP,0,0,0,,我發現了
+Dialogue: 0,0:17:43.59,0:17:47.54,Drifters Normal,NTP,0,0,0,,死人妖 莫非 這是怎麼回事
+Dialogue: 0,0:17:47.54,0:17:50.85,Drifters Normal,NTP,0,0,0,,是啊 一對對男同志組成的軍隊啊
+Dialogue: 0,0:17:50.85,0:17:51.97,Drifters Normal,NTP,0,0,0,,有 有什麼問題
+Dialogue: 0,0:17:51.97,0:17:54.39,Drifters Normal,NTP,0,0,0,,組成怎麼樣的軍隊是我的自由
+Dialogue: 0,0:17:54.39,0:17:56.38,Drifters Normal,NTP,0,0,0,,什麼 有意見嗎
+Dialogue: 0,0:17:56.38,0:18:00.33,Drifters Normal,NTP,0,0,0,,你的領土上軍隊特別少的原因 原來是這個啊
+Dialogue: 0,0:18:00.33,0:18:02.93,Drifters Normal,NTP,0,0,0,,不經過精挑細選當然做不到啦
+Dialogue: 0,0:18:02.93,0:18:06.23,Drifters Normal,NTP,0,0,0,,抱歉 廁所在哪 我去吐一下
+Dialogue: 0,0:18:06.23,0:18:09.22,Drifters Normal,NTP,0,0,0,,底比斯聖軍
+Dialogue: 0,0:18:06.23,0:18:09.22,Difters PS,NTP,0,0,0,,底比斯聖軍：是指西元前378年，古希臘的重要城市底比斯中，\n高吉達斯將軍建立起的由150對男同志組成的軍隊
+Dialogue: 0,0:18:09.22,0:18:12.99,Drifters Normal,NTP,0,0,0,,你知道嗎 老爺爺 你到底是誰
+Dialogue: 0,0:18:12.99,0:18:15.90,Drifters Normal,NTP,0,0,0,,伊巴密濃達的斜形方陣
+Dialogue: 0,0:18:12.99,0:18:15.90,Difters PS,NTP,0,0,0,,{\an8}{\fs55}註：西元前371年，伊巴密濃達在留克特拉戰役上使用半月形方陣，\n擊敗了斯巴達，從此宣告了斯巴達政權的結束
+Dialogue: 0,0:18:15.90,0:18:19.41,Drifters Normal,NTP,0,0,0,,抄襲啊 你抄襲高吉達斯的點子啊
+Dialogue: 0,0:18:19.41,0:18:22.29,Drifters Normal,NTP,0,0,0,,這老頭到底是誰啊 不是個癡呆老頭啊
+Dialogue: 0,0:18:22.29,0:18:26.07,Drifters Normal,NTP,0,0,0,,不知道 十月機關稱他叫漢尼拔什麼的
+Dialogue: 0,0:18:26.07,0:18:27.76,Drifters Normal,NTP,0,0,0,,漢尼…
+Dialogue: 0,0:18:27.76,0:18:31.65,Drifters Normal,NTP,0,0,0,,肚子餓了 把羅馬燒了吧
+Dialogue: 0,0:18:32.68,0:18:35.54,Drifters Normal,NTP,0,0,0,,不知者無畏
+Dialogue: 0,0:18:39.82,0:18:42.46,Drifters Normal,NTP,0,0,0,,集合
+Dialogue: 0,0:18:47.67,0:18:51.00,Drifters Normal,NTP,0,0,0,,什麼嘛 都是些精英啊
+Dialogue: 0,0:18:51.00,0:18:53.48,Drifters Normal,NTP,0,0,0,,拿起火槍
+Dialogue: 0,0:18:54.32,0:18:59.13,Drifters Normal,NTP,0,0,0,,雖然在這一周裡拿木棍進行了模擬訓練
+Dialogue: 0,0:18:59.13,0:19:01.43,Drifters Normal,NTP,0,0,0,,但實際又是如何呢
+Dialogue: 0,0:19:05.88,0:19:07.59,Drifters Normal,NTP,0,0,0,,不錯
+Dialogue: 0,0:19:07.59,0:19:11.38,Drifters Normal,NTP,0,0,0,,看起來倒是不錯 但是不射出來還是不知道
+Dialogue: 0,0:19:11.38,0:19:14.25,Drifters Normal,NTP,0,0,0,,火槍 到底是怎樣的呢
+Dialogue: 0,0:19:14.43,0:19:16.46,Drifters Normal,NTP,0,0,0,,騙人吧
+Dialogue: 0,0:19:16.53,0:19:20.97,Drifters Normal,NTP,0,0,0,,他們製造出了火槍軍隊來了
+Dialogue: 0,0:19:20.97,0:19:25.91,Drifters Normal,NTP,0,0,0,,這就是火槍 真可怕啊
+Dialogue: 0,0:19:25.91,0:19:28.48,Drifters Normal,NTP,0,0,0,,連夜打造出的一百把火槍
+Dialogue: 0,0:19:28.48,0:19:31.59,Drifters Normal,NTP,0,0,0,,這已經是我們的極限了
+Dialogue: 0,0:19:31.59,0:19:33.63,Drifters Normal,NTP,0,0,0,,但品質絕對有保證
+Dialogue: 0,0:19:33.63,0:19:37.31,Drifters Normal,NTP,0,0,0,,而且我們也稍微做了個玩玩
+Dialogue: 0,0:19:40.18,0:19:42.00,Drifters Normal,NTP,0,0,0,,怎樣
+Dialogue: 0,0:19:47.50,0:19:50.10,Drifters Normal,NTP,0,0,0,,在笑 忽然就笑起來了
+Dialogue: 0,0:19:50.10,0:19:52.70,Drifters Normal,NTP,0,0,0,,那些野蠻人真可怕啊
+Dialogue: 0,0:19:53.56,0:19:55.95,Drifters Normal,NTP,0,0,0,,火槍隊就由信來統領
+Dialogue: 0,0:19:55.95,0:19:57.75,Drifters Normal,NTP,0,0,0,,他熟悉槍隊
+Dialogue: 0,0:19:58.25,0:20:01.32,Drifters Normal,NTP,0,0,0,,矮人族就由我來帶領
+Dialogue: 0,0:20:01.32,0:20:02.62,Drifters Normal,NTP,0,0,0,,充當步兵們
+Dialogue: 0,0:20:02.92,0:20:05.80,Drifters Normal,NTP,0,0,0,,精靈族就由與一來指揮
+Dialogue: 0,0:20:05.80,0:20:07.62,Drifters Normal,NTP,0,0,0,,充當散兵弓箭手
+Dialogue: 0,0:20:07.62,0:20:11.45,Drifters Normal,NTP,0,0,0,,把敵人吸引過來 圍剿他們
+Dialogue: 0,0:20:11.45,0:20:14.08,Drifters Normal,NTP,0,0,0,,一兵一卒都不能放過
+Dialogue: 0,0:20:14.42,0:20:16.52,Drifters Normal,,0,0,0,,眼睛都閃閃發光了
+Dialogue: 0,0:20:16.90,0:20:19.04,Drifters Normal,,0,0,0,,真是不得了的武士大將
+Dialogue: 0,0:20:19.17,0:20:20.43,Drifters Normal,,0,0,0,,真是戰爭狂人啊
+Dialogue: 0,0:20:20.75,0:20:23.93,Drifters Normal,NTP,0,0,0,,不需要趕盡殺絕吧
+Dialogue: 0,0:20:23.93,0:20:26.42,Drifters Normal,NTP,0,0,0,,他們是來搶奪奧爾特的
+Dialogue: 0,0:20:26.42,0:20:29.29,Drifters Normal,NTP,0,0,0,,不是應該會知難而退麼
+Dialogue: 0,0:20:29.29,0:20:30.81,Drifters Normal,NTP,0,0,0,,圍剿他們
+Dialogue: 0,0:20:30.81,0:20:34.07,Drifters Normal,NTP,0,0,0,,逃兵什麼的 不會讓他們成功的
+Dialogue: 0,0:20:34.27,0:20:38.59,Drifters Normal,NTP,0,0,0,,你貌似懂得很多東西 卻不太懂戰爭嘛
+Dialogue: 0,0:20:38.59,0:20:40.86,Drifters Normal,NTP,0,0,0,,你 你說什麼
+Dialogue: 0,0:20:40.86,0:20:44.53,Drifters Normal,NTP,0,0,0,,如果是我的話 看見攻佔不下來的時候
+Dialogue: 0,0:20:44.53,0:20:46.63,Drifters Normal,NTP,0,0,0,,我的目的就會因此而改變
+Dialogue: 0,0:20:46.63,0:20:49.60,Drifters Normal,NTP,0,0,0,,從佔領轉變為搗亂
+Dialogue: 0,0:20:49.60,0:20:53.17,Drifters Normal,NTP,0,0,0,,屠殺平民 搶奪平民 侵犯平民
+Dialogue: 0,0:20:53.17,0:20:55.38,Drifters Normal,NTP,0,0,0,,搶奪城旁 點燃城下
+Dialogue: 0,0:20:55.38,0:20:58.64,Drifters Normal,NTP,0,0,0,,在回去的路上沿路盡數搶奪
+Dialogue: 0,0:20:58.64,0:21:00.62,Drifters Normal,NTP,0,0,0,,變成了一件慘無人道的事情
+Dialogue: 0,0:21:00.62,0:21:04.29,Drifters Normal,NTP,0,0,0,,如果無法操縱貴族把國家傀儡化的話
+Dialogue: 0,0:21:04.29,0:21:06.34,Drifters Normal,NTP,0,0,0,,他們就一定會這樣做
+Dialogue: 0,0:21:06.58,0:21:10.74,Drifters Normal,NTP,0,0,0,,本來那個叫黑王的人的目的就是毀滅世界對吧
+Dialogue: 0,0:21:10.74,0:21:13.74,Drifters Normal,NTP,0,0,0,,沒法統治的話就破罐子破摔好了
+Dialogue: 0,0:21:13.74,0:21:16.91,Drifters Normal,NTP,0,0,0,,嘛 現在的最好的劇本是
+Dialogue: 0,0:21:16.91,0:21:22.12,Drifters Normal,NTP,0,0,0,,讓他們稍微搗亂一下 然後我們再出手相助
+Dialogue: 0,0:21:22.12,0:21:24.12,Drifters Normal,NTP,0,0,0,,把所有敵人都殺光
+Dialogue: 0,0:21:24.12,0:21:27.18,Drifters Normal,NTP,0,0,0,,做好覺悟 這就是戰爭
+Dialogue: 0,0:21:27.18,0:21:28.23,Drifters Normal,NTP,0,0,0,,上吧
+Dialogue: 0,0:21:28.23,0:21:30.28,Drifters Normal,NTP,0,0,0,,回到你們的崗位上去
+Dialogue: 0,0:21:30.28,0:21:32.28,Drifters Normal,,0,0,0,,
+Dialogue: 0,0:21:32.41,0:21:35.10,Drifters Normal,,0,0,0,,與一 我們真的沒問題嗎
+Dialogue: 0,0:21:35.32,0:21:37.20,Drifters Normal,,0,0,0,,這可是在奧爾特的正中心
+Dialogue: 0,0:21:37.60,0:21:39.68,Drifters Normal,,0,0,0,,要和黑王的怪物們戰鬥啊
+Dialogue: 0,0:21:40.26,0:21:41.54,Drifters Normal,,0,0,0,,沒問題！
+Dialogue: 0,0:21:41.77,0:21:44.74,Drifters Normal,,0,0,0,,只要學以致用的話 源氏就是無敵的
+Dialogue: 0,0:21:44.79,0:21:47.52,Drifters Normal,,0,0,0,,雖然不知道源氏是誰源氏萬歲
+Dialogue: 0,0:21:47.62,0:21:50.55,Drifters Normal,,0,0,0,,在長篠大放異彩的我…
+Dialogue: 0,0:21:50.99,0:21:53.03,Drifters Normal,,0,0,0,,各位年輕的火槍兵
+Dialogue: 0,0:21:53.61,0:21:55.48,Drifters Normal,,0,0,0,,我的人生到底是…
+Dialogue: 0,0:21:55.73,0:21:57.94,Drifters Normal,,0,0,0,,你是叫 信信先生對吧
+Dialogue: 0,0:21:56.95,0:22:00.42,Drifters Normal,,0,0,0,,{\an8}啊拉是個好男人呢 公主大人真棒
+Dialogue: 0,0:21:59.11,0:22:01.34,Drifters Normal,,0,0,0,,多多指教了呢
+Dialogue: 0,0:22:01.50,0:22:03.65,Drifters Normal,,0,0,0,,都是光秀的錯
+Dialogue: 0,0:22:17.41,0:22:20.03,Drifters Normal,NTP,0,0,0,,奧爾米乳 聽到了嗎
+Dialogue: 0,0:22:20.03,0:22:22.66,Drifters Normal,NTP,0,0,0,,把水晶球的對話都連接起來吧
+Dialogue: 0,0:22:22.66,0:22:26.72,Drifters Normal,NTP,0,0,0,,我這裡幫忙中轉對話 我還是第一次做這樣的事呢
+Dialogue: 0,0:22:27.12,0:22:28.80,Drifters Normal,NTP,0,0,0,,我會加油的
+Dialogue: 0,0:22:39.78,0:22:42.35,Drifters Normal,NTP,0,0,0,,來了 來了
+Dialogue: 0,0:22:42.35,0:22:47.29,Drifters Normal,NTP,0,0,0,,出現了 出現了 要出現了
+Dialogue: 0,0:22:47.29,0:22:52.48,Drifters Normal,NTP,0,0,0,,來吧 來吧 來吧 來吧
+Dialogue: 0,0:22:52.48,0:22:54.69,Drifters Normal,NTP,0,0,0,,火槍隊 上彈
+Dialogue: 0,0:22:55.37,0:22:57.18,Drifters Normal,NTP,0,0,0,,瞄準
+Dialogue: 0,0:22:57.54,0:23:00.15,Drifters Normal,NTP,0,0,0,,這是這個世界上的第一批火槍哦
+Dialogue: 0,0:23:00.15,0:23:02.42,Drifters Normal,NTP,0,0,0,,就最先到你們的手上了
+Dialogue: 0,0:23:02.42,0:23:05.08,Drifters Normal,NTP,0,0,0,,你們都站在最前線
+Dialogue: 0,0:23:05.11,0:23:09.52,Drifters Normal,NTP,0,0,0,,而你們的背後將會有數以億計的槍出現
+Dialogue: 0,0:23:09.52,0:23:13.66,Drifters Normal,NTP,0,0,0,,現在你們正站在歷史的分界線之上
+Dialogue: 0,0:23:15.11,0:23:17.77,Drifters Normal,NTP,0,0,0,,還沒行 還沒
+Dialogue: 0,0:23:18.25,0:23:22.30,Drifters Normal,NTP,0,0,0,,還沒行 還沒
+Dialogue: 0,0:23:22.95,0:23:26.58,Drifters Normal,NTP,0,0,0,,還沒 還沒 還沒
+Dialogue: 0,0:23:27.63,0:23:29.34,Drifters Normal,NTP,0,0,0,,還沒行
+Dialogue: 0,0:23:30.64,0:23:33.52,Drifters Normal,NTP,0,0,0,,開火
+Dialogue: 0,0:23:48.42,0:23:51.64,Drifters Normal,NTP,0,0,0,,火炮的衝擊力 優勢是
+Dialogue: 0,0:23:51.64,0:23:56.46,Drifters Normal,NTP,0,0,0,,「第一次見到硝煙」而不足之處是「練度不足」
+Dialogue: 0,0:23:56.46,0:23:58.74,Drifters Normal,NTP,0,0,0,,那麼威力如何呢
+Dialogue: 0,0:24:02.22,0:24:06.56,Drifters Normal,NTP,0,0,0,,巨大無比 依然是巨大無比
+Dialogue: 0,0:24:06.81,0:24:10.20,Drifters Normal,NTP,0,0,0,,奧爾米乳 給與一信號
+Dialogue: 0,0:24:10.36,0:24:12.48,Drifters Normal,NTP,0,0,0,,與一
+Dialogue: 0,0:24:13.91,0:24:19.74,Drifters Normal,NTP,0,0,0,,真厲害啊 那是什麼
+Dialogue: 0,0:24:19.74,0:24:21.52,Drifters Normal,NTP,0,0,0,,我們也不能乾等著
+Dialogue: 0,0:24:21.52,0:24:24.64,Drifters Normal,NTP,0,0,0,,目標是敵方的中段 不停地射吧
+Dialogue: 0,0:24:32.83,0:24:34.96,Drifters Normal,NTP,0,0,0,,絕妙的時機
+Dialogue: 0,0:24:34.96,0:24:37.01,Drifters Normal,NTP,0,0,0,,這小圓球真厲害啊
+Dialogue: 0,0:24:37.01,0:24:38.69,Drifters Normal,NTP,0,0,0,,真好啊
+Dialogue: 0,0:24:38.69,0:24:42.44,Drifters Normal,NTP,0,0,0,,好想帶著這個從桶狹間之戰開始再來一次啊
+Dialogue: 0,0:24:49.46,0:24:52.12,Drifters Normal,NTP,0,0,0,,太慢了 還是太慢了
+Dialogue: 0,0:24:52.12,0:24:54.90,Drifters Normal,NTP,0,0,0,,還差一槍 還差一槍就能決勝負
+Dialogue: 0,0:24:54.90,0:24:57.40,Drifters Normal,NTP,0,0,0,,但是不能急
+Dialogue: 0,0:24:57.40,0:25:00.61,Drifters Normal,NTP,0,0,0,,別急 確確實實加入標準的量
+Dialogue: 0,0:25:00.61,0:25:02.69,Drifters Normal,NTP,0,0,0,,不用著急的
+Dialogue: 0,0:25:04.91,0:25:06.57,Drifters Normal,NTP,0,0,0,,第二發
+Dialogue: 0,0:25:08.66,0:25:10.66,Drifters Normal,NTP,0,0,0,,開火
+Dialogue: 0,0:25:19.80,0:25:24.41,Drifters Normal,NTP,0,0,0,,槍的本質不是貫穿力也不是射程
+Dialogue: 0,0:25:24.41,0:25:27.45,Drifters Normal,NTP,0,0,0,,火槍的本質是恐懼
+Dialogue: 0,0:25:27.45,0:25:30.64,Drifters Normal,NTP,0,0,0,,當那個聲音和硝煙出現時就一定會有人死亡
+Dialogue: 0,0:25:30.64,0:25:32.49,Drifters Normal,NTP,0,0,0,,第二發的時候就能明白
+Dialogue: 0,0:25:32.49,0:25:35.73,Drifters Normal,NTP,0,0,0,,然後一旦瞭解這個恐怖之處後
+Dialogue: 0,0:25:35.73,0:25:38.77,Drifters Normal,NTP,0,0,0,,就再也無法向前踏出半步了
+Dialogue: 0,0:25:38.77,0:25:43.54,Drifters Normal,NTP,0,0,0,,然後只要停下了腳步
+Dialogue: 0,0:25:43.80,0:25:47.05,Drifters Normal,NTP,0,0,0,,上啊
+Dialogue: 0,0:25:50.50,0:25:54.28,Drifters Normal,NTP,0,0,0,,武士就會衝進來 砍倒一切
+Dialogue: 0,0:25:54.71,0:25:58.71,Drifters Normal,NTP,0,0,0,,由織田信長所率領的人類火槍隊
+Dialogue: 0,0:25:59.01,0:26:03.19,Drifters Normal,NTP,0,0,0,,由那須與一率領的精靈族弓箭手
+Dialogue: 0,0:26:07.17,0:26:13.77,Drifters Normal,NTP,0,0,0,,然後是由鬼島津所率領的矮人族突擊部隊
+Dialogue: 0,0:26:13.94,0:26:16.88,Drifters Normal,NTP,0,0,0,,可以說是最完美的答案
+Dialogue: 0,0:26:33.41,0:26:40.71,Drifters Normal,NTP,0,0,0,,島津 島津 島津
+Dialogue: 0,0:26:33.41,0:26:40.71,Difters PS,NTP,0,0,0,,{\an8}{\fs55}註：幕末時期，薩摩藩等組成了倒幕聯盟，而土方歲三所在的新選組是支持幕府的一方
+Dialogue: 0,0:26:46.13,0:26:51.19,difters-ed1,NTP,0,0,0,,{\blur7.5}blaze away 暁の空へ
+Dialogue: 0,0:26:46.13,0:26:51.19,difters-ed2,NTP,0,0,0,,{\blur7.5}火焰盤升 向著拂曉之空
+Dialogue: 0,0:26:51.48,0:26:55.46,difters-ed1,NTP,0,0,0,,{\blur7.5}bloodthirsty noble warriors
+Dialogue: 0,0:26:51.48,0:26:55.46,difters-ed2,NTP,0,0,0,,{\blur7.5}嗜血成性的高尚戰士
+Dialogue: 0,0:26:55.61,0:27:00.43,difters-ed1,NTP,0,0,0,,{\blur7.5}赤く滾る心に刃と
+Dialogue: 0,0:26:55.61,0:27:00.43,difters-ed2,NTP,0,0,0,,{\blur7.5}灼熱翻騰的心中之刃
+Dialogue: 0,0:27:00.57,0:27:07.55,difters-ed1,NTP,0,0,0,,{\blur7.5}無に成る大儀を掲げよう
+Dialogue: 0,0:27:00.57,0:27:07.55,difters-ed2,NTP,0,0,0,,{\blur7.5}高舉心無旁騖的大義之旗
+Dialogue: 0,0:27:10.64,0:27:19.01,difters-ed1,NTP,0,0,0,,{\blur7.5}陽炎は揺れるシンフォニー
+Dialogue: 0,0:27:10.64,0:27:19.01,difters-ed2,NTP,0,0,0,,{\blur7.5}熱浪就如晃蕩的交響樂
+Dialogue: 0,0:27:20.22,0:27:29.01,difters-ed1,NTP,0,0,0,,{\blur7.5}その子は響く三日月を
+Dialogue: 0,0:27:20.22,0:27:29.01,difters-ed2,NTP,0,0,0,,{\blur7.5}那孩兒歌唱著迴盪的新月
+Dialogue: 0,0:27:30.23,0:27:32.35,difters-ed1,NTP,0,0,0,,{\blur7.5}こんなにくべる炎
+Dialogue: 0,0:27:30.23,0:27:32.35,difters-ed2,NTP,0,0,0,,{\blur7.5}如此久久不息的火焰
+Dialogue: 0,0:27:32.51,0:27:34.84,difters-ed1,NTP,0,0,0,,{\blur7.5}明けぬ夜は無いと
+Dialogue: 0,0:27:32.51,0:27:34.84,difters-ed2,NTP,0,0,0,,{\blur7.5}不存在永不破曉的黑夜
+Dialogue: 0,0:27:35.01,0:27:38.87,difters-ed1,NTP,0,0,0,,{\blur7.5}生を叫ぶ衝動 輝く
+Dialogue: 0,0:27:35.01,0:27:38.87,difters-ed2,NTP,0,0,0,,{\blur7.5}呼喊生存的衝動 閃耀著
+Dialogue: 0,0:27:38.94,0:27:44.04,difters-ed1,NTP,0,0,0,,{\blur7.5}blaze away 暁の空へ
+Dialogue: 0,0:27:38.94,0:27:44.04,difters-ed2,NTP,0,0,0,,{\blur7.5}火焰盤升 向著拂曉之空
+Dialogue: 0,0:27:44.15,0:27:48.35,difters-ed1,NTP,0,0,0,,{\blur7.5}bloodthirsty noble warriors
+Dialogue: 0,0:27:44.15,0:27:48.35,difters-ed2,NTP,0,0,0,,{\blur7.5}嗜血成性的高尚戰士
+Dialogue: 0,0:27:48.42,0:27:53.10,difters-ed1,NTP,0,0,0,,{\blur7.5}赤く滲む痛み引き連れて
+Dialogue: 0,0:27:48.42,0:27:53.10,difters-ed2,NTP,0,0,0,,{\blur7.5}與被染紅的痛楚一同
+Dialogue: 0,0:27:53.18,0:28:00.17,difters-ed1,NTP,0,0,0,,{\blur7.5}果てない今日を踏んだ大地へ
+Dialogue: 0,0:27:53.18,0:28:00.17,difters-ed2,NTP,0,0,0,,{\blur7.5}衝破無盡的今日 邁向新大陸
+Dialogue: 0,0:28:00.31,0:28:07.41,difters-ed1,NTP,0,0,0,,{\blur7.5}栄光を歌う peace at the end
+Dialogue: 0,0:28:00.31,0:28:07.41,difters-ed2,NTP,0,0,0,,{\blur7.5}歌頌榮光 終歸和平
+Dialogue: 0,0:28:07.56,0:28:11.52,difters-ed1,NTP,0,0,0,,{\blur7.5}更なる大儀を掲げよう
+Dialogue: 0,0:28:07.56,0:28:11.52,difters-ed2,NTP,0,0,0,,{\blur7.5}高舉更為雄壯的大義之旗
+

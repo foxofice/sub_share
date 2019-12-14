@@ -1,0 +1,83 @@
+# VobSub index file, v7 (do not modify this line!)
+# 
+# To repair desyncronization, you can insert gaps this way:
+# (it usually happens after vob id changes)
+# 
+#	 delay: [sign]hh:mm:ss:ms
+# 
+# Where:
+#	 [sign]: +, - (optional)
+#	 hh: hours (0 <= hh)
+#	 mm/ss: minutes/seconds (0 <= mm/ss <= 59)
+#	 ms: milliseconds (0 <= ms <= 999)
+# 
+#	 Note: You can't position a sub before the previous with a negative value.
+# 
+# You can also modify timestamps or delete a few subs you don't like.
+# Just make sure they stay in increasing order.
+
+
+# Settings
+
+# Original frame size
+size: 640x480
+
+# Origin, relative to the upper-left corner, can be overloaded by aligment
+org: 0, 0
+
+# Image scaling (hor,ver), origin is at the upper-left corner or at the alignment coord (x, y)
+scale: 100%, 100%
+
+# Alpha blending
+alpha: 100%
+
+# Smoothing for very blocky images (use OLD for no filtering)
+smooth: ON
+
+# In millisecs
+fadein/out: 0, 0
+
+# Force subtitle placement relative to (org.x, org.y)
+align: OFF at LEFT TOP
+
+# For correcting non-progressive desync. (in millisecs or hh:mm:ss:ms)
+# Note: Not effective in DirectVobSub, use "delay: ... " instead.
+time offset: 0
+
+# ON: displays only forced subtitles, OFF: shows everything
+forced subs: OFF
+
+# The original palette of the DVD
+palette: c8ffd6, ffffff, 000000, 000000, 000000, 000000, 000000, 000000, 000000, 000000, 000000, 000000, 000000, 000000, 000000, 000000
+
+# Custom colors (transp idxs and the four colors)
+custom colors: OFF, tridx: 1110, colors: 808080, ffffff, 000000, 000000
+
+# Language index in use
+langidx: 0
+
+# Chinese
+id: zh, index: 0
+# Decomment next line to activate alternative name in DirectVobSub / Windows Media Player 6.x
+# alt: Chinese
+timestamp: 00:00:06:360, filepos: 000000000
+timestamp: 00:00:12:768, filepos: 000001000
+timestamp: 00:00:19:344, filepos: 000002000
+timestamp: 00:00:22:435, filepos: 000003800
+timestamp: 00:00:25:751, filepos: 000004800
+timestamp: 00:00:29:018, filepos: 000005800
+timestamp: 00:00:32:285, filepos: 000006000
+timestamp: 00:00:38:785, filepos: 000007000
+timestamp: 00:00:45:302, filepos: 000008000
+timestamp: 00:00:51:743, filepos: 000009000
+timestamp: 00:01:07:360, filepos: 00000a000
+timestamp: 00:01:13:768, filepos: 00000b000
+timestamp: 00:01:20:344, filepos: 00000c000
+timestamp: 00:01:23:435, filepos: 00000d800
+timestamp: 00:01:26:751, filepos: 00000e800
+timestamp: 00:01:30:018, filepos: 00000f800
+timestamp: 00:01:33:285, filepos: 000010000
+timestamp: 00:01:39:785, filepos: 000011000
+timestamp: 00:01:46:302, filepos: 000012000
+timestamp: 00:01:52:743, filepos: 000013000
+

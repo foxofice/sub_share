@@ -1,0 +1,572 @@
+﻿[Script Info]
+Title: HorribleSubs
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 848
+PlayResY: 480
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,0,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Signs,Open Sans Semibold,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,27,24,1
+Style: Italics Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,1,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Main Dialogue Top,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,0,0,0,100,100,0,0,1,1.7,0,8,0,0,28,1
+Style: Flashback Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00400000,&H00400000,0,0,0,0,100,100,0,0,1,2,1,2,13,13,24,1
+Style: Flashback Italics Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,1,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Episode Title Collaboration,Open Sans Semibold,20,&H00FFFFFF,&H000000FF,&H00E7E6F8,&H007A7A7A,1,0,0,0,100,100,0,0,1,0,2,1,40,13,93,1
+Style: Episode Title,Open Sans Semibold,20,&H0078E2AD,&H000000FF,&H00F6F6F8,&H007A7A7A,1,0,0,0,100,100,0,0,1,2,2,1,40,13,33,1
+Style: Preview,Open Sans Semibold,45,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,13,13,80,1
+Style: Preview Sonota,Open Sans Semibold,30,&H00000306,&H000000FF,&H005CC3E5,&H00000000,1,0,0,0,100,100,0,0,1,3,2,6,13,67,13,1
+Style: Next Episode Title,Open Sans Semibold,36,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,4,0,8,13,13,20,1
+Style: Black Signs,Open Sans Semibold,30,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,27,24,1
+Style: Grand Prix Sign,Open Sans Semibold,30,&H00550062,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,3,0,8,27,27,24,1
+Style: A Block Sign,Open Sans Semibold,27,&H00591E88,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,140,27,213,1
+Style: B Block Sign,Open Sans Semibold,27,&H00591E88,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,9,27,140,213,1
+Style: Victory Sign,Open Sans Semibold,30,&H00000000,&H000000FF,&H00B7CDDB,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,320,53,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.84,0:00:11.99,Main Dialogue,Hiina,0,0,0,,I wonder if God is telling me \Nto hurry up and graduate.
+Dialogue: 0,0:00:12.67,0:00:15.45,Main Dialogue,Hiina,0,0,0,,It feels like something unexpected \Nis going to happen today.
+Dialogue: 0,0:00:16.57,0:00:19.13,Grand Prix Sign,Sign,0,0,0,,First {\c&H5100a5&}Totally {\c&H550062&}Tesaguri Grand Prix
+Dialogue: 0,0:00:17.23,0:00:25.96,Episode Title Collaboration,Sign,0,0,0,,{\fad(500,500)}Collaboration #12
+Dialogue: 0,0:00:17.23,0:00:25.96,Episode Title,Sign,0,0,0,,{\fad(500,500)\c&H9030F3&}Let's {\c&Hd6acfe&}Play {\c&H008cd5&}with {\c&H78e2ad&}a \N{\c&H896b49&}Totally {\c&H9030f3&}Tesaguri {\c&Hd6acfe&}Grand {\c&H78e2ad&}Prix
+Dialogue: 0,0:00:19.13,0:00:28.67,Main Dialogue Top,Mio,0,0,0,,The first Totally Tesaguri \NGrand Prix will now begin!
+Dialogue: 0,0:00:30.50,0:00:34.21,Main Dialogue,Mio,0,0,0,,I am Watanabe Mio, \Nthe chairwoman of this event.
+Dialogue: 0,0:00:34.21,0:00:35.59,Main Dialogue,Mio,0,0,0,,It's a pleasure.
+Dialogue: 0,0:00:36.55,0:00:37.46,Main Dialogue,Mio,0,0,0,,And!
+Dialogue: 0,0:00:38.34,0:00:41.36,Main Dialogue,Fuefuki,0,0,0,,I'm M-Mio-senpai's assistant, F-Fuefuki Taro.
+Dialogue: 0,0:00:41.36,0:00:43.03,Main Dialogue,Fuefuki,0,0,0,,Pleasure to be here.
+Dialogue: 0,0:00:43.68,0:00:46.64,Main Dialogue,Mio,0,0,0,,So would you explain the rules, Fuefuki?
+Dialogue: 0,0:00:46.64,0:00:50.85,Main Dialogue,Fuefuki,0,0,0,,Yes. I-In this event, the combined \Nten members of the Tesaguri Club
+Dialogue: 0,0:00:50.85,0:00:54.86,Main Dialogue,Fuefuki,0,0,0,,and {\i1}Puru-Purun Charm{\i0} will engage in \Nindividual comic dialog face-offs.
+Dialogue: 0,0:00:54.86,0:00:57.83,Main Dialogue,Fuefuki,0,0,0,,First, they'll be divided into A and \NB Blocks for an elimination round,
+Dialogue: 0,0:00:55.50,0:00:55.99,A Block Sign,Sign,0,0,0,,A Block
+Dialogue: 0,0:00:55.99,0:01:05.29,A Block Sign,Sign,0,0,0,,A Block                                                                  B Block
+Dialogue: 0,0:00:57.83,0:01:01.06,Main Dialogue,Fuefuki,0,0,0,,with one person from each block \Nadvancing to the final.
+Dialogue: 0,0:01:01.06,0:01:05.14,Main Dialogue,Fuefuki,0,0,0,,In addition, Mio-senpai will \Nchoose one loser to advance,
+Dialogue: 0,0:01:05.14,0:01:07.29,Main Dialogue,Fuefuki,0,0,0,,so three people will compete in the final.
+Dialogue: 0,0:01:05.41,0:01:07.29,Victory Sign,Sign,0,0,0,,Winner
+Dialogue: 0,0:01:07.29,0:01:11.49,Main Dialogue,Mio,0,0,0,,A lovely reward is waiting for the winner.
+Dialogue: 0,0:01:11.49,0:01:14.32,Main Dialogue,Fuefuki,0,0,0,,The winner will receive something \Nto show she was the main character
+Dialogue: 0,0:01:14.32,0:01:16.80,Main Dialogue,Fuefuki,0,0,0,,of the {\i1}Tesagure! Bukatsumono{\i0} spin-off.
+Dialogue: 0,0:01:16.80,0:01:20.47,Main Dialogue,Fuefuki,0,0,0,,Plus, that person will be paid \Nmuch more for having a main role.
+Dialogue: 0,0:01:20.47,0:01:23.13,Main Dialogue,Mio,0,0,0,,I'd better not see any halfhearted face-offs.
+Dialogue: 0,0:01:23.13,0:01:27.35,Main Dialogue,Mio,0,0,0,,Now, please introduce yourselves and state \Nhow you feel going into this contest.
+Dialogue: 0,0:01:27.35,0:01:29.05,Main Dialogue,Rin,0,0,0,,Okay. I'm Rin.
+Dialogue: 0,0:01:29.65,0:01:31.67,Main Dialogue,Rin,0,0,0,,My jokes usually flop, but I'll do my best.
+Dialogue: 0,0:01:33.17,0:01:33.82,Main Dialogue,,0,0,0,,Huh?
+Dialogue: 0,0:01:33.82,0:01:34.84,Main Dialogue,Mio,0,0,0,,Applause.
+Dialogue: 0,0:01:35.80,0:01:37.23,Main Dialogue,Rin,0,0,0,,Did I flop already?
+Dialogue: 0,0:01:38.22,0:01:41.38,Main Dialogue,Fuefuki,0,0,0,,Please address the audience \Nas you introduce yourself.
+Dialogue: 0,0:01:41.38,0:01:42.25,Main Dialogue,Yua,0,0,0,,Okay!
+Dialogue: 0,0:01:42.25,0:01:44.70,Main Dialogue,Yua,0,0,0,,I'm Suzuki Yua, president of the Tesaguri Club!
+Dialogue: 0,0:01:44.70,0:01:49.34,Main Dialogue,Yua,0,0,0,,I thought so much about comic dialog \Nresponses last night, I didn't get any sleep.
+Dialogue: 0,0:01:49.34,0:01:50.38,Main Dialogue,Yui,0,0,0,,Why are you lying?
+Dialogue: 0,0:01:50.38,0:01:52.54,Main Dialogue,Yua,0,0,0,,It's true! It's true!
+Dialogue: 0,0:01:52.54,0:01:55.95,Main Dialogue,Rin,0,0,0,,You didn't sleep last night because \Nyou were playing video games!
+Dialogue: 0,0:01:55.10,0:01:56.46,Main Dialogue,Fuefuki,0,0,0,,You were just playing?
+Dialogue: 0,0:01:55.95,0:01:57.11,Main Dialogue,Koharu,0,0,0,,Some happy life you have!
+Dialogue: 0,0:01:57.11,0:01:59.70,Main Dialogue,Yua,0,0,0,,No, I was raising objections.
+Dialogue: 0,0:01:59.70,0:02:00.69,Main Dialogue,Fuefuki,0,0,0,,Same thing.
+Dialogue: 0,0:02:01.72,0:02:07.23,Main Dialogue,Yua,0,0,0,,I'm hyper from lack of sleep today, \Nso I have a feeling everything will be funny.
+Dialogue: 0,0:02:07.23,0:02:09.12,Main Dialogue,Yui,0,0,0,,It'll be funny to{\i1} you{\i0}, you mean.
+Dialogue: 0,0:02:09.80,0:02:11.53,Main Dialogue,Yua,0,0,0,,Thank you!
+Dialogue: 0,0:02:13.45,0:02:14.34,Main Dialogue,Mio,0,0,0,,Next.
+Dialogue: 0,0:02:14.34,0:02:15.03,Main Dialogue,Yui,0,0,0,,Okay.
+Dialogue: 0,0:02:15.68,0:02:17.60,Main Dialogue,Yui,0,0,0,,I'm Enjoji Yui.
+Dialogue: 0,0:02:17.60,0:02:20.49,Main Dialogue,Yui,0,0,0,,I slept a lot last night.
+Dialogue: 0,0:02:20.49,0:02:22.94,Main Dialogue,Yui,0,0,0,,I want money. Please give me your support.
+Dialogue: 0,0:02:22.94,0:02:24.37,Main Dialogue,Koharu,0,0,0,,She's honest...
+Dialogue: 0,0:02:26.01,0:02:26.57,Main Dialogue,Mio,0,0,0,,Next.
+Dialogue: 0,0:02:26.57,0:02:29.58,Main Dialogue,Koharu,0,0,0,,Okay. I'm the club's new \Nmember, Tanaka Koharu.
+Dialogue: 0,0:02:29.58,0:02:34.32,Main Dialogue,Koharu,0,0,0,,It seems like Yua-senpai is \Ngoing to laugh a lot today,
+Dialogue: 0,0:02:34.32,0:02:38.42,Main Dialogue,Koharu,0,0,0,,so whatever the topic, I won't hesitate \Nto say what comes to mind.
+Dialogue: 0,0:02:38.42,0:02:39.72,Main Dialogue,Koharu,0,0,0,,Thank you!
+Dialogue: 0,0:02:39.72,0:02:40.47,Main Dialogue,Yua,0,0,0,,Yo!
+Dialogue: 0,0:02:43.76,0:02:45.14,Main Dialogue,Mio,0,0,0,,Where's milady Tomomi?
+Dialogue: 0,0:02:45.14,0:02:49.48,Main Dialogue,Fuefuki,0,0,0,,We have a message from Tomomi-san.\NPlease listen to this.
+Dialogue: 0,0:02:49.84,0:02:52.03,Main Dialogue,Tomomi,0,0,0,,Everyone, zdravstvujte.
+Dialogue: 0,0:02:52.03,0:02:53.86,Main Dialogue,Tomomi,0,0,0,,Okonogi Tomomi here.
+Dialogue: 0,0:02:53.86,0:02:57.62,Main Dialogue,Tomomi,0,0,0,,It's the very important \Nfinal episode of the spin-off,
+Dialogue: 0,0:02:57.62,0:03:03.35,Main Dialogue,Tomomi,0,0,0,,but I have to go out to sea.
+Dialogue: 0,0:03:03.35,0:03:05.71,Main Dialogue,Tomomi,0,0,0,,I need to be with the fleet.
+Dialogue: 0,0:03:05.71,0:03:09.62,Main Dialogue,Tomomi,0,0,0,,So it's unfortunate, but I can't be there.
+Dialogue: 0,0:03:09.62,0:03:12.29,Main Dialogue,Tomomi,0,0,0,,My deepest apologies. Izvinite.
+Dialogue: 0,0:03:12.29,0:03:16.38,Main Dialogue,Tomomi,0,0,0,,Even so, I'm aiming for victory.
+Dialogue: 0,0:03:16.38,0:03:18.84,Main Dialogue,Tomomi,0,0,0,,But my gut tells me that
+Dialogue: 0,0:03:18.84,0:03:22.40,Main Dialogue,Tomomi,0,0,0,,the funny Rin-san will say funny things
+Dialogue: 0,0:03:22.40,0:03:26.31,Main Dialogue,Tomomi,0,0,0,,and run away with the victory.
+Dialogue: 0,0:03:26.31,0:03:30.43,Main Dialogue,Tomomi,0,0,0,,Everyone, and Comrade Mio-san, \Nplease give me your support.
+Dialogue: 0,0:03:30.43,0:03:32.37,Main Dialogue,Fuefuki,0,0,0,,And that was the message.
+Dialogue: 0,0:03:32.37,0:03:33.71,Main Dialogue,Yui,0,0,0,,She misled a lot of people.
+Dialogue: 0,0:03:33.71,0:03:35.41,Main Dialogue,Rina,0,0,0,,She did!
+Dialogue: 0,0:03:36.48,0:03:43.02,Main Dialogue,Mio,0,0,0,,And now, the first Totally Tesaguri Grand Prix \Nelimination round begins with the A Block!
+Dialogue: 0,0:03:43.02,0:03:45.82,Main Dialogue,Mio,0,0,0,,This is the topic!
+Dialogue: 0,0:03:45.82,0:03:48.85,Main Dialogue,Fuefuki,0,0,0,,Tosei High School's "seven mysteries" \Nhave survived for many generations.
+Dialogue: 0,0:03:48.85,0:03:54.11,Main Dialogue,Fuefuki,0,0,0,,Please tell us an "eighth mystery" \Nthat just missed the cut.
+Dialogue: 0,0:03:55.49,0:03:57.48,Main Dialogue,Rin,0,0,0,,You're funny, Fuefuki-san.
+Dialogue: 0,0:03:57.48,0:04:00.67,Main Dialogue,Fuefuki,0,0,0,,Th-Thank you. I want to lick \Nyour recorder too, Rin-chan.
+Dialogue: 0,0:04:01.52,0:04:02.53,Main Dialogue,Koharu,0,0,0,,Gross!
+Dialogue: 0,0:04:02.53,0:04:03.97,Main Dialogue,Koharu,0,0,0,,That's disgusting!
+Dialogue: 0,0:04:02.69,0:04:04.40,Main Dialogue,Yui,0,0,0,,Rin-chan is totally flattered.
+Dialogue: 0,0:04:04.93,0:04:07.89,Main Dialogue,Mio,0,0,0,,Okay, everyone, moving right along...
+Dialogue: 0,0:04:07.89,0:04:08.73,Main Dialogue,Yui,0,0,0,,Me!
+Dialogue: 0,0:04:09.12,0:04:10.18,Main Dialogue,Mio,0,0,0,,Okay, Yui.
+Dialogue: 0,0:04:10.18,0:04:16.06,Main Dialogue,Mio,0,0,0,,Please tell us an "eighth mystery" \Nof the school that just missed the cut.
+Dialogue: 0,0:04:16.06,0:04:19.51,Main Dialogue,Yui,0,0,0,,Only the boys' gym uniforms have bloomers.
+Dialogue: 0,0:04:21.15,0:04:25.28,Main Dialogue,Yui,0,0,0,,The girls wear shorts, but for some reason,\Nthe boys wear bloomers.
+Dialogue: 0,0:04:25.28,0:04:26.59,Main Dialogue,Koharu,0,0,0,,I want to see that.
+Dialogue: 0,0:04:26.59,0:04:29.97,Main Dialogue,Fuefuki,0,0,0,,Although I think various unsightly \Nthings would be sticking out.
+Dialogue: 0,0:04:29.97,0:04:32.05,Main Dialogue,Yui,0,0,0,,Like their recorder would be sticking out.
+Dialogue: 0,0:04:32.05,0:04:33.00,Main Dialogue,Fuefuki,0,0,0,,A r-recorder...
+Dialogue: 0,0:04:33.00,0:04:34.45,Main Dialogue,Girl,0,0,0,,That would stick out?
+Dialogue: 0,0:04:33.83,0:04:35.22,Main Dialogue,Rin,0,0,0,,You can't do that.
+Dialogue: 0,0:04:35.22,0:04:36.10,Main Dialogue,Yui,0,0,0,,But they do.
+Dialogue: 0,0:04:36.10,0:04:37.57,Main Dialogue,Rin,0,0,0,,You like that kind of thing, huh?
+Dialogue: 0,0:04:37.57,0:04:38.35,Main Dialogue,Yui,0,0,0,,Yeah.
+Dialogue: 0,0:04:38.35,0:04:39.50,Main Dialogue,Yua/Rin,0,0,0,,Me!
+Dialogue: 0,0:04:41.22,0:04:42.82,Main Dialogue,Yui,0,0,0,,Are you already having fun?
+Dialogue: 0,0:04:43.45,0:04:44.26,Main Dialogue,Mio,0,0,0,,Okay, Rin!
+Dialogue: 0,0:04:44.26,0:04:44.61,Main Dialogue,Rin,0,0,0,,Yes.
+Dialogue: 0,0:04:44.61,0:04:47.48,Main Dialogue,Mio,0,0,0,,Please tell us an "eighth mystery" that just missed
+Dialogue: 0,0:04:47.48,0:04:50.10,Main Dialogue,Mio,0,0,0,,being one of the "seven mysteries" of the school.
+Dialogue: 0,0:04:50.10,0:04:52.21,Main Dialogue,Rin,0,0,0,,Ta-da! Saruwatari-kun of the Toilet!
+Dialogue: 0,0:04:52.21,0:04:54.02,Main Dialogue,Yui,0,0,0,,Why are you facing it that way?
+Dialogue: 0,0:04:52.58,0:04:54.02,Main Dialogue,Mio,0,0,0,,Saruwatari-kun of the Toilet?
+Dialogue: 0,0:04:54.02,0:04:56.83,Main Dialogue,Rin,0,0,0,,Mio-senpai, you know Saruwatari-kun, right?
+Dialogue: 0,0:04:56.83,0:04:58.19,Main Dialogue,Mio,0,0,0,,Yes, I know him.
+Dialogue: 0,0:04:57.06,0:04:59.49,Main Dialogue,Rin,0,0,0,,The Saruwatari-kun we saw in episode five.
+Dialogue: 0,0:04:59.49,0:05:03.68,Main Dialogue,Rin,0,0,0,,This time, Saruwatari-kun tried \Nto become a ghost of the restroom,
+Dialogue: 0,0:05:03.68,0:05:07.97,Main Dialogue,Rin,0,0,0,,so he went there, but he's not \Nnearly as famous as Hanako-san,
+Dialogue: 0,0:05:07.97,0:05:10.45,Main Dialogue,Rin,0,0,0,,so in the end, he just made "eighth mystery."
+Dialogue: 0,0:05:10.45,0:05:11.57,Main Dialogue,Mio,0,0,0,,The eighth...
+Dialogue: 0,0:05:10.82,0:05:13.42,Main Dialogue,Fuefuki,0,0,0,,The audience might not understand that one.
+Dialogue: 0,0:05:12.74,0:05:14.30,Main Dialogue,Rin,0,0,0,,They won't understand.
+Dialogue: 0,0:05:13.42,0:05:15.96,Main Dialogue,Fuefuki,0,0,0,,Um, it's a callback to an answer \Nfrom a previous filming.
+Dialogue: 0,0:05:15.96,0:05:17.21,Main Dialogue,Rin,0,0,0,,Yes!
+Dialogue: 0,0:05:17.21,0:05:18.04,Main Dialogue,Mio,0,0,0,,That's right.
+Dialogue: 0,0:05:18.04,0:05:20.00,Main Dialogue,Rin,0,0,0,,I thought I'd try to flatter you, Mio-senpai.
+Dialogue: 0,0:05:20.00,0:05:20.88,Main Dialogue,Mio,0,0,0,,Ah, I see.
+Dialogue: 0,0:05:20.88,0:05:24.13,Main Dialogue,Fuefuki,0,0,0,,But unbelievably, Mio-senpai had forgotten him.
+Dialogue: 0,0:05:22.48,0:05:25.05,Main Dialogue,Rin,0,0,0,,You forgot? Isn't that terrible?
+Dialogue: 0,0:05:25.05,0:05:28.18,Main Dialogue,Mio,0,0,0,,Well, Saruwatari is about an \Neighth-ranked man in my mind,
+Dialogue: 0,0:05:28.18,0:05:29.93,Main Dialogue,Mio,0,0,0,,so I didn't remember him too well.
+Dialogue: 0,0:05:29.93,0:05:31.88,Main Dialogue,Yua,0,0,0,,She can really wrap men \Naround her little finger...
+Dialogue: 0,0:05:31.88,0:05:32.70,Main Dialogue,Mio,0,0,0,,Okay, next.
+Dialogue: 0,0:05:34.21,0:05:34.99,Main Dialogue,Mio,0,0,0,,All right, Yua.
+Dialogue: 0,0:05:34.99,0:05:39.69,Main Dialogue,Mio,0,0,0,,Please tell us an "eighth mystery" that \Ndidn't make the "seven mysteries" cut.
+Dialogue: 0,0:05:39.69,0:05:43.23,Main Dialogue,Yua,0,0,0,,I Won't Let You Flush-kun lives in the restroom.
+Dialogue: 0,0:05:44.19,0:05:46.00,Main Dialogue,Mio,0,0,0,,That's gross. Your picture is gross, too.
+Dialogue: 0,0:05:46.00,0:05:47.46,Main Dialogue,Yua,0,0,0,,It stinks the days he's there.
+Dialogue: 0,0:05:47.46,0:05:48.36,Main Dialogue,Rin,0,0,0,,That would stink!
+Dialogue: 0,0:05:48.36,0:05:49.96,Main Dialogue,Yua,0,0,0,,I Won't Let You Flush-kun!
+Dialogue: 0,0:05:49.96,0:05:53.60,Main Dialogue,Mio,0,0,0,,Is this the answer you give due to lack of sleep?
+Dialogue: 0,0:05:54.51,0:05:55.47,Main Dialogue,Koharu,0,0,0,,I've got one.
+Dialogue: 0,0:05:55.47,0:05:56.28,Main Dialogue,Mio,0,0,0,,All right, Koharu.
+Dialogue: 0,0:05:56.28,0:06:00.84,Main Dialogue,Mio,0,0,0,,Please tell us an "eighth mystery" that \Ndidn't make the "seven mysteries" cut.
+Dialogue: 0,0:06:00.84,0:06:05.52,Main Dialogue,Koharu,0,0,0,,There's a tall, thin cute guy inside \Nthe gymnastics climbing pole.
+Dialogue: 0,0:06:05.52,0:06:06.26,Main Dialogue,Mio,0,0,0,,That's skinny!
+Dialogue: 0,0:06:06.26,0:06:07.90,Main Dialogue,Fuefuki,0,0,0,,He'd have to be {\i1}really{\i0} thin.
+Dialogue: 0,0:06:07.38,0:06:08.14,Main Dialogue,Fuefuki,0,0,0,,Wow...
+Dialogue: 0,0:06:07.90,0:06:09.26,Main Dialogue,Koharu,0,0,0,,That's right.
+Dialogue: 0,0:06:08.14,0:06:09.64,Main Dialogue,Mio,0,0,0,,Incredibly skinny!
+Dialogue: 0,0:06:09.64,0:06:13.48,Main Dialogue,Koharu,0,0,0,,Um, he's squished inside the climbing pole,
+Dialogue: 0,0:06:10.35,0:06:11.59,Main Dialogue,Mio,0,0,0,,And he's cute?
+Dialogue: 0,0:06:13.48,0:06:17.94,Main Dialogue,Koharu,0,0,0,,so it's like the girls can cling to a cute guy, \Nmaking it a really popular spot,
+Dialogue: 0,0:06:17.94,0:06:19.80,Main Dialogue,Koharu,0,0,0,,but he's not scary,
+Dialogue: 0,0:06:19.80,0:06:21.86,Main Dialogue,Koharu,0,0,0,,so he didn't make it into the "seven mysteries."
+Dialogue: 0,0:06:21.86,0:06:23.02,Main Dialogue,Mio,0,0,0,,That's plenty scary.
+Dialogue: 0,0:06:23.48,0:06:25.62,Main Dialogue,Mio,0,0,0,,No, he's not scary!
+Dialogue: 0,0:06:23.81,0:06:25.16,Main Dialogue,Mio,0,0,0,,That's really scary.
+Dialogue: 0,0:06:24.42,0:06:26.29,Main Dialogue Top,Furfuki,0,0,0,,He'd be incredibly thin.
+Dialogue: 0,0:06:25.62,0:06:27.20,Main Dialogue,Yui,0,0,0,,No matter how I look at it, that's scary.
+Dialogue: 0,0:06:27.20,0:06:28.36,Main Dialogue,Fuefuki,0,0,0,,The lean sort of macho?
+Dialogue: 0,0:06:28.36,0:06:33.44,Main Dialogue,Koharu,0,0,0,,Yes. He's just a lean sort of macho, \Nso he's not scary at all. He's good-looking.
+Dialogue: 0,0:06:33.44,0:06:34.56,Main Dialogue,Koharu,0,0,0,,He's really great.
+Dialogue: 0,0:06:34.56,0:06:35.91,Main Dialogue,Mio,0,0,0,,That's original.
+Dialogue: 0,0:06:35.91,0:06:36.81,Main Dialogue,Yua,0,0,0,,I've got one!
+Dialogue: 0,0:06:37.33,0:06:38.68,Main Dialogue,Mio,0,0,0,,You're too close...
+Dialogue: 0,0:06:37.90,0:06:38.68,Main Dialogue,Yua,0,0,0,,I've got one!
+Dialogue: 0,0:06:41.03,0:06:47.34,Main Dialogue,Mio,0,0,0,,Yua, please tell us an "eighth mystery" \Nthat didn't make the "seven mysteries" cut.
+Dialogue: 0,0:06:47.34,0:06:53.02,Main Dialogue,Yua,0,0,0,,There's a human inside the anatomical \Nmodel of the human body.
+Dialogue: 0,0:06:54.26,0:06:55.32,Main Dialogue,Rin,0,0,0,,What does that mean?
+Dialogue: 0,0:06:55.32,0:07:01.66,Main Dialogue,Yua,0,0,0,,Inside the anatomical model is a nude \Nperson who's into in that kind of thing...
+Dialogue: 0,0:07:01.66,0:07:02.41,Main Dialogue,Mio,0,0,0,,Inside it?
+Dialogue: 0,0:07:02.41,0:07:06.19,Main Dialogue,Yui,0,0,0,,"Look, this is the collarbone."
+Dialogue: 0,0:07:06.19,0:07:08.16,Main Dialogue,Mio,0,0,0,,So a pervert is inside the anatomical model?
+Dialogue: 0,0:07:07.11,0:07:08.16,Main Dialogue,Yua,0,0,0,,Right.
+Dialogue: 0,0:07:08.16,0:07:09.17,Main Dialogue,Mio,0,0,0,,An anatomical model pervert.
+Dialogue: 0,0:07:09.17,0:07:10.86,Main Dialogue,Mio,0,0,0,,Okay, who has an idea?
+Dialogue: 0,0:07:10.86,0:07:11.68,Main Dialogue,Mio,0,0,0,,Me.
+Dialogue: 0,0:07:12.38,0:07:14.76,Main Dialogue,Yui,0,0,0,,You just made a really irritating face at me.
+Dialogue: 0,0:07:14.76,0:07:17.66,Main Dialogue,Yua,0,0,0,,No, I'm just having a really good time!
+Dialogue: 0,0:07:17.66,0:07:19.26,Main Dialogue,Fuefuki,0,0,0,,She really is hyper.
+Dialogue: 0,0:07:18.68,0:07:19.84,Main Dialogue,Yua,0,0,0,,I'm having a blast.
+Dialogue: 0,0:07:19.26,0:07:20.28,Main Dialogue,Yui,0,0,0,,Because she didn't sleep.
+Dialogue: 0,0:07:20.28,0:07:21.33,Main Dialogue,Mio,0,0,0,,Enjoji Yui, go ahead.
+Dialogue: 0,0:07:21.33,0:07:21.91,Main Dialogue,Yui,0,0,0,,Okay.
+Dialogue: 0,0:07:21.91,0:07:26.30,Main Dialogue,Mio,0,0,0,,Please tell us an "eighth mystery" that \Ndidn't make the "seven mysteries" cut.
+Dialogue: 0,0:07:26.30,0:07:29.05,Main Dialogue,Yui,0,0,0,,Sometimes the principal's face stinks.
+Dialogue: 0,0:07:30.39,0:07:32.97,Main Dialogue,Yui,0,0,0,,There are days when it really reeks.
+Dialogue: 0,0:07:32.97,0:07:35.74,Main Dialogue,Fuefuki,0,0,0,,How can you tell someone's face stinks?
+Dialogue: 0,0:07:35.74,0:07:40.06,Main Dialogue,Yui,0,0,0,,During morning assembly, \Nthe whole front row passes out.
+Dialogue: 0,0:07:41.15,0:07:42.93,Main Dialogue,Fuefuki,0,0,0,,From the odor of the principal's face?
+Dialogue: 0,0:07:42.93,0:07:45.60,Main Dialogue,Koharu,0,0,0,,I wonder what's giving that off.
+Dialogue: 0,0:07:45.60,0:07:49.22,Main Dialogue,Fuefuki,0,0,0,,Why don't we listen to Tomomi-san's answer?
+Dialogue: 0,0:07:47.48,0:07:49.86,Main Dialogue,Mio,0,0,0,,Oh, right. Let's listen.
+Dialogue: 0,0:07:49.22,0:07:49.86,Main Dialogue,Yui,0,0,0,,Right.
+Dialogue: 0,0:07:49.86,0:07:51.52,Main Dialogue,Mio,0,0,0,,Okay, milady Tomomi.
+Dialogue: 0,0:07:51.52,0:07:56.45,Main Dialogue,Mio,0,0,0,,What is the "eighth mystery" that \Ndidn't make the "seven mysteries" cut?
+Dialogue: 0,0:07:57.70,0:08:04.58,Main Dialogue,Tomomi,0,0,0,,At night, the portraits of past \Nprincipals turn into hamsters.
+Dialogue: 0,0:08:05.97,0:08:10.31,Main Dialogue,Tomomi,0,0,0,,Um, between 3:00 and 4:44 AM.
+Dialogue: 0,0:08:10.31,0:08:12.05,Main Dialogue,Tomomi,0,0,0,,During this time only,
+Dialogue: 0,0:08:12.05,0:08:17.58,Main Dialogue,Tomomi,0,0,0,,the portraits up to the 35th principal \Nchange to photos of rodents.
+Dialogue: 0,0:08:17.58,0:08:23.43,Main Dialogue,Tomomi,0,0,0,,See, hamsters have an average \Nlifespan of less than two years,
+Dialogue: 0,0:08:23.43,0:08:29.39,Main Dialogue,Tomomi,0,0,0,,so the regrets of 34 hamsters \Nthat wanted to be loved more
+Dialogue: 0,0:08:29.39,0:08:34.34,Main Dialogue,Tomomi,0,0,0,,have built up to the point where they \Nchange the paintings of principals.
+Dialogue: 0,0:08:34.91,0:08:36.16,Main Dialogue,Tomomi,0,0,0,,Scary, isn't it?
+Dialogue: 0,0:08:36.84,0:08:38.59,Main Dialogue,Mio,0,0,0,,Talk about destructive power...
+Dialogue: 0,0:08:38.59,0:08:40.09,Main Dialogue,Fuefuki,0,0,0,,That's Tomomi-san.
+Dialogue: 0,0:08:40.09,0:08:41.60,Main Dialogue,Koharu,0,0,0,,That's really something, huh?
+Dialogue: 0,0:08:42.16,0:08:43.33,Main Dialogue,Mio,0,0,0,,Koharu, do you have an idea?
+Dialogue: 0,0:08:43.33,0:08:43.88,Main Dialogue,Koharu,0,0,0,,Yes.
+Dialogue: 0,0:08:43.88,0:08:45.03,Main Dialogue,Mio,0,0,0,,Okay, go ahead, Koharu.
+Dialogue: 0,0:08:45.03,0:08:45.59,Main Dialogue,Koharu,0,0,0,,Okay.
+Dialogue: 0,0:08:45.59,0:08:49.39,Main Dialogue,Koharu,0,0,0,,The boys have to wear pasties.
+Dialogue: 0,0:08:49.39,0:08:53.03,Main Dialogue,Koharu,0,0,0,,Like, um, it's a ranking system for cute guys.
+Dialogue: 0,0:08:53.03,0:08:57.43,Main Dialogue,Koharu,0,0,0,,They're color-coded, so when they're \Nchanging in the locker room for PE, it's like,
+Dialogue: 0,0:08:57.43,0:09:02.29,Main Dialogue,Koharu,0,0,0,,"Oh, so you think you're that good-looking, \Nhuh?" So that's how they find out.
+Dialogue: 0,0:09:02.29,0:09:04.98,Main Dialogue,Mio,0,0,0,,Wait, are you drooling? Are you okay?
+Dialogue: 0,0:09:04.98,0:09:06.72,Main Dialogue,Fuefuki,0,0,0,,She's slurping even more than usual.
+Dialogue: 0,0:09:06.33,0:09:08.36,Main Dialogue,Koharu,0,0,0,,She's slurping. You all right?
+Dialogue: 0,0:09:06.72,0:09:08.36,Main Dialogue,Mio,0,0,0,,I'm not. I'm not drooling.
+Dialogue: 0,0:09:08.36,0:09:11.58,Main Dialogue,Koharu,0,0,0,,Anyway, so just like that, their pasties...
+Dialogue: 0,0:09:11.58,0:09:12.94,Main Dialogue,Koharu,0,0,0,,They wear pasties.
+Dialogue: 0,0:09:14.60,0:09:15.52,Main Dialogue,Mio,0,0,0,,Okay, Rin.
+Dialogue: 0,0:09:15.52,0:09:18.99,Main Dialogue,Rin,0,0,0,,Right. Wha... I forgot what I was going to say.
+Dialogue: 0,0:09:18.99,0:09:21.22,Main Dialogue,Rin,0,0,0,,I just drew a picture.
+Dialogue: 0,0:09:21.22,0:09:22.47,Main Dialogue,Fuefuki,0,0,0,,Is that even possible?
+Dialogue: 0,0:09:22.47,0:09:25.38,Main Dialogue Top,Yui,0,0,0,,What... What were you trying \Nto say when you drew that?
+Dialogue: 0,0:09:22.47,0:09:27.96,Main Dialogue,Rin,0,0,0,,I was listening to her going on \Nabout nipples and forgot my idea...
+Dialogue: 0,0:09:28.90,0:09:31.49,Main Dialogue,Mio,0,0,0,,The one who will advance to the finals is...
+Dialogue: 0,0:09:32.34,0:09:33.52,Main Dialogue,Mio,0,0,0,,Koharu!
+Dialogue: 0,0:09:34.14,0:09:36.76,Main Dialogue,Koharu,0,0,0,,M-Ma-Meh... Me?
+Dialogue: 0,0:09:37.22,0:09:40.38,Main Dialogue,Koharu,0,0,0,,Me? Thank you!
+Dialogue: 0,0:09:40.38,0:09:41.67,Main Dialogue,Yua,0,0,0,,Congratulations.
+Dialogue: 0,0:09:42.87,0:09:45.95,Main Dialogue,Mio,0,0,0,,Please introduce yourselves and \Ntell us how you feel going into this.
+Dialogue: 0,0:09:45.95,0:09:46.69,Main Dialogue,Aoi,0,0,0,,'Kay!
+Dialogue: 0,0:09:46.69,0:09:48.18,Main Dialogue,Aoi,0,0,0,,I'm Takahashi Aoi.
+Dialogue: 0,0:09:49.02,0:09:49.76,Main Dialogue,Aoi,0,0,0,,That's it!
+Dialogue: 0,0:09:49.76,0:09:50.87,Main Dialogue,Hiina,0,0,0,,No way!
+Dialogue: 0,0:09:51.36,0:09:55.26,Main Dialogue,Aoi,0,0,0,,Today I'm going with a character that doesn't \Ntalk too much and doesn't sell herself short.
+Dialogue: 0,0:09:55.75,0:09:56.80,Main Dialogue,Aoi,0,0,0,,Thank you.
+Dialogue: 0,0:09:56.17,0:09:57.70,Main Dialogue,Fuefuki,0,0,0,,Why now, all of a sudden?
+Dialogue: 0,0:09:59.07,0:10:00.67,Main Dialogue,Aoi,0,0,0,,That's all. Thank you.
+Dialogue: 0,0:10:02.36,0:10:04.12,Main Dialogue,Mio,0,0,0,,Okay, next, Hina!
+Dialogue: 0,0:10:04.12,0:10:06.28,Main Dialogue,Hina,0,0,0,,Yes. I'm Usami Hina.
+Dialogue: 0,0:10:06.28,0:10:10.58,Main Dialogue,Hina,0,0,0,,For my goal, I'll do my best \Nto maintain this character.
+Dialogue: 0,0:10:10.58,0:10:12.62,Main Dialogue,Hina,0,0,0,,Thank you for your support.
+Dialogue: 0,0:10:13.48,0:10:14.22,Main Dialogue,Mio,0,0,0,,Okay.
+Dialogue: 0,0:10:14.51,0:10:15.71,Main Dialogue,Mio,0,0,0,,Next, Mobuko.
+Dialogue: 0,0:10:15.71,0:10:19.57,Main Dialogue,Mobuko,0,0,0,,Yes. I'm Sonota Mobuko and many more.
+Dialogue: 0,0:10:19.57,0:10:24.31,Main Dialogue,Mobuko,0,0,0,,Um, recently, my characters have been \Nincreasing during the previews.
+Dialogue: 0,0:10:24.31,0:10:26.74,Main Dialogue,Mobuko,0,0,0,,For example, a robot, a foreigner...
+Dialogue: 0,0:10:26.74,0:10:29.90,Main Dialogue,Mobuko,0,0,0,,There are a lot, so if requested, \NI can bring them out.
+Dialogue: 0,0:10:30.71,0:10:32.87,Main Dialogue,Mobuko,0,0,0,,Thank you for your support.
+Dialogue: 0,0:10:33.76,0:10:34.84,Main Dialogue,Mio,0,0,0,,Last, Kanon!
+Dialogue: 0,0:10:34.84,0:10:37.08,Main Dialogue,Kanon,0,0,0,,Yes. I'm Izayoi Kanon.
+Dialogue: 0,0:10:37.08,0:10:41.99,Main Dialogue,Kanon,0,0,0,,I won't be able to say anything funny, \Nbut I'll leave that to the others and do my best.
+Dialogue: 0,0:10:41.99,0:10:44.21,Main Dialogue,Kanon,0,0,0,,What are you laughing at?
+Dialogue: 0,0:10:45.08,0:10:46.91,Main Dialogue,Kanon,0,0,0,,Okay. I'll do my best.
+Dialogue: 0,0:10:49.71,0:10:53.02,Main Dialogue,Fuefuki,0,0,0,,Incidentally, Hiina-san was \Nsupposed to be part of the B Block,
+Dialogue: 0,0:10:53.02,0:10:55.01,Main Dialogue,Fuefuki,0,0,0,,but she suddenly fell ill...
+Dialogue: 0,0:10:55.01,0:10:56.01,Main Dialogue,Aoi,0,0,0,,She's faking it!
+Dialogue: 0,0:10:56.01,0:10:57.06,Main Dialogue,Fuefuki,0,0,0,,So she forfeits.
+Dialogue: 0,0:10:57.06,0:10:58.16,Main Dialogue,Aoi,0,0,0,,She's faking it!
+Dialogue: 0,0:10:58.16,0:10:58.97,Main Dialogue,Mio,0,0,0,,Hey!
+Dialogue: 0,0:10:58.97,0:11:02.59,Main Dialogue,Mio,0,0,0,,All right, the elimination round of \Nthe Totally Tesaguri Grand Prix...
+Dialogue: 0,0:11:02.59,0:11:04.01,Main Dialogue,Aoi,0,0,0,,That's a lame title!
+Dialogue: 0,0:11:05.20,0:11:07.71,Main Dialogue,Mio,0,0,0,,Look, we've already been through this once.
+Dialogue: 0,0:11:07.71,0:11:08.77,Main Dialogue,Mio,0,0,0,,Aoi, let that go.
+Dialogue: 0,0:11:08.77,0:11:10.11,Main Dialogue,Aoi,0,0,0,,So we can't change it now, right?
+Dialogue: 0,0:11:10.11,0:11:10.80,Main Dialogue,Mio,0,0,0,,Right.
+Dialogue: 0,0:11:10.34,0:11:11.23,Main Dialogue,Aoi,0,0,0,,Sorry.
+Dialogue: 0,0:11:11.23,0:11:14.33,Main Dialogue,Mio,0,0,0,,Okay, let's start the B Block elimination round!
+Dialogue: 0,0:11:14.33,0:11:16.40,Main Dialogue,Mio,0,0,0,,Here's the topic!
+Dialogue: 0,0:11:16.40,0:11:21.74,Main Dialogue,Fuefuki,0,0,0,,You felt like the cafeteria lady was looking \Ndown on you. What was the situation?
+Dialogue: 0,0:11:23.30,0:11:23.85,Main Dialogue,Hina,0,0,0,,Me.
+Dialogue: 0,0:11:23.85,0:11:24.84,Main Dialogue,Mio,0,0,0,,Okay, Hina.
+Dialogue: 0,0:11:24.84,0:11:28.58,Main Dialogue,Mio,0,0,0,,You felt like the cafeteria lady was looking \Ndown on you. What was the situation?
+Dialogue: 0,0:11:28.58,0:11:30.16,Main Dialogue,Hina,0,0,0,,When she was wearing pasties.
+Dialogue: 0,0:11:31.29,0:11:33.14,Main Dialogue,Kanon,0,0,0,,I thought of that, too.
+Dialogue: 0,0:11:31.29,0:11:33.72,Main Dialogue,Mio,0,0,0,,Huh? What is this, déjà vu?
+Dialogue: 0,0:11:33.72,0:11:35.46,Main Dialogue,Fuefuki,0,0,0,,It's a textbook example \Nof a comedy callback.
+Dialogue: 0,0:11:35.46,0:11:38.76,Main Dialogue,Hina,0,0,0,,She's wearing pasties while she cooks.
+Dialogue: 0,0:11:38.76,0:11:42.47,Main Dialogue,Fuefuki,0,0,0,,I think that would be painful \Nwhen making fried foods...
+Dialogue: 0,0:11:42.47,0:11:46.90,Main Dialogue,Hina,0,0,0,,You might find a pasty in the\Nsoba or udon you ordered.
+Dialogue: 0,0:11:46.90,0:11:48.24,Main Dialogue,Aoi,0,0,0,,She's old, so they'd fall off easily.
+Dialogue: 0,0:11:48.24,0:11:48.78,Main Dialogue,Hina,0,0,0,,That's mean!
+Dialogue: 0,0:11:48.78,0:11:50.81,Main Dialogue,Aoi,0,0,0,,Her boobs sag, so the pasties \Nwould come right off.
+Dialogue: 0,0:11:50.81,0:11:52.43,Main Dialogue,Fuefuki,0,0,0,,I've never heard that bit of trivia before.
+Dialogue: 0,0:11:52.43,0:11:54.49,Main Dialogue,Fuefuki,0,0,0,,An old woman's pasties fall off easily.
+Dialogue: 0,0:11:54.49,0:11:55.44,Main Dialogue,,0,0,0,,They fall off easily...
+Dialogue: 0,0:11:55.44,0:11:56.62,Main Dialogue,Hina,0,0,0,,They fall right into the food.
+Dialogue: 0,0:11:56.10,0:11:56.62,Main Dialogue,Aoi,0,0,0,,Yeah.
+Dialogue: 0,0:11:56.62,0:11:57.42,Main Dialogue,Mio,0,0,0,,Okay, next.
+Dialogue: 0,0:11:57.42,0:11:57.88,Main Dialogue,Aoi,0,0,0,,Me!
+Dialogue: 0,0:11:57.88,0:11:58.94,Main Dialogue,Mio,0,0,0,,All right, Aoi.
+Dialogue: 0,0:11:58.94,0:12:02.98,Main Dialogue,Mio,0,0,0,,You felt like the cafeteria lady was looking \Ndown on you. What was the situation?
+Dialogue: 0,0:12:02.98,0:12:05.55,Main Dialogue,Aoi,0,0,0,,She serves food in the palms \Nof my hands, not on a plate.
+Dialogue: 0,0:12:05.55,0:12:06.76,Main Dialogue,Hina,0,0,0,,Hot!
+Dialogue: 0,0:12:06.76,0:12:07.99,Main Dialogue,Hina,0,0,0,,That would be hot!
+Dialogue: 0,0:12:07.99,0:12:11.38,Main Dialogue,Aoi,0,0,0,,Even with udon, she pours on the broth.
+Dialogue: 0,0:12:12.13,0:12:13.33,Main Dialogue,,0,0,0,,That's hot.
+Dialogue: 0,0:12:12.68,0:12:14.37,Main Dialogue,Hina,0,0,0,,You'd get burned.
+Dialogue: 0,0:12:13.33,0:12:15.10,Main Dialogue,Aoi,0,0,0,,She'd pour the broth,
+Dialogue: 0,0:12:15.10,0:12:17.46,Main Dialogue,Aoi,0,0,0,,then, what, put the noodles on top?
+Dialogue: 0,0:12:17.46,0:12:19.32,Main Dialogue,Aoi,0,0,0,,Like when you eat soba standing up.
+Dialogue: 0,0:12:19.32,0:12:20.15,Main Dialogue,Hina,0,0,0,,Eating standing up...
+Dialogue: 0,0:12:20.15,0:12:20.90,Main Dialogue,Aoi,0,0,0,,You can eat it right away.
+Dialogue: 0,0:12:20.90,0:12:22.11,Main Dialogue,Mio,0,0,0,,Okay, next.
+Dialogue: 0,0:12:21.30,0:12:22.11,Main Dialogue,Mobuko,0,0,0,,Me.
+Dialogue: 0,0:12:22.11,0:12:23.21,Main Dialogue,Mio,0,0,0,,All right, Mobuko.
+Dialogue: 0,0:12:23.21,0:12:23.80,Main Dialogue,Mobuko,0,0,0,,Yes.
+Dialogue: 0,0:12:23.80,0:12:28.13,Main Dialogue,Mio,0,0,0,,You felt like the cafeteria lady was looking \Ndown on you. What was the situation?
+Dialogue: 0,0:12:28.13,0:12:31.31,Main Dialogue,Mobuko,0,0,0,,Everything I ordered had \Nbeen used as food samples.
+Dialogue: 0,0:12:32.78,0:12:36.31,Main Dialogue,Mobuko,0,0,0,,Um, for example, you order napolitan, right?
+Dialogue: 0,0:12:36.31,0:12:38.78,Main Dialogue,Mobuko,0,0,0,,The fork is floating in the air above it.
+Dialogue: 0,0:12:39.60,0:12:41.68,Main Dialogue,Fuefuki,0,0,0,,With the fork in the air...
+Dialogue: 0,0:12:39.97,0:12:41.68,Main Dialogue,Fuefuki,0,0,0,,The pasta's holding it there, right?
+Dialogue: 0,0:12:41.68,0:12:43.74,Main Dialogue,Mobuko,0,0,0,,Right, it's served all hard.
+Dialogue: 0,0:12:43.74,0:12:45.26,Main Dialogue,Fuefuki,0,0,0,,She was definitely looking down on you.
+Dialogue: 0,0:12:45.26,0:12:46.40,Main Dialogue,Mobuko,0,0,0,,She was looking down on me.
+Dialogue: 0,0:12:46.40,0:12:47.93,Main Dialogue,Mio,0,0,0,,Okay, Kanon.
+Dialogue: 0,0:12:47.62,0:12:47.93,Main Dialogue,Kanon,0,0,0,,Yes.
+Dialogue: 0,0:12:47.93,0:12:51.50,Main Dialogue,Mio,0,0,0,,You felt like the cafeteria lady was looking \Ndown on you. What was the situation?
+Dialogue: 0,0:12:51.50,0:12:54.86,Main Dialogue,Kanon,0,0,0,,Right. When all the cafeteria ladies \Nwore keyhole turtlenet...
+Dialogue: 0,0:12:54.86,0:12:56.63,Main Dialogue,Kanon,0,0,0,,I mean, turtleneck shirts.
+Dialogue: 0,0:12:56.63,0:12:58.29,Main Dialogue,Mio,0,0,0,,Don't mess up the important part!
+Dialogue: 0,0:12:59.71,0:13:02.41,Main Dialogue,Kanon,0,0,0,,They all wear keyhole turtleneck shirts.
+Dialogue: 0,0:13:02.41,0:13:03.28,Main Dialogue,Fuefuki,0,0,0,,What is "keyhole"?
+Dialogue: 0,0:13:03.28,0:13:06.74,Main Dialogue,Kanon,0,0,0,,Um, it's a shirt with an opening \Nright over your cleavage,
+Dialogue: 0,0:13:06.74,0:13:10.35,Main Dialogue,Kanon,0,0,0,,compressing the fantasies of all males\Ninto one awful item of clothing.
+Dialogue: 0,0:13:10.35,0:13:11.99,Main Dialogue,Hina,0,0,0,,Huh...
+Dialogue: 0,0:13:11.99,0:13:13.85,Main Dialogue,Fuefuki,0,0,0,,You included your personal opinion there.
+Dialogue: 0,0:13:12.18,0:13:13.85,Main Dialogue,Mio,0,0,0,,It's for that kind of person.
+Dialogue: 0,0:13:13.85,0:13:16.58,Main Dialogue,Kanon,0,0,0,,Old women are really saggy,
+Dialogue: 0,0:13:16.58,0:13:19.02,Main Dialogue,Kanon,0,0,0,,so you can see pretty much her entire chest.
+Dialogue: 0,0:13:19.02,0:13:20.97,Main Dialogue,Aoi,0,0,0,,She might as well hang them outside it.
+Dialogue: 0,0:13:20.97,0:13:22.17,Main Dialogue,Mio,0,0,0,,Show of hands?
+Dialogue: 0,0:13:22.17,0:13:24.07,Main Dialogue,Aoi,0,0,0,,Okay, who thinks she \Nshould let them hang out?
+Dialogue: 0,0:13:24.07,0:13:25.40,Main Dialogue,Aoi,0,0,0,,They sag anyway,\Nso just let them show.
+Dialogue: 0,0:13:25.40,0:13:27.16,Main Dialogue,Kanon,0,0,0,,She might as well let them hang out, right?
+Dialogue: 0,0:13:27.16,0:13:28.71,Main Dialogue,Kanon,0,0,0,,They're hanging down anyway.
+Dialogue: 0,0:13:27.82,0:13:29.87,Main Dialogue,Fuefuki,0,0,0,,What's the point of hanging them out?
+Dialogue: 0,0:13:29.87,0:13:31.62,Main Dialogue,Mio,0,0,0,,Yes, I'd like to hear an explanation for that.
+Dialogue: 0,0:13:31.62,0:13:36.09,Main Dialogue,Kanon,0,0,0,,They think the boys in the cafeteria want \Nto see them, so they do it as a favor.
+Dialogue: 0,0:13:36.09,0:13:37.77,Main Dialogue,Fuefuki,0,0,0,,That's looking down on pubescent males.
+Dialogue: 0,0:13:37.77,0:13:38.88,Main Dialogue,Kanon,0,0,0,,It is.
+Dialogue: 0,0:13:41.21,0:13:43.00,Main Dialogue,Mio,0,0,0,,Creative thinking.
+Dialogue: 0,0:13:43.00,0:13:45.47,Main Dialogue,Fuefuki,0,0,0,,The audience is a bit noisy. \NH-Has something happened?
+Dialogue: 0,0:13:45.47,0:13:46.56,Main Dialogue,Mio,0,0,0,,Is something wrong?
+Dialogue: 0,0:13:45.77,0:13:46.56,Main Dialogue,Yui,0,0,0,,That's sick.
+Dialogue: 0,0:13:46.56,0:13:47.45,Main Dialogue,Fuefuki,0,0,0,,What? What is?
+Dialogue: 0,0:13:47.45,0:13:49.72,Main Dialogue,Yui,0,0,0,,She said the boys should breastfeed.
+Dialogue: 0,0:13:49.72,0:13:50.41,Main Dialogue,Fuefuki,0,0,0,,What does that mean?
+Dialogue: 0,0:13:50.41,0:13:51.63,Main Dialogue,Yua,0,0,0,,There's a demand!
+Dialogue: 0,0:13:52.50,0:13:54.73,Main Dialogue,Fuefuki,0,0,0,,You mean lunch set C is breast milk?
+Dialogue: 0,0:13:55.54,0:13:56.31,Main Dialogue,Aoi,0,0,0,,Directly.
+Dialogue: 0,0:13:56.31,0:13:57.10,Main Dialogue,Hina,0,0,0,,"Directly."
+Dialogue: 0,0:13:57.10,0:13:58.14,Main Dialogue,,0,0,0,,Directly...
+Dialogue: 0,0:13:59.22,0:13:59.68,Main Dialogue,Hina,0,0,0,,Me!
+Dialogue: 0,0:13:59.68,0:14:00.86,Main Dialogue,Mio,0,0,0,,All right, Hina.
+Dialogue: 0,0:14:00.86,0:14:04.75,Main Dialogue,Mio,0,0,0,,You felt like the cafeteria lady was looking \Ndown on you. What was the situation?
+Dialogue: 0,0:14:04.75,0:14:07.69,Main Dialogue,Hina,0,0,0,,The cafeteria ladies were playing sports \Nwith the cooking utensils.
+Dialogue: 0,0:14:08.44,0:14:09.49,Main Dialogue,Kanon,0,0,0,,With cooking utensils?
+Dialogue: 0,0:14:09.49,0:14:10.36,Main Dialogue,Kanon,0,0,0,,That would annoy me!
+Dialogue: 0,0:14:10.36,0:14:11.94,Main Dialogue,Fuefuki,0,0,0,,In the kitchen?
+Dialogue: 0,0:14:12.65,0:14:14.50,Main Dialogue,Mio,0,0,0,,They could. It's a big space.
+Dialogue: 0,0:14:13.30,0:14:14.50,Main Dialogue,Hina,0,0,0,,They could.
+Dialogue: 0,0:14:14.50,0:14:18.47,Main Dialogue,Hina,0,0,0,,Like, they play tennis with that \Nthing you use to beat eggs.
+Dialogue: 0,0:14:18.47,0:14:20.50,Main Dialogue,Fuefuki,0,0,0,,Why would they use something \Nso hard to hit with?
+Dialogue: 0,0:14:20.50,0:14:22.30,Main Dialogue,Mio,0,0,0,,Yeah, they could also use \Na rice scoop as a racket.
+Dialogue: 0,0:14:22.30,0:14:24.40,Main Dialogue,Hina,0,0,0,,A rice scoop as a racket! \NSounds like you've done it before!
+Dialogue: 0,0:14:24.40,0:14:25.52,Main Dialogue,Mio,0,0,0,,I have.
+Dialogue: 0,0:14:26.92,0:14:28.45,Main Dialogue,Mio,0,0,0,,Okay, next. Anyone?
+Dialogue: 0,0:14:28.45,0:14:30.83,Main Dialogue,Fuefuki,0,0,0,,Aoi-san looks like she's bored with this.
+Dialogue: 0,0:14:30.83,0:14:33.25,Main Dialogue,Mio,0,0,0,,Yeah, I was a little worried about that myself.
+Dialogue: 0,0:14:31.62,0:14:33.25,Main Dialogue,Aoi,0,0,0,,I'm bored already!
+Dialogue: 0,0:14:33.25,0:14:35.91,Main Dialogue,Fuefuki,0,0,0,,One more. How about just one more, Aoi-san?
+Dialogue: 0,0:14:34.85,0:14:36.42,Main Dialogue,Aoi,0,0,0,,One more?
+Dialogue: 0,0:14:36.69,0:14:39.14,Main Dialogue,Aoi,0,0,0,,I wanna say my idea for the "eighth mystery."
+Dialogue: 0,0:14:39.14,0:14:40.56,Main Dialogue,Mio,0,0,0,,You have an idea for the eighth mystery?
+Dialogue: 0,0:14:40.56,0:14:41.52,Main Dialogue,Fuefuki,0,0,0,,You have an eighth mystery?
+Dialogue: 0,0:14:42.41,0:14:43.74,Main Dialogue,Mio,0,0,0,,The eighth mystery is fine.
+Dialogue: 0,0:14:42.91,0:14:45.11,Main Dialogue,Fuefuki,0,0,0,,This tournament has a lot of freedom.
+Dialogue: 0,0:14:45.11,0:14:46.73,Main Dialogue,Hina,0,0,0,,What? The eighth mystery?
+Dialogue: 0,0:14:46.73,0:14:48.04,Main Dialogue,Aoi,0,0,0,,It's fun!
+Dialogue: 0,0:14:48.53,0:14:49.79,Main Dialogue,Mio,0,0,0,,Okay, Aoi, write it down and share.
+Dialogue: 0,0:14:49.79,0:14:50.93,Main Dialogue,Aoi,0,0,0,,Okay!
+Dialogue: 0,0:14:50.93,0:14:51.70,Main Dialogue,Kanon,0,0,0,,Why?
+Dialogue: 0,0:14:51.70,0:14:54.56,Main Dialogue,Mio,0,0,0,,Other members, you can pick either one, too.
+Dialogue: 0,0:14:55.53,0:14:56.32,Main Dialogue,Aoi,0,0,0,,Ready!
+Dialogue: 0,0:14:56.32,0:14:57.50,Main Dialogue,Mio,0,0,0,,Okay, Aoi.
+Dialogue: 0,0:14:57.50,0:14:59.22,Main Dialogue,Fuefuki,0,0,0,,Incidentally, which one is this?
+Dialogue: 0,0:14:59.22,0:15:00.40,Main Dialogue,Mio,0,0,0,,The eighth mystery.
+Dialogue: 0,0:14:59.82,0:15:00.40,Main Dialogue,Fuefuki,0,0,0,,Eighth mystery?
+Dialogue: 0,0:15:00.40,0:15:01.58,Main Dialogue,Aoi,0,0,0,,The one that just missed the cut.
+Dialogue: 0,0:15:01.58,0:15:04.67,Main Dialogue,Mio,0,0,0,,Okay. What is the eighth mystery that \Ncouldn't become one of the seven mysteries?
+Dialogue: 0,0:15:06.58,0:15:08.92,Main Dialogue,Hina,0,0,0,,I can tell it's going to be awful \Njust by looking at her.
+Dialogue: 0,0:15:08.92,0:15:13.24,Main Dialogue,Aoi,0,0,0,,The principal has poo on his head every day.
+Dialogue: 0,0:15:13.97,0:15:15.36,Main Dialogue,Kanon,0,0,0,,Are you in elementary school?
+Dialogue: 0,0:15:16.31,0:15:19.81,Main Dialogue,Fuefuki,0,0,0,,You wanted to say that so badly, \Nso made us change the theme?
+Dialogue: 0,0:15:19.81,0:15:23.42,Main Dialogue,Aoi,0,0,0,,I've wanted to say this ever \Nsince the A Block was doing it.
+Dialogue: 0,0:15:24.86,0:15:26.64,Main Dialogue,Aoi,0,0,0,,I'm so happy I finally got to say it.
+Dialogue: 0,0:15:28.43,0:15:30.81,Main Dialogue,Mio,0,0,0,,The one who will advance to the finals is...
+Dialogue: 0,0:15:31.82,0:15:32.61,Main Dialogue,Mio,0,0,0,,Hina!
+Dialogue: 0,0:15:32.61,0:15:33.28,Main Dialogue,,0,0,0,,What?!
+Dialogue: 0,0:15:33.28,0:15:34.26,Main Dialogue,Aoi,0,0,0,,No way!
+Dialogue: 0,0:15:33.69,0:15:34.74,Main Dialogue,Mobuko,0,0,0,,No way!
+Dialogue: 0,0:15:34.74,0:15:36.08,Main Dialogue,Aoi,0,0,0,,Rigged!
+Dialogue: 0,0:15:36.08,0:15:39.46,Main Dialogue,Aoi,0,0,0,,This is rigged! It must be in the script!
+Dialogue: 0,0:15:39.46,0:15:41.48,Main Dialogue,Mio,0,0,0,,And there's one more!
+Dialogue: 0,0:15:41.48,0:15:44.82,Main Dialogue,Mio,0,0,0,,Tied with her is the one who's \Nbeen noisy all this time: Aoi!
+Dialogue: 0,0:15:44.82,0:15:46.05,Main Dialogue,Hina,0,0,0,,Good for you.
+Dialogue: 0,0:15:44.99,0:15:46.05,Main Dialogue,Mio,0,0,0,,Congratulations!
+Dialogue: 0,0:15:46.04,0:15:47.42,Main Dialogue,Aoi,0,0,0,,This isn't rigged!
+Dialogue: 0,0:15:47.42,0:15:48.60,Main Dialogue,Hina,0,0,0,,Good for you!
+Dialogue: 0,0:15:48.60,0:15:50.51,Main Dialogue,Aoi,0,0,0,,This is not rigged!
+Dialogue: 0,0:15:52.45,0:15:55.01,Main Dialogue,Fuefuki,0,0,0,,And now, we'd like to announce \None more finalist.
+Dialogue: 0,0:15:55.01,0:15:57.51,Main Dialogue,Fuefuki,0,0,0,,Who is it, Mio-senpai?
+Dialogue: 0,0:15:57.51,0:16:00.25,Main Dialogue,Hiina,0,0,0,,You've got good rivals, Aoi.
+Dialogue: 0,0:16:01.46,0:16:03.09,Main Dialogue,Mio,0,0,0,,Milady Tomomi!
+Dialogue: 0,0:16:03.96,0:16:05.15,Main Dialogue,Fuefuki,0,0,0,,But she's not here!
+Dialogue: 0,0:16:03.96,0:16:06.04,Main Dialogue,Aoi,0,0,0,,We just had her voice recording...
+Dialogue: 0,0:16:06.04,0:16:07.18,Main Dialogue,Aoi,0,0,0,,She's not here!
+Dialogue: 0,0:16:08.05,0:16:10.94,Main Dialogue,Fuefuki,0,0,0,,So these four will battle it out.
+Dialogue: 0,0:16:10.94,0:16:13.61,Main Dialogue,Mio,0,0,0,,This is the topic for the final round!
+Dialogue: 0,0:16:13.61,0:16:15.82,Main Dialogue,Fuefuki,0,0,0,,First, please listen to this.
+Dialogue: 0,0:16:13.61,0:16:15.82,Black Signs,Fuefuki,0,0,0,,Please listen to this song.
+Dialogue: 0,0:16:15.82,0:16:23.86,Italics Dialogue,Song,0,0,0,,This one-time meeting is\Nengraved deep in my heart...
+Dialogue: 0,0:16:30.42,0:16:31.71,Main Dialogue,Aoi,0,0,0,,What is that?
+Dialogue: 0,0:16:32.29,0:16:33.44,Main Dialogue,Fuefuki,0,0,0,,The ending theme.
+Dialogue: 0,0:16:33.44,0:16:34.58,Main Dialogue,Aoi,0,0,0,,It's the first time I've heard it.
+Dialogue: 0,0:16:34.58,0:16:37.04,Main Dialogue,Koharu,0,0,0,,I couldn't tell with that blank in the lyrics.
+Dialogue: 0,0:16:37.04,0:16:37.51,Main Dialogue,Aoi,0,0,0,,Yeah.
+Dialogue: 0,0:16:37.51,0:16:40.72,Main Dialogue,Fuefuki,0,0,0,,You'll make up a lyric to fill in \Nthe blank, and then sing it.
+Dialogue: 0,0:16:40.72,0:16:42.22,Main Dialogue,Aoi,0,0,0,,That's difficult.
+Dialogue: 0,0:16:43.62,0:16:44.69,Main Dialogue,Fuefuki,0,0,0,,Is anyone ready?
+Dialogue: 0,0:16:44.69,0:16:45.46,Main Dialogue,Mio,0,0,0,,Are you ready?
+Dialogue: 0,0:16:45.46,0:16:46.02,Main Dialogue,Koharu,0,0,0,,I am.
+Dialogue: 0,0:16:46.02,0:16:47.15,Main Dialogue,Mio,0,0,0,,Okay, Koharu.
+Dialogue: 0,0:16:54.86,0:17:01.15,Italics Dialogue,Kohau,0,0,0,,{\i0}Tesagure{\i1} has been on a long time, \Nbut it ends today.
+Dialogue: 0,0:17:02.20,0:17:04.07,Main Dialogue,Mio,0,0,0,,That's definitely an ending for the ending.
+Dialogue: 0,0:17:04.07,0:17:07.68,Main Dialogue,Koharu,0,0,0,,It's over. Today is the last one.
+Dialogue: 0,0:17:07.68,0:17:09.07,Main Dialogue,Koharu,0,0,0,,It's been fun.
+Dialogue: 0,0:17:09.07,0:17:10.34,Main Dialogue,Mio,0,0,0,,Don't end the show yet, please.
+Dialogue: 0,0:17:10.34,0:17:10.96,Main Dialogue,Koharu,0,0,0,,Okay.
+Dialogue: 0,0:17:10.96,0:17:11.95,Main Dialogue,Mio,0,0,0,,Don't end it yet.
+Dialogue: 0,0:17:11.95,0:17:13.54,Main Dialogue,Fuefuki,0,0,0,,We're still in the middle of the finals.
+Dialogue: 0,0:17:13.54,0:17:14.93,Main Dialogue,Koharu,0,0,0,,Okay. Got it.
+Dialogue: 0,0:17:14.10,0:17:15.53,Main Dialogue,Mio,0,0,0,,We don't have the results yet.
+Dialogue: 0,0:17:14.93,0:17:16.34,Main Dialogue,Koharu,0,0,0,,Okay. It's not over yet!
+Dialogue: 0,0:17:17.11,0:17:17.79,Main Dialogue,Mio,0,0,0,,Anyone else?
+Dialogue: 0,0:17:17.79,0:17:18.18,Main Dialogue,Aoi,0,0,0,,Me.
+Dialogue: 0,0:17:18.18,0:17:19.70,Main Dialogue,Mio,0,0,0,,Okay, Aoi.
+Dialogue: 0,0:17:27.28,0:17:33.59,Italics Dialogue,Aoi,0,0,0,,Even though it's the final episode, \NHiina-senpai is faking sick.
+Dialogue: 0,0:17:35.22,0:17:37.66,Main Dialogue,Fuefuki,0,0,0,,I don't know if it's right to \Njust decide she's faking.
+Dialogue: 0,0:17:38.45,0:17:41.04,Main Dialogue,Miho,0,0,0,,I'll say it on behalf of her honor. \NShe's not faking it.
+Dialogue: 0,0:17:41.04,0:17:42.28,Main Dialogue,Aoi,0,0,0,,She's not faking it.
+Dialogue: 0,0:17:44.43,0:17:45.31,Main Dialogue,Mio,0,0,0,,Okay, next.
+Dialogue: 0,0:17:45.31,0:17:45.71,Main Dialogue,Hina,0,0,0,,Me.
+Dialogue: 0,0:17:45.71,0:17:46.42,Main Dialogue,Mio,0,0,0,,Hina.
+Dialogue: 0,0:17:54.08,0:18:00.22,Italics Dialogue,Hina,0,0,0,,Maybe it's... Maybe it's...
+Dialogue: 0,0:18:01.04,0:18:01.89,Main Dialogue,Aoi,0,0,0,,Huh?
+Dialogue: 0,0:18:01.38,0:18:03.39,Main Dialogue,Feufuki,0,0,0,,That's totally plagiarism.
+Dialogue: 0,0:18:03.71,0:18:04.92,Main Dialogue,Aoi,0,0,0,,I'm curious about what comes next.
+Dialogue: 0,0:18:04.92,0:18:07.59,Main Dialogue,Koharu,0,0,0,,That's where we're all in harmony, right?
+Dialogue: 0,0:18:06.31,0:18:07.59,Main Dialogue,Aoi,0,0,0,,Right!
+Dialogue: 0,0:18:07.59,0:18:08.56,Main Dialogue,Hina,0,0,0,,Let's move on.
+Dialogue: 0,0:18:08.56,0:18:09.10,Main Dialogue,Mio,0,0,0,,All right.
+Dialogue: 0,0:18:09.10,0:18:10.16,Main Dialogue,Fuefuki,0,0,0,,Shall we ask Tomomi-san?
+Dialogue: 0,0:18:10.16,0:18:11.20,Main Dialogue,Hina,0,0,0,,Yes.
+Dialogue: 0,0:18:10.16,0:18:11.20,Main Dialogue,Aoi,0,0,0,,Let's ask her!
+Dialogue: 0,0:18:11.20,0:18:12.76,Main Dialogue,Mio,0,0,0,,Here's milady Tomomi's idea.
+Dialogue: 0,0:18:20.96,0:18:26.96,Italics Dialogue,Tomomi,0,0,0,,I'm sick of serving tea. \NI'm gonna climb Mt. Fuji.
+Dialogue: 0,0:18:27.77,0:18:30.53,Main Dialogue,Aoi,0,0,0,,What does that mean? \N"I'm tired of serving tea"?
+Dialogue: 0,0:18:30.53,0:18:31.65,Main Dialogue,Koharu,0,0,0,,What happened?
+Dialogue: 0,0:18:31.65,0:18:33.46,Main Dialogue,Fuefuki,0,0,0,,"I'm tired of serving tea."
+Dialogue: 0,0:18:33.46,0:18:35.08,Main Dialogue,Kanon,0,0,0,,Has she been serving tea all this time?
+Dialogue: 0,0:18:33.46,0:18:36.00,Main Dialogue,Fuefuki,0,0,0,,"I'm gonna climb Mt. Fuji."
+Dialogue: 0,0:18:36.93,0:18:37.81,Main Dialogue,Kanon,0,0,0,,What happened?
+Dialogue: 0,0:18:37.81,0:18:39.64,Main Dialogue,Fuefuki,0,0,0,,It sounds like she was feeling really pressured.
+Dialogue: 0,0:18:39.64,0:18:42.34,Main Dialogue,Koharu,0,0,0,,And she wanted to climb a mountain.
+Dialogue: 0,0:18:40.42,0:18:42.34,Main Dialogue,Hina,0,0,0,,Maybe she's escaping from reality.
+Dialogue: 0,0:18:42.34,0:18:43.39,Main Dialogue,Koharu,0,0,0,,Wow.
+Dialogue: 0,0:18:44.08,0:18:46.22,Main Dialogue,Mio,0,0,0,,That's what I call being at a crossroad.
+Dialogue: 0,0:18:46.22,0:18:46.94,Main Dialogue,Koharu,0,0,0,,Okay.
+Dialogue: 0,0:18:46.94,0:18:48.20,Main Dialogue,Mio,0,0,0,,Koharu, are you ready?
+Dialogue: 0,0:18:48.20,0:18:49.97,Main Dialogue,Koharu,0,0,0,,Yes. I'll do it.
+Dialogue: 0,0:18:49.97,0:18:51.23,Main Dialogue,Mio,0,0,0,,Okay, Koharu.
+Dialogue: 0,0:18:51.23,0:18:58.98,Italics Dialogue,Koharu,0,0,0,,This one-time meeting is\Nengraved deep in my heart...
+Dialogue: 0,0:18:58.98,0:19:05.39,Italics Dialogue,Koharu,0,0,0,,You made me miso soup \Nfor the rest of my life.
+Dialogue: 0,0:19:05.39,0:19:07.80,Main Dialogue,Koharu,0,0,0,,I tried writing a love song.
+Dialogue: 0,0:19:09.24,0:19:11.25,Main Dialogue,Koharu,0,0,0,,Um, following the first line.
+Dialogue: 0,0:19:10.04,0:19:12.17,Main Dialogue,Fuefuki,0,0,0,,And you used the past tense, meaning...
+Dialogue: 0,0:19:12.17,0:19:12.92,Main Dialogue,Fuefuki,0,0,0,,You're dead?
+Dialogue: 0,0:19:12.92,0:19:14.40,Main Dialogue,Koharu,0,0,0,,Ah! "You'll make"!
+Dialogue: 0,0:19:14.40,0:19:16.60,Main Dialogue,Koharu,0,0,0,,You'll make! You'll make!
+Dialogue: 0,0:19:16.60,0:19:17.87,Main Dialogue,Fuefuki,0,0,0,,"You {\i1}made{\i0} it for the rest of my life."
+Dialogue: 0,0:19:17.87,0:19:20.15,Main Dialogue,Aoi,0,0,0,,Does that mean you divorced?
+Dialogue: 0,0:19:18.43,0:19:20.15,Main Dialogue,Aoi,0,0,0,,You're dead! You're dead!
+Dialogue: 0,0:19:20.15,0:19:23.60,Main Dialogue,Koharu,0,0,0,,No, it's not the past. It's now.
+Dialogue: 0,0:19:23.60,0:19:24.63,Main Dialogue,Mio,0,0,0,,Okay, who's got an idea?
+Dialogue: 0,0:19:24.63,0:19:25.12,Main Dialogue,Aoi,0,0,0,,Me.
+Dialogue: 0,0:19:25.12,0:19:26.32,Main Dialogue,Mio,0,0,0,,Okay, then, Aoi.
+Dialogue: 0,0:19:33.89,0:19:40.30,Italics Dialogue,Aoi,0,0,0,,Sorry for bringing poo into it.
+Dialogue: 0,0:19:42.36,0:19:44.03,Main Dialogue,Fuefuki,0,0,0,,You're actually apologizing, huh?
+Dialogue: 0,0:19:45.02,0:19:46.49,Main Dialogue,Hina,0,0,0,,She did apologize.
+Dialogue: 0,0:19:45.45,0:19:47.50,Main Dialogue,Miso,0,0,0,,Instead of apologizing, don't say it to begin with.
+Dialogue: 0,0:19:46.79,0:19:48.75,Main Dialogue,Koharu,0,0,0,,Sounds like there are lots of previous offenses.
+Dialogue: 0,0:19:48.75,0:19:51.24,Main Dialogue,Mio,0,0,0,,In the sense of talking about \Nsomething that's brown...
+Dialogue: 0,0:19:51.24,0:19:53.72,Main Dialogue,Hina,0,0,0,,I didn't really get a sense of color from it, though.
+Dialogue: 0,0:19:58.50,0:20:03.47,Main Dialogue,Mio,0,0,0,,And now, I'll announce the winner.
+Dialogue: 0,0:20:04.01,0:20:10.09,Main Dialogue,Mio,0,0,0,,The winner of the Totally Tesaguri Grand Prix is...
+Dialogue: 0,0:20:10.81,0:20:12.26,Main Dialogue,Mio,0,0,0,,Koharu!
+Dialogue: 0,0:20:12.60,0:20:13.78,Main Dialogue,Koharu,0,0,0,,Me?
+Dialogue: 0,0:20:13.78,0:20:14.81,Main Dialogue,Fuefuki,0,0,0,,Congratulations.
+Dialogue: 0,0:20:14.81,0:20:17.98,Main Dialogue,Koharu,0,0,0,,Thank you!
+Dialogue: 0,0:20:17.98,0:20:19.64,Main Dialogue,Mio,0,0,0,,It was a really close match.
+Dialogue: 0,0:20:19.64,0:20:20.90,Main Dialogue,Fuefuki,0,0,0,,Extremely close.
+Dialogue: 0,0:20:20.90,0:20:22.91,Main Dialogue,Mio,0,0,0,,Koharun? Koharun, huh?
+Dialogue: 0,0:20:20.90,0:20:24.18,Main Dialogue,Aoi,0,0,0,,I didn't think it would be this lively.
+Dialogue: 0,0:20:24.18,0:20:25.49,Main Dialogue,Hina,0,0,0,,Who did you think it was?
+Dialogue: 0,0:20:25.49,0:20:27.96,Main Dialogue,Fuefuki,0,0,0,,You just now realized who the winner is?
+Dialogue: 0,0:20:26.96,0:20:30.08,Main Dialogue,Aoi,0,0,0,,No. I just thought it was a boring result.
+Dialogue: 0,0:20:31.04,0:20:32.83,Main Dialogue,Hina,0,0,0,,That's harsh!
+Dialogue: 0,0:20:32.83,0:20:36.08,Main Dialogue,Koharu,0,0,0,,I won a boring victory, then?
+Dialogue: 0,0:20:33.88,0:20:35.91,Main Dialogue,Hina,0,0,0,,That was a cutting thing to say.
+Dialogue: 0,0:20:36.08,0:20:36.84,Main Dialogue,Mio,0,0,0,,You're dissatisfied?
+Dialogue: 0,0:20:36.84,0:20:38.44,Main Dialogue,Aoi,0,0,0,,Yeah. This is the most boring result.
+Dialogue: 0,0:20:38.44,0:20:40.84,Main Dialogue,Mio,0,0,0,,Then... Then what should have happened?
+Dialogue: 0,0:20:40.84,0:20:41.88,Main Dialogue,Aoi,0,0,0,,Tomomi-san should've won.
+Dialogue: 0,0:20:41.88,0:20:43.61,Main Dialogue,Hina,0,0,0,,Oh, Tomomi-san... I see.
+Dialogue: 0,0:20:43.61,0:20:45.46,Main Dialogue,Fuefuki,0,0,0,,That might've been a more interesting result.
+Dialogue: 0,0:22:11.18,0:22:13.47,Preview,Sign,0,0,0,,{\fad(500,1)}Final Preview
+Dialogue: 0,0:22:11.18,0:22:13.47,Preview Sonota,Sign,0,0,0,,{\fad(500,1)}Sonota
+Dialogue: 0,0:22:11.40,0:22:17.23,Main Dialogue,Old,0,0,0,,Actually, Mobuko, I'm you \Nfrom 70 years in the future.
+Dialogue: 0,0:22:17.23,0:22:18.19,Main Dialogue,Mobu,0,0,0,,No way...
+Dialogue: 0,0:22:18.19,0:22:22.46,Main Dialogue,Old,0,0,0,,Never forget what it feels \Nlike to be Mobuko.
+Dialogue: 0,0:22:22.46,0:22:24.15,Main Dialogue,Robo,0,0,0,,Agreed. Finished.
+Dialogue: 0,0:22:24.66,0:22:26.94,Main Dialogue,Mobu,0,0,0,,My 70-years-from-now self,
+Dialogue: 0,0:22:26.94,0:22:30.25,Main Dialogue,Mobu,0,0,0,,you came back here to tell us that \Nour hearts were out of sync?
+Dialogue: 0,0:22:30.25,0:22:34.41,Main Dialogue,Mobu2,0,0,0,,Whether we're in sync or not, as a Mobu, \Nour great mission is never done.
+Dialogue: 0,0:22:34.41,0:22:37.50,Main Dialogue,Mobu,0,0,0,,From now on, let's make our hearts one
+Dialogue: 0,0:22:37.50,0:22:40.71,Main Dialogue,Mobu,0,0,0,,as we talk about horse racing or pro wrestling!
+Dialogue: 0,0:22:40.71,0:22:41.64,Main Dialogue,Mobu1,0,0,0,,Yeah!
+Dialogue: 0,0:22:40.71,0:22:42.86,Next Episode Title,Sign,0,0,0,,{\fad(1,834)}Mobu Clan Zero: The End
+Dialogue: 0,0:22:53.31,0:22:54.67,Main Dialogue,Koharu,0,0,0,,In the end...
+Dialogue: 0,0:22:55.80,0:22:58.26,Main Dialogue,Koharu,0,0,0,,I was still "the new girl" the whole time.

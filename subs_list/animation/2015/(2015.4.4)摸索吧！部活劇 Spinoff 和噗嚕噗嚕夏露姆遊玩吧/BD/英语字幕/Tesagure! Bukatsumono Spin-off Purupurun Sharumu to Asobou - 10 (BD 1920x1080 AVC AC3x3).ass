@@ -1,0 +1,696 @@
+﻿[Script Info]
+Title: HorribleSubs
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 848
+PlayResY: 480
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,0,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Signs,Open Sans Semibold,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,27,24,1
+Style: Italics Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,1,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Main Dialogue Top,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,0,0,0,100,100,0,0,1,1.7,0,8,0,0,28,1
+Style: Flashback Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00400000,&H00400000,0,0,0,0,100,100,0,0,1,2,1,2,13,13,24,1
+Style: Flashback Italics Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,1,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Episode Title Collaboration,Open Sans Semibold,20,&H00FFFFFF,&H000000FF,&H00E7E6F8,&H007A7A7A,1,0,0,0,100,100,0,0,1,0,2,1,40,13,93,1
+Style: Episode Title,Open Sans Semibold,20,&H0078E2AD,&H000000FF,&H00F6F6F8,&H007A7A7A,1,0,0,0,100,100,0,0,1,2,2,1,40,13,33,1
+Style: Preview,Open Sans Semibold,45,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,13,13,80,1
+Style: Preview Sonota,Open Sans Semibold,30,&H00000306,&H000000FF,&H005CC3E5,&H00000000,1,0,0,0,100,100,0,0,1,3,2,6,13,67,13,1
+Style: Next Episode Title,Open Sans Semibold,36,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,4,0,8,13,13,20,1
+Style: Black Signs,Open Sans Semibold,30,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,27,24,1
+Style: Haircut Sign 1,Open Sans Semibold,24,&H0044003B,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,2,0,7,53,27,293,1
+Style: Haircut Sign 2,Open Sans Semibold,24,&H0044003B,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,2,0,7,27,27,20,1
+Style: Haircut Sign 3,Open Sans Semibold,24,&H0044003B,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,2,0,7,187,27,24,1
+Style: Tobacco Sign,Open Sans Semibold,27,&H007790B1,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,267,27,20,1
+Style: Censorship Sign,Open Sans Semibold,24,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,4,0,7,240,27,20,1
+Style: Chicks Sign,Open Sans Semibold,36,&H0000F0FF,&H000000FF,&H00D6ACFE,&H00000000,1,0,0,0,100,100,0,0,1,3,0,8,293,27,33,1
+Style: Animal Welfare Sign 1,Open Sans Semibold,27,&H009E1100,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,3,0,7,27,13,24,1
+Style: Animal Welfare Sign 2,Open Sans Semibold,30,&H009E1100,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,3,0,7,427,27,24,1
+Style: Top Sign,Open Sans Semibold,30,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,9,27,187,67,1
+Style: Middle Sign,Open Sans Semibold,30,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,27,247,1
+Style: Bottom Sign,Open Sans Semibold,30,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,1,27,27,120,1
+Style: Boing Sign,Open Sans Semibold,30,&H000D3C60,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,533,27,80,1
+Style: Town Sign,Open Sans Semibold,27,&H0044003B,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,573,13,24,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.00,Main Dialogue,Koharu,0,0,0,,Did we get that again?
+Dialogue: 0,0:01:30.42,0:01:37.90,Episode Title Collaboration,Sign,0,0,0,,{\fad(500,500)}Collaboration #10
+Dialogue: 0,0:01:30.42,0:01:37.90,Episode Title,Sign,0,0,0,,{\fad(500,500)\c&HD6ACFE&}Let's {\c&H78e2ad&}Play {\c&H76f0ff&}with {\c&H5051da&}Beauty {\c&H78e2ad&}Salons \N{\c&Hc2c2c6&}and {\c&H9c7d5a&}Comic {\c&H9030f3&}Haiku
+Dialogue: 0,0:01:33.49,0:01:35.41,Main Dialogue Top,Hina,0,0,0,,Kanon-chan, what's wrong?
+Dialogue: 0,0:01:35.41,0:01:38.11,Main Dialogue Top,Kanon,0,0,0,,My bangs were cut too short...
+Dialogue: 0,0:01:38.11,0:01:39.41,Main Dialogue Top,Hina,0,0,0,,Ah. So they were.
+Dialogue: 0,0:01:39.41,0:01:43.52,Main Dialogue,Hina,0,0,0,,Um... I know how you feel, but cheer up.
+Dialogue: 0,0:01:43.52,0:01:47.79,Main Dialogue,Kanon,0,0,0,,I'll do everything in my power to make \Nthat beauty salon go out of business!
+Dialogue: 0,0:01:47.79,0:01:50.04,Main Dialogue,Hina,0,0,0,,I know how you feel, but calm down!
+Dialogue: 0,0:01:50.04,0:01:51.80,Main Dialogue,Rin,0,0,0,,Is it really worth getting so down about?
+Dialogue: 0,0:01:51.80,0:01:55.34,Main Dialogue,Kanon,0,0,0,,Of course it is! A girl's hair is her life!
+Dialogue: 0,0:01:55.34,0:01:58.02,Main Dialogue,Rin,0,0,0,,I really don't think it's anything to worry about.
+Dialogue: 0,0:01:58.02,0:02:00.43,Main Dialogue,Rin,0,0,0,,In fact, I think you look cuter this way.
+Dialogue: 0,0:02:00.43,0:02:02.55,Main Dialogue,Kanon,0,0,0,,Really? How so?
+Dialogue: 0,0:02:02.55,0:02:05.20,Main Dialogue,Rin,0,0,0,,You look younger with short bangs!
+Dialogue: 0,0:02:05.20,0:02:08.02,Main Dialogue,Rin,0,0,0,,Or I should say "even younger"?
+Dialogue: 0,0:02:08.82,0:02:11.45,Main Dialogue,Hina,0,0,0,,What's the point of making her \Neven more depressed?
+Dialogue: 0,0:02:12.02,0:02:15.05,Main Dialogue,Tomomi,0,0,0,,What's this? Going for a \Nnew look, Comrade Kanon?
+Dialogue: 0,0:02:15.43,0:02:16.03,Main Dialogue,Kanon,0,0,0,,I guess...
+Dialogue: 0,0:02:16.03,0:02:19.11,Main Dialogue,Tomomi,0,0,0,,I think it suits you well. It's cute!
+Dialogue: 0,0:02:19.11,0:02:21.95,Main Dialogue,Kanon,0,0,0,,I don't... need any more of that.
+Dialogue: 0,0:02:21.95,0:02:23.89,Main Dialogue,Tomomi,0,0,0,,You seem fed up with something.
+Dialogue: 0,0:02:23.89,0:02:25.20,Main Dialogue,Tomomi,0,0,0,,I see... It's true that
+Dialogue: 0,0:02:25.20,0:02:28.78,Main Dialogue,Tomomi,0,0,0,,girls are creatures who spout "Cute!" reflexively,
+Dialogue: 0,0:02:28.78,0:02:31.45,Main Dialogue,Tomomi,0,0,0,,even about things that aren't cute at all.
+Dialogue: 0,0:02:31.45,0:02:35.34,Main Dialogue,Tomomi,0,0,0,,But I sincerely think you are cute, Comrade.
+Dialogue: 0,0:02:35.34,0:02:36.81,Main Dialogue,Kanon,0,0,0,,Thanks...
+Dialogue: 0,0:02:36.99,0:02:40.05,Main Dialogue,Yui,0,0,0,,People are reacting to your haircut.
+Dialogue: 0,0:02:40.05,0:02:41.78,Main Dialogue,Yui,0,0,0,,That's something, anyway.
+Dialogue: 0,0:02:41.78,0:02:44.18,Main Dialogue,Hina,0,0,0,,It's sad when nobody notices.
+Dialogue: 0,0:02:44.18,0:02:46.71,Main Dialogue,Yui,0,0,0,,I get my hair trimmed pretty frequently.
+Dialogue: 0,0:02:46.71,0:02:50.02,Main Dialogue,Yui,0,0,0,,But since it's always long, \Nnobody ever notices.
+Dialogue: 0,0:02:50.02,0:02:52.15,Main Dialogue,Hina,0,0,0,,I'm the same way.
+Dialogue: 0,0:02:52.91,0:02:56.84,Main Dialogue,Yui,0,0,0,,In the first place, my hair grows fast.
+Dialogue: 0,0:02:56.84,0:02:59.61,Main Dialogue,Yui,0,0,0,,I wonder if I have a dirty mind?
+Dialogue: 0,0:02:59.61,0:03:01.01,Main Dialogue,Hina,0,0,0,,Don't ask me that.
+Dialogue: 0,0:03:01.61,0:03:06.79,Main Dialogue,Koharu,0,0,0,,Did you know? They say if you have \Na dirty mind, your hair grows faster!
+Dialogue: 0,0:03:06.79,0:03:08.27,Main Dialogue,Yua,0,0,0,,I've heard that before!
+Dialogue: 0,0:03:08.27,0:03:12.24,Main Dialogue,Aoi,0,0,0,,Then Yua-senpai must cut her hair every day.
+Dialogue: 0,0:03:12.24,0:03:14.25,Main Dialogue,Yua,0,0,0,,Hey, hey, hey! I do not!
+Dialogue: 0,0:03:14.25,0:03:19.33,Main Dialogue,Hiina,0,0,0,,Then in those weeks between the end of our \Nfirst year and the beginning of our second,
+Dialogue: 0,0:03:19.33,0:03:23.76,Main Dialogue,Hiina,0,0,0,,Aoi must have been focusing on dirty thoughts.
+Dialogue: 0,0:03:23.76,0:03:25.01,Main Dialogue,Aoi,0,0,0,,Kopochin!
+Dialogue: 0,0:03:25.01,0:03:26.37,Main Dialogue,Yua,0,0,0,,Two balls!
+Dialogue: 0,0:03:28.30,0:03:33.10,Main Dialogue,Rin,0,0,0,,All right, today, we'd like to think of a \N"new beauty salon" with these members!
+Dialogue: 0,0:03:33.10,0:03:33.64,Main Dialogue,Yua,0,0,0,,Okay!
+Dialogue: 0,0:03:33.64,0:03:34.44,Main Dialogue,Yui,0,0,0,,Okay.
+Dialogue: 0,0:03:35.02,0:03:35.70,Main Dialogue,Rin,0,0,0,,Okay, I'll go.
+Dialogue: 0,0:03:35.70,0:03:36.84,Main Dialogue,Yui,0,0,0,,Go, go.
+Dialogue: 0,0:03:36.34,0:03:40.19,Main Dialogue,Rin,0,0,0,,All right. Um, my "new beauty salon."
+Dialogue: 0,0:03:40.19,0:03:43.37,Main Dialogue,Rin,0,0,0,,The hairdresser has a short temper,
+Dialogue: 0,0:03:43.37,0:03:45.54,Main Dialogue,Rin,0,0,0,,and he gets angry really easily.
+Dialogue: 0,0:03:45.54,0:03:47.12,Main Dialogue,Rin,0,0,0,,As he's snipping, he snaps.
+Dialogue: 0,0:03:47.94,0:03:49.32,Main Dialogue,Rin,0,0,0,,Tomomi-san laughed!
+Dialogue: 0,0:03:49.32,0:03:50.54,Main Dialogue,Rin,0,0,0,,As he's snipping, he snaps!
+Dialogue: 0,0:03:50.54,0:03:51.79,Main Dialogue,Tomomi,0,0,0,,That's so stupid!
+Dialogue: 0,0:03:52.30,0:03:55.13,Main Dialogue,Yui,0,0,0,,I don't really understand \NTomomi-san's sense of humor.
+Dialogue: 0,0:03:55.13,0:03:58.21,Main Dialogue,Rin,0,0,0,,But I'm happy! Tomomi-san laughed!
+Dialogue: 0,0:03:58.21,0:04:01.53,Main Dialogue,Tomomi,0,0,0,,You sort of... caught me by surprise.
+Dialogue: 0,0:04:01.53,0:04:03.63,Main Dialogue,Tomomi,0,0,0,,To be honest, it was funny.
+Dialogue: 0,0:04:03.63,0:04:04.96,Main Dialogue,Rin,0,0,0,,Yay!
+Dialogue: 0,0:04:04.96,0:04:06.73,Main Dialogue,Yui,0,0,0,,To be honest?
+Dialogue: 0,0:04:07.58,0:04:10.61,Main Dialogue,Rin,0,0,0,,Isn't anyone going to try to spoil this mood?
+Dialogue: 0,0:04:10.61,0:04:11.89,Main Dialogue,Tomomi,0,0,0,,Someone from that field can do it.
+Dialogue: 0,0:04:11.89,0:04:13.96,Main Dialogue,Rin,0,0,0,,Yeah, over there. One from Yui-san's field.
+Dialogue: 0,0:04:13.96,0:04:15.70,Main Dialogue,Yui,0,0,0,,Me? You singled me out, huh?
+Dialogue: 0,0:04:15.70,0:04:18.32,Main Dialogue,Rin,0,0,0,,Yui-san's "new beauty salon."
+Dialogue: 0,0:04:18.32,0:04:20.36,Main Dialogue,Yui,0,0,0,,As they're shampooing your hair,
+Dialogue: 0,0:04:20.36,0:04:26.16,Main Dialogue,Yui,0,0,0,,they ask right in your ear, "This feel good\Nfor ya?" and "This feel good for ya?
+Dialogue: 0,0:04:27.09,0:04:30.07,Main Dialogue,Tomomi,0,0,0,,Why do they speak with a provincial accent?
+Dialogue: 0,0:04:30.07,0:04:34.15,Main Dialogue,Yui,0,0,0,,Okay, which is better? "Does this feel good?"
+Dialogue: 0,0:04:34.15,0:04:36.00,Main Dialogue,Yui,0,0,0,,Or "This feel good for ya?"
+Dialogue: 0,0:04:36.00,0:04:37.78,Main Dialogue,Yua,0,0,0,,I like "This feel good for ya" better!
+Dialogue: 0,0:04:36.41,0:04:37.90,Main Dialogue,Rin,0,0,0,,"This feel good for ya"!
+Dialogue: 0,0:04:37.78,0:04:38.90,Main Dialogue,Yua,0,0,0,,"This feel good for ya?"
+Dialogue: 0,0:04:38.33,0:04:40.27,Main Dialogue,Rin,0,0,0,,I like "This feel good for ya"!
+Dialogue: 0,0:04:38.90,0:04:41.00,Main Dialogue,Yui,0,0,0,,So that is better? In the end?
+Dialogue: 0,0:04:43.09,0:04:44.05,Main Dialogue,Girl,0,0,0,,Okay, next...
+Dialogue: 0,0:04:44.05,0:04:44.97,Main Dialogue,,0,0,0,,I'll go.
+Dialogue: 0,0:04:44.54,0:04:46.78,Main Dialogue,Rin,0,0,0,,Okay, Tomomi-san's "new beauty salon."
+Dialogue: 0,0:04:46.78,0:04:49.51,Main Dialogue,Tomomi,0,0,0,,Your hairstyle is decided by a slot machine.
+Dialogue: 0,0:04:50.58,0:04:53.45,Main Dialogue,Tomomi,0,0,0,,There's a slot machine at the entrance, \Nand when you pull the lever,
+Dialogue: 0,0:04:53.45,0:04:59.55,Main Dialogue,Tomomi,0,0,0,,the machine chooses your cut for \Nyour bangs, your sides, and the back.
+Dialogue: 0,0:04:53.73,0:05:03.36,Haircut Sign 2,Sign,0,0,0,,Mohawk             Sideburns\NSemi-short         Pigtails\NCrew Cut           Shaved Sideburns\NBar code
+Dialogue: 0,0:04:53.73,0:05:03.36,Haircut Sign 1,Sign,0,0,0,,Front      Sides      Back
+Dialogue: 0,0:04:59.55,0:05:03.36,Main Dialogue,Tomomi,0,0,0,,"Bowl cut" and "shaved off" are in there, too.
+Dialogue: 0,0:05:03.36,0:05:05.34,Main Dialogue,Yui,0,0,0,,But depending on the combination...
+Dialogue: 0,0:05:05.34,0:05:08.14,Main Dialogue,Tomomi,0,0,0,,Well, you could end up with a new hairstyle.
+Dialogue: 0,0:05:07.07,0:05:08.92,Main Dialogue,Yui,0,0,0,,Like totally shaved in the back...
+Dialogue: 0,0:05:08.92,0:05:11.38,Main Dialogue,Rin,0,0,0,,But leaving the sides, and long in the front.
+Dialogue: 0,0:05:11.38,0:05:12.72,Main Dialogue,Yui,0,0,0,,That's possible.
+Dialogue: 0,0:05:12.72,0:05:14.22,Main Dialogue,,0,0,0,,Oh, like *****?
+Dialogue: 0,0:05:15.14,0:05:17.21,Main Dialogue,Yua,0,0,0,,Maybe that's how he decided on his hairstyle.
+Dialogue: 0,0:05:17.21,0:05:18.84,Main Dialogue,Girl,0,0,0,,By slot machine?
+Dialogue: 0,0:05:18.84,0:05:20.73,Main Dialogue,Tomomi,0,0,0,,He's a gambler, huh?
+Dialogue: 0,0:05:20.73,0:05:21.88,Main Dialogue,Hiina,0,0,0,,Isn't that crazy?
+Dialogue: 0,0:05:21.88,0:05:23.39,Main Dialogue,Girl,0,0,0,,It's like testing your luck.
+Dialogue: 0,0:05:22.85,0:05:25.94,Main Dialogue,Tomomi,0,0,0,,Yeah. when you're ready to turn over a new leaf,
+Dialogue: 0,0:05:25.94,0:05:27.33,Main Dialogue,Tomomi,0,0,0,,instead of buying a fortune...
+Dialogue: 0,0:05:27.33,0:05:29.47,Main Dialogue,Rin,0,0,0,,Instead of buying a fortune, \Nyou get this shaved.
+Dialogue: 0,0:05:29.47,0:05:29.85,Main Dialogue,,0,0,0,,Right.
+Dialogue: 0,0:05:29.85,0:05:32.28,Main Dialogue,Rin,0,0,0,,Tomomi-san gets her sides shaved, \Nand her bangs are...
+Dialogue: 0,0:05:32.28,0:05:34.48,Main Dialogue,Tomomi,0,0,0,,What's happening with my hair?
+Dialogue: 0,0:05:33.74,0:05:35.96,Main Dialogue,Rin,0,0,0,,In the end, you'd be bald...
+Dialogue: 0,0:05:35.96,0:05:37.11,Main Dialogue,Tomomi,0,0,0,,Knock it off.
+Dialogue: 0,0:05:37.11,0:05:39.44,Main Dialogue,Hiina,0,0,0,,Sorry, but I just thought "gross" to myself.
+Dialogue: 0,0:05:40.19,0:05:41.98,Main Dialogue,Girl,0,0,0,,Thinking of Tomomi-san like that...
+Dialogue: 0,0:05:40.76,0:05:43.00,Main Dialogue,Tomomi,0,0,0,,Don't imagine someone bald and laugh!
+Dialogue: 0,0:05:43.00,0:05:44.28,Main Dialogue,Yui,0,0,0,,Sorry.
+Dialogue: 0,0:05:44.28,0:05:45.13,Main Dialogue,Rina,0,0,0,,Hiina-san!
+Dialogue: 0,0:05:45.13,0:05:46.69,Main Dialogue,Yui,0,0,0,,Sorry Rin-chan said that.
+Dialogue: 0,0:05:46.69,0:05:47.97,Main Dialogue,Rin,0,0,0,,Okay, let's continue.
+Dialogue: 0,0:05:47.97,0:05:48.91,Main Dialogue,Hiina,0,0,0,,Okay, I'll go.
+Dialogue: 0,0:05:48.91,0:05:51.16,Main Dialogue,Rin,0,0,0,,All right, Hiina-san's "new beauty salon."
+Dialogue: 0,0:05:51.16,0:05:55.08,Main Dialogue,Hiina,0,0,0,,The stylist only talks about his son, \Nwho recently became a comedian.
+Dialogue: 0,0:05:56.01,0:06:01.38,Main Dialogue,Hiina,0,0,0,,The famous stylist talks about his \Ncomedian son the entire time,
+Dialogue: 0,0:06:01.38,0:06:03.58,Main Dialogue,Hiina,0,0,0,,but the son isn't very successful.
+Dialogue: 0,0:06:03.58,0:06:05.02,Main Dialogue,Hiina,0,0,0,,He tells you all about how
+Dialogue: 0,0:06:05.02,0:06:07.70,Main Dialogue,Hiina,0,0,0,,he asks people if he's funny and hopes they'll say yes, even if it's a lie,
+Dialogue: 0,0:06:07.70,0:06:09.74,Main Dialogue,Hiina,0,0,0,,but when he was told his son had no chance,
+Dialogue: 0,0:06:09.74,0:06:11.22,Main Dialogue,Hiina,0,0,0,,tears came to his eyes.
+Dialogue: 0,0:06:11.22,0:06:14.03,Main Dialogue,Yua,0,0,0,,He only talks about things that \Nare awkward to respond to.
+Dialogue: 0,0:06:14.03,0:06:15.71,Main Dialogue,Hiina,0,0,0,,Yeah. That's all he talks about.
+Dialogue: 0,0:06:14.57,0:06:16.96,Main Dialogue,Yui,0,0,0,,But the father is a famous stylist, right?
+Dialogue: 0,0:06:16.96,0:06:18.31,Main Dialogue,Hiina,0,0,0,,Yes, he is really popular.
+Dialogue: 0,0:06:18.31,0:06:20.62,Main Dialogue,Tomomi,0,0,0,,Then the father could support his son...
+Dialogue: 0,0:06:20.62,0:06:21.23,Main Dialogue,Yua,0,0,0,,That's true.
+Dialogue: 0,0:06:21.23,0:06:23.26,Main Dialogue,Hiina,0,0,0,,Except there's an older son, too.
+Dialogue: 0,0:06:23.26,0:06:25.12,Main Dialogue,Rin,0,0,0,,It'd be hard, then.
+Dialogue: 0,0:06:23.92,0:06:25.12,Main Dialogue,Hiina,0,0,0,,Yeah, the living expenses...
+Dialogue: 0,0:06:25.12,0:06:26.43,Main Dialogue,Yui,0,0,0,,So the two brothers don't get along.
+Dialogue: 0,0:06:26.43,0:06:27.64,Main Dialogue,Rin,0,0,0,,They don't.
+Dialogue: 0,0:06:27.64,0:06:30.03,Main Dialogue,Hiina,0,0,0,,The father is cut in the middle, \Nbut keeps on cutting hair.
+Dialogue: 0,0:06:30.93,0:06:33.05,Main Dialogue,Rin,0,0,0,,If the father is a famous stylist...
+Dialogue: 0,0:06:33.05,0:06:34.62,Main Dialogue,Yui,0,0,0,,Wait a second.
+Dialogue: 0,0:06:34.62,0:06:36.02,Main Dialogue,Yui,0,0,0,,You got that, didn't you?
+Dialogue: 0,0:06:36.53,0:06:38.20,Main Dialogue,Yua,0,0,0,,Um, the father is cut in the middle...
+Dialogue: 0,0:06:38.20,0:06:40.25,Main Dialogue,Yui,0,0,0,,Not "caught" in the middle, right?
+Dialogue: 0,0:06:39.24,0:06:40.25,Main Dialogue,Yui,0,0,0,,Yeah, not "caught"!
+Dialogue: 0,0:06:40.25,0:06:41.89,Main Dialogue,Yui,0,0,0,,She even did a gesture.
+Dialogue: 0,0:06:42.51,0:06:44.24,Main Dialogue,Tomomi,0,0,0,,I didn't catch that.
+Dialogue: 0,0:06:43.54,0:06:44.68,Main Dialogue,Tomomi,0,0,0,,Yeah.
+Dialogue: 0,0:06:44.24,0:06:46.71,Main Dialogue,Tomomi,0,0,0,,I think I liked Rin-san's gag better.
+Dialogue: 0,0:06:47.17,0:06:48.74,Main Dialogue,Rin,0,0,0,,Okay. Maybe I'll go.
+Dialogue: 0,0:06:49.37,0:06:49.88,Main Dialogue,Yua,0,0,0,,Bring it!
+Dialogue: 0,0:06:49.88,0:06:52.59,Main Dialogue,Rin,0,0,0,,My "new hair salon."
+Dialogue: 0,0:06:52.59,0:06:56.93,Main Dialogue,Rin,0,0,0,,The hair iron is one of those machines \N that makes hot sandwiches.
+Dialogue: 0,0:06:57.76,0:06:58.89,Main Dialogue,Yui,0,0,0,,She laughed...
+Dialogue: 0,0:06:58.89,0:07:00.39,Main Dialogue,Hiina,0,0,0,,She laughed at her own joke.
+Dialogue: 0,0:06:59.54,0:07:00.93,Main Dialogue,Yui,0,0,0,,She laughed at her own joke.
+Dialogue: 0,0:07:02.79,0:07:05.15,Main Dialogue,Yui,0,0,0,,That was totally an invitation \Nfor everyone to laugh.
+Dialogue: 0,0:07:04.27,0:07:06.04,Main Dialogue,Yua,0,0,0,,She looked so smug!
+Dialogue: 0,0:07:06.77,0:07:09.64,Main Dialogue,Rin,0,0,0,,No, you know those machines that \Nmake hot sandwiches, right?
+Dialogue: 0,0:07:09.64,0:07:14.40,Main Dialogue,Rin,0,0,0,,You use that as a hair iron, too, \Nand kill two birds with one stone.
+Dialogue: 0,0:07:14.40,0:07:17.16,Main Dialogue,Rin,0,0,0,,And when you use it, you can smell butter!
+Dialogue: 0,0:07:17.57,0:07:18.62,Main Dialogue,Rin,0,0,0,,It smells delicious!
+Dialogue: 0,0:07:18.62,0:07:19.37,Main Dialogue,Yua,0,0,0,,Wow!
+Dialogue: 0,0:07:20.17,0:07:22.26,Main Dialogue,Yui,0,0,0,,You must be happy, huh, Rin-chan?
+Dialogue: 0,0:07:22.26,0:07:23.64,Main Dialogue,Hiina,0,0,0,,Good for you.
+Dialogue: 0,0:07:22.26,0:07:24.32,Main Dialogue,Yui,0,0,0,,Rin-chan, you must be happy.
+Dialogue: 0,0:07:23.64,0:07:25.50,Main Dialogue,Yua,0,0,0,,Good for you!
+Dialogue: 0,0:07:24.78,0:07:26.46,Main Dialogue,Rin,0,0,0,,Yua-san, what is that?
+Dialogue: 0,0:07:26.46,0:07:28.55,Main Dialogue,Yua,0,0,0,,I pretended to think it was funny!
+Dialogue: 0,0:07:28.55,0:07:31.06,Main Dialogue,Hiina,0,0,0,,Does she laugh at things easily?
+Dialogue: 0,0:07:31.06,0:07:32.52,Main Dialogue,Yua,0,0,0,,Shut up!
+Dialogue: 0,0:07:32.52,0:07:33.32,Main Dialogue,Hiina,0,0,0,,She does.
+Dialogue: 0,0:07:33.32,0:07:35.41,Main Dialogue,Rin,0,0,0,,My image is that she'll laugh at anything.
+Dialogue: 0,0:07:35.41,0:07:36.77,Main Dialogue,Tomomi,0,0,0,,Like at the cigarette shop...
+Dialogue: 0,0:07:38.20,0:07:40.75,Main Dialogue,Yui,0,0,0,,What about the cigarette shop? \NWhat about the cigarette shop?
+Dialogue: 0,0:07:40.75,0:07:41.69,Main Dialogue,Hiina,0,0,0,,What's this about?
+Dialogue: 0,0:07:41.29,0:07:43.03,Main Dialogue,Yui,0,0,0,,Tomomi-san, finish what you say.
+Dialogue: 0,0:07:41.69,0:07:43.03,Main Dialogue,Tomomi,0,0,0,,When I was little,
+Dialogue: 0,0:07:43.03,0:07:47.74,Main Dialogue,Tomomi,0,0,0,,the lady at the register at the \Ncigarette shop was like that.
+Dialogue: 0,0:07:44.85,0:07:50.44,Tobacco Sign,Sign,0,0,0,,Cigarettes
+Dialogue: 0,0:07:47.74,0:07:50.44,Main Dialogue,Tomomi,0,0,0,,She would listen to anything.
+Dialogue: 0,0:07:50.44,0:07:52.58,Main Dialogue,Yua,0,0,0,,Whatever you said, she'd laugh?
+Dialogue: 0,0:07:51.56,0:07:54.14,Main Dialogue,Tomomi,0,0,0,,Anything you said, she'd say, "Oh, how funny."
+Dialogue: 0,0:07:54.14,0:07:57.00,Main Dialogue,Rin,0,0,0,,Okay, anyone want to ruin this mood?
+Dialogue: 0,0:07:57.53,0:07:59.24,Main Dialogue,Yui,0,0,0,,Why do you say that after everything?
+Dialogue: 0,0:07:59.24,0:08:01.77,Main Dialogue,Yua,0,0,0,,Why do you want to destroy everything we do?
+Dialogue: 0,0:08:00.70,0:08:02.60,Main Dialogue,Tomomi,0,0,0,,Nothing's coming out of it.
+Dialogue: 0,0:08:01.77,0:08:02.87,Main Dialogue,Yui,0,0,0,,Things were so peaceful!
+Dialogue: 0,0:08:04.75,0:08:05.81,Main Dialogue,Yua,0,0,0,,Okay!
+Dialogue: 0,0:08:05.81,0:08:08.05,Main Dialogue,Rin,0,0,0,,All right, Yua-san's "new beauty salon."
+Dialogue: 0,0:08:08.76,0:08:11.63,Main Dialogue,Yua,0,0,0,,They strip you naked to give you a shampoo.
+Dialogue: 0,0:08:11.63,0:08:15.19,Main Dialogue,Yui,0,0,0,,They don't get naked, but they strip {\i1}us{\i0} naked?
+Dialogue: 0,0:08:13.98,0:08:15.19,Main Dialogue,Yui,0,0,0,,We're stripped naked.
+Dialogue: 0,0:08:15.19,0:08:17.22,Main Dialogue,Tomomi,0,0,0,,I wouldn't want them to be naked, either!
+Dialogue: 0,0:08:17.22,0:08:20.05,Main Dialogue,Yua,0,0,0,,They don't have a hair-washing chair.
+Dialogue: 0,0:08:20.05,0:08:23.29,Main Dialogue,Yua,0,0,0,,Yeah. So they take you to \Na place like a shower room.
+Dialogue: 0,0:08:23.29,0:08:26.33,Main Dialogue,Yua,0,0,0,,Then they take off all your \Nclothes and give you a shampoo.
+Dialogue: 0,0:08:26.33,0:08:29.21,Main Dialogue,Yua,0,0,0,,So of course the hair stylist gets naked, too.
+Dialogue: 0,0:08:27.23,0:08:32.03,Censorship Sign,Sign,0,0,0,,Censored
+Dialogue: 0,0:08:29.21,0:08:32.03,Main Dialogue,Yua,0,0,0,,But they do cover your face with a cloth.
+Dialogue: 0,0:08:32.03,0:08:34.38,Main Dialogue,Hiina,0,0,0,,Look, are you...
+Dialogue: 0,0:08:32.96,0:08:34.38,Main Dialogue,Tomomi,0,0,0,,Is there a point to that?
+Dialogue: 0,0:08:34.38,0:08:37.74,Main Dialogue,Hiina,0,0,0,,Are you aware you're saying something pretty risqué?
+Dialogue: 0,0:08:34.80,0:08:35.79,Main Dialogue,Yui,0,0,0,,It's okay to say that?
+Dialogue: 0,0:08:37.74,0:08:39.69,Main Dialogue,Yui,0,0,0,,What are they supposed to do about the visual?
+Dialogue: 0,0:08:39.69,0:08:41.80,Main Dialogue,Yui,0,0,0,,Show a picture with mosaics all over it?
+Dialogue: 0,0:08:41.80,0:08:43.24,Main Dialogue,Yua,0,0,0,,Yes, please. Please add mosaics.
+Dialogue: 0,0:08:43.24,0:08:44.05,Main Dialogue,Rin,0,0,0,,That's bad!
+Dialogue: 0,0:08:44.05,0:08:46.29,Main Dialogue,Rin,0,0,0,,It's okay. They can hide it with steam.
+Dialogue: 0,0:08:44.88,0:08:46.29,Main Dialogue,Yui,0,0,0,,Yeah, hide everything with steam.
+Dialogue: 0,0:08:46.29,0:08:48.49,Main Dialogue,Hiina,0,0,0,,I can't say much in detail, \Nbut that has a "soap"-like feel to it.
+Dialogue: 0,0:08:48.49,0:08:49.96,Main Dialogue,Yua,0,0,0,,A cloth would cover your face...
+Dialogue: 0,0:08:49.96,0:08:51.64,Main Dialogue,Yui,0,0,0,,That's a totally different kind of shop.
+Dialogue: 0,0:08:50.74,0:08:52.89,Main Dialogue,Tomomi,0,0,0,,Let's cover a little more than the face.
+Dialogue: 0,0:08:52.89,0:08:55.34,Main Dialogue,Tomomi,0,0,0,,In the first place, the face \Ndoesn't need a cloth.
+Dialogue: 0,0:08:55.34,0:08:57.66,Main Dialogue,Rin,0,0,0,,Yeah, you don't. No cloth. Not for the face.
+Dialogue: 0,0:08:57.01,0:08:58.76,Main Dialogue,Yui,0,0,0,,Let's cover up the Devil's Triangle.
+Dialogue: 0,0:08:59.68,0:09:00.95,Main Dialogue,Yua,0,0,0,,That's new, right?
+Dialogue: 0,0:09:00.95,0:09:02.15,Main Dialogue,Tomomi,0,0,0,,That's new.
+Dialogue: 0,0:09:01.31,0:09:03.43,Main Dialogue,Rin,0,0,0,,Well, it certainly is new, but...
+Dialogue: 0,0:09:03.43,0:09:05.03,Main Dialogue,Hiina,0,0,0,,Yua, are you okay with that character?
+Dialogue: 0,0:09:05.03,0:09:06.99,Main Dialogue,Yua,0,0,0,,Well, dirty jokes are all I have left.
+Dialogue: 0,0:09:06.99,0:09:08.33,Main Dialogue,Hiina,0,0,0,,Okay, tell us all of them.
+Dialogue: 0,0:09:08.33,0:09:09.40,Main Dialogue,Yua,0,0,0,,Really? Okay, me!
+Dialogue: 0,0:09:09.40,0:09:10.20,Main Dialogue,Hiina,0,0,0,,All right.
+Dialogue: 0,0:09:09.74,0:09:10.35,Main Dialogue,Yui,0,0,0,,Okay.
+Dialogue: 0,0:09:10.35,0:09:12.23,Main Dialogue,Yua,0,0,0,,All right, my "new beauty salon."
+Dialogue: 0,0:09:12.23,0:09:15.78,Main Dialogue,Yua,0,0,0,,When they wash your hair, \Nyou have to sit on a delivery bed.
+Dialogue: 0,0:09:17.58,0:09:19.03,Main Dialogue,Hiina,0,0,0,,Your ideas are so terrible.
+Dialogue: 0,0:09:19.03,0:09:19.63,Main Dialogue,Rin,0,0,0,,Wait...
+Dialogue: 0,0:09:19.63,0:09:21.12,Main Dialogue,Yua,0,0,0,,They say, "This way,"
+Dialogue: 0,0:09:21.12,0:09:23.37,Main Dialogue,Yua,0,0,0,,and lead you past the chairs to a delivery bed.
+Dialogue: 0,0:09:23.37,0:09:26.69,Main Dialogue,Yua,0,0,0,,Your bottom half has nothing \Nto do with washing your hair,
+Dialogue: 0,0:09:26.69,0:09:29.63,Main Dialogue,Yua,0,0,0,,but they wash it while you're \Nin an embarrassing pose.
+Dialogue: 0,0:09:28.77,0:09:29.63,Main Dialogue,Rin,0,0,0,,Awful!
+Dialogue: 0,0:09:29.63,0:09:30.44,Main Dialogue,Hiina,0,0,0,,Is this okay?
+Dialogue: 0,0:09:30.44,0:09:33.82,Main Dialogue,Hiina,0,0,0,,Now people are going to search \N"Nishi Asuka delivery bed."
+Dialogue: 0,0:09:32.41,0:09:33.30,Main Dialogue,Yua,0,0,0,,No way!
+Dialogue: 0,0:09:34.48,0:09:36.65,Main Dialogue,Tomomi,0,0,0,,People will make photos of\Nyou on one if you say that.
+Dialogue: 0,0:09:36.65,0:09:38.22,Main Dialogue,Rin,0,0,0,,Yeah, shopped photos.
+Dialogue: 0,0:09:38.22,0:09:39.36,Main Dialogue,Hiina,0,0,0,,Don't come crying to us.
+Dialogue: 0,0:09:39.36,0:09:41.22,Main Dialogue,Yua,0,0,0,,Don't say "shopped photos"!
+Dialogue: 0,0:09:41.69,0:09:43.56,Main Dialogue,Yua,0,0,0,,I'd want them to make it with Yua.
+Dialogue: 0,0:09:43.56,0:09:44.84,Main Dialogue,Rin,0,0,0,,This is your character?!
+Dialogue: 0,0:09:44.84,0:09:45.64,Main Dialogue,Rin,0,0,0,,Poor Yua!
+Dialogue: 0,0:09:45.64,0:09:46.71,Main Dialogue,Tomomi,0,0,0,,You're terrible!
+Dialogue: 0,0:09:46.71,0:09:48.27,Main Dialogue,Yui,0,0,0,,Are you begging them to do it?
+Dialogue: 0,0:09:48.27,0:09:49.69,Main Dialogue,Hiina,0,0,0,,You "want" them to?
+Dialogue: 0,0:09:48.71,0:09:49.69,Main Dialogue,Rin,0,0,0,,Terrible!
+Dialogue: 0,0:09:51.98,0:09:55.49,Chicks Sign,Sign,0,0,0,,Chicks
+Dialogue: 0,0:09:52.60,0:09:54.41,Main Dialogue,Aoi,0,0,0,,Looks like we start with chicks.
+Dialogue: 0,0:09:53.39,0:09:54.41,Main Dialogue,Hiina,0,0,0,,Chicks!
+Dialogue: 0,0:09:54.41,0:09:55.49,Main Dialogue,Aoi,0,0,0,,Chicks?
+Dialogue: 0,0:09:54.62,0:09:55.49,Main Dialogue,Koharu,0,0,0,,Chicks!
+Dialogue: 0,0:09:55.49,0:09:57.41,Main Dialogue,Koharu,0,0,0,,How cute!
+Dialogue: 0,0:09:57.41,0:09:58.24,Main Dialogue,,0,0,0,,I wanna pet them!
+Dialogue: 0,0:09:57.41,0:09:59.41,Main Dialogue,Hiina,0,0,0,,Here. Something's been born.
+Dialogue: 0,0:09:59.41,0:10:00.70,Main Dialogue,Koharu,0,0,0,,So cute!
+Dialogue: 0,0:10:00.70,0:10:01.61,Main Dialogue,Aoi,0,0,0,,Cute!
+Dialogue: 0,0:10:01.61,0:10:03.83,Main Dialogue,Aoi,0,0,0,,It's the beginning of a new life.
+Dialogue: 0,0:10:03.83,0:10:05.45,Main Dialogue,Koharu,0,0,0,,It's going "peep peep."
+Dialogue: 0,0:10:04.90,0:10:07.44,Main Dialogue,Aoi,0,0,0,,It has that newborn smell. Ow! Ow, ow, ow!
+Dialogue: 0,0:10:06.41,0:10:07.44,Main Dialogue,Aoi,0,0,0,,Eww!
+Dialogue: 0,0:10:07.44,0:10:08.62,Main Dialogue,Hiina,0,0,0,,It pooped on me!
+Dialogue: 0,0:10:09.81,0:10:11.92,Main Dialogue,Aoi,0,0,0,,Poop? Is it on you? On your hand?
+Dialogue: 0,0:10:10.40,0:10:11.92,Main Dialogue,Aoi,0,0,0,,Poop, yes!
+Dialogue: 0,0:10:12.26,0:10:13.08,Main Dialogue,,0,0,0,,It fell!
+Dialogue: 0,0:10:13.52,0:10:14.66,Main Dialogue,Hiina,0,0,0,,Wait a second...
+Dialogue: 0,0:10:14.66,0:10:17.44,Main Dialogue,Koharu,0,0,0,,Ah, me too! It pooped! It pooped on me!
+Dialogue: 0,0:10:17.44,0:10:20.05,Main Dialogue,,0,0,0,,Poop... It pooped... It pooped...
+Dialogue: 0,0:10:20.05,0:10:21.67,Main Dialogue,Hiina,0,0,0,,Why? Stop trying to fly high!
+Dialogue: 0,0:10:21.67,0:10:23.35,Main Dialogue,Aoi,0,0,0,,Ow! That's not food!
+Dialogue: 0,0:10:23.35,0:10:24.60,Main Dialogue,Aoi,0,0,0,,I'm not food!
+Dialogue: 0,0:10:25.74,0:10:26.89,Main Dialogue,Yua,0,0,0,,Ow!
+Dialogue: 0,0:10:26.89,0:10:28.51,Main Dialogue,Koharu,0,0,0,,Chicks are cute.
+Dialogue: 0,0:10:28.51,0:10:29.42,Main Dialogue,Hiina,0,0,0,,Sorry.
+Dialogue: 0,0:10:30.09,0:10:31.65,Main Dialogue,Hiina,0,0,0,,Yes, thank you. Thank you.
+Dialogue: 0,0:10:31.65,0:10:33.90,Main Dialogue,Hiina,0,0,0,,Are you okay? Hey...
+Dialogue: 0,0:10:33.90,0:10:35.31,Main Dialogue,Koharu,0,0,0,,Don't, don't, don't!
+Dialogue: 0,0:10:35.31,0:10:36.65,Main Dialogue,Hiina,0,0,0,,She's...
+Dialogue: 0,0:10:36.65,0:10:38.11,Main Dialogue,Aoi,0,0,0,,Poop? Poop?
+Dialogue: 0,0:10:38.11,0:10:39.39,Main Dialogue,Yua,0,0,0,,It pooped on me.
+Dialogue: 0,0:10:40.40,0:10:42.17,Main Dialogue,Yua,0,0,0,,It pooped on my hand.
+Dialogue: 0,0:10:41.36,0:10:43.04,Main Dialogue,Hiina,0,0,0,,Your hand... Your hand...
+Dialogue: 0,0:10:42.72,0:10:45.14,Main Dialogue,Aoi,0,0,0,,It's on you. There's poop on you.
+Dialogue: 0,0:10:46.93,0:10:49.05,Main Dialogue,Yua,0,0,0,,Yeah, it's starting to smell now.
+Dialogue: 0,0:10:49.05,0:10:50.02,Main Dialogue,Aoi,0,0,0,,It smells like ponies.
+Dialogue: 0,0:10:50.02,0:10:50.64,Main Dialogue,Hiina,0,0,0,,Yeah.
+Dialogue: 0,0:10:50.64,0:10:51.92,Main Dialogue,Aoi,0,0,0,,Pretty icky smell.
+Dialogue: 0,0:10:51.92,0:10:53.21,Main Dialogue,Koharu,0,0,0,,What's its name?
+Dialogue: 0,0:10:53.21,0:10:54.67,Main Dialogue,Hiina,0,0,0,,It's Aoi! Aoi!
+Dialogue: 0,0:10:54.67,0:10:56.38,Main Dialogue,Koharu,0,0,0,,Th-Thank you.
+Dialogue: 0,0:10:54.93,0:10:56.08,Main Dialogue,Hiina,0,0,0,,Aoi!
+Dialogue: 0,0:10:57.25,0:10:58.88,Main Dialogue,Hiina,0,0,0,,Not you! Not you.
+Dialogue: 0,0:10:58.88,0:10:59.99,Main Dialogue,Hiina,0,0,0,,Aoi!
+Dialogue: 0,0:10:59.99,0:11:01.08,Main Dialogue,Hiina,0,0,0,,Not you!
+Dialogue: 0,0:11:01.08,0:11:02.50,Main Dialogue,Yua,0,0,0,,Its name is Aoi?
+Dialogue: 0,0:11:01.80,0:11:02.67,Main Dialogue,Hiina,0,0,0,,Aoi!
+Dialogue: 0,0:11:02.67,0:11:04.19,Main Dialogue,Koharu,0,0,0,,It's true. Her name is Aoi.
+Dialogue: 0,0:11:04.19,0:11:04.99,Main Dialogue,Hiina,0,0,0,,Not you!
+Dialogue: 0,0:11:04.99,0:11:06.37,Main Dialogue,Yua,0,0,0,,There are two Aois?
+Dialogue: 0,0:11:07.39,0:11:11.15,Main Dialogue,Koharu,0,0,0,,Aoi-senpai, let's feed Aoi-chan.
+Dialogue: 0,0:11:11.15,0:11:11.99,Main Dialogue,Koharu,0,0,0,,One-two...
+Dialogue: 0,0:11:11.99,0:11:13.75,Main Dialogue,All,0,0,0,,Aoi!
+Dialogue: 0,0:11:14.72,0:11:15.62,Main Dialogue,Yua,0,0,0,,There she is.
+Dialogue: 0,0:11:16.95,0:11:17.99,Main Dialogue,Hiina,0,0,0,,Here she comes.
+Dialogue: 0,0:11:17.55,0:11:19.55,Main Dialogue,Aoi,0,0,0,,You want this, right? Huh?
+Dialogue: 0,0:11:20.43,0:11:21.60,Main Dialogue,Hiina,0,0,0,,Wow!
+Dialogue: 0,0:11:21.60,0:11:22.45,Main Dialogue,Aoi,0,0,0,,She chomped it up.
+Dialogue: 0,0:11:22.45,0:11:23.85,Main Dialogue,Hiina,0,0,0,,Her teeth are weird!
+Dialogue: 0,0:11:23.85,0:11:24.86,Main Dialogue,Hiina,0,0,0,,Aoi?
+Dialogue: 0,0:11:26.10,0:11:26.86,Main Dialogue,,0,0,0,,Hey!
+Dialogue: 0,0:11:27.04,0:11:28.56,Main Dialogue,Aoi,0,0,0,,Give it to her. Give it to her.
+Dialogue: 0,0:11:28.56,0:11:29.68,Main Dialogue,Yua,0,0,0,,Give it to her.
+Dialogue: 0,0:11:29.68,0:11:31.72,Main Dialogue,Yua,0,0,0,,Poor Aoi!
+Dialogue: 0,0:11:31.72,0:11:32.68,Main Dialogue,Aoi,0,0,0,,Her mouth...
+Dialogue: 0,0:11:33.58,0:11:34.88,Main Dialogue,Koharu,0,0,0,,Her mouth is flapping...
+Dialogue: 0,0:11:34.88,0:11:36.54,Main Dialogue,Yua,0,0,0,,You're such a mean girl.
+Dialogue: 0,0:11:36.54,0:11:38.46,Main Dialogue,Hiina,0,0,0,,I kinda feel like training her.
+Dialogue: 0,0:11:37.43,0:11:38.46,Main Dialogue,Aoi,0,0,0,,Is she mad?
+Dialogue: 0,0:11:38.46,0:11:40.24,Main Dialogue,Yua,0,0,0,,Look, she's mad.
+Dialogue: 0,0:11:40.24,0:11:41.81,Main Dialogue,Aoi,0,0,0,,See? She's mad.
+Dialogue: 0,0:11:41.81,0:11:43.88,Main Dialogue,Yua,0,0,0,,Aoi, I'm sorry. Sorry... I'm sorry!
+Dialogue: 0,0:11:43.88,0:11:46.02,Main Dialogue,Aoi,0,0,0,,"Come on, stop bullying me!"
+Dialogue: 0,0:11:47.79,0:11:50.89,Main Dialogue,Hiina,0,0,0,,"'Where do you want to go?' \NMy daughter always says the zoo."
+Dialogue: 0,0:11:50.89,0:11:52.25,Main Dialogue,Hiina,0,0,0,,"Better than field guides..."
+Dialogue: 0,0:11:50.89,0:11:52.82,Main Dialogue,Hiina,0,0,0,,"Bird droppings are the seeds of future forests."
+Dialogue: 0,0:11:52.81,0:11:57.61,Animal Welfare Sign 1,Sign,0,0,0,,Animal Welfare Week                                          Animal Welfare Week\N9/20-26                                                                  9/20-26\N\N"Where do you                                                     You mean to \Nwant to go?"                                                        look at animals, \NMy daughter always                                            but they're looking \Nsays the zoo.                                                        at you.
+Dialogue: 0,0:11:52.82,0:11:55.98,Main Dialogue,Koharu,0,0,0,,Look at that one. "You mean to look at \Nanimals, but they're looking at you."
+Dialogue: 0,0:11:55.98,0:11:57.29,Main Dialogue,Koharu,0,0,0,,They're looking at you!
+Dialogue: 0,0:11:56.43,0:11:57.29,Main Dialogue,Yua,0,0,0,,What does that mean?
+Dialogue: 0,0:11:58.55,0:12:03.11,Main Dialogue,Yua,0,0,0,,All right, let's try thinking of a "new zoo slogan."
+Dialogue: 0,0:12:03.11,0:12:06.99,Main Dialogue,Koharu,0,0,0,,But Yua-senpai, isn't it hard to \Ncome up with things like that?
+Dialogue: 0,0:12:06.99,0:12:10.66,Main Dialogue,Yua,0,0,0,,Hiina came up with an easy game \Nof writing 5-7-5 syllable poems.
+Dialogue: 0,0:12:10.66,0:12:11.79,Main Dialogue,Aoi,0,0,0,,Reliable!
+Dialogue: 0,0:12:11.79,0:12:14.88,Main Dialogue,Yua,0,0,0,,Our guests are Kanon-chan and Hina-chan.
+Dialogue: 0,0:12:14.88,0:12:16.25,Main Dialogue,Hina,0,0,0,,We're glad to be here.
+Dialogue: 0,0:12:16.25,0:12:17.46,Main Dialogue,Kanon,0,0,0,,Please go easy on us.
+Dialogue: 0,0:12:17.46,0:12:19.42,Main Dialogue,Hiina,0,0,0,,I'll explain the rules.
+Dialogue: 0,0:12:19.42,0:12:23.19,Main Dialogue,Hiina,0,0,0,,There are three piles, for the first line, \Nthe second line, and the third line.
+Dialogue: 0,0:12:23.19,0:12:26.80,Main Dialogue,Hiina,0,0,0,,For the first line, you'll randomly \Nchoose one card from the pile.
+Dialogue: 0,0:12:23.51,0:12:46.78,Top Sign,Sign,0,0,0,,First
+Dialogue: 0,0:12:27.15,0:12:30.36,Main Dialogue,Hiina,0,0,0,,One person will be in charge \Nof the second line.
+Dialogue: 0,0:12:27.35,0:12:46.78,Middle Sign,Sign,0,0,0,,Second
+Dialogue: 0,0:12:30.36,0:12:33.15,Main Dialogue,Hiina,0,0,0,,That person will look at the \Nsecond line pile and choose a card
+Dialogue: 0,0:12:33.15,0:12:36.22,Main Dialogue,Hiina,0,0,0,,that seems like it would be funny \Nfollowing the first one.
+Dialogue: 0,0:12:36.22,0:12:37.37,Main Dialogue,Hiina,0,0,0,,For the third line,
+Dialogue: 0,0:12:36.33,0:12:46.78,Bottom Sign,Sign,0,0,0,,Third
+Dialogue: 0,0:12:37.37,0:12:39.29,Main Dialogue,Hiina,0,0,0,,the remaining five people are in charge.
+Dialogue: 0,0:12:39.29,0:12:41.54,Main Dialogue,Hiina,0,0,0,,They'll choose one funny card as the third line
+Dialogue: 0,0:12:41.54,0:12:44.30,Main Dialogue,Hiina,0,0,0,,from among the cards they've been dealt,
+Dialogue: 0,0:12:44.30,0:12:46.78,Main Dialogue,Hiina,0,0,0,,and read them one at a time.
+Dialogue: 0,0:12:46.78,0:12:49.45,Main Dialogue,Yua,0,0,0,,Okay, let's give it a try.
+Dialogue: 0,0:12:49.45,0:12:50.86,Main Dialogue,Girl,0,0,0,,There are a lot of cards.
+Dialogue: 0,0:12:49.83,0:12:51.99,Main Dialogue,Koharu,0,0,0,,We can look at our own cards, right?
+Dialogue: 0,0:12:51.35,0:12:51.99,Main Dialogue,,0,0,0,,Right.
+Dialogue: 0,0:12:51.99,0:12:52.71,Main Dialogue,Hina,0,0,0,,What the heck?
+Dialogue: 0,0:12:52.71,0:12:54.74,Main Dialogue,Hiina,0,0,0,,There are all kinds of lines...
+Dialogue: 0,0:12:54.74,0:12:55.40,Main Dialogue,Koharu,0,0,0,,Awful!
+Dialogue: 0,0:12:55.40,0:12:58.22,Main Dialogue,Yua,0,0,0,,Okay, I'll reveal the first line.
+Dialogue: 0,0:12:58.22,0:12:59.04,Main Dialogue,Hiina,0,0,0,,Okay.
+Dialogue: 0,0:12:59.04,0:13:00.61,Main Dialogue,Yua,0,0,0,,One, two... Flip.
+Dialogue: 0,0:12:59.63,0:13:04.26,Black Signs,Yua,0,0,0,,Riding on horseback
+Dialogue: 0,0:13:01.17,0:13:02.59,Main Dialogue,Yua,0,0,0,,"Riding on horseback."
+Dialogue: 0,0:13:02.59,0:13:03.14,Main Dialogue,Hiina,0,0,0,,I see.
+Dialogue: 0,0:13:03.14,0:13:04.26,Main Dialogue,Yua,0,0,0,,Makes sense. Animals.
+Dialogue: 0,0:13:04.70,0:13:06.43,Main Dialogue,Yua,0,0,0,,I got it! Okay...
+Dialogue: 0,0:13:06.72,0:13:08.48,Main Dialogue,Yua,0,0,0,,"Happy and yet embarrassed."
+Dialogue: 0,0:13:06.89,0:13:11.39,Black Signs,Yua,0,0,0,,{\fs16}Happy and yet \Nembarrassed
+Dialogue: 0,0:13:09.80,0:13:11.39,Main Dialogue,Kanon,0,0,0,,Oh, no!
+Dialogue: 0,0:13:11.39,0:13:12.92,Main Dialogue,Kanon,0,0,0,,No!
+Dialogue: 0,0:13:13.90,0:13:15.03,Main Dialogue,Yua,0,0,0,,It's some kind of...
+Dialogue: 0,0:13:15.03,0:13:18.02,Main Dialogue,Hiina,0,0,0,,This already sounds like something bad!
+Dialogue: 0,0:13:18.02,0:13:19.31,Main Dialogue,Kanon,0,0,0,,But this is all there is.
+Dialogue: 0,0:13:19.31,0:13:20.28,Main Dialogue,Hina,0,0,0,,I'll go with this.
+Dialogue: 0,0:13:19.85,0:13:21.40,Main Dialogue,Kanon,0,0,0,,This is all I can do.
+Dialogue: 0,0:13:21.40,0:13:23.35,Main Dialogue,Yua,0,0,0,,All right, um, Kanon-chan.
+Dialogue: 0,0:13:23.35,0:13:24.44,Main Dialogue,Kanon,0,0,0,,Here I go.
+Dialogue: 0,0:13:24.44,0:13:29.00,Main Dialogue,Kanon,0,0,0,,"Riding on horseback, happy and yet \Nembarrassed... dripping, soaking wet."
+Dialogue: 0,0:13:27.89,0:13:29.95,Black Signs,Kanon,0,0,0,,{\fs16}Dripping, soaking wet
+Dialogue: 0,0:13:29.95,0:13:31.70,Main Dialogue,Yua,0,0,0,,Huh? Is she starting to think like us?
+Dialogue: 0,0:13:31.70,0:13:32.67,Main Dialogue,Kanon,0,0,0,,Huh?
+Dialogue: 0,0:13:32.67,0:13:34.17,Main Dialogue,Aoi,0,0,0,,No, she's higher than we are.
+Dialogue: 0,0:13:34.17,0:13:35.49,Main Dialogue,Kanon,0,0,0,,No, no, no!
+Dialogue: 0,0:13:35.49,0:13:36.73,Main Dialogue,Yua,0,0,0,,What's soaking wet?
+Dialogue: 0,0:13:36.73,0:13:37.79,Main Dialogue,Hina,0,0,0,,You're terrible!
+Dialogue: 0,0:13:37.79,0:13:39.21,Main Dialogue,Kanon,0,0,0,,You're scared of horses...
+Dialogue: 0,0:13:39.21,0:13:39.91,Main Dialogue,Yua,0,0,0,,Uh-huh.
+Dialogue: 0,0:13:39.91,0:13:42.00,Main Dialogue,Kanon,0,0,0,,You're so happy, embarrassed, and scared...
+Dialogue: 0,0:13:42.00,0:13:42.79,Main Dialogue,Hina,0,0,0,,Wet with tears?
+Dialogue: 0,0:13:42.79,0:13:43.56,Main Dialogue,Kanon,0,0,0,,...you pee.
+Dialogue: 0,0:13:44.13,0:13:44.95,Main Dialogue,Hina,0,0,0,,That?!
+Dialogue: 0,0:13:44.95,0:13:46.13,Main Dialogue,Yua,0,0,0,,Pee?
+Dialogue: 0,0:13:46.13,0:13:47.53,Main Dialogue,Koharu,0,0,0,,So your seat is soaking wet.
+Dialogue: 0,0:13:47.53,0:13:48.44,Main Dialogue,Yua,0,0,0,,Soaking wet?
+Dialogue: 0,0:13:48.44,0:13:51.15,Main Dialogue,Kanon,0,0,0,,Where you get so scared, you wet yourself.
+Dialogue: 0,0:13:49.01,0:13:50.68,Main Dialogue,Kanon,0,0,0,,And that's the last line.
+Dialogue: 0,0:13:51.15,0:13:51.86,Main Dialogue,Koharu,0,0,0,,I see.
+Dialogue: 0,0:13:51.15,0:13:53.59,Main Dialogue,Yua,0,0,0,,So the horse ends up soaking wet.
+Dialogue: 0,0:13:53.59,0:13:54.88,Main Dialogue,Kanon,0,0,0,,I guess it would, yeah.
+Dialogue: 0,0:13:54.88,0:13:56.92,Main Dialogue,Yua,0,0,0,,It has a warm back.
+Dialogue: 0,0:13:56.92,0:13:58.43,Main Dialogue,Hiina,0,0,0,,Thank you. Thank you.
+Dialogue: 0,0:13:59.30,0:14:00.85,Main Dialogue,Kanon,0,0,0,,No, that's just weird!
+Dialogue: 0,0:14:01.94,0:14:03.75,Main Dialogue,Yua,0,0,0,,Okay, next... Hina-chan.
+Dialogue: 0,0:14:03.75,0:14:04.78,Main Dialogue,Hina,0,0,0,,Okay.
+Dialogue: 0,0:14:04.78,0:14:09.02,Main Dialogue,Hina,0,0,0,,"Riding on horseback, happy and yet \Nembarrassed... overcome with love."
+Dialogue: 0,0:14:08.66,0:14:10.45,Black Signs,Hina,0,0,0,,{\fs16}Overcome with love
+Dialogue: 0,0:14:09.02,0:14:09.48,Main Dialogue,Girl,0,0,0,,Oh!
+Dialogue: 0,0:14:09.48,0:14:10.45,Main Dialogue,Girl,0,0,0,,Oh, that's nice.
+Dialogue: 0,0:14:10.45,0:14:11.76,Main Dialogue,Girl,0,0,0,,What does it mean?
+Dialogue: 0,0:14:12.55,0:14:13.87,Main Dialogue,Girl,0,0,0,,Please explain.
+Dialogue: 0,0:14:13.87,0:14:16.65,Main Dialogue,Hina,0,0,0,,Well, given what it follows, \Nit might sound weird,
+Dialogue: 0,0:14:16.65,0:14:20.12,Main Dialogue,Hina,0,0,0,,but it's someone riding on a horse \Nto see the person that he loves.
+Dialogue: 0,0:14:20.12,0:14:21.52,Main Dialogue,Girl,0,0,0,,Oh, that kind!
+Dialogue: 0,0:14:20.12,0:14:21.52,Main Dialogue,Koharu,0,0,0,,A prince on a white horse.
+Dialogue: 0,0:14:21.52,0:14:24.13,Main Dialogue,Hina,0,0,0,,It's the story of a prince on a white horse.
+Dialogue: 0,0:14:24.13,0:14:25.28,Main Dialogue,Aoi,0,0,0,,I see.
+Dialogue: 0,0:14:24.73,0:14:25.28,Main Dialogue,Aoi,0,0,0,,Yeah.
+Dialogue: 0,0:14:25.28,0:14:27.52,Main Dialogue,Koharu,0,0,0,,I was imagining something really strange.
+Dialogue: 0,0:14:26.70,0:14:27.52,Main Dialogue,Hina,0,0,0,,I figured!
+Dialogue: 0,0:14:28.40,0:14:29.52,Main Dialogue,Hiina,0,0,0,,You figured!
+Dialogue: 0,0:14:29.52,0:14:31.50,Main Dialogue,Kanon,0,0,0,,But that's not entirely wrong, is it?
+Dialogue: 0,0:14:31.50,0:14:33.39,Main Dialogue,Hina,0,0,0,,I guess there's a double meaning.
+Dialogue: 0,0:14:33.39,0:14:34.89,Main Dialogue,Koharu,0,0,0,,Oh, good!
+Dialogue: 0,0:14:33.39,0:14:34.89,Main Dialogue,Girl,0,0,0,,I see.
+Dialogue: 0,0:14:34.89,0:14:36.45,Main Dialogue,Hina,0,0,0,,I think there are various meanings.
+Dialogue: 0,0:14:35.85,0:14:38.48,Main Dialogue,Kanon,0,0,0,,"Double meaning" is cool. I'm gonna use that.
+Dialogue: 0,0:14:37.57,0:14:38.48,Main Dialogue,Girl,0,0,0,,Yeah.
+Dialogue: 0,0:14:38.48,0:14:39.47,Main Dialogue,Yua,0,0,0,,Okay, next.
+Dialogue: 0,0:14:39.47,0:14:40.38,Main Dialogue,Koharu,0,0,0,,Me.
+Dialogue: 0,0:14:39.74,0:14:40.38,Main Dialogue,Yua,0,0,0,,Koharun.
+Dialogue: 0,0:14:40.38,0:14:42.65,Main Dialogue,Koharu,0,0,0,,Mine is beautiful.
+Dialogue: 0,0:14:42.65,0:14:46.90,Main Dialogue,Koharu,0,0,0,,Um, "Riding on horseback, happy and yet \Nembarrassed... Eat napolitan!"
+Dialogue: 0,0:14:42.65,0:14:46.90,Black Signs,Koharu,0,0,0,,{\fs16}Eat napolitan
+Dialogue: 0,0:14:48.59,0:14:50.81,Main Dialogue,Yua,0,0,0,,Wait, sorry, that's too abstract.
+Dialogue: 0,0:14:50.81,0:14:52.11,Main Dialogue,Hina,0,0,0,,I don't get it.
+Dialogue: 0,0:14:52.11,0:14:53.05,Main Dialogue,Aoi,0,0,0,,How is that beautiful?
+Dialogue: 0,0:14:53.05,0:14:54.74,Main Dialogue,Yua,0,0,0,,I don't get it. \NI don't know if it's beautiful.
+Dialogue: 0,0:14:54.74,0:14:56.33,Main Dialogue,Kanon,0,0,0,,There must have been a better one!
+Dialogue: 0,0:14:56.33,0:14:59.10,Main Dialogue,Koharu,0,0,0,,I thought this one had the best ring to it...
+Dialogue: 0,0:14:59.10,0:15:00.49,Main Dialogue,Hina,0,0,0,,Oh, you just went with the sound?
+Dialogue: 0,0:15:00.49,0:15:02.76,Main Dialogue,Koharu,0,0,0,,The sound. I went with the feeling.
+Dialogue: 0,0:15:02.76,0:15:04.41,Main Dialogue,Yua,0,0,0,,It did sound really beautiful.
+Dialogue: 0,0:15:04.41,0:15:05.05,Main Dialogue,Girl,0,0,0,,Napolitan...
+Dialogue: 0,0:15:05.05,0:15:05.76,Main Dialogue,Girl,0,0,0,,Napolitan.
+Dialogue: 0,0:15:05.76,0:15:07.01,Main Dialogue,Koharu,0,0,0,,It has no meaning.
+Dialogue: 0,0:15:08.05,0:15:09.48,Main Dialogue,Koharu,0,0,0,,You're a little embarrassed,
+Dialogue: 0,0:15:09.48,0:15:12.70,Main Dialogue,Koharu,0,0,0,,but you're eating napolitan while riding a horse.
+Dialogue: 0,0:15:12.70,0:15:13.85,Main Dialogue,Girl,0,0,0,,I don't get it.
+Dialogue: 0,0:15:13.85,0:15:15.73,Main Dialogue,Hina,0,0,0,,You'd get ketchup all over your face.
+Dialogue: 0,0:15:15.73,0:15:18.20,Main Dialogue,Yua,0,0,0,,But I do admit that it has a beautiful ring to it.
+Dialogue: 0,0:15:18.20,0:15:19.19,Main Dialogue,Koharu,0,0,0,,Yeah.
+Dialogue: 0,0:15:19.19,0:15:20.03,Main Dialogue,Yua,0,0,0,,It's beautiful.
+Dialogue: 0,0:15:20.47,0:15:21.37,Main Dialogue,Yua,0,0,0,,Okay.
+Dialogue: 0,0:15:20.81,0:15:23.27,Main Dialogue,Hiina,0,0,0,,What should I do? I don't have many good ones.
+Dialogue: 0,0:15:21.77,0:15:23.27,Main Dialogue,Yua,0,0,0,,Okay, next.
+Dialogue: 0,0:15:23.27,0:15:23.70,Main Dialogue,Hiina,0,0,0,,Me.
+Dialogue: 0,0:15:23.70,0:15:24.48,Main Dialogue,Yua,0,0,0,,Hiina.
+Dialogue: 0,0:15:24.83,0:15:28.91,Main Dialogue,Hiina,0,0,0,,"Riding on horseback, happy and yet \Nembarrassed... Boi-oi-oi-oi-oing!"
+Dialogue: 0,0:15:27.53,0:15:30.57,Black Signs,Hiina,0,0,0,,{\an7\fs16}Boi-oi-oi-oi-oing!
+Dialogue: 0,0:15:31.90,0:15:33.93,Main Dialogue,Kanon,0,0,0,,That's terrible!
+Dialogue: 0,0:15:32.59,0:15:33.93,Main Dialogue,Koharu,0,0,0,,Awful!
+Dialogue: 0,0:15:33.93,0:15:35.95,Main Dialogue,Kanon,0,0,0,,And it doesn't fit the structure, either!
+Dialogue: 0,0:15:35.95,0:15:37.53,Main Dialogue,Koharu,0,0,0,,What does that mean?
+Dialogue: 0,0:15:37.53,0:15:39.12,Main Dialogue,Koharu,0,0,0,,And it's got an exclamation point.
+Dialogue: 0,0:15:39.12,0:15:40.48,Main Dialogue,Hiina,0,0,0,,Yeah. "Boi-oi-oi-oi-oing!"
+Dialogue: 0,0:15:40.48,0:15:41.65,Main Dialogue,Aoi,0,0,0,,That doesn't fit.
+Dialogue: 0,0:15:41.65,0:15:42.38,Main Dialogue,Yua,0,0,0,,Terrible!
+Dialogue: 0,0:15:42.38,0:15:42.87,Main Dialogue,Hiina,0,0,0,,Right?
+Dialogue: 0,0:15:42.87,0:15:44.36,Main Dialogue,Kanon,0,0,0,,But it's got energy...
+Dialogue: 0,0:15:44.10,0:15:45.14,Main Dialogue,Yua,0,0,0,,True.
+Dialogue: 0,0:15:44.36,0:15:45.14,Main Dialogue,Hiina,0,0,0,,Yeah!
+Dialogue: 0,0:15:45.14,0:15:46.24,Main Dialogue,Yua,0,0,0,,With the exclamation point.
+Dialogue: 0,0:15:45.93,0:15:48.63,Main Dialogue,Yua,0,0,0,,It gives you a sense of the horse's motion.
+Dialogue: 0,0:15:46.24,0:15:47.38,Main Dialogue,Girl,0,0,0,,Not bad.
+Dialogue: 0,0:15:48.63,0:15:50.75,Main Dialogue,Kanon,0,0,0,,So the horse is going "boi-oi-oi-oi-oing"?
+Dialogue: 0,0:15:50.75,0:15:51.63,Main Dialogue,Aoi,0,0,0,,I see.
+Dialogue: 0,0:15:51.63,0:15:54.49,Main Dialogue,Koharu,0,0,0,,I was thinking of clothes coming off.
+Dialogue: 0,0:15:53.02,0:15:55.39,Boing Sign,Sign,0,0,0,,Boi-oi-oi-oi-oing!
+Dialogue: 0,0:15:55.39,0:15:56.17,Main Dialogue,Kanon,0,0,0,,The bottoms, too?
+Dialogue: 0,0:15:56.17,0:15:57.34,Main Dialogue,Yua,0,0,0,,Both, yeah.
+Dialogue: 0,0:15:57.34,0:15:58.93,Main Dialogue,Koharu,0,0,0,,Both? It's a double meaning!
+Dialogue: 0,0:15:58.93,0:16:00.26,Main Dialogue,Kanon,0,0,0,,It {\i1}is{\i0} a double meaning!
+Dialogue: 0,0:16:00.26,0:16:01.72,Main Dialogue,Kanon,0,0,0,,That's useful!
+Dialogue: 0,0:16:01.20,0:16:02.08,Main Dialogue,Kanon,0,0,0,,Cool!
+Dialogue: 0,0:16:01.72,0:16:03.15,Main Dialogue,Hina,0,0,0,,That's a convenient expression.
+Dialogue: 0,0:16:02.43,0:16:04.06,Main Dialogue,Kanon,0,0,0,,That really is useful.
+Dialogue: 0,0:16:04.06,0:16:05.22,Main Dialogue,Yua,0,0,0,,Okay, next.
+Dialogue: 0,0:16:05.22,0:16:07.24,Main Dialogue,Aoi,0,0,0,,For the last one, I'm going to be vague.
+Dialogue: 0,0:16:07.24,0:16:08.15,Main Dialogue,Yua,0,0,0,,Vague?
+Dialogue: 0,0:16:08.15,0:16:10.07,Main Dialogue,Aoi,0,0,0,,I'm going to be vague. Here I go.
+Dialogue: 0,0:16:08.94,0:16:10.07,Main Dialogue,Aoi,0,0,0,,What'll it be?
+Dialogue: 0,0:16:10.07,0:16:13.52,Main Dialogue,Aoi,0,0,0,,"Riding on horseback, happy and yet \Nembarrassed... and the mood is right."
+Dialogue: 0,0:16:12.32,0:16:14.74,Black Signs,Aoi,0,0,0,,{\an6\fs16}And the mood is right
+Dialogue: 0,0:16:14.74,0:16:15.36,Main Dialogue,Aoi,0,0,0,,Vague.
+Dialogue: 0,0:16:15.36,0:16:16.64,Main Dialogue,Yua,0,0,0,,I see.
+Dialogue: 0,0:16:16.64,0:16:19.83,Main Dialogue,Koharu,0,0,0,,Why do these all sound kind of lewd?
+Dialogue: 0,0:16:19.83,0:16:23.57,Main Dialogue,Kanon,0,0,0,,Because your mind is full of lewdness.
+Dialogue: 0,0:16:22.49,0:16:23.57,Main Dialogue,Koharu,0,0,0,,It's still filling up.
+Dialogue: 0,0:16:23.57,0:16:24.33,Main Dialogue,Kanon,0,0,0,,It's still filling up?
+Dialogue: 0,0:16:24.33,0:16:26.15,Main Dialogue,Aoi,0,0,0,,The "bottom line" has a \Ndifferent meaning now.
+Dialogue: 0,0:16:26.15,0:16:26.92,Main Dialogue,Yua,0,0,0,,Yeah.
+Dialogue: 0,0:16:27.92,0:16:30.27,Main Dialogue,Kanon,0,0,0,,Who said you could pun on the "last line"?!
+Dialogue: 0,0:16:30.27,0:16:32.33,Main Dialogue,Girl,0,0,0,,The "bottom line" \Nhas a deep meaning here.
+Dialogue: 0,0:16:34.86,0:16:36.39,Main Dialogue,Koharu,0,0,0,,Okay, let's move on.
+Dialogue: 0,0:16:35.44,0:16:36.39,Main Dialogue,Koharu,0,0,0,,Okay.
+Dialogue: 0,0:16:36.39,0:16:37.90,Main Dialogue,Yua,0,0,0,,I'll reveal the first line.
+Dialogue: 0,0:16:37.89,0:16:42.85,Black Signs,Yua,0,0,0,,Indian elephant
+Dialogue: 0,0:16:38.61,0:16:39.87,Main Dialogue,Yua,0,0,0,,"Indian elephant."
+Dialogue: 0,0:16:39.87,0:16:41.77,Main Dialogue,Kanon,0,0,0,,That's kind of...
+Dialogue: 0,0:16:40.93,0:16:41.77,Main Dialogue,Kanon,0,0,0,,Elephant?
+Dialogue: 0,0:16:41.77,0:16:42.85,Main Dialogue,Yua,0,0,0,,Elephant...
+Dialogue: 0,0:16:42.85,0:16:45.34,Main Dialogue,Yua,0,0,0,,"Indian elephant." The second line is...
+Dialogue: 0,0:16:45.35,0:16:46.94,Main Dialogue,Yua,0,0,0,,"Parboiled terribly quickly."
+Dialogue: 0,0:16:47.77,0:16:49.10,Main Dialogue,Koharu,0,0,0,,What's "parboiled"?
+Dialogue: 0,0:16:49.10,0:16:51.48,Main Dialogue,Yua,0,0,0,,Parboiling is when you have hot water, um...
+Dialogue: 0,0:16:51.48,0:16:53.41,Main Dialogue,Hina,0,0,0,,You pass something through hot water.
+Dialogue: 0,0:16:52.89,0:16:53.71,Main Dialogue,Koharu,0,0,0,,Right.
+Dialogue: 0,0:16:53.41,0:16:55.15,Main Dialogue,Kanon,0,0,0,,Like when you're making shabu-shabu.
+Dialogue: 0,0:16:54.52,0:16:55.60,Main Dialogue,Yua,0,0,0,,Right, right.
+Dialogue: 0,0:16:55.60,0:16:57.18,Main Dialogue,Koharu,0,0,0,,So you shabu-shabu it...
+Dialogue: 0,0:16:57.18,0:16:57.63,Main Dialogue,Hina,0,0,0,,Right.
+Dialogue: 0,0:16:57.63,0:16:58.37,Main Dialogue,Aoi,0,0,0,,Sheesh...
+Dialogue: 0,0:16:58.37,0:16:59.45,Main Dialogue,Yua,0,0,0,,I don't have anything.
+Dialogue: 0,0:16:59.45,0:17:00.29,Main Dialogue,Aoi,0,0,0,,I'll go.
+Dialogue: 0,0:17:00.29,0:17:04.37,Main Dialogue,Aoi,0,0,0,,"Indian elephant, parboiled terribly\Nquickly... You stupid dumbass."
+Dialogue: 0,0:17:03.37,0:17:05.87,Black Signs,Aoi,0,0,0,,{\an9\fs16}You stupid dumbass
+Dialogue: 0,0:17:05.87,0:17:07.40,Main Dialogue,Girl,0,0,0,,That rolls off the tongue!
+Dialogue: 0,0:17:06.93,0:17:07.96,Main Dialogue,Hina,0,0,0,,What happened?!
+Dialogue: 0,0:17:07.96,0:17:09.10,Main Dialogue,Yua,0,0,0,,"Dumbass"?
+Dialogue: 0,0:17:09.10,0:17:10.92,Main Dialogue,Yua,0,0,0,,The Indian elephant is mad.
+Dialogue: 0,0:17:11.84,0:17:14.09,Main Dialogue,Hiina,0,0,0,,The instant it gets scalded, \Nit says, "Dumbass!"
+Dialogue: 0,0:17:17.43,0:17:18.70,Main Dialogue,Hiina,0,0,0,,We hit on something!
+Dialogue: 0,0:17:18.17,0:17:19.78,Main Dialogue,Kanon,0,0,0,,"What the hell are you doing?"
+Dialogue: 0,0:17:19.20,0:17:21.24,Main Dialogue,Hina,0,0,0,,The last part is a nice zinger.
+Dialogue: 0,0:17:21.24,0:17:22.27,Main Dialogue,Yua,0,0,0,,True.
+Dialogue: 0,0:17:22.27,0:17:25.68,Main Dialogue,Yua,0,0,0,,The Indian elephant would be like, \N"What the hell are you doing?"
+Dialogue: 0,0:17:24.25,0:17:26.25,Main Dialogue,Kanon,0,0,0,,That fits together neatly.
+Dialogue: 0,0:17:25.68,0:17:27.13,Main Dialogue,Aoi,0,0,0,,"Parboiled... You dumbass!"
+Dialogue: 0,0:17:28.10,0:17:29.21,Main Dialogue,Yua,0,0,0,,He kinda cuts you off.
+Dialogue: 0,0:17:28.61,0:17:30.02,Main Dialogue,Kanon,0,0,0,,That's funny!
+Dialogue: 0,0:17:30.02,0:17:30.95,Main Dialogue,Yua,0,0,0,,Okay, now...
+Dialogue: 0,0:17:30.95,0:17:31.87,Main Dialogue,Aoi,0,0,0,,Right.
+Dialogue: 0,0:17:30.98,0:17:36.11,Black Signs,Yua,0,0,0,,Here's a zookeeper
+Dialogue: 0,0:17:31.87,0:17:33.18,Main Dialogue,Yua,0,0,0,,"Here's a zookeeper."
+Dialogue: 0,0:17:34.58,0:17:36.11,Main Dialogue,Yua,0,0,0,,What should I do?
+Dialogue: 0,0:17:36.66,0:17:37.99,Main Dialogue,Hiina,0,0,0,,"Parboiled terribly quickly."
+Dialogue: 0,0:17:41.04,0:17:42.56,Main Dialogue,Yua,0,0,0,,"Here's a zookeeper,
+Dialogue: 0,0:17:42.56,0:17:45.41,Main Dialogue,Yua,0,0,0,,totally without a clue..." Something.
+Dialogue: 0,0:17:43.20,0:17:47.21,Black Signs,Yua,0,0,0,,{\an7\fs16}Totally \Nwithout a clue
+Dialogue: 0,0:17:46.15,0:17:47.21,Main Dialogue,Hiina,0,0,0,,I've got nothing.
+Dialogue: 0,0:17:47.21,0:17:49.15,Main Dialogue,Koharu,0,0,0,,I don't have any funny ones.
+Dialogue: 0,0:17:49.15,0:17:49.91,Main Dialogue,Aoi,0,0,0,,Neither do I.
+Dialogue: 0,0:17:49.91,0:17:50.74,Main Dialogue,Kanon,0,0,0,,Me, neither.
+Dialogue: 0,0:17:50.74,0:17:51.45,Main Dialogue,Yua,0,0,0,,Hina-chan.
+Dialogue: 0,0:17:51.45,0:17:52.05,Main Dialogue,,0,0,0,,Okay.
+Dialogue: 0,0:17:52.05,0:17:55.77,Main Dialogue,Hina,0,0,0,,"Here's a zookeeper, totally without \Na clue.... Now a bus tour guide."
+Dialogue: 0,0:17:54.90,0:17:56.72,Black Signs,Hina,0,0,0,,{\fs16}Now a bus tour guide
+Dialogue: 0,0:17:56.72,0:17:58.14,Main Dialogue,Aoi,0,0,0,,Do your job!
+Dialogue: 0,0:17:58.94,0:18:01.15,Main Dialogue,Koharu,0,0,0,,He's leaving the zoo for that, huh?
+Dialogue: 0,0:18:01.15,0:18:03.94,Main Dialogue,Hina,0,0,0,,You're a zookeeper!
+Dialogue: 0,0:18:04.44,0:18:07.51,Main Dialogue,Kanon,0,0,0,,Why a bus tour guide?
+Dialogue: 0,0:18:07.51,0:18:08.64,Main Dialogue,Kanon,0,0,0,,What are you doing?
+Dialogue: 0,0:18:08.64,0:18:10.86,Main Dialogue,Koharu,0,0,0,,Well, bus tour guides really stand out.
+Dialogue: 0,0:18:10.86,0:18:13.98,Main Dialogue,Kanon,0,0,0,,You never know. He may be a \Nbus tour guide for Safari Park.
+Dialogue: 0,0:18:13.18,0:18:14.43,Main Dialogue,Hiina,0,0,0,,True. That would be okay.
+Dialogue: 0,0:18:14.43,0:18:15.57,Main Dialogue,Girl,0,0,0,,Somewhere along the way...
+Dialogue: 0,0:18:15.57,0:18:17.36,Main Dialogue,Hina,0,0,0,,He likes to stand out.
+Dialogue: 0,0:18:16.33,0:18:17.36,Main Dialogue,Hina,0,0,0,,Right.
+Dialogue: 0,0:18:17.36,0:18:18.43,Main Dialogue,Yua,0,0,0,,He can do anything.
+Dialogue: 0,0:18:18.43,0:18:19.49,Main Dialogue,Hiina,0,0,0,,I see.
+Dialogue: 0,0:18:19.49,0:18:20.86,Main Dialogue,Yua,0,0,0,,Okay, next. Koharun.
+Dialogue: 0,0:18:20.86,0:18:23.70,Main Dialogue,Koharu,0,0,0,,Okay. I have no idea what this means, but...
+Dialogue: 0,0:18:23.70,0:18:27.35,Main Dialogue,Koharu,0,0,0,,"Here's a zookeeper, totally without \Na clue, for 30 long years."
+Dialogue: 0,0:18:26.41,0:18:29.12,Black Signs,Koharu,0,0,0,,{\an9\fs16}For 30 long years
+Dialogue: 0,0:18:28.48,0:18:29.86,Main Dialogue,Yua,0,0,0,,I get it!
+Dialogue: 0,0:18:29.86,0:18:31.95,Main Dialogue,Yua,0,0,0,,The meaning totally gets across!
+Dialogue: 0,0:18:31.95,0:18:32.95,Main Dialogue,Kanon,0,0,0,,That's really good!
+Dialogue: 0,0:18:32.95,0:18:34.20,Main Dialogue,Kanon,0,0,0,,That's a really good one!
+Dialogue: 0,0:18:34.20,0:18:38.52,Main Dialogue,Kanon,0,0,0,,Somebody tell him sooner than\Nthat! He's already a veteran!
+Dialogue: 0,0:18:39.20,0:18:41.45,Main Dialogue,Kanon,0,0,0,,He became a veteran without \Never having a clue!
+Dialogue: 0,0:18:44.01,0:18:45.20,Main Dialogue,Hina,0,0,0,,Poor guy!
+Dialogue: 0,0:18:44.65,0:18:46.43,Main Dialogue,,0,0,0,,That's a long time!
+Dialogue: 0,0:18:46.43,0:18:47.28,Main Dialogue,Yua,0,0,0,,That is long!
+Dialogue: 0,0:18:47.28,0:18:48.96,Main Dialogue,Koharu,0,0,0,,He's been clueless for a long time.
+Dialogue: 0,0:18:48.96,0:18:50.86,Main Dialogue,,0,0,0,,That's so long!
+Dialogue: 0,0:18:50.86,0:18:52.09,Main Dialogue,,0,0,0,,I feel bad for him.
+Dialogue: 0,0:18:52.09,0:18:53.11,Main Dialogue,Aoi,0,0,0,,A little.
+Dialogue: 0,0:18:53.11,0:18:54.48,Main Dialogue,Hina,0,0,0,,I bet the animals hate him, too.
+Dialogue: 0,0:18:54.48,0:18:56.32,Main Dialogue,Yua,0,0,0,,Yeah, I bet they do!
+Dialogue: 0,0:18:55.39,0:18:58.57,Main Dialogue,Hina,0,0,0,,"He always feeds us at the wrong time!"
+Dialogue: 0,0:18:59.18,0:19:01.63,Main Dialogue,Hiina,0,0,0,,"You don't have to wash me there!"
+Dialogue: 0,0:19:01.63,0:19:02.99,Main Dialogue,Hina,0,0,0,,"Not right now!"
+Dialogue: 0,0:19:02.99,0:19:04.88,Main Dialogue,Koharu,0,0,0,,That's what they think about him.
+Dialogue: 0,0:19:06.05,0:19:09.03,Main Dialogue,Hiina,0,0,0,,Okay, we're out of cards, \Nso let's do a second round.
+Dialogue: 0,0:19:09.03,0:19:10.33,Main Dialogue,Koharu,0,0,0,,Okay.
+Dialogue: 0,0:19:10.33,0:19:14.34,Main Dialogue,Hiina,0,0,0,,For the second round,\NI'll be in charge of the middle line.
+Dialogue: 0,0:19:14.34,0:19:14.83,Main Dialogue,Aoi,0,0,0,,Cool!
+Dialogue: 0,0:19:14.83,0:19:15.50,Main Dialogue,Koharu,0,0,0,,Okay.
+Dialogue: 0,0:19:15.50,0:19:16.98,Main Dialogue,Hiina,0,0,0,,Starting with the first line.
+Dialogue: 0,0:19:16.98,0:19:17.60,Main Dialogue,Koharu,0,0,0,,Okay.
+Dialogue: 0,0:19:17.09,0:19:24.18,Black Signs,All,0,0,0,,So to summarize...
+Dialogue: 0,0:19:17.60,0:19:18.33,Main Dialogue,Hiina,0,0,0,,Flip!
+Dialogue: 0,0:19:18.33,0:19:19.70,Main Dialogue,All,0,0,0,,"So to summarize..."
+Dialogue: 0,0:19:19.70,0:19:22.55,Main Dialogue,Koharu,0,0,0,,"So to summarize..." \NIsn't that kind of difficult?
+Dialogue: 0,0:19:22.55,0:19:24.19,Main Dialogue,Hiina,0,0,0,,"So to summarize..."
+Dialogue: 0,0:19:24.19,0:19:26.05,Main Dialogue,Hiina,0,0,0,,This is about my only choice.
+Dialogue: 0,0:19:26.05,0:19:26.85,Main Dialogue,Hina,0,0,0,,"So to summarize..."
+Dialogue: 0,0:19:26.85,0:19:28.33,Main Dialogue,Kanon,0,0,0,,"In a dirty sort of way."
+Dialogue: 0,0:19:26.85,0:19:33.27,Black Signs,Kanon,0,0,0,,In a dirty sort of way
+Dialogue: 0,0:19:28.33,0:19:29.81,Main Dialogue,Kanon,0,0,0,,"In a dirty sort of way"?
+Dialogue: 0,0:19:29.81,0:19:32.82,Main Dialogue,All,0,0,0,,"So to summarize, in a dirty sort of way..."
+Dialogue: 0,0:19:33.27,0:19:36.49,Main Dialogue,Hiina,0,0,0,,Nothing else fits with "So to summarize."
+Dialogue: 0,0:19:35.93,0:19:36.49,Main Dialogue,Yua,0,0,0,,Me!
+Dialogue: 0,0:19:36.49,0:19:37.53,Main Dialogue,Aoi,0,0,0,,Go ahead.
+Dialogue: 0,0:19:37.53,0:19:41.75,Main Dialogue,Yua,0,0,0,,"So to summarize, in a dirty sort \Nof way... let's perk up the town."
+Dialogue: 0,0:19:40.15,0:19:42.70,Town Sign,Sign,0,0,0,,Welcome to Sex Town\N{\fs16}Two Girl Hunter\NAfternoon Delight
+Dialogue: 0,0:19:40.45,0:19:42.70,Black Signs,Sign,0,0,0,,{\an6\fs16}Let's perk up\Nthe town
+Dialogue: 0,0:19:42.70,0:19:44.07,Main Dialogue,Hina,0,0,0,,Perk it up how?
+Dialogue: 0,0:19:45.14,0:19:48.37,Main Dialogue,Koharu,0,0,0,,I don't wanna go to that town!
+Dialogue: 0,0:19:48.37,0:19:53.53,Main Dialogue,Yua,0,0,0,,They're suffering from depopulation, \Nso to perk up the town,
+Dialogue: 0,0:19:53.53,0:19:55.78,Main Dialogue,Yua,0,0,0,,they decide to go with a sex theme.
+Dialogue: 0,0:19:56.55,0:19:58.38,Main Dialogue,Koharu,0,0,0,,It's all over for Japan.
+Dialogue: 0,0:19:58.38,0:19:59.37,Main Dialogue,Aoi,0,0,0,,It's over.
+Dialogue: 0,0:19:59.37,0:20:00.02,Main Dialogue,Yua,0,0,0,,Yeah.
+Dialogue: 0,0:20:00.02,0:20:00.97,Main Dialogue,Aoi,0,0,0,,It's over.
+Dialogue: 0,0:20:00.97,0:20:02.69,Main Dialogue,Hina,0,0,0,,That won't help the town.
+Dialogue: 0,0:20:02.69,0:20:03.47,Main Dialogue,Yua,0,0,0,,In a dirty sort of way...
+Dialogue: 0,0:20:03.47,0:20:08.14,Main Dialogue,Koharu,0,0,0,,There's a card that I don't understand, \Nso I think I'll use it here.
+Dialogue: 0,0:20:08.14,0:20:09.77,Main Dialogue,Hiina,0,0,0,,Okay. Then Koharun.
+Dialogue: 0,0:20:09.77,0:20:13.61,Main Dialogue,Koharu,0,0,0,,"So to summarize, in a dirty sort of way... \NFirst bonito caught."
+Dialogue: 0,0:20:12.52,0:20:16.61,Black Signs,Hiina,0,0,0,,{\an9\fs16}First bonito caught
+Dialogue: 0,0:20:14.34,0:20:15.32,Main Dialogue,Hiina,0,0,0,,You can't say that!
+Dialogue: 0,0:20:15.32,0:20:16.61,Main Dialogue,Yua,0,0,0,,What is that?!
+Dialogue: 0,0:20:16.61,0:20:17.99,Main Dialogue,Yua,0,0,0,,That's bad!
+Dialogue: 0,0:20:17.99,0:20:19.67,Main Dialogue,Hina,0,0,0,,That just doesn't sound right!
+Dialogue: 0,0:20:20.96,0:20:22.66,Main Dialogue,Koharu,0,0,0,,No, wait!
+Dialogue: 0,0:20:26.35,0:20:28.60,Main Dialogue,Koharu,0,0,0,,I don't know what it means!
+Dialogue: 0,0:20:28.60,0:20:31.87,Main Dialogue,Koharu,0,0,0,,I used it because \NI don't know what it means.
+Dialogue: 0,0:20:31.87,0:20:34.79,Main Dialogue,Yua,0,0,0,,My stomach... My stomach hurts...
+Dialogue: 0,0:20:34.79,0:20:36.96,Main Dialogue,Hiina,0,0,0,,That's bad in every way! \NEvery part of it is bad!
+Dialogue: 0,0:20:38.49,0:20:40.61,Main Dialogue,,0,0,0,,First bonito caught...
+Dialogue: 0,0:20:40.61,0:20:41.47,Main Dialogue,,0,0,0,,That's hilarious!
+Dialogue: 0,0:20:41.47,0:20:44.61,Main Dialogue,Kanon,0,0,0,,"So to summarize" is funny.
+Dialogue: 0,0:20:44.61,0:20:46.44,Main Dialogue,Kanon,0,0,0,,It's a great prelude.
+Dialogue: 0,0:20:46.44,0:20:50.57,Main Dialogue,All,0,0,0,,"So to summarize, in a dirty sort of way...\Nfirst bonito caught."
+Dialogue: 0,0:20:50.57,0:20:53.14,Main Dialogue,Kanon,0,0,0,,But that's terrible!
+Dialogue: 0,0:22:29.10,0:22:31.24,Preview,Sign,0,0,0,,{\fad(500,1)}Preview
+Dialogue: 0,0:22:29.10,0:22:31.24,Preview Sonota,Sign,0,0,0,,{\fad(500,1)}Sonota
+Dialogue: 0,0:22:29.78,0:22:32.35,Main Dialogue,King,0,0,0,,Mobu...
+Dialogue: 0,0:22:32.35,0:22:35.95,Main Dialogue,Devil,0,0,0,,It looks like I may finally have some fun.
+Dialogue: 0,0:22:35.95,0:22:38.54,Main Dialogue,Mobuko,0,0,0,,King Mobuko, please! \NTake down Mobustopheles!
+Dialogue: 0,0:22:39.69,0:22:41.35,Main Dialogue,King,0,0,0,,Mobu...
+Dialogue: 0,0:22:41.35,0:22:43.50,Main Dialogue,Mobuko,0,0,0,,Jeez! What's happening?!
+Dialogue: 0,0:22:43.50,0:22:44.93,Main Dialogue,Mobuko,0,0,0,,Start moving from your right leg!
+Dialogue: 0,0:22:44.93,0:22:46.89,Main Dialogue,Mobuko,0,0,0,,From the left leg is common sense!
+Dialogue: 0,0:22:46.89,0:22:48.31,Main Dialogue,Mobuko,0,0,0,,Jump and kick!
+Dialogue: 0,0:22:48.31,0:22:50.18,Main Dialogue,Mobuko,0,0,0,,Who are you people?
+Dialogue: 0,0:22:50.18,0:22:52.72,Main Dialogue,Mobuko,0,0,0,,All of these Mobukos are \Non different wavelengths.
+Dialogue: 0,0:22:52.72,0:22:55.09,Main Dialogue,Mobuko,0,0,0,,Even though they've \Nall got the same face.
+Dialogue: 0,0:22:55.09,0:22:58.19,Main Dialogue,Mobuko,0,0,0,,We're all supposed to be a family here!
+Dialogue: 0,0:22:58.19,0:22:59.56,Main Dialogue,Voice,0,0,0,,See you next week!
+Dialogue: 0,0:22:58.19,0:22:59.99,Next Episode Title,Sign,0,0,0,,Collaboration #11\NLet's Play with All the Footage Up to Now

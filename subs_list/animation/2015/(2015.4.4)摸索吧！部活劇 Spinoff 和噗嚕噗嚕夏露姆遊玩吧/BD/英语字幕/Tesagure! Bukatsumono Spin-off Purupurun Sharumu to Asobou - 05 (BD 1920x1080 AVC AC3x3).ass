@@ -1,0 +1,595 @@
+﻿[Script Info]
+Title: HorribleSubs
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 848
+PlayResY: 480
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,0,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Signs,Open Sans Semibold,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,27,24,1
+Style: Italics Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,1,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Main Dialogue Top,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,0,0,0,100,100,0,0,1,1.7,0,8,0,0,28,1
+Style: Flashback Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00400000,&H00400000,0,0,0,0,100,100,0,0,1,2,1,2,13,13,24,1
+Style: Flashback Italics Dialogue,Open Sans Semibold,36,&H00FFFFFF,&H000000FF,&H00020713,&H00000000,-1,1,0,0,100,100,0,0,1,1.7,0,2,0,0,28,1
+Style: Episode Title Collaboration,Open Sans Semibold,20,&H00FFFFFF,&H000000FF,&H00E7E6F8,&H007A7A7A,1,0,0,0,100,100,0,0,1,0,2,1,40,13,93,1
+Style: Episode Title,Open Sans Semibold,20,&H0078E2AD,&H000000FF,&H00F6F6F8,&H007A7A7A,1,0,0,0,100,100,0,0,1,2,2,1,40,13,33,1
+Style: Preview,Open Sans Semibold,45,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,13,13,80,1
+Style: Preview Sonota,Open Sans Semibold,30,&H00000306,&H000000FF,&H005CC3E5,&H00000000,1,0,0,0,100,100,0,0,1,3,2,6,13,67,13,1
+Style: Next Episode Title,Open Sans Semibold,36,&H00000000,&H000000FF,&H00BABABA,&H00000000,1,0,0,0,100,100,0,0,1,4,0,8,13,13,20,1
+Style: Chart Sign 1,Open Sans Semibold,21,&H007C6C5A,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,227,24,1
+Style: Chart Sign 2,Open Sans Semibold,21,&H007C6C5A,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,9,13,275,19,1
+Style: Chart Sign 3,Open Sans Semibold,21,&H007C6C5A,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,200,27,153,1
+Style: Manga Sign 1,Open Sans Semibold,24,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,4,0,9,27,20,43,1
+Style: Manga Sign 2,Open Sans Semibold,30,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,4,0,9,27,33,253,1
+Style: Summit Sign 1,Open Sans Semibold,24,&H00423D38,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,53,27,24,1
+Style: Summit Sign 2,Open Sans Semibold,24,&H00423D38,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,267,27,24,1
+Style: Summit Sign 3,Open Sans Semibold,21,&H00423D38,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,53,27,253,1
+Style: Summit Sign 4,Open Sans Semibold,21,&H00423D38,&H000000FF,&H00FFFFFF,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,13,167,207,1
+Style: Park Sign 1,Open Sans Semibold,24,&H00003249,&H000000FF,&H00C1DEE5,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,240,20,1
+Style: Park Sign 2,Open Sans Semibold,21,&H00003249,&H000000FF,&H00C1DEE5,&H00000000,1,0,0,0,100,100,0,0,1,2,0,7,113,13,167,1
+Style: Park Sign 3,Open Sans Semibold,21,&H00003249,&H000000FF,&H00C1DEE5,&H00000000,1,0,0,0,100,100,0,0,1,2,0,8,27,107,167,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.39,0:00:04.10,Main Dialogue Top,Yua,0,0,0,,Okay, this is episode five of the spin-off!
+Dialogue: 0,0:00:00.47,0:00:06.51,Episode Title Collaboration,Sign,0,0,0,,{\fad(500,500)}Collaboration #5
+Dialogue: 0,0:00:00.47,0:00:06.51,Episode Title,Sign,0,0,0,,{\fad(500,500)}Let's {\c&H34a0ec&}Play {\c&Hbebfc0&}with {\c&H9090ed&}Field \N{\c&H9c7d5a&}Trips {\c&H78e2ad&}and {\c&H893bc0&}Haunted {\c&H9c7d5a&}Houses
+Dialogue: 0,0:00:04.10,0:00:06.94,Main Dialogue Top,Girl,0,0,0,,Yay!
+Dialogue: 0,0:00:06.94,0:00:10.38,Main Dialogue,Yua,0,0,0,,Last week, I had the chance to \Nparticipate with the Charm members
+Dialogue: 0,0:00:10.38,0:00:12.78,Main Dialogue,Yua,0,0,0,,in the ad-lib part. How was it?
+Dialogue: 0,0:00:12.78,0:00:15.09,Main Dialogue,Rin,0,0,0,,Good! It felt fresh!
+Dialogue: 0,0:00:15.09,0:00:16.28,Main Dialogue,Hina,0,0,0,,It was fun!
+Dialogue: 0,0:00:16.28,0:00:19.19,Main Dialogue,Kanon,0,0,0,,It made me feel strangely nostalgic.
+Dialogue: 0,0:00:19.19,0:00:22.45,Main Dialogue,Yui,0,0,0,,Lucky... I wanted to participate, too.
+Dialogue: 0,0:00:22.45,0:00:28.17,Main Dialogue,Yua,0,0,0,,So, that gave me the idea of occasionally \Nshuffling the members for the ad-lib part.
+Dialogue: 0,0:00:28.17,0:00:30.79,Main Dialogue,Hiina,0,0,0,,Good idea. If we can shuffle the members,
+Dialogue: 0,0:00:30.79,0:00:35.73,Main Dialogue,Hiina,0,0,0,,we can be more flexible in securing our \Nrecording schedules, so it'd be very convenient.
+Dialogue: 0,0:00:35.73,0:00:36.60,Main Dialogue,,0,0,0,,What?!
+Dialogue: 0,0:00:36.60,0:00:38.68,Main Dialogue,Koharu,0,0,0,,Wh-Whose perspective are you speaking from?
+Dialogue: 0,0:00:38.68,0:00:41.12,Main Dialogue,Tomomi,0,0,0,,So if the schedule is inconvenient for us,
+Dialogue: 0,0:00:41.12,0:00:44.94,Main Dialogue,Tomomi,0,0,0,,can we say we'll entrust our \Nanswers to another member?
+Dialogue: 0,0:00:44.94,0:00:47.83,Main Dialogue,Yua,0,0,0,,Yeah. Maybe that suits your \Ncharacter, Tomomi-chan.
+Dialogue: 0,0:00:47.63,0:00:49.75,Main Dialogue,Kanon,0,0,0,,You act too freely.
+Dialogue: 0,0:00:49.75,0:00:50.86,Main Dialogue,Aoi,0,0,0,,That's new!
+Dialogue: 0,0:00:50.86,0:00:54.35,Main Dialogue,Yua,0,0,0,,We'll count Mobuko-chan in the shuffling, too.
+Dialogue: 0,0:00:54.35,0:00:55.47,Main Dialogue,Mobuko,0,0,0,,M-Me, too?!
+Dialogue: 0,0:00:55.47,0:00:58.70,Main Dialogue,Hiina,0,0,0,,Not "me, too." You mean "Us, too."
+Dialogue: 0,0:00:58.70,0:01:02.70,Main Dialogue,Mobuko,0,0,0,,U-Um... If possible, I'd like to \Nleave my little sisters out of it...
+Dialogue: 0,0:01:02.70,0:01:05.26,Main Dialogue,Aoi,0,0,0,,I hear they've got a professor \Nand even a robot now, too.
+Dialogue: 0,0:01:05.26,0:01:06.29,Main Dialogue,Hiina,0,0,0,,We can use those.
+Dialogue: 0,0:01:06.29,0:01:08.95,Main Dialogue,Yua,0,0,0,,All right! Then let's have \Nanother fun collaboration!
+Dialogue: 0,0:01:08.95,0:01:10.92,Main Dialogue,All,0,0,0,,Yeah!
+Dialogue: 0,0:02:43.14,0:02:44.46,Main Dialogue,Yui,0,0,0,,What's wrong, Rin-chan?
+Dialogue: 0,0:02:44.46,0:02:45.28,Main Dialogue,Yui,0,0,0,,You seem down.
+Dialogue: 0,0:02:45.28,0:02:48.80,Main Dialogue,Hina,0,0,0,,We got our tests back,\Nand Rin-chan has to take hers over.
+Dialogue: 0,0:02:48.80,0:02:49.31,Main Dialogue,Yui,0,0,0,,Oh, my.
+Dialogue: 0,0:02:49.31,0:02:53.73,Main Dialogue,Rin,0,0,0,,I made level 2 in the kanji skill test. \NHow could this happen?
+Dialogue: 0,0:02:53.73,0:02:57.44,Main Dialogue,Hina,0,0,0,,The kanji test has no relation \Nto English and math tests.
+Dialogue: 0,0:02:57.44,0:03:01.41,Main Dialogue,Yui,0,0,0,,But studying gets harder once \Nyou get into high school.
+Dialogue: 0,0:03:01.41,0:03:04.17,Main Dialogue,Yui,0,0,0,,I was at the top of my class in middle school,
+Dialogue: 0,0:03:04.17,0:03:05.51,Main Dialogue,Yui,0,0,0,,but now I'm just average.
+Dialogue: 0,0:03:05.51,0:03:08.89,Main Dialogue,Kanon,0,0,0,,That's common. Well, not for me, of course.
+Dialogue: 0,0:03:08.89,0:03:11.98,Main Dialogue,Rin,0,0,0,,My grades have been bad since middle school...
+Dialogue: 0,0:03:11.98,0:03:14.34,Main Dialogue,Rin,0,0,0,,And I'm going from bad to worse!
+Dialogue: 0,0:03:14.34,0:03:18.26,Main Dialogue,Hina,0,0,0,,It'll be okay! You can't go any lower than this.
+Dialogue: 0,0:03:18.26,0:03:20.97,Main Dialogue,Kanon,0,0,0,,That's not okay...
+Dialogue: 0,0:03:22.33,0:03:23.76,Main Dialogue,Yua,0,0,0,,What's wrong, Koharun?
+Dialogue: 0,0:03:23.76,0:03:25.90,Main Dialogue,Hiina,0,0,0,,It seems Koharun has to retake a test.
+Dialogue: 0,0:03:25.90,0:03:26.76,Main Dialogue,Yua,0,0,0,,Really?
+Dialogue: 0,0:03:26.76,0:03:30.27,Main Dialogue,Koharu,0,0,0,,My grades weren't bad up until middle school,
+Dialogue: 0,0:03:30.27,0:03:34.09,Main Dialogue,Koharu,0,0,0,,but it suddenly gets harder to \Nstudy when you're in high school.
+Dialogue: 0,0:03:34.09,0:03:35.61,Main Dialogue,Yua,0,0,0,,You might be right.
+Dialogue: 0,0:03:35.61,0:03:38.90,Main Dialogue,Koharu,0,0,0,,On that subject, do you all get good grades?
+Dialogue: 0,0:03:38.90,0:03:41.30,Main Dialogue,Hiina,0,0,0,,According to our back stories, \NI'm an outstanding student,
+Dialogue: 0,0:03:41.30,0:03:44.37,Main Dialogue,Hiina,0,0,0,,Yua is the type that somehow gets \Ndecent grades without studying,
+Dialogue: 0,0:03:44.37,0:03:47.24,Main Dialogue,Hiina,0,0,0,,and Aoi is the one with the worst grades.
+Dialogue: 0,0:03:47.24,0:03:48.78,Main Dialogue,Yua,0,0,0,,Aoi, you have to retake tests too, right?
+Dialogue: 0,0:03:48.78,0:03:50.00,Main Dialogue,Aoi,0,0,0,,Isn't that weird?
+Dialogue: 0,0:03:50.00,0:03:53.71,Main Dialogue,Aoi,0,0,0,,I swear Yua-senpai is dumber than me!
+Dialogue: 0,0:03:53.71,0:03:54.38,Main Dialogue,Koharu,0,0,0,,True...
+Dialogue: 0,0:03:54.38,0:03:55.46,Main Dialogue,Yua,0,0,0,,Hey, hey, hey, hey!
+Dialogue: 0,0:03:55.46,0:03:57.65,Main Dialogue,Hiina,0,0,0,,Then the back story is wrong, huh?
+Dialogue: 0,0:03:57.65,0:03:58.76,Main Dialogue,Yua,0,0,0,,C'mon, cut it out!
+Dialogue: 0,0:03:58.76,0:04:01.72,Main Dialogue,Yua,0,0,0,,What is this? A back story retcon boom?
+Dialogue: 0,0:04:02.46,0:04:06.01,Main Dialogue,Hina,0,0,0,,I'll help you out, so let's study together.
+Dialogue: 0,0:04:06.01,0:04:07.93,Main Dialogue,Rin,0,0,0,,Before that, I want chocolate.
+Dialogue: 0,0:04:07.93,0:04:09.51,Main Dialogue,Hina,0,0,0,,Forget it, Rin-chan.
+Dialogue: 0,0:04:09.51,0:04:12.50,Main Dialogue,Hina,0,0,0,,If you solve three problems, \Nyou may eat one piece of chocolate.
+Dialogue: 0,0:04:12.50,0:04:13.77,Main Dialogue,Hina,0,0,0,,Don't I always tell you that?
+Dialogue: 0,0:04:15.60,0:04:19.83,Main Dialogue,Yui,0,0,0,,This is kinda hot, like watching some \Nkind of roleplay. "Always," she says...
+Dialogue: 0,0:04:19.83,0:04:21.09,Main Dialogue,Kanon,0,0,0,,It is not!
+Dialogue: 0,0:04:21.70,0:04:24.73,Main Dialogue,Rin,0,0,0,,How does a smart person study?
+Dialogue: 0,0:04:24.73,0:04:26.28,Main Dialogue,Tomomi,0,0,0,,You mean me?
+Dialogue: 0,0:04:26.28,0:04:29.32,Main Dialogue,Tomomi,0,0,0,,I just study normally...
+Dialogue: 0,0:04:29.32,0:04:33.12,Main Dialogue,Tomomi,0,0,0,,But if I have to give an answer, \NI study during the free period, too.
+Dialogue: 0,0:04:33.12,0:04:34.26,Main Dialogue,Rin,0,0,0,,Even your free period?
+Dialogue: 0,0:04:34.26,0:04:34.87,Main Dialogue,,0,0,0,,Yes.
+Dialogue: 0,0:04:34.87,0:04:38.02,Main Dialogue,Tomomi,0,0,0,,Because I don't have any friends \Nto go to the bathroom with.
+Dialogue: 0,0:04:38.02,0:04:40.29,Main Dialogue,Tomomi,0,0,0,,So during free period, I either study...
+Dialogue: 0,0:04:40.29,0:04:41.49,Main Dialogue,Tomomi,0,0,0,,or sleep.
+Dialogue: 0,0:04:43.60,0:04:49.05,Main Dialogue,Rin,0,0,0,,Sugar... Sugar... I need it...
+Dialogue: 0,0:04:49.05,0:04:50.85,Main Dialogue,Kanon,0,0,0,,You're a mess.
+Dialogue: 0,0:04:51.97,0:04:53.53,Main Dialogue,Rin,0,0,0,,Cornets... Chocolate cornets...
+Dialogue: 0,0:04:53.53,0:04:54.72,Main Dialogue,Kanon,0,0,0,,They're not cornets!
+Dialogue: 0,0:04:54.72,0:04:57.52,Main Dialogue,Kanon,0,0,0,,Hey! Don't drool on me!
+Dialogue: 0,0:04:58.85,0:05:00.24,Main Dialogue,Rin,0,0,0,,I'm sleepy...
+Dialogue: 0,0:05:00.24,0:05:01.69,Main Dialogue,Hina,0,0,0,,Already?
+Dialogue: 0,0:05:02.40,0:05:03.44,Main Dialogue,Hina,0,0,0,,You're asleep already?!
+Dialogue: 0,0:05:04.83,0:05:07.20,Main Dialogue,Rin,0,0,0,,I can't eat another bite!
+Dialogue: 0,0:05:07.20,0:05:08.57,Main Dialogue,Hina,0,0,0,,You're talking in your sleep already?
+Dialogue: 0,0:05:08.57,0:05:10.71,Main Dialogue,Hina,0,0,0,,"I can't eat another bite" already?!
+Dialogue: 0,0:05:11.87,0:05:14.45,Main Dialogue,Aoi,0,0,0,,I'm sleepy!
+Dialogue: 0,0:05:14.45,0:05:15.91,Main Dialogue,Koharu,0,0,0,,You're sleepy already?
+Dialogue: 0,0:05:16.55,0:05:17.78,Main Dialogue,Yua,0,0,0,,She's asleep?
+Dialogue: 0,0:05:21.02,0:05:22.10,Main Dialogue,Aoi,0,0,0,,I'm sleepy...
+Dialogue: 0,0:05:22.55,0:05:24.68,Main Dialogue,Koharu,0,0,0,,Sh-She says "I'm sleepy" in her sleep?
+Dialogue: 0,0:05:24.65,0:05:33.85,Chart Sign 2,Sign,0,0,0,,Degree                         Sleepiness\NRecovery
+Dialogue: 0,0:05:24.65,0:05:33.93,Chart Sign 3,Sign,0,0,0,,Time
+Dialogue: 0,0:05:24.68,0:05:27.86,Main Dialogue,Hiina,0,0,0,,So even while she's sleeping, \Nthe speed of her recovery from sleepiness
+Dialogue: 0,0:05:27.86,0:05:31.08,Main Dialogue,Hiina,0,0,0,,can't keep up with the speed \Nof her rising sleepiness.
+Dialogue: 0,0:05:31.08,0:05:33.47,Main Dialogue,Yua,0,0,0,,Aoi is fascinating!
+Dialogue: 0,0:05:34.42,0:05:36.56,Main Dialogue,Tomomi,0,0,0,,There is something called sleep-learning.
+Dialogue: 0,0:05:36.56,0:05:39.06,Main Dialogue,Hina,0,0,0,,That thing where you listen to English \Nor whatever while you sleep?
+Dialogue: 0,0:05:39.06,0:05:39.65,Main Dialogue,Tomomi,0,0,0,,That's right.
+Dialogue: 0,0:05:39.65,0:05:43.10,Main Dialogue,Yui,0,0,0,,Then I'll try whispering English \Nsentences in Rin-chan's ear.
+Dialogue: 0,0:05:43.10,0:05:44.14,Main Dialogue,Hina,0,0,0,,That's old-fashioned.
+Dialogue: 0,0:05:44.14,0:05:45.49,Main Dialogue,Kanon,0,0,0,,I'm worried.
+Dialogue: 0,0:05:45.49,0:05:46.80,Main Dialogue,Yui,0,0,0,,I love you...
+Dialogue: 0,0:05:46.80,0:05:49.62,Main Dialogue,Kanon,0,0,0,,What good is whispering \Nsweet nothings going to do?
+Dialogue: 0,0:05:51.22,0:05:52.14,Main Dialogue,Kanon,0,0,0,,You're awake?
+Dialogue: 0,0:05:53.12,0:05:56.13,Main Dialogue,Kanon,0,0,0,,The problems I thought I finished are blank!
+Dialogue: 0,0:05:56.13,0:05:57.54,Main Dialogue,Kanon,0,0,0,,Where are we?
+Dialogue: 0,0:05:57.54,0:06:00.21,Main Dialogue,Kanon,0,0,0,,I may have been flung back into the past.
+Dialogue: 0,0:06:00.21,0:06:02.77,Main Dialogue,Hina,0,0,0,,You didn't do any of the problems on that page.
+Dialogue: 0,0:06:02.77,0:06:04.87,Main Dialogue,Kanon,0,0,0,,What were you dreaming about?
+Dialogue: 0,0:06:05.65,0:06:07.55,Main Dialogue,Rin,0,0,0,,It's hard, though,
+Dialogue: 0,0:06:07.55,0:06:10.38,Main Dialogue,Rin,0,0,0,,juggling being an apprentice \Ngoddess with school life.
+Dialogue: 0,0:06:10.38,0:06:12.01,Main Dialogue,Rin,0,0,0,,Wearing two different kinds of chews...
+Dialogue: 0,0:06:12.01,0:06:15.14,Main Dialogue,Kanon,0,0,0,,That's "shoes"! You don't wear chews!
+Dialogue: 0,0:06:15.14,0:06:17.08,Main Dialogue,Hina,0,0,0,,Your feet would be all squishy.
+Dialogue: 0,0:06:18.29,0:06:19.98,Main Dialogue,Yui,0,0,0,,I love you!
+Dialogue: 0,0:06:19.98,0:06:21.86,Main Dialogue,Hina,0,0,0,,Yui-san, I'm sorry!
+Dialogue: 0,0:06:21.86,0:06:24.82,Main Dialogue,Hina,0,0,0,,I have to go with Rin-chan!
+Dialogue: 0,0:06:24.82,0:06:25.83,Main Dialogue,Rin,0,0,0,,Adios!
+Dialogue: 0,0:06:25.83,0:06:27.27,Main Dialogue,Yui,0,0,0,,Oh my God!
+Dialogue: 0,0:06:27.27,0:06:30.89,Main Dialogue,Rin,0,0,0,,If you say you love me, \Nthen solve those problems for me.
+Dialogue: 0,0:06:30.89,0:06:32.33,Main Dialogue,Hina,0,0,0,,I will! I will!
+Dialogue: 0,0:06:33.11,0:06:35.19,Main Dialogue,Rin,0,0,0,,That was my dream.
+Dialogue: 0,0:06:35.19,0:06:36.54,Main Dialogue,Hina,0,0,0,,Terrible...
+Dialogue: 0,0:06:37.61,0:06:41.68,Main Dialogue,Rin,0,0,0,,Okay, I'd like us to start coming \Nup with "something new"...
+Dialogue: 0,0:06:41.68,0:06:44.77,Main Dialogue,Rin,0,0,0,,B-But, um, there's someone \Nhere I've never seen before.
+Dialogue: 0,0:06:44.77,0:06:47.64,Main Dialogue,Hiina,0,0,0,,M-Mio-senpai! What are you doing here?
+Dialogue: 0,0:06:47.64,0:06:50.80,Main Dialogue,Mio,0,0,0,,Don't mind me!
+Dialogue: 0,0:06:50.80,0:06:52.70,Main Dialogue,Hiina,0,0,0,,We can't not mind you!
+Dialogue: 0,0:06:52.70,0:06:54.14,Main Dialogue,Kanon,0,0,0,,Who is she?
+Dialogue: 0,0:06:54.14,0:06:56.67,Main Dialogue,Hiina,0,0,0,,This is Mio-senpai, former \Ncaptain of the Tesaguri Club
+Dialogue: 0,0:06:56.67,0:06:59.69,Main Dialogue,Hiina,0,0,0,,who's survived more crises \Nthan you can shake a stick at.
+Dialogue: 0,0:06:59.69,0:07:01.79,Main Dialogue,Mio,0,0,0,,I have not!
+Dialogue: 0,0:07:01.79,0:07:03.44,Main Dialogue,Hina,0,0,0,,But why are you here?
+Dialogue: 0,0:07:03.44,0:07:08.37,Main Dialogue,Mio,0,0,0,,Actually, I saw milady Tomomi riding \Nin a tank, and she asked me to come.
+Dialogue: 0,0:07:08.37,0:07:09.42,Main Dialogue,Rin,0,0,0,,Huh? Tomomi-san?!
+Dialogue: 0,0:07:09.42,0:07:12.53,Main Dialogue,Mio,0,0,0,,She had some errand to run and couldn't make it,
+Dialogue: 0,0:07:12.53,0:07:18.83,Main Dialogue,Mio,0,0,0,,so she entrusted me with coming here to \Nannounce the idea she came up with.
+Dialogue: 0,0:07:18.83,0:07:21.95,Main Dialogue,Mio,0,0,0,,I just can't ignore someone who's in a jam.
+Dialogue: 0,0:07:21.95,0:07:23.33,Main Dialogue,Hina,0,0,0,,So that's why...
+Dialogue: 0,0:07:23.33,0:07:27.00,Main Dialogue,Kanon,0,0,0,,But we haven't decided on \Na theme for today yet.
+Dialogue: 0,0:07:27.00,0:07:30.69,Main Dialogue,Mio,0,0,0,,Oh, she said that just like \Nwith the "country villa,"
+Dialogue: 0,0:07:30.69,0:07:34.73,Main Dialogue,Mio,0,0,0,,the field trip from the original manga \Ncouldn't get an animated version,
+Dialogue: 0,0:07:30.84,0:07:38.60,Manga Sign 1,Sign,0,0,0,,Okay, \Nlet's \Ngo on \Na lot \Nof \Nfield \Ntrips!!
+Dialogue: 0,0:07:30.84,0:07:38.60,Manga Sign 2,Sign,0,0,0,,BAM!
+Dialogue: 0,0:07:34.73,0:07:38.60,Main Dialogue,Mio,0,0,0,,so she suggested we use a \N"new field trip" as the theme.
+Dialogue: 0,0:07:39.54,0:07:42.88,Main Dialogue,Hina,0,0,0,,For someone who suddenly couldn't \Nparticipate, she's well-prepared.
+Dialogue: 0,0:07:42.88,0:07:46.90,Main Dialogue,Kanon,0,0,0,,Yeah, for not participating, \Nshe really took charge.
+Dialogue: 0,0:07:46.90,0:07:51.95,Main Dialogue,Rin,0,0,0,,Then let's try to think of a "new field trip,"\Ntogether with Hiina-san and Mio-senpai!
+Dialogue: 0,0:07:52.82,0:07:54.44,Main Dialogue,Rin,0,0,0,,Does anyone have any ideas?
+Dialogue: 0,0:07:55.68,0:07:57.20,Main Dialogue,Rin,0,0,0,,Mio-senpai, anything?
+Dialogue: 0,0:07:57.20,0:07:58.41,Main Dialogue,Miwa,0,0,0,,Whoa, now, are you sure?
+Dialogue: 0,0:07:59.51,0:08:03.41,Main Dialogue,Miwa,0,0,0,,Maybe I'll give an answer provided \Nto me by milady Tomomi.
+Dialogue: 0,0:08:03.41,0:08:05.13,Main Dialogue,Rin,0,0,0,,Yes, please.
+Dialogue: 0,0:08:05.13,0:08:06.69,Main Dialogue,,0,0,0,,Um...
+Dialogue: 0,0:08:08.29,0:08:10.41,Main Dialogue,Miwa,0,0,0,,I'm not sure how you read this.
+Dialogue: 0,0:08:10.41,0:08:11.60,Main Dialogue,Hiina,0,0,0,,Wait a second!
+Dialogue: 0,0:08:11.60,0:08:13.22,Main Dialogue,Hiina,0,0,0,,You've done this once before, right?
+Dialogue: 0,0:08:13.22,0:08:15.89,Main Dialogue,Miwa,0,0,0,,I have, but... I'm sorry.
+Dialogue: 0,0:08:14.10,0:08:14.86,Main Dialogue,Miwa,0,0,0,,Right?
+Dialogue: 0,0:08:16.67,0:08:17.28,Main Dialogue,Hiina,0,0,0,,Senpai!
+Dialogue: 0,0:08:17.28,0:08:19.76,Main Dialogue,Rin,0,0,0,,She apologized!
+Dialogue: 0,0:08:19.76,0:08:21.47,Main Dialogue,Miwa,0,0,0,,It's been a long time.
+Dialogue: 0,0:08:21.47,0:08:23.06,Main Dialogue,Miwa,0,0,0,,Okay, I'll read it.
+Dialogue: 0,0:08:23.77,0:08:26.86,Main Dialogue,Miwa,0,0,0,,"A spiritual field trip"... Hm?
+Dialogue: 0,0:08:27.51,0:08:28.40,Main Dialogue,Kanon,0,0,0,,What does that mean?
+Dialogue: 0,0:08:28.40,0:08:30.88,Main Dialogue,Rin,0,0,0,,You're the one reading it, and it \Nsounded like a question. The "Hm?"
+Dialogue: 0,0:08:30.88,0:08:31.69,Main Dialogue,Hiina,0,0,0,,Senpai?
+Dialogue: 0,0:08:31.69,0:08:36.46,Main Dialogue,Miwa,0,0,0,,"On the morning of the field trip, \Na spiritual old man will come to the school
+Dialogue: 0,0:08:36.46,0:08:39.47,Main Dialogue,Miwa,0,0,0,,and put a spell on all the students."
+Dialogue: 0,0:08:39.47,0:08:40.39,Main Dialogue,Kanon,0,0,0,,A spell...
+Dialogue: 0,0:08:40.39,0:08:42.91,Main Dialogue,Miwa,0,0,0,,"He'll hypnotize them"?!
+Dialogue: 0,0:08:43.39,0:08:46.13,Main Dialogue,Miwa,0,0,0,,"While in a hypnotic state,
+Dialogue: 0,0:08:46.13,0:08:49.54,Main Dialogue,Miwa,0,0,0,,the students will take a spiritual \Nfield trip through history,
+Dialogue: 0,0:08:49.54,0:08:52.05,Main Dialogue,Miwa,0,0,0,,from the birth of the Earth to the present,
+Dialogue: 0,0:08:51.16,0:08:52.05,Main Dialogue,Miwa,0,0,0,,Spiritual?
+Dialogue: 0,0:08:52.05,0:08:53.38,Main Dialogue,Miwa,0,0,0,,and will become..."
+Dialogue: 0,0:08:54.41,0:08:55.88,Main Dialogue,Miwa,0,0,0,,I can't read the kanji.
+Dialogue: 0,0:08:56.73,0:08:58.72,Main Dialogue,Rin,0,0,0,,Kanon-chan! Kanon-chan! What's it say?
+Dialogue: 0,0:08:57.52,0:08:58.72,Main Dialogue,Kanon,0,0,0,,Where? Let me see.
+Dialogue: 0,0:08:58.72,0:09:00.55,Main Dialogue,Hiina,0,0,0,,I'm sorry. Mio-senpai is dumb.
+Dialogue: 0,0:08:59.92,0:09:01.22,Main Dialogue,Kanon,0,0,0,,How is this...
+Dialogue: 0,0:09:01.22,0:09:02.77,Main Dialogue,Hiina,0,0,0,,Will become... o-omniscient?
+Dialogue: 0,0:09:02.77,0:09:04.35,Main Dialogue,Hina,0,0,0,,Omniscient?
+Dialogue: 0,0:09:03.17,0:09:04.35,Main Dialogue,Hina,0,0,0,,Oh, okay.
+Dialogue: 0,0:09:04.35,0:09:06.78,Main Dialogue,Miwa,0,0,0,,"While in a hypnotic state, the students \Nwill take a spiritual field trip
+Dialogue: 0,0:09:06.78,0:09:10.11,Main Dialogue,Miwa,0,0,0,,through history, from the birth \Nof the Earth to the present...
+Dialogue: 0,0:09:10.11,0:09:12.80,Main Dialogue,Miwa,0,0,0,,and will become..." omnipotent?
+Dialogue: 0,0:09:12.80,0:09:14.11,Main Dialogue,Hina,0,0,0,,Omniscient! Omniscient!
+Dialogue: 0,0:09:14.11,0:09:18.32,Main Dialogue,Miwa,0,0,0,,Omniscient? "And will awaken feeling radiant."
+Dialogue: 0,0:09:18.86,0:09:20.83,Main Dialogue,Rin,0,0,0,,How many people understood that?
+Dialogue: 0,0:09:19.32,0:09:20.83,Main Dialogue,Hina,0,0,0,,It feels like we made it through!
+Dialogue: 0,0:09:20.83,0:09:22.66,Main Dialogue,Kanon,0,0,0,,More than her actual idea,
+Dialogue: 0,0:09:22.66,0:09:25.52,Main Dialogue,Kanon,0,0,0,,too much focus went into \Nthe process of reading it.
+Dialogue: 0,0:09:25.52,0:09:27.71,Main Dialogue,Rin,0,0,0,,I didn't really get what it was actually about.
+Dialogue: 0,0:09:26.59,0:09:27.71,Main Dialogue,Rin,0,0,0,,Right?
+Dialogue: 0,0:09:27.71,0:09:29.80,Main Dialogue,Miwa,0,0,0,,Kanon-chan, is that how you talk \Nto someone you've just met?
+Dialogue: 0,0:09:30.27,0:09:31.03,Main Dialogue,Kanon,0,0,0,,I'm sorry.
+Dialogue: 0,0:09:31.03,0:09:31.83,Main Dialogue,Miwa,0,0,0,,Shall we go on?
+Dialogue: 0,0:09:31.83,0:09:32.58,Main Dialogue,Rin,0,0,0,,Okay, next...
+Dialogue: 0,0:09:32.58,0:09:36.02,Main Dialogue,Hiina,0,0,0,,Sorry, but I'm going to clean up after that mess.
+Dialogue: 0,0:09:36.02,0:09:38.93,Main Dialogue,Rin,0,0,0,,Okay, Hiina-san's "new field trip"!
+Dialogue: 0,0:09:38.93,0:09:42.89,Main Dialogue,Hiina,0,0,0,,On a mountaintop, there's a shop run by the \Nschool that sells field-trip-exclusive goods.
+Dialogue: 0,0:09:42.89,0:09:44.60,Main Dialogue,Hina,0,0,0,,They're selling stuff!
+Dialogue: 0,0:09:44.60,0:09:47.77,Main Dialogue,Hiina,0,0,0,,Everyone's climbing a mountain and \Ncheering when they reach the top,
+Dialogue: 0,0:09:44.60,0:09:50.06,Summit Sign 1,Sign,0,0,0,,Only Available on the Mountaintop
+Dialogue: 0,0:09:44.60,0:09:50.06,Summit Sign 4,Sign,0,0,0,,End of Line
+Dialogue: 0,0:09:47.77,0:09:51.37,Main Dialogue,Hiina,0,0,0,,and then the teachers start \Nsetting out goods to sell.
+Dialogue: 0,0:09:52.36,0:09:55.89,Main Dialogue,Hiina,0,0,0,,"Even if you get lost, you'll be \Nfine with this five-piece set, plus...
+Dialogue: 0,0:09:55.89,0:09:58.65,Main Dialogue,Hiina,0,0,0,,Everyone who buys one \Nreceives a scarf or towel, too!"
+Dialogue: 0,0:09:59.37,0:10:02.12,Main Dialogue,Rin,0,0,0,,Like if you spend 3,000 yen or more,\Nyou get one thing for free.
+Dialogue: 0,0:10:01.51,0:10:03.22,Main Dialogue,Hiina,0,0,0,,Right, like a microfiber towel.
+Dialogue: 0,0:10:03.22,0:10:04.64,Main Dialogue,Hina,0,0,0,,I bet there'd be capsule toy machines, too.
+Dialogue: 0,0:10:04.64,0:10:05.87,Main Dialogue,Kanon,0,0,0,,Right, right, right!
+Dialogue: 0,0:10:04.64,0:10:05.87,Main Dialogue,Hiina,0,0,0,,Toys!
+Dialogue: 0,0:10:05.87,0:10:10.33,Main Dialogue,Hina,0,0,0,,So what happens to the money \Nthe teachers earn from that?
+Dialogue: 0,0:10:10.33,0:10:13.71,Main Dialogue,Hiina,0,0,0,,Well, it's not like teachers are philanthropists.
+Dialogue: 0,0:10:13.71,0:10:15.21,Main Dialogue,Kanon,0,0,0,,It goes right into their pockets!
+Dialogue: 0,0:10:15.21,0:10:18.27,Main Dialogue,Rin,0,0,0,,I see! It's a way to make money \Nother than their salary!
+Dialogue: 0,0:10:17.82,0:10:18.60,Main Dialogue,Miwa,0,0,0,,Oh!
+Dialogue: 0,0:10:18.27,0:10:19.55,Main Dialogue,Hiina,0,0,0,,Okay, okay...
+Dialogue: 0,0:10:19.17,0:10:20.29,Main Dialogue,Rin,0,0,0,,I see.
+Dialogue: 0,0:10:20.29,0:10:22.36,Main Dialogue,Rin,0,0,0,,Okay, I guess I'll go.
+Dialogue: 0,0:10:22.36,0:10:23.56,Main Dialogue,Hiina,0,0,0,,Rin-chan.
+Dialogue: 0,0:10:23.56,0:10:26.62,Main Dialogue,Rin,0,0,0,,It's not a field trip, but a pig foot trip!
+Dialogue: 0,0:10:28.04,0:10:29.54,Main Dialogue,Hiina,0,0,0,,Okay, next.
+Dialogue: 0,0:10:28.53,0:10:29.54,Main Dialogue,Miwa,0,0,0,,My stomach hurts.
+Dialogue: 0,0:10:29.54,0:10:33.02,Main Dialogue,Miwa,0,0,0,,Oh, if I explained any further, \NI guess it'd just be... an ego trip.
+Dialogue: 0,0:10:33.02,0:10:34.13,Main Dialogue,Hiina,0,0,0,,Okay, next!
+Dialogue: 0,0:10:34.13,0:10:35.36,Main Dialogue,Kanon,0,0,0,,Me!
+Dialogue: 0,0:10:35.36,0:10:37.92,Main Dialogue,Miwa,0,0,0,,I don't dislike that, really.
+Dialogue: 0,0:10:36.89,0:10:39.04,Main Dialogue,Rin,0,0,0,,Hina-chan's "new field trip"!
+Dialogue: 0,0:10:39.04,0:10:42.62,Main Dialogue,Hina,0,0,0,,Um, the students are clearly \Nbeing put in some kind of order.
+Dialogue: 0,0:10:42.62,0:10:43.89,Main Dialogue,Rin,0,0,0,,By height?
+Dialogue: 0,0:10:43.89,0:10:45.38,Main Dialogue,Hina,0,0,0,,You would think by height, right?
+Dialogue: 0,0:10:45.38,0:10:45.88,Main Dialogue,Rin,0,0,0,,Yeah.
+Dialogue: 0,0:10:45.88,0:10:48.21,Main Dialogue,Hina,0,0,0,,But they're not told what kind of order it is.
+Dialogue: 0,0:10:48.21,0:10:50.05,Main Dialogue,Kanon,0,0,0,,So it could be the teacher's \Norder of preference?
+Dialogue: 0,0:10:50.05,0:10:52.38,Main Dialogue,Hina,0,0,0,,Yeah, it could be in order of \Nhow well the teacher likes them.
+Dialogue: 0,0:10:52.38,0:10:54.88,Main Dialogue,Hina,0,0,0,,Or maybe in the order of \Ntheir body's development?
+Dialogue: 0,0:10:54.88,0:10:55.65,Main Dialogue,Kanon,0,0,0,,That's awful!
+Dialogue: 0,0:10:55.65,0:10:56.71,Main Dialogue,Miwa,0,0,0,,In the order of development...
+Dialogue: 0,0:10:56.71,0:10:58.80,Main Dialogue,Hina,0,0,0,,Well, if they're not ordered \Nfrom littlest to biggest,
+Dialogue: 0,0:10:58.80,0:11:00.09,Main Dialogue,Hina,0,0,0,,the kids in back can't be seen, right?
+Dialogue: 0,0:11:00.09,0:11:02.01,Main Dialogue,Kanon,0,0,0,,Why are you looking at me when you say that?
+Dialogue: 0,0:11:02.01,0:11:02.70,Main Dialogue,Kanon,0,0,0,,Why?
+Dialogue: 0,0:11:02.70,0:11:04.82,Main Dialogue,Hiina,0,0,0,,Do your best, Kanon! Drink a lot of milk!
+Dialogue: 0,0:11:04.82,0:11:06.88,Main Dialogue,Kanon,0,0,0,,But you have huge... character!
+Dialogue: 0,0:11:06.88,0:11:09.52,Main Dialogue,Hiina,0,0,0,,Don't say "character" or "voice actor"!
+Dialogue: 0,0:11:09.52,0:11:10.38,Main Dialogue,Rin,0,0,0,,But Mio-senpai...
+Dialogue: 0,0:11:10.38,0:11:11.46,Main Dialogue Top,Kanon,0,0,0,,How about you, Senpai?
+Dialogue: 0,0:11:10.38,0:11:13.40,Main Dialogue,Miwa,0,0,0,,Mio-senpai's back story is that \Nshe has huge ones... I think.
+Dialogue: 0,0:11:13.40,0:11:14.63,Main Dialogue,Hiina,0,0,0,,Even though you're flat!
+Dialogue: 0,0:11:14.63,0:11:15.26,Main Dialogue,Miwa,0,0,0,,Who is?
+Dialogue: 0,0:11:16.19,0:11:17.13,Main Dialogue,Hiina,0,0,0,,Nothing! Nothing!
+Dialogue: 0,0:11:17.13,0:11:20.74,Main Dialogue,Miwa,0,0,0,,Hey, voice actor. Just because we've \Nknown each other for a while...
+Dialogue: 0,0:11:20.74,0:11:21.87,Main Dialogue,Rin,0,0,0,,Maybe it's lined up side-by-side.
+Dialogue: 0,0:11:21.87,0:11:23.95,Main Dialogue,Rin,0,0,0,,Yeah, if they're lined up for a field trip.
+Dialogue: 0,0:11:23.95,0:11:25.20,Main Dialogue,Kanon,0,0,0,,Whew, good.
+Dialogue: 0,0:11:25.20,0:11:27.29,Main Dialogue,Rin,0,0,0,,Okay, any other ideas?
+Dialogue: 0,0:11:27.29,0:11:30.75,Main Dialogue,Miwa,0,0,0,,I think... I just came up with one.
+Dialogue: 0,0:11:30.75,0:11:31.69,Main Dialogue,Hina,0,0,0,,A senpai original!
+Dialogue: 0,0:11:31.69,0:11:34.34,Main Dialogue,Rina,0,0,0,,Mio-senpai's "new field trip"!
+Dialogue: 0,0:11:34.34,0:11:38.94,Main Dialogue,Miwa,0,0,0,,A boy you thought had stopped \Ncoming to school recently
+Dialogue: 0,0:11:38.94,0:11:42.10,Main Dialogue,Miwa,0,0,0,,is really living on the mountain \Nwhere the class had a field trip.
+Dialogue: 0,0:11:42.10,0:11:44.01,Main Dialogue,Miwa,0,0,0,,Okay, just listen, just listen.
+Dialogue: 0,0:11:44.01,0:11:48.67,Main Dialogue,Miwa,0,0,0,,There was a classmate who suddenly \Nstopped coming to school.
+Dialogue: 0,0:11:48.67,0:11:53.55,Main Dialogue,Miwa,0,0,0,,Eventually, everyone started \Nto forget about him.
+Dialogue: 0,0:11:53.55,0:11:58.07,Main Dialogue,Miwa,0,0,0,,But it turns out he was living on the \Nmountain where the class had a field trip.
+Dialogue: 0,0:11:58.07,0:12:02.30,Main Dialogue,Miwa,0,0,0,,"Hey, did you see that?" \N"Huh? Wasn't that Saruwatari?"
+Dialogue: 0,0:12:02.30,0:12:04.29,Main Dialogue,Miwa,0,0,0,,Kids start saying things like that.
+Dialogue: 0,0:12:04.29,0:12:08.80,Main Dialogue,Miwa,0,0,0,,The form of the fleeing figure had \Nlong hair and a swarthy body,
+Dialogue: 0,0:12:08.80,0:12:12.40,Main Dialogue,Miwa,0,0,0,,but it was definitely their classmate, Saruwatari.
+Dialogue: 0,0:12:13.07,0:12:13.79,Main Dialogue,Miwa,0,0,0,,That's the field trip.
+Dialogue: 0,0:12:14.21,0:12:16.56,Main Dialogue,Kanon,0,0,0,,He's totally being raised as a beast.
+Dialogue: 0,0:12:16.56,0:12:18.38,Main Dialogue,Hina,0,0,0,,Something is obviously raising him.
+Dialogue: 0,0:12:18.38,0:12:21.56,Main Dialogue,Rin,0,0,0,,Mio-senpai's original idea \Nkind of packs a punch.
+Dialogue: 0,0:12:20.92,0:12:21.97,Main Dialogue,Hina,0,0,0,,It had deep darkness.
+Dialogue: 0,0:12:21.97,0:12:22.63,Main Dialogue,Miwa,0,0,0,,Seriously?
+Dialogue: 0,0:12:22.63,0:12:24.47,Main Dialogue,Rin,0,0,0,,It was heavy.
+Dialogue: 0,0:12:23.25,0:12:24.62,Main Dialogue,Miwa,0,0,0,,R-U-C-we-us? Are you serious?
+Dialogue: 0,0:12:24.47,0:12:25.49,Main Dialogue,Rin,0,0,0,,R-U-C-we-us!
+Dialogue: 0,0:12:25.49,0:12:26.38,Main Dialogue,Hina,0,0,0,,You went there?
+Dialogue: 0,0:12:26.38,0:12:27.30,Main Dialogue,Rin,0,0,0,,Well, let's move on...
+Dialogue: 0,0:12:27.30,0:12:29.53,Main Dialogue,Kanon,0,0,0,,Rin-chan, why not vindicate yourself \Nafter that last one? One more.
+Dialogue: 0,0:12:28.99,0:12:29.54,Main Dialogue Top,Hina,0,0,0,,Oh, that's right.
+Dialogue: 0,0:12:29.54,0:12:30.08,Main Dialogue,Girl,0,0,0,,Yeah.
+Dialogue: 0,0:12:30.08,0:12:30.68,Main Dialogue,Girl,0,0,0,,Do it.
+Dialogue: 0,0:12:30.68,0:12:31.88,Main Dialogue,Girl,0,0,0,,Okay, come on, go.
+Dialogue: 0,0:12:32.44,0:12:35.31,Main Dialogue,Rin,0,0,0,,All right, my "new field trip."
+Dialogue: 0,0:12:36.02,0:12:41.07,Main Dialogue,Rin,0,0,0,,The soup from everyone's lunch is leaking!
+Dialogue: 0,0:12:42.26,0:12:43.48,Main Dialogue,Rin,0,0,0,,Oh, good, you laughed!
+Dialogue: 0,0:12:42.93,0:12:44.73,Main Dialogue,Hina,0,0,0,,That's painful in a dull sort of way!
+Dialogue: 0,0:12:43.68,0:12:45.36,Main Dialogue,Rin,0,0,0,,You laughed! You laughed!
+Dialogue: 0,0:12:44.73,0:12:45.86,Main Dialogue,Miwa,0,0,0,,I like that one.
+Dialogue: 0,0:12:45.86,0:12:47.29,Main Dialogue,Rin,0,0,0,,You're all laughing!
+Dialogue: 0,0:12:46.37,0:12:47.99,Main Dialogue,Miwa,0,0,0,,I like that one.
+Dialogue: 0,0:12:48.40,0:12:51.04,Main Dialogue,Koharu,0,0,0,,Yua-senpai, where are we going today?
+Dialogue: 0,0:12:51.04,0:12:54.25,Main Dialogue,Yua,0,0,0,,I thought we'd leave the \Nschool grounds for once.
+Dialogue: 0,0:12:54.25,0:12:57.36,Main Dialogue,Hiina,0,0,0,,It's unheard of for an anime \Nto record "on location."
+Dialogue: 0,0:12:56.04,0:13:02.05,Park Sign 1,Sign,0,0,0,,Obu Sports Park
+Dialogue: 0,0:12:56.04,0:13:02.05,Park Sign 2,Sign,0,0,0,,Park Entrance                 Ticket Counter
+Dialogue: 0,0:12:57.36,0:12:59.04,Main Dialogue,Koharu,0,0,0,,R-Record on location?!
+Dialogue: 0,0:12:59.04,0:13:02.05,Main Dialogue,Aoi,0,0,0,,That really is new!
+Dialogue: 0,0:13:02.05,0:13:05.70,Main Dialogue,Girl,0,0,0,,Hiina-senpai, are you scared of haunted houses?
+Dialogue: 0,0:13:07.76,0:13:08.94,Main Dialogue,Aoi,0,0,0,,You are scared, aren't you?
+Dialogue: 0,0:13:08.94,0:13:11.48,Main Dialogue,Yua,0,0,0,,When you're scared, just imitate \Na goat and you'll be fine.
+Dialogue: 0,0:13:10.79,0:13:11.48,Main Dialogue,Yua,0,0,0,,Baa...
+Dialogue: 0,0:13:11.48,0:13:12.61,Main Dialogue,,0,0,0,,Yeah, like that!
+Dialogue: 0,0:13:13.77,0:13:15.73,Main Dialogue,Koharu,0,0,0,,I can't see anything.
+Dialogue: 0,0:13:16.59,0:13:18.87,Main Dialogue,Aoi,0,0,0,,Wait, I really can't do this.
+Dialogue: 0,0:13:18.87,0:13:19.73,Main Dialogue,Koharu,0,0,0,,Who's that?
+Dialogue: 0,0:13:19.73,0:13:20.38,Main Dialogue,Yua,0,0,0,,It's me.
+Dialogue: 0,0:13:20.38,0:13:21.01,Main Dialogue,Yua,0,0,0,,Oh.
+Dialogue: 0,0:13:21.01,0:13:21.61,Main Dialogue,Man,0,0,0,,Go ahead!
+Dialogue: 0,0:13:21.61,0:13:22.52,Main Dialogue,Hiina,0,0,0,,He said we can go.
+Dialogue: 0,0:13:22.52,0:13:23.62,Main Dialogue,Man,0,0,0,,Please proceed.
+Dialogue: 0,0:13:23.62,0:13:24.61,Main Dialogue,Girl,0,0,0,,What should we do?
+Dialogue: 0,0:13:24.61,0:13:27.08,Main Dialogue,Hiina,0,0,0,,It's okay. I'll go first.
+Dialogue: 0,0:13:25.83,0:13:26.66,Main Dialogue,Girl,0,0,0,,I can't see.
+Dialogue: 0,0:13:26.66,0:13:27.39,Main Dialogue,Girl,0,0,0,,I can't see, either.
+Dialogue: 0,0:13:27.39,0:13:28.53,Main Dialogue,Aoi,0,0,0,,We have to sit here?
+Dialogue: 0,0:13:28.53,0:13:30.41,Main Dialogue,Hiina,0,0,0,,Yeah. Let's all sit down.
+Dialogue: 0,0:13:28.99,0:13:30.41,Main Dialogue,Hiina,0,0,0,,We sit down, right?
+Dialogue: 0,0:13:30.41,0:13:31.60,Main Dialogue,Aoi,0,0,0,,Huh? We really...
+Dialogue: 0,0:13:31.60,0:13:34.61,Main Dialogue,Hiina,0,0,0,,There aren't any more seats. \NWhere do you trying sit?
+Dialogue: 0,0:13:34.61,0:13:35.42,Main Dialogue,Yua,0,0,0,,Scoot over one.
+Dialogue: 0,0:13:35.42,0:13:36.71,Main Dialogue,Aoi,0,0,0,,I can't.
+Dialogue: 0,0:13:36.71,0:13:37.78,Main Dialogue,Hiina,0,0,0,,You can't?
+Dialogue: 0,0:13:38.59,0:13:40.94,Main Dialogue,Koharu,0,0,0,,Aoi-senpai is cute, isn't she?
+Dialogue: 0,0:13:40.26,0:13:41.60,Main Dialogue,Koharu,0,0,0,,I seriously can't...
+Dialogue: 0,0:13:40.94,0:13:42.67,Main Dialogue,Hiina,0,0,0,,Right? Um, let's watch the video.
+Dialogue: 0,0:13:42.67,0:13:45.84,Main Dialogue,Aoi,0,0,0,,I can't! That's one thing I really can't do!
+Dialogue: 0,0:13:46.75,0:13:47.97,Italics Dialogue,Voice,0,0,0,,{\a6}What is that?
+Dialogue: 0,0:13:47.24,0:13:48.56,Main Dialogue,Koharu,0,0,0,,Who's that?
+Dialogue: 0,0:13:48.56,0:13:50.91,Main Dialogue,Girl,0,0,0,,That's an actor.
+Dialogue: 0,0:13:52.55,0:13:53.78,Italics Dialogue,Voice,0,0,0,,{\a6}I'm scared!
+Dialogue: 0,0:13:53.22,0:13:54.02,Main Dialogue,Koharu,0,0,0,,Who's that?
+Dialogue: 0,0:13:54.02,0:13:55.80,Main Dialogue,Yua,0,0,0,,That's an actor, too.
+Dialogue: 0,0:13:56.80,0:13:58.82,Main Dialogue,Hiina,0,0,0,,I wonder how much they got for this.
+Dialogue: 0,0:13:59.41,0:14:00.91,Main Dialogue,Aoi,0,0,0,,Is something going to come out? Alive?
+Dialogue: 0,0:14:00.91,0:14:03.23,Main Dialogue,Hiina,0,0,0,,I wouldn't say it's "alive"...
+Dialogue: 0,0:14:03.23,0:14:05.40,Main Dialogue,Aoi,0,0,0,,Oh, God, don't do this to me!
+Dialogue: 0,0:14:06.79,0:14:07.80,Italics Dialogue,Voice,0,0,0,,{\a6}Come...
+Dialogue: 0,0:14:07.80,0:14:09.19,Italics Dialogue,Voice,0,0,0,,{\a6}Stay away from me!
+Dialogue: 0,0:14:08.32,0:14:10.17,Main Dialogue,Koharu,0,0,0,,Convincing performance, isn't it?
+Dialogue: 0,0:14:12.24,0:14:14.47,Main Dialogue,Aoi,0,0,0,,I can't do this. I really can't.
+Dialogue: 0,0:14:15.98,0:14:16.74,Main Dialogue,Girl,0,0,0,,That surprised me.
+Dialogue: 0,0:14:16.21,0:14:17.47,Main Dialogue,Hiina,0,0,0,,It's fine.
+Dialogue: 0,0:14:18.02,0:14:19.38,Main Dialogue,Hiina,0,0,0,,It's fine, really.
+Dialogue: 0,0:14:19.38,0:14:20.75,Main Dialogue,Aoi,0,0,0,,I can't! Seriously!
+Dialogue: 0,0:14:20.75,0:14:22.93,Main Dialogue,Aoi,0,0,0,,God, what do I do?! \NI hate this more than anything!
+Dialogue: 0,0:14:22.93,0:14:24.93,Main Dialogue,,0,0,0,,No! Don't!
+Dialogue: 0,0:14:25.76,0:14:28.13,Main Dialogue,Hiina,0,0,0,,It's fine! It's fine!
+Dialogue: 0,0:14:28.13,0:14:29.52,Main Dialogue,Hiina,0,0,0,,Come on, come on.
+Dialogue: 0,0:14:30.19,0:14:31.29,Main Dialogue,,0,0,0,,Look, look.
+Dialogue: 0,0:14:30.42,0:14:32.17,Main Dialogue,,0,0,0,,Is there a step here? Oh, I guess not.
+Dialogue: 0,0:14:31.29,0:14:33.23,Main Dialogue,Yua,0,0,0,,Just look. They're dummies.
+Dialogue: 0,0:14:33.23,0:14:34.43,Main Dialogue,Aoi,0,0,0,,I'm scared!
+Dialogue: 0,0:14:33.31,0:14:34.43,Main Dialogue,Yua,0,0,0,,They're just dummies.
+Dialogue: 0,0:14:34.43,0:14:35.61,Main Dialogue,Aoi,0,0,0,,I'm really scared...
+Dialogue: 0,0:14:35.61,0:14:36.74,Main Dialogue,Yua,0,0,0,,It's okay.
+Dialogue: 0,0:14:35.92,0:14:37.74,Main Dialogue,Aoi,0,0,0,,I'm so scared!
+Dialogue: 0,0:14:37.74,0:14:38.34,Main Dialogue,,0,0,0,,Baa...
+Dialogue: 0,0:14:38.34,0:14:40.58,Main Dialogue,Hiina,0,0,0,,Look. This is all made by people.
+Dialogue: 0,0:14:41.71,0:14:42.83,Main Dialogue,Hiina,0,0,0,,It was the door.
+Dialogue: 0,0:14:42.83,0:14:44.21,Main Dialogue,Yua,0,0,0,,It's okay.
+Dialogue: 0,0:14:44.21,0:14:45.25,Main Dialogue,,0,0,0,,Baa?
+Dialogue: 0,0:14:45.25,0:14:46.30,Main Dialogue,,0,0,0,,Baa!
+Dialogue: 0,0:14:47.20,0:14:48.76,Main Dialogue,Hiina,0,0,0,,There are some hanging dummies.
+Dialogue: 0,0:14:48.76,0:14:52.14,Main Dialogue,Aoi,0,0,0,,Hiina-senpai, I've got my eyes closed, \Nso I can't see anything.
+Dialogue: 0,0:14:49.51,0:14:51.03,Main Dialogue,Aoi,0,0,0,,This is kinda scary.
+Dialogue: 0,0:14:52.14,0:14:53.21,Main Dialogue,Aoi,0,0,0,,Please guide me.
+Dialogue: 0,0:14:53.21,0:14:55.67,Main Dialogue,Hiina,0,0,0,,Okay, okay. Next up is a wax figure.
+Dialogue: 0,0:14:55.67,0:14:57.19,Main Dialogue,Aoi,0,0,0,,I can't deal with wax figures!
+Dialogue: 0,0:14:57.19,0:14:58.47,Main Dialogue,Girl,0,0,0,,There's a dummy!
+Dialogue: 0,0:14:57.76,0:14:59.29,Main Dialogue,Girl,0,0,0,,Gross...
+Dialogue: 0,0:14:59.29,0:15:00.72,Main Dialogue,Hiina,0,0,0,,It's okay, it's okay.
+Dialogue: 0,0:15:00.72,0:15:03.24,Main Dialogue,Aoi,0,0,0,,I'm so scared... I'm really scared...
+Dialogue: 0,0:15:01.61,0:15:03.24,Main Dialogue,Girl,0,0,0,,Koharun sure is quiet.
+Dialogue: 0,0:15:03.24,0:15:04.40,Main Dialogue,Girl,0,0,0,,Oh, look at this.
+Dialogue: 0,0:15:04.40,0:15:05.39,Main Dialogue,Girl,0,0,0,,It's Halloween.
+Dialogue: 0,0:15:05.39,0:15:06.78,Main Dialogue,Hiina,0,0,0,,What do we do here?
+Dialogue: 0,0:15:06.07,0:15:07.11,Main Dialogue,Girl,0,0,0,,Halloween jack o' lanterns.
+Dialogue: 0,0:15:07.11,0:15:07.84,Main Dialogue,Aoi,0,0,0,,What?
+Dialogue: 0,0:15:07.84,0:15:09.30,Main Dialogue,Hiina,0,0,0,,Jack o' lanterns.
+Dialogue: 0,0:15:08.13,0:15:09.30,Main Dialogue,Hiina,0,0,0,,Ah, scary...
+Dialogue: 0,0:15:11.06,0:15:12.30,Main Dialogue,Yua,0,0,0,,You can't even handle this?
+Dialogue: 0,0:15:22.50,0:15:24.00,Main Dialogue,,0,0,0,,Ah, that was scary...
+Dialogue: 0,0:15:24.00,0:15:25.41,Main Dialogue,,0,0,0,,This is so funny!
+Dialogue: 0,0:15:25.84,0:15:27.68,Main Dialogue,,0,0,0,,Guillotine! Guillotine!
+Dialogue: 0,0:15:28.76,0:15:29.70,Main Dialogue,Yua,0,0,0,,Louis? Louis?
+Dialogue: 0,0:15:28.76,0:15:30.28,Main Dialogue,Yua,0,0,0,,Koharun is happy to see it.
+Dialogue: 0,0:15:31.34,0:15:32.26,Main Dialogue,,0,0,0,,Louis's execution?
+Dialogue: 0,0:15:32.26,0:15:33.37,Main Dialogue,,0,0,0,,Eww, creepy...
+Dialogue: 0,0:15:33.86,0:15:35.97,Main Dialogue,Yua,0,0,0,,Is someone here? Nobody?
+Dialogue: 0,0:15:35.97,0:15:37.62,Main Dialogue,Girl,0,0,0,,I'm scared! I'm scared!
+Dialogue: 0,0:15:36.76,0:15:38.35,Main Dialogue,Hiina,0,0,0,,Something might come out here.
+Dialogue: 0,0:15:39.25,0:15:42.21,Main Dialogue,Aoi,0,0,0,,I can't do this! I can't do this! I can't...
+Dialogue: 0,0:15:44.73,0:15:45.73,Main Dialogue,Hiina,0,0,0,,Okay, we're moving.
+Dialogue: 0,0:15:45.73,0:15:46.94,Main Dialogue,Aoi,0,0,0,,I'm really sorry!
+Dialogue: 0,0:15:46.94,0:15:49.00,Main Dialogue,Hiina,0,0,0,,It's okay, don't worry.
+Dialogue: 0,0:15:49.64,0:15:51.03,Main Dialogue,,0,0,0,,Scary! Scary! Scary!
+Dialogue: 0,0:15:51.03,0:15:52.45,Main Dialogue,Yua,0,0,0,,No way!
+Dialogue: 0,0:15:51.71,0:15:53.42,Main Dialogue,Yua,0,0,0,,I can't see anything...
+Dialogue: 0,0:15:54.41,0:15:56.74,Main Dialogue,Yua,0,0,0,,Okay, look at that. The Grim Reaper.
+Dialogue: 0,0:15:57.18,0:15:58.34,Main Dialogue,Aoi,0,0,0,,It's scary!
+Dialogue: 0,0:15:57.79,0:15:59.27,Main Dialogue,Aoi,0,0,0,,It's the Grim Reaper.
+Dialogue: 0,0:16:01.11,0:16:02.61,Main Dialogue,,0,0,0,,Oh, God! Oh, God!
+Dialogue: 0,0:16:01.46,0:16:03.58,Main Dialogue,,0,0,0,,Aoi! Hang in there!
+Dialogue: 0,0:16:02.61,0:16:04.37,Main Dialogue,,0,0,0,,It's gonna eat me! It's gonna eat me!
+Dialogue: 0,0:16:04.37,0:16:05.49,Main Dialogue,,0,0,0,,Wow, she's really...
+Dialogue: 0,0:16:08.34,0:16:09.89,Main Dialogue,Girl,0,0,0,,This is hilarious!
+Dialogue: 0,0:16:10.41,0:16:12.19,Main Dialogue,Aoi,0,0,0,,That was scary.
+Dialogue: 0,0:16:12.19,0:16:15.12,Main Dialogue,Hiina,0,0,0,,That was hilarious... Are you okay?
+Dialogue: 0,0:16:15.12,0:16:17.11,Main Dialogue,Yua,0,0,0,,Are you crying? Are you crying?
+Dialogue: 0,0:16:17.11,0:16:18.64,Main Dialogue,Koharu,0,0,0,,Are you all right?
+Dialogue: 0,0:16:19.56,0:16:20.39,Main Dialogue,,0,0,0,,Baa?
+Dialogue: 0,0:16:20.39,0:16:21.46,Main Dialogue,,0,0,0,,Baa!
+Dialogue: 0,0:16:23.08,0:16:27.75,Main Dialogue,Aoi,0,0,0,,Um, the only thing I saw in there \Nwas the jack o' lanterns.
+Dialogue: 0,0:16:29.87,0:16:34.78,Main Dialogue,Yua,0,0,0,,Okay, with these members, let's think \Nof a "new haunted house" today.
+Dialogue: 0,0:16:34.78,0:16:36.41,Main Dialogue,Yua,0,0,0,,Any ideas?
+Dialogue: 0,0:16:36.41,0:16:37.19,Main Dialogue,Mobuko,0,0,0,,Me.
+Dialogue: 0,0:16:37.19,0:16:40.56,Main Dialogue,Yua,0,0,0,,All right, Mobuko-chan's "new haunted house."
+Dialogue: 0,0:16:40.56,0:16:43.89,Main Dialogue,Mobuko,0,0,0,,The route is so tough that it's \Nfar from being a haunted house.
+Dialogue: 0,0:16:44.86,0:16:48.12,Main Dialogue,Mobuko,0,0,0,,Um, like, it's a giant maze,
+Dialogue: 0,0:16:48.12,0:16:51.72,Main Dialogue,Mobuko,0,0,0,,or there's a river flowing through it...
+Dialogue: 0,0:16:51.72,0:16:52.84,Main Dialogue,Girl,0,0,0,,A river?
+Dialogue: 0,0:16:52.84,0:16:56.20,Main Dialogue,Mobuko,0,0,0,,Like... I don't know about ghosts.
+Dialogue: 0,0:16:56.81,0:16:57.85,Main Dialogue,Yui,0,0,0,,You don't know about ghosts?
+Dialogue: 0,0:16:57.85,0:16:58.30,Main Dialogue,,0,0,0,,Yeah.
+Dialogue: 0,0:16:58.30,0:16:59.54,Main Dialogue,Girl,0,0,0,,I see.
+Dialogue: 0,0:16:59.54,0:17:01.46,Main Dialogue,Hiina,0,0,0,,It's like, "Wait. The current's too fast right now."
+Dialogue: 0,0:17:02.00,0:17:04.47,Main Dialogue,Yua,0,0,0,,"Wait a second. Time out."
+Dialogue: 0,0:17:04.91,0:17:07.29,Main Dialogue,Aoi,0,0,0,,I wonder where the river flows to.
+Dialogue: 0,0:17:07.29,0:17:08.28,Main Dialogue,Koharu,0,0,0,,Good question.
+Dialogue: 0,0:17:08.28,0:17:09.34,Main Dialogue,Mobuko,0,0,0,,Maybe the sewer?
+Dialogue: 0,0:17:09.61,0:17:11.63,Main Dialogue,Girl,0,0,0,,Gross! That would stink!
+Dialogue: 0,0:17:11.63,0:17:12.76,Main Dialogue,Girl,0,0,0,,It's not downstream, is it?
+Dialogue: 0,0:17:12.76,0:17:14.29,Main Dialogue,Girl,0,0,0,,Mobuko-chan, that's awful.
+Dialogue: 0,0:17:14.62,0:17:16.33,Main Dialogue,Hiina,0,0,0,,And there's Mobumi, Mobue, Mobuyo...
+Dialogue: 0,0:17:16.33,0:17:19.25,Main Dialogue,Aoi,0,0,0,,I bet, about once a week, \Nthey'd have a guy come in
+Dialogue: 0,0:17:19.25,0:17:22.01,Main Dialogue,Aoi,0,0,0,,to fish out the people who got swept away.
+Dialogue: 0,0:17:22.21,0:17:23.48,Main Dialogue,Mobuko,0,0,0,,To scoop them up...
+Dialogue: 0,0:17:24.03,0:17:24.79,Main Dialogue,Hokaru,0,0,0,,They're all floating.
+Dialogue: 0,0:17:24.79,0:17:25.43,Main Dialogue,Aoi,0,0,0,,Right.
+Dialogue: 0,0:17:26.51,0:17:27.77,Main Dialogue,Aoi,0,0,0,,Wait, aren't they dead, then?!
+Dialogue: 0,0:17:28.77,0:17:30.39,Main Dialogue,Yua,0,0,0,,That's how it would become a haunted house.
+Dialogue: 0,0:17:31.20,0:17:32.27,Main Dialogue,Yui,0,0,0,,Got one.
+Dialogue: 0,0:17:33.31,0:17:35.74,Main Dialogue,Yua,0,0,0,,Yui-chan's "new haunted house."
+Dialogue: 0,0:17:35.74,0:17:40.08,Main Dialogue,Yui,0,0,0,,Right before a ghost jumps out, you hear \Nhim say, "I'm going to come out now."
+Dialogue: 0,0:17:40.92,0:17:42.07,Main Dialogue,Girl,0,0,0,,I don't like that!
+Dialogue: 0,0:17:44.75,0:17:45.93,Main Dialogue,Hiina,0,0,0,,That'd be fun in a low-key way.
+Dialogue: 0,0:17:45.93,0:17:47.00,Main Dialogue,Yua,0,0,0,,Yeah.
+Dialogue: 0,0:17:47.00,0:17:48.04,Main Dialogue,Koharu,0,0,0,,That's inspired.
+Dialogue: 0,0:17:48.04,0:17:50.40,Main Dialogue,Yui,0,0,0,,There are lots of speakers on the ceiling.
+Dialogue: 0,0:17:48.97,0:17:50.40,Italics Dialogue,Voice,0,0,0,,{\a6}I'll be coming out soon.
+Dialogue: 0,0:17:50.40,0:17:51.66,Main Dialogue,Yui,0,0,0,,"I'm going to come out now."
+Dialogue: 0,0:17:53.05,0:17:56.58,Main Dialogue,Hiina,0,0,0,,You're just looking at the wax figures, \Ngoing, "Scary! Is one gonna pop out?"
+Dialogue: 0,0:17:56.58,0:17:57.97,Main Dialogue,Hiina,0,0,0,,But then you hear, \N"I'm coming out now."
+Dialogue: 0,0:17:59.34,0:18:01.01,Main Dialogue,Yua,0,0,0,,That guy isn't scary at all!
+Dialogue: 0,0:18:01.01,0:18:04.08,Main Dialogue,Aoi,0,0,0,,I'd appreciate it if they gave me a countdown.
+Dialogue: 0,0:18:04.08,0:18:07.19,Main Dialogue,Aoi,0,0,0,,Three, two, one, go!
+Dialogue: 0,0:18:07.98,0:18:09.09,Main Dialogue,Yui,0,0,0,,That's American-style.
+Dialogue: 0,0:18:08.71,0:18:10.84,Main Dialogue,Hiina,0,0,0,,That'd be like the space shuttle at lift-off.
+Dialogue: 0,0:18:11.52,0:18:12.58,Main Dialogue,Yua,0,0,0,,That's new.
+Dialogue: 0,0:18:12.58,0:18:13.58,Main Dialogue,Aoi,0,0,0,,Yeah, that's new.
+Dialogue: 0,0:18:12.90,0:18:13.58,Main Dialogue,Hiina,0,0,0,,It was new.
+Dialogue: 0,0:18:13.58,0:18:15.03,Main Dialogue,Yua,0,0,0,,Okay, who's next?
+Dialogue: 0,0:18:15.03,0:18:15.79,Main Dialogue,Koharu,0,0,0,,Me!
+Dialogue: 0,0:18:16.25,0:18:18.61,Main Dialogue,Yua,0,0,0,,Koharun's "new haunted house"!
+Dialogue: 0,0:18:18.61,0:18:21.83,Main Dialogue,Koharu,0,0,0,,A hot ghost guy escorts you.
+Dialogue: 0,0:18:21.83,0:18:22.36,Main Dialogue,Yui,0,0,0,,There it is.
+Dialogue: 0,0:18:22.36,0:18:23.69,Main Dialogue,Aoi,0,0,0,,There it is, there it is.
+Dialogue: 0,0:18:24.12,0:18:27.69,Main Dialogue,Koharu,0,0,0,,He escorts you along the route.
+Dialogue: 0,0:18:27.69,0:18:31.57,Main Dialogue,Koharu,0,0,0,,Then if you scream, he holds you close.
+Dialogue: 0,0:18:31.57,0:18:33.46,Main Dialogue,Koharu,0,0,0,,Um, "You can do what you like with me."
+Dialogue: 0,0:18:34.53,0:18:36.51,Main Dialogue,Yui,0,0,0,,Is it just a regular hot guy?
+Dialogue: 0,0:18:36.51,0:18:41.50,Main Dialogue,Koharu,0,0,0,,He's a ghost, but there's still a trace of \Nhis good looks, even though he's a ghost...
+Dialogue: 0,0:18:41.50,0:18:42.66,Main Dialogue,Yua,0,0,0,,Like a little blood dripping?
+Dialogue: 0,0:18:42.66,0:18:47.25,Main Dialogue,Koharu,0,0,0,,Yeah! Like, just enough to make you \Nwonder if he sucked someone's blood.
+Dialogue: 0,0:18:47.25,0:18:49.27,Main Dialogue,Koharu,0,0,0,,He's not really grotesque.
+Dialogue: 0,0:18:49.55,0:18:52.13,Main Dialogue,Yui,0,0,0,,Hiina-san's face! Look at Hiina-san's face!
+Dialogue: 0,0:18:52.13,0:18:52.82,Main Dialogue,Koharu,0,0,0,,Scary!
+Dialogue: 0,0:18:52.82,0:18:54.32,Main Dialogue,Koharu,0,0,0,,Her gaze hurts!
+Dialogue: 0,0:18:54.32,0:18:55.41,Main Dialogue,Yua,0,0,0,,Hiina, what do you think?
+Dialogue: 0,0:18:54.99,0:18:55.67,Main Dialogue,Girl,0,0,0,,Hiina-senpai.
+Dialogue: 0,0:18:55.41,0:18:57.07,Main Dialogue,Hiina,0,0,0,,Would you just keep your mouth shut?
+Dialogue: 0,0:18:58.98,0:19:01.49,Main Dialogue,Aoi,0,0,0,,But I'm sure girls who go in there \Ndon't have a boyfriend, right?
+Dialogue: 0,0:19:01.49,0:19:04.76,Main Dialogue,Yua,0,0,0,,It's a haunted house exclusively \Nfor people who are single.
+Dialogue: 0,0:19:04.76,0:19:07.16,Main Dialogue,Aoi,0,0,0,,A haunted house that's not scary,\Neven if you go alone.
+Dialogue: 0,0:19:07.16,0:19:11.08,Main Dialogue,Yua,0,0,0,,Then if a guy goes in alone, \Ndoes a beautiful girl escort him?
+Dialogue: 0,0:19:11.08,0:19:12.00,Main Dialogue,Koharu,0,0,0,,No, a guy.
+Dialogue: 0,0:19:13.45,0:19:15.79,Main Dialogue,Yua,0,0,0,,Sorry, I spit! Sorry about that!
+Dialogue: 0,0:19:16.33,0:19:19.36,Main Dialogue,Yua,0,0,0,,So it's always a guy that goes in with you!
+Dialogue: 0,0:19:19.36,0:19:20.13,Main Dialogue,Hiina,0,0,0,,That's new.
+Dialogue: 0,0:19:20.13,0:19:20.47,Main Dialogue,Girl,0,0,0,,That's new.
+Dialogue: 0,0:19:20.47,0:19:21.01,Main Dialogue,Yui,0,0,0,,I see.
+Dialogue: 0,0:19:21.01,0:19:23.23,Main Dialogue,Yua,0,0,0,,Okay, anyone else?
+Dialogue: 0,0:19:23.23,0:19:23.80,Main Dialogue,Hiina,0,0,0,,Me.
+Dialogue: 0,0:19:23.80,0:19:26.47,Main Dialogue,Yua,0,0,0,,All right, Hiina's "new haunted house."
+Dialogue: 0,0:19:26.47,0:19:29.06,Main Dialogue,Hiina,0,0,0,,Some of the ghosts provide \Non-stage accompaniment.
+Dialogue: 0,0:19:29.61,0:19:30.91,Main Dialogue,Koharu,0,0,0,,Accompaniment?
+Dialogue: 0,0:19:30.91,0:19:31.69,Main Dialogue,Yua,0,0,0,,What's that like?
+Dialogue: 0,0:19:31.69,0:19:35.42,Main Dialogue,Hiina,0,0,0,,When a ghost is about to come out, the MC says, \N"Here's our next ghost! Take it away!"
+Dialogue: 0,0:19:35.42,0:19:38.11,Main Dialogue,Hiina,0,0,0,,Then it goes, chan-chaka-chan-chaka-chan!
+Dialogue: 0,0:19:38.11,0:19:39.21,Main Dialogue,Hiina,0,0,0,,"Thank you!"
+Dialogue: 0,0:19:39.21,0:19:40.83,Main Dialogue,Yua,0,0,0,,"Chan-chaka-chan..."
+Dialogue: 0,0:19:41.68,0:19:44.12,Main Dialogue,Hiina,0,0,0,,"Please remember me."
+Dialogue: 0,0:19:44.12,0:19:46.16,Main Dialogue,Aoi,0,0,0,,He sounds friendly.
+Dialogue: 0,0:19:46.16,0:19:48.88,Main Dialogue,Hiina,0,0,0,,And suddenly, Okiku-san starts counting plates...
+Dialogue: 0,0:19:49.61,0:19:51.43,Main Dialogue,Hiina,0,0,0,,"What the heck are you doing?"
+Dialogue: 0,0:19:53.54,0:19:56.50,Main Dialogue,Yua,0,0,0,,Hiina... Hiina's really into this!
+Dialogue: 0,0:19:56.50,0:20:00.72,Main Dialogue,Koharu,0,0,0,,Wow! Hiina-senpai seems like \Nshe's having so much fun today!
+Dialogue: 0,0:20:01.72,0:20:05.93,Main Dialogue,Aoi,0,0,0,,It's such an unusual sight, \NI almost can't even look at her!
+Dialogue: 0,0:20:05.93,0:20:07.41,Main Dialogue,Yua,0,0,0,,This is the first time Hiina...
+Dialogue: 0,0:20:06.72,0:20:08.77,Main Dialogue,Aoi,0,0,0,,I feel a little embarrassed somehow!
+Dialogue: 0,0:20:08.18,0:20:08.77,Main Dialogue,Aoi,0,0,0,,Yeah!
+Dialogue: 0,0:20:08.77,0:20:09.98,Main Dialogue,Koharu,0,0,0,,"What the heck are you doing?"
+Dialogue: 0,0:20:10.21,0:20:11.35,Main Dialogue,Yua,0,0,0,,"What the heck are you doing?"
+Dialogue: 0,0:20:12.97,0:20:15.90,Main Dialogue,Hiina,0,0,0,,Don't delve into that part! Get into my {\i1}idea{\i0}!
+Dialogue: 0,0:20:15.90,0:20:18.35,Main Dialogue,Yui,0,0,0,,Everyone loves it.
+Dialogue: 0,0:20:18.35,0:20:20.14,Main Dialogue,Yua,0,0,0,,How do you feel?
+Dialogue: 0,0:20:20.95,0:20:21.99,Main Dialogue,Koharu,0,0,0,,Chan-chaka-chan-chaka!
+Dialogue: 0,0:20:21.99,0:20:23.24,Main Dialogue,Aoi,0,0,0,,"What the heck are you doing?"
+Dialogue: 0,0:20:24.11,0:20:26.98,Main Dialogue,Aoi,0,0,0,,I know I'm gonna remember this \Nbefore I go to bed tonight.
+Dialogue: 0,0:20:26.98,0:20:29.50,Main Dialogue,Aoi,0,0,0,,The moment I close my eyes, \N"What the heck are you doing?"
+Dialogue: 0,0:20:33.00,0:20:34.95,Main Dialogue,Hiina,0,0,0,,We're in the middle of the show, \Nbut I'm taking her away!
+Dialogue: 0,0:20:34.95,0:20:36.06,Main Dialogue,Yua,0,0,0,,Forgive her!
+Dialogue: 0,0:20:36.06,0:20:37.18,Main Dialogue,Hiina,0,0,0,,I'm taking her away!
+Dialogue: 0,0:20:36.08,0:20:38.22,Main Dialogue,Yua,0,0,0,,Forgive her!
+Dialogue: 0,0:20:37.18,0:20:38.87,Main Dialogue,Yua,0,0,0,,She's a good girl!
+Dialogue: 0,0:20:39.25,0:20:40.20,Main Dialogue,Aoi,0,0,0,,Calm down!
+Dialogue: 0,0:20:40.20,0:20:41.43,Main Dialogue,Aoi,0,0,0,,"What the heck are you doing?"
+Dialogue: 0,0:20:44.02,0:20:45.55,Main Dialogue,Yui,0,0,0,,We're repeating that way too much!
+Dialogue: 0,0:20:48.75,0:20:51.02,Main Dialogue,Yui,0,0,0,,You guys really work as one, don't you?
+Dialogue: 0,0:20:51.81,0:20:55.16,Main Dialogue,Hiina,0,0,0,,We do! We unify over the dumbest things!
+Dialogue: 0,0:20:52.56,0:20:53.89,Main Dialogue,Hiina,0,0,0,,So funny...
+Dialogue: 0,0:20:55.16,0:20:56.18,Main Dialogue,,0,0,0,,Too funny...
+Dialogue: 0,0:20:55.36,0:20:56.80,Main Dialogue,Yui,0,0,0,,That was amazing.
+Dialogue: 0,0:20:58.05,0:20:59.23,Main Dialogue,Aoi,0,0,0,,My stomach hurts.
+Dialogue: 0,0:20:59.23,0:21:00.02,Main Dialogue,,0,0,0,,My stomach...
+Dialogue: 0,0:22:29.95,0:22:31.66,Preview,Sign,0,0,0,,{\fad(1000,1)}Preview
+Dialogue: 0,0:22:29.95,0:22:31.66,Preview Sonota,Sign,0,0,0,,{\fad(1000,1)}Sonota
+Dialogue: 0,0:22:30.36,0:22:31.66,Main Dialogue,Mobumi,0,0,0,,Continued from last week!
+Dialogue: 0,0:22:31.66,0:22:32.83,Main Dialogue,Mobuko,0,0,0,,Who are you?!
+Dialogue: 0,0:22:32.83,0:22:34.82,Main Dialogue,Dr. Mobu,0,0,0,,As you can see, I am Dr. Mob!
+Dialogue: 0,0:22:34.82,0:22:36.71,Main Dialogue,Mobue,0,0,0,,Someone like that lives here?
+Dialogue: 0,0:22:37.48,0:22:39.66,Main Dialogue,Rinu,0,0,0,,Something's wrong with the robot!
+Dialogue: 0,0:22:39.66,0:22:41.89,Main Dialogue,Dr. Mobu,0,0,0,,It's violently resonating with something!
+Dialogue: 0,0:22:42.65,0:22:46.88,Main Dialogue,Voice,0,0,0,,Who dares disturb my sleep?
+Dialogue: 0,0:22:46.88,0:22:48.62,Main Dialogue,Grandmobu,0,0,0,,What is this?!
+Dialogue: 0,0:22:48.62,0:22:52.18,Main Dialogue,Grandmobu,0,0,0,,That thing has been sealed away \Nin the basement for 2,000 years!
+Dialogue: 0,0:22:52.62,0:22:54.79,Main Dialogue,Mobhisto,0,0,0,,Repent!
+Dialogue: 0,0:22:56.86,0:22:58.58,Main Dialogue,Mobuko,0,0,0,,Somebody capture it!
+Dialogue: 0,0:22:56.98,0:23:00.00,Next Episode Title,Sign,0,0,0,,Collaboration #6\NLet's Play With Dentists and Ferris Wheels
+Dialogue: 0,0:22:58.58,0:23:00.00,Main Dialogue,Mobuko,0,0,0,,See you next week!

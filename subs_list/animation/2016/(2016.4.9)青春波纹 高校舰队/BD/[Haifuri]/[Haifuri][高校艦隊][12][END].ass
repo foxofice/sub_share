@@ -1,0 +1,399 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: High School Fleet 12
+Original Script: 
+Original Translation: 
+Original Timing: 宋宋
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+Synch Point: 
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: 720通用注釋,Arial,18,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,0,2,3,2,20,20,20,1
+Style: Default,Arial,18,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,0,2,3,2,20,20,20,1
+Style: STAFF 方正正准黑_GBK,Microsoft JhengHei,50,&H00F4F7F6,&H00324130,&H001D1916,&H0047454A,-1,0,0,0,100,100,0,0,1,1,0,8,10,10,10,136
+Style: OP JP A-OTF Kumoya Std R,A-OTF Kumoya Std R,38,&H00F4F7F6,&H00CEF9FC,&H00162F1A,&H00686766,-1,-1,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: OP CN 方正稚艺_GBK,Microsoft JhengHei,40,&H00F4F7F6,&H00CEF9FC,&H00162F1A,&H00686766,-1,-1,0,0,100,100,1,0,1,1,0,8,10,10,10,136
+Style: JP_ED A-OTF Folk Pro R,Microsoft JhengHei,30,&H00FFF3FF,&H000000FF,&H00DD9F17,&H00000000,-1,0,0,0,100,100,3,0,1,1,0,2,10,15,10,136
+Style: CN_ED 方正正准黑_GBK,Microsoft JhengHei,30,&H05FFFFFF,&H000000FF,&H00DD9F17,&H00000000,-1,0,0,0,100,100,3,0,1,1,0,8,15,15,10,136
+Style: NOTES 方正正准黑_GBK,方正正准黑_GBK,34,&H00000000,&H00FFFFFF,&H00FFFFFF,&H00000000,-1,0,0,0,100,100,2,0,1,1,0,7,10,10,10,1
+Style: OTHERS 方正楷体_GBK,Microsoft JhengHei,50,&H00FFFFFF,&HF0000000,&H00000000,&H00000000,-1,0,0,0,100,100,4,0,1,2,0,2,0,0,2,1
+Style: TEXT-JP A-OTF Folk Pro B,Microsoft JhengHei,50,&H00FFFFFF,&H00FFFFFF,&H002A312F,&H00686766,-1,0,0,0,100,100,1,0,1,1,0,2,10,10,13,136
+Style: TEXT-JP-UP A-OTF Folk Pro B,Microsoft JhengHei,50,&H00FFFFFF,&H00FFFFFF,&H002A312F,&H00686766,-1,0,0,0,100,100,1,0,1,1,0,8,10,10,47,136
+Style: TEXT-CN 方正正准黑_GBK,Microsoft JhengHei,35,&H00FFFFFF,&H00FFFFFF,&H002A312F,&H00686766,-1,0,0,0,100,100,2,0,1,1,0,2,10,10,42,136
+Style: TEXT-CN-UP 方正正准黑_GBK,Microsoft JhengHei,40,&H00FFFFFF,&H00FFFFFF,&H002A312F,&H00686766,-1,0,0,0,100,100,2,0,1,1,0,8,10,10,13,136
+Style: Title 方正楷体_GBK,Microsoft JhengHei,50,&H1AD7E0D1,&HF0000000,&H003C4C2D,&H00000000,-1,0,0,0,100,100,4,0,1,2,0,2,0,0,2,136
+Style: TEXT-CN @方正正准黑_GBK,Microsoft JhengHei,30,&H00FFFFFF,&H00FFFFFF,&H002A312F,&H00686766,-1,0,0,0,100,100,2,0,1,1,0,2,10,10,42,1
+Style: OTHERS @方正楷体_GBK,@方正楷体_GBK,42,&H00FFFFFF,&HF0000000,&H00000000,&H00000000,-1,0,0,0,100,100,4,0,1,2,0,7,0,0,2,1
+Style: TEXT-CN 方正正准黑_GBK - 小,Microsoft JhengHei,50,&H00FFFFFF,&H00FFFFFF,&H002A312F,&H00686766,-1,0,0,0,100,100,2,0,1,1,0,2,10,10,42,136
+Style: OP JP A-OTF Kumoya Std R - bjm,Microsoft JhengHei,50,&H00F4F7F6,&H00CEF9FC,&H00162F1A,&H00686766,-1,0,0,0,100,100,0,0,1,1,0,9,10,10,10,136
+Style: OP CN 方正稚艺_GBK - bjm,Microsoft JhengHei,40,&H00F4F7F6,&H00CEF9FC,&H00162F1A,&H00686766,-1,-1,0,0,100,100,1,0,1,1,0,9,10,10,10,136
+Style: JP_ED A-OTF Folk Pro R - ed,A-OTF Folk Pro B,30,&H00FFF3FF,&H000000FF,&H00644427,&H00000000,0,-1,0,0,100,100,3,0,1,1,0,1,15,15,10,1
+Style: CN_ED 方正正准黑_GBK - ed,Microsoft JhengHei,40,&H05FFFFFF,&H000000FF,&H00644427,&H00000000,-1,-1,0,0,100,100,3,0,1,1,0,1,15,15,44,136
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:07.50,0:00:09.99,OTHERS 方正楷体_GBK,,0,0,0,,{\fs63\fad(400,0)\c&HE5E6E8&\bord3\pos(642,726)}武藏號距浦賀水道僅剩20分鐘航程
+Dialogue: 0,0:09:53.69,0:09:55.94,TEXT-CN-UP 方正正准黑_GBK,,0,0,0,,{\an5\fs75\bord3\pos(346.5,853.5)\b0}!
+Dialogue: 0,0:11:10.18,0:11:12.16,TEXT-CN-UP 方正正准黑_GBK,,0,0,0,,艦隊 開始攻擊
+Dialogue: 0,0:11:33.79,0:11:34.71,TEXT-CN-UP 方正正准黑_GBK,,0,0,0,,{\bord3\an5\fn@華康香港標準楷書\frz270\fs90\b0\pos(1618.5,298.5)}不要怕
+Dialogue: 0,0:11:33.79,0:11:34.71,TEXT-CN-UP 方正正准黑_GBK,,0,0,0,,{\bord3\fs90\an5\b0\i0\pos(1624.499,458.499)}!!
+Dialogue: 0,0:05:55.45,0:05:57.54,TEXT-CN-UP 方正正准黑_GBK,,0,0,0,,發煙器:是製造煙幕的東西
+Dialogue: 0,0:00:17.06,0:00:19.96,TEXT-JP A-OTF Folk Pro B,,0,0,0,,2號艦 3號艦 4號艦 無法航行
+Dialogue: 0,0:00:19.96,0:00:22.54,TEXT-JP A-OTF Folk Pro B,,0,0,0,,1號艦 最高速度是6節
+Dialogue: 0,0:00:23.48,0:00:27.75,TEXT-JP A-OTF Folk Pro B,,0,0,0,,這樣下去的話  20分鐘後武藏號將進入浦賀海峽
+Dialogue: 0,0:00:29.58,0:00:33.22,TEXT-JP A-OTF Folk Pro B,,0,0,0,,重複 所有人立刻離艦
+Dialogue: 0,0:00:33.22,0:00:37.05,TEXT-JP A-OTF Folk Pro B,,0,0,0,,重複 所有人立刻離艦
+Dialogue: 0,0:00:43.53,0:00:46.77,TEXT-JP A-OTF Folk Pro B,,0,0,0,,校長 來自晴風號的通信
+Dialogue: 0,0:00:47.16,0:00:49.34,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我是晴風號艦長 岬
+Dialogue: 0,0:00:49.34,0:00:52.15,TEXT-JP A-OTF Folk Pro B,,0,0,0,,對武藏號的攔截作戰 請求允許
+Dialogue: 0,0:01:01.13,0:01:03.08,TEXT-JP A-OTF Folk Pro B,,0,0,0,,已經取得 全班同學的同意
+Dialogue: 0,0:01:03.69,0:01:04.96,TEXT-JP A-OTF Folk Pro B,,0,0,0,,讓我們做吧
+Dialogue: 0,0:01:24.29,0:01:26.28,TEXT-JP A-OTF Folk Pro B,,0,0,0,,對武藏號的攔截作戰
+Dialogue: 0,0:01:26.28,0:01:28.85,TEXT-JP A-OTF Folk Pro B,,0,0,0,,横須賀女子海洋學校  校長
+Dialogue: 0,0:01:28.85,0:01:31.02,TEXT-JP A-OTF Folk Pro B,,0,0,0,,宗谷真雪 同意執行
+Dialogue: 0,0:01:31.52,0:01:34.03,TEXT-JP A-OTF Folk Pro B,,0,0,0,,但是 你們只有一次攻擊機會
+Dialogue: 0,0:01:34.03,0:01:36.99,TEXT-JP A-OTF Folk Pro B,,0,0,0,,陸地方面 正在準備解決武藏號問題
+Dialogue: 0,0:01:36.99,0:01:39.09,TEXT-JP A-OTF Folk Pro B,,0,0,0,,因此 你們沒必要反覆攻擊
+Dialogue: 0,0:01:40.30,0:01:44.50,TEXT-JP A-OTF Folk Pro B,,0,0,0,,爭取5分鐘 不3分鐘 就足夠了
+Dialogue: 0,0:01:44.50,0:01:45.62,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是
+Dialogue: 0,0:01:45.62,0:01:47.71,TEXT-JP A-OTF Folk Pro B,,0,0,0,,等一下 宗谷校長
+Dialogue: 0,0:01:47.71,0:01:51.97,TEXT-JP A-OTF Folk Pro B,,0,0,0,,武藏號 已經使藍色人魚艦隊的三艘船 無法航行
+Dialogue: 0,0:01:51.97,0:01:53.97,TEXT-JP A-OTF Folk Pro B,,0,0,0,,單艦 晴風號的話 實在是...
+Dialogue: 0,0:01:53.97,0:01:57.06,TEXT-JP A-OTF Folk Pro B,,0,0,0,,還有20分鐘 武藏號將進入浦賀海峽
+Dialogue: 0,0:01:58.10,0:02:01.28,TEXT-JP A-OTF Folk Pro B,,0,0,0,,姐姐 不 宗谷監督官
+Dialogue: 0,0:02:01.93,0:02:05.41,TEXT-JP A-OTF Folk Pro B,,0,0,0,,憑我們 的確無法攔下 武藏號
+Dialogue: 0,0:02:06.25,0:02:10.65,TEXT-JP A-OTF Folk Pro B,,0,0,0,,但是 拖延時間 還是做得到的
+Dialogue: 0,0:02:11.41,0:02:12.96,TEXT-JP A-OTF Folk Pro B,,0,0,0,,而且 小萌
+Dialogue: 0,0:02:12.96,0:02:17.18,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不 武藏號艦長 在艦橋奮戰中
+Dialogue: 0,0:02:17.18,0:02:19.46,TEXT-JP A-OTF Folk Pro B,,0,0,0,,可以和武藏號艦長 取得聯絡嗎
+Dialogue: 0,0:02:21.16,0:02:25.33,TEXT-JP A-OTF Folk Pro B,,0,0,0,,雖然 網路不通 但能用燈號通信
+Dialogue: 0,0:02:28.14,0:02:33.21,TEXT-JP A-OTF Folk Pro B,,0,0,0,,岬艦長 我同意對武藏號接近及攔截作戰
+Dialogue: 0,0:02:34.40,0:02:35.51,TEXT-JP A-OTF Folk Pro B,,0,0,0,,拜託你們了
+Dialogue: 0,0:02:35.83,0:02:36.43,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是
+Dialogue: 0,0:02:41.35,0:02:43.02,TEXT-JP A-OTF Folk Pro B,,0,0,0,,出發吧 艦長
+Dialogue: 0,0:02:43.02,0:02:46.00,TEXT-JP A-OTF Folk Pro B,,0,0,0,,獵人一方 肯定比獵物 更佔優勢
+Dialogue: 0,0:02:46.00,0:02:47.26,TEXT-JP A-OTF Folk Pro B,,0,0,0,,正是如此
+Dialogue: 0,0:02:47.26,0:02:48.43,TEXT-JP A-OTF Folk Pro B,,0,0,0,,嗯 嗯
+Dialogue: 0,0:02:49.68,0:02:51.31,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 請下指示
+Dialogue: 0,0:02:53.11,0:02:55.39,TEXT-JP A-OTF Folk Pro B,,0,0,0,,航向 030 前進
+Dialogue: 0,0:02:55.39,0:02:57.07,TEXT-JP A-OTF Folk Pro B,,0,0,0,,航向 030 前進
+Dialogue: 0,0:02:57.44,0:02:58.86,TEXT-JP A-OTF Folk Pro B,,0,0,0,,全速前進(35節)
+Dialogue: 0,0:02:58.86,0:03:01.05,TEXT-JP A-OTF Folk Pro B,,0,0,0,,全速前進(35節)
+Dialogue: 0,0:03:22.25,0:03:24.26,TEXT-JP A-OTF Folk Pro B,,0,0,0,,武藏距離 還有3萬碼
+Dialogue: 0,0:03:28.02,0:03:29.85,TEXT-JP A-OTF Folk Pro B,,0,0,0,,晴風號 正在接近中
+Dialogue: 0,0:03:30.39,0:03:31.67,TEXT-JP A-OTF Folk Pro B,,0,0,0,,晴風號?
+Dialogue: 0,0:03:33.23,0:03:36.07,TEXT-JP A-OTF Folk Pro B,,0,0,0,,明明發出 不要靠近的信號了
+Dialogue: 0,0:03:37.25,0:03:38.09,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小明
+Dialogue: 0,0:03:38.99,0:03:41.41,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小摩 瞄準武藏號的主砲塔
+Dialogue: 0,0:03:41.41,0:03:42.07,TEXT-JP A-OTF Folk Pro B,,0,0,0,,嗯
+Dialogue: 0,0:03:42.40,0:03:44.11,TEXT-JP A-OTF Folk Pro B,,0,0,0,,一定 阻止武藏號
+Dialogue: 0,0:03:44.87,0:03:46.08,TEXT-JP A-OTF Folk Pro B,,0,0,0,,嗯
+Dialogue: 0,0:03:47.73,0:03:51.21,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小芽 到武藏右舷時 發射所有魚雷
+Dialogue: 0,0:03:51.21,0:03:53.69,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我夢寐以求的 全魚雷發射?
+Dialogue: 0,0:03:54.32,0:03:55.34,TEXT-JP A-OTF Folk Pro B,,0,0,0,,真的嗎
+Dialogue: 0,0:03:55.34,0:03:57.81,TEXT-JP A-OTF Folk Pro B,,0,0,0,,發射的機會 大概只有一次
+Dialogue: 0,0:03:57.81,0:04:00.16,TEXT-JP A-OTF Folk Pro B,,0,0,0,,盡可能 憑一次攻擊 阻止它前進
+Dialogue: 0,0:04:00.16,0:04:02.27,TEXT-JP A-OTF Folk Pro B,,0,0,0,,集中瞄準 艦艉吧
+Dialogue: 0,0:04:03.78,0:04:06.39,TEXT-JP A-OTF Folk Pro B,,0,0,0,,明白 我一定會射中的
+Dialogue: 0,0:04:06.80,0:04:08.55,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小理 小果 要開始了
+Dialogue: 0,0:04:08.55,0:04:10.48,TEXT-JP A-OTF Folk Pro B,,0,0,0,,了解
+Dialogue: 0,0:04:10.48,0:04:11.98,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是的
+Dialogue: 0,0:04:30.92,0:04:31.80,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小明
+Dialogue: 0,0:04:32.45,0:04:33.24,TEXT-JP A-OTF Folk Pro B,,0,0,0,,難道說?
+Dialogue: 0,0:04:33.66,0:04:36.79,TEXT-JP A-OTF Folk Pro B,,0,0,0,,目標 武藏號艦艉 開始攻擊
+Dialogue: 0,0:04:36.79,0:04:39.91,TEXT-JP A-OTF Folk Pro B,,0,0,0,,攻擊角位置 武藏艦艉 全魚雷瞄準了
+Dialogue: 0,0:04:39.91,0:04:41.52,TEXT-JP A-OTF Folk Pro B,,0,0,0,,準備發射
+Dialogue: 0,0:04:41.52,0:04:42.55,TEXT-JP A-OTF Folk Pro B,,0,0,0,,魚雷發射
+Dialogue: 0,0:04:45.68,0:04:46.51,TEXT-JP A-OTF Folk Pro B,,0,0,0,,開始射擊
+Dialogue: 0,0:04:53.39,0:04:55.31,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不行 完全打不動
+Dialogue: 0,0:05:05.91,0:05:08.46,TEXT-JP A-OTF Folk Pro B,,0,0,0,,好 全部命中
+Dialogue: 0,0:05:09.08,0:05:11.18,TEXT-JP A-OTF Folk Pro B,,0,0,0,,武藏 減速了
+Dialogue: 0,0:05:18.76,0:05:19.76,TEXT-JP A-OTF Folk Pro B,,0,0,0,,要開火了
+Dialogue: 0,0:05:19.76,0:05:21.67,TEXT-JP A-OTF Folk Pro B,,0,0,0,,全體 準備應對衝擊
+Dialogue: 0,0:05:27.58,0:05:29.14,TEXT-JP A-OTF Folk Pro B,,0,0,0,,武藏號 開始射擊
+Dialogue: 0,0:05:40.40,0:05:41.62,TEXT-JP A-OTF Folk Pro B,,0,0,0,,沒事吧
+Dialogue: 0,0:05:42.40,0:05:43.43,TEXT-JP A-OTF Folk Pro B,,0,0,0,,謝謝
+Dialogue: 0,0:05:44.51,0:05:45.63,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長
+Dialogue: 0,0:05:53.62,0:05:54.66,TEXT-JP A-OTF Folk Pro B,,0,0,0,,晴風號
+Dialogue: 0,0:05:55.45,0:05:57.54,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦艉 發煙器 無法使用
+Dialogue: 0,0:05:57.54,0:05:59.29,TEXT-JP A-OTF Folk Pro B,,0,0,0,,深水炸彈投放器 受損
+Dialogue: 0,0:05:59.29,0:06:01.26,TEXT-JP A-OTF Folk Pro B,,0,0,0,,倉庫 發生火災
+Dialogue: 0,0:06:01.26,0:06:02.70,TEXT-JP A-OTF Folk Pro B,,0,0,0,,正在滅火中
+Dialogue: 0,0:06:04.56,0:06:06.97,TEXT-JP A-OTF Folk Pro B,,0,0,0,,只憑一擊 就打成這樣
+Dialogue: 0,0:06:07.43,0:06:08.82,TEXT-JP A-OTF Folk Pro B,,0,0,0,,果然 好厲害
+Dialogue: 0,0:06:10.73,0:06:13.94,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不行啊 壞掉了
+Dialogue: 0,0:06:14.42,0:06:16.14,TEXT-JP A-OTF Folk Pro B,,0,0,0,,無線裝備 損壞
+Dialogue: 0,0:06:16.14,0:06:17.76,TEXT-JP A-OTF Folk Pro B,,0,0,0,,網路通信 不行了嗎
+Dialogue: 0,0:06:20.00,0:06:22.32,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 已爭取到5分鐘了
+Dialogue: 0,0:06:22.62,0:06:25.06,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小鈴 趕緊遠離 武藏號
+Dialogue: 0,0:06:25.06,0:06:26.32,TEXT-JP A-OTF Folk Pro B,,0,0,0,,交給我吧
+Dialogue: 0,0:06:35.92,0:06:37.37,TEXT-JP A-OTF Folk Pro B,,0,0,0,,武藏號 開砲了
+Dialogue: 0,0:06:38.25,0:06:38.96,TEXT-JP A-OTF Folk Pro B,,0,0,0,,砲彈臨空
+Dialogue: 0,0:06:48.95,0:06:49.99,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小明
+Dialogue: 0,0:06:54.06,0:06:56.33,TEXT-JP A-OTF Folk Pro B,,0,0,0,,1號砲裝彈裝置 故障
+Dialogue: 0,0:06:56.33,0:06:58.14,TEXT-JP A-OTF Folk Pro B,,0,0,0,,廚房 發生火災
+Dialogue: 0,0:06:58.14,0:06:59.72,TEXT-JP A-OTF Folk Pro B,,0,0,0,,現在 開始進行救火
+Dialogue: 0,0:07:00.00,0:07:01.81,TEXT-JP A-OTF Folk Pro B,,0,0,0,,這就是 武藏號嗎
+Dialogue: 0,0:07:01.81,0:07:03.86,TEXT-JP A-OTF Folk Pro B,,0,0,0,,前進航向 被控制住了
+Dialogue: 0,0:07:03.86,0:07:05.34,TEXT-JP A-OTF Folk Pro B,,0,0,0,,沒辦法 撤退了
+Dialogue: 0,0:07:09.91,0:07:10.76,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長
+Dialogue: 0,0:07:10.76,0:07:12.46,TEXT-JP A-OTF Folk Pro B,,0,0,0,,怎麼了
+Dialogue: 0,0:07:12.46,0:07:13.79,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我要去 阻止開砲
+Dialogue: 0,0:07:13.79,0:07:14.69,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不可能的
+Dialogue: 0,0:07:14.69,0:07:15.79,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長
+Dialogue: 0,0:07:16.86,0:07:18.74,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不然的話 晴風號會...
+Dialogue: 0,0:07:20.45,0:07:23.06,TEXT-JP A-OTF Folk Pro B,,0,0,0,,請冷靜下來 艦長
+Dialogue: 0,0:07:26.77,0:07:27.90,TEXT-JP A-OTF Folk Pro B,,0,0,0,,對不起
+Dialogue: 0,0:07:34.04,0:07:36.24,TEXT-JP A-OTF Folk Pro B,,0,0,0,,輪機長 水...進水了
+Dialogue: 0,0:07:36.24,0:07:38.30,TEXT-JP A-OTF Folk Pro B,,0,0,0,,什麼 我現在就過去
+Dialogue: 0,0:07:38.30,0:07:40.78,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 左舷鍋爐艙 進水了
+Dialogue: 0,0:07:41.94,0:07:44.04,TEXT-JP A-OTF Folk Pro B,,0,0,0,,把水龍帶.泵浦都拿來
+Dialogue: 0,0:07:44.04,0:07:45.65,TEXT-JP A-OTF Folk Pro B,,0,0,0,,別讓鍋爐 倒爐了
+Dialogue: 0,0:07:46.30,0:07:47.62,TEXT-JP A-OTF Folk Pro B,,0,0,0,,連鍋爐艙都...
+Dialogue: 0,0:07:51.48,0:07:54.41,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 讓大家準備 就棄船部署嗎
+Dialogue: 0,0:07:54.41,0:07:56.37,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不是吧 這個時候逃跑?
+Dialogue: 0,0:07:56.37,0:07:58.11,TEXT-JP A-OTF Folk Pro B,,0,0,0,,要是蛇的頭 被吃掉的話
+Dialogue: 0,0:07:58.11,0:08:00.34,TEXT-JP A-OTF Folk Pro B,,0,0,0,,想復活 也沒辦法復活的
+Dialogue: 0,0:08:00.34,0:08:04.09,TEXT-JP A-OTF Folk Pro B,,0,0,0,,對不起 我掌舵 能再好一點的話
+Dialogue: 0,0:08:11.88,0:08:12.65,TEXT-JP A-OTF Folk Pro B,,0,0,0,,大家
+Dialogue: 0,0:08:20.38,0:08:22.09,TEXT-JP A-OTF Folk Pro B,,0,0,0,,全體 準備就棄船部署...
+Dialogue: 0,0:08:30.07,0:08:30.82,TEXT-JP A-OTF Folk Pro B,,0,0,0,,這是?
+Dialogue: 0,0:08:31.14,0:08:33.04,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小鈴 右滿舵
+Dialogue: 0,0:08:33.04,0:08:34.37,TEXT-JP A-OTF Folk Pro B,,0,0,0,,右满舵
+Dialogue: 0,0:08:39.71,0:08:41.54,TEXT-JP A-OTF Folk Pro B,,0,0,0,,後方 發現艦影
+Dialogue: 0,0:08:41.92,0:08:43.33,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是藍色人魚嗎
+Dialogue: 0,0:08:43.33,0:08:44.53,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我去看一下
+Dialogue: 0,0:08:53.30,0:08:54.90,TEXT-JP A-OTF Folk Pro B,,0,0,0,,敵我識別信號 確認
+Dialogue: 0,0:08:55.30,0:08:55.94,TEXT-JP A-OTF Folk Pro B,,0,0,0,,比叡
+Dialogue: 0,0:08:56.55,0:08:57.28,TEXT-JP A-OTF Folk Pro B,,0,0,0,,舞風
+Dialogue: 0,0:08:57.80,0:08:58.55,TEXT-JP A-OTF Folk Pro B,,0,0,0,,浜風
+Dialogue: 0,0:08:58.89,0:09:00.13,TEXT-JP A-OTF Folk Pro B,,0,0,0,,格拉夫·施佩艦
+Dialogue: 0,0:09:01.03,0:09:03.39,TEXT-JP A-OTF Folk Pro B,,0,0,0,,還有 天神號
+Dialogue: 0,0:09:06.95,0:09:07.86,TEXT-JP A-OTF Folk Pro B,,0,0,0,,天神號?
+Dialogue: 0,0:09:08.28,0:09:10.02,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是我們學校的船
+Dialogue: 0,0:09:31.44,0:09:32.83,TEXT-JP A-OTF Folk Pro B,,0,0,0,,古庄教官
+Dialogue: 0,0:09:32.83,0:09:34.79,TEXT-JP A-OTF Folk Pro B,,0,0,0,,趕上了 真是太好了
+Dialogue: 0,0:09:34.79,0:09:36.67,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我們來晚了 真抱歉
+Dialogue: 0,0:09:37.52,0:09:40.97,TEXT-JP A-OTF Folk Pro B,,0,0,0,,野間同學 信號旗通知她們 我們無線電故障
+Dialogue: 0,0:09:42.99,0:09:46.31,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小幸 還有大家
+Dialogue: 0,0:09:46.51,0:09:49.68,TEXT-JP A-OTF Folk Pro B,,0,0,0,,你們來了啊
+Dialogue: 0,0:09:58.10,0:09:59.69,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 怎麼辦
+Dialogue: 0,0:09:53.57,0:09:55.82,OTHERS @方正楷体_GBK,,0,0,0,,{\fs60\frz270\pos(236,56)}還人情的時候到了
+Dialogue: 0,0:10:00.53,0:10:03.20,TEXT-JP A-OTF Folk Pro B,,0,0,0,,既然大家都在的話 那就可以繼續
+Dialogue: 0,0:10:05.05,0:10:06.83,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我沒有異議
+Dialogue: 0,0:10:08.19,0:10:11.13,TEXT-JP A-OTF Folk Pro B,,0,0,0,,作戰改變 現在開始登上武藏號作戰
+Dialogue: 0,0:10:11.13,0:10:12.05,TEXT-JP A-OTF Folk Pro B,,0,0,0,,好
+Dialogue: 0,0:10:12.05,0:10:12.75,TEXT-JP A-OTF Folk Pro B,,0,0,0,,嗯
+Dialogue: 0,0:10:12.75,0:10:13.73,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我會加油的
+Dialogue: 0,0:10:13.73,0:10:14.38,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是
+Dialogue: 0,0:10:14.38,0:10:15.37,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我們上吧
+Dialogue: 0,0:10:15.37,0:10:16.42,TEXT-JP A-OTF Folk Pro B,,0,0,0,,上吧 上吧
+Dialogue: 0,0:10:16.42,0:10:18.67,TEXT-JP A-OTF Folk Pro B,,0,0,0,,施佩艦 在詢問作戰計畫
+Dialogue: 0,0:10:19.78,0:10:20.80,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我們將登入武藏號
+Dialogue: 0,0:10:20.99,0:10:22.53,TEXT-JP A-OTF Folk Pro B,,0,0,0,,告知她們 請掩護晴風號
+Dialogue: 0,0:10:24.04,0:10:31.55,TEXT-JP A-OTF Folk Pro B,,0,0,0,,請掩護 就是這樣 艦長
+Dialogue: 0,0:10:32.75,0:10:35.31,TEXT-JP A-OTF Folk Pro B,,0,0,0,,明白了 交給我們吧
+Dialogue: 0,0:10:44.96,0:10:46.34,TEXT-JP A-OTF Folk Pro B,,0,0,0,,現在起我們將會
+Dialogue: 0,0:10:46.34,0:10:49.96,TEXT-JP A-OTF Folk Pro B,,0,0,0,,現在開始 我們對晴風登入武藏艦 進行作戰掩護
+Dialogue: 0,0:10:50.74,0:10:53.29,TEXT-JP A-OTF Folk Pro B,,0,0,0,,天神.施佩艦 從武藏號右舷
+Dialogue: 0,0:10:53.71,0:10:57.37,TEXT-JP A-OTF Folk Pro B,,0,0,0,,比叡.舞風.浜風 從武藏號 左舷攻擊
+Dialogue: 0,0:10:57.37,0:10:58.66,TEXT-JP A-OTF Folk Pro B,,0,0,0,,掩護晴風號
+Dialogue: 0,0:10:58.97,0:11:01.49,TEXT-JP A-OTF Folk Pro B,,0,0,0,,各艦 準備攻擊
+Dialogue: 0,0:11:02.12,0:11:04.12,TEXT-JP A-OTF Folk Pro B,,0,0,0,,目標 武蔵號
+Dialogue: 0,0:11:06.26,0:11:07.80,TEXT-JP A-OTF Folk Pro B,,0,0,0,,起風了
+Dialogue: 0,0:11:07.80,0:11:09.60,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是希望的風
+Dialogue: 0,0:11:58.95,0:12:02.95,TEXT-JP A-OTF Folk Pro B,,0,0,0,,通知艦隊 注意別擊中武藏號的艦橋附近
+Dialogue: 0,0:12:02.95,0:12:04.02,TEXT-JP A-OTF Folk Pro B,,0,0,0,,明白
+Dialogue: 0,0:12:04.02,0:12:04.97,TEXT-JP A-OTF Folk Pro B,,0,0,0,,晴風號
+Dialogue: 0,0:12:15.15,0:12:16.74,TEXT-JP A-OTF Folk Pro B,,0,0,0,,無論如何 要找對時機
+Dialogue: 0,0:12:17.24,0:12:18.28,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長
+Dialogue: 0,0:12:18.86,0:12:21.16,TEXT-JP A-OTF Folk Pro B,,0,0,0,,這個不知道 能不能使用
+Dialogue: 0,0:12:22.67,0:12:23.88,TEXT-JP A-OTF Folk Pro B,,0,0,0,,火箭彈?
+Dialogue: 0,0:12:24.25,0:12:27.86,TEXT-JP A-OTF Folk Pro B,,0,0,0,,明石號 覺得或許派上用場 給我們的
+Dialogue: 0,0:12:29.56,0:12:30.96,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小摩 小芽
+Dialogue: 0,0:12:36.12,0:12:37.80,TEXT-JP A-OTF Folk Pro B,,0,0,0,,好的 明白了
+Dialogue: 0,0:12:37.80,0:12:38.62,TEXT-JP A-OTF Folk Pro B,,0,0,0,,嗯
+Dialogue: 0,0:12:38.92,0:12:39.80,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小鈴
+Dialogue: 0,0:12:39.80,0:12:40.55,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是的
+Dialogue: 0,0:12:40.87,0:12:43.21,TEXT-JP A-OTF Folk Pro B,,0,0,0,,將風晴號 開到武藏號前方
+Dialogue: 0,0:12:43.21,0:12:45.71,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦...艦首的前面?
+Dialogue: 0,0:12:45.71,0:12:46.84,TEXT-JP A-OTF Folk Pro B,,0,0,0,,知床同學
+Dialogue: 0,0:12:49.62,0:12:51.70,TEXT-JP A-OTF Folk Pro B,,0,0,0,,前進 開到武藏號前方
+Dialogue: 0,0:12:52.07,0:12:53.91,TEXT-JP A-OTF Folk Pro B,,0,0,0,,前...前進
+Dialogue: 0,0:12:58.41,0:13:00.44,TEXT-JP A-OTF Folk Pro B,,0,0,0,,她們攔截 到武藏號前方去嗎?
+Dialogue: 0,0:13:00.44,0:13:02.02,TEXT-JP A-OTF Folk Pro B,,0,0,0,,別讓她們 攻擊晴風號
+Dialogue: 0,0:13:02.02,0:13:04.76,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我們去吸引 武藏號的攻擊
+Dialogue: 0,0:13:05.44,0:13:06.44,TEXT-JP A-OTF Folk Pro B,,0,0,0,,射擊
+Dialogue: 0,0:13:12.34,0:13:14.31,TEXT-JP A-OTF Folk Pro B,,0,0,0,,上吧 晴風號
+Dialogue: 0,0:13:23.09,0:13:25.18,TEXT-JP A-OTF Folk Pro B,,0,0,0,,志摩 沒時間了 快點
+Dialogue: 0,0:13:25.18,0:13:25.99,TEXT-JP A-OTF Folk Pro B,,0,0,0,,嗯
+Dialogue: 0,0:13:36.74,0:13:39.16,TEXT-JP A-OTF Folk Pro B,,0,0,0,,火箭彈 隨時可以發射
+Dialogue: 0,0:13:39.48,0:13:40.93,TEXT-JP A-OTF Folk Pro B,,0,0,0,,全速前進
+Dialogue: 0,0:13:40.93,0:13:42.16,TEXT-JP A-OTF Folk Pro B,,0,0,0,,右滿舵
+Dialogue: 0,0:13:42.16,0:13:43.97,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦艉 對着武藏
+Dialogue: 0,0:13:43.97,0:13:46.96,TEXT-JP A-OTF Folk Pro B,,0,0,0,,全速前進 右滿舵
+Dialogue: 0,0:13:51.72,0:13:53.34,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小摩 準備發射
+Dialogue: 0,0:13:56.53,0:13:58.60,TEXT-JP A-OTF Folk Pro B,,0,0,0,,志摩 用靈魂來發射
+Dialogue: 0,0:14:04.51,0:14:05.69,TEXT-JP A-OTF Folk Pro B,,0,0,0,,用這一發彈
+Dialogue: 0,0:14:06.92,0:14:08.27,TEXT-JP A-OTF Folk Pro B,,0,0,0,,來創造機會
+Dialogue: 0,0:14:27.43,0:14:29.54,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 趁現在
+Dialogue: 0,0:14:30.14,0:14:33.51,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小鈴 右滿舵 靠近武藏號右舷
+Dialogue: 0,0:14:33.51,0:14:35.18,TEXT-JP A-OTF Folk Pro B,,0,0,0,,右滿舵
+Dialogue: 0,0:14:45.63,0:14:47.44,TEXT-JP A-OTF Folk Pro B,,0,0,0,,舵輪 轉不動了
+Dialogue: 0,0:14:48.13,0:14:51.47,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 舵中彈了 無法掌舵了
+Dialogue: 0,0:14:54.66,0:14:56.27,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我們有降落傘 對吧
+Dialogue: 0,0:14:58.24,0:15:00.45,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小媛 小百 準備降落傘
+Dialogue: 0,0:15:02.17,0:15:05.46,TEXT-JP A-OTF Folk Pro B,,0,0,0,,降落傘綁好了 然後怎麼樣
+Dialogue: 0,0:15:05.46,0:15:07.73,TEXT-JP A-OTF Folk Pro B,,0,0,0,,向右後方 扔出去
+Dialogue: 0,0:15:08.54,0:15:09.25,TEXT-JP A-OTF Folk Pro B,,0,0,0,,快點
+Dialogue: 0,0:15:09.25,0:15:10.88,TEXT-JP A-OTF Folk Pro B,,0,0,0,,是
+Dialogue: 0,0:15:26.27,0:15:27.27,TEXT-JP A-OTF Folk Pro B,,0,0,0,,轉過去了
+Dialogue: 0,0:15:27.27,0:15:29.61,TEXT-JP A-OTF Folk Pro B,,0,0,0,,做到了 敵前大調頭
+Dialogue: 0,0:15:29.61,0:15:32.83,TEXT-JP A-OTF Folk Pro B,,0,0,0,,別管鍋爐怎樣 絕對不能停
+Dialogue: 0,0:15:33.91,0:15:35.28,TEXT-JP A-OTF Folk Pro B,,0,0,0,,看到武藏號了
+Dialogue: 0,0:15:35.28,0:15:36.95,TEXT-JP A-OTF Folk Pro B,,0,0,0,,切斷降落傘
+Dialogue: 0,0:15:43.41,0:15:44.56,TEXT-JP A-OTF Folk Pro B,,0,0,0,,要撞擊了
+Dialogue: 0,0:15:44.56,0:15:45.31,TEXT-JP A-OTF Folk Pro B,,0,0,0,,做好撞擊準備
+Dialogue: 0,0:16:09.06,0:16:11.87,TEXT-JP A-OTF Folk Pro B,,0,0,0,,太好了 突擊成功
+Dialogue: 0,0:16:12.19,0:16:13.86,TEXT-JP A-OTF Folk Pro B,,0,0,0,,救援部隊 準備突擊登艦
+Dialogue: 0,0:16:13.86,0:16:15.08,TEXT-JP A-OTF Folk Pro B,,0,0,0,,已經準備好了
+Dialogue: 0,0:16:15.78,0:16:19.25,TEXT-JP A-OTF Folk Pro B,,0,0,0,,要上了哦 突擊登艦
+Dialogue: 0,0:16:23.25,0:16:23.98,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長
+Dialogue: 0,0:16:25.24,0:16:27.02,TEXT-JP A-OTF Folk Pro B,,0,0,0,,艦長 也請突擊吧
+Dialogue: 0,0:16:27.71,0:16:30.70,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我...我就留在這裡
+Dialogue: 0,0:16:30.70,0:16:32.17,TEXT-JP A-OTF Folk Pro B,,0,0,0,,因爲 我是艦長
+Dialogue: 0,0:16:32.33,0:16:34.38,TEXT-JP A-OTF Folk Pro B,,0,0,0,,上吧 岬同學
+Dialogue: 0,0:16:37.29,0:16:39.11,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我能理解
+Dialogue: 0,0:16:39.94,0:16:42.34,TEXT-JP A-OTF Folk Pro B,,0,0,0,,因為 你想去的想法 都寫在臉上了哦
+Dialogue: 0,0:16:44.17,0:16:45.57,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小白
+Dialogue: 0,0:16:46.43,0:16:47.49,TEXT-JP A-OTF Folk Pro B,,0,0,0,,謝謝
+Dialogue: 0,0:16:52.31,0:16:55.69,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我親愛的朋友 小白好帥
+Dialogue: 0,0:16:55.69,0:16:57.99,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我們又不是朋友
+Dialogue: 0,0:17:03.11,0:17:05.09,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:17:11.27,0:17:12.27,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:17:20.53,0:17:22.26,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:17:27.26,0:17:28.51,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:17:30.38,0:17:31.23,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小明
+Dialogue: 0,0:17:52.42,0:17:55.38,TEXT-JP A-OTF Folk Pro B,,0,0,0,,終於見到你了 小明
+Dialogue: 0,0:17:56.87,0:17:58.46,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:18:00.17,0:18:01.30,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:18:02.62,0:18:03.61,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:18:04.39,0:18:06.74,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小萌
+Dialogue: 0,0:18:09.53,0:18:12.33,TEXT-JP A-OTF Folk Pro B,,0,0,0,,小明也真是的 太亂來了
+Dialogue: 0,0:18:12.33,0:18:13.53,TEXT-JP A-OTF Folk Pro B,,0,0,0,,要不然的話...
+Dialogue: 0,0:18:13.53,0:18:14.86,TEXT-JP A-OTF Folk Pro B,,0,0,0,,真的是
+Dialogue: 0,0:18:14.86,0:18:16.21,TEXT-JP A-OTF Folk Pro B,,0,0,0,,抱歉
+Dialogue: 0,0:18:16.87,0:18:19.33,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不過 謝謝妳
+Dialogue: 0,0:18:20.92,0:18:24.12,TEXT-JP A-OTF Folk Pro B,,0,0,0,,作戰結束 艦隊返回横須賀學校
+Dialogue: 0,0:18:29.20,0:18:32.66,TEXT-JP A-OTF Folk Pro B,,0,0,0,,媽媽 可惜這次你沒創造出奇蹟呢
+Dialogue: 0,0:18:33.40,0:18:39.11,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我的學生 替我創造出了
+Dialogue: 0,0:20:07.70,0:20:08.98,TEXT-JP A-OTF Folk Pro B,,0,0,0,,我們總算回來了
+Dialogue: 0,0:20:11.32,0:20:13.54,TEXT-JP A-OTF Folk Pro B,,0,0,0,,回到陸地了啊
+Dialogue: 0,0:20:14.17,0:20:15.80,TEXT-JP A-OTF Folk Pro B,,0,0,0,,終於回來了
+Dialogue: 0,0:20:15.80,0:20:18.31,TEXT-JP A-OTF Folk Pro B,,0,0,0,,總覺 還有些不敢相信
+Dialogue: 0,0:20:18.31,0:20:20.09,TEXT-JP A-OTF Folk Pro B,,0,0,0,,這不是夢耶
+Dialogue: 0,0:20:21.31,0:20:24.41,TEXT-JP A-OTF Folk Pro B,,0,0,0,,你個混蛋 你個混蛋 這個地面 你個混蛋
+Dialogue: 0,0:20:34.24,0:20:35.50,TEXT-JP A-OTF Folk Pro B,,0,0,0,,怎麼了
+Dialogue: 0,0:20:35.50,0:20:36.08,TEXT-JP A-OTF Folk Pro B,,0,0,0,,不會吧
+Dialogue: 0,0:20:38.51,0:20:39.80,TEXT-JP A-OTF Folk Pro B,,0,0,0,,風晴號...
+Dialogue: 0,0:20:40.84,0:20:42.60,TEXT-JP A-OTF Folk Pro B,,0,0,0,,誰來 阻止一下啊
+Dialogue: 0,0:20:42.50,0:20:44.90,TEXT-JP A-OTF Folk Pro B,,0,0,0,,別沉啊
+Dialogue: 0,0:20:46.40,0:20:48.50,TEXT-JP A-OTF Folk Pro B,,0,0,0,,風晴號...
+Dialogue: 0,0:09:21.10,0:09:26.92,Title 方正楷体_GBK,,0,0,0,,{\pos(670,545)\fsp19}赴湯蹈火的最終之戰！
+Dialogue: 0,0:11:33.67,0:11:34.59,OTHERS @方正楷体_GBK,,0,0,0,,{\fs60\frz270\pos(1242,110)}給我上
+Dialogue: 0,0:11:33.67,0:11:34.59,OTHERS 方正楷体_GBK,,0,0,0,,{\fs60\frz353.3\pos(1204,344)}!!
+Dialogue: 0,0:13:20.11,0:13:25.37,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}一切都始於這個靜靜地燃燒著的世界
+Dialogue: 0,0:13:25.53,0:13:30.13,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}在長夜將明的時候
+Dialogue: 0,0:13:30.38,0:13:35.59,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}一道光芒 一聲發自靈魂的吶喊
+Dialogue: 0,0:13:35.69,0:13:39.63,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}衝破束縛 撕裂黑暗
+Dialogue: 0,0:13:39.72,0:13:44.83,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}尋求著歸宿的身影
+Dialogue: 0,0:13:45.15,0:13:50.09,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}迷茫地邁足前進
+Dialogue: 0,0:13:50.31,0:13:57.35,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}這顆被波濤掩去的真心
+Dialogue: 0,0:13:57.76,0:14:00.11,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}甚至沒法保護你
+Dialogue: 0,0:14:00.28,0:14:05.29,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}心臟在胸中激盪 就像要跳出來一樣
+Dialogue: 0,0:14:05.51,0:14:10.43,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}留下無法忘卻的傷痕
+Dialogue: 0,0:14:10.69,0:14:15.55,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}希望這微弱的殘影 永遠不要消失
+Dialogue: 0,0:14:15.67,0:14:20.77,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}世界正在等待 屬於明日的嬰啼
+Dialogue: 0,0:14:20.94,0:14:25.92,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}心臟在胸中激盪 千萬不要忘記
+Dialogue: 0,0:14:26.08,0:14:33.50,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}是的 這是一首交錯著過去與未來的百年長歌
+Dialogue: 0,0:14:42.72,0:14:48.01,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}在這通向榮耀的世界 匯聚光芒
+Dialogue: 0,0:14:48.01,0:14:52.78,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}掌握光輝燦爛的明天
+Dialogue: 0,0:14:53.02,0:14:58.11,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}那上天決定的宿命 這親手開創的未來
+Dialogue: 0,0:14:58.20,0:15:02.22,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}全部緊擁懷中
+Dialogue: 0,0:15:02.22,0:15:07.36,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}獨自徬徨 聽著記憶中的足音
+Dialogue: 0,0:15:07.64,0:15:12.54,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}注視著一去不返的過往
+Dialogue: 0,0:15:12.73,0:15:19.96,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}閉上雙眼 這條航路
+Dialogue: 0,0:15:20.24,0:15:22.62,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}它就通向你的身旁
+Dialogue: 0,0:15:22.73,0:15:27.72,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}吼出最後的咆哮 駛向嘆息的大洋
+Dialogue: 0,0:15:27.96,0:15:32.99,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}接受淚水洗禮 發現新的世界
+Dialogue: 0,0:15:33.20,0:15:38.12,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}向著遙遠彼方的亮光 衝破迷茫
+Dialogue: 0,0:15:38.28,0:15:43.23,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}追尋那閃閃發光 遙不可及的答案
+Dialogue: 0,0:15:43.36,0:15:48.33,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}吼出最後的咆哮 邂逅伴隨著分別
+Dialogue: 0,0:15:48.60,0:15:56.09,OP CN 方正稚艺_GBK - bjm,,0,0,0,,{\fad(120,120)}是的 這是一首交錯著過去與未來的百年長歌
+Dialogue: 0,0:21:07.93,0:21:14.28,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}七つの青は今日も　世界を包んでいた
+Dialogue: 0,0:21:07.93,0:21:14.28,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}青色七洋 今天也環繞著這個世界
+Dialogue: 0,0:21:14.85,0:21:20.32,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}言葉よりも優しく　背中を押すよ
+Dialogue: 0,0:21:14.85,0:21:20.32,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}我會比話語還要溫柔 輕輕地推著你
+Dialogue: 0,0:21:20.62,0:21:26.06,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}そう　私と君のripple effect
+Dialogue: 0,0:21:20.62,0:21:26.06,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}是啊 這就是你和我之間的漣漪效應
+Dialogue: 0,0:21:36.84,0:21:43.41,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}果てなく向かってくる波は険しいばかりで
+Dialogue: 0,0:21:36.84,0:21:43.41,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}面前的驚濤駭浪 一浪捲來一浪
+Dialogue: 0,0:21:43.74,0:21:49.76,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}航路はどうしよう　君と選ぶ未来
+Dialogue: 0,0:21:43.74,0:21:49.76,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}我們選擇的航路 就是我們的未來
+Dialogue: 0,0:21:50.58,0:21:56.34,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}微笑み忘れたら　私が笑うよ
+Dialogue: 0,0:21:50.58,0:21:56.34,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}如果你忘記了微笑 我會笑給你看
+Dialogue: 0,0:21:56.70,0:22:04.13,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}涙弾けたあとは　強さが水面に広がるから
+Dialogue: 0,0:21:56.70,0:22:04.13,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}流過眼淚之後 讓堅強隨波佈散
+Dialogue: 0,0:22:06.65,0:22:13.16,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}七つの青は今日も　世界を包んでいた
+Dialogue: 0,0:22:06.65,0:22:13.16,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}青色七洋 今天也環繞著這個世界
+Dialogue: 0,0:22:13.53,0:22:17.48,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}言葉よりも優しく波打つ
+Dialogue: 0,0:22:13.53,0:22:17.48,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}比話語還要溫柔的
+Dialogue: 0,0:22:17.62,0:22:21.28,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}晴れた空とあの風と
+Dialogue: 0,0:22:17.62,0:22:21.28,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}是這片晴空和習習涼風
+Dialogue: 0,0:22:21.34,0:22:27.68,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}東の空に光が見えたならば
+Dialogue: 0,0:22:21.34,0:22:27.68,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}如果你也看見了東方泛白的天空
+Dialogue: 0,0:22:27.93,0:22:31.28,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}舵をとろう　涙を捨てて
+Dialogue: 0,0:22:27.93,0:22:31.28,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}那就拋卻眼淚 隨我啟航
+Dialogue: 0,0:22:31.63,0:22:37.36,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}きっと　夢は逃げないはずだから
+Dialogue: 0,0:22:31.63,0:22:37.36,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}要相信 夢想從未遠離你
+Dialogue: 0,0:22:37.82,0:22:40.91,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}わたしも
+Dialogue: 0,0:22:37.82,0:22:40.91,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}我也陪在你的身邊
+Dialogue: 0,0:23:01.85,0:23:04.70,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}まずは生きていこうよ
+Dialogue: 0,0:23:01.85,0:23:04.70,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}愉快的生活
+Dialogue: 0,0:23:05.15,0:23:08.22,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}向きは気にしないでさ
+Dialogue: 0,0:23:05.15,0:23:08.22,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}不需要具體的想法
+Dialogue: 0,0:23:08.64,0:23:11.87,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}きみが笑顔になるだけで
+Dialogue: 0,0:23:08.64,0:23:11.87,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}只要露出你的微笑
+Dialogue: 0,0:23:11.98,0:23:14.46,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}ほらまたひとり
+Dialogue: 0,0:23:11.98,0:23:14.46,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}我們就是夥伴
+Dialogue: 0,0:23:15.60,0:23:22.22,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}七つの青は今日も　世界を包んでいた
+Dialogue: 0,0:23:15.60,0:23:22.22,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}青色七洋 今天也環繞著這個世界
+Dialogue: 0,0:23:22.59,0:23:26.57,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}言葉よりも優しく波打つ
+Dialogue: 0,0:23:22.59,0:23:26.57,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}比話語還要溫柔的
+Dialogue: 0,0:23:26.68,0:23:30.40,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}晴れた空と　あの風と
+Dialogue: 0,0:23:26.68,0:23:30.40,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}是這片晴空和習習涼風
+Dialogue: 0,0:23:30.40,0:23:36.70,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}誰かのそばで　夢を描くのならば
+Dialogue: 0,0:23:30.40,0:23:36.70,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}如果你希望有人能陪你一起描繪夢想
+Dialogue: 0,0:23:36.84,0:23:40.36,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}その誰かがわたしでありたい
+Dialogue: 0,0:23:36.84,0:23:40.36,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}我希望我就是那個人
+Dialogue: 0,0:23:40.68,0:23:43.60,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}旅に出よう
+Dialogue: 0,0:23:40.68,0:23:43.60,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}啟程吧
+Dialogue: 0,0:23:43.60,0:23:45.96,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}見つけて　そう
+Dialogue: 0,0:23:43.60,0:23:45.96,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}去尋找
+Dialogue: 0,0:23:45.96,0:23:50.24,JP_ED A-OTF Folk Pro R - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}わたしときみの Ripple Effect
+Dialogue: 0,0:23:45.96,0:23:50.24,CN_ED 方正正准黑_GBK - ed,,0,0,0,,{\blur3\fscx100\fscy160\fsp6\fad(800,0)}你和我之間的漣漪效應
+Dialogue: 0,0:23:54.91,0:23:59.92,TEXT-CN-UP 方正正准黑_GBK,,0,0,0,,{\an8}本片獻給辛苦的海軍  校對動畫是讓大家了解.海軍生活及工作
+Dialogue: 0,0:23:54.91,0:23:59.92,TEXT-JP A-OTF Folk Pro B,,0,0,0,,劇終...謝謝觀賞
+

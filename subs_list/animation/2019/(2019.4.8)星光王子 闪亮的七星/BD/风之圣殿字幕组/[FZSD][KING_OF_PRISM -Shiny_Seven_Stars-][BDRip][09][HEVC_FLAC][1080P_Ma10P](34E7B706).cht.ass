@@ -1,0 +1,613 @@
+﻿[Script Info]
+Title: [KING_OF_PRISM -Shiny_Seven_Stars-][09]
+Original Script: FZSD
+ScriptType: v4.00+
+WrapStyle: 0
+PlayResX: 1920
+PlayResY: 1080
+YCbCr Matrix: TV.709
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,方正准圆_GBK,75,&H00FFFFFF,&H00FFFFFF,&H00C27AE5,&H96000000,-1,0,0,0,100,100,0,0,1,3,0,2,25,25,15,1
+Style: Up,方正准圆_GBK,45,&H00FFFFFF,&H00FFFFFF,&H00C27AE5,&H96000000,-1,0,0,0,100,100,0,0,1,3,0,7,20,20,15,1
+Style: Title,方正少儿_GBK,90,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,2,0,1,0,3.5,7,53,53,300,1
+Style: Title 2,方正康体_GBK,120,&H008C3068,&H000000FF,&H00FFFFFF,&H00FFFFFF,0,0,0,0,110,100,2,0,1,3.5,3.5,7,53,53,300,1
+Style: OPJP,A-OTF Jun Pro 34,80,&H00FFFFFF,&H00FFFFFF,&HA0000000,&H8C000000,-1,0,0,0,100,100,0,0,1,3,3,2,18,10,10,1
+Style: OPCN,方正准圆_GBK,65,&H00FFFFFF,&H00FFFFFF,&HA0000000,&H8C000000,-1,0,0,0,100,100,0,0,1,3,3,8,18,15,15,1
+Style: EDJP,A-OTF Ryumin Pr5 EB-KL,68,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,3,0,1,0.1,0,9,25,25,7,1
+Style: EDCN,方正中雅宋_GBK,56,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,3,0,1,0.1,0,3,25,25,7,1
+Style: Insert_JP,A-OTF Jun Pro 34,68,&H00FFFFFF,&HF0FFFFFF,&H00FF8000,&HF0F4AF2F,-1,0,0,0,100,100,0,0,1,2.25,3,7,15,15,0,128
+Style: Insert_CN,方正准圆_GBK,56,&H00FFFFFF,&HF0FFFFFF,&H00FF8000,&HF0F4AF2F,-1,0,0,0,100,100,0,0,1,2.25,3,7,15,15,11,1
+Style: Staff,方正准圆_GBK,56,&H00FFFFFF,&HF0FFFFFF,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2.25,1.5,2,45,45,11,1
+Style: Prism Jump 粉色,方正少儿_GBK,74,&H00FFFFFF,&H00BF00FF,&H00CF51FF,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: Prism Jump 红色,方正少儿_GBK,74,&H00FFFFFF,&H00003BFE,&H00003BFE,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: Prism Jump 蓝色,方正少儿_GBK,74,&H00FFFFFF,&H00FE6F00,&H00FE6300,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: Prism Jump 黄色,方正少儿_GBK,74,&H00FFFFFF,&H0000D2FF,&H0000CBFE,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: Prism Jump 紫色,方正少儿_GBK,74,&H00FFFFFF,&H00FF51A2,&H00FF51A2,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: Prism Jump 橙色,方正少儿_GBK,74,&H00FFFFFF,&H000000FF,&H0000A2FF,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: Prism Jump 绿色,方正少儿_GBK,74,&H00FFFFFF,&H0000FF85,&H1E0B791E,&H00FFFFFF,0,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: Prism Jump 灰色,方正少儿_GBK,74,&H00FFFFFF,&H00B3ACB0,&H00B3ACB0,&H00FFFFFF,0,0,0,0,100,100,0,0,1,2.5,1,2,10,10,10,1
+Style: 文本1,方正准圆_GBK,88,&H00FFFFFF,&H00FFFFFF,&H00FEC109,&H96000000,-1,0,0,0,100,100,13,0,1,5,0,2,20,20,15,1
+Style: episode,方正中雅宋_GBK,74,&H00FFFFFF,&H000000FF,&H00000000,&H008A9697,0,0,0,0,100,100,0,0,1,4,0,9,40,40,140,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Staff,,0,0,0,,——Staff——
+Dialogue: 0,0:02:42.18,0:02:46.18,Staff,,0,0,0,,{\blur4.5\an8\fad(400,400)}本字幕由  風之聖殿字幕組  製作\N僅供交流試看之用  擅自傳播造成法律責任  本字幕組概不負責
+Dialogue: 0,0:02:46.36,0:02:49.68,Staff,,0,0,0,,{\blur4.5\an8\fad(400,400)}片源:響C  翻譯:傻天  道榮不換家  校對:hac0101  歌詞:幻音  後期:小聖
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,——OP——
+Dialogue: 0,0:00:23.40,0:00:26.88,OPJP,,0,0,0,,{\an2\fad(400,0)}見つけてくれたね 応えてくれたね
+Dialogue: 0,0:00:26.88,0:00:32.43,OPJP,,0,0,0,,{\an2}７つの夜明け 愛にも似た
+Dialogue: 0,0:00:32.43,0:00:34.76,OPJP,,0,0,0,,{\an2\fad(0,350)}Shiny Seven Stars!
+Dialogue: 0,0:00:35.56,0:00:41.66,OPJP,,0,0,0,,{\an2\fad(0,350)}Yesお返しのhappy 始まる!
+Dialogue: 0,0:00:42.91,0:00:46.24,OPJP,,0,0,0,,{\an2}ソンなこと言わないで ほら
+Dialogue: 0,0:00:46.24,0:00:49.62,OPJP,,0,0,0,,{\an2}僕がいるし 君は可愛い
+Dialogue: 0,0:00:49.62,0:00:55.83,OPJP,,0,0,0,,{\an2\fad(0,350)}誰だって煌めきベイビイ 高まる方へ
+Dialogue: 0,0:00:56.42,0:00:59.79,OPJP,,0,0,0,,{\an2}迷いながら それでもまた
+Dialogue: 0,0:00:59.79,0:01:02.96,OPJP,,0,0,0,,{\an2}惹かれ合うまるでSun and Moon(fly away!!)
+Dialogue: 0,0:01:03.46,0:01:06.80,OPJP,,0,0,0,,{\an2}僕が(俺が) 僕が(僕らが)
+Dialogue: 0,0:01:06.80,0:01:10.22,OPJP,,0,0,0,,{\an2}どんなところにも 必ず連れてく
+Dialogue: 0,0:01:10.22,0:01:13.80,OPJP,,0,0,0,,{\an2}NEWな明日 未来を!
+Dialogue: 0,0:01:13.80,0:01:15.81,OPJP,,0,0,0,,{\an2}Shiny Seven Stars!
+Dialogue: 0,0:01:15.81,0:01:20.47,OPJP,,0,0,0,,{\an2}君に贈るよ エールの花束（リボン結び）
+Dialogue: 0,0:01:20.47,0:01:23.69,OPJP,,0,0,0,,{\an2}プリズムビームで
+Dialogue: 0,0:01:23.69,0:01:27.40,OPJP,,0,0,0,,{\an2}世界を素敵に変えちゃう
+Dialogue: 0,0:01:27.40,0:01:30.28,OPJP,,0,0,0,,{\an2}ハジメマシテ☆から
+Dialogue: 0,0:01:30.28,0:01:34.41,OPJP,,0,0,0,,{\an2}アイシテル♥までの責任(とらせてほしい)
+Dialogue: 0,0:01:34.41,0:01:41.18,OPJP,,0,0,0,,{\an2}戸惑いは2秒 あとは楽しさが永遠さ!
+Dialogue: 0,0:01:41.18,0:01:44.88,OPJP,,0,0,0,,{\an2}感じてくれたね 教えてくれたね
+Dialogue: 0,0:01:44.88,0:01:49.80,OPJP,,0,0,0,,{\an2}出会えたんだ 君の中から
+Dialogue: 0,0:01:49.80,0:01:52.46,OPJP,,0,0,0,,{\an2\fad(0,350)}卜キメキBURN
+Dialogue: 0,0:00:23.40,0:00:26.88,OPCN,,0,0,0,,{\an8\fad(400,0)}找到了呢  回應了呢
+Dialogue: 0,0:00:26.88,0:00:32.43,OPCN,,0,0,0,,{\an8}7顆在黎明之中  如愛一般的
+Dialogue: 0,0:00:32.43,0:00:34.76,OPCN,,0,0,0,,{\an8\fad(0,350)}Shiny Seven Stars!
+Dialogue: 0,0:00:35.56,0:00:41.66,OPCN,,0,0,0,,{\an8\fad(0,350)}以Yes為回應的happy要開始了!
+Dialogue: 0,0:00:42.91,0:00:46.24,OPCN,,0,0,0,,{\an8}那種事情不要說啦  你看
+Dialogue: 0,0:00:46.24,0:00:49.62,OPCN,,0,0,0,,{\an8}這裡有我在  你也很可愛
+Dialogue: 0,0:00:49.62,0:00:55.83,OPCN,,0,0,0,,{\an8\fad(0,350)}無論誰都是閃耀的Baby  向高處進發
+Dialogue: 0,0:00:56.42,0:00:59.79,OPCN,,0,0,0,,{\an8}就算迷路了  又好像被什麼牽引了
+Dialogue: 0,0:00:59.79,0:01:02.96,OPCN,,0,0,0,,{\an8}就像日與月(fly away!!)
+Dialogue: 0,0:01:03.46,0:01:06.80,OPCN,,0,0,0,,{\an8}有我在（有我在）有我在（有我們在）
+Dialogue: 0,0:01:06.80,0:01:10.22,OPCN,,0,0,0,,{\an8}無論要去何方  都會緊隨著你
+Dialogue: 0,0:01:10.22,0:01:13.80,OPCN,,0,0,0,,{\an8}向著那新的明日  未來!
+Dialogue: 0,0:01:13.80,0:01:15.81,OPCN,,0,0,0,,{\an8}Shiny Seven Stars!
+Dialogue: 0,0:01:15.81,0:01:20.47,OPCN,,0,0,0,,{\an8}送給你喝彩的花束（結上緞帶）
+Dialogue: 0,0:01:20.47,0:01:23.69,OPCN,,0,0,0,,{\an8}以Prism Beam
+Dialogue: 0,0:01:23.69,0:01:27.40,OPCN,,0,0,0,,{\an8}把世界變得美妙吧
+Dialogue: 0,0:01:27.40,0:01:30.28,OPCN,,0,0,0,,{\an8}從初次見面☆開始
+Dialogue: 0,0:01:30.28,0:01:34.41,OPCN,,0,0,0,,{\an8}到相親相愛♥的責任（由我背負）
+Dialogue: 0,0:01:34.41,0:01:41.18,OPCN,,0,0,0,,{\an8}困惑只有2秒鐘  之後就是永遠的快樂了!
+Dialogue: 0,0:01:41.18,0:01:44.88,OPCN,,0,0,0,,{\an8}去感受了呢  去求教了呢
+Dialogue: 0,0:01:44.88,0:01:49.80,OPCN,,0,0,0,,{\an8}從相遇到的你那裡
+Dialogue: 0,0:01:49.80,0:01:52.46,OPCN,,0,0,0,,{\an8\fad(0,350)}心動不已BURN
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,——ED——
+Dialogue: 0,0:22:40.00,0:22:42.01,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}Silver and Gold dance
+Dialogue: 0,0:22:42.01,0:22:43.90,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}feel your love together
+Dialogue: 0,0:22:43.90,0:22:47.34,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}濡れる大地が謎めく…
+Dialogue: 0,0:22:47.39,0:22:49.25,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}Silver and Gold dance
+Dialogue: 0,0:22:49.25,0:22:50.94,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}feel my love forever
+Dialogue: 0,0:22:50.97,0:22:54.69,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}百億の夢、永遠に…
+Dialogue: 0,0:22:54.69,0:23:01.33,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}熱く果てる夜 誘う唇と
+Dialogue: 0,0:23:01.47,0:23:08.32,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}搖れる眼差しに きっと何もかも
+Dialogue: 0,0:23:08.72,0:23:12.41,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}銀色の星と金色の月
+Dialogue: 0,0:23:12.41,0:23:15.92,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}全て輝きに身を委ねて
+Dialogue: 0,0:23:15.92,0:23:17.73,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}Silver and Gold dance
+Dialogue: 0,0:23:17.73,0:23:19.38,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}feel it together
+Dialogue: 0,0:23:19.45,0:23:21.32,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}can you hear sexual voice?
+Dialogue: 0,0:23:21.32,0:23:22.93,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}hear them making love
+Dialogue: 0,0:23:22.93,0:23:24.88,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}Silver and Gold dance
+Dialogue: 0,0:23:24.88,0:23:26.46,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}feel my love forever
+Dialogue: 0,0:23:26.55,0:23:28.25,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}a milion dreams can get
+Dialogue: 0,0:23:28.25,0:23:30.25,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}Silver and Gold dance
+Dialogue: 0,0:23:37.32,0:23:40.75,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}銀色の星と金色の月
+Dialogue: 0,0:23:40.78,0:23:44.45,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}全て輝きに身を委ねて
+Dialogue: 0,0:23:44.45,0:23:47.57,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}Silver and Gold dance feel it together
+Dialogue: 0,0:23:47.91,0:23:51.29,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}裂ける大地が荒ぶり…
+Dialogue: 0,0:23:51.29,0:23:54.92,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}Silver and Gold dance feel my love forever
+Dialogue: 0,0:23:55.06,0:23:58.46,EDJP,,0,0,0,,{\an9\blur3\fad(250,250)}百億の夜、永遠に…
+Dialogue: 0,0:22:40.00,0:22:42.01,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色和金色的舞蹈
+Dialogue: 0,0:22:42.01,0:22:43.90,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}一同感受你的愛
+Dialogue: 0,0:22:43.90,0:22:47.34,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}濕潤的大地充滿神秘…
+Dialogue: 0,0:22:47.39,0:22:49.25,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色和金色的舞蹈
+Dialogue: 0,0:22:49.25,0:22:50.94,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}永遠感受我的愛
+Dialogue: 0,0:22:50.97,0:22:54.69,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}百億的夢中 永遠地…
+Dialogue: 0,0:22:54.69,0:23:01.33,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}炎熱的夜晚 誘惑的嘴唇
+Dialogue: 0,0:23:01.47,0:23:08.32,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}飄忽的目光中 一定顯現了什麼
+Dialogue: 0,0:23:08.72,0:23:12.41,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色的星星和金色的月亮
+Dialogue: 0,0:23:12.41,0:23:15.92,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}將所有的光輝都照在我身上
+Dialogue: 0,0:23:15.92,0:23:17.73,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色和金色的舞蹈
+Dialogue: 0,0:23:17.73,0:23:19.38,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}一同感受
+Dialogue: 0,0:23:19.45,0:23:21.32,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}你能聽到性的聲音嗎?
+Dialogue: 0,0:23:21.32,0:23:22.93,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}聽到他們在纏綿嗎
+Dialogue: 0,0:23:22.93,0:23:24.88,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色和金色的舞蹈
+Dialogue: 0,0:23:24.88,0:23:26.46,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}永遠感受我的愛
+Dialogue: 0,0:23:26.55,0:23:28.25,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}從百萬的夢中可以得到
+Dialogue: 0,0:23:28.25,0:23:30.25,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色和金色的舞蹈
+Dialogue: 0,0:23:37.32,0:23:40.75,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色的星星和金色的月亮
+Dialogue: 0,0:23:40.78,0:23:44.45,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}將所有的光輝都照在我身上
+Dialogue: 0,0:23:44.45,0:23:47.57,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色和金色的舞蹈 一同感受
+Dialogue: 0,0:23:47.91,0:23:51.29,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}撕裂的大地一片狼藉…
+Dialogue: 0,0:23:51.29,0:23:54.92,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}銀色和金色的舞蹈 永遠感受我的愛
+Dialogue: 0,0:23:55.06,0:23:58.46,EDCN,,0,0,0,,{\an9\blur3\fad(250,250)}百億的夜中 永遠地…
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,——Insert1——
+Dialogue: 0,0:08:03.88,0:08:07.50,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}3! 2! 1! Breakdown!
+Dialogue: 0,0:08:14.35,0:08:17.59,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}I've got feeling 突きぬけてく
+Dialogue: 0,0:08:17.68,0:08:20.90,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}街が目、醒ますころ
+Dialogue: 0,0:08:20.96,0:08:27.16,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}朝焼けにくちづけてる 波も抱きしめてる
+Dialogue: 0,0:08:27.54,0:08:30.70,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}Ez Do Dance Ez Do Dance
+Dialogue: 0,0:08:30.77,0:08:34.07,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}踊る君を見てる…
+Dialogue: 0,0:08:34.21,0:08:37.23,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}Ez Do Dance Ez Do Dance
+Dialogue: 0,0:08:37.51,0:08:40.88,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}君だけを見ている…
+Dialogue: 0,0:08:40.88,0:08:42.79,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}Ez Do Dance!
+Dialogue: 0,0:08:03.88,0:08:07.50,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}3  2  1  開始!
+Dialogue: 0,0:08:14.35,0:08:17.59,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}我有種感覺  快要奔湧而出
+Dialogue: 0,0:08:17.68,0:08:20.90,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}就在大街甦醒那時候
+Dialogue: 0,0:08:20.96,0:08:27.16,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}輕輕親吻起朝霞  緊緊擁抱著波浪
+Dialogue: 0,0:08:27.54,0:08:30.70,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}輕鬆地跳  輕鬆地跳
+Dialogue: 0,0:08:30.77,0:08:34.07,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}我看著跳舞的你…
+Dialogue: 0,0:08:34.21,0:08:37.23,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}輕鬆地跳  輕鬆地跳
+Dialogue: 0,0:08:37.51,0:08:40.88,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}只看著你一個人…
+Dialogue: 0,0:08:40.88,0:08:42.79,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H1100F4&}輕鬆地跳!
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,——Insert2——
+Dialogue: 0,0:15:49.94,0:15:51.50,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}no no cry more
+Dialogue: 0,0:15:51.50,0:15:56.87,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}泣かない 思い出 作ったら?
+Dialogue: 0,0:15:57.09,0:16:00.57,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}この夏こそは! この夜こそは!
+Dialogue: 0,0:16:00.76,0:16:04.43,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}この町きっと見つかる
+Dialogue: 0,0:16:04.56,0:16:06.18,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}no no cry more
+Dialogue: 0,0:16:06.18,0:16:11.42,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}消えない 足跡 悔やまずに
+Dialogue: 0,0:16:11.61,0:16:15.11,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}この夢ここそは! この恋こそは!
+Dialogue: 0,0:16:15.33,0:16:24.42,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}このチャンスだけ逃げしたくないよ…!
+Dialogue: 0,0:16:24.50,0:16:26.42,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:16:26.42,0:16:28.09,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:16:28.16,0:16:30.09,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:16:30.09,0:16:31.69,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:16:31.86,0:16:33.52,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:16:33.52,0:16:39.06,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:16:39.15,0:16:40.98,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:16:40.98,0:16:42.65,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:16:42.65,0:16:44.63,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:16:44.63,0:16:46.24,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:16:46.32,0:16:48.24,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:16:48.24,0:16:53.45,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:16:53.70,0:17:00.61,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喧嘩ばかりだよ あの頃も今だって
+Dialogue: 0,0:17:00.72,0:17:07.77,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}相変わらずの 笑い声と さみしげなあいつはきっと
+Dialogue: 0,0:17:07.95,0:17:15.16,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}なつかしい草原を 君と２人で歩く
+Dialogue: 0,0:17:15.26,0:17:22.15,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}夕陽が傾ても 暗やみが訪れても
+Dialogue: 0,0:17:29.69,0:17:33.40,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}映画の幕の様に
+Dialogue: 0,0:17:33.50,0:17:39.00,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}終わらない 続いてゆく survival dAnce!!
+Dialogue: 0,0:17:39.06,0:17:40.93,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:17:40.93,0:17:42.56,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:17:42.70,0:17:44.55,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:17:44.55,0:17:46.04,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:17:46.37,0:17:48.38,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:17:48.38,0:17:53.77,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:17:53.78,0:17:55.57,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:17:55.57,0:17:57.22,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:17:57.26,0:17:59.27,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:17:59.34,0:18:00.89,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:18:00.93,0:18:02.82,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:18:02.82,0:18:07.99,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:18:24.62,0:18:26.42,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:18:26.42,0:18:28.08,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:18:28.08,0:18:30.08,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:18:30.08,0:18:31.50,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:18:31.66,0:18:33.81,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:18:33.81,0:18:38.87,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:19:10.02,0:19:11.98,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:19:11.98,0:19:13.49,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:19:13.49,0:19:15.43,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:19:15.43,0:19:17.15,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:19:17.30,0:19:19.15,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:19:19.15,0:19:24.47,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:19:24.52,0:19:26.43,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:19:26.43,0:19:28.05,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:19:28.23,0:19:30.30,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:19:30.30,0:19:31.65,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:19:31.76,0:19:33.90,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:19:33.90,0:19:38.77,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:19:39.06,0:19:40.70,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}no no cry more
+Dialogue: 0,0:19:40.70,0:19:45.84,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}泣かない 思い出 作ったら?
+Dialogue: 0,0:19:45.97,0:19:49.54,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}この夏こそは! この夜こそは!
+Dialogue: 0,0:19:49.93,0:19:53.34,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}この町きっと見つかる
+Dialogue: 0,0:19:53.49,0:19:55.34,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}no no cry more
+Dialogue: 0,0:19:55.34,0:20:00.56,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}消えない 青春 悔やまずに
+Dialogue: 0,0:20:00.64,0:20:04.37,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}この夢ここそは! この恋こそは!
+Dialogue: 0,0:20:04.44,0:20:13.62,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}このチャンスだけ逃げしたくないよ…!
+Dialogue: 0,0:20:13.73,0:20:15.54,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:20:15.54,0:20:17.21,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:20:17.21,0:20:19.16,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:20:19.16,0:20:21.16,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:20:21.16,0:20:22.91,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:20:22.91,0:20:28.10,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:20:28.16,0:20:30.00,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:20:30.00,0:20:31.54,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:20:31.67,0:20:33.70,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:20:33.70,0:20:35.46,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}wow wow wow wow
+Dialogue: 0,0:20:35.46,0:20:37.46,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}yeh yeh yeh yeh yeh
+Dialogue: 0,0:20:37.46,0:20:42.40,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}survival dAnce! survival dAnce! trial dAnce!
+Dialogue: 0,0:15:49.94,0:15:51.50,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}不要再哭了
+Dialogue: 0,0:15:51.50,0:15:56.87,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}創造出沒有淚水的回憶如何?
+Dialogue: 0,0:15:57.09,0:16:00.57,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就在這個夏天! 就在這個夜晚!
+Dialogue: 0,0:16:00.76,0:16:04.43,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就在這個城市一定會找到
+Dialogue: 0,0:16:04.56,0:16:06.18,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}不要再哭了
+Dialogue: 0,0:16:06.18,0:16:11.42,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}磨滅不去的足跡  不留遺憾
+Dialogue: 0,0:16:11.61,0:16:15.11,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就在這個夢裡! 這個戀情!
+Dialogue: 0,0:16:15.33,0:16:24.42,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}不想逃避這個機會啊…!
+Dialogue: 0,0:16:24.50,0:16:26.42,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:16:26.42,0:16:28.09,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:16:28.16,0:16:30.09,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:16:30.09,0:16:31.69,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:16:31.86,0:16:33.52,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:16:33.52,0:16:39.06,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:16:39.15,0:16:40.98,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:16:40.98,0:16:42.65,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:16:42.65,0:16:44.63,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:16:44.63,0:16:46.24,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:16:46.32,0:16:48.24,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:16:48.24,0:16:53.45,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:16:53.70,0:17:00.61,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}盡情地吵鬧  不管從前還是現在
+Dialogue: 0,0:17:00.72,0:17:07.77,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}無論是笑聲  還是寂寞的那個人  都一定未曾改變
+Dialogue: 0,0:17:07.95,0:17:15.16,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}與你兩人曾漫步於那令人懷念的草原
+Dialogue: 0,0:17:15.26,0:17:22.15,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就算夕陽西下  或是黑夜造訪
+Dialogue: 0,0:17:29.69,0:17:33.40,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就像電影的序幕
+Dialogue: 0,0:17:33.50,0:17:39.00,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}永遠不會結束  一直持續  生存之舞!!
+Dialogue: 0,0:17:39.06,0:17:40.93,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:17:40.93,0:17:42.56,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:17:42.70,0:17:44.55,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:17:44.55,0:17:46.04,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:17:46.37,0:17:48.38,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:17:48.38,0:17:53.77,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:17:53.78,0:17:55.57,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:17:55.57,0:17:57.22,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:17:57.26,0:17:59.27,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:17:59.34,0:18:00.89,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:18:00.93,0:18:02.82,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:18:02.82,0:18:07.99,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:18:24.62,0:18:26.42,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:18:26.42,0:18:28.08,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:18:28.08,0:18:30.08,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:18:30.08,0:18:31.50,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:18:31.66,0:18:33.81,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:18:33.81,0:18:38.87,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:19:10.02,0:19:11.98,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:19:11.98,0:19:13.49,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:19:13.49,0:19:15.43,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:19:15.43,0:19:17.15,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:19:17.30,0:19:19.15,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:19:19.15,0:19:24.47,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:19:24.52,0:19:26.43,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:19:26.43,0:19:28.05,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:19:28.23,0:19:30.30,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:19:30.30,0:19:31.65,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:19:31.76,0:19:33.90,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:19:33.90,0:19:38.77,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:19:39.06,0:19:40.70,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}不要再哭了
+Dialogue: 0,0:19:40.70,0:19:45.84,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}創造出沒有淚水的回憶如何?
+Dialogue: 0,0:19:45.97,0:19:49.54,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就在這個夏天! 就在這個夜晚!
+Dialogue: 0,0:19:49.93,0:19:53.34,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就在這個城市一定會找到
+Dialogue: 0,0:19:53.49,0:19:55.34,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}不要再哭了
+Dialogue: 0,0:19:55.34,0:20:00.56,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}磨滅不去的青春  不留遺憾
+Dialogue: 0,0:20:00.64,0:20:04.37,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}就在這個夢裡! 這個戀情!
+Dialogue: 0,0:20:04.44,0:20:13.62,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}不想逃避這個機會啊…!
+Dialogue: 0,0:20:13.73,0:20:15.54,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:20:15.54,0:20:17.21,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:20:17.21,0:20:19.16,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:20:19.16,0:20:21.16,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:20:21.16,0:20:22.91,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:20:22.91,0:20:28.10,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Dialogue: 0,0:20:28.16,0:20:30.00,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:20:30.00,0:20:31.54,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:20:31.67,0:20:33.70,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:20:33.70,0:20:35.46,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}喔  喔  喔  喔
+Dialogue: 0,0:20:35.46,0:20:37.46,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}耶  耶  耶  耶  耶
+Dialogue: 0,0:20:37.46,0:20:42.40,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&HF328CB&}生存之舞! 生存之舞! 審判之舞!
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,——Insert3——
+Dialogue: 0,0:04:10.80,0:04:12.81,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}『側にいるよ』
+Dialogue: 0,0:04:12.81,0:04:18.23,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}…そんな言葉  真に受けたらダメね
+Dialogue: 0,0:04:18.31,0:04:23.60,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}ひりつくわ 宙に迷うこの小指のささくれ
+Dialogue: 0,0:04:23.79,0:04:35.71,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}時に小さな傷の方が女の夜締めつける
+Dialogue: 0,0:04:35.88,0:04:42.69,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}知らないでしょ? 待ちぼうけの気持ちなど
+Dialogue: 0,0:04:42.81,0:04:52.58,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}光の中で踊るようにあなた微笑んだ
+Dialogue: 0,0:04:52.84,0:05:05.32,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}影の奥で私独り愛のスリーパーホールドかける
+Dialogue: 0,0:05:05.32,0:05:09.24,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}Love me baby抱きしめて
+Dialogue: 0,0:05:09.30,0:05:20.56,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}流れるように引き寄せて 決して離さないで
+Dialogue: 0,0:05:20.69,0:05:36.51,Insert_JP,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}いいのよ 構わない息が止まるくらい強く 腕の中眠りたい
+Dialogue: 0,0:04:10.80,0:04:12.81,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}“我就在你的身邊”
+Dialogue: 0,0:04:12.81,0:04:18.23,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}…這樣的話語  可不能當真接受哦
+Dialogue: 0,0:04:18.31,0:04:23.60,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}仍刺痛著啊 就像因猶豫而懸在空中的 小指上的倒刺
+Dialogue: 0,0:04:23.79,0:04:35.71,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}有時 小小的傷口就能束縛住女性的夜晚
+Dialogue: 0,0:04:35.88,0:04:42.69,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}你一定不知道吧? 空等一場的心情之類的
+Dialogue: 0,0:04:42.81,0:04:52.58,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}就像在燈光下起舞一般  你微笑著
+Dialogue: 0,0:04:52.84,0:05:05.32,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}而我獨自在陰影的深處  施展愛的鎖頸固定技
+Dialogue: 0,0:05:05.32,0:05:09.24,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}請愛著我  請抱住我
+Dialogue: 0,0:05:09.30,0:05:20.56,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}像流水那樣把我帶過去吧  我絕對不會離開的
+Dialogue: 0,0:05:20.69,0:05:36.51,Insert_CN,,0,0,0,,{\be5\fad(200,200)\an7\3c&H739F26&}可以的哦  不在乎你是否強大到能讓我窒息   只想在你的懷中睡去
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,——Title1——
+Dialogue: 0,0:10:18.88,0:10:21.89,Title,,0,0,0,,{\frz1.8\fs100\pos(1545.4,326.8)}第9集
+Dialogue: 0,0:10:18.88,0:10:21.89,Title,,0,0,0,,{\frz1.1\pos(193.2,988.6)}大和亞歷山大
+Dialogue: 0,0:10:18.88,0:10:21.89,Title 2,,0,0,0,,{\frz7\pos(1399,963.6)}街舞{\c&H000000&}教主
+Dialogue: 0,0:14:00.86,0:14:05.86,Title,,0,0,0,,{\c&HF0F0F0&\3c&H000000&\bord0\blur10\t(0,1700,1,\blur0)\fn方正中雅宋_GBK\fs80\pos(866,955)}感激之情莫以言表
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,——Text——
+Dialogue: 0,0:00:02.98,0:00:04.04,Default,,0,0,0,,PRISM.1
+Dialogue: 0,0:00:04.61,0:00:09.94,Default,,0,0,0,,接下來有請Schwarz Rose大和亞歷山大選手登場
+Dialogue: 0,0:00:09.99,0:00:11.24,Default,,0,0,0,,亞歷
+Dialogue: 0,0:00:11.38,0:00:13.26,Default,,0,0,0,,把我亂搞一通吧
+Dialogue: 0,0:00:13.26,0:00:14.80,Default,,0,0,0,,亞歷山大
+Dialogue: 0,0:00:14.80,0:00:16.93,Default,,0,0,0,,快讓我屈服吧
+Dialogue: 0,0:00:16.93,0:00:19.00,Default,,0,0,0,,我中意的暴君~
+Dialogue: 0,0:00:19.13,0:00:22.39,Default,,0,0,0,,大和  他要怒了~
+Dialogue: 0,0:02:03.84,0:02:05.77,Prism Jump 绿色,,0,0,0,,{\blur5\fad(300,300)}Prism Star英雄傳
+Dialogue: 0,0:02:06.34,0:02:08.85,Prism Jump 绿色,,0,0,0,,{\blur5\fad(300,300)}勇者們的競技場
+Dialogue: 0,0:02:15.67,0:02:18.34,Default,,0,0,0,,看吧  那傢伙又在練肌肉了
+Dialogue: 0,0:02:18.74,0:02:20.11,Default,,0,0,0,,也不知道他在圖什麼呢
+Dialogue: 0,0:02:22.54,0:02:23.62,Default,,0,0,0,,哦  好可怕
+Dialogue: 0,0:02:31.89,0:02:33.39,Default,,0,0,0,,法月總帥
+Dialogue: 0,0:02:33.54,0:02:36.13,Default,,0,0,0,,總帥  你是來看我的嗎
+Dialogue: 0,0:02:46.08,0:02:48.67,Default,,0,0,0,,這些是Schwarz Rose的參賽選手
+Dialogue: 0,0:02:49.29,0:02:52.44,Default,,0,0,0,,從過去的數據來看  是足以應付的對手呢
+Dialogue: 0,0:02:52.81,0:02:54.44,Default,,0,0,0,,但還是不可以大意
+Dialogue: 0,0:02:54.82,0:02:56.65,Default,,0,0,0,,好  來大幹一場吧
+Dialogue: 0,0:02:57.20,0:02:57.94,Default,,0,0,0,,我會努力的
+Dialogue: 0,0:02:59.00,0:03:00.00,Default,,0,0,0,,亞歷山大
+Dialogue: 0,0:03:00.57,0:03:02.70,Default,,0,0,0,,那個可怕的人又要出場了嗎
+Dialogue: 0,0:03:03.22,0:03:04.70,Default,,0,0,0,,會不會有事呢
+Dialogue: 0,0:03:14.59,0:03:15.88,Up,,0,0,0,,{\an9\fs45\c&HFFFFFF&\3c&H000000&\fad(300,0)}定下婚約\N天使之愛\N天羽茱奈\NDear Crown
+Dialogue: 0,0:03:14.66,0:03:15.96,Default,,0,0,0,,這件怎麼樣
+Dialogue: 0,0:03:16.42,0:03:17.96,Default,,0,0,0,,Cool  Cool
+Dialogue: 0,0:03:18.01,0:03:20.45,Default,,0,0,0,,會不會有一點輕浮?
+Dialogue: 0,0:03:20.93,0:03:23.73,Default,,0,0,0,,沒有哦  很合身
+Dialogue: 0,0:03:23.64,0:03:25.22,Up,,0,0,0,,{\an9\c&HDB611C&\3c&HFCFCFA&\fs36}還在拿指甲掐嗎? \N{\c&HB212EB&}蚊蟲叮咬引起的難忍搔癢 \N就用寶石的力量去擊退吧!!
+Dialogue: 0,0:03:23.64,0:03:25.22,Up,,0,0,0,,{\an3\c&HB212EB&\3c&HFCFCFA&\fs36}寶石旋轉十字(Jewel Spin Cross) \NHAPPY RAIN  閃亮成分的配方
+Dialogue: 0,0:03:29.45,0:03:31.81,Default,,0,0,0,,不  我不是顧客
+Dialogue: 0,0:03:33.20,0:03:33.77,Default,,0,0,0,,糟糕
+Dialogue: 0,0:03:35.96,0:03:37.30,Default,,0,0,0,,怎麼了嗎
+Dialogue: 0,0:03:37.94,0:03:40.41,Default,,0,0,0,,感覺在哪裡見過
+Dialogue: 0,0:03:46.07,0:03:47.53,Default,,0,0,0,,幹勁十足呢
+Dialogue: 0,0:03:49.14,0:03:52.46,Default,,0,0,0,,那傢伙敢動手的話  我會阻止他的
+Dialogue: 0,0:03:52.74,0:03:54.00,Default,,0,0,0,,真帥啊
+Dialogue: 0,0:03:54.48,0:03:57.76,Default,,0,0,0,,拜託你啦   Edel Rose備受期待的街舞派
+Dialogue: 0,0:04:14.72,0:04:15.65,Default,,0,0,0,,歡迎光臨
+Dialogue: 0,0:04:16.32,0:04:17.45,Default,,0,0,0,,什麼嘛  歡迎回來
+Dialogue: 0,0:04:19.77,0:04:20.50,Default,,0,0,0,,Hey
+Dialogue: 0,0:04:22.10,0:04:23.38,Default,,0,0,0,,快說我回來了
+Dialogue: 0,0:04:24.01,0:04:25.24,Default,,0,0,0,,囉嗦
+Dialogue: 0,0:04:25.91,0:04:28.05,Default,,0,0,0,,對媽媽敢這麼說話
+Dialogue: 0,0:04:28.76,0:04:31.75,Default,,0,0,0,,Go to hell  會下地獄的哦
+Dialogue: 0,0:04:34.92,0:04:37.16,Default,,0,0,0,,你真的有好好去上學嗎
+Dialogue: 0,0:04:37.97,0:04:39.05,Default,,0,0,0,,去了
+Dialogue: 0,0:04:39.62,0:04:41.76,Default,,0,0,0,,至少要順利畢業啊
+Dialogue: 0,0:04:42.80,0:04:44.40,Default,,0,0,0,,媽媽為此都這麼辛勞了
+Dialogue: 0,0:04:44.43,0:04:48.97,Up,,0,0,0,,{\an9\fs45\c&H572DDC&\3c&HFFFFFF&\fad(300,300)}神話的名對決\N歷經25年終於藍光化\N{\i0\c&HFFFFFF&\3c&H000000&}LEEF冠軍  WWW冠軍 \N內衛·維克特利  查米佐藤\N{\c&H572DDC&\3c&HFFFFFF&}近期發售  絕讚接受預訂中!!!
+Dialogue: 0,0:04:45.30,0:04:49.39,Default,,0,0,0,,真是的  也不知道你平時都上哪去鬼混
+Dialogue: 0,0:04:46.59,0:04:50.68,Up,,0,0,0,,{\an9\fs45\fad(300,300)\3c&H08C7F7&}橫須賀海軍咖哩
+Dialogue: 0,0:04:49.93,0:04:52.38,Default,,0,0,0,,也稍微盡點孝心吧
+Dialogue: 0,0:04:54.74,0:04:55.85,Default,,0,0,0,,給我站住
+Dialogue: 0,0:04:56.16,0:04:57.02,Default,,0,0,0,,幹嘛啦
+Dialogue: 0,0:04:57.75,0:05:00.02,Default,,0,0,0,,你肚子一定餓了吧  吃吧
+Dialogue: 0,0:05:00.39,0:05:01.47,Default,,0,0,0,,我才不餓
+Dialogue: 0,0:05:10.86,0:05:15.92,Default,,0,0,0,,媽媽我啊  看到你這麼有精神真的很開心哦
+Dialogue: 0,0:05:17.65,0:05:20.29,Default,,0,0,0,,雖然你得過哮喘  又動不動就感冒
+Dialogue: 0,0:05:20.76,0:05:23.57,Default,,0,0,0,,不過現在都強壯到可以頂撞媽媽了
+Dialogue: 0,0:05:25.39,0:05:28.42,Default,,0,0,0,,現在只要能看著你的臉  媽媽就已經很幸福了
+Dialogue: 0,0:05:33.28,0:05:34.56,Default,,0,0,0,,你是想說點什麼吧
+Dialogue: 0,0:05:35.44,0:05:36.44,Default,,0,0,0,,我吃飽了
+Dialogue: 0,0:05:40.74,0:05:44.57,Default,,0,0,0,,I love you  我愛你哦  亞歷
+Dialogue: 0,0:05:45.61,0:05:46.56,Default,,0,0,0,,別這樣
+Dialogue: 0,0:05:51.06,0:05:51.97,Default,,0,0,0,,真是的
+Dialogue: 0,0:05:53.86,0:05:54.99,Default,,0,0,0,,祝你好運
+Dialogue: 0,0:05:59.59,0:06:00.33,Default,,0,0,0,,真是的
+Dialogue: 0,0:06:03.80,0:06:04.68,Default,,0,0,0,,不妙
+Dialogue: 0,0:06:14.56,0:06:15.92,Default,,0,0,0,,你怎麼回事
+Dialogue: 0,0:06:16.08,0:06:17.35,Default,,0,0,0,,你剛才是在偷瞄我吧
+Dialogue: 0,0:06:17.94,0:06:20.02,Default,,0,0,0,,不  我沒有…
+Dialogue: 0,0:06:20.53,0:06:22.15,Default,,0,0,0,,你給我跳一個唄
+Dialogue: 0,0:06:23.26,0:06:24.44,Default,,0,0,0,,快點跳
+Dialogue: 0,0:06:26.26,0:06:29.30,Default,,0,0,0,,欺負弱小的傢伙  真的很遜喲
+Dialogue: 0,0:06:29.35,0:06:30.86,Default,,0,0,0,,你小子誰啊
+Dialogue: 0,0:06:30.86,0:06:32.16,Default,,0,0,0,,想動手嗎
+Dialogue: 0,0:06:37.89,0:06:40.32,Default,,0,0,0,,不准你們再對我的朋友出手!
+Dialogue: 0,0:06:49.68,0:06:52.53,Default,,0,0,0,,你還好嗎  沒受傷吧
+Dialogue: 0,0:06:53.22,0:06:54.69,Default,,0,0,0,,是  是的
+Dialogue: 0,0:06:57.01,0:06:57.95,Default,,0,0,0,,那就再見吧
+Dialogue: 0,0:06:59.17,0:07:00.45,Default,,0,0,0,,那  那個
+Dialogue: 0,0:07:03.14,0:07:04.06,Default,,0,0,0,,請問你叫什麼名字?
+Dialogue: 0,0:07:04.98,0:07:07.82,Default,,0,0,0,,冷  大黑的冷
+Dialogue: 0,0:07:12.16,0:07:14.44,Default,,0,0,0,,大黑的冷
+Dialogue: 0,0:07:31.51,0:07:34.51,Prism Jump 红色,,0,0,0,,{\blur5\fad(300,300)}燃炎風暴
+Dialogue: 0,0:07:31.51,0:07:34.51,Prism Jump 红色,,0,0,0,,{\fscx65\fscy65\blur5\fad(300,300)}Burning Fire Storm
+Dialogue: 0,0:07:39.07,0:07:40.49,Default,,0,0,0,,這是什麼
+Dialogue: 0,0:07:41.79,0:07:44.94,Default,,0,0,0,,難道說這傢伙是街舞派的教主?
+Dialogue: 0,0:07:45.03,0:07:46.91,Default,,0,0,0,,黑川冷嗎
+Dialogue: 0,0:07:48.91,0:07:50.66,Default,,0,0,0,,你給我記住!
+Dialogue: 0,0:07:50.99,0:07:53.45,Default,,0,0,0,,街舞派的教主…
+Dialogue: 0,0:07:54.07,0:07:57.08,Up,,0,0,0,,{\an9\fs45\c&H60DDF2&\3c&H9B634A&}神秘的Star突然現身
+Dialogue: 0,0:07:54.07,0:07:57.08,Up,,0,0,0,,{\an9\fs45\c&HFFFFFF&\3c&H9B634A&}街舞教主火速參加天王杯的\N預熱戰Power Hall大賽
+Dialogue: 0,0:07:59.56,0:08:04.68,Default,,0,0,0,,接下來有請街舞派的教主  黑川冷登場
+Dialogue: 0,0:08:05.02,0:08:07.58,Default,,0,0,0,,他究竟會帶來什麼樣的表演呢?
+Dialogue: 0,0:08:08.72,0:08:10.05,Default,,0,0,0,,冷先生
+Dialogue: 0,0:08:16.77,0:08:17.93,Default,,0,0,0,,是那一招
+Dialogue: 0,0:08:18.24,0:08:19.06,Default,,0,0,0,,什麼
+Dialogue: 0,0:08:19.09,0:08:20.31,Default,,0,0,0,,那招是犯規的
+Dialogue: 0,0:08:20.56,0:08:21.76,Default,,0,0,0,,三連跳
+Dialogue: 0,0:08:21.98,0:08:24.99,Prism Jump 红色,,0,0,0,,{\blur5\fad(300,300)}輕鬆地燃燒
+Dialogue: 0,0:08:21.98,0:08:24.99,Prism Jump 红色,,0,0,0,,{\fscx65\fscy65\blur5\fad(300,300)}EZ Do Burning
+Dialogue: 0,0:08:26.48,0:08:27.55,Default,,0,0,0,,Cool
+Dialogue: 0,0:08:27.69,0:08:31.37,Default,,0,0,0,,得分是5250克拉
+Dialogue: 0,0:08:32.75,0:08:33.93,Default,,0,0,0,,太奇怪了
+Dialogue: 0,0:08:34.80,0:08:37.14,Default,,0,0,0,,明明這麼讓人熱血沸騰
+Dialogue: 0,0:08:43.23,0:08:45.33,Default,,0,0,0,,黑川冷是很厲害的哦
+Dialogue: 0,0:08:46.11,0:08:49.60,Default,,0,0,0,,他浮在空中了哦  他應該是第一名的哦
+Dialogue: 0,0:08:49.73,0:08:50.82,Default,,0,0,0,,你在說什麼啊
+Dialogue: 0,0:08:51.29,0:08:53.22,Default,,0,0,0,,我現在很忙  你出去玩吧
+Dialogue: 0,0:08:53.44,0:08:57.08,Default,,0,0,0,,求你了  我想去看Prism天王杯
+Dialogue: 0,0:08:57.38,0:08:59.00,Default,,0,0,0,,家裡可沒那個閒錢
+Dialogue: 0,0:08:59.23,0:09:00.37,Default,,0,0,0,,求你了
+Dialogue: 0,0:09:00.37,0:09:01.73,Default,,0,0,0,,說不行就不行
+Dialogue: 0,0:09:05.93,0:09:09.22,Default,,0,0,0,,好期待啊  Prism天王杯
+Dialogue: 0,0:09:15.39,0:09:17.02,Default,,0,0,0,,冰室沒有入場?
+Dialogue: 0,0:09:17.15,0:09:17.83,Default,,0,0,0,,真的嗎
+Dialogue: 0,0:09:17.83,0:09:19.90,Default,,0,0,0,,聽說黑川冷退賽了?
+Dialogue: 0,0:09:19.90,0:09:21.62,Default,,0,0,0,,現在好像在開記者會
+Dialogue: 0,0:09:24.27,0:09:28.04,Default,,0,0,0,,冷先生  關於冰室選手因傷缺席一事你怎麼看
+Dialogue: 0,0:09:28.37,0:09:31.46,Default,,0,0,0,,無法擊敗聖  天王就毫無價值
+Dialogue: 0,0:09:35.93,0:09:37.24,Default,,0,0,0,,冷先生  冷先生
+Dialogue: 0,0:09:37.33,0:09:38.93,Default,,0,0,0,,冷先生  冷先生
+Dialogue: 0,0:09:39.25,0:09:40.55,Default,,0,0,0,,請你出場吧
+Dialogue: 0,0:09:40.93,0:09:41.68,Default,,0,0,0,,誰來阻止他
+Dialogue: 0,0:09:41.68,0:09:43.28,Default,,0,0,0,,拜託了  冷先生
+Dialogue: 0,0:09:44.84,0:09:46.40,Default,,0,0,0,,冷先生
+Dialogue: 0,0:09:47.18,0:09:52.94,Default,,0,0,0,,{\an8\fs65}Prism天王的桂冠  在法月仁選手頭上閃耀!
+Dialogue: 0,0:09:50.22,0:09:52.74,Default,,0,0,0,,謝謝  多虧了大家
+Dialogue: 0,0:10:01.81,0:10:05.84,Default,,0,0,0,,我不會再哭了  絕對不會哭了!
+Dialogue: 0,0:10:17.07,0:10:17.97,Default,,0,0,0,,Dora?
+Dialogue: 0,0:10:36.69,0:10:39.70,Up,,0,0,0,,{\an9\fs45\c&H572DDC&\3c&HFFFFFF&}黑川冷失蹤還是逃亡眾說紛紜  實際上是引退
+Dialogue: 0,0:10:36.69,0:10:39.70,Up,,0,0,0,,{\an9\fs45\c&H60DDF2&\3c&H292929&}法月仁特集  華麗的天王的生活
+Dialogue: 0,0:10:40.44,0:10:45.32,Default,,0,0,0,,總有一天  我要成為街舞教主給你看
+Dialogue: 0,0:10:48.16,0:10:50.08,Up,,0,0,0,,{\an7\fs45\c&H1D3E64&\3c&H60DDF2&}舞斗俱樂部  龍之穴
+Dialogue: 0,0:10:52.93,0:10:56.32,Default,,0,0,0,,自稱街舞教主的是哪裡的傢伙?
+Dialogue: 0,0:10:57.33,0:10:58.29,Default,,0,0,0,,給我出來
+Dialogue: 0,0:10:59.09,0:11:02.09,Up,,0,0,0,,{\an7\fs45\c&HFFFFFF&\3c&H000000&}SR人才服務 \N人事部 新人Star發掘科\N星探 睦月繁
+Dialogue: 0,0:10:59.86,0:11:01.72,Default,,0,0,0,,是大和亞歷山大先生對吧
+Dialogue: 0,0:11:02.94,0:11:08.78,Default,,0,0,0,,法月總帥對近年來的街舞派Prism Show非常關心
+Dialogue: 0,0:11:09.72,0:11:10.82,Default,,0,0,0,,我有個條件
+Dialogue: 0,0:11:11.49,0:11:15.56,Default,,0,0,0,,如果能幫我找到所有自稱街舞教主的傢伙
+Dialogue: 0,0:11:15.73,0:11:17.26,Default,,0,0,0,,要我加入你們也無妨
+Dialogue: 0,0:11:20.13,0:11:24.32,Default,,0,0,0,,真是輕浮得不行  看我擊潰你
+Dialogue: 0,0:11:27.97,0:11:30.72,Default,,0,0,0,,我才不會把街舞教主的名號拱手讓人
+Dialogue: 0,0:11:41.51,0:11:42.63,Default,,0,0,0,,快躲起來
+Dialogue: 0,0:11:43.63,0:11:45.14,Default,,0,0,0,,你是…
+Dialogue: 0,0:11:45.66,0:11:48.06,Default,,0,0,0,,我記得你是Schwarz Rose的…
+Dialogue: 0,0:11:49.70,0:11:51.31,Default,,0,0,0,,能讓你記住我真的很榮幸
+Dialogue: 0,0:11:57.81,0:11:58.98,Default,,0,0,0,,抱歉  抱歉
+Dialogue: 0,0:11:59.34,0:12:02.57,Default,,0,0,0,,和印象中的差距有點大  嚇了一跳
+Dialogue: 0,0:12:04.07,0:12:08.08,Default,,0,0,0,,你的表演非常的Cool喲
+Dialogue: 0,0:12:09.77,0:12:14.62,Default,,0,0,0,,但是對於一般人來說  有點過於刺激了
+Dialogue: 0,0:12:15.54,0:12:16.66,Default,,0,0,0,,抱歉
+Dialogue: 0,0:12:18.45,0:12:21.51,Default,,0,0,0,,就好像看到曾經的自己一樣
+Dialogue: 0,0:12:22.79,0:12:24.21,Default,,0,0,0,,你一定也是
+Dialogue: 0,0:12:26.20,0:12:30.76,Default,,0,0,0,,在拚命地尋找能和自己全力交鋒的人吧
+Dialogue: 0,0:12:32.72,0:12:35.73,Default,,0,0,0,,而且  你已經找到了吧
+Dialogue: 0,0:12:37.35,0:12:38.11,Default,,0,0,0,,或許吧
+Dialogue: 0,0:12:39.92,0:12:41.00,Default,,0,0,0,,那就行了
+Dialogue: 0,0:12:41.89,0:12:42.64,Default,,0,0,0,,是
+Dialogue: 0,0:12:43.48,0:12:46.02,Default,,0,0,0,,有一句話要告訴你
+Dialogue: 0,0:12:47.38,0:12:49.64,Default,,0,0,0,,不能欺負弱小哦
+Dialogue: 0,0:12:52.05,0:12:53.87,Default,,0,0,0,,我知道了
+Dialogue: 0,0:12:55.68,0:12:58.64,Default,,0,0,0,,Cool  你是個好孩子呢
+Dialogue: 0,0:12:59.16,0:12:59.69,Default,,0,0,0,,那個
+Dialogue: 0,0:13:01.73,0:13:04.19,Default,,0,0,0,,這次的大賽  PRISM.1
+Dialogue: 0,0:13:05.45,0:13:06.76,Default,,0,0,0,,能請你來看嗎
+Dialogue: 0,0:13:08.09,0:13:09.72,Default,,0,0,0,,當然可以
+Dialogue: 0,0:13:10.56,0:13:11.44,Default,,0,0,0,,謝謝
+Dialogue: 0,0:13:12.48,0:13:15.10,Default,,0,0,0,,那麼就失陪了
+Dialogue: 0,0:13:19.79,0:13:22.11,Default,,0,0,0,,你不要出來啊  安靜點
+Dialogue: 0,0:13:26.67,0:13:29.12,Default,,0,0,0,,那個時候  真的謝謝你了
+Dialogue: 0,0:13:31.70,0:13:32.88,Default,,0,0,0,,那個時候
+Dialogue: 0,0:13:35.52,0:13:38.84,Default,,0,0,0,,聽說你這次會參加一個很大的大賽?
+Dialogue: 0,0:13:39.71,0:13:40.93,Default,,0,0,0,,你怎麼知道的
+Dialogue: 0,0:13:41.55,0:13:46.58,Default,,0,0,0,,你爸爸難得要從港區回來了  我們會一起去看的
+Dialogue: 0,0:13:46.64,0:13:47.67,Default,,0,0,0,,不來也沒關係
+Dialogue: 0,0:13:49.76,0:13:52.69,Default,,0,0,0,,嘴上這麼說  心裡明明是希望我們去的吧
+Dialogue: 0,0:13:52.89,0:13:53.74,Default,,0,0,0,,煩死了
+Dialogue: 0,0:13:57.77,0:13:58.79,Default,,0,0,0,,不要逃避啊
+Dialogue: 0,0:13:59.04,0:14:00.24,Default,,0,0,0,,那怎麼可能
+Dialogue: 0,0:14:18.56,0:14:21.24,Default,,0,0,0,,等等  不跟總帥打聲招呼嗎
+Dialogue: 0,0:14:22.72,0:14:25.96,Default,,0,0,0,,總帥  你為什麼要派這種角色上場啊
+Dialogue: 0,0:14:26.38,0:14:27.76,Default,,0,0,0,,他是Schwarz Rose之恥啊
+Dialogue: 0,0:14:30.56,0:14:34.18,Default,,0,0,0,,大和亞歷山大  不許你做出卑劣的行為
+Dialogue: 0,0:14:34.34,0:14:35.72,Default,,0,0,0,,就是  就是
+Dialogue: 0,0:14:36.90,0:14:39.48,Default,,0,0,0,,我已經和過去不一樣了
+Dialogue: 0,0:14:44.83,0:14:46.69,Default,,0,0,0,,不知道在耍什麼帥
+Dialogue: 0,0:14:49.81,0:14:51.73,Default,,0,0,0,,都說了安靜點
+Dialogue: 0,0:14:57.29,0:14:58.12,Default,,0,0,0,,冷
+Dialogue: 0,0:14:59.22,0:15:00.32,Default,,0,0,0,,你來啦
+Dialogue: 0,0:15:00.51,0:15:02.86,Default,,0,0,0,,沒錯  我收到邀請了
+Dialogue: 0,0:15:03.28,0:15:05.47,Default,,0,0,0,,邀請? 從一月那嗎
+Dialogue: 0,0:15:05.91,0:15:07.43,Default,,0,0,0,,保密
+Dialogue: 0,0:15:10.06,0:15:15.47,Default,,0,0,0,,接下來  有請Schwarz Rose的大和亞歷山大選手登場
+Dialogue: 0,0:15:16.10,0:15:18.88,Default,,0,0,0,,祝你好運  亞歷
+Dialogue: 0,0:15:20.34,0:15:21.78,Default,,0,0,0,,為什麼真的來了啊
+Dialogue: 0,0:15:24.82,0:15:26.88,Default,,0,0,0,,我不會讓你恣意妄為的
+Dialogue: 0,0:15:28.16,0:15:28.94,Default,,0,0,0,,一月前輩
+Dialogue: 0,0:15:29.57,0:15:33.42,Default,,0,0,0,,那傢伙今天會老老實實地表演吧
+Dialogue: 0,0:15:33.89,0:15:35.56,Default,,0,0,0,,出了什麼事  我會上去解決的
+Dialogue: 0,0:15:36.09,0:15:38.69,Default,,0,0,0,,一月前輩就安心地看著吧
+Dialogue: 0,0:15:42.30,0:15:44.04,Default,,0,0,0,,那混蛋還挺囂張啊
+Dialogue: 0,0:15:46.31,0:15:47.46,Default,,0,0,0,,看好了
+Dialogue: 0,0:16:17.80,0:16:20.62,Default,,0,0,0,,總帥  要來點水果拼盤嗎
+Dialogue: 0,0:16:20.64,0:16:21.94,Default,,0,0,0,,閉上嘴好好看
+Dialogue: 0,0:16:50.88,0:16:53.70,Default,,0,0,0,,以前在哪遇到過嗎
+Dialogue: 0,0:17:22.66,0:17:26.35,Default,,0,0,0,,那傢伙怎麼了  一副輕浮的樣子
+Dialogue: 0,0:17:30.07,0:17:31.69,Default,,0,0,0,,風車懸浮
+Dialogue: 0,0:17:30.07,0:17:31.69,Default,,0,0,0,,{\fscx55\fscy55}Windmill Levitation
+Dialogue: 0,0:17:32.31,0:17:34.15,Default,,0,0,0,,還模仿一月前輩
+Dialogue: 0,0:17:34.36,0:17:34.99,Default,,0,0,0,,不對
+Dialogue: 0,0:17:35.12,0:17:36.72,Default,,0,0,0,,那是黑川冷的
+Dialogue: 0,0:17:45.83,0:17:52.77,Prism Jump 紫色,,0,0,0,,{\blur5\fad(300,300)}東京今夜  全彈發射
+Dialogue: 0,0:17:45.83,0:17:52.77,Prism Jump 紫色,,0,0,0,,{\fscx65\fscy65\blur5\fad(300,300)}Tokyo Tonight Full Burst
+Dialogue: 0,0:17:56.76,0:17:58.18,Default,,0,0,0,,果然還是動手了
+Dialogue: 0,0:17:58.18,0:17:59.41,Default,,0,0,0,,好可怕
+Dialogue: 0,0:17:59.46,0:18:01.05,Default,,0,0,0,,又想把會場破壞掉嗎
+Dialogue: 0,0:18:01.59,0:18:02.71,Default,,0,0,0,,那個混蛋
+Dialogue: 0,0:18:02.80,0:18:05.04,Default,,0,0,0,,等等大河  他的目的是…
+Dialogue: 0,0:18:06.08,0:18:09.66,Default,,0,0,0,,亞歷山大  現在我就了結你
+Dialogue: 0,0:18:09.66,0:18:11.42,Default,,0,0,0,,不要來礙事
+Dialogue: 0,0:18:11.68,0:18:13.57,Default,,0,0,0,,他沒有換上決鬥服?
+Dialogue: 0,0:18:14.57,0:18:16.96,Prism Jump 紫色,,0,0,0,,{\blur5\fad(300,300)}Prism {\3c&H0B791E&}Rush
+Dialogue: 0,0:18:19.24,0:18:20.04,Default,,0,0,0,,那是?
+Dialogue: 0,0:18:20.08,0:18:21.84,Default,,0,0,0,,Prism決鬥的新功能
+Dialogue: 0,0:18:21.84,0:18:24.91,Default,,0,0,0,,先衝過終點線的人可以先攻
+Dialogue: 0,0:18:35.35,0:18:37.14,Default,,0,0,0,,進入尾流了
+Dialogue: 0,0:18:37.14,0:18:39.34,Default,,0,0,0,,好  大河  超過他
+Dialogue: 0,0:18:49.18,0:18:51.52,Default,,0,0,0,,上啊
+Dialogue: 0,0:18:59.06,0:18:59.90,Default,,0,0,0,,太好了
+Dialogue: 0,0:19:00.19,0:19:01.62,Default,,0,0,0,,大河取得先攻了
+Dialogue: 0,0:19:05.16,0:19:06.50,Prism Jump 红色,,0,0,0,,{\blur5\fad(300,300)}我的搭檔
+Dialogue: 0,0:19:08.60,0:19:12.13,Prism Jump 红色,,0,0,0,,{\blur5\fad(300,300)}天上天下  唯{\c&H003BFE&\3c&HFFFFFF&}牙{\c&HFFFFFF&\3c&H003BFE&}獨尊{\3c&H0B791E&}改
+Dialogue: 0,0:19:19.80,0:19:21.95,Default,,0,0,0,,小意思
+Dialogue: 0,0:19:23.26,0:19:27.43,Prism Jump 紫色,,0,0,0,,{\blur5\fad(300,300)}六旋斧錘
+Dialogue: 0,0:19:23.26,0:19:27.43,Prism Jump 紫色,,0,0,0,,{\fscx65\fscy65\blur5\fad(300,300)}Hammer Axe Six Spin
+Dialogue: 0,0:19:32.53,0:19:36.45,Default,,0,0,0,,那種牙籤  看我把它折斷
+Dialogue: 0,0:19:44.33,0:19:46.97,Default,,0,0,0,,這就是「改」的力量
+Dialogue: 0,0:19:51.08,0:19:52.85,Default,,0,0,0,,得手了
+Dialogue: 0,0:19:55.16,0:19:59.14,Prism Jump 紫色,,0,0,0,,{\blur5\fad(300,300)}超級雪崩式硬舉刀斧
+Dialogue: 0,0:19:55.16,0:19:59.14,Prism Jump 紫色,,0,0,0,,{\fscx65\fscy65\blur5\fad(300,300)}Hyper Avalanche Deadlift Sword
+Dialogue: 0,0:20:07.93,0:20:09.60,Default,,0,0,0,,Game Over
+Dialogue: 0,0:20:11.52,0:20:12.23,Default,,0,0,0,,大河
+Dialogue: 0,0:20:16.76,0:20:21.07,Prism Jump 紫色,,0,0,0,,{\blur5\fad(300,300)}巨人之魂  終星轟炸
+Dialogue: 0,0:20:16.76,0:20:21.07,Prism Jump 紫色,,0,0,0,,{\fscx65\fscy65\blur5\fad(300,300)}Giga Soul Final Star Explosion
+Dialogue: 0,0:20:21.18,0:20:22.58,Default,,0,0,0,,混蛋
+Dialogue: 0,0:20:23.61,0:20:28.58,Prism Jump 绿色,,0,0,0,,{\blur5\fad(300,300)}火場的修羅場返Max
+Dialogue: 0,0:20:37.57,0:20:40.42,Default,,0,0,0,,這樣下去  會場又要遭到破壞了
+Dialogue: 0,0:20:40.42,0:20:41.73,Default,,0,0,0,,不  沒關係的
+Dialogue: 0,0:20:54.14,0:20:57.27,Default,,0,0,0,,彷彿就像那個時候的黑川冷一樣
+Dialogue: 0,0:20:58.51,0:21:00.08,Default,,0,0,0,,幻象?
+Dialogue: 0,0:21:02.67,0:21:03.71,Default,,0,0,0,,這是什麼
+Dialogue: 0,0:21:04.34,0:21:06.78,Default,,0,0,0,,這樣我不就成陪襯了嗎
+Dialogue: 0,0:21:07.23,0:21:09.83,Default,,0,0,0,,他把決鬥給娛樂化了嗎
+Dialogue: 0,0:21:10.08,0:21:10.97,Default,,0,0,0,,好厲害
+Dialogue: 0,0:21:11.62,0:21:15.52,Default,,0,0,0,,看來今天他比大河要略勝一籌啊
+Dialogue: 0,0:21:16.55,0:21:22.69,Default,,0,0,0,,大和亞歷山大選手的得分是  8660克拉
+Dialogue: 0,0:21:27.85,0:21:29.97,Default,,0,0,0,,成長得這麼出色了
+Dialogue: 0,0:21:32.91,0:21:35.27,Default,,0,0,0,,另外  對於在大和選手表演時
+Dialogue: 0,0:21:35.27,0:21:38.21,Default,,0,0,0,,闖入和妨礙演出的香賀美選手
+Dialogue: 0,0:21:38.40,0:21:41.32,Default,,0,0,0,,做出降低一半分數的處分
+Dialogue: 0,0:21:41.63,0:21:42.32,Default,,0,0,0,,什麼
+Dialogue: 0,0:21:44.64,0:21:45.86,Default,,0,0,0,,是真田幹的嗎
+Dialogue: 0,0:21:46.07,0:21:50.62,Default,,0,0,0,,結算後  Schwarz Rose的分數逆轉了
+Dialogue: 0,0:21:51.73,0:21:52.50,Default,,0,0,0,,抱歉
+Dialogue: 0,0:21:53.31,0:21:54.30,Default,,0,0,0,,沒關係的
+Dialogue: 0,0:21:54.99,0:21:55.98,Default,,0,0,0,,別擔心
+Dialogue: 0,0:21:55.98,0:21:56.92,Default,,0,0,0,,別在意
+Dialogue: 0,0:21:58.19,0:22:00.92,Default,,0,0,0,,沒關係  讓我來扳回去
+Dialogue: 0,0:22:01.22,0:22:08.69,Default,,0,0,0,,榮耀的Schwarz  榮耀的Schwarz…
+Dialogue: 0,0:22:13.12,0:22:15.37,Default,,0,0,0,,沒想到是那個時候的小男孩啊
+Dialogue: 0,0:22:16.21,0:22:17.64,Default,,0,0,0,,長大了啊
+Dialogue: 0,0:22:17.80,0:22:20.94,Default,,0,0,0,,Cool  Cooler  Coolest!
+Dialogue: 0,0:22:23.32,0:22:25.19,Default,,0,0,0,,喂  仁科一月
+Dialogue: 0,0:22:25.82,0:22:27.56,Default,,0,0,0,,接下來就是打倒你
+Dialogue: 0,0:22:27.66,0:22:30.45,Default,,0,0,0,,街舞教主的名號就由我收下
+Dialogue: 0,0:22:31.45,0:22:32.73,Default,,0,0,0,,做好覺悟吧
+Dialogue: 0,0:24:05.75,0:24:09.88,episode,,0,0,0,,{\fad(500,1)\pos(1888,411)}下集『如月琉銥 Prism的使者』

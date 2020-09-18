@@ -1,0 +1,518 @@
+﻿[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+; For Sub Station Alpha info and downloads,
+; go to http://www.eswat.demon.co.uk/
+; or email kotus@eswat.demon.co.uk
+; 
+; Advanced Sub Station Alpha script format developed by #Anime-Fansubs@EfNET
+; http://www.anime-fansubs.org
+; 
+; For additional info and downloads go to http://gabest.org/
+; or email gabest@freemail.hu
+; 
+; Note: This file was saved by Subresync.
+; 
+ScriptType: v4.00+
+Collisions: Normal
+ScaledBorderAndShadow: Yes
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: 插入歌TW,華康粗圓體,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,136
+Style: EDTW,華康粗圓體,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,136
+Style: 註解C,@華康粗圓體,45,&H000d8c00,&H000000ff,&H00ffffff,&H00000000,-1,0,0,0,100.00,100.00,0.00,270.00,1,6.00,3.00,6,75,75,30,136
+Style: 插入歌JP,DFPMaruGothic-Md,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,128
+Style: OPTW,華康粗圓體,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,136
+Style: EDJP,DFPMaruGothic-Md,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,128
+Style: OPJP,DFPMaruGothic-Md,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,128
+Style: 片頭標題,華康粗圓體,56,&H00fefef9,&H000000ff,&H00b77612,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,2,10,10,10,136
+Style: OPJP1,DFPMaruGothic-Md,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,128
+Style: Default-JP,華康粗圓體,60,&H00ffffff,&H000000ff,&H00d87800,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,3.00,2,10,10,27,128
+Style: Default,華康粗圓體,60,&H00ffffff,&H000000ff,&H00d87800,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,3.00,2,10,10,30,136
+Style: 註解J,@ＤＦクラフト遊W7,33,&H000d8c00,&H000000ff,&H00ffffff,&H00000000,-1,0,0,0,100.00,100.00,0.00,270.00,1,6.00,3.00,6,30,30,30,128
+Style: EDJP1,DFPMaruGothic-Md,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,128
+Style: TIT,華康粗圓體,60,&H00ffffff,&H000000ff,&H00ef0be3,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,2,10,10,10,136
+Style: OPTW1,華康粗圓體,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,136
+Style: 金字,華康粗圓體,60,&H00ffffff,&H000000ff,&H008adaff,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,9.00,3.00,2,10,10,30,136
+Style: EDTW1,華康粗圓體,50,&H00ffffff,&H000000ff,&H008500e4,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,0.00,7,30,30,30,136
+Style: Default-UP,華康粗圓體,50,&H00ffffff,&H000000ff,&H00d87800,&H00000000,-1,0,0,0,100.00,100.00,0.00,0.00,1,6.00,3.00,8,10,10,30,136
+
+[Events]
+Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.50,0:00:04.14,Default,,0000,0000,0000,,織音…
+Dialogue: 0,0:00:06.34,0:00:06.90,Default,,0000,0000,0000,,來了！
+Dialogue: 0,0:00:15.10,0:00:15.96,Default-JP,,0000,0000,0000,,{\fe1\fs50\fnZhunYuan\c&H8D11C5&\3c&HFFFFFF&\pos(930,984)}Sakura
+Dialogue: 0,0:00:15.10,0:00:15.96,Default,,0000,0000,0000,,櫻花？
+Dialogue: 0,0:00:16.34,0:00:17.20,Default,,0000,0000,0000,,為什麼？
+Dialogue: 0,0:00:17.50,0:00:20.22,Default,,0000,0000,0000,,明明比約好的綻放時間還早很多
+Dialogue: 0,0:00:20.94,0:00:22.68,Default,,0000,0000,0000,,我明明都回來了
+Dialogue: 0,0:00:23.16,0:00:23.86,Default,,0000,0000,0000,,然而…
+Dialogue: 0,0:00:26.78,0:00:28.06,Default,,0000,0000,0000,,織音！
+Dialogue: 0,0:00:29.26,0:00:30.04,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙！
+Dialogue: 0,0:00:34.20,0:00:34.92,Default,,0000,0000,0000,,沒事吧？
+Dialogue: 0,0:00:35.14,0:00:35.50,Default,,0000,0000,0000,,嗯！
+Dialogue: 0,0:00:36.20,0:00:36.76,Default,,0000,0000,0000,,要逃了
+Dialogue: 0,0:00:37.56,0:00:38.08,Default,,0000,0000,0000,,好
+Dialogue: 0,0:00:51.78,0:00:52.38,Default,,0000,0000,0000,,這邊
+Dialogue: 0,0:00:53.40,0:00:54.16,Default,,0000,0000,0000,,快點
+Dialogue: 0,0:00:54.32,0:00:54.96,Default,,0000,0000,0000,,織音…
+Dialogue: 0,0:00:57.16,0:00:59.04,Default,,0000,0000,0000,,好… 在這邊！
+Dialogue: 0,0:01:06.38,0:01:08.76,Default,,0000,0000,0000,,我親手…做出來的…
+Dialogue: 0,0:01:09.82,0:01:13.34,Default,,0000,0000,0000,,居然是將我最愛的{\fe1\fnZhunYuan\fs70}00{\r}…逼上絕境的兵器
+Dialogue: 0,0:01:14.96,0:01:17.02,Default,,0000,0000,0000,,但是妳並不知道吧？
+Dialogue: 0,0:01:19.92,0:01:22.02,Default,,0000,0000,0000,,該被責備的人是我
+Dialogue: 0,0:01:22.64,0:01:23.04,Default,,0000,0000,0000,,咦？
+Dialogue: 0,0:01:26.06,0:01:30.48,Default,,0000,0000,0000,,因為讓織音製造兵器的正是我爸爸的公司
+Dialogue: 0,0:01:31.30,0:01:33.34,Default,,0000,0000,0000,,這個… 又跟智惠理妳沒有關係
+Dialogue: 0,0:01:33.54,0:01:35.78,Default,,0000,0000,0000,,那不也跟織音妳沒有關係嗎？
+Dialogue: 0,0:01:36.74,0:01:37.32,Default,,0000,0000,0000,,智惠理…
+Dialogue: 0,0:01:42.06,0:01:46.22,Default,,0000,0000,0000,,不過…要我傷害它…
+Dialogue: 0,0:01:48.16,0:01:48.84,Default,,0000,0000,0000,,智惠理
+Dialogue: 0,0:01:50.04,0:01:51.12,Default,,0000,0000,0000,,抱歉了 織音
+Dialogue: 0,0:01:51.78,0:01:53.00,Default,,0000,0000,0000,,妳什麼都不用做
+Dialogue: 0,0:01:55.10,0:01:56.56,Default,,0000,0000,0000,,就由我來打倒它
+Dialogue: 0,0:01:56.84,0:01:57.60,Default,,0000,0000,0000,,智惠理！
+Dialogue: 0,0:01:59.48,0:02:01.22,Default,,0000,0000,0000,,怎麼能就此結束
+Dialogue: 0,0:02:02.74,0:02:03.52,Default,,0000,0000,0000,,我…
+Dialogue: 0,0:02:05.02,0:02:08.24,Default,,0000,0000,0000,,才不想輸在這種地方！
+Dialogue: 0,0:02:20.36,0:02:21.20,Default,,0000,0000,0000,,智惠理！
+Dialogue: 0,0:02:23.56,0:02:24.64,Default,,0000,0000,0000,,趁現在快逃
+Dialogue: 0,0:02:25.70,0:02:26.22,Default,,0000,0000,0000,,好！
+Dialogue: 0,0:02:29.20,0:02:30.22,Default,,0000,0000,0000,,後門有一輛車
+Dialogue: 0,0:02:30.78,0:02:33.16,Default,,0000,0000,0000,,快點過去 大家都聚集在那了
+Dialogue: 0,0:02:33.76,0:02:34.70,Default,,0000,0000,0000,,謝謝你
+Dialogue: 0,0:02:37.18,0:02:38.52,Default,,0000,0000,0000,,快點走 織音
+Dialogue: 0,0:02:40.94,0:02:41.60,Default,,0000,0000,0000,,櫻花…
+Dialogue: 0,0:01:09.82,0:01:11.91,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}そ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}手{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}伸{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ば{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}し{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}て{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}も
+Dialogue: 0,0:01:14.42,0:01:18.83,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}今{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}届{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}か{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}な{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}い{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}よ
+Dialogue: 0,0:01:21.95,0:01:24.38,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}僕{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}た{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ち{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}夢{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は
+Dialogue: 0,0:01:26.47,0:01:31.45,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}も{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}っ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}と{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}遠{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}く{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}に{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}あ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}る{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ん{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}だ
+Dialogue: 0,0:01:32.76,0:01:38.26,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}夜{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}空{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}星{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}だ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}っ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}て {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}何{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}億{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}光{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}年{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}彼{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(390,590,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}方
+Dialogue: 0,0:01:39.24,0:01:44.22,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}暗{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}闇{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}先{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}に {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}輝{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}く{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}も{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の
+Dialogue: 0,0:01:45.13,0:01:50.70,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}希{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}望{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}に{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}つ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}い{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}て {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}僕{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}語{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ろ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}う
+Dialogue: 0,0:01:51.35,0:01:56.55,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}名{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}も{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}無{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}き{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}詩{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}人{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}よ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}う{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}に {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}熱{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}く
+Dialogue: 0,0:01:57.99,0:02:02.75,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}君{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}が{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}涙{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}に {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}暮{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}れ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}て{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}い{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}る{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}な{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ら
+Dialogue: 0,0:02:03.48,0:02:15.35,OPJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}慰{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}め{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}よ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}り{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}も {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}や{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}が{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}て{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}白{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}む{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}空{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}を{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}語{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(390,590,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ろ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(420,620,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}う{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(450,650,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}か
+Dialogue: 0,0:01:11.91,0:01:12.48,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}そ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}手{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}伸{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ば{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}し{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}て{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}も
+Dialogue: 0,0:01:18.83,0:01:19.40,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}今{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}届{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}か{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}な{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}い{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}よ
+Dialogue: 0,0:01:24.38,0:01:24.95,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}僕{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}た{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ち{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}夢{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は
+Dialogue: 0,0:01:31.45,0:01:32.02,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}も{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}っ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}と{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}遠{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}く{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}に{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}あ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}る{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ん{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}だ
+Dialogue: 0,0:01:38.26,0:01:38.83,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}夜{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}空{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}星{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}だ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}っ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}て {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}何{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}億{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}光{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}年{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}彼{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(390,590,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}方
+Dialogue: 0,0:01:44.22,0:01:44.79,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}暗{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}闇{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}先{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}に {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}輝{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}く{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}も{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の
+Dialogue: 0,0:01:50.70,0:01:51.27,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}希{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}望{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}に{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}つ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}い{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}て {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}僕{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}語{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ろ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}う
+Dialogue: 0,0:01:56.55,0:01:57.12,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}名{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}も{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}無{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}き{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}詩{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}人{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}よ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}う{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}に {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}熱{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}く
+Dialogue: 0,0:02:02.75,0:02:03.32,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}君{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}が{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}涙{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}に {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}暮{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}れ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}て{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}い{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}る{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}な{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ら
+Dialogue: 0,0:02:15.35,0:02:15.92,OPJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}慰{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}め{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}よ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}り{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}も {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}や{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}が{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}て{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}白{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}む{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}空{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}を{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}語{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(390,590,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ろ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(420,620,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}う{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(450,650,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}か
+Dialogue: 0,0:01:09.82,0:01:11.91,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}即{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}使{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}伸{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}出{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}雙{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}手
+Dialogue: 0,0:01:14.42,0:01:18.83,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}現{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}在{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}依{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}然{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}無{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}法{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}觸{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}及
+Dialogue: 0,0:01:21.95,0:01:24.38,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}我{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}們{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}的{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}夢{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}想
+Dialogue: 0,0:01:26.47,0:01:31.45,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}在{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}更{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}遙{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}遠{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}之{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}處
+Dialogue: 0,0:01:32.76,0:01:38.26,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}夜{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}空{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}的{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}星{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}辰  {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}即{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}使{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}在{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}數{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}億{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}光{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}年{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}的{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(390,590,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}彼{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(420,620,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}方
+Dialogue: 0,0:01:39.24,0:01:44.22,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}也{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}會{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}在{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}黑{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}暗{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}的{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}盡{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}頭  {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}閃{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}閃{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}發{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}亮
+Dialogue: 0,0:01:45.13,0:01:50.70,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}我{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}細{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}說{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}著{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}我{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}們{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}的{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}希{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}望
+Dialogue: 0,0:01:51.35,0:01:56.55,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}就{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}像{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}無{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}名{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}詩{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}人{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}一{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}樣  {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}豪{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}情{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}熱{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}血
+Dialogue: 0,0:01:57.99,0:02:02.75,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}你{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}若{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}沉{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}浸{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}在{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}淚{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}水{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}之{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}中
+Dialogue: 0,0:02:03.48,0:02:15.35,OPTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}與{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}其{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}安{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}慰{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}你  {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}還{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}不{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}如{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}歌{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}頌{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}黎{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}明{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}的{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(390,590,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}天{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(420,620,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}空
+Dialogue: 0,0:01:11.91,0:01:12.48,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}即{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}使{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}伸{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}出{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}雙{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}手
+Dialogue: 0,0:01:18.83,0:01:19.40,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}現{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}在{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}依{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}然{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}無{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}法{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}觸{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}及
+Dialogue: 0,0:01:24.38,0:01:24.95,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}我{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}們{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}的{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}夢{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}想
+Dialogue: 0,0:01:31.45,0:01:32.02,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}在{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}更{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}遙{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}遠{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}之{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}處
+Dialogue: 0,0:01:38.26,0:01:38.83,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}夜{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}空{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}的{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}星{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}辰  {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}即{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}使{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}在{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}數{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}億{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}光{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}年{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}的{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(390,590,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}彼{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(420,620,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}方
+Dialogue: 0,0:01:44.22,0:01:44.79,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}也{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}會{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}在{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}黑{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}暗{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}的{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}盡{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}頭  {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}閃{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}閃{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}發{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}亮
+Dialogue: 0,0:01:50.70,0:01:51.27,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}我{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}細{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}說{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}著{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}我{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}們{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}的{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}希{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}望
+Dialogue: 0,0:01:56.55,0:01:57.12,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}就{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}像{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}無{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}名{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}詩{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}人{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}一{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}樣  {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}豪{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}情{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}熱{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}血
+Dialogue: 0,0:02:02.75,0:02:03.32,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}你{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}若{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}沉{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}浸{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}在{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}淚{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}水{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}之{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}中
+Dialogue: 0,0:02:15.35,0:02:15.92,OPTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}與{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}其{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}安{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}慰{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}你  {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}還{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}不{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}如{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}歌{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}頌{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}黎{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}明{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}的{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(390,590,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}天{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(420,620,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}空
+Dialogue: 0,0:02:43.20,0:02:46.43,TIT,,0000,0000,0000,,{\fad(300,300)\be30\pos(510,245)}－歌頌愛的偶像－
+Dialogue: 0,0:23:57.79,0:23:59.69,TIT,,0000,0000,0000,,{\pos(960,780)\be30\fs96}－為了笑容－
+Dialogue: 0,0:02:46.90,0:02:48.24,Default,,0000,0000,0000,,織音 智惠理
+Dialogue: 0,0:02:48.50,0:02:49.94,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 太好了
+Dialogue: 0,0:02:50.32,0:02:51.44,Default,,0000,0000,0000,,那麼 請到這邊
+Dialogue: 0,0:02:53.52,0:02:56.22,Default,,0000,0000,0000,,我們會盡快將各位送到{\fe1\fnZhunYuan\fs70}Flying Get{\r}
+Dialogue: 0,0:02:56.44,0:02:58.58,Default,,0000,0000,0000,,我要去救我爸爸
+Dialogue: 0,0:02:59.14,0:03:01.54,Default,,0000,0000,0000,,但是我不能讓各位遭遇危險
+Dialogue: 0,0:03:02.60,0:03:04.32,Default,,0000,0000,0000,,可是爸爸是因為我才會…
+Dialogue: 0,0:03:04.72,0:03:06.06,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 我們會幫妳的
+Dialogue: 0,0:03:06.40,0:03:07.14,Default,,0000,0000,0000,,彼方前輩
+Dialogue: 0,0:03:07.50,0:03:09.20,Default,,0000,0000,0000,,不行 如果出了什麼意外 演場會就…
+Dialogue: 0,0:03:09.96,0:03:12.74,Default,,0000,0000,0000,,我們一直都有在進行戰鬥訓練
+Dialogue: 0,0:03:13.36,0:03:16.58,Default,,0000,0000,0000,,那是為了保護熱愛藝能活動的人們
+Dialogue: 0,0:03:17.46,0:03:18.26,Default,,0000,0000,0000,,大家要出發了
+Dialogue: 0,0:03:18.62,0:03:19.06,Default,,0000,0000,0000,,是
+Dialogue: 0,0:03:19.34,0:03:20.58,Default,,0000,0000,0000,,好痛…
+Dialogue: 0,0:03:20.86,0:03:21.68,Default,,0000,0000,0000,,請稍等
+Dialogue: 0,0:03:23.26,0:03:23.86,Default,,0000,0000,0000,,彼方
+Dialogue: 0,0:03:24.70,0:03:27.60,Default,,0000,0000,0000,,妳果然和妳父親一樣 是個堅強的人
+Dialogue: 0,0:03:28.94,0:03:30.28,Default,,0000,0000,0000,,你認識我父親嗎？
+Dialogue: 0,0:03:30.74,0:03:31.26,Default,,0000,0000,0000,,是的
+Dialogue: 0,0:03:32.02,0:03:34.94,Default,,0000,0000,0000,,妳父親對我們解放陣線的成員來說
+Dialogue: 0,0:03:35.34,0:03:36.76,Default,,0000,0000,0000,,是一名傳奇般的人物
+Dialogue: 0,0:03:36.98,0:03:39.32,Default,,0000,0000,0000,,咦？ 爸爸好厲害喔
+Dialogue: 0,0:03:40.94,0:03:43.04,Default,,0000,0000,0000,,就是啊 非常厲害！
+Dialogue: 0,0:03:44.04,0:03:47.06,Default,,0000,0000,0000,,變更計畫 現在開始協助她們
+Dialogue: 0,0:03:47.58,0:03:50.54,Default,,0000,0000,0000,,前去救援{\fe128\fnDFGMaruGothic-Md}凪{\r}沙的父親 明白了嗎？
+Dialogue: 0,0:03:50.86,0:03:51.36,Default,,0000,0000,0000,,是！
+Dialogue: 0,0:04:02.02,0:04:06.38,Default,,0000,0000,0000,,那一天 在這坑道裡雀躍的奔跑著
+Dialogue: 0,0:04:07.52,0:04:11.52,Default,,0000,0000,0000,,然後 聽到了演唱會開場的吶喊聲
+Dialogue: 0,0:04:11.94,0:04:14.80,Default-UP,,0000,0000,0000,,{\fe1\fnZhunYuan\fs70}AKB0048
+Dialogue: 0,0:04:24.34,0:04:27.44,Default,,0000,0000,0000,,這裡明明是我們夢想的誕生之地
+Dialogue: 0,0:04:29.04,0:04:30.82,Default,,0000,0000,0000,,那裡就是收容所的入口
+Dialogue: 0,0:04:31.66,0:04:34.54,Default,,0000,0000,0000,,那附近由藝能反對派所掌控
+Dialogue: 0,0:04:35.98,0:04:39.48,Default,,0000,0000,0000,,這廢棄坑道裡有一條到收容所附近的小路
+Dialogue: 0,0:04:40.22,0:04:41.62,Default,,0000,0000,0000,,為了分散敵人注意
+Dialogue: 0,0:04:41.88,0:04:44.24,Default,,0000,0000,0000,,我們就在此攻擊外部設施
+Dialogue: 0,0:04:45.22,0:04:49.02,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙妳們就趁混亂走小路潛入
+Dialogue: 0,0:04:49.68,0:04:51.60,Default,,0000,0000,0000,,也就是佯攻作戰？
+Dialogue: 0,0:04:52.14,0:04:53.68,Default,,0000,0000,0000,,我要和{\fe1\fnZhunYuan\fs70}WOTA{\r}的各位一起作戰
+Dialogue: 0,0:04:53.92,0:04:54.56,Default,,0000,0000,0000,,友歌？
+Dialogue: 0,0:04:54.68,0:04:56.22,Default,,0000,0000,0000,,很危險的 不要這樣
+Dialogue: 0,0:04:56.86,0:05:00.64,Default,,0000,0000,0000,,但是… 阿護和其他人都在努力著
+Dialogue: 0,0:05:01.18,0:05:07.12,Default,,0000,0000,0000,,我也想為了{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 為了自己的星球做些事情
+Dialogue: 0,0:05:07.74,0:05:08.40,Default,,0000,0000,0000,,友歌…
+Dialogue: 0,0:05:09.72,0:05:10.86,Default,,0000,0000,0000,,我也陪妳喔！
+Dialogue: 0,0:05:11.14,0:05:12.00,Default,,0000,0000,0000,,彼方前輩
+Dialogue: 0,0:05:12.72,0:05:16.02,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 絕對要救出妳爸爸哦
+Dialogue: 0,0:05:16.56,0:05:17.02,Default,,0000,0000,0000,,是！
+Dialogue: 0,0:05:53.50,0:05:54.84,Default,,0000,0000,0000,,比平常還多人
+Dialogue: 0,0:05:55.42,0:05:58.24,Default,,0000,0000,0000,,或許是為了演唱會而加強戒備
+Dialogue: 0,0:06:03.00,0:06:04.60,Default,,0000,0000,0000,,阿護 怎麼了？
+Dialogue: 0,0:06:06.26,0:06:07.76,Default,,0000,0000,0000,,為什麼要這麼亂來？
+Dialogue: 0,0:06:08.40,0:06:09.66,Default,,0000,0000,0000,,要是受傷了怎麼辦？
+Dialogue: 0,0:06:11.58,0:06:15.10,Default,,0000,0000,0000,,妳可是名偶像 大家都在等待妳
+Dialogue: 0,0:06:15.94,0:06:17.02,Default,,0000,0000,0000,,給我有點自覺…
+Dialogue: 0,0:06:18.26,0:06:21.50,Default,,0000,0000,0000,,現在在作戰中 你才該有點自覺
+Dialogue: 0,0:06:21.66,0:06:22.98,Default,,0000,0000,0000,,我知道啦
+Dialogue: 0,0:06:27.96,0:06:28.52,Default,,0000,0000,0000,,了解
+Dialogue: 0,0:06:29.54,0:06:30.82,Default,,0000,0000,0000,,已到達潛入地點
+Dialogue: 0,0:06:37.16,0:06:37.84,Default,,0000,0000,0000,,{\fe1\fnZhunYuan\fs70}00{\r}嗎？
+Dialogue: 0,0:06:39.06,0:06:40.16,Default,,0000,0000,0000,,在這邊！
+Dialogue: 0,0:06:44.18,0:06:45.44,Default,,0000,0000,0000,,在前面左轉
+Dialogue: 0,0:06:46.42,0:06:47.80,Default,,0000,0000,0000,,左邊～ 左邊～
+Dialogue: 0,0:06:48.66,0:06:49.30,Default,,0000,0000,0000,,楚方
+Dialogue: 0,0:07:01.60,0:07:02.16,Default,,0000,0000,0000,,惠！
+Dialogue: 0,0:07:12.64,0:07:13.18,Default,,0000,0000,0000,,爸爸
+Dialogue: 0,0:07:14.16,0:07:14.78,Default,,0000,0000,0000,,爸爸！
+Dialogue: 0,0:07:15.20,0:07:17.24,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 為什麼妳在這？
+Dialogue: 0,0:07:17.72,0:07:19.88,Default,,0000,0000,0000,,太好了 我馬上救你出來
+Dialogue: 0,0:07:20.92,0:07:22.52,Default,,0000,0000,0000,,很危險的 稍微退後些
+Dialogue: 0,0:07:22.86,0:07:23.94,Default,,0000,0000,0000,,住手 {\fe128\fnDFGMaruGothic-Md}凪{\r}沙
+Dialogue: 0,0:07:24.22,0:07:24.56,Default,,0000,0000,0000,,咦？
+Dialogue: 0,0:07:25.76,0:07:27.76,Default,,0000,0000,0000,,我並不打算離開這裡
+Dialogue: 0,0:07:28.06,0:07:28.46,Default,,0000,0000,0000,,咦？
+Dialogue: 0,0:07:30.30,0:07:32.36,Default,,0000,0000,0000,,我會自己跟上級解釋
+Dialogue: 0,0:07:33.32,0:07:34.74,Default,,0000,0000,0000,,為什麼？ 可是…
+Dialogue: 0,0:07:35.00,0:07:37.12,Default,,0000,0000,0000,,我任職於藝能管理局
+Dialogue: 0,0:07:37.90,0:07:42.68,Default,,0000,0000,0000,,被違逆藍花星規定的藝能相關活動者拯救
+Dialogue: 0,0:07:43.02,0:07:44.66,Default,,0000,0000,0000,,我絕對無法接受
+Dialogue: 0,0:07:45.70,0:07:46.34,Default,,0000,0000,0000,,爸爸…
+Dialogue: 0,0:07:47.50,0:07:48.54,Default,,0000,0000,0000,,各位 聽得到嗎？
+Dialogue: 0,0:07:49.26,0:07:49.70,Default,,0000,0000,0000,,是
+Dialogue: 0,0:07:50.48,0:07:53.20,Default,,0000,0000,0000,,作戰被發現了 盡快撤退
+Dialogue: 0,0:07:53.96,0:07:55.12,Default,,0000,0000,0000,,快將妳爸爸…
+Dialogue: 0,0:07:55.52,0:07:56.70,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}…{\fe128\fnDFGMaruGothic-Md}凪{\r}沙…
+Dialogue: 0,0:07:59.00,0:07:59.78,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙
+Dialogue: 0,0:08:00.20,0:08:01.02,Default,,0000,0000,0000,,快走！
+Dialogue: 0,0:08:03.82,0:08:04.42,Default,,0000,0000,0000,,爸爸…
+Dialogue: 0,0:08:06.10,0:08:06.78,Default,,0000,0000,0000,,爸爸…
+Dialogue: 0,0:08:08.52,0:08:10.64,Default,,0000,0000,0000,,爸爸！
+Dialogue: 0,0:08:18.96,0:08:22.00,Default,,0000,0000,0000,,好的 再來四碗飯 一碗要特大對吧？
+Dialogue: 0,0:08:22.30,0:08:23.02,Default,,0000,0000,0000,,是的
+Dialogue: 0,0:08:23.66,0:08:24.68,Default,,0000,0000,0000,,友歌妳也來吃
+Dialogue: 0,0:08:24.74,0:08:25.72,Default,,0000,0000,0000,,來吃～
+Dialogue: 0,0:08:25.92,0:08:28.42,Default,,0000,0000,0000,,待…待會我會慢慢吃的
+Dialogue: 0,0:08:28.82,0:08:30.38,Default,,0000,0000,0000,,妳看 黏到臉上了
+Dialogue: 0,0:08:32.02,0:08:33.38,Default,,0000,0000,0000,,讓你們久等了
+Dialogue: 0,0:08:33.66,0:08:38.42,Default,,0000,0000,0000,,友歌的雙親對我們{\fe1\fnZhunYuan\fs70}WOTA{\r}倍加關照
+Dialogue: 0,0:08:39.62,0:08:41.06,Default,,0000,0000,0000,,免費添飯
+Dialogue: 0,0:08:41.48,0:08:43.38,Default,,0000,0000,0000,,味噌湯還加了豬肉
+Dialogue: 0,0:08:44.78,0:08:45.86,Default,,0000,0000,0000,,太好了
+Dialogue: 0,0:08:46.60,0:08:49.80,Default,,0000,0000,0000,,因為有外套防護 所以傷口很淺
+Dialogue: 0,0:08:51.18,0:08:54.36,Default,,0000,0000,0000,,但是… 這樣也無法登臺了
+Dialogue: 0,0:08:55.68,0:08:57.46,Default,,0000,0000,0000,,難得能和曜子一起…
+Dialogue: 0,0:08:58.22,0:09:00.76,Default,,0000,0000,0000,,下次一定還有機會的
+Dialogue: 0,0:09:02.72,0:09:03.58,Default,,0000,0000,0000,,真是的…
+Dialogue: 0,0:09:04.00,0:09:06.34,Default,,0000,0000,0000,,你們兩個直接說不就好了
+Dialogue: 0,0:09:06.98,0:09:10.44,Default,,0000,0000,0000,,郵件裡根本沒提到有關藍花星的事情
+Dialogue: 0,0:09:10.70,0:09:13.18,Default,,0000,0000,0000,,因為不想讓妳擔心嘛…
+Dialogue: 0,0:09:14.32,0:09:15.36,Default,,0000,0000,0000,,叔叔 阿姨
+Dialogue: 0,0:09:17.18,0:09:18.10,Default,,0000,0000,0000,,請告訴我
+Dialogue: 0,0:09:19.38,0:09:23.10,Default,,0000,0000,0000,,爸爸被關到收容所的原因是因為我嗎？
+Dialogue: 0,0:09:30.08,0:09:34.42,Default,,0000,0000,0000,,因為我們隨口瞎掰 是稍微蒙混過去了
+Dialogue: 0,0:09:35.30,0:09:36.50,Default,,0000,0000,0000,,妳爸爸他啊…
+Dialogue: 0,0:09:37.32,0:09:41.36,Default,,0000,0000,0000,,被他們逼著要讓{\fe128\fnDFGMaruGothic-Md}凪{\r}沙妳退出{\fe1\fnZhunYuan\fs70}00{\r}
+Dialogue: 0,0:09:42.32,0:09:45.68,Default,,0000,0000,0000,,本宮先生他很乾脆的拒絕了
+Dialogue: 0,0:09:55.42,0:09:57.46,Default,,0000,0000,0000,,就快到{\fe128\fnDFGMaruGothic-Md}凪{\r}沙的家了呢
+Dialogue: 0,0:09:58.62,0:09:59.12,Default,,0000,0000,0000,,嗯…
+Dialogue: 0,0:10:01.34,0:10:02.56,Default,,0000,0000,0000,,要去看一下媽媽嗎？
+Dialogue: 0,0:10:03.74,0:10:08.62,Default,,0000,0000,0000,,不用了 我回去也只會給她添麻煩
+Dialogue: 0,0:10:10.48,0:10:11.24,Default,,0000,0000,0000,,媽媽…
+Dialogue: 0,0:10:15.52,0:10:17.82,Default,,0000,0000,0000,,明明一直用心照顧的…
+Dialogue: 0,0:10:22.24,0:10:26.00,Default,,0000,0000,0000,,因為工廠的廢氣 花朵很難有好看的顏色
+Dialogue: 0,0:10:26.90,0:10:29.50,Default,,0000,0000,0000,,明明種點更好養的花就好了
+Dialogue: 0,0:10:30.00,0:10:32.00,Default,,0000,0000,0000,,需要用心照顧的花更加可愛
+Dialogue: 0,0:10:32.94,0:10:33.98,Default,,0000,0000,0000,,就跟妳一樣
+Dialogue: 0,0:10:37.86,0:10:38.52,Default,,0000,0000,0000,,對不起…
+Dialogue: 0,0:10:39.38,0:10:43.04,Default,,0000,0000,0000,,因為我的緣故 讓爸爸跟媽媽都…
+Dialogue: 0,0:10:44.54,0:10:45.18,Default,,0000,0000,0000,,對不起…
+Dialogue: 0,0:10:51.12,0:10:52.06,Default,,0000,0000,0000,,惠在醫務室
+Dialogue: 0,0:10:52.70,0:10:53.94,Default,,0000,0000,0000,,妳們要加緊練習了
+Dialogue: 0,0:10:55.16,0:10:56.06,Default,,0000,0000,0000,,沒有時間了
+Dialogue: 0,0:10:56.74,0:10:58.46,Default-JP,,0000,0000,0000,,{\fs40\fnDFGMaruGothic-Md\c&H8D11C5&\3c&HFFFFFF&\pos(990,984)}渚の{\fe1\fnZhunYuan\fs50}CHERRY{\r}
+Dialogue: 0,0:10:56.74,0:10:58.46,Default,,0000,0000,0000,,首先從沙灘的櫻桃開始
+Dialogue: 0,0:10:58.74,0:10:59.12,Default,,0000,0000,0000,,是！
+Dialogue: 0,0:11:27.12,0:11:28.04,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙？
+Dialogue: 0,0:11:28.74,0:11:30.18,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 妳怎麼了？
+Dialogue: 0,0:11:42.54,0:11:44.36,Default,,0000,0000,0000,,大概是精神層面的問題吧…
+Dialogue: 0,0:11:44.78,0:11:48.48,Default,,0000,0000,0000,,壓力過大也會導致無法發聲
+Dialogue: 0,0:11:48.88,0:11:49.78,Default,,0000,0000,0000,,怎麼會…
+Dialogue: 0,0:11:50.50,0:11:52.46,Default,,0000,0000,0000,,演唱會就在明天 沒時間了
+Dialogue: 0,0:11:53.10,0:11:56.54,Default,,0000,0000,0000,,其他的曲子{\fe128\fnDFGMaruGothic-Md}凪{\r}沙不是主唱 所以沒問題
+Dialogue: 0,0:11:57.28,0:12:00.04,Default-JP,,0000,0000,0000,,{\fs40\fnDFGMaruGothic-Md\c&H8D11C5&\3c&HFFFFFF&\pos(930,984)}渚の{\fe1\fnZhunYuan\fs50}CHERRY{\r}
+Dialogue: 0,0:11:57.28,0:12:00.04,Default,,0000,0000,0000,,但是沙灘的櫻桃卻不行
+Dialogue: 0,0:12:00.70,0:12:02.38,Default,,0000,0000,0000,,現在馬上變更曲目
+Dialogue: 0,0:12:02.48,0:12:03.80,Default,,0000,0000,0000,,請讓我來唱
+Dialogue: 0,0:12:05.56,0:12:06.30,Default,,0000,0000,0000,,智惠理
+Dialogue: 0,0:12:07.44,0:12:09.02,Default,,0000,0000,0000,,一直在一起練習著
+Dialogue: 0,0:12:09.98,0:12:13.06,Default,,0000,0000,0000,,歌曲和那部分的舞蹈都完全記住了
+Dialogue: 0,0:12:13.82,0:12:15.20,Default,,0000,0000,0000,,智惠理 妳可以嗎？
+Dialogue: 0,0:12:15.66,0:12:17.44,Default,,0000,0000,0000,,是的 請讓我唱
+Dialogue: 0,0:12:20.86,0:12:21.62,Default,,0000,0000,0000,,沒辦法了
+Dialogue: 0,0:12:22.38,0:12:25.00,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 妳就負責伴舞好了
+Dialogue: 0,0:12:26.58,0:12:28.22,Default,,0000,0000,0000,,其他曲子有關{\fe128\fnDFGMaruGothic-Md}凪{\r}沙的部分呢？
+Dialogue: 0,0:12:28.24,0:12:29.04,Default,,0000,0000,0000,,由我負責
+Dialogue: 0,0:12:29.32,0:12:29.88,Default,,0000,0000,0000,,我也是
+Dialogue: 0,0:12:31.98,0:12:33.74,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 沒關係的
+Dialogue: 0,0:12:34.14,0:12:35.70,Default,,0000,0000,0000,,就放心交給我們
+Dialogue: 0,0:12:39.13,0:12:48.00,EDJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}人{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}生{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ま{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}れ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}て {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}人{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}死{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ん{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}で{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ゆ{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}く {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(390,590,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}肉{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(420,620,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}体{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(450,650,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(480,680,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}滅{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(510,710,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}び{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(540,740,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}る{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(570,770,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}よ
+Dialogue: 0,0:12:49.44,0:12:55.32,EDJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}灰{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}中{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}か{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}ら {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}甦{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}る{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}も{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}情{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}熱
+Dialogue: 0,0:12:56.74,0:12:59.06,EDJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}次{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}の{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}世{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}代{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}へ
+Dialogue: 0,0:13:00.04,0:13:03.02,EDJP,,0000,0000,0000,fx,{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}夢{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}は{\fe1\fnZhunYuan\fs60}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}R{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}e{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}i{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}n{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}c{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}a{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}r{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}n{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}a{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}t{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}i{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(390,590,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}o{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(420,620,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}n{\r}
+Dialogue: 0,0:12:48.00,0:12:48.57,EDJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}人{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}生{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ま{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}れ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}て {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}人{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}死{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ん{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}で{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ゆ{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}く {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(390,590,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}肉{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(420,620,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}体{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(450,650,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(480,680,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}滅{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(510,710,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}び{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(540,740,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}る{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(570,770,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}よ
+Dialogue: 0,0:12:55.32,0:12:55.89,EDJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}灰{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}中{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}か{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}ら {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}甦{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}る{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}も{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}情{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}熱
+Dialogue: 0,0:12:59.06,0:12:59.63,EDJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}次{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}の{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}世{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}代{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}へ
+Dialogue: 0,0:13:03.02,0:13:03.59,EDJP1,,0000,0000,0000,fx,{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}夢{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}は{\fe1\fnZhunYuan\fs60}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}R{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}e{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}i{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}n{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}c{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}a{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}r{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}n{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}a{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}t{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}i{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(390,590,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}o{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(420,620,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}n{\r}
+Dialogue: 0,0:12:39.13,0:12:48.00,EDTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}人{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}從{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}出{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}生{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}到{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}死{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}亡  {\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}肉{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}體{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}隨{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}即{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}毀{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}滅
+Dialogue: 0,0:12:49.44,0:12:55.32,EDTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}從{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}灰{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}燼{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}中{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}復{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}甦{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}的{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}熱{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}情
+Dialogue: 0,0:12:56.74,0:12:59.06,EDTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}邁{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}向{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}新{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}世{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}代
+Dialogue: 0,0:13:00.04,0:13:03.02,EDTW,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(0,200,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}夢{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(30,230,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}想{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(60,260,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}是{\fe1\fnZhunYuan\fs60}{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(90,290,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}R{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(120,320,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}e{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(150,350,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}i{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(180,380,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}n{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(210,410,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}c{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(240,440,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}a{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(270,470,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}r{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(300,500,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}n{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(330,530,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}a{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(360,560,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}t{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(390,590,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}i{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(420,620,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}o{\K0\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF\t(450,650,1,\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0)}n{\r}
+Dialogue: 0,0:12:48.00,0:12:48.57,EDTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}人{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}從{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}出{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}生{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}到{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}死{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}亡  {\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}肉{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}體{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}隨{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}即{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}毀{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}滅
+Dialogue: 0,0:12:55.32,0:12:55.89,EDTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}從{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}灰{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}燼{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}中{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}復{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}甦{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}的{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}熱{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}情
+Dialogue: 0,0:12:59.06,0:12:59.63,EDTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}邁{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}向{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}新{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}世{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}代
+Dialogue: 0,0:13:03.02,0:13:03.59,EDTW1,,0000,0000,0000,fx,{\pos(30,95)}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(0,200,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}夢{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(30,230,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}想{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(60,260,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}是{\fe1\fnZhunYuan\fs60}{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(90,290,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}R{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(120,320,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}e{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(150,350,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}i{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(180,380,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}n{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(210,410,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}c{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(240,440,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}a{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(270,470,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}r{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(300,500,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}n{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(330,530,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}a{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(360,560,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}t{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(390,590,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}i{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(420,620,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}o{\K0\be30\fscy100\1a&H00\2a&H00\3a&H00\4a&HA0\t(450,650,1,\be30\fscy0\1a&HFF\2a&HFF\3a&HFF\4a&HFF)}n
+Dialogue: 0,0:13:04.26,0:13:04.76,Default,,0000,0000,0000,,嗯？
+Dialogue: 0,0:13:07.06,0:13:10.48,Default,,0000,0000,0000,,這樣的歌一點都不合我胃口
+Dialogue: 0,0:13:11.12,0:13:12.00,Default,,0000,0000,0000,,優子…
+Dialogue: 0,0:13:13.84,0:13:16.94,Default,,0000,0000,0000,,討厭的歌 邁向下一個世代…
+Dialogue: 0,0:13:17.30,0:13:20.74,Default,,0000,0000,0000,,說得好像我們這代已經過時了一樣
+Dialogue: 0,0:13:21.54,0:13:22.74,Default,,0000,0000,0000,,我才不喜歡
+Dialogue: 0,0:13:25.86,0:13:27.66,Default-JP,,0000,0000,0000,,{\fs40\fnＤＦクラフト遊W7\c&H0D8C00&\3c&HFFFFFF&\pos(825,984)}たかみな
+Dialogue: 0,0:13:25.86,0:13:27.66,Default,,0000,0000,0000,,高南 沒事吧？
+Dialogue: 1,0:13:25.86,0:13:27.36,註解J,,0000,0000,0000,,{\fad(250,250)}たかみな
+Dialogue: 0,0:13:25.86,0:13:27.36,註解C,,0000,0000,0000,,{\fad(250,250)}高橋南
+Dialogue: 0,0:13:30.86,0:13:31.80,Default,,0000,0000,0000,,燒得好厲害
+Dialogue: 0,0:13:33.62,0:13:34.56,Default,,0000,0000,0000,,沒事的
+Dialogue: 0,0:13:34.90,0:13:37.08,Default,,0000,0000,0000,,那個時候受的傷還留著點呢…
+Dialogue: 0,0:13:41.86,0:13:43.10,Default,,0000,0000,0000,,為什麼不說呢？
+Dialogue: 0,0:13:43.78,0:13:47.02,Default,,0000,0000,0000,,這點小事 吃藥就能解決了
+Dialogue: 0,0:13:49.82,0:13:50.42,Default,,0000,0000,0000,,而且…
+Dialogue: 0,0:13:51.20,0:13:54.64,Default,,0000,0000,0000,,我想藉著這次的演唱會 從{\fe1\fnZhunYuan\fs70}00{\r}畢業
+Dialogue: 0,0:13:57.28,0:14:00.12,Default,,0000,0000,0000,,讓我的夢想邁向下一個世代
+Dialogue: 0,0:14:01.80,0:14:03.50,Default,,0000,0000,0000,,將其託付給彼方
+Dialogue: 0,0:14:06.94,0:14:07.86,Default-JP,,0000,0000,0000,,{\fs40\fnＤＦクラフト遊W7\c&H0D8C00&\3c&HFFFFFF&\pos(930,984)}たかみな
+Dialogue: 0,0:14:06.94,0:14:07.86,Default,,0000,0000,0000,,高南…
+Dialogue: 0,0:14:10.96,0:14:11.82,Default,,0000,0000,0000,,不是這樣
+Dialogue: 0,0:14:12.40,0:14:14.44,Default,,0000,0000,0000,,友歌 要說幾次才明白？
+Dialogue: 0,0:14:14.84,0:14:16.84,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙的舞步要用身體記住
+Dialogue: 0,0:14:17.26,0:14:17.92,Default,,0000,0000,0000,,對不起
+Dialogue: 0,0:14:18.28,0:14:18.90,Default,,0000,0000,0000,,織音也是
+Dialogue: 0,0:14:19.50,0:14:20.46,Default,,0000,0000,0000,,聲音再大聲點
+Dialogue: 0,0:14:20.94,0:14:23.18,Default,,0000,0000,0000,,要用音量掩蓋住{\fe128\fnDFGMaruGothic-Md}凪{\r}沙
+Dialogue: 0,0:14:23.66,0:14:24.12,Default,,0000,0000,0000,,是！
+Dialogue: 0,0:14:25.70,0:14:27.22,Default,,0000,0000,0000,,因為我不能唱歌
+Dialogue: 0,0:14:28.30,0:14:29.62,Default,,0000,0000,0000,,給大家添了麻煩
+Dialogue: 0,0:14:31.42,0:14:33.06,Default,,0000,0000,0000,,讓爸爸媽媽痛苦
+Dialogue: 0,0:14:34.30,0:14:36.62,Default,,0000,0000,0000,,全部都是我的錯
+Dialogue: 0,0:14:38.64,0:14:39.88,Default,,0000,0000,0000,,稍微成形了
+Dialogue: 0,0:14:40.38,0:14:41.72,Default,,0000,0000,0000,,總算可以了
+Dialogue: 0,0:14:43.06,0:14:44.46,Default,,0000,0000,0000,,大家辛苦了
+Dialogue: 0,0:14:45.18,0:14:48.16,Default,,0000,0000,0000,,離公演已經沒剩多少時間了 就好好的休息
+Dialogue: 0,0:14:48.64,0:14:49.26,Default,,0000,0000,0000,,是
+Dialogue: 0,0:14:50.30,0:14:52.18,Default,,0000,0000,0000,,謝謝指教！
+Dialogue: 0,0:15:05.88,0:15:07.48,Default,,0000,0000,0000,,在找翼小姐嗎？
+Dialogue: 0,0:15:09.78,0:15:13.92,Default,,0000,0000,0000,,{\fe128\fnDFGMaruGothic-Md}凪{\r}沙 難道妳想要從{\fe1\fnZhunYuan\fs70}00{\r}畢業嗎？
+Dialogue: 0,0:15:16.28,0:15:19.26,Default,,0000,0000,0000,,妳說過的吧 {\fe1\fnZhunYuan\fs70}00{\r}無關乎勝負
+Dialogue: 0,0:15:21.08,0:15:24.00,Default,,0000,0000,0000,,但我還是無法認同
+Dialogue: 0,0:15:25.08,0:15:27.64,Default,,0000,0000,0000,,因為那種說法就像在逃避
+Dialogue: 0,0:15:29.44,0:15:31.66,Default,,0000,0000,0000,,從自己的可能性移開目光
+Dialogue: 0,0:15:33.46,0:15:34.64,Default,,0000,0000,0000,,就是這種感覺
+Dialogue: 0,0:15:36.96,0:15:41.14,Default,,0000,0000,0000,,所以{\fe128\fnDFGMaruGothic-Md}凪{\r}沙要從{\fe1\fnZhunYuan\fs70}00{\r}畢業我也不會強留妳
+Dialogue: 0,0:15:42.50,0:15:44.04,Default,,0000,0000,0000,,但是拜託妳了
+Dialogue: 0,0:15:46.34,0:15:48.22,Default,,0000,0000,0000,,即便妳要畢業
+Dialogue: 0,0:15:48.62,0:15:52.02,Default-JP,,0000,0000,0000,,{\fs40\fnDFGMaruGothic-Md\c&H8D11C5&\3c&HFFFFFF&\pos(900,984)}渚の{\fe1\fnZhunYuan\fs50}CHERRY{\r}
+Dialogue: 0,0:15:48.62,0:15:52.02,Default,,0000,0000,0000,,也請在演唱沙灘的櫻桃時在我身後伴舞
+Dialogue: 0,0:15:52.80,0:15:55.40,Default,,0000,0000,0000,,確實的輸給我之後再畢業
+Dialogue: 0,0:16:04.74,0:16:07.10,Default,,0000,0000,0000,,研究生公演現在開始
+Dialogue: 0,0:16:08.00,0:16:11.26,Default,,0000,0000,0000,,大家要把所有的力量都投入這場演唱會
+Dialogue: 0,0:16:11.80,0:16:12.78,Default,,0000,0000,0000,,不留餘力
+Dialogue: 0,0:16:13.06,0:16:13.56,Default,,0000,0000,0000,,是！
+Dialogue: 0,0:16:16.46,0:16:17.26,Default,,0000,0000,0000,,各位{\fe1\fnZhunYuan\fs70}WOTA{\r}
+Dialogue: 0,0:16:18.28,0:16:20.96,Default,,0000,0000,0000,,各位的力量會成為她們的勇氣
+Dialogue: 0,0:16:21.70,0:16:23.00,Default,,0000,0000,0000,,就拜託各位了
+Dialogue: 0,0:16:23.32,0:16:24.06,Default,,0000,0000,0000,,好的！
+Dialogue: 0,0:16:24.28,0:16:25.72,Default,,0000,0000,0000,,上吧！
+Dialogue: 0,0:16:26.76,0:16:29.02,Default,,0000,0000,0000,,那麼 隨著演唱會的進行
+Dialogue: 0,0:16:29.38,0:16:31.22,Default,,0000,0000,0000,,確認一下護衛的程序
+Dialogue: 0,0:16:32.14,0:16:35.62,Default,,0000,0000,0000,,首先是關於演唱會的開始時間以及會場…
+Dialogue: 0,0:16:43.46,0:16:44.00,Default,,0000,0000,0000,,阿護
+Dialogue: 0,0:16:44.80,0:16:45.32,Default,,0000,0000,0000,,友歌
+Dialogue: 0,0:16:46.00,0:16:46.46,Default,,0000,0000,0000,,怎麼了？
+Dialogue: 0,0:16:48.18,0:16:49.78,Default,,0000,0000,0000,,阿護 謝謝你
+Dialogue: 0,0:16:51.80,0:16:53.92,Default,,0000,0000,0000,,雖然發生了不少事情
+Dialogue: 0,0:16:54.46,0:16:57.16,Default,,0000,0000,0000,,但我一定會呈現最棒的演出
+Dialogue: 0,0:16:57.40,0:16:58.72,Default,,0000,0000,0000,,嗯！ 就交給妳了
+Dialogue: 0,0:17:00.16,0:17:00.80,Default,,0000,0000,0000,,我很期待的
+Dialogue: 0,0:17:07.04,0:17:08.88,Default,,0000,0000,0000,,總覺得跟做夢一樣
+Dialogue: 0,0:17:10.14,0:17:12.14,Default,,0000,0000,0000,,阿護居然成了{\fe1\fnZhunYuan\fs70}WOTA{\r}
+Dialogue: 0,0:17:12.96,0:17:17.78,Default,,0000,0000,0000,,明明說過不會喜歡上成為{\fe1\fnZhunYuan\fs70}00{\r} 成為偶像的我
+Dialogue: 0,0:17:21.96,0:17:23.50,Default,,0000,0000,0000,,我不會再這樣想了
+Dialogue: 0,0:17:24.76,0:17:27.24,Default,,0000,0000,0000,,我最喜歡{\fe1\fnZhunYuan\fs70}00{\r}的友歌
+Dialogue: 0,0:17:32.24,0:17:33.20,Default,,0000,0000,0000,,阿護…
+Dialogue: 0,0:17:34.16,0:17:34.76,Default,,0000,0000,0000,,但是
+Dialogue: 0,0:17:36.16,0:17:37.74,Default,,0000,0000,0000,,不是{\fe1\fnZhunYuan\fs70}00{\r}的友歌…
+Dialogue: 0,0:17:38.90,0:17:39.74,Default,,0000,0000,0000,,我才不會喜歡！
+Dialogue: 0,0:17:43.66,0:17:45.26,Default,,0000,0000,0000,,所以我會一直支持著妳
+Dialogue: 0,0:17:46.90,0:17:49.66,Default,,0000,0000,0000,,以{\fe1\fnZhunYuan\fs70}00{\r}的一名粉絲
+Dialogue: 0,0:17:53.74,0:17:54.90,Default,,0000,0000,0000,,阿護～
+Dialogue: 0,0:17:55.24,0:17:57.86,Default,,0000,0000,0000,,已經集合了 遲到了！
+Dialogue: 0,0:17:59.34,0:18:00.68,Default,,0000,0000,0000,,那麼要加油
+Dialogue: 0,0:18:01.18,0:18:04.06,Default,,0000,0000,0000,,我們也會盡全力保護舞臺的
+Dialogue: 0,0:18:04.90,0:18:06.24,Default,,0000,0000,0000,,你在幹嘛啊？
+Dialogue: 0,0:18:06.50,0:18:08.00,Default,,0000,0000,0000,,大家都在等你
+Dialogue: 0,0:18:08.30,0:18:08.90,Default,,0000,0000,0000,,抱歉抱歉
+Dialogue: 0,0:18:15.50,0:18:16.18,Default,,0000,0000,0000,,友歌
+Dialogue: 0,0:18:16.62,0:18:18.14,Default,,0000,0000,0000,,妳去哪裡了？
+Dialogue: 0,0:18:18.50,0:18:19.62,Default,,0000,0000,0000,,抱歉抱歉
+Dialogue: 0,0:18:20.14,0:18:23.14,Default,,0000,0000,0000,,好了 來組成我們的圓陣喔！
+Dialogue: 0,0:18:24.12,0:18:25.10,Default,,0000,0000,0000,,一  二
+Dialogue: 0,0:18:25.74,0:18:29.84,Default,,0000,0000,0000,,無論何時都要感謝 冷靜 禮貌 正確
+Dialogue: 0,0:18:30.36,0:18:34.16,Default,,0000,0000,0000,,為了讓大家微笑著 感到幸福
+Dialogue: 0,0:18:34.92,0:18:36.50,Default,,0000,0000,0000,,讓大家笑著…
+Dialogue: 0,0:18:37.76,0:18:38.90,Default,,0000,0000,0000,,對啊…
+Dialogue: 0,0:18:39.52,0:18:44.58,Default,,0000,0000,0000,,上吧！ {\fe1\fnZhunYuan\fs70}AKB0048{\r}
+Dialogue: 0,0:19:02.38,0:19:02.92,Default,,0000,0000,0000,,來了
+Dialogue: 0,0:19:03.66,0:19:06.00,Default,,0000,0000,0000,,大家晚安！
+Dialogue: 0,0:19:06.26,0:19:08.68,Default,,0000,0000,0000,,晚安！
+Dialogue: 0,0:19:09.16,0:19:10.14,Default,,0000,0000,0000,,初次見面
+Dialogue: 0,0:19:10.18,0:19:14.64,Default,,0000,0000,0000,,我們是{\fe1\fnZhunYuan\fs70}AKB0048{\r}的研究生
+Dialogue: 0,0:19:19.46,0:19:20.80,Default,,0000,0000,0000,,智惠理！
+Dialogue: 0,0:19:28.86,0:19:31.62,Default,,0000,0000,0000,,今天是首場的研究生公演
+Dialogue: 0,0:19:32.68,0:19:33.88,Default,,0000,0000,0000,,雖然很緊張
+Dialogue: 0,0:19:34.24,0:19:40.46,Default,,0000,0000,0000,,但是要讓大家盡情享受演藝 享受{\fe1\fnZhunYuan\fs70}00{\r}的演出
+Dialogue: 0,0:19:42.74,0:19:43.58,Default,,0000,0000,0000,,請聽…
+Dialogue: 0,0:19:44.34,0:19:45.42,Default-JP,,0000,0000,0000,,{\fs40\fnDFGMaruGothic-Md\c&H8D11C5&\3c&HFFFFFF&\pos(960,984)}大声ダイヤモンド
+Dialogue: 0,0:19:44.34,0:19:45.42,Default,,0000,0000,0000,,大聲鑽石
+Dialogue: 0,0:20:20.86,0:20:25.72,Default,,0000,0000,0000,,阿護他們正保護著這個舞臺
+Dialogue: 0,0:20:33.62,0:20:34.92,Default,,0000,0000,0000,,混帳{\fe1\fnZhunYuan\fs70}WOTA{\r}
+Dialogue: 0,0:20:36.88,0:20:38.00,Default,,0000,0000,0000,,命中
+Dialogue: 0,0:20:38.26,0:20:39.06,Default,,0000,0000,0000,,好厲害！
+Dialogue: 0,0:21:07.36,0:21:08.06,Default,,0000,0000,0000,,糟糕
+Dialogue: 0,0:21:08.42,0:21:09.64,Default,,0000,0000,0000,,這次是來真的
+Dialogue: 0,0:21:20.68,0:21:23.30,Default,,0000,0000,0000,,我… 對妳…
+Dialogue: 0,0:21:24.22,0:21:26.42,Default,,0000,0000,0000,,一定一直都…
+Dialogue: 0,0:21:28.86,0:21:35.60,Default,,0000,0000,0000,,這份思念 將永遠放在心底
+Dialogue: 0,0:21:36.28,0:21:37.78,Default,,0000,0000,0000,,全員緊急撤退
+Dialogue: 0,0:21:38.20,0:21:38.76,Default,,0000,0000,0000,,什麼？
+Dialogue: 0,0:21:39.04,0:21:39.94,Default,,0000,0000,0000,,演唱會中止
+Dialogue: 0,0:21:40.06,0:21:40.58,Default,,0000,0000,0000,,騙人！
+Dialogue: 0,0:21:47.12,0:21:48.68,Default,,0000,0000,0000,,再見了 阿護
+Dialogue: 0,0:21:50.26,0:21:50.84,Default,,0000,0000,0000,,織音
+Dialogue: 0,0:22:01.74,0:22:02.94,Default,,0000,0000,0000,,新的{\fe1\fnZhunYuan\fs70}kirara{\r}…
+Dialogue: 0,0:22:03.50,0:22:05.22,Default,,0000,0000,0000,,一定會再回來的！
+Dialogue: 0,0:23:46.10,0:23:47.66,Default,,0000,0000,0000,,快點將{\fe128\fnDFGMaruGothic-Md}凪{\r}沙妳的思念
+Dialogue: 0,0:23:48.02,0:23:49.50,Default,,0000,0000,0000,,傳給藍花星的各位
+Dialogue: 0,0:23:49.90,0:23:51.00,Default,,0000,0000,0000,,各位要上了
+Dialogue: 0,0:23:51.42,0:23:52.68,Default,,0000,0000,0000,,揭開派對的序幕
+Dialogue: 0,0:23:53.10,0:23:54.66,Default,,0000,0000,0000,,來吧… 開始吧！
+Dialogue: 0,0:23:55.04,0:23:57.12,Default,,0000,0000,0000,,用我們的汗水與淚水
+Dialogue: 0,0:23:57.76,0:23:59.44,Default,,0000,0000,0000,,建構嶄新的夢想
+Dialogue: 0,0:11:17.83,0:11:19.46,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)\fe1\fnZhunYuan\fs60}CHERRY CHERRY BOY
+Dialogue: 0,0:11:19.51,0:11:21.09,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)\fe1\fnZhunYuan\fs60}CHERRY CHERRY GIRL
+Dialogue: 0,0:11:24.29,0:11:25.94,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)\fe1\fnZhunYuan\fs60}CHERRY CHERRY...
+Dialogue: 0,0:11:17.83,0:11:19.46,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)\fe1\fnZhunYuan\fs60}CHERRY CHERRY BOY
+Dialogue: 0,0:11:19.51,0:11:21.09,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)\fe1\fnZhunYuan\fs60}CHERRY CHERRY GIRL
+Dialogue: 0,0:11:24.29,0:11:25.94,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)\fe1\fnZhunYuan\fs60}CHERRY CHERRY...
+Dialogue: 0,0:19:59.34,0:20:04.29,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}走り出すバス　追いかけて
+Dialogue: 0,0:20:04.83,0:20:09.95,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}僕は君に　伝えたかった
+Dialogue: 0,0:20:10.36,0:20:15.37,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}心のもやもやが消えて
+Dialogue: 0,0:20:15.47,0:20:20.54,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大切なものが見えたんだ
+Dialogue: 0,0:20:20.82,0:20:26.21,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}こんな簡単な　答えが出てるのに
+Dialogue: 0,0:20:26.38,0:20:31.88,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}何にためらって　見送ったのだろう?
+Dialogue: 0,0:20:32.03,0:20:37.36,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}僕が僕であるために
+Dialogue: 0,0:20:37.52,0:20:43.89,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}衝動に素直になろう
+Dialogue: 0,0:20:45.17,0:20:47.26,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　君が　大好きだ
+Dialogue: 0,0:20:47.40,0:20:50.50,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}僕は全力で走る
+Dialogue: 0,0:20:50.62,0:20:52.81,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　ずっと　大好きだ
+Dialogue: 0,0:20:52.97,0:20:56.08,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}声の限り叫ぼう
+Dialogue: 0,0:20:56.20,0:20:58.38,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　君が　大好きだ
+Dialogue: 0,0:20:58.47,0:21:01.32,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}息が苦しくなるよ
+Dialogue: 0,0:21:01.62,0:21:04.38,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}しまっておけない
+Dialogue: 0,0:21:04.53,0:21:09.54,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大声ダイヤモンド
+Dialogue: 0,0:21:09.97,0:21:12.24,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　君が　大好きだ
+Dialogue: 0,0:21:12.26,0:21:15.27,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}僕は全力で走る
+Dialogue: 0,0:21:15.49,0:21:17.80,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　ずっと　大好きだ
+Dialogue: 0,0:21:17.80,0:21:20.70,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}声の限り叫ぼう
+Dialogue: 0,0:21:20.82,0:21:23.26,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　君が　大好きだ
+Dialogue: 0,0:21:23.31,0:21:26.44,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}僕の愛しさよ　届け！
+Dialogue: 0,0:21:26.51,0:21:28.79,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　ずっと　大好きだ
+Dialogue: 0,0:21:28.84,0:21:31.84,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}風の中で　叫ぼう
+Dialogue: 0,0:21:32.07,0:21:34.36,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大好きだ　君が　大好きだ
+Dialogue: 0,0:21:34.37,0:21:37.38,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}息が苦しくなるよ
+Dialogue: 0,0:21:37.47,0:21:40.26,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}しまっておけない
+Dialogue: 0,0:21:40.28,0:21:45.94,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}大声ダイヤモンド
+Dialogue: 0,0:21:43.48,0:21:45.93,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}勇気を出して　言おうよ
+Dialogue: 0,0:21:46.18,0:21:48.65,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}黙っていちゃ　そのままさ
+Dialogue: 0,0:21:49.12,0:21:51.52,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}恥ずかしくなんてないんだ
+Dialogue: 0,0:21:51.62,0:21:54.36,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}好きって言葉は最高さ
+Dialogue: 0,0:21:54.37,0:21:56.92,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}好きって言葉は最高さ
+Dialogue: 0,0:21:57.18,0:22:02.40,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}好きって言葉は最高さ
+Dialogue: 0,0:22:05.18,0:22:07.76,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}感情吐き出して
+Dialogue: 0,0:22:07.93,0:22:10.38,插入歌JP,,0000,0000,0000,,{\be30\fad(300,300)}今すぐ素直になれ！
+Dialogue: 0,0:19:59.34,0:20:04.29,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}追著　發車的巴士
+Dialogue: 0,0:20:04.83,0:20:09.95,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我好想　對你說
+Dialogue: 0,0:20:10.36,0:20:15.37,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}心理的焦躁不安消失了
+Dialogue: 0,0:20:15.47,0:20:20.54,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我終於看見最重要的東西
+Dialogue: 0,0:20:20.82,0:20:26.21,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}明明已經　有這麼簡單的答案
+Dialogue: 0,0:20:26.38,0:20:31.88,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}到底還在猶豫什麼　竟這樣目送你離去？
+Dialogue: 0,0:20:32.03,0:20:37.36,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}為了活出自我
+Dialogue: 0,0:20:37.52,0:20:43.89,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我要誠實面對衝動
+Dialogue: 0,0:20:45.17,0:20:47.26,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我喜歡你　最　喜歡你
+Dialogue: 0,0:20:47.40,0:20:50.50,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}使盡全力向前跑
+Dialogue: 0,0:20:50.62,0:20:52.81,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}喜歡你　一直　都最喜歡你
+Dialogue: 0,0:20:52.97,0:20:56.08,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}聲嘶力竭大聲喊
+Dialogue: 0,0:20:56.20,0:20:58.38,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我喜歡你　最　喜歡你
+Dialogue: 0,0:20:58.47,0:21:01.32,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}氣喘吁吁
+Dialogue: 0,0:21:01.62,0:21:04.38,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}卻不能收在心底的
+Dialogue: 0,0:21:04.53,0:21:09.54,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}大聲鑽石
+Dialogue: 0,0:21:09.97,0:21:12.24,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我喜歡你　最　喜歡你
+Dialogue: 0,0:21:12.26,0:21:15.27,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}使盡全力向前跑
+Dialogue: 0,0:21:15.49,0:21:17.80,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}喜歡你　一直　都最喜歡你
+Dialogue: 0,0:21:17.80,0:21:20.70,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}聲嘶力竭大聲喊
+Dialogue: 0,0:21:20.82,0:21:23.26,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我喜歡你　最　喜歡你
+Dialogue: 0,0:21:23.31,0:21:26.44,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}將我的愛　都給你！
+Dialogue: 0,0:21:26.51,0:21:28.79,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}喜歡你　一直　都最喜歡你
+Dialogue: 0,0:21:28.84,0:21:31.84,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}在風中　大聲喊
+Dialogue: 0,0:21:32.07,0:21:34.36,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}我喜歡你　最　喜歡你
+Dialogue: 0,0:21:34.37,0:21:37.38,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}氣喘吁吁
+Dialogue: 0,0:21:37.47,0:21:40.26,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}卻無法收在心底的
+Dialogue: 0,0:21:40.28,0:21:45.94,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}大聲鑽石
+Dialogue: 0,0:21:43.48,0:21:45.93,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}鼓起勇氣　說吧
+Dialogue: 0,0:21:46.18,0:21:48.65,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}沉默不語　也就只能這樣
+Dialogue: 0,0:21:49.12,0:21:51.52,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}沒什麼好丟臉的
+Dialogue: 0,0:21:51.62,0:21:54.36,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}喜歡你這句話最好了
+Dialogue: 0,0:21:54.37,0:21:56.92,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}喜歡你這句話最好了
+Dialogue: 0,0:21:57.18,0:22:02.40,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}喜歡你這句話最好了
+Dialogue: 0,0:22:05.18,0:22:07.76,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}傾吐你的感情
+Dialogue: 0,0:22:07.93,0:22:10.38,插入歌TW,,0000,0000,0000,,{\be30\fad(300,300)}現在就坦然面對吧！

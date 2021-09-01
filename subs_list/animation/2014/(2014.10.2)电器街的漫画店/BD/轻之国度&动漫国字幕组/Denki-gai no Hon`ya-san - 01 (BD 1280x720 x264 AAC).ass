@@ -1,0 +1,474 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 漫游字幕
+Original Script: 漫游字幕组
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 848
+PlayResY: 480
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,FZZhunYuan-M02,35,&H00FFFFFF,&HF0000000,&H001977EC,&H00153191,-1,0,0,0,100,100,0,0,1,1,0,2,30,30,10,1
+Style: Comment,FZZhunYuan-M02,28,&H00FFFFFF,&HF0000000,&H001977EC,&H00153191,-1,0,0,0,100,100,0,0,1,1,0,8,30,30,10,1
+Style: mianze,FZZhunYuan-M02,23,&H00FFFFFF,&HFF000000,&H00000000,&HFF0F0F0F,0,0,0,0,100,100,0,0,1,1,0,8,30,30,10,134
+Style: ED_jp,DFMaruMoji-W9,26,&H00F30003,&HFFFFFFF0,&H00FFFFFF,&H64000000,-1,0,0,0,100,100,0,0,1,1,3,2,10,10,10,1
+Style: ED_chs,ZhunYuan,25,&H00F30003,&HFFFFFFF0,&H00FFFFFF,&H64000000,-1,0,0,0,100,100,0,0,1,1,3,8,10,10,10,1
+Style: OP_jp,DFMaruMoji-W9,26,&H00156DDA,&HFFFFFFF0,&H00FFFFFF,&H008686FF,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: OP_chs,FZZhunYuan-M02,26,&H00156DDA,&HFFFFFFF0,&H00FFFFFF,&H008686FF,-1,0,0,0,100,100,0,0,1,2,0,8,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:02.72,0:00:03.72,Default,NTP,0,0,0,,去看看吧
+Dialogue: 0,0:00:03.81,0:00:06.64,Default,NTP,0,0,0,,梦之街是电器街哦
+Dialogue: 0,0:00:07.17,0:00:10.24,Default,NTP,0,0,0,,要买漫画就去 「马之骨」
+Dialogue: 0,0:00:10.53,0:00:11.23,Default,NTP,0,0,0,,有游戏
+Dialogue: 0,0:00:11.38,0:00:12.06,Default,NTP,0,0,0,,有动画
+Dialogue: 0,0:00:12.21,0:00:13.61,Default,NTP,0,0,0,,有同人志
+Dialogue: 0,0:00:13.92,0:00:16.87,Default,NTP,0,0,0,,充满着大家所爱的东西
+Dialogue: 0,0:00:17.34,0:00:23.49,Default,NTP,0,0,0,,{\bord1\1c&FFFFFF&\3c&H0F0F0F&\pos(704,270)}从电器街站
+Dialogue: 0,0:00:17.34,0:00:23.49,Default,NTP,0,0,0,,{\fs25\bord1\1c&FFFFFF&\3c&H0F0F0F&\pos(683,352)}步行3分钟
+Dialogue: 0,0:00:17.34,0:00:23.49,Default,NTP,0,0,0,,{\frz-90\fn@ZhunYuan\fs25\bord1\1c&FFFFFF&\3c&H0F0F0F&\pos(809,414)}超近便
+Dialogue: 0,0:00:17.65,0:00:18.29,Default,NTP,0,0,0,,漫画店
+Dialogue: 0,0:00:18.29,0:00:18.92,Default,NTP,0,0,0,,马之骨
+Dialogue: 0,0:00:19.02,0:00:19.99,Default,NTP,0,0,0,,电器街店
+Dialogue: 0,0:00:19.99,0:00:21.99,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:20.23,0:00:22.67,Default,NTP,0,0,0,,全年无休 随时恭候
+Dialogue: 0,0:00:27.77,0:00:29.01,Default,NTP,0,0,0,,欢迎光 啊…
+Dialogue: 0,0:00:30.06,0:00:32.12,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&}小日
+Dialogue: 0,0:00:32.17,0:00:34.17,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:34.94,0:00:36.50,Default,NTP,0,0,0,,欢迎光临
+Dialogue: 0,0:00:35.06,0:00:36.58,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&}腐妹
+Dialogue: 0,0:00:36.50,0:00:38.50,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:39.11,0:00:41.05,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&}老师
+Dialogue: 0,0:00:39.11,0:00:41.10,Default,NTP,0,0,0,,呃 欢迎光临
+Dialogue: 0,0:00:41.08,0:00:43.08,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:41.53,0:00:43.00,Default,NTP,0,0,0,,欢迎再次光临
+Dialogue: 0,0:00:43.24,0:00:45.99,Default,NTP,0,0,0,,这个附加了本店原创特典
+Dialogue: 0,0:00:43.65,0:00:45.88,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&}相机子
+Dialogue: 0,0:00:46.03,0:00:48.35,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&\pos(524,10)}海雄
+Dialogue: 0,0:00:46.03,0:00:48.35,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&\pos(291,10)}荐酒师
+Dialogue: 0,0:00:46.59,0:00:47.60,Default,NTP,0,0,0,,欢迎光临
+Dialogue: 0,0:00:52.91,0:00:56.02,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&\pos(380,10)}监督
+Dialogue: 0,0:00:54.93,0:00:55.71,Default,NTP,0,0,0,,去看看吧
+Dialogue: 0,0:00:55.29,0:00:56.02,Comment,NTP,0,0,0,,{\bord1\c&H78A2C4&\3c&HFFFFFF&\pos(160,10)}店长
+Dialogue: 0,0:00:55.58,0:00:57.58,Default,NTP,0,0,0,,
+Dialogue: 0,0:02:26.01,0:02:31.62,mianze,NTP,0,0,0,,本字幕由动漫国字幕组&轻之国度字幕组联合制作\N仅供交流学习用,请支持购买正版音像制品
+Dialogue: 0,0:02:26.01,0:02:31.62,mianze,NTP,0,0,0,,{\an2}翻译:Seraphim EK_ramutari 栗子 aquatic 校对:小傲娇 后期:乌贼 特效:小P
+Dialogue: 0,0:02:49.26,0:02:51.61,Default,NTP,0,0,0,,完全做不完啊 新刊装袋
+Dialogue: 0,0:02:52.02,0:02:53.83,Default,NTP,0,0,0,,附带特典 真是耗人工
+Dialogue: 0,0:02:54.03,0:02:56.30,Default,NTP,0,0,0,,把目标放到机器内 封装
+Dialogue: 0,0:02:56.46,0:02:58.58,Default,NTP,0,0,0,,把目标放进机器内 封装
+Dialogue: 0,0:02:58.85,0:03:01.61,Default,NTP,0,0,0,,放进机器 封装
+Dialogue: 0,0:03:02.33,0:03:05.29,Default,NTP,0,0,0,,封装 封… 封…
+Dialogue: 0,0:03:09.28,0:03:10.21,Default,NTP,0,0,0,,老师
+Dialogue: 0,0:03:11.94,0:03:15.37,Default,NTP,0,0,0,,啊 对不起 我连续熬夜
+Dialogue: 0,0:03:15.45,0:03:16.00,Default,NTP,0,0,0,,熬夜了
+Dialogue: 0,0:03:20.01,0:03:22.15,Default,NTP,0,0,0,,啊 堵住了
+Dialogue: 0,0:03:22.20,0:03:23.08,Default,NTP,0,0,0,,我来看看
+Dialogue: 0,0:03:23.62,0:03:24.36,Default,NTP,0,0,0,,看看
+Dialogue: 0,0:03:26.08,0:03:28.31,Default,NTP,0,0,0,,啊 包装膜堵住了
+Dialogue: 0,0:03:29.17,0:03:30.83,Default,NTP,0,0,0,,这个能拿出来吗
+Dialogue: 0,0:03:35.06,0:03:35.78,Default,NTP,0,0,0,,小日
+Dialogue: 0,0:03:36.04,0:03:36.46,Default,NTP,0,0,0,,是
+Dialogue: 0,0:03:36.61,0:03:37.12,Default,NTP,0,0,0,,来下
+Dialogue: 0,0:03:37.28,0:03:37.82,Default,NTP,0,0,0,,是
+Dialogue: 0,0:03:38.08,0:03:40.02,Default,NTP,0,0,0,,{\bord0\frz14\pos(442,266)\c&H4A3EE0&}成人向区
+Dialogue: 0,0:04:02.57,0:04:05.11,Default,NTP,0,0,0,,在成年区的那个行为
+Dialogue: 0,0:04:06.26,0:04:07.62,Default,NTP,0,0,0,,原来如此 很可疑啊
+Dialogue: 0,0:04:07.83,0:04:08.39,Default,NTP,0,0,0,,对吧
+Dialogue: 0,0:04:09.06,0:04:12.62,Default,NTP,0,0,0,,那个人 难不成特喜欢色本子
+Dialogue: 0,0:04:13.60,0:04:14.87,Default,NTP,0,0,0,,你去跟她搭个腔
+Dialogue: 0,0:04:14.92,0:04:15.58,Default,NTP,0,0,0,,是
+Dialogue: 0,0:04:18.84,0:04:19.33,Default,NTP,0,0,0,,请问…
+Dialogue: 0,0:04:19.43,0:04:25.55,Default,NTP,0,0,0,,您是大爱工口书人类吗
+Dialogue: 0,0:04:28.82,0:04:30.19,Default,NTP,0,0,0,,实在是对不起
+Dialogue: 0,0:04:30.38,0:04:32.28,Default,NTP,0,0,0,,请问您有什么需要吗
+Dialogue: 0,0:04:33.12,0:04:35.27,Default,NTP,0,0,0,,初次见面 我是干这差事的
+Dialogue: 0,0:04:35.30,0:04:36.37,Default,NTP,0,0,0,,啊 多谢
+Dialogue: 0,0:04:37.84,0:04:41.52,Default,NTP,0,0,0,,东京都青少年健全育成指导员
+Dialogue: 0,0:04:41.62,0:04:43.19,Default,NTP,0,0,0,,俗称 工口书检官
+Dialogue: 0,0:04:43.42,0:04:46.06,Default,NTP,0,0,0,,啊 工口书检官是什么
+Dialogue: 0,0:04:46.48,0:04:50.21,Default,NTP,0,0,0,,那位是 对成年向的书是否摆放在正确的位置
+Dialogue: 0,0:04:50.48,0:04:52.55,Default,NTP,0,0,0,,书是否被封装成防止蹭看的样式
+Dialogue: 0,0:04:52.58,0:04:54.58,Default,NTP,0,0,0,,进行突击检查的公务员
+Dialogue: 0,0:04:54.90,0:04:57.33,Default,NTP,0,0,0,,你要是知道的话 就告诉我啊
+Dialogue: 0,0:04:57.42,0:04:58.20,Default,NTP,0,0,0,,这两册…
+Dialogue: 0,0:04:58.66,0:05:00.46,Default,NTP,0,0,0,,这两册的杂志根据条例
+Dialogue: 0,0:05:00.84,0:05:03.50,Default,NTP,0,0,0,,已经被指定为成年向了
+Dialogue: 0,0:05:03.68,0:05:05.35,Default,NTP,0,0,0,,请采取相应的措施
+Dialogue: 0,0:05:05.44,0:05:07.00,Default,NTP,0,0,0,,这样的话
+Dialogue: 0,0:05:07.81,0:05:10.51,Default,NTP,0,0,0,,防蹭看贴纸
+Dialogue: 0,0:05:11.12,0:05:13.92,Default,NTP,0,0,0,,这样的话就可以了吧
+Dialogue: 0,0:05:14.23,0:05:15.21,Default,NTP,0,0,0,,没问题了
+Dialogue: 0,0:05:15.92,0:05:16.73,Default,NTP,0,0,0,,那么大家一起来
+Dialogue: 0,0:05:17.58,0:05:19.23,Default,NTP,0,0,0,,海雄 小日和荐酒师
+Dialogue: 0,0:05:19.37,0:05:21.38,Default,NTP,0,0,0,,这些全部贴上防蹭看贴纸 拜托了
+Dialogue: 0,0:05:21.63,0:05:23.38,Default,NTP,0,0,0,,哇 好大的量
+Dialogue: 0,0:05:24.10,0:05:26.56,Default,NTP,0,0,0,,感谢诸位的合作
+Dialogue: 0,0:05:33.29,0:05:36.44,Default,NTP,0,0,0,,荐酒师先生 差不多到了准备时间了
+Dialogue: 0,0:05:38.88,0:05:41.58,Default,NTP,0,0,0,,这样啊 今天是荐酒会啊
+Dialogue: 0,0:05:41.75,0:05:43.12,Default,NTP,0,0,0,,荐酒会是什么
+Dialogue: 0,0:05:43.56,0:05:45.43,Default,NTP,0,0,0,,小海还没有看过吧
+Dialogue: 0,0:05:45.92,0:05:47.32,Default,NTP,0,0,0,,那么过一会儿一起去吧
+Dialogue: 0,0:05:47.79,0:05:49.74,Default,NTP,0,0,0,,在六楼的活动角开办
+Dialogue: 0,0:05:49.96,0:05:52.43,Default,NTP,0,0,0,,好的 但是 马之骨的人们
+Dialogue: 0,0:05:52.71,0:05:54.88,Default,NTP,0,0,0,,尽是一些奇怪外号的人呢
+Dialogue: 0,0:05:55.40,0:05:57.08,Default,NTP,0,0,0,,荐酒师啊 监督啊 什么的
+Dialogue: 0,0:05:57.26,0:05:58.78,Default,NTP,0,0,0,,监督 那是
+Dialogue: 0,0:06:03.29,0:06:05.99,Default,NTP,0,0,0,,监督兴趣好像是拍照
+Dialogue: 0,0:06:06.18,0:06:06.90,Default,NTP,0,0,0,,哦
+Dialogue: 0,0:06:07.82,0:06:10.94,Default,NTP,0,0,0,,小海 BL是什么的简称
+Dialogue: 0,0:06:11.15,0:06:12.97,Default,NTP,0,0,0,,BL是 BOYS LOVE的简略
+Dialogue: 0,0:06:15.99,0:06:18.73,Default,NTP,0,0,0,,啊 前辈难道喜欢那种类型的杂志吗
+Dialogue: 0,0:06:19.82,0:06:21.21,Default,NTP,0,0,0,,才没有那种事…
+Dialogue: 0,0:06:21.23,0:06:23.23,Default,NTP,0,0,0,,还真是意外啊 竟然喜欢BL
+Dialogue: 0,0:06:23.40,0:06:24.69,Default,NTP,0,0,0,,不 不是的…
+Dialogue: 0,0:06:24.84,0:06:28.42,Comment,,0,0,0,,CP:BL之间的妄想组合 日本人的发音源于单词coupling
+Dialogue: 0,0:06:24.84,0:06:28.42,Default,NTP,0,0,0,,是不是平常还会想象 同事之间CP什么的
+Dialogue: 0,0:06:28.45,0:06:29.26,Default,NTP,0,0,0,,才没有呢
+Dialogue: 0,0:06:29.51,0:06:30.47,Default,NTP,0,0,0,,监督X荐酒师之类的？
+Dialogue: 0,0:06:32.08,0:06:32.91,Default,NTP,0,0,0,,还是荐酒师X监督？
+Dialogue: 0,0:06:33.09,0:06:33.79,Default,NTP,0,0,0,,监督
+Dialogue: 0,0:06:34.09,0:06:34.79,Default,NTP,0,0,0,,啊 被发现了
+Dialogue: 0,0:06:34.85,0:06:36.39,Default,NTP,0,0,0,,真是的 到底在做什么啊
+Dialogue: 0,0:06:36.70,0:06:38.33,Default,NTP,0,0,0,,不知为何有点不安心
+Dialogue: 0,0:06:38.43,0:06:41.10,Default,NTP,0,0,0,,男女两人独处一室 给工口书贴封纸
+Dialogue: 0,0:06:41.61,0:06:43.33,Default,NTP,0,0,0,,怎么可能不发生事件呢
+Dialogue: 0,0:06:43.35,0:06:44.32,Default,NTP,0,0,0,,你想多了
+Dialogue: 0,0:06:44.74,0:06:47.67,Default,NTP,0,0,0,,这下小日表情收藏又变多了
+Dialogue: 0,0:06:47.72,0:06:49.40,Default,NTP,0,0,0,,请不要做收藏
+Dialogue: 0,0:06:49.81,0:06:54.17,Default,NTP,0,0,0,,{\bord1\1c&H7D55DA&\3c&HCBCA5E&\fs25\fn@ZhunYuan\frz-163\pos(122.563,374.667)}全页都有幼女喔
+Dialogue: 0,0:06:52.85,0:06:53.98,Default,NTP,0,0,0,,小海
+Dialogue: 0,0:06:54.99,0:06:56.32,Default,NTP,0,0,0,,喜欢这种类型的书吗
+Dialogue: 0,0:06:58.78,0:07:03.08,Default,NTP,0,0,0,,{\fs34}嘿嘿嘿 「刚才被监督欺负的份 就用欺负后辈来回本」之作战
+Dialogue: 0,0:07:03.53,0:07:04.61,Default,NTP,0,0,0,,嗯 很喜欢
+Dialogue: 0,0:07:04.94,0:07:06.19,Default,NTP,0,0,0,,欸 是这样啊
+Dialogue: 0,0:07:06.40,0:07:09.43,Default,NTP,0,0,0,,啊哈哈 具体喜欢什么类型的呢
+Dialogue: 0,0:07:09.50,0:07:13.18,Default,NTP,0,0,0,,我看看 像这种类型的我比较喜欢
+Dialogue: 0,0:07:10.79,0:07:13.23,Default,NTP,0,0,0,,{\bord1\1c&HBCF0F5&\3c&HCBCA5E&\fs25\fn@ZhunYuan\frz-105\pos(739,368)}迸射的少女
+Dialogue: 0,0:07:10.79,0:07:13.23,Default,NTP,0,0,0,,{\bord1\1c&HEA7DF5&\3c&HEB3D60&\fs25\fn@ZhunYuan\frz-80\pos(480,365)}夜晚的度假
+Dialogue: 0,0:07:13.44,0:07:15.06,Default,NTP,0,0,0,,啊哈哈 是这样啊
+Dialogue: 0,0:07:24.51,0:07:27.76,Default,NTP,0,0,0,,问我这种事 准备要做什么呢
+Dialogue: 0,0:07:30.10,0:07:31.49,Default,NTP,0,0,0,,做参考…
+Dialogue: 0,0:07:32.70,0:07:34.54,Default,NTP,0,0,0,,做什么的参考啊
+Dialogue: 0,0:07:35.37,0:07:39.64,Default,NTP,0,0,0,,前辈讨厌工口书之类的吗
+Dialogue: 0,0:07:40.28,0:07:42.48,Default,NTP,0,0,0,,不啊 没有那种事喔
+Dialogue: 0,0:07:42.95,0:07:45.20,Default,NTP,0,0,0,,欸 那就是喜欢吗
+Dialogue: 0,0:07:47.03,0:07:51.12,Default,NTP,0,0,0,,所以说我们两人都是大爱工口书人类呢
+Dialogue: 0,0:07:52.62,0:07:55.15,Default,NTP,0,0,0,,大爱工口书人类 到底是什么！
+Dialogue: 0,0:07:57.26,0:07:59.04,Default,NTP,0,0,0,,喂喂 有发生什么事吗
+Dialogue: 0,0:07:59.81,0:08:01.15,Default,NTP,0,0,0,,什么都没有发生啊
+Dialogue: 0,0:08:02.56,0:08:05.05,Default,NTP,0,0,0,,这个味道是说谎的味道哦
+Dialogue: 0,0:08:08.72,0:08:11.94,Default,NTP,0,0,0,,现在开始「大荐酒师」会哦
+Dialogue: 0,0:08:16.44,0:08:17.79,Default,NTP,0,0,0,,这 这就是？
+Dialogue: 0,0:08:18.63,0:08:22.01,Default,NTP,0,0,0,,嗯 荐酒师会帮助大家找到适合自己漫画的
+Dialogue: 0,0:08:22.11,0:08:23.33,Default,NTP,0,0,0,,大荐酒师会哟
+Dialogue: 0,0:08:23.47,0:08:24.61,Default,NTP,0,0,0,,好大的声势
+Dialogue: 0,0:08:25.37,0:08:29.43,Default,NTP,0,0,0,,荐酒师对漫画十分了解 被叫做漫画荐酒师
+Dialogue: 0,0:08:25.74,0:08:27.87,Comment,NTP,0,0,0,,请大家按顺序排队
+Dialogue: 0,0:08:31.39,0:08:32.29,Default,NTP,0,0,0,,请多多指教
+Dialogue: 0,0:08:38.24,0:08:40.14,Default,NTP,0,0,0,,嗯嗯 明白了
+Dialogue: 0,0:08:40.94,0:08:42.45,Default,NTP,0,0,0,,dash dash
+Dialogue: 0,0:08:43.25,0:08:44.28,Default,NTP,0,0,0,,就是这个了
+Dialogue: 0,0:08:44.34,0:08:46.57,Comment,NTP,0,0,0,,{\bord1\an7\c&H30D7E9&\3c&H103351&}闪电\N{\c&HA3335C&\3c&HFFFFFF&}短裤足球\N{\c&H000000&\3c&HFFFFFF&}这就是短裤足球的决定版
+Dialogue: 0,0:08:45.75,0:08:49.71,Default,NTP,0,0,0,,短裤？ 我对中裤没啥兴趣…
+Dialogue: 0,0:08:52.76,0:08:56.98,Default,NTP,0,0,0,,在我内心竟然有这种属性存在着
+Dialogue: 0,0:08:57.06,0:08:58.96,Comment,NTP,0,0,0,,{\bord1\an7\c&H61ECF3&}JS\N{\c&HF0F6F7&\3c&H000000&}南海的决斗\N{\c&HBB9DEF&\3c&H000000&}JS漫画的决定版
+Dialogue: 0,0:08:58.98,0:09:00.92,Comment,NTP,0,0,0,,{\bord0\an7\c&H271DC9&}70岁的姐姐\N{\bord1\c&HFFFFFF&\3c&H000000&}70岁漫画的决定版\N水あさと推荐
+Dialogue: 0,0:09:00.94,0:09:02.88,Comment,NTP,0,0,0,,{\an7\bord1\c&HFFFFFF&\3c&H000000&}我是熊猫\N你是鹿
+Dialogue: 0,0:09:03.22,0:09:04.37,Default,NTP,0,0,0,,真是太感谢了
+Dialogue: 0,0:09:04.39,0:09:05.84,Default,NTP,0,0,0,,让我重获希望
+Dialogue: 0,0:09:05.92,0:09:07.72,Comment,NTP,0,0,0,,见到了新的世界
+Dialogue: 0,0:09:07.31,0:09:09.32,Default,NTP,0,0,0,,能活到这个岁数真是太好了
+Dialogue: 0,0:09:09.66,0:09:12.08,Default,NTP,0,0,0,,好厉害 漫画荐酒师
+Dialogue: 0,0:09:12.36,0:09:13.85,Default,NTP,0,0,0,,新世界的神
+Dialogue: 0,0:09:15.69,0:09:18.66,Default,NTP,0,0,0,,那是工口书检官的人
+Dialogue: 0,0:09:20.54,0:09:22.41,Default,NTP,0,0,0,,难道是便衣抽查吗
+Dialogue: 0,0:09:27.56,0:09:28.88,Default,NTP,0,0,0,,请多指教
+Dialogue: 0,0:09:36.58,0:09:37.76,Default,NTP,0,0,0,,是什么啊
+Dialogue: 0,0:09:37.81,0:09:40.38,Default,NTP,0,0,0,,请选些妥当的书吧
+Dialogue: 0,0:09:41.38,0:09:42.41,Default,NTP,0,0,0,,请收下
+Dialogue: 0,0:09:46.82,0:09:47.43,Comment,NTP,0,0,0,,{\c&HE15C86&\bord0}乙{\1c&FFFFFF&\3c&HE15C86&\bord1}男的花园
+Dialogue: 0,0:09:48.22,0:09:49.63,Default,NTP,0,0,0,,好勒 OUT
+Dialogue: 0,0:09:49.83,0:09:51.18,Comment,NTP,0,0,0,,{\bord0\c&H8E1AE8&}明朗的兄弟计划
+Dialogue: 0,0:09:51.20,0:09:52.64,Comment,NTP,0,0,0,,{\bord0\c&H000000&}性☆哦尼酱
+Dialogue: 0,0:09:52.66,0:09:54.60,Comment,NTP,0,0,0,,{\bord1\c&HFFFFFF&\3c&H000000&}用{\bord1\c&H3A1BC0&\3c&H000000&}爱{\bord1\c&HFFFFFF&\3c&H000000&}来{\bord1\c&H3A1BC0&\3c&H000000&}捆绑
+Dialogue: 0,0:09:56.65,0:09:59.13,Default,NTP,0,0,0,,这下麻烦大了
+Dialogue: 0,0:09:59.17,0:10:00.98,Default,NTP,0,0,0,,哇 竟然是笑容
+Dialogue: 0,0:10:01.36,0:10:02.54,Default,NTP,0,0,0,,十分谢谢
+Dialogue: 0,0:10:02.56,0:10:03.67,Default,NTP,0,0,0,,接着是感谢！？
+Dialogue: 0,0:10:04.25,0:10:06.60,Default,NTP,0,0,0,,是这样啊 她是私下来参加而已
+Dialogue: 0,0:10:07.17,0:10:10.94,Default,NTP,0,0,0,,她并不是讨厌工口书 并没有把工口书当成眼中钉呢
+Dialogue: 0,0:10:11.78,0:10:14.74,Default,NTP,0,0,0,,啊啊 刚才的公务员
+Dialogue: 0,0:10:15.31,0:10:18.79,Default,NTP,0,0,0,,你果然也是大爱工口书人类啊
+Dialogue: 0,0:10:20.09,0:10:21.38,Default,NTP,0,0,0,,怎么能说出这种…
+Dialogue: 0,0:10:21.59,0:10:23.13,Default,NTP,0,0,0,,我又说了奇怪的话
+Dialogue: 0,0:10:23.23,0:10:28.12,Default,NTP,0,0,0,,没关系我也是大爱工口书人类
+Dialogue: 0,0:10:28.31,0:10:28.57,Default,NTP,0,0,0,,欸
+Dialogue: 0,0:10:29.20,0:10:33.97,Default,NTP,0,0,0,,对 我也是大爱工口书人类
+Dialogue: 0,0:10:34.15,0:10:34.97,Default,NTP,0,0,0,,什么 自白?
+Dialogue: 0,0:10:35.17,0:10:37.21,Default,NTP,0,0,0,,但只有这一点想要大家明白
+Dialogue: 0,0:10:38.33,0:10:40.63,Default,NTP,0,0,0,,没有不需要工口的人
+Dialogue: 0,0:10:41.21,0:10:45.12,Default,NTP,0,0,0,,我也是 你们也是 全人类都是…
+Dialogue: 0,0:10:46.09,0:10:48.47,Default,NTP,0,0,0,,大爱工口书人类！
+Dialogue: 0,0:11:08.05,0:11:08.99,Default,NTP,0,0,0,,对啊
+Dialogue: 0,0:11:09.00,0:11:09.86,Default,NTP,0,0,0,,就是如此
+Dialogue: 0,0:11:10.04,0:11:12.12,Default,NTP,0,0,0,,大家都最喜欢了
+Dialogue: 0,0:11:18.41,0:11:24.86,Default,NTP,0,0,0,,{\fad(800,700)\be3\3c&HAC7613&\4c&HFFFFFF&\pos(332,396)}LOVE&EROS for all
+Dialogue: 0,0:11:30.91,0:11:32.18,Default,NTP,0,0,0,,早上好
+Dialogue: 0,0:11:32.96,0:11:33.77,Default,NTP,0,0,0,,来的好晚
+Dialogue: 0,0:11:33.29,0:11:38.79,Default,NTP,0,0,0,,{\fad(800,900)\be3\3c&HAC7613&\4c&HFFFFFF&\pos(532,396)}Nightmare Before Carnaval
+Dialogue: 0,0:11:33.86,0:11:35.12,Default,NTP,0,0,0,,没迟到啊
+Dialogue: 0,0:11:35.36,0:11:36.35,Default,NTP,0,0,0,,正好准时到达啊
+Dialogue: 0,0:11:37.49,0:11:38.16,Default,NTP,0,0,0,,那就算了
+Dialogue: 0,0:11:40.98,0:11:42.60,Default,NTP,0,0,0,,老师没睡好吗
+Dialogue: 0,0:11:43.02,0:11:44.21,Default,NTP,0,0,0,,不 稍微…
+Dialogue: 0,0:11:45.12,0:11:49.03,Default,NTP,0,0,0,,啊 那不是荞麦咖哩社团的新刊吗
+Dialogue: 0,0:11:49.88,0:11:51.85,Default,NTP,0,0,0,,上月活动时新出的那个吧
+Dialogue: 0,0:11:52.18,0:11:53.37,Default,NTP,0,0,0,,海雄知道吗
+Dialogue: 0,0:11:54.23,0:11:55.77,Default,NTP,0,0,0,,我很喜欢这个乔娜太郎这个人
+Dialogue: 0,0:11:55.93,0:11:57.31,Default,NTP,0,0,0,,经常在网上关注着
+Dialogue: 0,0:11:58.26,0:12:03.21,Default,NTP,0,0,0,,画的很不错 我有买同人志 每本都很有趣
+Dialogue: 0,0:12:04.76,0:12:06.18,Default,NTP,0,0,0,,而且年纪还很轻吧
+Dialogue: 0,0:12:06.47,0:12:08.65,Default,NTP,0,0,0,,既能画画也能编故事很厉害
+Dialogue: 0,0:12:08.86,0:12:10.21,Default,NTP,0,0,0,,原来如此 原来如此
+Dialogue: 0,0:12:10.21,0:12:11.39,Default,NTP,0,0,0,,他这么说了呢 老师
+Dialogue: 0,0:12:12.32,0:12:14.64,Default,NTP,0,0,0,,老师就是传说中的乔娜太郎
+Dialogue: 0,0:12:15.94,0:12:17.14,Default,NTP,0,0,0,,是这样的吗
+Dialogue: 0,0:12:17.39,0:12:18.98,Default,NTP,0,0,0,,我还以为是男作家呢
+Dialogue: 0,0:12:19.61,0:12:20.31,Default,NTP,0,0,0,,谢谢
+Dialogue: 0,0:12:20.58,0:12:22.65,Default,NTP,0,0,0,,原来如此 所以外号是「老师」
+Dialogue: 0,0:12:23.03,0:12:24.72,Default,NTP,0,0,0,,不 不光是这样
+Dialogue: 0,0:12:25.25,0:12:27.05,Default,NTP,0,0,0,,在打工第一天的自我介绍的时候
+Dialogue: 0,0:12:27.65,0:12:29.35,Default,NTP,0,0,0,,我会最终成为职业画师
+Dialogue: 0,0:12:29.46,0:12:32.09,Default,NTP,0,0,0,,成为超越矢上川千知郎老师的画师
+Dialogue: 0,0:12:32.42,0:12:33.69,Default,NTP,0,0,0,,之后就变成老师了
+Dialogue: 0,0:12:33.71,0:12:35.16,Default,NTP,0,0,0,,别说了 监督
+Dialogue: 0,0:12:35.20,0:12:35.99,Default,NTP,0,0,0,,抱歉
+Dialogue: 0,0:12:36.49,0:12:37.42,Default,NTP,0,0,0,,真是的
+Dialogue: 0,0:12:38.98,0:12:40.01,Default,NTP,0,0,0,,没事吗
+Dialogue: 0,0:12:40.15,0:12:43.03,Default,NTP,0,0,0,,嗯 只是快截稿了
+Dialogue: 0,0:12:43.14,0:12:43.79,Default,NTP,0,0,0,,截稿
+Dialogue: 0,0:12:44.10,0:12:44.62,Default,NTP,0,0,0,,就是那个
+Dialogue: 0,0:12:45.18,0:12:45.85,Default,NTP,0,0,0,,漫展嘉年华
+Dialogue: 0,0:12:46.45,0:12:47.81,Default,NTP,0,0,0,,这么快就要截稿了吗
+Dialogue: 0,0:12:47.95,0:12:50.70,Default,NTP,0,0,0,,大型活动截稿时间就是比较早
+Dialogue: 0,0:12:53.81,0:12:54.99,Comment,,0,0,0,,point of purchase店家为了促销自己的商品做的各种卖点宣传物品
+Dialogue: 0,0:12:53.81,0:12:54.99,Default,NTP,0,0,0,,这个POP是
+Dialogue: 0,0:12:55.03,0:12:56.49,Default,NTP,0,0,0,,是我画的
+Dialogue: 0,0:12:56.58,0:12:57.62,Default,NTP,0,0,0,,老师 我的手…
+Dialogue: 0,0:12:58.19,0:12:59.65,Default,NTP,0,0,0,,海雄你会画画啊
+Dialogue: 0,0:12:59.89,0:13:01.15,Default,NTP,0,0,0,,嗯 姑且
+Dialogue: 0,0:13:01.17,0:13:02.01,Default,NTP,0,0,0,,会用蘸水笔吗
+Dialogue: 0,0:13:02.66,0:13:03.34,Default,NTP,0,0,0,,划线笔的话
+Dialogue: 0,0:13:03.35,0:13:05.41,Default,NTP,0,0,0,,Sai呢 PS呢 ComicStudio呢
+Dialogue: 0,0:13:05.65,0:13:06.29,Default,NTP,0,0,0,,姑且算是会使吧
+Dialogue: 0,0:13:06.94,0:13:07.76,Default,NTP,0,0,0,,决定了
+Dialogue: 0,0:13:10.17,0:13:11.85,Default,NTP,0,0,0,,今天打工完了之后来我家吧
+Dialogue: 0,0:13:13.86,0:13:15.64,Default,NTP,0,0,0,,老师还真积极
+Dialogue: 0,0:13:15.68,0:13:17.15,Default,NTP,0,0,0,,老师果然是女狼
+Dialogue: 0,0:13:17.37,0:13:19.11,Default,NTP,0,0,0,,不是那意思啦
+Dialogue: 0,0:13:19.29,0:13:20.55,Default,NTP,0,0,0,,只是想让他帮忙画原稿而已
+Dialogue: 0,0:13:20.58,0:13:23.84,Default,NTP,0,0,0,,对对 我也会帮忙的啦
+Dialogue: 0,0:13:25.14,0:13:28.21,Default,NTP,0,0,0,,但海雄可是说 喜欢乔娜太郎老师的哦
+Dialogue: 0,0:13:28.89,0:13:31.86,Default,NTP,0,0,0,,喜欢的是画啦 刚才说的是作品啦
+Dialogue: 0,0:13:35.45,0:13:37.58,Default,NTP,0,0,0,,原稿的截止日期是什么时候
+Dialogue: 0,0:13:40.40,0:13:41.20,Default,NTP,0,0,0,,明天…
+Dialogue: 0,0:13:41.31,0:13:42.02,Default,NTP,0,0,0,,明天？
+Dialogue: 0,0:13:42.26,0:13:43.21,Default,NTP,0,0,0,,早上十点
+Dialogue: 0,0:13:43.61,0:13:44.78,Default,NTP,0,0,0,,早上十点？
+Dialogue: 0,0:13:45.17,0:13:49.69,Default,NTP,0,0,0,,本来是今天截止的 跟印刷商好说歹说给延到明天了
+Dialogue: 0,0:13:50.00,0:13:51.47,Default,NTP,0,0,0,,所以 拜托了
+Dialogue: 0,0:13:51.48,0:13:52.24,Default,NTP,0,0,0,,不用这样
+Dialogue: 0,0:13:56.43,0:13:57.94,Default,NTP,0,0,0,,不用这么客气 没关系的
+Dialogue: 0,0:13:58.31,0:13:59.26,Default,NTP,0,0,0,,我能帮上你的话
+Dialogue: 0,0:14:00.36,0:14:01.54,Default,NTP,0,0,0,,真是帮大忙了
+Dialogue: 0,0:14:05.84,0:14:09.50,Default,NTP,0,0,0,,老师住的地方 就在我家的下一站啊
+Dialogue: 0,0:14:09.94,0:14:12.40,Default,NTP,0,0,0,,啊 是吗 离得近太好了
+Dialogue: 0,0:14:13.00,0:14:15.66,Default,NTP,0,0,0,,我住在高井户有点远呢
+Dialogue: 0,0:14:16.42,0:14:17.45,Default,NTP,0,0,0,,抱歉 小日
+Dialogue: 0,0:14:17.60,0:14:19.38,Default,NTP,0,0,0,,不 我不是那意思
+Dialogue: 0,0:14:22.75,0:14:24.38,Default,NTP,0,0,0,,高井户是在哪啊
+Dialogue: 0,0:14:22.88,0:14:25.11,Comment,NTP,0,0,0,,{\3c&H000000&}在井之头线的沿线
+Dialogue: 0,0:14:25.43,0:14:27.27,Default,NTP,0,0,0,,钥匙 钥匙呢
+Dialogue: 0,0:14:27.67,0:14:28.88,Default,NTP,0,0,0,,找到了
+Dialogue: 0,0:14:29.60,0:14:31.00,Default,NTP,0,0,0,,抱歉房子有点小
+Dialogue: 0,0:14:31.22,0:14:32.00,Default,NTP,0,0,0,,没关系的
+Dialogue: 0,0:14:32.12,0:14:33.35,Default,NTP,0,0,0,,打扰了
+Dialogue: 0,0:14:44.52,0:14:45.49,Default,NTP,0,0,0,,这样可以吗
+Dialogue: 0,0:14:46.85,0:14:47.56,Default,NTP,0,0,0,,OK
+Dialogue: 0,0:14:49.05,0:14:51.08,Default,NTP,0,0,0,,那能拜托这张画的背景吗
+Dialogue: 0,0:14:54.00,0:14:55.70,Default,NTP,0,0,0,,这就是原本的画稿吗
+Dialogue: 0,0:14:57.08,0:15:00.18,Default,NTP,0,0,0,,果然跟印出来的不一样呢
+Dialogue: 0,0:15:01.02,0:15:02.13,Default,NTP,0,0,0,,好有魄力
+Dialogue: 0,0:15:03.60,0:15:06.53,Default,NTP,0,0,0,,老师果然是想成为职业画师啊
+Dialogue: 0,0:15:07.76,0:15:09.43,Default,NTP,0,0,0,,明明因为睡眠不足很累的样子
+Dialogue: 0,0:15:09.72,0:15:11.50,Default,NTP,0,0,0,,但连一句丧气话都不说
+Dialogue: 0,0:15:15.26,0:15:18.94,Default,NTP,0,0,0,,啊 顶不住了
+Dialogue: 0,0:15:18.95,0:15:21.27,Default,NTP,0,0,0,,好困 好想睡
+Dialogue: 0,0:15:21.44,0:15:23.08,Default,NTP,0,0,0,,已经画不出来了
+Dialogue: 0,0:15:23.09,0:15:25.14,Default,NTP,0,0,0,,婴儿模式又开始了
+Dialogue: 0,0:15:25.58,0:15:27.08,Default,NTP,0,0,0,,撤回前言
+Dialogue: 0,0:15:28.54,0:15:30.94,Default,NTP,0,0,0,,累的时候常常会变成这样
+Dialogue: 0,0:15:31.43,0:15:33.73,Default,NTP,0,0,0,,怎么办啊 这样子
+Dialogue: 0,0:15:33.97,0:15:34.68,Default,NTP,0,0,0,,没事的
+Dialogue: 0,0:15:37.02,0:15:38.97,Default,NTP,0,0,0,,怎么了 老师酱
+Dialogue: 0,0:15:39.49,0:15:41.73,Default,NTP,0,0,0,,来来 这边
+Dialogue: 0,0:15:45.94,0:15:47.09,Default,NTP,0,0,0,,乖 乖
+Dialogue: 0,0:15:48.04,0:15:51.39,Default,NTP,0,0,0,,老师酱是最喜欢膝枕的呢
+Dialogue: 0,0:15:52.91,0:15:54.64,Default,NTP,0,0,0,,哦 母亲般的光辉
+Dialogue: 0,0:15:55.20,0:15:57.44,Default,NTP,0,0,0,,前辈 很清楚怎么应付老师呢
+Dialogue: 0,0:15:58.19,0:15:59.88,Default,NTP,0,0,0,,从以前就开始帮忙了呢
+Dialogue: 0,0:16:00.32,0:16:02.11,Default,NTP,0,0,0,,还教会了我漫画的收尾工作
+Dialogue: 0,0:16:07.15,0:16:08.04,Default,NTP,0,0,0,,嗯 复活了
+Dialogue: 0,0:16:09.58,0:16:10.49,Default,NTP,0,0,0,,要画了
+Dialogue: 0,0:16:10.92,0:16:12.02,Default,NTP,0,0,0,,了不起 了不起
+Dialogue: 0,0:16:13.41,0:16:16.10,Default,NTP,0,0,0,,待会末班车就要开了 差不多回去吧
+Dialogue: 0,0:16:16.53,0:16:17.54,Default,NTP,0,0,0,,可以吗
+Dialogue: 0,0:16:17.86,0:16:20.27,Default,NTP,0,0,0,,嗯 剩下的我一个人可以的
+Dialogue: 0,0:16:24.60,0:16:25.67,Default,NTP,0,0,0,,怎么了 小海
+Dialogue: 0,0:16:25.93,0:16:26.90,Default,NTP,0,0,0,,末班车要来不及了
+Dialogue: 0,0:16:27.41,0:16:30.59,Default,NTP,0,0,0,,好像把手机落在老师家了
+Dialogue: 0,0:16:31.48,0:16:34.27,Default,NTP,0,0,0,,我走着也能回去 你先走吧
+Dialogue: 0,0:16:34.36,0:16:37.17,Default,NTP,0,0,0,,嗯 知道了 明天见
+Dialogue: 0,0:16:37.27,0:16:37.99,Default,NTP,0,0,0,,辛苦了
+Dialogue: 0,0:16:46.57,0:16:48.19,Default,NTP,0,0,0,,喂 海雄
+Dialogue: 0,0:16:48.99,0:16:52.73,Default,NTP,0,0,0,,老师 其实原稿还是来不及吧
+Dialogue: 0,0:16:53.65,0:16:56.07,Default,NTP,0,0,0,,你这家伙一开口就说些失礼的话呢
+Dialogue: 0,0:16:56.11,0:16:57.12,Default,NTP,0,0,0,,啊 对不起
+Dialogue: 0,0:16:57.30,0:17:01.11,Default,NTP,0,0,0,,所以 我再来帮忙吧
+Dialogue: 0,0:17:02.15,0:17:04.41,Default,NTP,0,0,0,,不能麻烦你到这程度
+Dialogue: 0,0:17:04.47,0:17:05.25,Default,NTP,0,0,0,,没关系的
+Dialogue: 0,0:17:05.61,0:17:06.72,Default,NTP,0,0,0,,我已经习惯熬夜了
+Dialogue: 0,0:17:07.04,0:17:07.95,Default,NTP,0,0,0,,而且我对…
+Dialogue: 0,0:17:13.78,0:17:14.72,Default,NTP,0,0,0,,老师的…
+Dialogue: 0,0:17:16.43,0:17:18.01,Default,NTP,0,0,0,,乔娜太郎的漫画…
+Dialogue: 0,0:17:18.22,0:17:19.35,Default,NTP,0,0,0,,最喜欢了！
+Dialogue: 0,0:17:22.98,0:17:24.00,Default,NTP,0,0,0,,海雄
+Dialogue: 0,0:17:25.75,0:17:26.94,Default,NTP,0,0,0,,老师你不是说
+Dialogue: 0,0:17:27.13,0:17:30.72,Default,NTP,0,0,0,,总有一天会成为超越矢上川千知郎老师的职业画家吗
+Dialogue: 0,0:17:31.90,0:17:34.01,Default,NTP,0,0,0,,抱歉 突然说这种话
+Dialogue: 0,0:17:34.18,0:17:37.57,Default,NTP,0,0,0,,我才是 让你看见我失态的样子
+Dialogue: 0,0:17:39.23,0:17:41.37,Default,NTP,0,0,0,,刚才可是见过更失态的场面
+Dialogue: 0,0:17:42.87,0:17:45.96,Default,NTP,0,0,0,,是 我一定会成为职业画家的
+Dialogue: 0,0:17:46.75,0:17:48.31,Default,NTP,0,0,0,,会忙到早上也没关系吗
+Dialogue: 0,0:17:48.77,0:17:49.18,Default,NTP,0,0,0,,嗯
+Dialogue: 0,0:17:49.74,0:17:52.27,Default,NTP,0,0,0,,对不起 让你担心了
+Dialogue: 0,0:17:52.89,0:17:53.79,Default,NTP,0,0,0,,已经没问题了
+Dialogue: 0,0:17:54.61,0:17:58.90,Default,NTP,0,0,0,,已经完了 画不下去了 完成不了了
+Dialogue: 0,0:17:58.91,0:18:00.71,Default,NTP,0,0,0,,完全不是没问题的样子啊…
+Dialogue: 0,0:18:01.06,0:18:02.65,Default,NTP,0,0,0,,对 来转换下心情吧
+Dialogue: 0,0:18:02.67,0:18:04.51,Default,NTP,0,0,0,,肚子饿不饿
+Dialogue: 0,0:18:05.28,0:18:05.99,Default,NTP,0,0,0,,饿…
+Dialogue: 0,0:18:06.00,0:18:07.53,Default,NTP,0,0,0,,那我去买点什么吧
+Dialogue: 0,0:18:08.19,0:18:09.55,Default,NTP,0,0,0,,没事啦 我去好了
+Dialogue: 0,0:18:09.67,0:18:11.91,Default,NTP,0,0,0,,不行 老师请画画
+Dialogue: 0,0:18:12.09,0:18:13.30,Default,NTP,0,0,0,,那多不好 我来…
+Dialogue: 0,0:18:13.32,0:18:14.33,Default,NTP,0,0,0,,我说了不行
+Dialogue: 0,0:18:14.77,0:18:16.43,Default,NTP,0,0,0,,老师可是女孩子呢
+Dialogue: 0,0:18:16.73,0:18:19.62,Default,NTP,0,0,0,,这种时间独自出门太危险了
+Dialogue: 0,0:18:20.97,0:18:21.74,Default,NTP,0,0,0,,那我就去了
+Dialogue: 0,0:18:27.26,0:18:28.24,Default,NTP,0,0,0,,什么嘛
+Dialogue: 0,0:18:29.92,0:18:33.32,Default,NTP,0,0,0,,不要突然把我当女孩对待啊
+Dialogue: 0,0:18:36.82,0:18:37.38,Default,NTP,0,0,0,,好
+Dialogue: 0,0:19:06.66,0:19:08.98,Default,NTP,0,0,0,,{\bord1\pos(422,205)\3c&H000000&}已完成
+Dialogue: 0,0:19:06.99,0:19:07.54,Default,NTP,0,0,0,,好
+Dialogue: 0,0:19:13.27,0:19:14.76,Default,NTP,0,0,0,,结束了
+Dialogue: 0,0:19:16.72,0:19:18.26,Default,NTP,0,0,0,,赶上了
+Dialogue: 0,0:19:18.65,0:19:19.43,Default,NTP,0,0,0,,老师
+Dialogue: 0,0:19:19.98,0:19:22.17,Default,NTP,0,0,0,,要睡觉的话请铺好被褥睡哦
+Dialogue: 0,0:19:33.68,0:19:35.08,Default,NTP,0,0,0,,辛苦您了
+Dialogue: 0,0:19:50.08,0:19:51.64,Default,NTP,0,0,0,,{\bord0\pos(418,238)}国际展示馆站
+Dialogue: 0,0:20:03.20,0:20:04.23,Default,NTP,0,0,0,,我们做到了呢
+Dialogue: 0,0:20:04.58,0:20:06.43,Default,NTP,0,0,0,,那就请你收下吧
+Dialogue: 0,0:20:06.62,0:20:07.74,Default,NTP,0,0,0,,谢谢
+Dialogue: 0,0:20:08.14,0:20:09.87,Default,NTP,0,0,0,,谢谢你来帮忙啊
+Dialogue: 0,0:20:10.32,0:20:11.76,Default,NTP,0,0,0,,多亏了你 本子做得非常好
+Dialogue: 0,0:20:11.93,0:20:15.74,Default,NTP,0,0,0,,不 能帮上喜欢的画家我很高兴
+Dialogue: 0,0:20:17.35,0:20:18.22,Default,NTP,0,0,0,,海
+Dialogue: 0,0:20:18.44,0:20:19.34,Default,NTP,0,0,0,,打扰一下…
+Dialogue: 0,0:20:20.18,0:20:23.09,Default,NTP,0,0,0,,我是旁边摊位的 今天还请多多关照
+Dialogue: 0,0:20:24.88,0:20:26.22,Default,NTP,0,0,0,,请多多关照
+Dialogue: 0,0:20:26.29,0:20:26.71,Default,NTP,0,0,0,,嗯
+Dialogue: 0,0:20:26.74,0:20:31.42,Comment,NTP,0,0,0,,漫展嘉年华现在开展
+Dialogue: 0,0:20:47.26,0:20:49.95,Comment,NTP,0,0,0,,{\c&H000000&\bord1\3c&HFFFFFF&}女卫生间
+Dialogue: 0,0:20:49.97,0:20:51.58,Default,NTP,0,0,0,,{\bord1\fs23\frz-25\pos(475,174)\c&H7B4D53&\3c&HFFFFFF&}这里不是队尾
+Dialogue: 0,0:20:52.04,0:20:53.75,Default,NTP,0,0,0,,呵呵呵呵
+Dialogue: 0,0:20:53.96,0:20:56.52,Default,NTP,0,0,0,,太棒了 太棒了
+Dialogue: 0,0:21:15.73,0:21:17.26,Default,NTP,0,0,0,,结束了 结束了
+Dialogue: 0,0:21:17.83,0:21:20.24,Default,NTP,0,0,0,,我拍到了不少好照片呢
+Dialogue: 0,0:21:20.39,0:21:22.35,Default,NTP,0,0,0,,老师 您辛苦了
+Dialogue: 0,0:21:24.12,0:21:26.05,Default,NTP,0,0,0,,这次也没能完售啊
+Dialogue: 0,0:21:26.92,0:21:28.36,Default,NTP,0,0,0,,之后再玩Cosplay吧
+Dialogue: 0,0:21:28.54,0:21:29.07,Default,NTP,0,0,0,,好
+Dialogue: 0,0:21:29.71,0:21:32.50,Default,NTP,0,0,0,,各位 辛苦了
+Dialogue: 0,0:21:32.77,0:21:34.16,Default,NTP,0,0,0,,监督也来了啊
+Dialogue: 0,0:21:34.48,0:21:36.52,Default,NTP,0,0,0,,好 既然大家都在呢
+Dialogue: 0,0:21:36.72,0:21:38.25,Default,NTP,0,0,0,,我们现在就去啪…地尽情放松下吧
+Dialogue: 0,0:21:39.23,0:21:40.62,Default,NTP,0,0,0,,去大吃一顿吗
+Dialogue: 0,0:21:40.71,0:21:41.57,Default,NTP,0,0,0,,啪地一下
+Dialogue: 0,0:21:41.81,0:21:42.63,Default,NTP,0,0,0,,啪地一下…
+Dialogue: 0,0:21:46.48,0:21:48.45,Default,NTP,0,0,0,,请问… 说好的啪…地大吃一顿呢
+Dialogue: 0,0:21:48.59,0:21:52.40,Default,NTP,0,0,0,,那个… 漫展之后来了很多同人新刊呢
+Dialogue: 0,0:21:53.10,0:21:55.50,Default,NTP,0,0,0,,请大家在明天前把这些全部封装好
+Dialogue: 0,0:21:56.79,0:21:58.59,Default,NTP,0,0,0,,顺便说一句 这项工作会再持续两天
+Dialogue: 0,0:21:59.88,0:22:01.46,Default,NTP,0,0,0,,你说… 什么…
+Dialogue: 0,0:22:02.04,0:22:02.66,Default,NTP,0,0,0,,海
+Dialogue: 0,0:22:02.67,0:22:03.35,Default,,0,0,0,,小海
+Dialogue: 0,0:22:03.40,0:22:04.28,Default,NTP,0,0,0,,海雄
+Dialogue: 0,0:22:05.22,0:22:09.64,Default,NTP,0,0,0,,在这之后 我们封装了好久
+Dialogue: 0,0:22:23.71,0:22:26.29,ED_jp,,0,0,0,,{\be8\fad(100,100)}青空　雨上がり
+Dialogue: 0,0:22:23.71,0:22:26.29,ED_chs,,0,0,0,,{\be8\fad(100,100)}雨停了
+Dialogue: 0,0:22:26.41,0:22:28.87,ED_jp,,0,0,0,,{\be8\fad(100,100)}空には　虹かかり
+Dialogue: 0,0:22:26.41,0:22:28.87,ED_chs,,0,0,0,,{\be8\fad(100,100)}天上挂着道彩虹
+Dialogue: 0,0:22:28.93,0:22:31.44,ED_jp,,0,0,0,,{\be8\fad(100,100)}心が　踊りだし
+Dialogue: 0,0:22:28.93,0:22:31.44,ED_chs,,0,0,0,,{\be8\fad(100,100)}心情欢快愉悦
+Dialogue: 0,0:22:31.54,0:22:35.66,ED_jp,,0,0,0,,{\be8\fad(100,100)}おなかも　空いてくる
+Dialogue: 0,0:22:31.54,0:22:35.66,ED_chs,,0,0,0,,{\be8\fad(100,100)}肚子也饿了起来
+Dialogue: 0,0:22:35.76,0:22:38.14,ED_jp,,0,0,0,,{\be8\fad(100,100)}何食べる？？
+Dialogue: 0,0:22:35.76,0:22:38.14,ED_chs,,0,0,0,,{\be8\fad(100,100)}吃什么好呢
+Dialogue: 0,0:22:39.31,0:22:41.78,ED_jp,,0,0,0,,{\be8\fad(100,100)}いつでも　上目遣い
+Dialogue: 0,0:22:39.31,0:22:41.78,ED_chs,,0,0,0,,{\be8\fad(100,100)}总是在抬头仰视
+Dialogue: 0,0:22:41.90,0:22:44.43,ED_jp,,0,0,0,,{\be8\fad(100,100)}行きたい　どんな世界
+Dialogue: 0,0:22:41.90,0:22:44.43,ED_chs,,0,0,0,,{\be8\fad(100,100)}要去的是什么样的世界
+Dialogue: 0,0:22:44.52,0:22:46.93,ED_jp,,0,0,0,,{\be8\fad(100,100)}あなたと　话したい
+Dialogue: 0,0:22:44.52,0:22:46.93,ED_chs,,0,0,0,,{\be8\fad(100,100)}想要和你说说话
+Dialogue: 0,0:22:47.06,0:22:49.63,ED_jp,,0,0,0,,{\be8\fad(100,100)}あなたに　タッチしたい
+Dialogue: 0,0:22:47.06,0:22:49.63,ED_chs,,0,0,0,,{\be8\fad(100,100)}想要触碰到你
+Dialogue: 0,0:22:49.80,0:22:56.12,ED_jp,,0,0,0,,{\be8\fad(100,100)}ピクセル无限大　一亿テラバイト
+Dialogue: 0,0:22:49.80,0:22:56.12,ED_chs,,0,0,0,,{\be8\fad(100,100)}像素无限大  一亿TB
+Dialogue: 0,0:22:56.32,0:23:04.82,ED_jp,,0,0,0,,{\be8\fad(100,100)}私の理想よ　データファイル内绪？ＪＰＧ！
+Dialogue: 0,0:22:56.32,0:23:04.82,ED_chs,,0,0,0,,{\be8\fad(100,100)}我的理想啊  数据文件隐藏？JPG！
+Dialogue: 0,0:23:04.89,0:23:09.91,ED_jp,,0,0,0,,{\be8\fad(100,100)}次元の壁を乗り越えて　あなたに会ってみたいの
+Dialogue: 0,0:23:04.89,0:23:09.91,ED_chs,,0,0,0,,{\be8\fad(100,100)}跨越次元的壁垒  想要来见你
+Dialogue: 0,0:23:10.02,0:23:14.95,ED_jp,,0,0,0,,{\be8\fad(100,100)}秘密の魔法の　チケットで
+Dialogue: 0,0:23:10.02,0:23:14.95,ED_chs,,0,0,0,,{\be8\fad(100,100)}用那秘密的魔法券
+Dialogue: 0,0:23:15.09,0:23:17.61,ED_jp,,0,0,0,,{\be8\fad(100,100)}１パーセント确率で
+Dialogue: 0,0:23:15.09,0:23:17.61,ED_chs,,0,0,0,,{\be8\fad(100,100)}百分之一的概率
+Dialogue: 0,0:23:17.75,0:23:20.30,ED_jp,,0,0,0,,{\be8\fad(100,100)}もしも気づいてくれるなら
+Dialogue: 0,0:23:17.75,0:23:20.30,ED_chs,,0,0,0,,{\be8\fad(100,100)}如果能让你发觉的话
+Dialogue: 0,0:23:20.30,0:23:26.23,ED_jp,,0,0,0,,{\be8\fad(100,100)}その手を伸ばして　抱きしめてほしい
+Dialogue: 0,0:23:20.30,0:23:26.23,ED_chs,,0,0,0,,{\be8\fad(100,100)}希望你能伸出手来紧抱住
+Dialogue: 0,0:23:42.34,0:23:47.30,Default,NTP,0,0,0,,据说电器街在经济高速增长期曾非常繁化
+Dialogue: 0,0:23:43.27,0:23:46.21,Default,NTP,0,0,0,,{\bord2\1c&HFFFFFF&\3c&HD37907&\fs25\fn@ZhunYuan\frz-90\pos(465,220)}感谢各位收看
+Dialogue: 0,0:23:46.57,0:23:49.21,Default,NTP,0,0,0,,{\bord2\1c&HFFFFFF&\3c&HD37907&\fs25\fn@ZhunYuan\frz-90\pos(487,225)}下集也请多多关照
+Dialogue: 0,0:23:47.67,0:23:50.06,Default,NTP,0,0,0,,经济高速增长是什么呢
+Dialogue: 0,0:23:50.39,0:23:51.77,Default,NTP,0,0,0,,高速是指电器的…电线…
+Dialogue: 0,0:23:50.39,0:23:51.77,Comment,,0,0,0,,{\fs23\pos(291,415)}koudo
+Dialogue: 0,0:23:50.39,0:23:51.77,Comment,,0,0,0,,{\fs23\pos(529,415)}koudo
+Dialogue: 0,0:23:50.39,0:23:51.77,Comment,NTP,0,0,0,,高速和电线在日语发音相同
+

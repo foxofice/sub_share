@@ -168,12 +168,12 @@ namespace sub_db
 
 			m_s_lock.ExitWriteLock();
 
-			c_Mainform.m_s_mainform.m_DataGridView_event_enable = false;
-			c_Mainform.m_s_mainform.dataGridView_Main.DataSource = m_s_dt;
-			c_Mainform.m_s_mainform.update_columns_style();
-			c_Mainform.m_s_mainform.m_DataGridView_event_enable = true;
+			frm_Mainform.m_s_mainform.m_DataGridView_event_enable = false;
+			frm_Mainform.m_s_mainform.dataGridView_Main.DataSource = m_s_dt;
+			frm_Mainform.m_s_mainform.update_columns_style();
+			frm_Mainform.m_s_mainform.m_DataGridView_event_enable = true;
 
-			c_Mainform.m_s_mainform.update_status();
+			frm_Mainform.m_s_mainform.update_status();
 		}
 	};
 }	// namespace sub_db

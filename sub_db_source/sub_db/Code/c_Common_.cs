@@ -12,7 +12,7 @@ namespace sub_db
 	internal class c_Common_
 	{
 		internal const string	m_k_PROGRAM_NAME		= "Subtitles Database";
-		internal const string	m_k_VERSION				= "v0.15";
+		internal const string	m_k_VERSION				= "v0.16";
 
 		internal const int		m_k_MAX_PROGRESS_VALUE	= 10000;
 
@@ -48,7 +48,7 @@ namespace sub_db
 		 *==============================================================*/
 		internal static void	SetProgressValue(int currentValue)
 		{
-			c_Mainform.m_s_mainform.m_UpdateDatabase.progressBar_Update.Value = currentValue;
+			frm_Mainform.m_s_mainform.m_UpdateDatabase.progressBar_Update.Value = currentValue;
 
 			if(Environment.OSVersion.Version.Major >= 6)
 			{
@@ -68,8 +68,8 @@ namespace sub_db
 
 				string err_txt = (errorCode == 1409) ? "热键被占用！" : $"注册热键失败！({errorCode})";
 
-				c_Mainform.m_s_mainform.toolStripStatusLabel_ErrorMsg.Text		= err_txt;
-				c_Mainform.m_s_mainform.toolStripStatusLabel_ErrorMsg.Visible	= true;
+				frm_Mainform.m_s_mainform.toolStripStatusLabel_ErrorMsg.Text		= err_txt;
+				frm_Mainform.m_s_mainform.toolStripStatusLabel_ErrorMsg.Visible	= true;
 			}
 		}
 

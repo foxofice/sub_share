@@ -16,16 +16,16 @@ namespace sub_db
 		 *==============================================================*/
 		internal static void	Invoke(Action func)
 		{
-			if(c_Mainform.m_s_mainform.InvokeRequired)
-				c_Mainform.m_s_mainform.Invoke(func);
+			if(frm_Mainform.m_s_mainform.InvokeRequired)
+				frm_Mainform.m_s_mainform.Invoke(func);
 			else
 				func();
 		}
 		//--------------------------------------------------
 		internal static TResult	Invoke<TResult>(Func<TResult> func)
 		{
-			if(c_Mainform.m_s_mainform.InvokeRequired)
-				return (TResult)c_Mainform.m_s_mainform.Invoke(func);
+			if(frm_Mainform.m_s_mainform.InvokeRequired)
+				return (TResult)frm_Mainform.m_s_mainform.Invoke(func);
 			else
 				return func();
 		}

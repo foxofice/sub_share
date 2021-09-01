@@ -81,7 +81,7 @@ namespace sub_db
 			}	// for
 
 			// 更新 UI
-			c_Mainform.m_s_mainform.toolStripSplitButton_Languages.DropDownItems.Clear();
+			frm_Mainform.m_s_mainform.toolStripSplitButton_Languages.DropDownItems.Clear();
 
 			for(int i=0; i<m_s_LanguagesList.Count; ++i)
 			{
@@ -92,7 +92,7 @@ namespace sub_db
 
 				item.Click += Language_Click;
 
-				c_Mainform.m_s_mainform.toolStripSplitButton_Languages.DropDownItems.Add(item);
+				frm_Mainform.m_s_mainform.toolStripSplitButton_Languages.DropDownItems.Add(item);
 			}	// for
 		}
 
@@ -113,11 +113,11 @@ namespace sub_db
 		 *==============================================================*/
 		internal static void	change_language(int index)
 		{
-			var mainform	= c_Mainform.m_s_mainform;
-			var about		= c_Mainform.m_s_mainform.m_About;
-			var setting		= c_Mainform.m_s_mainform.m_Setting;
-			var update_db	= c_Mainform.m_s_mainform.m_UpdateDatabase;
-			var adv_search	= c_Mainform.m_s_mainform.m_Search;
+			var mainform	= frm_Mainform.m_s_mainform;
+			var about		= frm_Mainform.m_s_mainform.m_About;
+			var setting		= frm_Mainform.m_s_mainform.m_Setting;
+			var update_db	= frm_Mainform.m_s_mainform.m_UpdateDatabase;
+			var adv_search	= frm_Mainform.m_s_mainform.m_Search;
 
 			((ToolStripMenuItem)mainform.toolStripSplitButton_Languages.DropDownItems[m_s_current_language_idx]).Checked = false;
 			((ToolStripMenuItem)mainform.toolStripSplitButton_Languages.DropDownItems[index]).Checked = true;
@@ -163,8 +163,8 @@ namespace sub_db
 			update_db.Text								= txt(10);	// 更新数据库
 			update_db.columnHeader_Time.Text			= txt(52);	// 时间
 			update_db.columnHeader_Log.Text				= txt(53);	// 日志
-			update_db.radioButton_UseLocalData.Text		= txt(62);	// 使用本地字幕数据
-			update_db.radioButton_UseRemoteData.Text	= txt(63);	// 使用服务器字幕数据
+			update_db.radioButton_UseLocalData.Text		= txt(64);	// 使用本地字幕数据
+			update_db.radioButton_UseRemoteData.Text	= txt(65);	// 使用服务器字幕数据
 
 			// search
 			adv_search.label_Name.Text					= txt(70);	// 影片名称：

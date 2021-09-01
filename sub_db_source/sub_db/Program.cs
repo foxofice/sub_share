@@ -16,7 +16,7 @@ namespace sub_db
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new c_Mainform());
+			Application.Run(new frm_Mainform());
 		}
 	}
 }

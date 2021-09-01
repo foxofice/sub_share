@@ -289,7 +289,7 @@ namespace sub_db
 				}
 			}	// for
 
-			var mainform = c_Mainform.m_s_mainform;
+			var mainform = frm_Mainform.m_s_mainform;
 
 			if(m_s_window_width == 0)
 				m_s_window_width = 1024;

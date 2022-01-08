@@ -509,4 +509,5 @@ namespace sub_db
 
 			m_is_updating_database = false;
 		}
-	}}	// namespace sub_db
+	};
+}	// namespace sub_db

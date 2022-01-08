@@ -19,13 +19,13 @@ namespace sub_db
 		}
 
 		internal static frm_Mainform	m_s_mainform				= null;
-		internal frm_UpdateDatabase	m_UpdateDatabase			= new frm_UpdateDatabase();
-		internal frm_Search			m_Search					= new frm_Search();
+		internal frm_UpdateDatabase		m_UpdateDatabase			= new frm_UpdateDatabase();
+		internal frm_Search				m_Search					= new frm_Search();
 		internal frm_Setting			m_Setting					= new frm_Setting();
-		internal frm_About			m_About						= new frm_About();
+		internal frm_About				m_About						= new frm_About();
 
 		// DataGridView 的事件是否有效
-		internal bool				m_DataGridView_event_enable	= true;
+		internal bool					m_DataGridView_event_enable	= true;
 
 		#region Winform 事件
 		/*==============================================================

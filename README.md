@@ -61,7 +61,7 @@ Subtitles DataBase 有几处需要说明的地方：
 
 **以上参数说明**
 
-`<type>` 分类（例如：animation、movie 等，可自定添加。animation 表示动画。那么问题来了，里番的英文是什么呢？也欢迎大家提交里番字幕）
+`<type>` 分类（例如：animation、movie 等，可自定添加。animation 表示动画。同时欢迎大家提交里番字幕）
 
 `<year>` 影片放送的年份
 
@@ -91,3 +91,6 @@ Subtitles DataBase 有几处需要说明的地方：
 需要提交权限的同学可以联系我，欢迎各字幕组和手抄大佬加入。
 
 Q群：`1003173547`
+
+8B71A5DF03C47F647336BC78402E5F8E18E77A5242C5FCD7C811E65406B457711FB2239EC33AB27BDA8B6102B4929301
+aes_cfb_decrypt(code, sha384(user).left(32), sha384(user).right(16).reverse())

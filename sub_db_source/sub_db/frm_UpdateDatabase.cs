@@ -31,8 +31,8 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_UpdateDatabase_Load(object sender, EventArgs e)
 		{
-			this.Icon	= c_Image_.img2icon(Resource1.Logo);
-			this.Text	= c_Languages_.txt(10);	// 更新数据库
+			this.Icon	= IMAGE.img2icon(Resource1.Logo);
+			this.Text	= LANGUAGES.txt(10);	// 更新数据库
 		}
 
 		/*==============================================================
@@ -70,14 +70,14 @@ namespace sub_db
 
 			if(radioButton_UseLocalData.Checked)
 			{
-				append_log(c_Languages_.txt(54));	// 执行数据库更新...
+				append_log(LANGUAGES.txt(54));	// 执行数据库更新...
 
 				Thread th = new Thread(update_db_thread);
 				th.Start();
 			}
 			else
 			{
-				append_log(c_Languages_.txt(55));	// 正在从远程服务器下载数据库文件...
+				append_log(LANGUAGES.txt(55));	// 正在从远程服务器下载数据库文件...
 
 				WebClient wc = new WebClient();
 
@@ -99,28 +99,28 @@ namespace sub_db
 
 			if(e.Error != null)
 			{
-				append_log(c_Languages_.txt(63));	// 下载数据库文件失败
+				append_log(LANGUAGES.txt(63));	// 下载数据库文件失败
 				append_log(e.Error.Message);
 			}
 			else if(!e.Cancelled)
 			{
-				File.WriteAllBytes(c_Path_.m_k_DB_FILENAME, e.Result);
+				File.WriteAllBytes(PATH.m_k_DB_FILENAME, e.Result);
 
-				append_log(c_Languages_.txt(62));	// 下载数据库文件完成
+				append_log(LANGUAGES.txt(62));	// 下载数据库文件完成
 
-				c_Config_.m_s_last_updata_db_time = DateTime.Now;
-				c_Config_.write_config();
+				CONFIG.m_s_last_updata_db_time = DateTime.Now;
+				CONFIG.write_config();
 
 				// 加载数据
-				c_Data_.read_data_from_file();
+				DATA.read_data_from_file();
 			}
 
 			lock_controls(true);
 
 			if(m_is_stopping)
 			{
-				append_log(	string.Format(	c_Languages_.txt(57) + c_Languages_.txt(60),	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
-											c_Data_.m_s_all_subs.Count,
+				append_log(	string.Format(	LANGUAGES.txt(57) + LANGUAGES.txt(60),	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
+											DATA.m_s_all_subs.Count,
 											m_sw.Elapsed.ToString() ),
 							Color.Blue );
 			}
@@ -128,14 +128,14 @@ namespace sub_db
 			{
 				if(e.Error == null)
 				{
-					append_log(	string.Format(	c_Languages_.txt(58) + c_Languages_.txt(60),	// 更新数据库完成（合计 {0:d} 条数据，耗时 {1:s}）
-												c_Data_.m_s_all_subs.Count,
+					append_log(	string.Format(	LANGUAGES.txt(58) + LANGUAGES.txt(60),	// 更新数据库完成（合计 {0:d} 条数据，耗时 {1:s}）
+												DATA.m_s_all_subs.Count,
 												m_sw.Elapsed.ToString() ),
 								Color.Green );
 				}
 				else
 				{
-					append_log(c_Languages_.txt(59), Color.Red);	// 更新数据库失败
+					append_log(LANGUAGES.txt(59), Color.Red);	// 更新数据库失败
 				}
 			}
 
@@ -156,7 +156,7 @@ namespace sub_db
 			}
 
 			label_Log.Text = $"{e.BytesReceived}/{e.TotalBytesToReceive}({e.ProgressPercentage}%)";
-			c_Common_.SetProgressValue(e.ProgressPercentage * 100);
+			COMMON.SetProgressValue(e.ProgressPercentage * 100);
 		}
 
 		/*==============================================================
@@ -216,15 +216,14 @@ namespace sub_db
 		 *==============================================================*/
 		void update_db_thread()
 		{
-			if(!Directory.Exists(c_Config_.m_s_subs_path))
+			if(!Directory.Exists(CONFIG.m_s_subs_path))
 			{
-				void func()
+				FORMS.invoke(() =>
 				{
-					append_log(	$"{c_Languages_.txt(56)} {c_Config_.m_s_subs_path}",	// 找不到本地字幕路径
+					append_log(	$"{LANGUAGES.txt(56)} {CONFIG.m_s_subs_path}",	// 找不到本地字幕路径
 								Color.Red );
 					lock_controls(true);
-				}
-				c_Forms_.Invoke(func);
+				});
 
 				m_is_updating_database = false;
 				return;
@@ -234,33 +233,29 @@ namespace sub_db
 
 			long can_refresh_UI_tick = 0;
 
-			c_Data_.m_s_lock.EnterWriteLock();
+			DATA.m_s_lock.EnterWriteLock();
 
-			c_Data_.m_s_all_subs.Clear();
+			DATA.m_s_all_subs.Clear();
 
 			SortedSet<string> source_list = new SortedSet<string>();
 
+			FORMS.invoke(() =>
 			{
-				void func()
-				{
-					frm_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Clear();
-					frm_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add("");
+				frm_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Clear();
+				frm_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add("");
 
-					frm_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Clear();
+				frm_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Clear();
 
-					c_Common_.SetProgressValue(0);
-				}
-				c_Forms_.Invoke(func);
-			}
+				COMMON.SetProgressValue(0);
+			});
 
-			string[] dirs_type = Directory.GetDirectories(c_Config_.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
+			string[] dirs_type = Directory.GetDirectories(CONFIG.m_s_subs_path, "*.*", SearchOption.TopDirectoryOnly);
 			foreach(string dir_type in dirs_type)
 			{
-				void func()
+				FORMS.invoke(() =>
 				{
 					frm_Mainform.m_s_mainform.m_Search.comboBox_Type.Items.Add(Path.GetFileName(dir_type));
-				}
-				c_Forms_.Invoke(func);
+				});
 
 				string[] dirs_year = Directory.GetDirectories(dir_type, "*.*", SearchOption.TopDirectoryOnly);
 				for(int i_year=0; i_year<dirs_year.Length; ++i_year)
@@ -273,13 +268,12 @@ namespace sub_db
 						string dir_video = dirs_video[i_video];
 
 						// 路径
-						string path = dir_video.Substring(c_Config_.m_s_subs_path.Length + 1).Replace("\\", "/");
+						string path = dir_video.Substring(CONFIG.m_s_subs_path.Length + 1).Replace("\\", "/");
 
-						void update_label()
+						FORMS.invoke(() =>
 						{
 							label_Log.Text = dir_video;
-						}
-						c_Forms_.Invoke(update_label);
+						});
 
 						// 日期
 						string name_tmp = Path.GetFileName(dir_video);
@@ -410,8 +404,8 @@ namespace sub_db
 									}	// for
 								}
 
-								c_Data_.c_SubInfo sub_info = new c_Data_.c_SubInfo();
-								c_Data_.m_s_all_subs.Add(sub_info);
+								DATA.c_SubInfo sub_info = new DATA.c_SubInfo();
+								DATA.m_s_all_subs.Add(sub_info);
 
 								sub_info.m_name_chs		= name_chs;
 								sub_info.m_name_cht		= name_cht;
@@ -440,9 +434,9 @@ namespace sub_db
 						}	// for dirs_source
 
 						// 进度条
-						int progress_value =	c_Common_.m_k_MAX_PROGRESS_VALUE * i_year / dirs_year.Length	+
-												c_Common_.m_k_MAX_PROGRESS_VALUE * (i_video + 1) / (dirs_year.Length * dirs_video.Length);
-						c_Common_.SetProgressValue(progress_value);
+						int progress_value =	COMMON.m_k_MAX_PROGRESS_VALUE * i_year / dirs_year.Length	+
+												COMMON.m_k_MAX_PROGRESS_VALUE * (i_video + 1) / (dirs_year.Length * dirs_video.Length);
+						COMMON.SetProgressValue(progress_value);
 					}	// for dirs_video
 
 					if(can_refresh_UI_tick <= m_sw.ElapsedMilliseconds)
@@ -453,59 +447,55 @@ namespace sub_db
 				}	// for dirs_year
 			}	// for dirs_type
 
+			FORMS.invoke(() =>
 			{
-				void func()
-				{
-					foreach(string source in source_list)
-						frm_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Add(source);
+				foreach(string source in source_list)
+					frm_Mainform.m_s_mainform.m_Search.comboBox_Source.Items.Add(source);
 
-					c_Common_.SetProgressValue(0);
-				}
-				c_Forms_.Invoke(func);
-			}
+				COMMON.SetProgressValue(0);
+			});
 
-			c_Data_.m_s_lock.ExitWriteLock();
+			DATA.m_s_lock.ExitWriteLock();
 
-			void done_func()
+			FORMS.invoke(() =>
 			{
 				m_sw.Stop();
 
-				c_Config_.m_s_last_updata_db_time = DateTime.Now;
-				c_Config_.write_config();
+				CONFIG.m_s_last_updata_db_time = DateTime.Now;
+				CONFIG.write_config();
 
 				lock_controls(true);
 
-				c_Data_.data2dt();
+				DATA.data2dt();
 
-				append_log(string.Format(	c_Languages_.txt(61),	// 正在把数据写入到文件 {0:s} ...
-											c_Path_.m_k_DB_FILENAME ));
-				c_Data_.m_s_dt.WriteXml(c_Path_.m_k_DB_FILENAME);
+				append_log(string.Format(	LANGUAGES.txt(61),	// 正在把数据写入到文件 {0:s} ...
+											PATH.m_k_DB_FILENAME ));
+				DATA.m_s_dt.WriteXml(PATH.m_k_DB_FILENAME);
 
 				if(m_is_stopping)
 				{
-					append_log(	string.Format(	c_Languages_.txt(57) + c_Languages_.txt(60),	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
-												c_Data_.m_s_all_subs.Count,
+					append_log(	string.Format(	LANGUAGES.txt(57) + LANGUAGES.txt(60),	// 用户停止更新数据库（合计 {0:d} 条数据，耗时 {1:s}）
+												DATA.m_s_all_subs.Count,
 												m_sw.Elapsed.ToString() ),
 								Color.Blue );
 				}
 				else
 				{
-					append_log(	string.Format(	c_Languages_.txt(58) + c_Languages_.txt(60),	// 更新数据库完成（合计 {0:d} 条数据，耗时 {1:s}）
-												c_Data_.m_s_all_subs.Count,
+					append_log(	string.Format(	LANGUAGES.txt(58) + LANGUAGES.txt(60),	// 更新数据库完成（合计 {0:d} 条数据，耗时 {1:s}）
+												DATA.m_s_all_subs.Count,
 												m_sw.Elapsed.ToString() ),
 								Color.Green );
 				}
 
-				frm_Mainform.m_s_mainform.m_DataGridView_event_enable = false;
-				frm_Mainform.m_s_mainform.dataGridView_Main.DataSource = c_Data_.m_s_dt;
+				frm_Mainform.m_s_mainform.m_DataGridView_event_enable	= false;
+				frm_Mainform.m_s_mainform.dataGridView_Main.DataSource	= DATA.m_s_dt;
 				frm_Mainform.m_s_mainform.update_columns_style();
-				frm_Mainform.m_s_mainform.m_DataGridView_event_enable = true;
+				frm_Mainform.m_s_mainform.m_DataGridView_event_enable	= true;
 
 				frm_Mainform.m_s_mainform.update_status();
 
 				m_is_stopping = false;
-			}
-			c_Forms_.Invoke(done_func);
+			});
 
 			m_is_updating_database = false;
 		}

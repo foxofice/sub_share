@@ -23,7 +23,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_Setting_Load(object sender, EventArgs e)
 		{
-			this.Icon	= c_Image_.img2icon(Resource1.Logo);
+			this.Icon	= IMAGE.img2icon(Resource1.Logo);
 
 			update_UI();
 		}
@@ -56,9 +56,9 @@ namespace sub_db
 		 *==============================================================*/
 		private void Button_OK_Click(object sender, EventArgs e)
 		{
-			c_Config_.m_s_subs_path = textBox_subs_path.Text;
+			CONFIG.m_s_subs_path = textBox_subs_path.Text;
 
-			c_Config_.write_config();
+			CONFIG.write_config();
 			this.Close();
 		}
 		#endregion
@@ -68,7 +68,7 @@ namespace sub_db
 		 *==============================================================*/
 		internal void	update_UI()
 		{
-			textBox_subs_path.Text = c_Config_.m_s_subs_path;
+			textBox_subs_path.Text = CONFIG.m_s_subs_path;
 		}
 	};
 }	// namespace sub_db

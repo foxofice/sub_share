@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
+using Microsoft.International.Converters.TraditionalChineseToSimplifiedConverter;
 
 namespace sub_db
 {
@@ -35,18 +37,18 @@ namespace sub_db
 		{
 			m_s_mainform	= this;
 
-			this.Icon		= c_Image_.img2icon(Resource1.Logo);
-			this.Text		= $"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}";
+			this.Icon		= IMAGE.img2icon(Resource1.Logo);
+			this.Text		= $"{COMMON.m_k_PROGRAM_NAME} {COMMON.m_k_VERSION}";
 
 			// 读取配置文件
-			c_Config_.read_config();
+			CONFIG.read_config();
 
 			// 加载多语言模板
-			c_Languages_.read_languages_list();
-			c_Languages_.change_language_to_default();
+			LANGUAGES.read_languages_list();
+			LANGUAGES.change_language_to_default();
 
 			// 加载数据库文件
-			c_Data_.read_data_from_file();
+			DATA.read_data_from_file();
 		}
 
 		/*==============================================================
@@ -54,8 +56,8 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_Mainform_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if(MessageBox.Show(	c_Languages_.txt(1),	// 是否要退出程序？
-								$"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}",
+			if(MessageBox.Show(	LANGUAGES.txt(1),	// 是否要退出程序？
+								$"{COMMON.m_k_PROGRAM_NAME} {COMMON.m_k_VERSION}",
 								MessageBoxButtons.YesNo,
 								MessageBoxIcon.Question,
 								MessageBoxDefaultButton.Button2 ) == DialogResult.No)
@@ -70,12 +72,12 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_Mainform_ResizeEnd(object sender, EventArgs e)
 		{
-			c_Config_.m_s_window_width	= this.Width;
-			c_Config_.m_s_window_height	= this.Height;
-			c_Config_.m_s_window_x		= this.DesktopLocation.X;
-			c_Config_.m_s_window_y		= this.DesktopLocation.Y;
+			CONFIG.m_s_window_width		= this.Width;
+			CONFIG.m_s_window_height	= this.Height;
+			CONFIG.m_s_window_x			= this.DesktopLocation.X;
+			CONFIG.m_s_window_y			= this.DesktopLocation.Y;
 
-			c_Config_.write_config();
+			CONFIG.write_config();
 		}
 
 		/*==============================================================
@@ -84,28 +86,16 @@ namespace sub_db
 		private void frm_Mainform_Activated(object sender, EventArgs e)
 		{
 			// Alt + Enter
-			c_Common_.RegHotKey(this.Handle,
-								(int)c_Common_.e_HotKeyID.OpenDir,
-								c_Common_.e_KeyModifiers.Alt,
-								Keys.Enter);
+			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.OpenDir,	COMMON.e_KeyModifiers.Alt,	Keys.Enter);
 
 			// F1
-			c_Common_.RegHotKey(this.Handle,
-								(int)c_Common_.e_HotKeyID.OpenURL,
-								c_Common_.e_KeyModifiers.None,
-								Keys.F1);
+			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.OpenURL,	COMMON.e_KeyModifiers.None,	Keys.F1);
 
 			// F3
-			c_Common_.RegHotKey(this.Handle,
-								(int)c_Common_.e_HotKeyID.Search,
-								c_Common_.e_KeyModifiers.None,
-								Keys.F3);
+			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.Search,	COMMON.e_KeyModifiers.None,	Keys.F3);
 
 			// F5
-			c_Common_.RegHotKey(this.Handle,
-								(int)c_Common_.e_HotKeyID.UpdateDB,
-								c_Common_.e_KeyModifiers.None,
-								Keys.F5);
+			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.UpdateDB,	COMMON.e_KeyModifiers.None,	Keys.F5);
 		}
 
 		/*==============================================================
@@ -113,8 +103,8 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_Mainform_Deactivate(object sender, EventArgs e)
 		{
-			for(int i=1; i<(int)c_Common_.e_HotKeyID.MAX; ++i)
-				c_Common_.UnregisterHotKey(this.Handle, i);
+			for(int i=1; i<(int)COMMON.e_HotKeyID.MAX; ++i)
+				COMMON.UnregisterHotKey(this.Handle, i);
 		}
 
 		/*==============================================================
@@ -130,19 +120,19 @@ namespace sub_db
 			case WM_HOTKEY:
 				switch(msg.WParam.ToInt32())
 				{
-				case (int)c_Common_.e_HotKeyID.OpenDir:
+				case (int)COMMON.e_HotKeyID.OpenDir:
 					ToolStripButton_Folder_Click(null, null);
 					break;
 
-				case (int)c_Common_.e_HotKeyID.OpenURL:
+				case (int)COMMON.e_HotKeyID.OpenURL:
 					ToolStripButton_URL_Click(null, null);
 					break;
 
-				case (int)c_Common_.e_HotKeyID.Search:
+				case (int)COMMON.e_HotKeyID.Search:
 					ToolStripButton_Search_Click(null, null);
 					break;
 
-				case (int)c_Common_.e_HotKeyID.UpdateDB:
+				case (int)COMMON.e_HotKeyID.UpdateDB:
 					ToolStripButton_UpdateDB_Click(null, null);
 					break;
 				}
@@ -175,13 +165,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void LinkLabel_FilterHelp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			try
-			{
-				System.Diagnostics.Process.Start("https://www.csharp-examples.net/dataview-rowfilter/");
-			}
-			catch(Exception)
-			{
-			}
+			Process.Start("https://www.csharp-examples.net/dataview-rowfilter/");
 		}
 
 		/*==============================================================
@@ -192,10 +176,10 @@ namespace sub_db
 			if(!m_DataGridView_event_enable)
 				return;
 
-			for(int i=0; i<(int)c_Data_.e_ColumnName.MAX; ++i)
-				c_Config_.m_s_column_width[i] = dataGridView_Main.Columns[((c_Data_.e_ColumnName)i).ToString()].Width;
+			for(int i=0; i<(int)DATA.e_ColumnName.MAX; ++i)
+				CONFIG.m_s_column_width[i] = dataGridView_Main.Columns[((DATA.e_ColumnName)i).ToString()].Width;
 
-			c_Config_.write_config();
+			CONFIG.write_config();
 		}
 
 		/*==============================================================
@@ -206,10 +190,10 @@ namespace sub_db
 			if(!m_DataGridView_event_enable)
 				return;
 
-			for(int i=0; i<(int)c_Data_.e_ColumnName.MAX; ++i)
-				c_Config_.m_s_column_idx[i] = dataGridView_Main.Columns[((c_Data_.e_ColumnName)i).ToString()].DisplayIndex;
+			for(int i=0; i<(int)DATA.e_ColumnName.MAX; ++i)
+				CONFIG.m_s_column_idx[i] = dataGridView_Main.Columns[((DATA.e_ColumnName)i).ToString()].DisplayIndex;
 
-			c_Config_.write_config();
+			CONFIG.write_config();
 		}
 		#endregion
 
@@ -219,7 +203,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void ToolStripButton_UpdateDB_Click(object sender, EventArgs e)
 		{
-			c_Forms_.active_form(m_UpdateDatabase);
+			FORMS.active_form(m_UpdateDatabase);
 		}
 
 		/*==============================================================
@@ -227,7 +211,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void ToolStripButton_Search_Click(object sender, EventArgs e)
 		{
-			c_Forms_.active_form(m_Search);
+			FORMS.active_form(m_Search);
 		}
 
 		/*==============================================================
@@ -235,7 +219,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void ToolStripButton_Settings_Click(object sender, EventArgs e)
 		{
-			c_Forms_.active_form(m_Setting);
+			FORMS.active_form(m_Setting);
 		}
 
 		/*==============================================================
@@ -243,7 +227,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void ToolStripButton_About_Click(object sender, EventArgs e)
 		{
-			c_Forms_.active_form(m_About);
+			FORMS.active_form(m_About);
 		}
 
 		/*==============================================================
@@ -261,18 +245,18 @@ namespace sub_db
 			DataRow dr = ((DataRowView)dataGridView_Main.SelectedCells[0].OwningRow.DataBoundItem).Row;
 
 			string dir = string.Format("{0:s}/{1:s}/{2:s}/{3:s}",
-										c_Config_.m_s_subs_path.Replace("\\", "/"),
-										(string)dr[c_Data_.e_ColumnName.path.ToString()],
-										(string)dr[c_Data_.e_ColumnName.source.ToString()],
-										(string)dr[c_Data_.e_ColumnName.sub_name.ToString()]);
+										CONFIG.m_s_subs_path.Replace("\\", "/"),
+										(string)dr[DATA.e_ColumnName.path.ToString()],
+										(string)dr[DATA.e_ColumnName.source.ToString()],
+										(string)dr[DATA.e_ColumnName.sub_name.ToString()]);
 
 			if(!Directory.Exists(dir))
 			{
-				MessageBox.Show(string.Format(c_Languages_.txt(25), dir));	// 找不到文件夹 {0:s}
+				MessageBox.Show(string.Format(LANGUAGES.txt(25), dir));	// 找不到文件夹 {0:s}
 				return;
 			}
 
-			c_Path_.open_dir(dir);
+			PATH.open_dir(dir);
 		}
 
 		/*==============================================================
@@ -290,19 +274,11 @@ namespace sub_db
 			DataRow dr = ((DataRowView)dataGridView_Main.SelectedCells[0].OwningRow.DataBoundItem).Row;
 
 			string dir = string.Format("{0:s}/{1:s}/{2:s}",
-										(string)dr[c_Data_.e_ColumnName.path.ToString()],
-										(string)dr[c_Data_.e_ColumnName.source.ToString()],
-										(string)dr[c_Data_.e_ColumnName.sub_name.ToString()]);
+										(string)dr[DATA.e_ColumnName.path.ToString()],
+										(string)dr[DATA.e_ColumnName.source.ToString()],
+										(string)dr[DATA.e_ColumnName.sub_name.ToString()]);
 
-			string url = $"https://github.com/foxofice/sub_share/tree/master/subs_list/{dir}";
-
-			try
-			{
-				System.Diagnostics.Process.Start(url);
-			}
-			catch(Exception)
-			{
-			}
+			Process.Start($"https://github.com/foxofice/sub_share/tree/master/subs_list/{dir}");
 		}
 		#endregion
 
@@ -313,18 +289,18 @@ namespace sub_db
 		{
 			m_DataGridView_event_enable = false;
 
-			for(int i=0; i<c_Config_.m_s_column_width.Length; ++i)
+			for(int i=0; i<CONFIG.m_s_column_width.Length; ++i)
 			{
-				if(c_Config_.m_s_column_width[i] > 0)
-					dataGridView_Main.Columns[((c_Data_.e_ColumnName)i).ToString()].Width = c_Config_.m_s_column_width[i];
+				if(CONFIG.m_s_column_width[i] > 0)
+					dataGridView_Main.Columns[((DATA.e_ColumnName)i).ToString()].Width = CONFIG.m_s_column_width[i];
 			}
 
 			SortedDictionary<int, string> sort_list = new SortedDictionary<int, string>();
 
-			for(int i=0; i<c_Config_.m_s_column_idx.Length; ++i)
+			for(int i=0; i<CONFIG.m_s_column_idx.Length; ++i)
 			{
-				if(c_Config_.m_s_column_idx[i] >= 0)
-					sort_list.Add(c_Config_.m_s_column_idx[i], ((c_Data_.e_ColumnName)i).ToString());
+				if(CONFIG.m_s_column_idx[i] >= 0)
+					sort_list.Add(CONFIG.m_s_column_idx[i], ((DATA.e_ColumnName)i).ToString());
 			}
 
 			foreach(var kvp in sort_list)
@@ -338,21 +314,21 @@ namespace sub_db
 		 *==============================================================*/
 		internal void	do_search()
 		{
-			c_Data_.m_s_lock.EnterReadLock();
+			DATA.m_s_lock.EnterReadLock();
 
-			if(c_Data_.m_s_all_subs.Count == 0)
+			if(DATA.m_s_all_subs.Count == 0)
 			{
-				c_Data_.m_s_lock.ExitReadLock();
+				DATA.m_s_lock.ExitReadLock();
 
 				if(!m_UpdateDatabase.m_is_updating_database)
 				{
-					if(MessageBox.Show(	c_Languages_.txt(26),	// 本地没有任何数据，是否要下载最新的字幕索引？
-										$"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}",
+					if(MessageBox.Show(	LANGUAGES.txt(26),	// 本地没有任何数据，是否要下载最新的字幕索引？
+										$"{COMMON.m_k_PROGRAM_NAME} {COMMON.m_k_VERSION}",
 										MessageBoxButtons.YesNo,
 										MessageBoxIcon.Question,
 										MessageBoxDefaultButton.Button2 ) == DialogResult.Yes)
 					{
-						c_Forms_.active_form(m_UpdateDatabase);
+						FORMS.active_form(m_UpdateDatabase);
 
 						m_UpdateDatabase.radioButton_UseRemoteData.Checked = true;
 						m_UpdateDatabase.PictureBox_Start_Click(null, null);
@@ -365,7 +341,7 @@ namespace sub_db
 			if(textBox_Filter.TextLength == 0)
 			{
 				m_DataGridView_event_enable = false;
-				dataGridView_Main.DataSource = c_Data_.m_s_dt;
+				dataGridView_Main.DataSource = DATA.m_s_dt;
 				update_columns_style();
 				m_DataGridView_event_enable = true;
 			}
@@ -377,13 +353,14 @@ namespace sub_db
 				{
 					StringBuilder sb = new StringBuilder();
 
-					string fix_Name = c_SQL.fix_string(textBox_Filter.Text);
+					string fix_Name_chs = SQL.fix_string(ChineseConverter.Convert(textBox_Filter.Text, ChineseConversionDirection.TraditionalToSimplified));
+					string fix_Name_cht = SQL.fix_string(ChineseConverter.Convert(textBox_Filter.Text, ChineseConversionDirection.SimplifiedToTraditional));
 
-					sb.Append($"[name_chs] like '%{fix_Name}%' or ");
-					sb.Append($"[name_cht] like '%{fix_Name}%' or ");
-					sb.Append($"[name_jp] like '%{fix_Name}%' or ");
-					sb.Append($"[name_en] like '%{fix_Name}%' or ");
-					sb.Append($"[name_rome] like '%{fix_Name}%'");
+					sb.Append($"[name_chs] like '%{fix_Name_chs}%' or [name_chs] like '%{fix_Name_cht}%' or ");
+					sb.Append($"[name_cht] like '%{fix_Name_chs}%' or [name_cht] like '%{fix_Name_cht}%' or ");
+					sb.Append($"[name_jp] like '%{fix_Name_chs}%' or [name_jp] like '%{fix_Name_cht}%' or ");
+					sb.Append($"[name_en] like '%{fix_Name_chs}%' or ");
+					sb.Append($"[name_rome] like '%{fix_Name_chs}%'");
 
 					filter_string = sb.ToString();
 				}
@@ -392,20 +369,20 @@ namespace sub_db
 
 				try
 				{
-					DataRow[] dr_list = c_Data_.m_s_dt.Select(filter_string);
+					DataRow[] dr_list = DATA.m_s_dt.Select(filter_string);
 
-					c_Data_.m_s_dt_search.Rows.Clear();
+					DATA.m_s_dt_search.Rows.Clear();
 					foreach(DataRow dr in dr_list)
 					{
-						DataRow dr_tmp = c_Data_.m_s_dt_search.NewRow();
-						for(int i=0; i<c_Data_.m_s_dt_search.Columns.Count; ++i)
+						DataRow dr_tmp = DATA.m_s_dt_search.NewRow();
+						for(int i=0; i<DATA.m_s_dt_search.Columns.Count; ++i)
 							dr_tmp[i] = dr[i];
 
-						c_Data_.m_s_dt_search.Rows.Add(dr_tmp);
+						DATA.m_s_dt_search.Rows.Add(dr_tmp);
 					}
 
 					m_DataGridView_event_enable = false;
-					dataGridView_Main.DataSource = c_Data_.m_s_dt_search;
+					dataGridView_Main.DataSource = DATA.m_s_dt_search;
 					update_columns_style();
 					m_DataGridView_event_enable = true;
 				}
@@ -415,7 +392,7 @@ namespace sub_db
 				}
 			}
 
-			c_Data_.m_s_lock.ExitReadLock();
+			DATA.m_s_lock.ExitReadLock();
 
 			update_status();
 		}
@@ -425,7 +402,7 @@ namespace sub_db
 		 *==============================================================*/
 		internal void	update_status()
 		{
-			toolStripStatusLabel_ItemsCount.Text = string.Format(	c_Languages_.txt(23),	// {0:d} 条记录
+			toolStripStatusLabel_ItemsCount.Text = string.Format(	LANGUAGES.txt(23),	// {0:d} 条记录
 																	dataGridView_Main.Rows.Count );
 
 			DataTable dt = (DataTable)dataGridView_Main.DataSource;
@@ -434,9 +411,9 @@ namespace sub_db
 				HashSet<string> movies = new HashSet<string>();
 
 				foreach(DataRow dr in dt.Rows)
-					movies.Add((string)dr[c_Data_.e_ColumnName.path.ToString()]);
+					movies.Add((string)dr[DATA.e_ColumnName.path.ToString()]);
 
-				toolStripStatusLabel_MovieCount.Text = string.Format(	c_Languages_.txt(24),	// {0:d} 部影片
+				toolStripStatusLabel_MovieCount.Text = string.Format(	LANGUAGES.txt(24),	// {0:d} 部影片
 																		movies.Count );
 			}
 		}

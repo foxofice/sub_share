@@ -1,11 +1,11 @@
-¡¾TV¡¿ 
-×ÖÄ»£ºass, ÖĞÎÄ, ÄÚ¹Ò [original from Cradle&Hakugetsu,ocr by yexuanren(6-8)&Yurichan.org(9-13)] 
+ã€TVã€‘ 
+å­—å¹•ï¼šass, ä¸­æ–‡, å†…æŒ‚ [original from Cradle&Hakugetsu,ocr by yexuanren(6-8)&Yurichan.org(9-13)] 
 
-¡¾OAD¡¿ 
+ã€OADã€‘ 
 
-×ÖÄ»1£ºass, chinese, internal [original from Hakugetsu,ocr by Yurichan.org] 
-×ÖÄ»2£º[¥¢¥Ë¥á DVD] ¤¸¤ç¤·¤é¤¯ OAD¡¸Ì¨ŸoÎİ£¯ÈıÜ±¾Îİ£¯¤Ó¤Ã¤¯¤ê¼¯ÖĞ¡¹(1280¡Á720 AVC 10bit AACx2 softSub(chi+eng) chap).¸Ä 
-ÔÚ1µÄÇ°ÌáÏÂÔö¼Ó×¢ÊÍ
+å­—å¹•1ï¼šass, chinese, internal [original from Hakugetsu,ocr by Yurichan.org] 
+å­—å¹•2ï¼š[ã‚¢ãƒ‹ãƒ¡ DVD] ã˜ã‚‡ã—ã‚‰ã OADã€Œå°ç„¡å±‹ï¼ä¸‰è»’æœ¬å±‹ï¼ã³ã£ãã‚Šé›†ä¸­ã€(1280Ã—720 AVC 10bit AACx2 softSub(chi+eng) chap).æ”¹ 
+åœ¨1çš„å‰æä¸‹å¢åŠ æ³¨é‡Š
 
 welcome to Yurichan.org
-°ÙºÏÀÖÔ°
+ç™¾åˆä¹å›­

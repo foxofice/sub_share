@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace sub_db
 {
@@ -24,16 +25,16 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_About_Load(object sender, EventArgs e)
 		{
-			this.Icon				= c_Image_.img2icon(Resource1.Logo);
+			this.Icon				= IMAGE.img2icon(Resource1.Logo);
 			this.Text				= string.Format("{0:s} {1:s} {2:s}",
-													c_Languages_.txt(14),	// 关于
-													c_Common_.m_k_PROGRAM_NAME,
-													c_Common_.m_k_VERSION);
+													LANGUAGES.txt(14),	// 关于
+													COMMON.m_k_PROGRAM_NAME,
+													COMMON.m_k_VERSION);
 
 			pictureBox_Icon.Image	= Resource1.Logo;
 
-			if(File.Exists(c_Path_.m_k_CHANGELOG_FILENAME))
-				textBox_ChangeLog.Text = File.ReadAllText(c_Path_.m_k_CHANGELOG_FILENAME, Encoding.UTF8);
+			if(File.Exists(PATH.m_k_CHANGELOG_FILENAME))
+				textBox_ChangeLog.Text = File.ReadAllText(PATH.m_k_CHANGELOG_FILENAME, Encoding.UTF8);
 		}
 
 		/*==============================================================
@@ -50,13 +51,7 @@ namespace sub_db
 		 *==============================================================*/
 		private void LinkLabel_Website_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			try
-			{
-				System.Diagnostics.Process.Start(linkLabel_Website.Text);
-			}
-			catch (Exception)
-			{
-			}
+			Process.Start(linkLabel_Website.Text);
 		}
 
 		/*==============================================================

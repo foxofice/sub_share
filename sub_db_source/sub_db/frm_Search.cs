@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.International.Converters.TraditionalChineseToSimplifiedConverter;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,8 +24,8 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_Search_Load(object sender, EventArgs e)
 		{
-			this.Icon	= c_Image_.img2icon(Resource1.Logo);
-			this.Text	= string.Format(c_Languages_.txt(11));	// 高级查找
+			this.Icon	= IMAGE.img2icon(Resource1.Logo);
+			this.Text	= string.Format(LANGUAGES.txt(11));	// 高级查找
 		}
 
 		/*==============================================================
@@ -52,8 +53,8 @@ namespace sub_db
 		 *==============================================================*/
 		private void LinkLabel_Reset_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			if(MessageBox.Show(	c_Languages_.txt(80),	// 是否重置搜索条件？
-								$"{c_Common_.m_k_PROGRAM_NAME} {c_Common_.m_k_VERSION}",
+			if(MessageBox.Show(	LANGUAGES.txt(80),	// 是否重置搜索条件？
+								$"{COMMON.m_k_PROGRAM_NAME} {COMMON.m_k_VERSION}",
 								MessageBoxButtons.YesNo,
 								MessageBoxIcon.Question,
 								MessageBoxDefaultButton.Button2 ) == DialogResult.No)
@@ -84,20 +85,21 @@ namespace sub_db
 			{
 				++count;
 
-				string fix_Name = c_SQL.fix_string(textBox_Name.Text);
+				string fix_Name_chs = SQL.fix_string(ChineseConverter.Convert(textBox_Name.Text, ChineseConversionDirection.TraditionalToSimplified));
+				string fix_Name_cht = SQL.fix_string(ChineseConverter.Convert(textBox_Name.Text, ChineseConversionDirection.SimplifiedToTraditional));
 
-				sb.Append($"([name_chs] like '%{fix_Name}%' or ");
-				sb.Append($"[name_cht] like '%{fix_Name}%' or ");
-				sb.Append($"[name_jp] like '%{fix_Name}%' or ");
-				sb.Append($"[name_en] like '%{fix_Name}%' or ");
-				sb.Append($"[name_rome] like '%{fix_Name}%')");
+				sb.Append($"([name_chs] like '%{fix_Name_chs}%' or [name_chs] like '%{fix_Name_cht}%' or ");
+				sb.Append($"[name_cht] like '%{fix_Name_chs}%' or [name_cht] like '%{fix_Name_cht}%' or ");
+				sb.Append($"[name_jp] like '%{fix_Name_chs}%' or [name_jp] like '%{fix_Name_cht}%' or ");
+				sb.Append($"[name_en] like '%{fix_Name_chs}%' or ");
+				sb.Append($"[name_rome] like '%{fix_Name_chs}%')");
 			}
 
 			if(textBox_SubName.TextLength > 0)
 			{
 				++count;
 
-				string fix_SubName = c_SQL.fix_string(textBox_SubName.Text);
+				string fix_SubName = SQL.fix_string(textBox_SubName.Text);
 
 				if(sb.Length > 0)
 					sb.Append(" and ");
@@ -109,7 +111,7 @@ namespace sub_db
 			{
 				++count;
 
-				string fix_Extension = c_SQL.fix_string(textBox_Extension.Text);
+				string fix_Extension = SQL.fix_string(textBox_Extension.Text);
 
 				if(sb.Length > 0)
 					sb.Append(" and ");
@@ -121,7 +123,7 @@ namespace sub_db
 			{
 				++count;
 
-				string fix_Providers = c_SQL.fix_string(textBox_Providers.Text);
+				string fix_Providers = SQL.fix_string(textBox_Providers.Text);
 
 				if(sb.Length > 0)
 					sb.Append(" and ");
@@ -133,7 +135,7 @@ namespace sub_db
 			{
 				++count;
 
-				string fix_Desc = c_SQL.fix_string(textBox_Desc.Text);
+				string fix_Desc = SQL.fix_string(textBox_Desc.Text);
 
 				if(sb.Length > 0)
 					sb.Append(" and ");
@@ -145,7 +147,7 @@ namespace sub_db
 			{
 				++count;
 
-				string fix_Type = c_SQL.fix_string(comboBox_Type.Text);
+				string fix_Type = SQL.fix_string(comboBox_Type.Text);
 
 				if(sb.Length > 0)
 					sb.Append(" and ");
@@ -157,7 +159,7 @@ namespace sub_db
 			{
 				++count;
 
-				string fix_Source = c_SQL.fix_string(comboBox_Source.Text);
+				string fix_Source = SQL.fix_string(comboBox_Source.Text);
 
 				if(sb.Length > 0)
 					sb.Append(" and ");

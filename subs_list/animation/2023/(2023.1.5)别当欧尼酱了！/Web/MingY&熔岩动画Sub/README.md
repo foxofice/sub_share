@@ -1,0 +1,56 @@
+# src: https://github.com/MingYSub/SubArchive/tree/main/Archive/Onii-chan%20wa%20Oshimai!
+
+# 别当哥哥了！ / Onii-chan wa Oshimai!
+| 剧集 | 中文标题 | 对应片源 | 字幕 |
+| ---- | -------- | -------- | ---- |
+| 01 | 真寻与不得了的身体 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B01%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B01%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B01%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B01%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B01%5D.JPN.ass) |
+| 02 | 真寻与女孩子之日 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B02%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B02%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B02%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B02%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B02%5D.JPN.ass) |
+| 03 | 真寻与未知的遭遇 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B03%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B03%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B03%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B03%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B03%5D.JPN.ass) |
+| 04 | 真寻与新朋友 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B04%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B04%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B04%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B04%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B04%5D.JPN.ass) |
+| 05 | 真寻与辅导与邀约 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B05%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B05%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B05%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B05%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B05%5D.JPN.ass) |
+| 06 | 真寻与第二回的初中生 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B06%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B06%5D.CHT_JPN.ass)　简体　繁體　日本語 |
+| 07 | 真寻与角色扮演 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B07%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B07%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B07%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B07%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B07%5D.JPN.ass) |
+| 08 | 真寻与第一次的女子聚会 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B08%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B08%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B08%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B08%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B08%5D.JPN.ass) |
+| 09 | 真寻与年末年初 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B09%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B09%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B097%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B09%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B09%5D.JPN.ass) |
+| 10 | 真寻与胸部与自我认同 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B10%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B10%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B10%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B10%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B10%5D.JPN.ass) |
+| 11 | 真寻与女孩子的兴趣爱好 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B11%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B11%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B11%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B11%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B11%5D.JPN.ass) |
+| 12 | 真寻的结束与从今往后 | Web | [简日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B12%5D.CHS_JPN.ass)　[繁日](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B12%5D.CHT_JPN.ass)　[简体](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B12%5D.CHS.ass)　[繁體](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B12%5D.CHT.ass)　[日本語](https://raw.githubusercontent.com/MingYSub/SubArchive/main/Archive/Onii-chan%20wa%20Oshimai!/%5BMingY%26LavaAnimeSub%5D%20Onii-chan%20wa%20Oshimai!%20%5B12%5D.JPN.ass) |
+
+[PV](PV)
+
+# Staff
+本字幕与 **熔岩动画Sub** 联合制作
+
+**翻译：** 小圆香径独徘徊　Xeryon　last order
+
+**时轴：** Magma　Ming
+
+**压制：** Magma
+
+**海报：** Ming
+
+注：繁化由 [繁化姬](https://zhconvert.org) 完成。
+
+# 所需字体
+字体下载（将在完成全部字幕后提供网盘链接，不包含思源黑体各版本）
+
+```
+FOT-Popジョイ Std B <FOT-PopJoy Std B>
+FOT-スーラ ProN B <FOT-Seurat ProN B>
+FOT-スーラ ProN DB <FOT-Seurat ProN DB>
+Microsoft Sans Serif
+冬青黑体繁体中文 W6 <Hiragino Sans TC W6>
+冬青黑体简体中文 W6 <Hiragino Sans GB W6>
+方正兰亭圆_GBK_粗 <FZLanTingYuan-B-GBK>
+方正兰亭圆_GBK_大 <FZLanTingYuan-EB-GBK>
+方正兰亭圆_GBK_特 <FZLanTingYuan-H-GBK>
+方正兰亭圆_GBK_中粗 <FZLanTingYuan-DB1-GBK>
+方正少儿_GBK <FZShaoEr-M11>
+方正艺黑_GBK <FZYiHei-M20>
+方正中雅宋_GBK <FZYaSong-DB-GBK>
+更纱黑体 SC <Sarasa Gothic SC>
+更纱黑体 SC Bold <Sarasa Gothic SC Bold>
+更纱黑体 SC Semibold <Sarasa Gothic SC Semibold>
+華康方圓體W7 <DFFangYuanW7-B5>
+思源黑体 CN Bold <Source Han Sans CN Bold>
+```

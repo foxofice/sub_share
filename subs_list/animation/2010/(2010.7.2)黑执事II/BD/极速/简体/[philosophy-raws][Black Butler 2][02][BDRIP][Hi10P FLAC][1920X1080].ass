@@ -1,0 +1,418 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 漫游字幕
+Original Script: 漫游字幕组
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,方正小标宋_GBK,50,&H00FFFFFF,&HF0000000,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,2,2,2,30,30,10,134
+Style: 1,DFPKanTeiRyu-XB,35,&H000F0F0F,&HF0000000,&H00FFFFFF,&HF0000000,-1,0,0,0,100,100,0,0,1,2,1,1,30,30,10,128
+Style: 2,PlainBlack,60,&H000F0F0F,&HF0000000,&H00FFFFFF,&HF0000000,-1,0,0,0,100,100,0,0,1,2,1,2,30,30,10,0
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:04.89,0:00:06.45,Default,NTP,0,0,0,,能听见水声
+Dialogue: 0,0:00:09.97,0:00:11.33,Default,NTP,0,0,0,,眼帘可以感觉到
+Dialogue: 0,0:00:12.43,0:00:14.74,Default,NTP,0,0,0,,这是夏天的阳光
+Dialogue: 0,0:00:22.01,0:00:25.11,Default,NTP,0,0,0,,我是在做梦吗
+Dialogue: 0,0:00:26.83,0:00:30.40,Default,NTP,0,0,0,,倒映在梦之泉中的是故事的续篇
+Dialogue: 0,0:00:31.25,0:00:33.17,Default,NTP,0,0,0,,闪烁着黄金光泽的午后
+Dialogue: 0,0:00:34.29,0:00:37.33,Default,NTP,0,0,0,,如果从梦中醒来的话 可以看到什么
+Dialogue: 0,0:00:42.78,0:00:43.63,Default,NTP,0,0,0,,那么 少爷
+Dialogue: 0,0:00:44.81,0:00:45.72,Default,NTP,0,0,0,,请睁开眼睛
+Dialogue: 0,0:00:48.48,0:00:49.36,Default,NTP,0,0,0,,塞巴斯蒂安
+Dialogue: 0,0:00:51.88,0:00:53.47,Default,NTP,0,0,0,,您休息了很久呢
+Dialogue: 0,0:01:08.15,0:01:11.08,Default,NTP,0,0,0,,少爷 我们马上就要到了
+Dialogue: 0,0:01:12.45,0:01:13.96,Default,NTP,0,0,0,,到工作的时间了哦
+Dialogue: 0,0:01:20.05,0:01:23.64,1,NTP,0,0,0,,{\fad(200,200)\blur1}たとえ終わる事の無い
+Dialogue: 0,0:01:20.05,0:01:23.64,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}tatoe owaru koto no nai
+Dialogue: 0,0:01:23.91,0:01:27.41,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}kanashimi ga anata ubattemo
+Dialogue: 0,0:01:23.91,0:01:27.41,1,NTP,0,0,0,,{\fad(200,200)\blur1}悲しみがあなた奪っても
+Dialogue: 0,0:01:28.06,0:01:31.63,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}hanarete yuku kokoro nado
+Dialogue: 0,0:01:28.06,0:01:31.63,1,NTP,0,0,0,,{\fad(200,200)\blur1}離れてゆく心など
+Dialogue: 0,0:01:31.90,0:01:34.52,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}koko ni wa nai to itte
+Dialogue: 0,0:01:31.90,0:01:34.52,1,NTP,0,0,0,,{\fad(200,200)\blur1}此処には無いと言って
+Dialogue: 0,0:01:42.79,0:01:44.34,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}kakeyotta senaka ni
+Dialogue: 0,0:01:42.79,0:01:44.34,1,NTP,0,0,0,,{\fad(200,200)\blur1}駆け寄った背中に
+Dialogue: 0,0:01:44.84,0:01:49.54,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}toikakeru ashita ga donna katachi demo
+Dialogue: 0,0:01:44.84,0:01:49.54,1,NTP,0,0,0,,{\fad(200,200)\blur1}問いかける明日がどんあ形でも
+Dialogue: 0,0:01:50.69,0:01:52.57,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}yuruga nakatta no wa mou
+Dialogue: 0,0:01:50.69,0:01:52.57,1,NTP,0,0,0,,{\fad(200,200)\blur1}揺るがなかったのはもう
+Dialogue: 0,0:01:52.64,0:01:57.29,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}shinjiru koto wo wasuretaku nakatta kara
+Dialogue: 0,0:01:52.64,0:01:57.29,1,NTP,0,0,0,,{\fad(200,200)\blur1}信じる事を忘れたくなかったから
+Dialogue: 0,0:01:58.65,0:02:05.70,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}me wo sorasu kuse mo aimai na taido mo waraenu uso mo
+Dialogue: 0,0:01:58.65,0:02:05.70,1,NTP,0,0,0,,{\fad(200,200)\blur1}目を逸らす癖も 曖昧な回答も 笑えぬ嘘も
+Dialogue: 0,0:02:06.76,0:02:12.97,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}tonari ni inakereba ima sae nijin de yuku
+Dialogue: 0,0:02:06.76,0:02:12.97,1,NTP,0,0,0,,{\fad(200,200)\blur1}隣に居なければ意味さえ 滲んでゆく
+Dialogue: 0,0:02:13.87,0:02:17.67,1,NTP,0,0,0,,{\fad(200,200)\blur1}たとえ終わる事の無い
+Dialogue: 0,0:02:13.87,0:02:17.67,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}tatoe owaru koto no nai
+Dialogue: 0,0:02:17.91,0:02:21.44,1,NTP,0,0,0,,{\fad(200,200)\blur1}悲しみがあなた奪っても
+Dialogue: 0,0:02:17.91,0:02:21.44,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}kanashimi ga anata ubattemo
+Dialogue: 0,0:02:22.03,0:02:28.80,1,NTP,0,0,0,,{\fad(200,200)\blur1}忘れないで「さよなら」が 嘘と思えた日々を
+Dialogue: 0,0:02:22.03,0:02:28.80,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}wasurenai de "sayonara" ga uso to omoeta hibi wo
+Dialogue: 0,0:02:29.95,0:02:33.64,1,NTP,0,0,0,,{\fad(200,200)\blur1}たとえ終わる事の無い
+Dialogue: 0,0:02:29.95,0:02:33.64,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}tatoe owaru koto no nai
+Dialogue: 0,0:02:33.93,0:02:37.36,1,NTP,0,0,0,,{\fad(200,200)\blur1}悲しみがあなた奪っても
+Dialogue: 0,0:02:33.93,0:02:37.36,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}kanashimi ga anata ubattemo
+Dialogue: 0,0:02:38.06,0:02:41.66,1,NTP,0,0,0,,{\fad(200,200)\blur1}離れてゆく心など
+Dialogue: 0,0:02:38.06,0:02:41.66,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}hanarete yuku kokoro nado
+Dialogue: 0,0:02:41.92,0:02:44.56,1,NTP,0,0,0,,{\fad(200,200)\blur1}此処には無いと言って
+Dialogue: 0,0:02:41.92,0:02:44.56,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}koko ni wa nai to itte
+Dialogue: 0,0:02:46.25,0:02:51.03,Default,NTP,0,0,0,,{\fad(2000,0)\pos(640,530)\1c&H000000&\3c&H50A3CF&\be1\shad0} 单 执 事
+Dialogue: 0,0:02:52.25,0:02:56.03,Default,NTP,0,0,0,,这里一带的住民长久以来深受水灾的困扰
+Dialogue: 0,0:02:56.57,0:02:58.30,Default,NTP,0,0,0,,由于诸位的帮助
+Dialogue: 0,0:02:58.69,0:03:00.67,Default,NTP,0,0,0,,我们凡多姆海伍的版图上
+Dialogue: 0,0:03:00.93,0:03:05.62,Default,NTP,0,0,0,,又增添了一道水闸 我对此感到很欣慰
+Dialogue: 0,0:03:06.30,0:03:10.18,Default,NTP,0,0,0,,我族代代都致力于治水这一难题
+Dialogue: 0,0:03:10.46,0:03:13.35,Default,NTP,0,0,0,,我也打算在这一工程上全力以赴
+Dialogue: 0,0:03:31.54,0:03:34.52,Default,NTP,0,0,0,,伯爵的演讲真是威严庄重啊
+Dialogue: 0,0:03:34.93,0:03:39.41,Default,NTP,0,0,0,,听说公司的经营好像也是赢利到令人头痛咯
+Dialogue: 0,0:03:40.00,0:03:40.70,Default,NTP,0,0,0,,好像…
+Dialogue: 0,0:03:41.87,0:03:43.08,Default,NTP,0,0,0,,啊 这么…
+Dialogue: 0,0:03:43.40,0:03:44.49,Default,NTP,0,0,0,,真是卑鄙啊
+Dialogue: 0,0:03:45.00,0:03:48.74,Default,NTP,0,0,0,,不要因为年轻得意忘形而碰一鼻子灰就好了
+Dialogue: 0,0:03:49.46,0:03:52.88,Default,NTP,0,0,0,,是谁比任何人都期待看到这一幕呢
+Dialogue: 0,0:03:52.88,0:03:54.41,Default,NTP,0,0,0,,这个我也想知道
+Dialogue: 0,0:03:56.76,0:03:57.61,Default,NTP,0,0,0,,如果可以的话
+Dialogue: 0,0:03:57.90,0:04:00.36,Default,NTP,0,0,0,,可以说给我这个初出茅庐的晚辈听听吗？
+Dialogue: 0,0:04:01.17,0:04:04.83,Default,NTP,0,0,0,,我们估计没有什么可以教给您的
+Dialogue: 0,0:04:05.07,0:04:06.29,Default,NTP,0,0,0,,真的 完全没有
+Dialogue: 0,0:04:06.52,0:04:08.23,Default,NTP,0,0,0,,比…比起这个 伯爵
+Dialogue: 0,0:04:08.49,0:04:10.85,Default,NTP,0,0,0,,我听说了一桩很好的投资
+Dialogue: 0,0:04:11.36,0:04:12.77,Default,NTP,0,0,0,,抱歉 各位
+Dialogue: 0,0:04:13.34,0:04:15.38,Default,NTP,0,0,0,,主人还有其他事情要做
+Dialogue: 0,0:04:20.35,0:04:21.64,Default,NTP,0,0,0,,真是些无聊的家伙
+Dialogue: 0,0:04:22.79,0:04:25.79,Default,NTP,0,0,0,,夏~尔~
+Dialogue: 0,0:04:27.05,0:04:27.74,Default,NTP,0,0,0,,伊丽莎白
+Dialogue: 0,0:04:28.13,0:04:29.33,Default,NTP,0,0,0,,夏尔 夏尔 夏尔
+Dialogue: 0,0:04:29.57,0:04:30.60,Default,NTP,0,0,0,,快看啊
+Dialogue: 0,0:04:31.31,0:04:33.67,Default,NTP,0,0,0,,喂 伊丽莎白 你这样我怎么看得见
+Dialogue: 0,0:04:34.03,0:04:34.70,Default,NTP,0,0,0,,是鹿哦
+Dialogue: 0,0:04:36.31,0:04:36.76,Default,NTP,0,0,0,,鹿？
+Dialogue: 0,0:04:37.58,0:04:42.44,Default,NTP,0,0,0,,听说这附近的山丘上生活着一只世间少有的鹿
+Dialogue: 0,0:04:42.87,0:04:44.17,Default,NTP,0,0,0,,世间少有？
+Dialogue: 0,0:04:46.39,0:04:48.68,Default,NTP,0,0,0,,是一只能够招来幸福的白鹿哦
+Dialogue: 0,0:04:49.11,0:04:50.51,Default,NTP,0,0,0,,我根本就没听说过啊
+Dialogue: 0,0:04:50.71,0:04:51.77,Default,NTP,0,0,0,,根据流传下来的传说
+Dialogue: 0,0:04:53.79,0:04:55.75,Default,NTP,0,0,0,,罕见的白鹿
+Dialogue: 0,0:04:56.34,0:04:59.30,Default,NTP,0,0,0,,自古以来人们就认为它们是来自异世界的使者
+Dialogue: 0,0:05:00.26,0:05:04.40,Default,NTP,0,0,0,,听说会带给听见它传信的人以好运
+Dialogue: 0,0:05:04.72,0:05:06.95,Default,NTP,0,0,0,,就是这样 不愧是塞巴斯蒂安
+Dialogue: 0,0:05:07.77,0:05:08.87,Default,NTP,0,0,0,,承蒙您的夸奖
+Dialogue: 0,0:05:09.93,0:05:11.50,Default,NTP,0,0,0,,这只不过是个童话而已
+Dialogue: 0,0:05:12.41,0:05:15.75,Default,NTP,0,0,0,,是真的哦 连目击者都有哦
+Dialogue: 0,0:05:16.06,0:05:18.26,Default,NTP,0,0,0,,夏尔 我们一起去找吧
+Dialogue: 0,0:05:18.51,0:05:20.88,Default,NTP,0,0,0,,不行 我还有事要做
+Dialogue: 0,0:05:22.96,0:05:24.16,Default,NTP,0,0,0,,太过分了
+Dialogue: 0,0:05:26.50,0:05:27.31,Default,NTP,0,0,0,,伊丽莎白
+Dialogue: 0,0:05:28.58,0:05:30.36,Default,NTP,0,0,0,,居然惹哭了未婚妻
+Dialogue: 0,0:05:30.68,0:05:33.16,Default,NTP,0,0,0,,虽说是有婚约 不过始终还是过家家而已啊
+Dialogue: 0,0:05:33.51,0:05:36.72,Default,NTP,0,0,0,,这样看来我家的女儿还是有希望的
+Dialogue: 0,0:05:36.97,0:05:39.34,Default,NTP,0,0,0,,塞巴斯蒂安 给我备船
+Dialogue: 0,0:05:39.55,0:05:40.05,Default,NTP,0,0,0,,遵命
+Dialogue: 0,0:05:40.88,0:05:42.22,Default,NTP,0,0,0,,伊丽莎白小姐
+Dialogue: 0,0:05:44.09,0:05:47.24,Default,NTP,0,0,0,,我想去下游视察水闸
+Dialogue: 0,0:05:48.17,0:05:50.58,Default,NTP,0,0,0,,能陪我一同欣赏一下沿途的风景吗
+Dialogue: 0,0:05:51.10,0:05:54.20,Default,NTP,0,0,0,,比如这片土地上住着一只梦幻的白鹿
+Dialogue: 0,0:05:55.17,0:05:55.87,Default,NTP,0,0,0,,您知道吗
+Dialogue: 0,0:05:56.08,0:05:59.90,Default,NTP,0,0,0,,当然 我很高兴与您同游
+Dialogue: 0,0:06:14.06,0:06:16.00,Default,NTP,0,0,0,,您决定好了吗 小姐
+Dialogue: 0,0:06:17.40,0:06:19.93,Default,NTP,0,0,0,,坐小船的话 还是朴素点比较好
+Dialogue: 0,0:06:20.23,0:06:24.25,Default,NTP,0,0,0,,那边的蕾丝也很可爱 那件镶边的也很不错
+Dialogue: 0,0:06:24.63,0:06:28.12,Default,NTP,0,0,0,,真是的 能两件一起穿就好了
+Dialogue: 0,0:06:29.32,0:06:31.64,Default,NTP,0,0,0,,请您慢慢挑选
+Dialogue: 0,0:06:31.95,0:06:32.92,Default,NTP,0,0,0,,那件也好可爱
+Dialogue: 0,0:06:35.41,0:06:37.36,Default,NTP,0,0,0,,是不是打算很快就回来
+Dialogue: 0,0:06:37.57,0:06:38.50,Default,NTP,0,0,0,,我改变主意了
+Dialogue: 0,0:06:41.06,0:06:42.79,Default,NTP,0,0,0,,因为毕竟这是我的义务啊
+Dialogue: 0,0:06:43.79,0:06:46.25,Default,NTP,0,0,0,,河道的管理也好 无聊的社交也好
+Dialogue: 0,0:06:46.79,0:06:48.50,Default,NTP,0,0,0,,讨未婚妻欢心也罢
+Dialogue: 0,0:06:49.17,0:06:52.49,Default,NTP,0,0,0,,这些都是身为凡多姆海伍领主的我的义务
+Dialogue: 0,0:06:53.26,0:06:56.71,Default,NTP,0,0,0,,而且如果一直被人小瞧的话 我心情也不好
+Dialogue: 0,0:06:58.94,0:07:00.27,Default,NTP,0,0,0,,我去检查一下小船
+Dialogue: 0,0:07:14.07,0:07:14.96,Default,NTP,0,0,0,,好棒啊
+Dialogue: 0,0:07:18.35,0:07:20.99,Default,NTP,0,0,0,,喂 塞巴斯蒂安 那些家伙在做什么呢
+Dialogue: 0,0:07:21.46,0:07:22.65,Default,NTP,0,0,0,,那可不是杂耍啊
+Dialogue: 0,0:07:24.25,0:07:26.32,Default,NTP,0,0,0,,那些人是在对少爷吹毛求疵吧
+Dialogue: 0,0:07:26.82,0:07:28.98,Default,NTP,0,0,0,,毕竟在这个社交界敌人太多了吧
+Dialogue: 0,0:07:29.35,0:07:29.86,Default,NTP,0,0,0,,敌人？
+Dialogue: 0,0:07:30.07,0:07:30.67,Default,NTP,0,0,0,,吗？
+Dialogue: 0,0:07:31.30,0:07:35.83,Default,NTP,0,0,0,,两人如果解除婚约的话 能从中获益的大有人在
+Dialogue: 0,0:07:36.76,0:07:37.75,Default,NTP,0,0,0,,解除婚约？
+Dialogue: 0,0:07:38.91,0:07:39.48,Default,NTP,0,0,0,,你们几个
+Dialogue: 0,0:07:40.20,0:07:43.38,Default,NTP,0,0,0,,别考虑那些奇怪的事情 请老老实实地呆着
+Dialogue: 0,0:07:43.50,0:07:44.28,Default,NTP,0,0,0,,是…是
+Dialogue: 0,0:07:48.02,0:07:49.61,Default,NTP,0,0,0,,绝对不能解除婚约
+Dialogue: 0,0:07:49.82,0:07:51.64,Default,NTP,0,0,0,,如果不是伊丽莎小姐的话 少爷他…
+Dialogue: 0,0:07:51.73,0:07:53.44,Default,NTP,0,0,0,,我们必须帮助少爷才行
+Dialogue: 0,0:07:53.92,0:07:57.70,Default,NTP,0,0,0,,要开始行动了哦 知道我们的工作吧
+Dialogue: 0,0:08:00.02,0:08:01.86,Default,NTP,0,0,0,,加…油…
+Dialogue: 0,0:08:10.44,0:08:12.53,Default,NTP,0,0,0,,啊 那里好像有什么东西
+Dialogue: 0,0:08:15.69,0:08:16.26,Default,NTP,0,0,0,,要上咯
+Dialogue: 0,0:08:16.78,0:08:17.73,Default,NTP,0,0,0,,Yes sir
+Dialogue: 0,0:08:21.42,0:08:24.17,Default,NTP,0,0,0,,我还以为那边会有鹿呢
+Dialogue: 0,0:08:25.23,0:08:26.48,Default,NTP,0,0,0,,抓到了哦
+Dialogue: 0,0:08:27.04,0:08:28.55,Default,NTP,0,0,0,,我抓到了
+Dialogue: 0,0:08:29.33,0:08:32.09,Default,NTP,0,0,0,,有了
+Dialogue: 0,0:08:35.36,0:08:38.02,Default,NTP,0,0,0,,你们觉得那些能算是鹿吗
+Dialogue: 0,0:08:42.77,0:08:48.79,Default,NTP,0,0,0,,短暂的和平是稍纵即逝的梦幻果实
+Dialogue: 0,0:08:52.40,0:08:53.89,Default,NTP,0,0,0,,夏尔·凡多姆海伍
+Dialogue: 0,0:08:54.64,0:08:56.78,Default,NTP,0,0,0,,你的骰子已经掷出
+Dialogue: 0,0:08:57.46,0:08:59.89,Default,NTP,0,0,0,,那么 要赌哪边呢
+Dialogue: 0,0:09:02.24,0:09:03.26,Default,NTP,0,0,0,,来啊 来啊
+Dialogue: 0,0:09:03.43,0:09:06.29,Default,NTP,0,0,0,,赌伊丽莎白小姐能找到她要找的东西 赔率6倍
+Dialogue: 0,0:09:06.40,0:09:07.76,Default,NTP,0,0,0,,赌她找不到 赔率4倍
+Dialogue: 0,0:09:08.14,0:09:10.20,Default,NTP,0,0,0,,无论赌哪边 请大家快点下注吧
+Dialogue: 0,0:09:13.35,0:09:13.91,Default,NTP,0,0,0,,赌吧
+Dialogue: 0,0:09:15.51,0:09:17.90,Default,NTP,0,0,0,,是男人的话就闭上嘴去赌大冷门
+Dialogue: 0,0:09:18.09,0:09:20.16,Default,NTP,0,0,0,,解除婚约的赔率可是有108倍哦
+Dialogue: 0,0:09:20.37,0:09:22.58,Default,NTP,0,0,0,,来吧 来吧 快下注吧
+Dialogue: 0,0:09:23.87,0:09:25.29,Default,NTP,0,0,0,,那是在干什么
+Dialogue: 0,0:09:25.88,0:09:26.49,Default,NTP,0,0,0,,真是的
+Dialogue: 0,0:09:26.78,0:09:29.99,Default,NTP,0,0,0,,我还以为在午餐之前就能找到鹿先生的呢
+Dialogue: 0,0:09:30.26,0:09:32.73,Default,NTP,0,0,0,,就因为很难找到所以它才被称作梦幻的吧
+Dialogue: 0,0:09:33.06,0:09:34.88,Default,NTP,0,0,0,,那倒也是
+Dialogue: 0,0:09:35.56,0:09:38.61,Default,NTP,0,0,0,,好的 吃过午餐继续努力去找吧
+Dialogue: 0,0:09:39.24,0:09:41.33,Default,NTP,0,0,0,,塞巴斯蒂安 今天的午餐是什么
+Dialogue: 0,0:09:41.83,0:09:46.71,Default,NTP,0,0,0,,今天的郊游午餐是虾肉沙拉 鲑鱼馅饼
+Dialogue: 0,0:09:47.05,0:09:49.28,Default,NTP,0,0,0,,以及柴郡干酪的三明治
+Dialogue: 0,0:09:51.48,0:09:54.41,Default,NTP,0,0,0,,刚才有没有听到什么奇怪的声音啊
+Dialogue: 0,0:09:55.12,0:09:58.91,Default,NTP,0,0,0,,非常抱歉 出了一点小差错
+Dialogue: 0,0:09:59.66,0:10:01.83,Default,NTP,0,0,0,,真少见啊 塞巴斯蒂安居然会出错
+Dialogue: 0,0:10:06.35,0:10:09.46,Default,NTP,0,0,0,,真是的 你在玩些什么啊
+Dialogue: 0,0:10:10.85,0:10:12.49,Default,NTP,0,0,0,,请稍等一下
+Dialogue: 0,0:10:14.26,0:10:16.06,Default,NTP,0,0,0,,来 越来越有趣了
+Dialogue: 0,0:10:16.29,0:10:18.39,Default,NTP,0,0,0,,执事君在这里意外失态
+Dialogue: 0,0:10:18.55,0:10:20.23,Default,NTP,0,0,0,,解除婚约的赔率狂涨了60倍
+Dialogue: 0,0:10:20.46,0:10:23.52,Default,NTP,0,0,0,,两人间的温度也会和赔率相反急转直下吗
+Dialogue: 0,0:10:25.42,0:10:27.60,Default,NTP,0,0,0,,果然食物的生命还是在于新鲜度啊
+Dialogue: 0,0:10:28.01,0:10:29.48,Default,NTP,0,0,0,,捕获 烹饪 食用
+Dialogue: 0,0:10:29.70,0:10:31.98,Default,NTP,0,0,0,,事先做好的馅饼什么的根本就是旁门左道
+Dialogue: 0,0:10:32.25,0:10:34.69,Default,NTP,0,0,0,,我抓来的鸽子也能派上用场吗
+Dialogue: 0,0:10:35.02,0:10:38.28,Default,NTP,0,0,0,,用这个稍稍烘烤一下
+Dialogue: 0,0:10:38.60,0:10:40.43,Default,NTP,0,0,0,,小姐也一定会很开心
+Dialogue: 0,0:10:42.73,0:10:44.29,Default,NTP,0,0,0,,塞巴斯蒂安…
+Dialogue: 0,0:10:44.35,0:10:44.62,Default,NTP,0,0,0,,疼
+Dialogue: 0,0:10:45.85,0:10:48.45,Default,NTP,0,0,0,,真是的 要我说几遍你们才明白啊
+Dialogue: 0,0:10:51.36,0:10:57.90,Default,NTP,0,0,0,,我不是告诉过你们 给我老老实实地呆着吗
+Dialogue: 0,0:11:06.54,0:11:08.87,Default,NTP,0,0,0,,不 不愧是塞巴斯蒂安
+Dialogue: 0,0:11:09.63,0:11:11.64,Default,NTP,0,0,0,,身为凡多姆海伍家的执事
+Dialogue: 0,0:11:11.99,0:11:13.90,Default,NTP,0,0,0,,这种程度的事情都不会那可怎么行
+Dialogue: 0,0:11:14.93,0:11:16.65,Default,NTP,0,0,0,,河鱼和龙虾所制成的白汁料理
+Dialogue: 0,0:11:16.95,0:11:19.73,Default,NTP,0,0,0,,以及烤鸽肉 比利牛斯山拼盘
+Dialogue: 0,0:11:20.03,0:11:21.40,Default,NTP,0,0,0,,好厉害
+Dialogue: 0,0:11:22.08,0:11:25.17,Default,NTP,0,0,0,,可是总觉得和刚才说的菜单不太一样啊
+Dialogue: 0,0:11:25.80,0:11:28.83,Default,NTP,0,0,0,,我就地取材 稍稍改变了一下菜单
+Dialogue: 0,0:11:30.16,0:11:31.25,Default,NTP,0,0,0,,看上去好好吃
+Dialogue: 0,0:11:33.43,0:11:35.78,Default,NTP,0,0,0,,谢谢 谢谢
+Dialogue: 0,0:11:36.07,0:11:37.80,Default,NTP,0,0,0,,千金小姐看上去非常高兴
+Dialogue: 0,0:11:38.00,0:11:40.60,Default,NTP,0,0,0,,太太们 先生们 快下注吧
+Dialogue: 0,0:11:43.21,0:11:44.94,Default,NTP,0,0,0,,这是野莓Eton mess
+Dialogue: 0,0:11:46.82,0:11:48.04,Default,NTP,0,0,0,,好好吃
+Dialogue: 0,0:11:48.67,0:11:51.22,Default,NTP,0,0,0,,这是用现成的泽西种奶牛的牛奶所制成的奶油
+Dialogue: 0,0:11:51.74,0:11:54.83,Default,NTP,0,0,0,,虽然很简单却是非常新鲜的极品
+Dialogue: 0,0:11:57.21,0:12:00.07,Default,NTP,0,0,0,,没想到你居然会去学奶农做的事情
+Dialogue: 0,0:12:00.68,0:12:02.48,Default,NTP,0,0,0,,光是想想就觉得好笑
+Dialogue: 0,0:12:02.98,0:12:03.66,Default,NTP,0,0,0,,是啊
+Dialogue: 0,0:12:04.28,0:12:08.87,Default,NTP,0,0,0,,世界如此之大 却找不出能像您这样使唤管家的主人呢
+Dialogue: 0,0:12:09.47,0:12:12.90,Default,NTP,0,0,0,,真是的 你们关系真好啊
+Dialogue: 0,0:12:13.56,0:12:14.84,Default,NTP,0,0,0,,谁会和执事…
+Dialogue: 0,0:12:24.57,0:12:27.59,Default,NTP,0,0,0,,好难找啊 真无聊
+Dialogue: 0,0:12:28.05,0:12:28.66,Default,NTP,0,0,0,,要回去吗
+Dialogue: 0,0:12:29.34,0:12:30.09,Default,NTP,0,0,0,,还差得远呢
+Dialogue: 0,0:12:30.77,0:12:31.27,Default,NTP,0,0,0,,是吗
+Dialogue: 0,0:12:37.81,0:12:38.58,Default,NTP,0,0,0,,好平静
+Dialogue: 0,0:12:39.54,0:12:41.30,Default,NTP,0,0,0,,可是 不知为何
+Dialogue: 0,0:12:41.96,0:12:43.17,Default,NTP,0,0,0,,内心却忐忑不安
+Dialogue: 0,0:12:44.39,0:12:45.28,Default,NTP,0,0,0,,怎么了
+Dialogue: 0,0:12:45.86,0:12:46.68,Default,NTP,0,0,0,,没什么
+Dialogue: 0,0:12:47.40,0:12:48.02,Default,NTP,0,0,0,,夏尔
+Dialogue: 0,0:12:51.41,0:12:53.09,Default,NTP,0,0,0,,一定可以找到的
+Dialogue: 0,0:13:06.41,0:13:09.21,Default,NTP,0,0,0,,云的走向终于开始变得奇怪了
+Dialogue: 0,0:13:09.80,0:13:12.88,Default,NTP,0,0,0,,伊丽莎白小姐会不会无法找到她要找的东西
+Dialogue: 0,0:13:13.12,0:13:15.20,Default,NTP,0,0,0,,两人的前途也就此一片黑暗呢
+Dialogue: 0,0:13:16.21,0:13:17.61,Default,NTP,0,0,0,,现在的赔率是
+Dialogue: 0,0:13:19.23,0:13:21.93,Default,NTP,0,0,0,,哎呀 蓝猫 你真大胆呢
+Dialogue: 0,0:13:22.47,0:13:24.91,Default,NTP,0,0,0,,你觉得他们还能找到吗
+Dialogue: 0,0:13:25.84,0:13:26.48,Default,NTP,0,0,0,,可是
+Dialogue: 0,0:13:27.22,0:13:29.53,Default,NTP,0,0,0,,游戏就是要这样才行
+Dialogue: 0,0:13:31.97,0:13:32.71,Default,NTP,0,0,0,,伊丽莎白
+Dialogue: 0,0:13:33.77,0:13:34.86,Default,NTP,0,0,0,,我叫你等等
+Dialogue: 0,0:13:35.56,0:13:37.81,Default,NTP,0,0,0,,我刚才看见了 就在森林的深处
+Dialogue: 0,0:13:37.81,0:13:39.92,Default,NTP,0,0,0,,下着这样的雨 鹿肯定都躲起来了
+Dialogue: 0,0:13:40.42,0:13:41.31,Default,NTP,0,0,0,,今天就回去吧
+Dialogue: 0,0:13:41.45,0:13:43.84,Default,NTP,0,0,0,,不要 我要找到白鹿
+Dialogue: 0,0:13:44.04,0:13:45.95,Default,NTP,0,0,0,,别再说些任性的话啦
+Dialogue: 0,0:13:46.42,0:13:48.18,Default,NTP,0,0,0,,下次再来找不就好了
+Dialogue: 0,0:13:49.36,0:13:52.57,Default,NTP,0,0,0,,雇人悬赏就可以了 所以…
+Dialogue: 0,0:13:53.23,0:13:53.71,Default,NTP,0,0,0,,夏尔
+Dialogue: 0,0:13:54.83,0:13:55.42,Default,NTP,0,0,0,,夏尔
+Dialogue: 0,0:13:56.68,0:13:58.21,Default,NTP,0,0,0,,夏尔这个笨蛋
+Dialogue: 0,0:13:59.62,0:14:00.56,Default,NTP,0,0,0,,伊丽莎白
+Dialogue: 0,0:14:01.62,0:14:03.33,Default,NTP,0,0,0,,那样就没有意义了
+Dialogue: 0,0:14:03.95,0:14:06.25,Default,NTP,0,0,0,,你根本不了解我的心情
+Dialogue: 0,0:14:07.22,0:14:07.89,Default,NTP,0,0,0,,已经够了
+Dialogue: 0,0:14:08.05,0:14:08.75,Default,NTP,0,0,0,,伊丽莎白
+Dialogue: 0,0:14:09.85,0:14:12.04,Default,NTP,0,0,0,,啊啊~惹她生气了
+Dialogue: 0,0:14:12.38,0:14:13.67,Default,NTP,0,0,0,,这样一来就结束了吧
+Dialogue: 0,0:14:15.21,0:14:15.58,Default,NTP,0,0,0,,刘
+Dialogue: 0,0:14:16.29,0:14:21.05,Default,NTP,0,0,0,,我赌你们找到 希望你们不要让我失望哦
+Dialogue: 0,0:14:21.24,0:14:22.72,Default,NTP,0,0,0,,谁会管你啊
+Dialogue: 0,0:14:24.27,0:14:27.64,Default,NTP,0,0,0,,绅士的使命就是取悦女士 不是吗
+Dialogue: 0,0:14:27.86,0:14:31.34,Default,NTP,0,0,0,,真是的 英国贵族真是麻烦啊
+Dialogue: 0,0:14:31.67,0:14:34.15,Default,NTP,0,0,0,,这是天生的 没什么大不了的
+Dialogue: 0,0:14:36.13,0:14:38.00,Default,NTP,0,0,0,,但是 我…
+Dialogue: 0,0:14:39.83,0:14:42.64,Default,NTP,0,0,0,,对背负着家族的污名出生的我而言
+Dialogue: 0,0:14:43.13,0:14:44.10,Default,NTP,0,0,0,,这个使命…
+Dialogue: 0,0:14:46.91,0:14:50.71,Default,NTP,0,0,0,,那么 收款也结束了 撤退 撤退
+Dialogue: 0,0:14:52.30,0:14:54.35,Default,NTP,0,0,0,,我们要去接伊丽莎白了 塞巴斯蒂安
+Dialogue: 0,0:14:54.09,0:14:56.32,Default,NTP,0,0,0,,塞巴斯蒂安…
+Dialogue: 0,0:14:57.91,0:14:58.53,Default,NTP,0,0,0,,怎么了
+Dialogue: 0,0:15:00.65,0:15:02.96,Default,NTP,0,0,0,,不好了 伊丽莎白小姐她…
+Dialogue: 0,0:15:21.67,0:15:23.26,Default,NTP,0,0,0,,伊丽莎白小姐
+Dialogue: 0,0:15:26.84,0:15:27.95,Default,NTP,0,0,0,,好好抓紧啊
+Dialogue: 0,0:15:28.38,0:15:32.14,Default,NTP,0,0,0,,不行 硬拉的话船会翻的
+Dialogue: 0,0:15:32.81,0:15:33.50,Default,NTP,0,0,0,,伊丽莎白
+Dialogue: 0,0:15:34.61,0:15:35.46,Default,NTP,0,0,0,,夏尔
+Dialogue: 0,0:15:43.63,0:15:46.27,Default,NTP,0,0,0,,它就在… 河的对面
+Dialogue: 0,0:15:48.32,0:15:50.62,Default,NTP,0,0,0,,危险 手别松开船
+Dialogue: 0,0:15:51.02,0:15:53.23,Default,NTP,0,0,0,,我要找到白鹿
+Dialogue: 0,0:15:55.71,0:15:57.28,Default,NTP,0,0,0,,白鹿…
+Dialogue: 0,0:15:57.99,0:16:00.13,Default,NTP,0,0,0,,伊丽莎白 为什么
+Dialogue: 0,0:16:02.03,0:16:05.02,Default,NTP,0,0,0,,一定要让夏尔幸福
+Dialogue: 0,0:16:06.97,0:16:08.50,Default,NTP,0,0,0,,要怎么处理 少爷
+Dialogue: 0,0:16:09.30,0:16:11.10,Default,NTP,0,0,0,,这样下去的话可就危险了呢
+Dialogue: 0,0:16:11.81,0:16:13.26,Default,NTP,0,0,0,,看 那个
+Dialogue: 0,0:16:18.26,0:16:19.55,Default,NTP,0,0,0,,那是老式的闸门
+Dialogue: 0,0:16:20.29,0:16:23.21,Default,NTP,0,0,0,,原定于在下个月开始改建工程
+Dialogue: 0,0:16:23.60,0:16:24.76,Default,NTP,0,0,0,,洪水已经开始溢出来了
+Dialogue: 0,0:16:25.20,0:16:29.04,Default,NTP,0,0,0,,一旦决堤的话 现在勉强阻挡住的洪水会逆流
+Dialogue: 0,0:16:29.23,0:16:31.57,Default,NTP,0,0,0,,这一带可就要遭殃了吧
+Dialogue: 0,0:16:36.27,0:16:37.03,Default,NTP,0,0,0,,塞巴斯蒂安
+Dialogue: 0,0:16:40.92,0:16:41.64,Default,NTP,0,0,0,,这是命令
+Dialogue: 0,0:16:42.67,0:16:43.75,Default,NTP,0,0,0,,阻止洪水
+Dialogue: 0,0:16:44.36,0:16:46.85,Default,NTP,0,0,0,,伊丽莎白女士那边没关系吗
+Dialogue: 0,0:16:47.12,0:16:50.52,Default,NTP,0,0,0,,不要让我下第二遍命令 伊丽莎白由我来保护
+Dialogue: 0,0:16:51.63,0:16:53.17,Default,NTP,0,0,0,,这是我的义务
+Dialogue: 0,0:16:55.38,0:16:57.22,Default,NTP,0,0,0,,Yes  My Lord
+Dialogue: 0,0:17:42.49,0:17:44.13,Default,NTP,0,0,0,,塞巴斯蒂安 你在干什么…
+Dialogue: 0,0:17:51.52,0:17:53.74,Default,NTP,0,0,0,,伊丽莎白由我来保护
+Dialogue: 0,0:17:56.20,0:17:57.04,Default,NTP,0,0,0,,绝对…
+Dialogue: 0,0:18:07.32,0:18:07.81,Default,NTP,0,0,0,,少爷
+Dialogue: 0,0:18:16.21,0:18:18.28,Default,NTP,0,0,0,,您醒了吗 少爷
+Dialogue: 0,0:18:18.78,0:18:21.60,Default,NTP,0,0,0,,夏尔 对不起
+Dialogue: 0,0:18:21.77,0:18:23.09,Default,NTP,0,0,0,,对不起 夏尔
+Dialogue: 0,0:18:23.44,0:18:24.71,Default,NTP,0,0,0,,都怪我做那种事
+Dialogue: 0,0:18:24.57,0:18:25.38,Default,NTP,0,0,0,,伊丽莎白
+Dialogue: 0,0:18:28.84,0:18:30.25,Default,NTP,0,0,0,,你没事太好了
+Dialogue: 0,0:18:30.74,0:18:33.16,Default,NTP,0,0,0,,少爷也是 您没事就好
+Dialogue: 0,0:18:35.85,0:18:38.26,Default,NTP,0,0,0,,塞巴斯蒂安 你为什么打开闸门
+Dialogue: 0,0:18:38.67,0:18:40.92,Default,NTP,0,0,0,,我的命令应该是让你阻止洪水的
+Dialogue: 0,0:18:41.41,0:18:43.78,Default,NTP,0,0,0,,所以 我是遵照了您的命令
+Dialogue: 0,0:18:44.01,0:18:44.77,Default,NTP,0,0,0,,你说什么
+Dialogue: 0,0:18:45.52,0:18:47.79,Default,NTP,0,0,0,,已经不会再有洪水了吧
+Dialogue: 0,0:18:48.44,0:18:49.56,Default,NTP,0,0,0,,以后永远
+Dialogue: 0,0:18:51.05,0:18:53.01,Default,NTP,0,0,0,,为了正确的疏导洪水
+Dialogue: 0,0:18:53.45,0:18:56.51,Default,NTP,0,0,0,,就需要将堵住的洪水释放出去
+Dialogue: 0,0:18:57.66,0:19:02.24,Default,NTP,0,0,0,,在在场的所有人的齐心协力下 逐渐改变了流向
+Dialogue: 0,0:19:02.94,0:19:05.20,Default,NTP,0,0,0,,从而改变了河流的形状
+Dialogue: 0,0:19:06.62,0:19:10.04,Default,NTP,0,0,0,,变回了最为安全且原始的样子
+Dialogue: 0,0:19:11.19,0:19:12.46,Default,NTP,0,0,0,,原始的样子
+Dialogue: 0,0:19:13.95,0:19:14.35,Default,NTP,0,0,0,,是的
+Dialogue: 0,0:19:15.16,0:19:19.61,Default,NTP,0,0,0,,就像数千年前 白鹿生活的时代那样
+Dialogue: 0,0:19:20.21,0:19:22.89,Default,NTP,0,0,0,,但是 我们还是没有找到白鹿
+Dialogue: 0,0:19:23.21,0:19:25.62,Default,NTP,0,0,0,,没关系 总有一天会找到的
+Dialogue: 0,0:19:26.37,0:19:29.43,Default,NTP,0,0,0,,如果是说梦幻中的白鹿的话 就在那座山丘上
+Dialogue: 0,0:19:34.78,0:19:35.67,Default,NTP,0,0,0,,这是
+Dialogue: 0,0:19:37.47,0:19:39.09,Default,NTP,0,0,0,,是白鹿
+Dialogue: 0,0:19:40.68,0:19:41.43,Default,NTP,0,0,0,,Hill Figure
+Dialogue: 0,0:19:41.95,0:19:43.12,Default,NTP,0,0,0,,Hill Figure?
+Dialogue: 0,0:19:44.09,0:19:47.40,Default,NTP,0,0,0,,这是在白亚质的丘陵上所形成的太古地上画
+Dialogue: 0,0:19:48.19,0:19:51.38,Default,NTP,0,0,0,,刚才的激流把山丘表面冲刷掉了
+Dialogue: 0,0:19:51.77,0:19:53.68,Default,NTP,0,0,0,,隐藏在下面的画就显现出来了
+Dialogue: 0,0:19:54.46,0:19:56.77,Default,NTP,0,0,0,,这就是传说的真相吗
+Dialogue: 0,0:19:56.97,0:19:58.46,Default,NTP,0,0,0,,好厉害啊 塞巴斯蒂安
+Dialogue: 0,0:19:58.94,0:20:02.48,Default,NTP,0,0,0,,身为凡多姆海伍家的执事 连这点事都做不到…
+Dialogue: 0,0:20:02.53,0:20:08.97,Default,NTP,0,0,0,,川流不息的河水 人们的栖息之所也会随之改变
+Dialogue: 0,0:20:09.35,0:20:10.07,Default,NTP,0,0,0,,田中大叔
+Dialogue: 0,0:20:10.30,0:20:11.83,Default,NTP,0,0,0,,您之前都躲到哪里去了
+Dialogue: 0,0:20:11.98,0:20:14.56,Default,NTP,0,0,0,,难…难道是 那个吗
+Dialogue: 0,0:20:15.10,0:20:18.38,Default,NTP,0,0,0,,未经加工的地上画逐渐被风化
+Dialogue: 0,0:20:18.64,0:20:21.46,Default,NTP,0,0,0,,总有一天会被人遗忘的吧
+Dialogue: 0,0:20:22.22,0:20:23.98,Default,NTP,0,0,0,,但是 太好了
+Dialogue: 0,0:20:24.33,0:20:25.93,Default,NTP,0,0,0,,太好了 夏尔
+Dialogue: 0,0:20:26.25,0:20:27.99,Default,NTP,0,0,0,,找到了白鹿
+Dialogue: 0,0:20:28.22,0:20:31.04,Default,NTP,0,0,0,,那是你要找的吧
+Dialogue: 0,0:20:31.55,0:20:33.15,Default,NTP,0,0,0,,那个 夏尔
+Dialogue: 0,0:20:33.70,0:20:35.21,Default,NTP,0,0,0,,你现在开心吗
+Dialogue: 0,0:20:36.13,0:20:41.64,Default,NTP,0,0,0,,我好高兴 因为我跟夏尔玩了一整天
+Dialogue: 0,0:20:41.94,0:20:42.59,Default,NTP,0,0,0,,那个
+Dialogue: 0,0:20:42.94,0:20:47.44,Default,NTP,0,0,0,,夏尔总是扔下一句有工作要做就走掉了
+Dialogue: 0,0:20:47.77,0:20:51.11,Default,NTP,0,0,0,,然后回来的时候总是阴沉着脸
+Dialogue: 0,0:20:51.50,0:20:59.75,Default,NTP,0,0,0,,所以呢 听说见到白鹿的人一生都会心中充满幸福
+Dialogue: 0,0:21:00.10,0:21:00.61,Default,NTP,0,0,0,,利兹
+Dialogue: 0,0:21:02.14,0:21:03.67,Default,NTP,0,0,0,,你终于肯这样叫我了
+Dialogue: 0,0:21:05.36,0:21:08.97,Default,NTP,0,0,0,,我说 夏尔 千万不要忘记这片景色
+Dialogue: 0,0:21:09.92,0:21:11.66,Default,NTP,0,0,0,,谢谢你 利兹
+Dialogue: 0,0:21:17.76,0:21:21.15,Default,NTP,0,0,0,,恭喜 恭喜 恭喜
+Dialogue: 0,0:21:21.86,0:21:23.05,Default,NTP,0,0,0,,谢谢
+Dialogue: 0,0:21:33.27,0:21:38.55,1,NTP,0,0,0,,{\fad(200,200)\blur1}眠るあなたは悲しそうで
+Dialogue: 0,0:21:33.27,0:21:38.55,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}nemuru anata wa kanashii soude
+Dialogue: 0,0:21:40.22,0:21:46.80,1,NTP,0,0,0,,{\fad(200,200)\blur1}惡い夢でもているようだ
+Dialogue: 0,0:21:40.22,0:21:46.80,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}warui yume demo miteru youda
+Dialogue: 0,0:21:47.26,0:21:52.24,1,NTP,0,0,0,,{\fad(200,200)\blur1}how do I live without you
+Dialogue: 0,0:21:47.26,0:21:52.24,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}how do I live without you
+Dialogue: 0,0:21:53.28,0:22:00.00,1,NTP,0,0,0,,{\fad(200,200)\blur1}あなたという空の中
+Dialogue: 0,0:21:53.28,0:22:00.00,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}anata toiu sora no naka
+Dialogue: 0,0:22:00.20,0:22:07.04,1,NTP,0,0,0,,{\fad(200,200)\blur1}僕だけを閉じこめて
+Dialogue: 0,0:22:00.20,0:22:07.04,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}boku dake wo toji tomete
+Dialogue: 0,0:22:07.22,0:22:14.18,1,NTP,0,0,0,,{\fad(200,200)\blur1}いつか見た青空を
+Dialogue: 0,0:22:07.22,0:22:14.18,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}isuka mita aoi sora o
+Dialogue: 0,0:22:14.18,0:22:21.11,1,NTP,0,0,0,,{\fad(200,200)\blur1}探せずに嘆くけど
+Dialogue: 0,0:22:14.18,0:22:21.11,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}sagase zuni nageku geto
+Dialogue: 0,0:22:21.38,0:22:28.16,1,NTP,0,0,0,,{\fad(200,200)\blur1}人は皆 空の中
+Dialogue: 0,0:22:21.38,0:22:28.16,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}hito wamina soranonaka
+Dialogue: 0,0:22:28.41,0:22:35.17,1,NTP,0,0,0,,{\fad(200,200)\blur1}自由という籠の中
+Dialogue: 0,0:22:28.41,0:22:35.17,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}ji you toiu hako no naka
+Dialogue: 0,0:22:35.43,0:22:42.31,1,NTP,0,0,0,,{\fad(200,200)\blur1}星もない夜の空
+Dialogue: 0,0:22:35.43,0:22:42.31,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}hitowamina soranonaka
+Dialogue: 0,0:22:42.57,0:22:49.73,1,NTP,0,0,0,,{\fad(200,200)\blur1}行くあても見えない目で
+Dialogue: 0,0:22:42.57,0:22:49.73,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}iku attemo mienaitene
+Dialogue: 0,0:22:49.94,0:22:54.43,1,NTP,0,0,0,,{\fad(200,200)\blur1}彷徨う
+Dialogue: 0,0:22:49.94,0:22:54.43,2,NTP,0,0,0,,{\fad(200,200)\blur1}{\an9}samayou
+Dialogue: 0,0:23:08.22,0:23:08.97,Default,NTP,0,0,0,,又来了啊
+Dialogue: 0,0:23:09.34,0:23:10.96,Default,NTP,0,0,0,,不 远不止这些
+Dialogue: 0,0:23:11.56,0:23:14.08,Default,NTP,0,0,0,,除请柬外 还有大量的会见申请
+Dialogue: 0,0:23:14.49,0:23:18.88,Default,NTP,0,0,0,,自从那件事之后 少爷您在社交圈内的人气一路飙升
+Dialogue: 0,0:23:20.93,0:23:21.92,Default,NTP,0,0,0,,好麻烦
+Dialogue: 0,0:23:22.34,0:23:25.80,Default,NTP,0,0,0,,为各种各样的人们提供服务 建立良好的关系
+Dialogue: 0,0:23:26.03,0:23:27.42,Default,NTP,0,0,0,,这对今后是有必要的
+Dialogue: 0,0:23:28.22,0:23:31.12,Default,NTP,0,0,0,,这是给普通客人提供的服务
+Dialogue: 0,0:23:31.48,0:23:34.99,Default,NTP,0,0,0,,以此为契机 或许还能发展旅游业哦
+Dialogue: 0,0:23:53.26,0:23:56.19,Default,NTP,0,0,0,,保持最原始的状态…吗
+Dialogue: 0,0:23:58.71,0:24:01.76,Default,NTP,0,0,0,,刚刚有个红色的东西穿过了我的视线
+Dialogue: 0,0:24:02.51,0:24:03.75,Default,NTP,0,0,0,,有种不祥的预感
+Dialogue: 0,0:24:04.53,0:24:07.73,Default,NTP,0,0,0,,少爷您是第一次看见那个吗
+Dialogue: 0,0:24:08.65,0:24:10.60,Default,NTP,0,0,0,,如果您不幸与之对上眼的话
+Dialogue: 0,0:24:10.77,0:24:12.71,Default,NTP,0,0,0,,请不要转移视线 并慢慢后退
+Dialogue: 0,0:24:13.07,0:24:14.44,Default,NTP,0,0,0,,然后站在安全的地方说对他说
+Dialogue: 0,0:24:14.69,0:24:17.29,Default,NTP,0,0,0,,「喂 你是不是稍微胖了点」
+Dialogue: 0,0:24:18.12,0:24:19.48,Default,NTP,0,0,0,,下集  女郎执事
+Dialogue: 0,0:24:20.30,0:24:22.03,Default,NTP,0,0,0,,身为凡多姆海伍家的执事
+Dialogue: 0,0:24:22.32,0:24:24.81,Default,NTP,0,0,0,,连正面照片都无法曝光的话可怎么行
+

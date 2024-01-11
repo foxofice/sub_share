@@ -1,0 +1,780 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 诸神字幕
+Original Script: 诸神字幕组
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: jojo_disclaimer,Arial,18,&H00FFFFFF,&H0000FFFF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,0,2,3,2,20,20,20,1
+Style: mushibugyo_OP_CN,方正准圆_GBK,40,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,2,15,0,5,1
+Style: mushibugyo_ED_CN,方正准圆_GBK,40,&H14FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,100,2,0,0,5,1
+Style: mushibugyo_CN,方正准圆_GBK,50,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,0,1
+Style: mushibugyo_ED_JP,EPSON 太丸ゴシック体Ｂ,28,&H14FFFFFF,&HF0000000,&H00000000,&HF07F7F7F,-1,0,0,0,100,100,0,0,1,2,0,2,0,0,5,1
+Style: mushibugyo_JP,EPSON 太丸ゴシック体Ｂ,28,&H00FFFFFF,&HF0000000,&H00000000,&HF0FFFFFF,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,0,1
+Style: mushibugyo_OP_JP,EPSON 太丸ゴシック体Ｂ,28,&H00FFFFFF,&H00000000,&H00000000,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2,0,2,15,10,10,1
+Style: mushibugyo_disclaimer,方正准圆_GBK,35,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,100,2,0,0,5,1
+Style: mushibugyo_staff,方正准圆_GBK,35,&H00FFFFFF,&HF0000000,&H01000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,100,2,0,0,5,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:05.67,0:00:06.85,mushibugyo_JP,NTP,0000,0000,0000,,いやぁ
+Dialogue: 0,0:00:06.85,0:00:09.81,mushibugyo_JP,NTP,0000,0000,0000,,おっとさん おっかさん 助けて
+Dialogue: 0,0:01:44.87,0:01:47.31,mushibugyo_JP,NTP,0000,0000,0000,,父上 見ていてください
+Dialogue: 0,0:01:47.66,0:01:53.92,mushibugyo_JP,NTP,0000,0000,0000,,この月島仁兵衛必ずや 江戸でのお勤めを　立派に果たしてまいります
+Dialogue: 0,0:02:14.26,0:02:17.88,mushibugyo_JP,NTP,0000,0000,0000,,きっと 江戸には 蟲奉行所には
+Dialogue: 0,0:02:18.22,0:02:21.47,mushibugyo_JP,NTP,0000,0000,0000,,父上のように 強いお人がいる
+Dialogue: 0,0:02:33.56,0:02:34.91,mushibugyo_JP,NTP,0000,0000,0000,,無涯様
+Dialogue: 0,0:02:40.54,0:02:43.86,mushibugyo_JP,NTP,0000,0000,0000,,今日も また 巣食っていやがる
+Dialogue: 0,0:02:53.08,0:02:55.99,mushibugyo_JP,NTP,0000,0000,0000,,江戸には いったいどんな猛者がいるのか
+Dialogue: 0,0:02:57.55,0:02:58.76,mushibugyo_JP,NTP,0000,0000,0000,,楽しみだ
+Dialogue: 0,0:03:02.12,0:03:04.58,mushibugyo_JP,NTP,0000,0000,0000,,第一話　月島仁兵衛　いざ参る
+Dialogue: 0,0:03:09.69,0:03:13.25,mushibugyo_JP,NTP,0000,0000,0000,,おお なんと ここが江戸
+Dialogue: 0,0:03:18.69,0:03:20.70,mushibugyo_JP,NTP,0000,0000,0000,,おはようございます
+Dialogue: 0,0:03:21.33,0:03:22.82,mushibugyo_JP,NTP,0000,0000,0000,,なんだあれ
+Dialogue: 0,0:03:28.76,0:03:31.05,mushibugyo_JP,NTP,0000,0000,0000,,拝啓 津軽の父上様
+Dialogue: 0,0:03:31.15,0:03:35.40,mushibugyo_JP,NTP,0000,0000,0000,,自分は本日より蟲奉行所なるところでお勤めを始めます
+Dialogue: 0,0:03:35.58,0:03:39.72,mushibugyo_JP,NTP,0000,0000,0000,,その蟲奉行所がいかなるところなのかはいまだにわかりません
+Dialogue: 0,0:03:40.95,0:03:43.82,mushibugyo_JP,NTP,0000,0000,0000,,ですが 武士たる自分が決めた道
+Dialogue: 0,0:03:43.82,0:03:45.40,mushibugyo_JP,NTP,0000,0000,0000,,どのようなところであっても
+Dialogue: 0,0:03:45.56,0:03:49.73,mushibugyo_JP,NTP,0000,0000,0000,,粉骨砕身で お勤めにあたる覚悟で 蟲奉行所へ
+Dialogue: 0,0:03:50.53,0:03:52.29,mushibugyo_JP,NTP,0000,0000,0000,,向かっておりません
+Dialogue: 0,0:03:54.24,0:03:59.57,mushibugyo_JP,NTP,0000,0000,0000,,父上 江戸の人たちは迷子に冷たいでございます
+Dialogue: 0,0:03:59.92,0:04:00.91,mushibugyo_JP,NTP,0000,0000,0000,,あの
+Dialogue: 0,0:04:01.24,0:04:02.10,mushibugyo_JP,NTP,0000,0000,0000,,はい
+Dialogue: 0,0:04:02.21,0:04:04.42,mushibugyo_JP,NTP,0000,0000,0000,,どこか お怪我でも
+Dialogue: 0,0:04:08.84,0:04:10.36,mushibugyo_JP,NTP,0000,0000,0000,,かたじけない
+Dialogue: 0,0:04:10.49,0:04:14.25,mushibugyo_JP,NTP,0000,0000,0000,,しみ入ります　この甘み この優しさ
+Dialogue: 0,0:04:17.33,0:04:18.70,mushibugyo_JP,NTP,0000,0000,0000,,申し遅れました
+Dialogue: 0,0:04:18.71,0:04:23.64,mushibugyo_JP,NTP,0000,0000,0000,,自分は蟲奉行所のお勤めに参った月島仁兵衛と申します
+Dialogue: 0,0:04:23.64,0:04:25.37,mushibugyo_JP,NTP,0000,0000,0000,,まぁ 蟲奉行所で
+Dialogue: 0,0:04:25.37,0:04:26.22,mushibugyo_JP,NTP,0000,0000,0000,,はい
+Dialogue: 0,0:04:27.27,0:04:29.25,mushibugyo_JP,NTP,0000,0000,0000,,私は春と申します
+Dialogue: 0,0:04:29.62,0:04:31.39,mushibugyo_JP,NTP,0000,0000,0000,,この茶屋の娘です
+Dialogue: 0,0:04:32.57,0:04:34.17,mushibugyo_JP,NTP,0000,0000,0000,,なんと
+Dialogue: 0,0:04:34.40,0:04:35.52,mushibugyo_JP,NTP,0000,0000,0000,,どうされました
+Dialogue: 0,0:04:35.52,0:04:37.34,mushibugyo_JP,NTP,0000,0000,0000,,いえ なんでも
+Dialogue: 0,0:04:39.28,0:04:41.88,mushibugyo_JP,NTP,0000,0000,0000,,お春殿 ご家族で ここを
+Dialogue: 0,0:04:41.88,0:04:44.40,mushibugyo_JP,NTP,0000,0000,0000,,ええ おじいさんと二人で
+Dialogue: 0,0:04:45.05,0:04:47.29,mushibugyo_JP,NTP,0000,0000,0000,,二人 ご両親は
+Dialogue: 0,0:04:49.09,0:04:51.66,mushibugyo_JP,NTP,0000,0000,0000,,私が幼い頃に亡くなりました
+Dialogue: 0,0:04:51.66,0:04:53.99,mushibugyo_JP,NTP,0000,0000,0000,,あっ そっ それは失礼を
+Dialogue: 0,0:04:53.99,0:04:57.36,mushibugyo_JP,NTP,0000,0000,0000,,いえ 江戸では よくある話ですから
+Dialogue: 0,0:04:58.95,0:05:00.70,mushibugyo_JP,NTP,0000,0000,0000,,よくある話
+Dialogue: 0,0:05:01.35,0:05:03.24,mushibugyo_JP,NTP,0000,0000,0000,,お春 焼けたぞ
+Dialogue: 0,0:05:03.92,0:05:05.12,mushibugyo_JP,NTP,0000,0000,0000,,は～い
+Dialogue: 0,0:05:07.58,0:05:09.76,mushibugyo_JP,NTP,0000,0000,0000,,道案内まで かたじけない
+Dialogue: 0,0:05:10.78,0:05:15.09,mushibugyo_JP,NTP,0000,0000,0000,,いいんです 仁兵衛様はどうして蟲奉行所に
+Dialogue: 0,0:05:17.82,0:05:21.39,mushibugyo_JP,NTP,0000,0000,0000,,本当は 津軽にいる父が呼ばれたのです
+Dialogue: 0,0:05:22.62,0:05:25.60,mushibugyo_JP,NTP,0000,0000,0000,,しかし 父は動けぬ身
+Dialogue: 0,0:05:29.76,0:05:36.02,mushibugyo_JP,NTP,0000,0000,0000,,ですから 自分が代わりにお上のお勤めを果たしたいと 父に申し出たのです
+Dialogue: 0,0:05:40.51,0:05:41.80,mushibugyo_JP,NTP,0000,0000,0000,,ご立派ですね
+Dialogue: 0,0:05:41.80,0:05:42.64,mushibugyo_JP,NTP,0000,0000,0000,,いえ
+Dialogue: 0,0:05:43.06,0:05:47.34,mushibugyo_JP,NTP,0000,0000,0000,,あっ お春殿こそやはり ご立派
+Dialogue: 0,0:05:47.34,0:05:49.38,mushibugyo_JP,NTP,0000,0000,0000,,私 嬉しいんです
+Dialogue: 0,0:05:50.60,0:05:53.05,mushibugyo_JP,NTP,0000,0000,0000,,知ってます 仁兵衛様
+Dialogue: 0,0:05:53.19,0:05:55.94,mushibugyo_JP,NTP,0000,0000,0000,,蟲奉行所がどのようにしてできたのか
+Dialogue: 0,0:05:57.33,0:06:03.71,mushibugyo_JP,NTP,0000,0000,0000,,今から１０年前 享保６年に庶民の要求や不満を聞くために
+Dialogue: 0,0:06:03.76,0:06:05.73,mushibugyo_JP,NTP,0000,0000,0000,,目安箱が作られました
+Dialogue: 0,0:06:07.45,0:06:10.54,mushibugyo_JP,NTP,0000,0000,0000,,江戸のみんなが投書したことで作られたのが
+Dialogue: 0,0:06:10.54,0:06:11.96,mushibugyo_JP,NTP,0000,0000,0000,,蟲奉行所です
+Dialogue: 0,0:06:14.06,0:06:16.70,mushibugyo_JP,NTP,0000,0000,0000,,私もたくさん投書したんです
+Dialogue: 0,0:06:20.96,0:06:23.83,mushibugyo_JP,NTP,0000,0000,0000,,私の両親みたいに襲われないよう
+Dialogue: 0,0:06:24.21,0:06:26.84,mushibugyo_JP,NTP,0000,0000,0000,,みんなを蟲から守ってくださいって
+Dialogue: 0,0:06:27.96,0:06:31.58,mushibugyo_JP,NTP,0000,0000,0000,,お春殿 あの　その蟲とは いったい
+Dialogue: 0,0:06:33.96,0:06:36.39,mushibugyo_JP,NTP,0000,0000,0000,,あっ お春殿はここに
+Dialogue: 0,0:06:41.80,0:06:42.86,mushibugyo_JP,NTP,0000,0000,0000,,どうなされた
+Dialogue: 0,0:06:48.13,0:06:51.90,mushibugyo_JP,NTP,0000,0000,0000,,なっ人の　皮
+Dialogue: 0,0:06:59.77,0:07:04.18,mushibugyo_JP,NTP,0000,0000,0000,,にっ 似ている　あのときの化け物に
+Dialogue: 0,0:07:13.23,0:07:14.58,mushibugyo_JP,NTP,0000,0000,0000,,やめろ
+Dialogue: 0,0:07:44.16,0:07:45.30,mushibugyo_JP,NTP,0000,0000,0000,,待つんだ
+Dialogue: 0,0:07:47.15,0:07:49.91,mushibugyo_JP,NTP,0000,0000,0000,,蟲奉行所の者がこちらへ向かっている
+Dialogue: 0,0:07:50.50,0:07:52.30,mushibugyo_JP,NTP,0000,0000,0000,,私たちに任せるんだ
+Dialogue: 0,0:07:54.75,0:07:56.85,mushibugyo_JP,NTP,0000,0000,0000,,蟲奉行所のお方でしょうか
+Dialogue: 0,0:07:57.71,0:07:59.74,mushibugyo_JP,NTP,0000,0000,0000,,松ノ原小鳥
+Dialogue: 0,0:08:00.13,0:08:03.46,mushibugyo_JP,NTP,0000,0000,0000,,蟲奉行所を監督している キミは
+Dialogue: 0,0:08:04.40,0:08:06.46,mushibugyo_JP,NTP,0000,0000,0000,,月島仁兵衛と申します
+Dialogue: 0,0:08:06.67,0:08:10.07,mushibugyo_JP,NTP,0000,0000,0000,,父の代わりに お勤めすべく江戸に参りました
+Dialogue: 0,0:08:10.56,0:08:12.82,mushibugyo_JP,NTP,0000,0000,0000,,源十郎殿のご子息
+Dialogue: 0,0:08:13.24,0:08:18.12,mushibugyo_JP,NTP,0000,0000,0000,,私が呼んだのは津軽藩の剣術指南役である父上だよ
+Dialogue: 0,0:08:21.88,0:08:22.92,mushibugyo_JP,NTP,0000,0000,0000,,父は
+Dialogue: 0,0:08:23.75,0:08:26.15,mushibugyo_JP,NTP,0000,0000,0000,,もう 動けないのです
+Dialogue: 0,0:08:26.52,0:08:30.13,mushibugyo_JP,NTP,0000,0000,0000,,父の左足を 自分が奪ったんです
+Dialogue: 0,0:08:34.38,0:08:38.75,mushibugyo_JP,NTP,0000,0000,0000,,かつて 自分が藩主様のご子息のお供をしていたときのこと
+Dialogue: 0,0:08:39.28,0:08:41.19,mushibugyo_JP,NTP,0000,0000,0000,,自分は出会ったのです
+Dialogue: 0,0:08:42.18,0:08:43.24,mushibugyo_JP,NTP,0000,0000,0000,,熊が
+Dialogue: 0,0:08:43.72,0:08:45.73,mushibugyo_JP,NTP,0000,0000,0000,,今のような化け物に
+Dialogue: 0,0:08:45.84,0:08:49.23,mushibugyo_JP,NTP,0000,0000,0000,,しかし 自分は武士の息子でありながら
+Dialogue: 0,0:08:54.26,0:08:57.61,mushibugyo_JP,NTP,0000,0000,0000,,藩主様のご子息に恥をかかせてしまいました
+Dialogue: 0,0:08:57.17,0:08:58.75,mushibugyo_JP,NTP,0000,0000,0000,,{\an8}（致し方ない）
+Dialogue: 0,0:08:57.90,0:09:01.00,mushibugyo_JP,NTP,0000,0000,0000,,すべては 自分の責任　しかし その責めを
+Dialogue: 0,0:09:01.00,0:09:02.37,mushibugyo_JP,NTP,0000,0000,0000,,申し訳ございません
+Dialogue: 0,0:09:02.37,0:09:04.44,mushibugyo_JP,NTP,0000,0000,0000,,父は 自分の代わりに
+Dialogue: 0,0:09:05.77,0:09:07.05,mushibugyo_JP,NTP,0000,0000,0000,,父上
+Dialogue: 0,0:09:09.37,0:09:11.03,mushibugyo_JP,NTP,0000,0000,0000,,父上
+Dialogue: 0,0:09:13.75,0:09:19.78,mushibugyo_JP,NTP,0000,0000,0000,,自分が ふがいないばかりに父は 左足も地位も出世も
+Dialogue: 0,0:09:19.79,0:09:21.53,mushibugyo_JP,NTP,0000,0000,0000,,すべて失ったのです
+Dialogue: 0,0:09:22.76,0:09:27.33,mushibugyo_JP,NTP,0000,0000,0000,,ですから 自分は せめて父が誇れる強い武士になり
+Dialogue: 0,0:09:27.50,0:09:31.16,mushibugyo_JP,NTP,0000,0000,0000,,父の代わりにお勤めを果たしたいのです
+Dialogue: 0,0:09:31.63,0:09:32.53,mushibugyo_JP,NTP,0000,0000,0000,,どうか
+Dialogue: 0,0:09:33.27,0:09:39.04,mushibugyo_JP,NTP,0000,0000,0000,,悪いけど 今のように 蟲を相手にするのが蟲奉行所の勤め
+Dialogue: 0,0:09:39.74,0:09:42.06,mushibugyo_JP,NTP,0000,0000,0000,,並の者には務まらないんだよ
+Dialogue: 0,0:09:42.99,0:09:44.38,mushibugyo_JP,NTP,0000,0000,0000,,ありがとうございます
+Dialogue: 0,0:09:45.18,0:09:49.00,mushibugyo_JP,NTP,0000,0000,0000,,決して 並でないところご覧に入れてみせます
+Dialogue: 0,0:09:49.82,0:09:51.65,mushibugyo_JP,NTP,0000,0000,0000,,いや そういう意味じゃ
+Dialogue: 0,0:09:51.65,0:09:53.04,mushibugyo_JP,NTP,0000,0000,0000,,てえへんだ
+Dialogue: 0,0:09:53.50,0:09:54.58,mushibugyo_JP,NTP,0000,0000,0000,,どうなされた
+Dialogue: 0,0:09:55.21,0:09:57.04,mushibugyo_JP,NTP,0000,0000,0000,,女を さらっていきやがったんだ
+Dialogue: 0,0:09:57.04,0:09:58.90,mushibugyo_JP,NTP,0000,0000,0000,,団子屋の お春ちゃんだよ
+Dialogue: 0,0:09:59.69,0:10:02.10,mushibugyo_JP,NTP,0000,0000,0000,,お春殿が  蟲は どこへ
+Dialogue: 0,0:10:02.10,0:10:03.01,mushibugyo_JP,NTP,0000,0000,0000,,あっちだ
+Dialogue: 0,0:10:05.58,0:10:06.64,mushibugyo_JP,NTP,0000,0000,0000,,お春殿
+Dialogue: 0,0:10:07.55,0:10:10.16,mushibugyo_JP,NTP,0000,0000,0000,,私の両親みたいに襲われないよう
+Dialogue: 0,0:10:10.48,0:10:13.18,mushibugyo_JP,NTP,0000,0000,0000,,みんなを 蟲から守ってくださいって
+Dialogue: 0,0:10:17.81,0:10:20.29,mushibugyo_JP,NTP,0000,0000,0000,,いや いやあ
+Dialogue: 0,0:10:20.86,0:10:23.13,mushibugyo_JP,NTP,0000,0000,0000,,江戸ではよくある話ですから
+Dialogue: 0,0:10:35.50,0:10:37.46,mushibugyo_JP,NTP,0000,0000,0000,,屋牢蜘蛛の仕業ね
+Dialogue: 0,0:10:37.52,0:10:40.15,mushibugyo_JP,NTP,0000,0000,0000,,やっ やだな 蜘蛛なんて
+Dialogue: 0,0:10:43.01,0:10:44.19,mushibugyo_JP,NTP,0000,0000,0000,,ほら 行くぞ
+Dialogue: 0,0:11:01.81,0:11:05.12,mushibugyo_JP,NTP,0000,0000,0000,,いや いやあ
+Dialogue: 0,0:11:13.05,0:11:14.39,mushibugyo_JP,NTP,0000,0000,0000,,いやああ
+Dialogue: 0,0:11:23.34,0:11:26.33,mushibugyo_JP,NTP,0000,0000,0000,,助けに来るのが遅くなって 申し訳ございません
+Dialogue: 0,0:11:32.98,0:11:34.12,mushibugyo_JP,NTP,0000,0000,0000,,仁兵衛様
+Dialogue: 0,0:11:38.52,0:11:42.12,mushibugyo_JP,NTP,0000,0000,0000,,いくぞ これが江戸での初陣
+Dialogue: 0,0:11:44.23,0:11:46.57,mushibugyo_JP,NTP,0000,0000,0000,,月島仁兵衛 参る
+Dialogue: 0,0:11:51.34,0:11:52.50,mushibugyo_JP,NTP,0000,0000,0000,,焦るな
+Dialogue: 0,0:11:54.22,0:11:57.04,mushibugyo_JP,NTP,0000,0000,0000,,いつでも 身は戦場に
+Dialogue: 0,0:11:57.05,0:12:00.24,mushibugyo_JP,NTP,0000,0000,0000,,常住戦陣の心構えであれ
+Dialogue: 0,0:12:11.66,0:12:14.68,mushibugyo_JP,NTP,0000,0000,0000,,そんな単調な技など誰がくらうか
+Dialogue: 0,0:12:21.94,0:12:22.96,mushibugyo_JP,NTP,0000,0000,0000,,なに
+Dialogue: 0,0:12:44.16,0:12:45.72,mushibugyo_JP,NTP,0000,0000,0000,,これほどの敵が
+Dialogue: 0,0:12:53.60,0:12:54.68,mushibugyo_JP,NTP,0000,0000,0000,,しまった
+Dialogue: 0,0:12:57.21,0:12:58.69,mushibugyo_JP,NTP,0000,0000,0000,,刀の刃が
+Dialogue: 0,0:13:32.65,0:13:33.97,mushibugyo_JP,NTP,0000,0000,0000,,紫陽花玉
+Dialogue: 0,0:13:41.08,0:13:42.23,mushibugyo_JP,NTP,0000,0000,0000,,なんと
+Dialogue: 0,0:13:42.50,0:13:44.50,mushibugyo_JP,NTP,0000,0000,0000,,彼女は火鉢君
+Dialogue: 0,0:13:44.75,0:13:48.73,mushibugyo_JP,NTP,0000,0000,0000,,火薬を得意とする忍者の一族の末裔だよ
+Dialogue: 0,0:13:50.94,0:13:52.78,mushibugyo_JP,NTP,0000,0000,0000,,いくぜ 蟲ケラ
+Dialogue: 0,0:13:52.96,0:13:54.73,mushibugyo_JP,NTP,0000,0000,0000,,戀川春菊君
+Dialogue: 0,0:13:55.10,0:13:57.32,mushibugyo_JP,NTP,0000,0000,0000,,九十九の人斬りといわれた
+Dialogue: 0,0:13:58.84,0:14:00.31,mushibugyo_JP,NTP,0000,0000,0000,,懺斬り
+Dialogue: 0,0:14:00.40,0:14:01.86,mushibugyo_JP,NTP,0000,0000,0000,,罪人さ
+Dialogue: 0,0:14:01.88,0:14:03.59,mushibugyo_JP,NTP,0000,0000,0000,,が 頑張れ 僕
+Dialogue: 0,0:14:03.59,0:14:05.48,mushibugyo_JP,NTP,0000,0000,0000,,一乃谷天間君は
+Dialogue: 0,0:14:05.49,0:14:06.96,mushibugyo_JP,NTP,0000,0000,0000,,{\an8}僕はできる子
+Dialogue: 0,0:14:05.48,0:14:08.03,mushibugyo_JP,NTP,0000,0000,0000,,陰陽道を司る御家出身で
+Dialogue: 0,0:14:08.03,0:14:11.25,mushibugyo_JP,NTP,0000,0000,0000,,末吉 為吉 急々如律令
+Dialogue: 0,0:14:11.52,0:14:13.59,mushibugyo_JP,NTP,0000,0000,0000,,式神を使えるんだ
+Dialogue: 0,0:14:13.59,0:14:15.49,mushibugyo_JP,NTP,0000,0000,0000,,全力つっぱり
+Dialogue: 0,0:14:20.28,0:14:23.40,mushibugyo_JP,NTP,0000,0000,0000,,彼らは 蟲退治のスペシャリスト
+Dialogue: 0,0:14:23.40,0:14:26.55,mushibugyo_JP,NTP,0000,0000,0000,,これが蟲奉行所の実力さ
+Dialogue: 0,0:14:35.77,0:14:37.55,mushibugyo_JP,NTP,0000,0000,0000,,なんと素晴らしい
+Dialogue: 0,0:14:37.76,0:14:39.49,mushibugyo_JP,NTP,0000,0000,0000,,君はもう下がっていればいい
+Dialogue: 0,0:14:39.49,0:14:40.41,mushibugyo_JP,NTP,0000,0000,0000,,できません
+Dialogue: 0,0:14:40.41,0:14:42.03,mushibugyo_JP,NTP,0000,0000,0000,,自分は武士ですから
+Dialogue: 0,0:15:15.63,0:15:16.98,mushibugyo_JP,NTP,0000,0000,0000,,いやああ
+Dialogue: 0,0:15:19.53,0:15:21.57,mushibugyo_JP,NTP,0000,0000,0000,,おっとさん　おっかさん
+Dialogue: 0,0:15:21.57,0:15:22.84,mushibugyo_JP,NTP,0000,0000,0000,,助けて
+Dialogue: 0,0:15:26.87,0:15:30.50,mushibugyo_JP,NTP,0000,0000,0000,,聞こえる　誰かの泣き声が
+Dialogue: 0,0:15:31.78,0:15:33.93,mushibugyo_JP,NTP,0000,0000,0000,,武士が敵前で臆するなど
+Dialogue: 0,0:15:34.08,0:15:35.51,mushibugyo_JP,NTP,0000,0000,0000,,なんったる様
+Dialogue: 0,0:15:35.87,0:15:37.20,mushibugyo_JP,NTP,0000,0000,0000,,よいか　仁兵衛
+Dialogue: 0,0:15:37.36,0:15:38.03,mushibugyo_JP,NTP,0000,0000,0000,,武士たる者
+Dialogue: 0,0:15:38.03,0:15:40.64,mushibugyo_JP,NTP,0000,0000,0000,,僕の　僕のせいで
+Dialogue: 0,0:15:41.06,0:15:43.43,mushibugyo_JP,NTP,0000,0000,0000,,今わしは武士の道を説いている
+Dialogue: 0,0:15:44.94,0:15:46.76,mushibugyo_JP,NTP,0000,0000,0000,,貴様は何になる
+Dialogue: 0,0:15:48.42,0:15:52.37,mushibugyo_JP,NTP,0000,0000,0000,,いつか父上のような　日本一の武士になりたいです
+Dialogue: 0,0:15:56.85,0:15:58.40,mushibugyo_JP,NTP,0000,0000,0000,,よいか　仁兵衛
+Dialogue: 0,0:15:58.50,0:16:03.91,mushibugyo_JP,NTP,0000,0000,0000,,我々が臆せば　後ろで守られている者まで恐怖に呑まれてしまう
+Dialogue: 0,0:16:05.33,0:16:10.45,mushibugyo_JP,NTP,0000,0000,0000,,お前の後ろにいる人々が どんな時でも不安に駆られぬように
+Dialogue: 0,0:16:11.41,0:16:15.43,mushibugyo_JP,NTP,0000,0000,0000,,お前は人々の不安を消し去る　綺羅星となれ
+Dialogue: 0,0:16:19.00,0:16:21.13,mushibugyo_JP,NTP,0000,0000,0000,,できるよな　仁兵衛
+Dialogue: 0,0:16:24.62,0:16:28.81,mushibugyo_JP,NTP,0000,0000,0000,,お前はわしと同じ　死ぬまで勝ち続ける武士だろうが
+Dialogue: 0,0:16:35.31,0:16:37.68,mushibugyo_JP,NTP,0000,0000,0000,,はい　父上
+Dialogue: 0,0:16:43.72,0:16:45.44,mushibugyo_JP,NTP,0000,0000,0000,,なんたる大失態
+Dialogue: 0,0:16:45.52,0:16:49.20,mushibugyo_JP,NTP,0000,0000,0000,,自分がいながら　お春殿に不安を与えてしまった
+Dialogue: 0,0:16:51.35,0:16:54.93,mushibugyo_JP,NTP,0000,0000,0000,,お春殿はどうか　ご安心ください
+Dialogue: 0,0:16:55.76,0:17:01.74,mushibugyo_JP,NTP,0000,0000,0000,,こんな化け物ごときに　指一本　触れさせませんから
+Dialogue: 0,0:17:04.53,0:17:07.37,mushibugyo_JP,NTP,0000,0000,0000,,誰よりも　強く
+Dialogue: 0,0:17:07.61,0:17:10.78,mushibugyo_JP,NTP,0000,0000,0000,,父上を超えて
+Dialogue: 0,0:17:21.01,0:17:22.93,mushibugyo_JP,NTP,0000,0000,0000,,死ぬまで勝つ
+Dialogue: 0,0:17:23.88,0:17:26.91,mushibugyo_JP,NTP,0000,0000,0000,,常住戦陣
+Dialogue: 0,0:17:38.94,0:17:41.86,mushibugyo_JP,NTP,0000,0000,0000,,すごい　これほどとは
+Dialogue: 0,0:18:06.09,0:18:08.81,mushibugyo_JP,NTP,0000,0000,0000,,仁兵衛様　もう逃げて
+Dialogue: 0,0:18:16.88,0:18:18.28,mushibugyo_JP,NTP,0000,0000,0000,,力が…
+Dialogue: 0,0:18:50.79,0:18:52.77,mushibugyo_JP,NTP,0000,0000,0000,,星を　見つけた
+Dialogue: 0,0:19:02.37,0:19:07.60,mushibugyo_JP,NTP,0000,0000,0000,,小さい頃見上げた夜空の　綺羅星のような星を
+Dialogue: 0,0:19:19.35,0:19:23.11,mushibugyo_JP,NTP,0000,0000,0000,,ありがとうございます 仁兵衛様
+Dialogue: 0,0:19:23.96,0:19:26.25,mushibugyo_JP,NTP,0000,0000,0000,,私　諦めまていました
+Dialogue: 0,0:19:26.44,0:19:30.05,mushibugyo_JP,NTP,0000,0000,0000,,こんな死に方　お江戸ではよくあることだと
+Dialogue: 0,0:19:31.10,0:19:34.38,mushibugyo_JP,NTP,0000,0000,0000,,父や母のように　私も死ぬのだと
+Dialogue: 0,0:19:35.45,0:19:37.61,mushibugyo_JP,NTP,0000,0000,0000,,お春殿　ダメです
+Dialogue: 0,0:19:38.39,0:19:42.67,mushibugyo_JP,NTP,0000,0000,0000,,相手が化け物だろうと　理不尽に死んでいい人などいません
+Dialogue: 0,0:19:51.11,0:19:53.04,mushibugyo_JP,NTP,0000,0000,0000,,何を願いしているの
+Dialogue: 0,0:19:53.70,0:19:57.20,mushibugyo_JP,NTP,0000,0000,0000,,蟲から守っていただける日が来ますようにって
+Dialogue: 0,0:19:57.77,0:20:01.07,mushibugyo_JP,NTP,0000,0000,0000,,江戸のみんなと　大事なお春もな
+Dialogue: 0,0:20:04.43,0:20:08.59,mushibugyo_JP,NTP,0000,0000,0000,,おっとさんとおっかさんの願い　無駄じゃなかったよ
+Dialogue: 0,0:20:11.26,0:20:15.67,mushibugyo_JP,NTP,0000,0000,0000,,此度は助けていただき　ありがとうございました
+Dialogue: 0,0:20:16.84,0:20:18.79,mushibugyo_JP,NTP,0000,0000,0000,,名を教えてください
+Dialogue: 0,0:20:20.25,0:20:22.53,mushibugyo_JP,NTP,0000,0000,0000,,これでも自分は武士の端くれ
+Dialogue: 0,0:20:22.83,0:20:27.35,mushibugyo_JP,NTP,0000,0000,0000,,剣で受けたこのご恩はいつか　剣で返させてください
+Dialogue: 0,0:20:28.31,0:20:30.25,mushibugyo_JP,NTP,0000,0000,0000,,自分はまだ半人前ですが
+Dialogue: 0,0:20:30.61,0:20:33.00,mushibugyo_JP,NTP,0000,0000,0000,,いつかあなたのように強くなって
+Dialogue: 0,0:20:33.68,0:20:36.95,mushibugyo_JP,NTP,0000,0000,0000,,死ぬまで勝ち続ける　強い武士になりますから
+Dialogue: 0,0:20:36.95,0:20:38.99,mushibugyo_JP,NTP,0000,0000,0000,,自分は月島仁兵衛
+Dialogue: 0,0:20:43.36,0:20:47.80,mushibugyo_JP,NTP,0000,0000,0000,,無涯さんと話そうだなんて　百年早いのよ
+Dialogue: 0,0:20:48.95,0:20:50.00,mushibugyo_JP,NTP,0000,0000,0000,,仁兵衛君
+Dialogue: 0,0:20:51.80,0:20:55.02,mushibugyo_JP,NTP,0000,0000,0000,,来るんだよね　蟲奉行所に
+Dialogue: 0,0:20:55.18,0:20:56.86,mushibugyo_JP,NTP,0000,0000,0000,,はっ　はい
+Dialogue: 0,0:21:00.28,0:21:02.54,mushibugyo_JP,NTP,0000,0000,0000,,月島仁兵衛
+Dialogue: 0,0:21:03.31,0:21:07.03,mushibugyo_JP,NTP,0000,0000,0000,,これはよい拾い物をしたかもしれませんよ
+Dialogue: 0,0:21:07.81,0:21:09.27,mushibugyo_JP,NTP,0000,0000,0000,,蟲奉行様
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:23:00.41,0:23:01.33,mushibugyo_JP,NTP,0000,0000,0000,,なんと
+Dialogue: 0,0:23:01.33,0:23:03.11,mushibugyo_JP,NTP,0000,0000,0000,,お春殿　それを早くこちらに
+Dialogue: 0,0:23:03.11,0:23:04.08,mushibugyo_JP,NTP,0000,0000,0000,,それってなんですか
+Dialogue: 0,0:23:04.08,0:23:07.91,mushibugyo_JP,NTP,0000,0000,0000,,胸に隠したその爆弾　今にも爆発しそうじゃないですか
+Dialogue: 0,0:23:07.91,0:23:09.13,mushibugyo_JP,NTP,0000,0000,0000,,仁兵衛様のエッチ
+Dialogue: 0,0:23:09.13,0:23:10.29,mushibugyo_JP,NTP,0000,0000,0000,,デボラ
+Dialogue: 0,0:23:10.40,0:23:11.94,mushibugyo_JP,NTP,0000,0000,0000,,次回　蟲奉行
+Dialogue: 0,0:23:11.94,0:23:14.38,mushibugyo_JP,NTP,0000,0000,0000,,ライバルは女忍者　火鉢
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,CN
+Dialogue: 0,0:00:05.67,0:00:06.85,mushibugyo_CN,NTP,0000,0000,0000,,不要
+Dialogue: 0,0:00:06.85,0:00:09.81,mushibugyo_CN,NTP,0000,0000,0000,,父親 母親 救救我
+Dialogue: 0,0:01:44.87,0:01:47.31,mushibugyo_CN,NTP,0000,0000,0000,,父親 看好了
+Dialogue: 0,0:01:47.66,0:01:53.92,mushibugyo_CN,NTP,0000,0000,0000,,我月島仁兵衛一定會在江戶幹出一番事業來
+Dialogue: 0,0:02:14.26,0:02:17.88,mushibugyo_CN,NTP,0000,0000,0000,,在江戶　在蟲奉行所中
+Dialogue: 0,0:02:18.22,0:02:21.47,mushibugyo_CN,NTP,0000,0000,0000,,一定會有像父親那樣厲害的人物
+Dialogue: 0,0:02:33.56,0:02:34.91,mushibugyo_CN,NTP,0000,0000,0000,,無涯大人
+Dialogue: 0,0:02:40.54,0:02:43.86,mushibugyo_CN,NTP,0000,0000,0000,,今天也依然令人生厭地盤踞著
+Dialogue: 0,0:02:53.08,0:02:55.99,mushibugyo_CN,NTP,0000,0000,0000,,在江戶會遇見怎樣的高手呢
+Dialogue: 0,0:02:57.55,0:02:58.76,mushibugyo_CN,NTP,0000,0000,0000,,真令人期待
+Dialogue: 0,0:03:02.12,0:03:04.58,mushibugyo_CN,NTP,0000,0000,0000,,月島仁兵衛參上
+Dialogue: 0,0:03:09.69,0:03:13.25,mushibugyo_CN,NTP,0000,0000,0000,,哇天啊　這就是江戶
+Dialogue: 0,0:03:18.69,0:03:20.70,mushibugyo_CN,NTP,0000,0000,0000,,早上好
+Dialogue: 0,0:03:21.33,0:03:22.82,mushibugyo_CN,NTP,0000,0000,0000,,誰啊那是
+Dialogue: 0,0:03:28.76,0:03:31.05,mushibugyo_CN,NTP,0000,0000,0000,,敬啟 遠在津輕的父親
+Dialogue: 0,0:03:31.15,0:03:35.40,mushibugyo_CN,NTP,0000,0000,0000,,從今日開始我將就職於名為蟲奉行所的地方
+Dialogue: 0,0:03:35.58,0:03:39.72,mushibugyo_CN,NTP,0000,0000,0000,,這個蟲奉行所到底是什麼地方 我尚且不知
+Dialogue: 0,0:03:40.95,0:03:43.82,mushibugyo_CN,NTP,0000,0000,0000,,但是 這是身為武士的我自己選擇的道路
+Dialogue: 0,0:03:43.82,0:03:45.40,mushibugyo_CN,NTP,0000,0000,0000,,無論我身在何處
+Dialogue: 0,0:03:45.56,0:03:49.73,mushibugyo_CN,NTP,0000,0000,0000,,我都做好了哪怕粉身碎骨也要盡忠職守的覺悟 前往蟲奉行所
+Dialogue: 0,0:03:50.53,0:03:52.29,mushibugyo_CN,NTP,0000,0000,0000,,但是我找不到在哪
+Dialogue: 0,0:03:54.24,0:03:59.57,mushibugyo_CN,NTP,0000,0000,0000,,父親 江戶的人們對迷途之人好冷淡
+Dialogue: 0,0:03:59.92,0:04:00.91,mushibugyo_CN,NTP,0000,0000,0000,,請問…
+Dialogue: 0,0:04:01.24,0:04:02.10,mushibugyo_CN,NTP,0000,0000,0000,,什麼
+Dialogue: 0,0:04:02.21,0:04:04.42,mushibugyo_CN,NTP,0000,0000,0000,,您是不是哪兒受傷了
+Dialogue: 0,0:04:08.84,0:04:10.36,mushibugyo_CN,NTP,0000,0000,0000,,感激不盡
+Dialogue: 0,0:04:10.49,0:04:14.25,mushibugyo_CN,NTP,0000,0000,0000,,真是沁人心脾 這份甜美 這份體貼
+Dialogue: 0,0:04:17.33,0:04:18.70,mushibugyo_CN,NTP,0000,0000,0000,,對不起還沒來得及自報家門
+Dialogue: 0,0:04:18.71,0:04:23.64,mushibugyo_CN,NTP,0000,0000,0000,,在下是前往蟲奉行所報道之人 名叫月島仁兵衛
+Dialogue: 0,0:04:23.64,0:04:25.37,mushibugyo_CN,NTP,0000,0000,0000,,原來是要去蟲奉行所
+Dialogue: 0,0:04:25.37,0:04:26.22,mushibugyo_CN,NTP,0000,0000,0000,,正是
+Dialogue: 0,0:04:27.27,0:04:29.25,mushibugyo_CN,NTP,0000,0000,0000,,我叫做小春
+Dialogue: 0,0:04:29.62,0:04:31.39,mushibugyo_CN,NTP,0000,0000,0000,,是這家茶屋的女兒
+Dialogue: 0,0:04:32.57,0:04:34.17,mushibugyo_CN,NTP,0000,0000,0000,,天啊
+Dialogue: 0,0:04:34.40,0:04:35.52,mushibugyo_CN,NTP,0000,0000,0000,,您怎麼了
+Dialogue: 0,0:04:35.52,0:04:37.34,mushibugyo_CN,NTP,0000,0000,0000,,沒 沒什麼
+Dialogue: 0,0:04:39.28,0:04:41.88,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐 這裏是您一家人在經營嗎
+Dialogue: 0,0:04:41.88,0:04:44.40,mushibugyo_CN,NTP,0000,0000,0000,,是的 我和爺爺兩個人
+Dialogue: 0,0:04:45.05,0:04:47.29,mushibugyo_CN,NTP,0000,0000,0000,,兩個人…那您父母呢
+Dialogue: 0,0:04:49.09,0:04:51.66,mushibugyo_CN,NTP,0000,0000,0000,,在我還小的時候就去世了
+Dialogue: 0,0:04:51.66,0:04:53.99,mushibugyo_CN,NTP,0000,0000,0000,,啊 這真是失禮了
+Dialogue: 0,0:04:53.99,0:04:57.36,mushibugyo_CN,NTP,0000,0000,0000,,哪裏 這在江戶是常有的事
+Dialogue: 0,0:04:58.95,0:05:00.70,mushibugyo_CN,NTP,0000,0000,0000,,常有的事?
+Dialogue: 0,0:05:01.35,0:05:03.24,mushibugyo_CN,NTP,0000,0000,0000,,小春 燒好了哦
+Dialogue: 0,0:05:03.92,0:05:05.12,mushibugyo_CN,NTP,0000,0000,0000,,來了
+Dialogue: 0,0:05:07.58,0:05:09.76,mushibugyo_CN,NTP,0000,0000,0000,,還幫我引路 真是感激不盡
+Dialogue: 0,0:05:10.78,0:05:15.09,mushibugyo_CN,NTP,0000,0000,0000,,不必客氣 仁兵衛大人為什麼要去蟲奉行所
+Dialogue: 0,0:05:17.82,0:05:21.39,mushibugyo_CN,NTP,0000,0000,0000,,其實受命的本是在津輕的父親
+Dialogue: 0,0:05:22.62,0:05:25.60,mushibugyo_CN,NTP,0000,0000,0000,,但是父親身體行動不便
+Dialogue: 0,0:05:29.76,0:05:36.02,mushibugyo_CN,NTP,0000,0000,0000,,因此我向父親提議 由我去代替他為朝廷辦事
+Dialogue: 0,0:05:40.51,0:05:41.80,mushibugyo_CN,NTP,0000,0000,0000,,您真了不起呢
+Dialogue: 0,0:05:41.80,0:05:42.64,mushibugyo_CN,NTP,0000,0000,0000,,哪裏…
+Dialogue: 0,0:05:43.06,0:05:47.34,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐才是 實在是太不得了了
+Dialogue: 0,0:05:47.34,0:05:49.38,mushibugyo_CN,NTP,0000,0000,0000,,我很高興
+Dialogue: 0,0:05:50.60,0:05:53.05,mushibugyo_CN,NTP,0000,0000,0000,,仁兵衛大人 您知道嗎
+Dialogue: 0,0:05:53.19,0:05:55.94,mushibugyo_CN,NTP,0000,0000,0000,,蟲奉行所是如何設立的
+Dialogue: 0,0:05:57.33,0:06:03.71,mushibugyo_CN,NTP,0000,0000,0000,,十年前 也就是享保六年的時候 為傾聽庶民的訴求與不滿
+Dialogue: 0,0:06:03.76,0:06:05.73,mushibugyo_CN,NTP,0000,0000,0000,,請願箱應運而生
+Dialogue: 0,0:06:07.45,0:06:10.54,mushibugyo_CN,NTP,0000,0000,0000,,應江戶民眾的投書請願而設的
+Dialogue: 0,0:06:10.54,0:06:11.96,mushibugyo_CN,NTP,0000,0000,0000,,正是蟲奉行所
+Dialogue: 0,0:06:14.06,0:06:16.70,mushibugyo_CN,NTP,0000,0000,0000,,我也投了不少信函
+Dialogue: 0,0:06:20.96,0:06:23.83,mushibugyo_CN,NTP,0000,0000,0000,,我祈求政府能保護好大家
+Dialogue: 0,0:06:24.21,0:06:26.84,mushibugyo_CN,NTP,0000,0000,0000,,以免像我父母那樣遭受蟲子的襲擊
+Dialogue: 0,0:06:27.96,0:06:31.58,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐 請問 你說的蟲到底是指…
+Dialogue: 0,0:06:33.96,0:06:36.39,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐請待在這裏
+Dialogue: 0,0:06:41.80,0:06:42.86,mushibugyo_CN,NTP,0000,0000,0000,,發生了什麼事
+Dialogue: 0,0:06:48.13,0:06:51.90,mushibugyo_CN,NTP,0000,0000,0000,,什…　人…皮?
+Dialogue: 0,0:06:59.77,0:07:04.18,mushibugyo_CN,NTP,0000,0000,0000,,好…好像　那時候的怪物
+Dialogue: 0,0:07:13.23,0:07:14.58,mushibugyo_CN,NTP,0000,0000,0000,,快住手
+Dialogue: 0,0:07:44.16,0:07:45.30,mushibugyo_CN,NTP,0000,0000,0000,,且慢
+Dialogue: 0,0:07:47.15,0:07:49.91,mushibugyo_CN,NTP,0000,0000,0000,,蟲奉行所的人正趕往這邊
+Dialogue: 0,0:07:50.50,0:07:52.30,mushibugyo_CN,NTP,0000,0000,0000,,就交給我們吧
+Dialogue: 0,0:07:54.75,0:07:56.85,mushibugyo_CN,NTP,0000,0000,0000,,您是蟲奉行所的人嗎?
+Dialogue: 0,0:07:57.71,0:07:59.74,mushibugyo_CN,NTP,0000,0000,0000,,我叫松之原小鳥
+Dialogue: 0,0:08:00.13,0:08:03.46,mushibugyo_CN,NTP,0000,0000,0000,,任蟲奉行所監督一職　你是?
+Dialogue: 0,0:08:04.40,0:08:06.46,mushibugyo_CN,NTP,0000,0000,0000,,在下名叫月島仁兵衛
+Dialogue: 0,0:08:06.67,0:08:10.07,mushibugyo_CN,NTP,0000,0000,0000,,是代替家父 前來江戶任職的
+Dialogue: 0,0:08:10.56,0:08:12.82,mushibugyo_CN,NTP,0000,0000,0000,,你是源十郎先生家的公子?
+Dialogue: 0,0:08:13.24,0:08:18.12,mushibugyo_CN,NTP,0000,0000,0000,,我邀請的可是你那身在津輕藩擔任劍術教頭的父親哦
+Dialogue: 0,0:08:21.88,0:08:22.92,mushibugyo_CN,NTP,0000,0000,0000,,父親他
+Dialogue: 0,0:08:23.75,0:08:26.15,mushibugyo_CN,NTP,0000,0000,0000,,已經不能再走動了
+Dialogue: 0,0:08:26.52,0:08:30.13,mushibugyo_CN,NTP,0000,0000,0000,,是在下 奪走了父親的左腿
+Dialogue: 0,0:08:34.38,0:08:38.75,mushibugyo_CN,NTP,0000,0000,0000,,那是過去在下侍奉著藩主大人之子時候的事了
+Dialogue: 0,0:08:39.28,0:08:41.19,mushibugyo_CN,NTP,0000,0000,0000,,在下遇到了
+Dialogue: 0,0:08:42.18,0:08:43.24,mushibugyo_CN,NTP,0000,0000,0000,,熊都被…
+Dialogue: 0,0:08:43.72,0:08:45.73,mushibugyo_CN,NTP,0000,0000,0000,,像剛剛那樣的怪物
+Dialogue: 0,0:08:45.84,0:08:49.23,mushibugyo_CN,NTP,0000,0000,0000,,但是 在下身為武士之子
+Dialogue: 0,0:08:54.26,0:08:57.61,mushibugyo_CN,NTP,0000,0000,0000,,卻讓藩主大人的公子蒙羞
+Dialogue: 0,0:08:57.17,0:08:58.75,mushibugyo_CN,NTP,0000,0000,0000,,{\an8}我也是逼不得已
+Dialogue: 0,0:08:57.90,0:09:01.00,mushibugyo_CN,NTP,0000,0000,0000,,一切都是在下的責任 然而父親他
+Dialogue: 0,0:09:01.00,0:09:02.37,mushibugyo_CN,NTP,0000,0000,0000,,臣罪該萬死
+Dialogue: 0,0:09:02.37,0:09:04.44,mushibugyo_CN,NTP,0000,0000,0000,,卻代替我…
+Dialogue: 0,0:09:05.77,0:09:07.05,mushibugyo_CN,NTP,0000,0000,0000,,父親
+Dialogue: 0,0:09:09.37,0:09:11.03,mushibugyo_CN,NTP,0000,0000,0000,,父親
+Dialogue: 0,0:09:13.75,0:09:19.78,mushibugyo_CN,NTP,0000,0000,0000,,就因為在下的窩囊無用 父親失去了左腿 地位 仕途
+Dialogue: 0,0:09:19.79,0:09:21.53,mushibugyo_CN,NTP,0000,0000,0000,,失去了一切
+Dialogue: 0,0:09:22.76,0:09:27.33,mushibugyo_CN,NTP,0000,0000,0000,,因此在下至少要成為能讓父親引以為傲的強大武士
+Dialogue: 0,0:09:27.50,0:09:31.16,mushibugyo_CN,NTP,0000,0000,0000,,替父親履行其職責
+Dialogue: 0,0:09:31.63,0:09:32.53,mushibugyo_CN,NTP,0000,0000,0000,,望准許
+Dialogue: 0,0:09:33.27,0:09:39.04,mushibugyo_CN,NTP,0000,0000,0000,,不好意思 蟲奉行所的職責就是剷除像剛剛那樣的蟲子
+Dialogue: 0,0:09:39.74,0:09:42.06,mushibugyo_CN,NTP,0000,0000,0000,,尋常人可幹不了
+Dialogue: 0,0:09:42.99,0:09:44.38,mushibugyo_CN,NTP,0000,0000,0000,,非常感謝
+Dialogue: 0,0:09:45.18,0:09:49.00,mushibugyo_CN,NTP,0000,0000,0000,,在下一定會讓您看到我不尋常之處
+Dialogue: 0,0:09:49.82,0:09:51.65,mushibugyo_CN,NTP,0000,0000,0000,,不 我不是這個意思…
+Dialogue: 0,0:09:51.65,0:09:53.04,mushibugyo_CN,NTP,0000,0000,0000,,不好了
+Dialogue: 0,0:09:53.50,0:09:54.58,mushibugyo_CN,NTP,0000,0000,0000,,出什麼事了
+Dialogue: 0,0:09:55.21,0:09:57.04,mushibugyo_CN,NTP,0000,0000,0000,,有女人被擄走了
+Dialogue: 0,0:09:57.04,0:09:58.90,mushibugyo_CN,NTP,0000,0000,0000,,是糰子屋的小春啊
+Dialogue: 0,0:09:59.69,0:10:02.10,mushibugyo_CN,NTP,0000,0000,0000,,你說小春小姐? 蟲子往哪邊去了
+Dialogue: 0,0:10:02.10,0:10:03.01,mushibugyo_CN,NTP,0000,0000,0000,,那邊
+Dialogue: 0,0:10:05.58,0:10:06.64,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐
+Dialogue: 0,0:10:07.55,0:10:10.16,mushibugyo_CN,NTP,0000,0000,0000,,我祈求政府能保護好大家
+Dialogue: 0,0:10:10.48,0:10:13.18,mushibugyo_CN,NTP,0000,0000,0000,,以免像我父母那樣遭受蟲子的襲擊
+Dialogue: 0,0:10:17.81,0:10:20.29,mushibugyo_CN,NTP,0000,0000,0000,,不要 不要
+Dialogue: 0,0:10:20.86,0:10:23.13,mushibugyo_CN,NTP,0000,0000,0000,,這在江戶是常有的事
+Dialogue: 0,0:10:35.50,0:10:37.46,mushibugyo_CN,NTP,0000,0000,0000,,是屋牢蜘蛛干的
+Dialogue: 0,0:10:37.52,0:10:40.15,mushibugyo_CN,NTP,0000,0000,0000,,真 真討厭啊 蜘蛛什麼的
+Dialogue: 0,0:10:43.01,0:10:44.19,mushibugyo_CN,NTP,0000,0000,0000,,好了 該走了
+Dialogue: 0,0:11:01.81,0:11:05.12,mushibugyo_CN,NTP,0000,0000,0000,,不要 不要啊
+Dialogue: 0,0:11:13.05,0:11:14.39,mushibugyo_CN,NTP,0000,0000,0000,,不要
+Dialogue: 0,0:11:23.34,0:11:26.33,mushibugyo_CN,NTP,0000,0000,0000,,十分抱歉沒能及時前來相救
+Dialogue: 0,0:11:32.98,0:11:34.12,mushibugyo_CN,NTP,0000,0000,0000,,仁兵衛大人
+Dialogue: 0,0:11:38.52,0:11:42.12,mushibugyo_CN,NTP,0000,0000,0000,,要上了 這就是我在江戶的首戰
+Dialogue: 0,0:11:44.23,0:11:46.57,mushibugyo_CN,NTP,0000,0000,0000,,月島仁兵衛 參上
+Dialogue: 0,0:11:51.34,0:11:52.50,mushibugyo_CN,NTP,0000,0000,0000,,不可焦躁
+Dialogue: 0,0:11:54.22,0:11:57.04,mushibugyo_CN,NTP,0000,0000,0000,,無論何時  都要做好身臨戰場
+Dialogue: 0,0:11:57.05,0:12:00.24,mushibugyo_CN,NTP,0000,0000,0000,,常住戰陣的思想準備
+Dialogue: 0,0:12:11.66,0:12:14.68,mushibugyo_CN,NTP,0000,0000,0000,,彫蟲小技 以為我會中招嗎
+Dialogue: 0,0:12:21.94,0:12:22.96,mushibugyo_CN,NTP,0000,0000,0000,,什麼
+Dialogue: 0,0:12:44.16,0:12:45.72,mushibugyo_CN,NTP,0000,0000,0000,,居然有這麼多敵人
+Dialogue: 0,0:12:53.60,0:12:54.68,mushibugyo_CN,NTP,0000,0000,0000,,糟了
+Dialogue: 0,0:12:57.21,0:12:58.69,mushibugyo_CN,NTP,0000,0000,0000,,刀刃被…
+Dialogue: 0,0:13:32.65,0:13:33.97,mushibugyo_CN,NTP,0000,0000,0000,,紫陽花玉
+Dialogue: 0,0:13:41.08,0:13:42.23,mushibugyo_CN,NTP,0000,0000,0000,,好厲害
+Dialogue: 0,0:13:42.50,0:13:44.50,mushibugyo_CN,NTP,0000,0000,0000,,她叫火缽
+Dialogue: 0,0:13:44.75,0:13:48.73,mushibugyo_CN,NTP,0000,0000,0000,,是擅長使用火藥的忍者一族的後裔
+Dialogue: 0,0:13:50.94,0:13:52.78,mushibugyo_CN,NTP,0000,0000,0000,,接招吧 蟲子們
+Dialogue: 0,0:13:52.96,0:13:54.73,mushibugyo_CN,NTP,0000,0000,0000,,戀川春菊
+Dialogue: 0,0:13:55.10,0:13:57.32,mushibugyo_CN,NTP,0000,0000,0000,,人稱「九十九人斬」
+Dialogue: 0,0:13:58.84,0:14:00.31,mushibugyo_CN,NTP,0000,0000,0000,,慚斬
+Dialogue: 0,0:14:00.40,0:14:01.86,mushibugyo_CN,NTP,0000,0000,0000,,過去曾是個罪犯
+Dialogue: 0,0:14:01.88,0:14:03.59,mushibugyo_CN,NTP,0000,0000,0000,,我 我要加油
+Dialogue: 0,0:14:03.59,0:14:05.48,mushibugyo_CN,NTP,0000,0000,0000,,一乃谷天間
+Dialogue: 0,0:14:05.49,0:14:06.96,mushibugyo_CN,NTP,0000,0000,0000,,{\an8}我能行的
+Dialogue: 0,0:14:05.48,0:14:08.03,mushibugyo_CN,NTP,0000,0000,0000,,他是司掌陰陽道的土御門家後裔
+Dialogue: 0,0:14:08.03,0:14:11.25,mushibugyo_CN,NTP,0000,0000,0000,,末吉 為吉 急急如律令
+Dialogue: 0,0:14:11.52,0:14:13.59,mushibugyo_CN,NTP,0000,0000,0000,,能夠操縱式神
+Dialogue: 0,0:14:13.59,0:14:15.49,mushibugyo_CN,NTP,0000,0000,0000,,全力出擊
+Dialogue: 0,0:14:20.28,0:14:23.40,mushibugyo_CN,NTP,0000,0000,0000,,他們是剷除蟲子的專家
+Dialogue: 0,0:14:23.40,0:14:26.55,mushibugyo_CN,NTP,0000,0000,0000,,這就是蟲奉行所的實力
+Dialogue: 0,0:14:35.77,0:14:37.55,mushibugyo_CN,NTP,0000,0000,0000,,真是太厲害了
+Dialogue: 0,0:14:37.76,0:14:39.49,mushibugyo_CN,NTP,0000,0000,0000,,你可以退下了
+Dialogue: 0,0:14:39.49,0:14:40.41,mushibugyo_CN,NTP,0000,0000,0000,,不行
+Dialogue: 0,0:14:40.41,0:14:42.03,mushibugyo_CN,NTP,0000,0000,0000,,因為在下是名武士
+Dialogue: 0,0:15:15.63,0:15:16.98,mushibugyo_CN,NTP,0000,0000,0000,,不要啊
+Dialogue: 0,0:15:19.53,0:15:21.57,mushibugyo_CN,NTP,0000,0000,0000,,父親 母親
+Dialogue: 0,0:15:21.57,0:15:22.84,mushibugyo_CN,NTP,0000,0000,0000,,救救我
+Dialogue: 0,0:15:26.87,0:15:30.50,mushibugyo_CN,NTP,0000,0000,0000,,我能聽見 有人在哭
+Dialogue: 0,0:15:31.78,0:15:33.93,mushibugyo_CN,NTP,0000,0000,0000,,身為武士 大敵當前卻臨陣畏縮
+Dialogue: 0,0:15:34.08,0:15:35.51,mushibugyo_CN,NTP,0000,0000,0000,,成何體統
+Dialogue: 0,0:15:35.87,0:15:37.20,mushibugyo_CN,NTP,0000,0000,0000,,聽好了 仁兵衛 .
+Dialogue: 0,0:15:37.36,0:15:38.03,mushibugyo_CN,NTP,0000,0000,0000,,身為武士…
+Dialogue: 0,0:15:38.03,0:15:40.64,mushibugyo_CN,NTP,0000,0000,0000,,都是…都是因為我…
+Dialogue: 0,0:15:41.06,0:15:43.43,mushibugyo_CN,NTP,0000,0000,0000,,現在我在貫徹武士之道
+Dialogue: 0,0:15:44.94,0:15:46.76,mushibugyo_CN,NTP,0000,0000,0000,,你要成為什麼樣的人
+Dialogue: 0,0:15:48.42,0:15:52.37,mushibugyo_CN,NTP,0000,0000,0000,,總有一天 我要成為像父親大人這樣的 日本第一的武士
+Dialogue: 0,0:15:56.85,0:15:58.40,mushibugyo_CN,NTP,0000,0000,0000,,聽好了 仁兵衛
+Dialogue: 0,0:15:58.50,0:16:03.91,mushibugyo_CN,NTP,0000,0000,0000,,如果我們畏縮了 那麼身後那些所要保護之人也會被恐懼吞沒
+Dialogue: 0,0:16:05.33,0:16:10.45,mushibugyo_CN,NTP,0000,0000,0000,,為了讓在你身後的人們永遠不為不安所困
+Dialogue: 0,0:16:11.41,0:16:15.43,mushibugyo_CN,NTP,0000,0000,0000,,你要成為驅散人們不安的閃耀的星星
+Dialogue: 0,0:16:19.00,0:16:21.13,mushibugyo_CN,NTP,0000,0000,0000,,做得到吧 仁兵衛
+Dialogue: 0,0:16:24.62,0:16:28.81,mushibugyo_CN,NTP,0000,0000,0000,,你和我一樣 是會戰無不勝至死方休的武士啊
+Dialogue: 0,0:16:35.31,0:16:37.68,mushibugyo_CN,NTP,0000,0000,0000,,是 父親大人
+Dialogue: 0,0:16:43.72,0:16:45.44,mushibugyo_CN,NTP,0000,0000,0000,,真是太丟臉了
+Dialogue: 0,0:16:45.52,0:16:49.20,mushibugyo_CN,NTP,0000,0000,0000,,自己就在這裏 卻還是讓小春小姐感到不安
+Dialogue: 0,0:16:51.35,0:16:54.93,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐 請你放心
+Dialogue: 0,0:16:55.76,0:17:01.74,mushibugyo_CN,NTP,0000,0000,0000,,在下絕不會讓這些怪物碰你一根手指頭的
+Dialogue: 0,0:17:04.53,0:17:07.37,mushibugyo_CN,NTP,0000,0000,0000,,變得比任何人都強
+Dialogue: 0,0:17:07.61,0:17:10.78,mushibugyo_CN,NTP,0000,0000,0000,,超越父親大人
+Dialogue: 0,0:17:21.01,0:17:22.93,mushibugyo_CN,NTP,0000,0000,0000,,戰無不勝至死方休
+Dialogue: 0,0:17:23.88,0:17:26.91,mushibugyo_CN,NTP,0000,0000,0000,,常住戰陣
+Dialogue: 0,0:17:38.94,0:17:41.86,mushibugyo_CN,NTP,0000,0000,0000,,厲害 沒想到竟如此之強
+Dialogue: 0,0:18:06.09,0:18:08.81,mushibugyo_CN,NTP,0000,0000,0000,,仁兵衛大人 別管我了 你快走吧
+Dialogue: 0,0:18:16.88,0:18:18.28,mushibugyo_CN,NTP,0000,0000,0000,,使不上勁.…
+Dialogue: 0,0:18:50.79,0:18:52.77,mushibugyo_CN,NTP,0000,0000,0000,,我看見 星星了
+Dialogue: 0,0:19:02.37,0:19:07.60,mushibugyo_CN,NTP,0000,0000,0000,,恍如兒時抬頭仰望的夜空中 那最耀眼的星辰
+Dialogue: 0,0:19:19.35,0:19:23.11,mushibugyo_CN,NTP,0000,0000,0000,,謝謝你 仁兵衛大人
+Dialogue: 0,0:19:23.96,0:19:26.25,mushibugyo_CN,NTP,0000,0000,0000,,我本已不抱任何希望
+Dialogue: 0,0:19:26.44,0:19:30.05,mushibugyo_CN,NTP,0000,0000,0000,,心裏想著 這樣的死法 在這江戶本就是常有的事
+Dialogue: 0,0:19:31.10,0:19:34.38,mushibugyo_CN,NTP,0000,0000,0000,,我也會像父親母親那樣死去
+Dialogue: 0,0:19:35.45,0:19:37.61,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐 你錯了
+Dialogue: 0,0:19:38.39,0:19:42.67,mushibugyo_CN,NTP,0000,0000,0000,,就算對手是怪物 也沒有人該不明不白地喪命
+Dialogue: 0,0:19:51.11,0:19:53.04,mushibugyo_CN,NTP,0000,0000,0000,,投了什麼願望
+Dialogue: 0,0:19:53.70,0:19:57.20,mushibugyo_CN,NTP,0000,0000,0000,,希望有一天能有人保護我們  不再為蟲子所害
+Dialogue: 0,0:19:57.77,0:20:01.07,mushibugyo_CN,NTP,0000,0000,0000,,保護江戶的所有人和我們的寶貝小春
+Dialogue: 0,0:20:04.43,0:20:08.59,mushibugyo_CN,NTP,0000,0000,0000,,父親和母親的願望  並沒有白費
+Dialogue: 0,0:20:11.26,0:20:15.67,mushibugyo_CN,NTP,0000,0000,0000,,此次承蒙您相救 在下感激不盡
+Dialogue: 0,0:20:16.84,0:20:18.79,mushibugyo_CN,NTP,0000,0000,0000,,敢問閣下尊姓大名
+Dialogue: 0,0:20:20.25,0:20:22.53,mushibugyo_CN,NTP,0000,0000,0000,,在下雖不才 卻也是一名武士
+Dialogue: 0,0:20:22.83,0:20:27.35,mushibugyo_CN,NTP,0000,0000,0000,,今日您揮劍相助的恩情 當日定將以劍相還
+Dialogue: 0,0:20:28.31,0:20:30.25,mushibugyo_CN,NTP,0000,0000,0000,,雖然在下尚不成熟
+Dialogue: 0,0:20:30.61,0:20:33.00,mushibugyo_CN,NTP,0000,0000,0000,,但總有一天 在下會成為您那樣的強者
+Dialogue: 0,0:20:33.68,0:20:36.95,mushibugyo_CN,NTP,0000,0000,0000,,成為戰無不勝至死方休的強大武士
+Dialogue: 0,0:20:36.95,0:20:38.99,mushibugyo_CN,NTP,0000,0000,0000,,在下名叫月島仁兵衛…
+Dialogue: 0,0:20:43.36,0:20:47.80,mushibugyo_CN,NTP,0000,0000,0000,,居然想和無涯大人說話 你還早了100年
+Dialogue: 0,0:20:48.95,0:20:50.00,mushibugyo_CN,NTP,0000,0000,0000,,仁兵衛君
+Dialogue: 0,0:20:51.80,0:20:55.02,mushibugyo_CN,NTP,0000,0000,0000,,你會來的吧  蟲奉行所
+Dialogue: 0,0:20:55.18,0:20:56.86,mushibugyo_CN,NTP,0000,0000,0000,,是
+Dialogue: 0,0:21:00.28,0:21:02.54,mushibugyo_CN,NTP,0000,0000,0000,,月島仁兵衛
+Dialogue: 0,0:21:03.31,0:21:07.03,mushibugyo_CN,NTP,0000,0000,0000,,我可能撿到好東西了
+Dialogue: 0,0:21:07.81,0:21:09.27,mushibugyo_CN,NTP,0000,0000,0000,,蟲奉行大人
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:23:00.41,0:23:01.33,mushibugyo_CN,NTP,0000,0000,0000,,天哪
+Dialogue: 0,0:23:01.33,0:23:03.11,mushibugyo_CN,NTP,0000,0000,0000,,小春小姐 快將它丟過來
+Dialogue: 0,0:23:03.11,0:23:04.08,mushibugyo_CN,NTP,0000,0000,0000,,它？ 是指什麼
+Dialogue: 0,0:23:04.08,0:23:07.91,mushibugyo_CN,NTP,0000,0000,0000,,藏在胸前的那個炸彈 馬上就要爆炸了啊
+Dialogue: 0,0:23:07.91,0:23:09.13,mushibugyo_CN,NTP,0000,0000,0000,,仁兵衛大人這個色鬼
+Dialogue: 0,0:23:09.13,0:23:10.29,mushibugyo_CN,NTP,0000,0000,0000,,黛博拉！！！   【勇者鬥惡龍裏的登場人物 巨乳】
+Dialogue: 0,0:23:10.40,0:23:11.94,mushibugyo_CN,NTP,0000,0000,0000,,下回 蟲奉行
+Dialogue: 0,0:23:11.94,0:23:14.38,mushibugyo_CN,NTP,0000,0000,0000,,對手是女忍者 火缽
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_CN,NTP,0000,0000,0000,,op
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,友よ　友よ　君の中に
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,悲しいほどの純粋さを見た
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,日の暮れた学者の片隅で
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,汗まみれの素振りをしてたな
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,友よ　友よ　君の中に
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,笑えるほどの情熱を見た
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,「俺には夢があるんだ」と
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,馬鹿でかい声で叫んでいたな
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,君の街に朝日が
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,昇ってきたとしたのならば
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,賑やかな街の中を
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,走り抜けていったじゃないか
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,君の街に夜更けが
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,やってきたのだとしたのならば
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,大通りを抜けたところの
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,河原で語ったな
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,そうだろ　友よ
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,友よ　友よ　君の中に
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,綺麗な真心をみた
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,大切な命を抱きしめながら
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,真剣な顔をしてるな
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_CN,NTP,0000,0000,0000,,op
+Dialogue: 0,0:00:18.25,0:00:21.04,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}摯友啊 摯友啊 在你身上
+Dialogue: 0,0:00:21.04,0:00:23.64,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}我看到了令人憂傷的純粹簡單
+Dialogue: 0,0:00:24.28,0:00:27.14,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}在夕陽西下時的道場一角
+Dialogue: 0,0:00:27.29,0:00:29.75,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}揮灑著汗水練習刀法
+Dialogue: 0,0:00:30.20,0:00:33.17,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}摯友啊 摯友啊 在你身上
+Dialogue: 0,0:00:33.17,0:00:35.77,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}我看到了引人發笑的滿腔熱情
+Dialogue: 0,0:00:36.25,0:00:39.03,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}「我也是有夢想的啊」
+Dialogue: 0,0:00:39.28,0:00:42.23,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}像傻瓜般這樣大聲叫喊
+Dialogue: 0,0:00:43.78,0:00:46.55,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}若是你所在的街道上
+Dialogue: 0,0:00:46.69,0:00:49.33,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}朝陽東昇的話
+Dialogue: 0,0:00:49.85,0:00:52.29,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}想必你會在喧鬧的街上
+Dialogue: 0,0:00:52.50,0:00:55.33,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}拚命奔跑著吧
+Dialogue: 0,0:00:55.78,0:00:58.23,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}若是你所在的街道上
+Dialogue: 0,0:00:58.54,0:01:01.22,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}深夜降臨的話
+Dialogue: 0,0:01:01.76,0:01:04.47,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}你會穿過寬闊的大道
+Dialogue: 0,0:01:04.59,0:01:06.18,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}在河灘邊訴說
+Dialogue: 0,0:01:06.34,0:01:09.10,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}是這樣吧 我的摯友
+Dialogue: 0,0:01:13.59,0:01:16.72,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}摯友啊 摯友啊 在你身上
+Dialogue: 0,0:01:16.72,0:01:19.39,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}我看到了一顆赤子之心
+Dialogue: 0,0:01:19.80,0:01:22.40,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}想必你正守護著重要的性命
+Dialogue: 0,0:01:22.69,0:01:25.41,mushibugyo_OP_CN,NTP,0000,0000,0000,,{\an8}臉上透露著決心吧
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_OP_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,ED
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,いつの日か　今よりも　強くなりたい
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,ただ一つの願い　胸に咲く炎
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,何もできなかった日に　胸の誓いは生まれた
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,決してもう逃げださないと　ただひたすら前を向くと
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,傷つき倒れ　また立ち上がる　諦めなど知らぬものに
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,春は何度でも
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,この先に何がある　見えなくていい
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,一途なまなざしが　炎を灯すよ
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_JP,NTP,0000,0000,0000,,ed
+Dialogue: 0,0:21:29.85,0:21:38.69,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}希望有一天 能變得比現在更強
+Dialogue: 0,0:21:39.62,0:21:51.81,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}唯一的願望  如心中綻放的火焰
+Dialogue: 0,0:22:01.96,0:22:10.96,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}在一事無成的日子裏  心中曾許下誓言
+Dialogue: 0,0:22:11.76,0:22:21.46,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}只會勇往直前 絕不會再逃避
+Dialogue: 0,0:22:22.44,0:22:30.94,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}受傷倒下  又再站起  在不輕言放棄的人身上
+Dialogue: 0,0:22:31.02,0:22:34.68,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}春天總會降臨
+Dialogue: 0,0:22:35.95,0:22:44.73,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}前方會有什麼  無法預見也沒關係
+Dialogue: 0,0:22:45.62,0:22:57.68,mushibugyo_ED_CN,NTP,0000,0000,0000,,{\an8}堅定的目光  會點燃指引方向的火焰
+Dialogue: 0,0:00:00.00,0:00:00.00,mushibugyo_ED_CN,NTP,0000,0000,0000,,
+Dialogue: 0,0:01:30.05,0:01:39.18,mushibugyo_staff,NTP,0000,0000,0000,,{\an8}本字幕由諸神字幕組（kamigami.org）製作，僅供交流學習，禁止用於任何商業用途
+Dialogue: 0,0:01:30.05,0:01:39.18,mushibugyo_staff,NTP,0000,0000,0000,,日聽:東吾 king  翻譯:念白白 poopy   校對:木落 時間軸:wcaster
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+Dialogue: 0,0:00:00.00,0:00:00.00,jojo_disclaimer,NTP,0000,0000,0000,,
+

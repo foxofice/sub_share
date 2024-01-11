@@ -1,0 +1,541 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: 虫奉行24
+Original Script: 诸神字幕组
+Original Translation: 诸神字幕组
+Original Timing: 小涩
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Normal
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+Synch Point: 
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: mushibugyo_OP_CN,方正准圆_GBK,40,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,2,15,0,5,1
+Style: mushibugyo_ED_CN,方正准圆_GBK,40,&H14FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,100,2,0,0,5,1
+Style: mushibugyo_CN,方正准圆_GBK,45,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: mushibugyo_ED_JP,EPSON 太丸ゴシック体Ｂ,28,&H14FFFFFF,&HF0000000,&H00000000,&HF07F7F7F,-1,0,0,0,100,100,0,0,1,2,0,2,0,0,5,1
+Style: mushibugyo_JP,EPSON 太丸ゴシック体Ｂ,28,&H00FFFFFF,&HF0000000,&H00000000,&HF0FFFFFF,-1,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: mushibugyo_OP_JP,EPSON 太丸ゴシック体Ｂ,28,&H00FFFFFF,&H00000000,&H00000000,&H00FFFFFF,-1,0,0,0,100,100,0,0,1,2,0,2,15,10,10,1
+Style: mushibugyo_disclaimer,方正准圆_GBK,35,&H00FFFFFF,&HF0000000,&H00000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,100,2,0,0,5,1
+Style: mushibugyo_staff,方正准圆_GBK,35,&H00FFFFFF,&HF0000000,&H01000000,&HF0000000,-1,0,0,0,100,100,0,0,1,2,2,2,0,0,5,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:01:30.92,0:01:37.30,mushibugyo_staff,NTP,0,0,0,,{\an8}本字幕由诸神字幕组（kamigami.org）制作，仅供交流学习，禁止用于任何商业用途
+Dialogue: 0,0:01:30.92,0:01:37.30,mushibugyo_staff,NTP,0,0,0,,日听:aimie king  翻译:念白白 poopy   校对:木落  时间轴:小涩
+Dialogue: 0,0:00:14.35,0:00:16.95,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}昏昏沉沉 头晕目眩之中
+Dialogue: 0,0:00:16.95,0:00:19.45,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}空无一物 哪怕枯萎殆尽
+Dialogue: 0,0:00:19.45,0:00:22.02,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}悠悠荡荡 雾霭茫茫前方
+Dialogue: 0,0:00:22.02,0:00:24.74,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}远远不止 勿要避开目光
+Dialogue: 0,0:00:24.74,0:00:27.32,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}倘若就此 画上句号的话
+Dialogue: 0,0:00:27.32,0:00:29.96,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}如此轻易 画上句号的话
+Dialogue: 0,0:00:29.96,0:00:32.44,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}只会再次 重蹈覆辙而已
+Dialogue: 0,0:00:32.44,0:00:35.22,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}只不过是 重蹈覆辙而已
+Dialogue: 0,0:00:45.63,0:00:48.22,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}昏昏沉沉 头晕目眩之中
+Dialogue: 0,0:00:48.22,0:00:50.83,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}空无一物 哪怕枯萎殆尽
+Dialogue: 0,0:00:50.83,0:00:53.45,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}也不就此 为之画上句号
+Dialogue: 0,0:00:53.45,0:00:56.07,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}远远不会 让它这样结束
+Dialogue: 0,0:00:56.33,0:01:05.07,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}一望无尽的天空 风停止喧嚣
+Dialogue: 0,0:01:06.29,0:01:09.15,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}只要心在此处
+Dialogue: 0,0:01:09.25,0:01:11.69,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}就无法停止追求
+Dialogue: 0,0:01:11.82,0:01:16.52,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}鼓动的心跳 刻画时间的逝去
+Dialogue: 0,0:01:16.70,0:01:19.59,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}哪怕前方一无所有
+Dialogue: 0,0:01:19.69,0:01:22.17,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}也不会停止脚步
+Dialogue: 0,0:01:22.23,0:01:27.27,mushibugyo_OP_CN,NTP,0,0,0,,{\an8}打破命运 直到终点
+Dialogue: 0,0:21:43.60,0:21:50.53,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}抬眼仰望东方破晓的天空
+Dialogue: 0,0:21:50.99,0:21:57.60,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}看见渺小的我 踮起脚尖的身影
+Dialogue: 0,0:21:58.21,0:22:04.92,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}偶然而至的缘分 缔结了羁绊
+Dialogue: 0,0:22:05.46,0:22:12.14,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}今天的你 也如往日一样快乐吧
+Dialogue: 0,0:22:12.77,0:22:17.85,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}你我的相遇 亦缘亦错
+Dialogue: 0,0:22:19.98,0:22:26.16,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}尽管彼此的脸颊上满是伤痕
+Dialogue: 0,0:22:26.84,0:22:30.51,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}但只要前方有路
+Dialogue: 0,0:22:30.51,0:22:34.06,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}便要抛却恐惧前行
+Dialogue: 0,0:22:34.19,0:22:37.73,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}在雨打衣襟的日子里
+Dialogue: 0,0:22:37.82,0:22:40.79,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}我愿化作为风
+Dialogue: 0,0:22:40.79,0:22:47.73,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}愿你迈向的前方 有朝阳照耀
+Dialogue: 0,0:22:48.10,0:22:51.46,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}愿你俯首转身而去的脸上
+Dialogue: 0,0:22:51.85,0:22:55.63,mushibugyo_ED_CN,NTP,0,0,0,,{\an8}有笑容绽放
+Dialogue: 0,0:01:57.95,0:01:59.95,mushibugyo_JP,,0,0,0,,
+Dialogue: 0,0:01:40.78,0:01:43.16,mushibugyo_JP,,0,0,0,,殺す前に一つだけ聞いておこう
+Dialogue: 0,0:01:43.96,0:01:47.84,mushibugyo_JP,,0,0,0,,蟲狩りの貴様がなぜ姫君の為に戦っている
+Dialogue: 0,0:01:51.28,0:01:55.12,mushibugyo_JP,,0,0,0,,蟲ケラに語る言葉など　無い
+Dialogue: 0,0:02:00.92,0:02:02.18,mushibugyo_JP,,0,0,0,,ならば　死ね
+Dialogue: 0,0:02:14.12,0:02:16.38,mushibugyo_JP,,0,0,0,,貴様の幻術は全て見切った
+Dialogue: 0,0:02:29.84,0:02:32.86,mushibugyo_JP,,0,0,0,,やはりこっちの方がしっくり来るのう　鎌之介
+Dialogue: 0,0:02:35.70,0:02:37.96,mushibugyo_JP,,0,0,0,,随分と優男になったものね
+Dialogue: 0,0:02:39.28,0:02:42.74,mushibugyo_JP,,0,0,0,,いいね　ようやく本気を出しやがったか
+Dialogue: 0,0:02:42.98,0:02:43.76,mushibugyo_JP,,0,0,0,,負けない
+Dialogue: 0,0:02:44.60,0:02:48.90,mushibugyo_JP,,0,0,0,,さーて　お主達　続きと行こうか
+Dialogue: 0,0:02:50.06,0:02:51.30,mushibugyo_JP,,0,0,0,,上等だぜ
+Dialogue: 0,0:02:51.50,0:02:54.08,mushibugyo_JP,,0,0,0,,末吉　為吉 急急如律令
+Dialogue: 0,0:02:55.56,0:02:57.56,mushibugyo_JP,,0,0,0,,あんた達は　ここで倒す
+Dialogue: 0,0:00:00.90,0:00:00.90,Default,,0,0,0,,
+Dialogue: 0,0:03:23.50,0:03:25.00,mushibugyo_JP,,0,0,0,,真田幸村
+Dialogue: 0,0:03:26.56,0:03:29.04,mushibugyo_JP,,0,0,0,,今度の鼠はちと貧相だな
+Dialogue: 0,0:03:30.04,0:03:32.22,mushibugyo_JP,,0,0,0,,精々気張れよ　小鼠
+Dialogue: 0,0:03:33.14,0:03:34.52,mushibugyo_JP,,0,0,0,,さっきの鼠
+Dialogue: 0,0:03:35.56,0:03:39.56,mushibugyo_JP,,0,0,0,,居合いの武士は暇つぶし程度には楽しませてくれたぞ
+Dialogue: 0,0:03:41.24,0:03:42.18,mushibugyo_JP,,0,0,0,,どういう事だ
+Dialogue: 0,0:03:43.34,0:03:44.48,mushibugyo_JP,,0,0,0,,わからぬか
+Dialogue: 0,0:03:46.70,0:03:48.12,mushibugyo_JP,,0,0,0,,ま　まさか
+Dialogue: 0,0:03:49.82,0:03:51.40,mushibugyo_JP,,0,0,0,,大岡殿
+Dialogue: 0,0:03:51.80,0:03:55.02,mushibugyo_JP,,0,0,0,,聞こえますか　大岡殿
+Dialogue: 0,0:03:57.82,0:03:59.14,mushibugyo_JP,,0,0,0,,そんなはずは無い
+Dialogue: 0,0:03:59.72,0:04:02.14,mushibugyo_JP,,0,0,0,,大岡殿は誠の武士
+Dialogue: 0,0:04:02.52,0:04:05.60,mushibugyo_JP,,0,0,0,,貴様のような悪に屈するなどあるはず無い
+Dialogue: 0,0:04:05.86,0:04:06.98,mushibugyo_JP,,0,0,0,,くだらんな
+Dialogue: 0,0:04:07.20,0:04:07.84,mushibugyo_JP,,0,0,0,,なに
+Dialogue: 0,0:04:07.98,0:04:11.84,mushibugyo_JP,,0,0,0,,貴様ら武士は何かと言えば正義を振りかざすが
+Dialogue: 0,0:04:12.40,0:04:13.78,mushibugyo_JP,,0,0,0,,現実はどうだ
+Dialogue: 0,0:04:14.28,0:04:16.78,mushibugyo_JP,,0,0,0,,何も守れず　誰も救えず
+Dialogue: 0,0:04:16.96,0:04:20.22,mushibugyo_JP,,0,0,0,,我らの前に膝を屈するばかりではないか
+Dialogue: 0,0:04:20.92,0:04:23.12,mushibugyo_JP,,0,0,0,,居合いの武士とて同じよ
+Dialogue: 0,0:04:24.58,0:04:30.04,mushibugyo_JP,,0,0,0,,腕を捥がれ無様に地べたを 這いずり回っておったわ
+Dialogue: 0,0:04:33.30,0:04:34.94,mushibugyo_JP,,0,0,0,,貴様
+Dialogue: 0,0:04:38.56,0:04:40.98,mushibugyo_JP,,0,0,0,,なんだそのぬるい剣は
+Dialogue: 0,0:04:49.98,0:04:50.62,mushibugyo_JP,,0,0,0,,月島
+Dialogue: 0,0:04:53.60,0:04:54.26,mushibugyo_JP,,0,0,0,,幸村
+Dialogue: 0,0:04:54.88,0:04:57.68,mushibugyo_JP,,0,0,0,,お懐かしゅうございます　奈阿姫様
+Dialogue: 0,0:04:58.26,0:05:00.64,mushibugyo_JP,,0,0,0,,この様に姫と顔合わせができ
+Dialogue: 0,0:05:01.12,0:05:03.92,mushibugyo_JP,,0,0,0,,この幸村　光栄の極み
+Dialogue: 0,0:05:04.98,0:05:06.12,mushibugyo_JP,,0,0,0,,では参りましょう
+Dialogue: 0,0:05:07.06,0:05:11.64,mushibugyo_JP,,0,0,0,,我らの城　王のおわす大阪城へ
+Dialogue: 0,0:05:13.62,0:05:15.80,mushibugyo_JP,,0,0,0,,妾には大切な勤めがある
+Dialogue: 0,0:05:16.54,0:05:19.44,mushibugyo_JP,,0,0,0,,お主と行動を共にするつもりは　無い
+Dialogue: 0,0:05:20.60,0:05:21.66,mushibugyo_JP,,0,0,0,,そうですか
+Dialogue: 0,0:05:24.62,0:05:28.20,mushibugyo_JP,,0,0,0,,ならば　この手でお連れするまでの事
+Dialogue: 0,0:05:29.20,0:05:31.48,mushibugyo_JP,,0,0,0,,我が王は間もなくお目覚めです
+Dialogue: 0,0:05:32.00,0:05:34.66,mushibugyo_JP,,0,0,0,,さ　一刻も早く大阪へ
+Dialogue: 0,0:05:34.92,0:05:36.14,mushibugyo_JP,,0,0,0,,お付きの方
+Dialogue: 0,0:05:45.60,0:05:49.14,mushibugyo_JP,,0,0,0,,月島流　富嶽鉄槌割り
+Dialogue: 0,0:05:53.20,0:05:55.58,mushibugyo_JP,,0,0,0,,今のうちに　早く井戸に行ってください
+Dialogue: 0,0:05:55.86,0:05:56.84,mushibugyo_JP,,0,0,0,,お付きの方
+Dialogue: 0,0:05:59.52,0:06:02.92,mushibugyo_JP,,0,0,0,,この程度の力で俺に立ち向かおうとはな
+Dialogue: 0,0:06:13.56,0:06:16.26,mushibugyo_JP,,0,0,0,,お付きの方　ご安心ください
+Dialogue: 0,0:06:16.82,0:06:20.90,mushibugyo_JP,,0,0,0,,月島仁兵衛　この命に代えてもお守り致します
+Dialogue: 0,0:06:21.98,0:06:23.44,mushibugyo_JP,,0,0,0,,くだらん足掻きを
+Dialogue: 0,0:06:24.96,0:06:28.60,mushibugyo_JP,,0,0,0,,居合いの武士と同じく無駄死に終わるだけだぞ
+Dialogue: 0,0:06:31.10,0:06:32.48,mushibugyo_JP,,0,0,0,,無駄死にだと
+Dialogue: 0,0:06:34.18,0:06:36.80,mushibugyo_JP,,0,0,0,,大岡殿こそ　武士の中の武士
+Dialogue: 0,0:06:37.92,0:06:40.44,mushibugyo_JP,,0,0,0,,それを愚弄する貴様は
+Dialogue: 0,0:06:40.96,0:06:43.36,mushibugyo_JP,,0,0,0,,大バツだ
+Dialogue: 0,0:06:45.64,0:06:49.62,mushibugyo_JP,,0,0,0,,月島流　富嶽山嵐
+Dialogue: 0,0:06:52.92,0:06:56.86,mushibugyo_JP,,0,0,0,,プラス　富嶽　鉄槌割り
+Dialogue: 0,0:07:03.76,0:07:04.50,mushibugyo_JP,,0,0,0,,月島
+Dialogue: 0,0:07:09.14,0:07:10.16,mushibugyo_JP,,0,0,0,,では行くぞ
+Dialogue: 0,0:07:26.92,0:07:28.28,mushibugyo_JP,,0,0,0,,常世の蟲
+Dialogue: 0,0:07:30.60,0:07:34.40,mushibugyo_JP,,0,0,0,,汝　常世の井戸の封印を解く勿れ
+Dialogue: 0,0:07:35.06,0:07:37.70,mushibugyo_JP,,0,0,0,,悲しみの過去に打ち勝つ者のみ
+Dialogue: 0,0:07:38.04,0:07:40.98,mushibugyo_JP,,0,0,0,,力を取り戻すであろう　か
+Dialogue: 0,0:07:43.26,0:07:44.04,mushibugyo_JP,,0,0,0,,良かろう
+Dialogue: 0,0:07:53.54,0:07:54.20,mushibugyo_JP,,0,0,0,,やった
+Dialogue: 0,0:07:54.76,0:07:56.40,mushibugyo_JP,,0,0,0,,こ　これは
+Dialogue: 0,0:07:57.18,0:07:58.94,mushibugyo_JP,,0,0,0,,月島殿　一体何が
+Dialogue: 0,0:08:00.40,0:08:03.50,mushibugyo_JP,,0,0,0,,真田幸村を　討ち果たしました
+Dialogue: 0,0:08:03.86,0:08:05.52,mushibugyo_JP,,0,0,0,,なんと　あの幸村を
+Dialogue: 0,0:08:05.52,0:08:06.06,mushibugyo_JP,,0,0,0,,はい
+Dialogue: 0,0:08:06.62,0:08:07.28,mushibugyo_JP,,0,0,0,,姫は
+Dialogue: 0,0:08:07.50,0:08:08.38,mushibugyo_JP,,0,0,0,,井戸の中へ
+Dialogue: 0,0:08:10.54,0:08:11.14,mushibugyo_JP,,0,0,0,,これは
+Dialogue: 0,0:08:14.24,0:08:17.42,mushibugyo_JP,,0,0,0,,奈阿姫様が力を取り戻しておられるのだ
+Dialogue: 0,0:08:24.82,0:08:28.30,mushibugyo_JP,,0,0,0,,拙者の幻術を見切っただと
+Dialogue: 0,0:08:29.90,0:08:30.98,mushibugyo_JP,,0,0,0,,面白い
+Dialogue: 0,0:08:31.36,0:08:34.34,mushibugyo_JP,,0,0,0,,貴様はこれより身も心も蟲となる
+Dialogue: 0,0:08:36.96,0:08:43.34,mushibugyo_JP,,0,0,0,,数多の蟲を殺してきた　蟲狩りの貴様にこそふさわしい末路であろう
+Dialogue: 0,0:08:44.40,0:08:47.52,mushibugyo_JP,,0,0,0,,大禁術　蟲返り
+Dialogue: 0,0:09:06.44,0:09:09.82,mushibugyo_JP,,0,0,0,,幻術を攻めに使うと守りは甘くなるようだな
+Dialogue: 0,0:09:10.22,0:09:11.90,mushibugyo_JP,,0,0,0,,ば　バカな
+Dialogue: 0,0:09:11.90,0:09:15.44,mushibugyo_JP,,0,0,0,,太秦は　神とも神と聞こえくる
+Dialogue: 0,0:09:17.16,0:09:19.88,mushibugyo_JP,,0,0,0,,常世の神を打ち懲ますも
+Dialogue: 0,0:09:20.62,0:09:23.90,mushibugyo_JP,,0,0,0,,塵外刀強化　刀蟲化合
+Dialogue: 0,0:09:27.82,0:09:29.98,mushibugyo_JP,,0,0,0,,貴様の蟲の力を頂く
+Dialogue: 0,0:09:33.00,0:09:35.46,mushibugyo_JP,,0,0,0,,真田の未来を消し去るために
+Dialogue: 0,0:09:38.76,0:09:42.70,mushibugyo_JP,,0,0,0,,貴様
+Dialogue: 0,0:09:45.92,0:09:46.66,mushibugyo_JP,,0,0,0,,行くか
+Dialogue: 0,0:09:48.40,0:09:51.90,mushibugyo_JP,,0,0,0,,紀州の城に巣くう　蟲を退治に
+Dialogue: 0,0:09:55.88,0:09:57.36,mushibugyo_JP,,0,0,0,,真田幸村
+Dialogue: 0,0:09:58.34,0:10:01.56,mushibugyo_JP,,0,0,0,,よもや　あの程度で俺を倒せたと
+Dialogue: 0,0:10:04.24,0:10:08.10,mushibugyo_JP,,0,0,0,,奈阿姫様が力を取り戻すまで 真田を足止めするのだ
+Dialogue: 0,0:10:08.42,0:10:08.80,mushibugyo_JP,,0,0,0,,はっ
+Dialogue: 0,0:10:10.18,0:10:13.00,mushibugyo_JP,,0,0,0,,何も知らぬとは滑稽なものだな
+Dialogue: 0,0:10:13.26,0:10:13.94,mushibugyo_JP,,0,0,0,,なに
+Dialogue: 0,0:10:14.46,0:10:15.36,mushibugyo_JP,,0,0,0,,まー良い
+Dialogue: 0,0:10:15.60,0:10:17.92,mushibugyo_JP,,0,0,0,,精々足止めとやらに励むが良い
+Dialogue: 0,0:10:20.68,0:10:21.32,mushibugyo_JP,,0,0,0,,危ない
+Dialogue: 0,0:10:21.40,0:10:22.18,mushibugyo_JP,,0,0,0,,避けてください
+Dialogue: 0,0:10:42.34,0:10:43.80,mushibugyo_JP,,0,0,0,,真田幸村
+Dialogue: 0,0:10:44.62,0:10:47.92,mushibugyo_JP,,0,0,0,,これまで立ち会ったどの敵よりも強い
+Dialogue: 0,0:10:48.94,0:10:52.60,mushibugyo_JP,,0,0,0,,だが自分は死ぬまで勝ち続ける武士
+Dialogue: 0,0:10:53.32,0:10:59.12,mushibugyo_JP,,0,0,0,,そして　自分の後ろには　守るべき人がいる
+Dialogue: 0,0:11:02.68,0:11:05.50,mushibugyo_JP,,0,0,0,,真田幸村　覚悟を
+Dialogue: 0,0:11:12.26,0:11:17.44,mushibugyo_JP,,0,0,0,,月島流　富嶽鉄槌割り
+Dialogue: 0,0:11:21.08,0:11:24.26,mushibugyo_JP,,0,0,0,,そんな技ではこの幸村を倒せぬ
+Dialogue: 0,0:11:27.34,0:11:29.22,mushibugyo_JP,,0,0,0,,だが褒めてやるぞ　小鼠
+Dialogue: 0,0:11:29.94,0:11:33.02,mushibugyo_JP,,0,0,0,,居合いの武士程には楽しませてもらったわ
+Dialogue: 0,0:11:35.54,0:11:36.30,mushibugyo_JP,,0,0,0,,月島殿
+Dialogue: 0,0:11:45.10,0:11:48.28,mushibugyo_JP,,0,0,0,,毒に悶え　苦しみながら死ぬと良い
+Dialogue: 0,0:12:10.18,0:12:11.66,mushibugyo_JP,,0,0,0,,姫様　いけません
+Dialogue: 0,0:12:12.14,0:12:13.64,mushibugyo_JP,,0,0,0,,こちらにお渡しください
+Dialogue: 0,0:12:13.90,0:12:14.62,mushibugyo_JP,,0,0,0,,いやじゃ
+Dialogue: 0,0:12:17.64,0:12:19.44,mushibugyo_JP,,0,0,0,,こ　これは
+Dialogue: 0,0:12:20.74,0:12:22.80,mushibugyo_JP,,0,0,0,,何だ　この風景は
+Dialogue: 0,0:12:24.94,0:12:28.52,mushibugyo_JP,,0,0,0,,あの少女　お付の方と瓜二つだ
+Dialogue: 0,0:12:31.20,0:12:32.42,mushibugyo_JP,,0,0,0,,何の騒ぎじゃ
+Dialogue: 0,0:12:33.58,0:12:35.26,mushibugyo_JP,,0,0,0,,ててさま　かかさま
+Dialogue: 0,0:12:35.82,0:12:39.06,mushibugyo_JP,,0,0,0,,皆が蟲さんをいじめていたから　助けてあげたの
+Dialogue: 0,0:12:44.20,0:12:47.92,mushibugyo_JP,,0,0,0,,見て　こんなにされて可哀相に
+Dialogue: 0,0:12:49.16,0:12:49.96,mushibugyo_JP,,0,0,0,,奈阿姫
+Dialogue: 0,0:12:50.18,0:12:53.24,mushibugyo_JP,,0,0,0,,何をしておる　はやお取り上げ
+Dialogue: 0,0:12:54.16,0:12:54.88,mushibugyo_JP,,0,0,0,,しかし
+Dialogue: 0,0:12:56.36,0:12:59.82,mushibugyo_JP,,0,0,0,,怖がることはない　わらわが守ってやるぞ
+Dialogue: 0,0:13:01.30,0:13:02.88,mushibugyo_JP,,0,0,0,,ああなると聞きませぬ
+Dialogue: 0,0:13:11.46,0:13:12.86,mushibugyo_JP,,0,0,0,,仕方ないのう
+Dialogue: 0,0:13:14.96,0:13:15.86,mushibugyo_JP,,0,0,0,,ててさま
+Dialogue: 0,0:13:23.26,0:13:25.30,mushibugyo_JP,,0,0,0,,だめです　全軍全滅です
+Dialogue: 0,0:13:26.16,0:13:27.34,mushibugyo_JP,,0,0,0,,わが軍はもはや
+Dialogue: 0,0:13:34.36,0:13:35.94,mushibugyo_JP,,0,0,0,,さ　お逃げ
+Dialogue: 0,0:13:38.88,0:13:42.20,mushibugyo_JP,,0,0,0,,だめじゃ　お主とはもう一緒にいられないのじゃ
+Dialogue: 0,0:13:42.78,0:13:46.00,mushibugyo_JP,,0,0,0,,この城は　もうまもなく敵の手に落ちる
+Dialogue: 0,0:13:47.04,0:13:48.14,mushibugyo_JP,,0,0,0,,そうなればわらわは…
+Dialogue: 0,0:13:51.74,0:13:53.74,mushibugyo_JP,,0,0,0,,さようなら　可愛い蟲さん
+Dialogue: 0,0:14:20.70,0:14:21.60,mushibugyo_JP,,0,0,0,,奈阿姫
+Dialogue: 0,0:14:22.08,0:14:23.90,mushibugyo_JP,,0,0,0,,奈阿姫　どこにいるのじゃ
+Dialogue: 0,0:14:24.60,0:14:27.12,mushibugyo_JP,,0,0,0,,あれ　わらわは
+Dialogue: 0,0:14:28.70,0:14:32.38,mushibugyo_JP,,0,0,0,,ててさま　かかさま　どこ
+Dialogue: 0,0:14:36.12,0:14:39.74,mushibugyo_JP,,0,0,0,,敵が毒をまいたぞ　上様をお守りするのだ
+Dialogue: 0,0:14:42.36,0:14:43.26,mushibugyo_JP,,0,0,0,,お前達
+Dialogue: 0,0:14:47.70,0:14:48.42,mushibugyo_JP,,0,0,0,,どうしたのじゃ
+Dialogue: 0,0:14:48.66,0:14:50.14,mushibugyo_JP,,0,0,0,,奈阿姫　どこにおる
+Dialogue: 0,0:14:50.74,0:14:52.42,mushibugyo_JP,,0,0,0,,聞こえたら返事をしておくれ
+Dialogue: 0,0:14:53.62,0:14:55.54,mushibugyo_JP,,0,0,0,,ててさま　かかさま
+Dialogue: 0,0:14:56.38,0:14:58.50,mushibugyo_JP,,0,0,0,,上様　お逃げください
+Dialogue: 0,0:15:01.84,0:15:03.34,mushibugyo_JP,,0,0,0,,何じゃ　貴様は
+Dialogue: 0,0:15:06.02,0:15:08.76,mushibugyo_JP,,0,0,0,,来るな　来るでない
+Dialogue: 0,0:15:09.26,0:15:11.88,mushibugyo_JP,,0,0,0,,ててさま　怒っちゃいやなのじゃ
+Dialogue: 0,0:15:12.38,0:15:14.54,mushibugyo_JP,,0,0,0,,わらわは蟲さんを外に
+Dialogue: 0,0:15:20.08,0:15:21.64,mushibugyo_JP,,0,0,0,,く　来るな
+Dialogue: 0,0:15:24.06,0:15:24.64,mushibugyo_JP,,0,0,0,,どうしたの
+Dialogue: 0,0:15:25.14,0:15:26.66,mushibugyo_JP,,0,0,0,,来るでない
+Dialogue: 0,0:15:59.26,0:16:02.90,mushibugyo_JP,,0,0,0,,ち　力　力って
+Dialogue: 0,0:16:03.78,0:16:04.54,mushibugyo_JP,,0,0,0,,どういうこと
+Dialogue: 0,0:16:05.30,0:16:07.88,mushibugyo_JP,,0,0,0,,お前の力を　わらわに
+Dialogue: 0,0:16:09.44,0:16:13.26,mushibugyo_JP,,0,0,0,,では　これは　わらわが
+Dialogue: 0,0:16:30.84,0:16:33.96,mushibugyo_JP,,0,0,0,,いや
+Dialogue: 0,0:16:41.98,0:16:42.76,mushibugyo_JP,,0,0,0,,月島
+Dialogue: 0,0:16:44.00,0:16:45.84,mushibugyo_JP,,0,0,0,,お主　なぜここに
+Dialogue: 0,0:16:48.18,0:16:49.38,mushibugyo_JP,,0,0,0,,お　お付の方
+Dialogue: 0,0:16:51.58,0:16:53.56,mushibugyo_JP,,0,0,0,,見たのか　過去を
+Dialogue: 0,0:16:55.16,0:16:57.02,mushibugyo_JP,,0,0,0,,わらわの忌まわしい過去を
+Dialogue: 0,0:17:00.64,0:17:02.16,mushibugyo_JP,,0,0,0,,皆不幸になるのじゃ
+Dialogue: 0,0:17:03.38,0:17:07.64,mushibugyo_JP,,0,0,0,,わらわのそばにいる者は 皆不幸になるのじゃ
+Dialogue: 0,0:17:08.88,0:17:10.06,mushibugyo_JP,,0,0,0,,愚かであった
+Dialogue: 0,0:17:11.46,0:17:14.58,mushibugyo_JP,,0,0,0,,すべてはあの時始まってしまったのだ
+Dialogue: 0,0:17:17.04,0:17:19.98,mushibugyo_JP,,0,0,0,,蟲などに情けなどかけたばかりに
+Dialogue: 0,0:17:26.46,0:17:28.02,mushibugyo_JP,,0,0,0,,それは　違います
+Dialogue: 0,0:17:28.30,0:17:33.28,mushibugyo_JP,,0,0,0,,蟲を守ろうとするお付の方の優しいお気持ちは正しかったのです
+Dialogue: 0,0:17:34.00,0:17:34.48,mushibugyo_JP,,0,0,0,,何を
+Dialogue: 0,0:17:35.24,0:17:40.20,mushibugyo_JP,,0,0,0,,小さきもの　弱気ものを守ることが間違っているというのなら
+Dialogue: 0,0:17:41.06,0:17:44.34,mushibugyo_JP,,0,0,0,,それは　その世界が間違っているのです
+Dialogue: 0,0:17:45.14,0:17:49.12,mushibugyo_JP,,0,0,0,,自分には想像もできないほどお辛いこともあったでしょう
+Dialogue: 0,0:17:49.68,0:17:53.44,mushibugyo_JP,,0,0,0,,しかし　正しきことを成したお付の方には
+Dialogue: 0,0:17:53.76,0:18:00.44,mushibugyo_JP,,0,0,0,,必ずや正しき未来が待っているはず  自分はそう信じています
+Dialogue: 0,0:18:02.60,0:18:03.14,mushibugyo_JP,,0,0,0,,月島
+Dialogue: 0,0:18:14.44,0:18:15.50,mushibugyo_JP,,0,0,0,,暖かいな
+Dialogue: 0,0:18:16.64,0:18:19.64,mushibugyo_JP,,0,0,0,,どうしてお主はこんなにも暖かいのじゃ
+Dialogue: 0,0:18:24.04,0:18:27.36,mushibugyo_JP,,0,0,0,,感じるか　わらわの胸の鼓動を
+Dialogue: 0,0:18:27.62,0:18:28.68,mushibugyo_JP,,0,0,0,,あっ　はい
+Dialogue: 0,0:18:28.90,0:18:31.00,mushibugyo_JP,,0,0,0,,これは　お主がくれたのじゃ
+Dialogue: 0,0:18:31.94,0:18:35.52,mushibugyo_JP,,0,0,0,,わらわの心は　百年冷たく凍っておった
+Dialogue: 0,0:18:38.20,0:18:40.14,mushibugyo_JP,,0,0,0,,それを融かしてくれたのは
+Dialogue: 0,0:18:40.86,0:18:42.72,mushibugyo_JP,,0,0,0,,月島　お主じゃ
+Dialogue: 0,0:18:44.42,0:18:45.66,mushibugyo_JP,,0,0,0,,お主の笑顔が
+Dialogue: 0,0:18:47.66,0:18:48.48,mushibugyo_JP,,0,0,0,,ぬくもりが
+Dialogue: 0,0:18:49.12,0:18:51.84,mushibugyo_JP,,0,0,0,,わらわの心を幾たび振るわせたことか
+Dialogue: 0,0:18:53.54,0:18:56.08,mushibugyo_JP,,0,0,0,,今もこの胸に染み入っておる
+Dialogue: 0,0:18:57.88,0:19:00.56,mushibugyo_JP,,0,0,0,,これが人の優しさなのだな
+Dialogue: 0,0:19:01.88,0:19:04.00,mushibugyo_JP,,0,0,0,,ありがとう　月島
+Dialogue: 0,0:19:05.16,0:19:07.70,mushibugyo_JP,,0,0,0,,こちらこそ　ありがとうございます
+Dialogue: 0,0:19:08.66,0:19:12.22,mushibugyo_JP,,0,0,0,,笑顔にお力をいただいているのは　自分も同じ
+Dialogue: 0,0:19:12.60,0:19:14.22,mushibugyo_JP,,0,0,0,,お春殿や　火鉢殿
+Dialogue: 0,0:19:14.70,0:19:16.46,mushibugyo_JP,,0,0,0,,恋川殿に　天間殿
+Dialogue: 0,0:19:17.14,0:19:20.96,mushibugyo_JP,,0,0,0,,無涯殿は　あまり笑ってくれませんが
+Dialogue: 0,0:19:21.90,0:19:26.50,mushibugyo_JP,,0,0,0,,お付の方の笑顔で　力がどんどん漲ってまいります
+Dialogue: 0,0:19:38.20,0:19:40.28,mushibugyo_JP,,0,0,0,,さ　お務めを頑張りましょう
+Dialogue: 0,0:19:40.62,0:19:44.38,mushibugyo_JP,,0,0,0,,この月島仁兵衛　最後までお供を致します
+Dialogue: 0,0:19:54.52,0:19:57.26,mushibugyo_JP,,0,0,0,,お主のお務めがここまでじゃ
+Dialogue: 0,0:19:58.34,0:20:03.00,mushibugyo_JP,,0,0,0,,お主がくれたぬくもりは　忘れぬぞ
+Dialogue: 0,0:20:06.32,0:20:07.56,mushibugyo_JP,,0,0,0,,お　お付の方
+Dialogue: 0,0:20:15.46,0:20:17.42,mushibugyo_JP,,0,0,0,,お　お付の方
+Dialogue: 0,0:20:19.54,0:20:23.32,mushibugyo_JP,,0,0,0,,お付の方
+Dialogue: 0,0:20:24.38,0:20:29.66,mushibugyo_JP,,0,0,0,,これはまさに奈阿姫様が完全なる力を取り戻しておられる証
+Dialogue: 0,0:20:32.34,0:20:33.50,mushibugyo_JP,,0,0,0,,何がおかしい
+Dialogue: 0,0:20:34.14,0:20:37.38,mushibugyo_JP,,0,0,0,,姫君が常世の井戸で力を取り戻すのは
+Dialogue: 0,0:20:37.60,0:20:39.88,mushibugyo_JP,,0,0,0,,むしろこちらが望んだこと
+Dialogue: 0,0:20:40.24,0:20:40.64,mushibugyo_JP,,0,0,0,,なっ
+Dialogue: 0,0:20:41.50,0:20:44.12,mushibugyo_JP,,0,0,0,,完全なる力を取り戻した姫は
+Dialogue: 0,0:20:44.64,0:20:49.28,mushibugyo_JP,,0,0,0,,わが王とともにこの国から人間共を根絶やしにするのだ
+Dialogue: 0,0:20:50.30,0:20:51.42,mushibugyo_JP,,0,0,0,,何をバカな
+Dialogue: 0,0:20:51.56,0:20:56.82,mushibugyo_JP,,0,0,0,,常世の井戸が何の代償もなく蟲に力を与えると思うのか
+Dialogue: 0,0:20:58.52,0:21:01.70,mushibugyo_JP,,0,0,0,,常世の井戸は与える力によって
+Dialogue: 0,0:21:01.76,0:21:04.20,mushibugyo_JP,,0,0,0,,その記憶を奪っていくという
+Dialogue: 0,0:21:05.24,0:21:08.50,mushibugyo_JP,,0,0,0,,姫君がすべての力を取り戻せば
+Dialogue: 0,0:21:08.92,0:21:12.76,mushibugyo_JP,,0,0,0,,すなわちすべての記憶を失うのだ
+Dialogue: 0,0:21:14.10,0:21:18.24,mushibugyo_JP,,0,0,0,,お　お付の方の記憶が…なくなる
+Dialogue: 0,0:21:19.36,0:21:21.46,mushibugyo_JP,,0,0,0,,われらの最後の希望が
+Dialogue: 0,0:21:22.50,0:21:23.48,mushibugyo_JP,,0,0,0,,そんな
+Dialogue: 0,0:21:24.96,0:21:28.42,mushibugyo_JP,,0,0,0,,貴様らの負けだ　人間
+Dialogue: 0,0:00:00.90,0:00:00.90,Default,,0,0,0,,
+Dialogue: 0,0:23:00.92,0:23:04.46,mushibugyo_JP,,0,0,0,,火鉢殿　お付の方を褌で井戸から引き上げます
+Dialogue: 0,0:23:04.70,0:23:05.62,mushibugyo_JP,,0,0,0,,お脱ぎください
+Dialogue: 0,0:23:05.62,0:23:06.74,mushibugyo_JP,,0,0,0,,オーケー　するする
+Dialogue: 0,0:23:06.74,0:23:08.20,mushibugyo_JP,,0,0,0,,って脱ぐわけないでしょうが
+Dialogue: 0,0:23:09.98,0:23:14.84,mushibugyo_JP,,0,0,0,,次回　蟲奉行「交わした約束は絶望の中の希望」
+Dialogue: 0,0:00:00.90,0:00:02.88,Default,,0,0,0,,
+Dialogue: 0,0:01:40.78,0:01:43.16,mushibugyo_CN,,0,0,0,,杀了你之前我还是问你一件事吧
+Dialogue: 0,0:01:43.96,0:01:47.84,mushibugyo_CN,,0,0,0,,身为虫狩的你为何为公主殿下而战
+Dialogue: 0,0:01:51.28,0:01:55.12,mushibugyo_CN,,0,0,0,,区区蝼蚁 何必与你多费口舌
+Dialogue: 0,0:02:00.92,0:02:02.18,mushibugyo_CN,,0,0,0,,那就直接上黄泉吧
+Dialogue: 0,0:02:14.12,0:02:16.38,mushibugyo_CN,,0,0,0,,我已看穿你所有的幻术了
+Dialogue: 0,0:02:29.84,0:02:32.86,mushibugyo_CN,,0,0,0,,还是这幅身体比较舒服啊 镰之介
+Dialogue: 0,0:02:35.70,0:02:37.96,mushibugyo_CN,,0,0,0,,没想到还是个谦谦君子呢
+Dialogue: 0,0:02:39.28,0:02:42.74,mushibugyo_CN,,0,0,0,,很好 终于认真起来了吗
+Dialogue: 0,0:02:42.98,0:02:43.76,mushibugyo_CN,,0,0,0,,我不会输的
+Dialogue: 0,0:02:44.60,0:02:48.90,mushibugyo_CN,,0,0,0,,那么 咱们继续吧
+Dialogue: 0,0:02:50.06,0:02:51.30,mushibugyo_CN,,0,0,0,,正合我意
+Dialogue: 0,0:02:51.50,0:02:54.08,mushibugyo_CN,,0,0,0,,末吉 为吉 急急如律令
+Dialogue: 0,0:02:55.56,0:02:57.56,mushibugyo_CN,,0,0,0,,势必在此打倒你们
+Dialogue: 0,0:03:02.57,0:03:05.07,mushibugyo_disclaimer,,0,0,0,,【虫奉行 被诅咒的过去】
+Dialogue: 0,0:00:00.90,0:00:00.90,Default,,0,0,0,,
+Dialogue: 0,0:03:23.50,0:03:25.00,mushibugyo_CN,,0,0,0,,真田幸村！
+Dialogue: 0,0:03:26.56,0:03:29.04,mushibugyo_CN,,0,0,0,,这次的鼠辈一脸穷酸样啊
+Dialogue: 0,0:03:30.04,0:03:32.22,mushibugyo_CN,,0,0,0,,拼尽全力吧 鼠辈
+Dialogue: 0,0:03:33.14,0:03:34.52,mushibugyo_CN,,0,0,0,,方才那只鼠辈
+Dialogue: 0,0:03:35.56,0:03:39.56,mushibugyo_CN,,0,0,0,,那位居合武士 还算让我稍稍打发了些时间
+Dialogue: 0,0:03:41.24,0:03:42.18,mushibugyo_CN,,0,0,0,,所言何意
+Dialogue: 0,0:03:43.34,0:03:44.48,mushibugyo_CN,,0,0,0,,还不明白吗
+Dialogue: 0,0:03:46.70,0:03:48.12,mushibugyo_CN,,0,0,0,,该不会…
+Dialogue: 0,0:03:49.82,0:03:51.40,mushibugyo_CN,,0,0,0,,大冈阁下
+Dialogue: 0,0:03:51.80,0:03:55.02,mushibugyo_CN,,0,0,0,,您听得见吗 大冈阁下！
+Dialogue: 0,0:03:57.82,0:03:59.14,mushibugyo_CN,,0,0,0,,那绝不可能
+Dialogue: 0,0:03:59.72,0:04:02.14,mushibugyo_CN,,0,0,0,,大冈阁下是名副其实的武士
+Dialogue: 0,0:04:02.52,0:04:05.60,mushibugyo_CN,,0,0,0,,绝不会向你这等恶势力屈服
+Dialogue: 0,0:04:05.86,0:04:06.98,mushibugyo_CN,,0,0,0,,无聊之极
+Dialogue: 0,0:04:07.20,0:04:07.84,mushibugyo_CN,,0,0,0,,什么
+Dialogue: 0,0:04:07.98,0:04:11.84,mushibugyo_CN,,0,0,0,,你们武士说到底只会标榜正义
+Dialogue: 0,0:04:12.40,0:04:13.78,mushibugyo_CN,,0,0,0,,然而现实又如何呢
+Dialogue: 0,0:04:14.28,0:04:16.78,mushibugyo_CN,,0,0,0,,谁都保护不了 谁都救不了
+Dialogue: 0,0:04:16.96,0:04:20.22,mushibugyo_CN,,0,0,0,,只能在我等面前卑躬屈膝
+Dialogue: 0,0:04:20.92,0:04:23.12,mushibugyo_CN,,0,0,0,,那位居合武士也是一样
+Dialogue: 0,0:04:24.58,0:04:30.04,mushibugyo_CN,,0,0,0,,被我卸掉了一只手臂 只能狼狈地在地上翻爬打滚
+Dialogue: 0,0:04:33.30,0:04:34.94,mushibugyo_CN,,0,0,0,,混蛋
+Dialogue: 0,0:04:38.56,0:04:40.98,mushibugyo_CN,,0,0,0,,没吃饱饭吗
+Dialogue: 0,0:04:49.98,0:04:50.62,mushibugyo_CN,,0,0,0,,月岛
+Dialogue: 0,0:04:53.60,0:04:54.26,mushibugyo_CN,,0,0,0,,幸村
+Dialogue: 0,0:04:54.88,0:04:57.68,mushibugyo_CN,,0,0,0,,好久不见 奈阿公主殿下
+Dialogue: 0,0:04:58.26,0:05:00.64,mushibugyo_CN,,0,0,0,,能与奈阿公主殿下相见
+Dialogue: 0,0:05:01.12,0:05:03.92,mushibugyo_CN,,0,0,0,,实是在下的荣幸
+Dialogue: 0,0:05:04.98,0:05:06.12,mushibugyo_CN,,0,0,0,,那么随在下走吧
+Dialogue: 0,0:05:07.06,0:05:11.64,mushibugyo_CN,,0,0,0,,前往吾等的城堡 吾王所在的大阪城
+Dialogue: 0,0:05:13.62,0:05:15.80,mushibugyo_CN,,0,0,0,,妾身还有重要的任务在身
+Dialogue: 0,0:05:16.54,0:05:19.44,mushibugyo_CN,,0,0,0,,无意与你一同行动
+Dialogue: 0,0:05:20.60,0:05:21.66,mushibugyo_CN,,0,0,0,,是吗
+Dialogue: 0,0:05:24.62,0:05:28.20,mushibugyo_CN,,0,0,0,,那么在下只好亲手带您走了
+Dialogue: 0,0:05:29.20,0:05:31.48,mushibugyo_CN,,0,0,0,,吾王不久就要苏醒
+Dialogue: 0,0:05:32.00,0:05:34.66,mushibugyo_CN,,0,0,0,,来吧 我们需尽快赶往大阪
+Dialogue: 0,0:05:34.92,0:05:36.14,mushibugyo_CN,,0,0,0,,侍女小姐
+Dialogue: 0,0:05:45.60,0:05:49.14,mushibugyo_CN,,0,0,0,,月岛流 富岳铁槌斩
+Dialogue: 0,0:05:53.20,0:05:55.58,mushibugyo_CN,,0,0,0,,趁现在快到井里去
+Dialogue: 0,0:05:55.86,0:05:56.84,mushibugyo_CN,,0,0,0,,侍女小姐
+Dialogue: 0,0:05:59.52,0:06:02.92,mushibugyo_CN,,0,0,0,,就凭这点能耐 也敢在我面前撒野
+Dialogue: 0,0:06:13.56,0:06:16.26,mushibugyo_CN,,0,0,0,,侍女小姐 您尽管放心
+Dialogue: 0,0:06:16.82,0:06:20.90,mushibugyo_CN,,0,0,0,,我月岛仁兵卫 拼上性命也会保护您的
+Dialogue: 0,0:06:21.98,0:06:23.44,mushibugyo_CN,,0,0,0,,无谓的挣扎
+Dialogue: 0,0:06:24.96,0:06:28.60,mushibugyo_CN,,0,0,0,,只会和那居合武士一样 落得白白丧命的下场
+Dialogue: 0,0:06:31.10,0:06:32.48,mushibugyo_CN,,0,0,0,,白白丧命
+Dialogue: 0,0:06:34.18,0:06:36.80,mushibugyo_CN,,0,0,0,,大冈阁下才真是武士中的武士
+Dialogue: 0,0:06:37.92,0:06:40.44,mushibugyo_CN,,0,0,0,,你竟敢愚弄他
+Dialogue: 0,0:06:40.96,0:06:43.36,mushibugyo_CN,,0,0,0,,罪不可赦
+Dialogue: 0,0:06:45.64,0:06:49.62,mushibugyo_CN,,0,0,0,,月岛流 富岳山岚
+Dialogue: 0,0:06:52.92,0:06:56.86,mushibugyo_CN,,0,0,0,,加上 富岳 铁槌斩
+Dialogue: 0,0:07:03.76,0:07:04.50,mushibugyo_CN,,0,0,0,,月岛
+Dialogue: 0,0:07:09.14,0:07:10.16,mushibugyo_CN,,0,0,0,,那我先行前往了
+Dialogue: 0,0:07:26.92,0:07:28.28,mushibugyo_CN,,0,0,0,,常世之虫
+Dialogue: 0,0:07:30.60,0:07:34.40,mushibugyo_CN,,0,0,0,,汝 勿要解除常世之井的封印
+Dialogue: 0,0:07:35.06,0:07:37.70,mushibugyo_CN,,0,0,0,,只有战胜悲伤过去之人
+Dialogue: 0,0:07:38.04,0:07:40.98,mushibugyo_CN,,0,0,0,,方可重获力量…吧
+Dialogue: 0,0:07:43.26,0:07:44.04,mushibugyo_CN,,0,0,0,,也好
+Dialogue: 0,0:07:53.54,0:07:54.20,mushibugyo_CN,,0,0,0,,干掉了
+Dialogue: 0,0:07:54.76,0:07:56.40,mushibugyo_CN,,0,0,0,,这 这是…
+Dialogue: 0,0:07:57.18,0:07:58.94,mushibugyo_CN,,0,0,0,,月岛阁下 到底发生了何事
+Dialogue: 0,0:08:00.40,0:08:03.50,mushibugyo_CN,,0,0,0,,在下已将真田幸村诛杀
+Dialogue: 0,0:08:03.86,0:08:05.52,mushibugyo_CN,,0,0,0,,了不起 竟能将那幸村…
+Dialogue: 0,0:08:05.52,0:08:06.06,mushibugyo_CN,,0,0,0,,正是
+Dialogue: 0,0:08:06.62,0:08:07.28,mushibugyo_CN,,0,0,0,,公主呢
+Dialogue: 0,0:08:07.50,0:08:08.38,mushibugyo_CN,,0,0,0,,前去井中了
+Dialogue: 0,0:08:10.54,0:08:11.14,mushibugyo_CN,,0,0,0,,这是…
+Dialogue: 0,0:08:14.24,0:08:17.42,mushibugyo_CN,,0,0,0,,看来奈阿公主殿下要重获力量了啊
+Dialogue: 0,0:08:24.82,0:08:28.30,mushibugyo_CN,,0,0,0,,你说看穿了在下的幻术？
+Dialogue: 0,0:08:29.90,0:08:30.98,mushibugyo_CN,,0,0,0,,有趣
+Dialogue: 0,0:08:31.36,0:08:34.34,mushibugyo_CN,,0,0,0,,很快你的身心都将沦为虫了
+Dialogue: 0,0:08:36.96,0:08:43.34,mushibugyo_CN,,0,0,0,,这该是与斩虫无数 身为虫狩的你所相称的末路吧
+Dialogue: 0,0:08:44.40,0:08:47.52,mushibugyo_CN,,0,0,0,,大禁术 虫返
+Dialogue: 0,0:09:06.44,0:09:09.82,mushibugyo_CN,,0,0,0,,看来你以幻术专攻而疏忽了防守啊
+Dialogue: 0,0:09:10.22,0:09:11.90,mushibugyo_CN,,0,0,0,,不…不可能
+Dialogue: 0,0:09:11.90,0:09:15.44,mushibugyo_CN,,0,0,0,,纵闻此为神中神
+Dialogue: 0,0:09:17.16,0:09:19.88,mushibugyo_CN,,0,0,0,,太秦打惩常世神
+Dialogue: 0,0:09:20.62,0:09:23.90,mushibugyo_CN,,0,0,0,,尘外刀强化 刀虫合一
+Dialogue: 0,0:09:27.82,0:09:29.98,mushibugyo_CN,,0,0,0,,你的虫之力我就收下了
+Dialogue: 0,0:09:33.00,0:09:35.46,mushibugyo_CN,,0,0,0,,为了抹杀真田的未来
+Dialogue: 0,0:09:38.76,0:09:42.70,mushibugyo_CN,,0,0,0,,该死
+Dialogue: 0,0:09:45.92,0:09:46.66,mushibugyo_CN,,0,0,0,,该走了
+Dialogue: 0,0:09:48.40,0:09:51.90,mushibugyo_CN,,0,0,0,,去驱除那些盘踞在纪州城的臭虫们
+Dialogue: 0,0:09:55.88,0:09:57.36,mushibugyo_CN,,0,0,0,,真田幸村
+Dialogue: 0,0:09:58.34,0:10:01.56,mushibugyo_CN,,0,0,0,,莫非以为那点程度就能打倒我？
+Dialogue: 0,0:10:04.24,0:10:08.10,mushibugyo_CN,,0,0,0,,要在奈阿公主取回力量之前拖住真田
+Dialogue: 0,0:10:08.42,0:10:08.80,mushibugyo_CN,,0,0,0,,是
+Dialogue: 0,0:10:10.18,0:10:13.00,mushibugyo_CN,,0,0,0,,无知之人真是可悲啊
+Dialogue: 0,0:10:13.26,0:10:13.94,mushibugyo_CN,,0,0,0,,什么
+Dialogue: 0,0:10:14.46,0:10:15.36,mushibugyo_CN,,0,0,0,,算了 也好
+Dialogue: 0,0:10:15.60,0:10:17.92,mushibugyo_CN,,0,0,0,,尽全力来阻止我吧
+Dialogue: 0,0:10:20.68,0:10:21.32,mushibugyo_CN,,0,0,0,,危险
+Dialogue: 0,0:10:21.40,0:10:22.18,mushibugyo_CN,,0,0,0,,快避开
+Dialogue: 0,0:10:42.34,0:10:43.80,mushibugyo_CN,,0,0,0,,真田幸村
+Dialogue: 0,0:10:44.62,0:10:47.92,mushibugyo_CN,,0,0,0,,比以往遇到的任何对手都要强
+Dialogue: 0,0:10:48.94,0:10:52.60,mushibugyo_CN,,0,0,0,,但是我是百战百胜至死方休的武士
+Dialogue: 0,0:10:53.32,0:10:59.12,mushibugyo_CN,,0,0,0,,而且 我身后还有要保护的人
+Dialogue: 0,0:11:02.68,0:11:05.50,mushibugyo_CN,,0,0,0,,真田幸村 受死吧
+Dialogue: 0,0:11:12.26,0:11:17.44,mushibugyo_CN,,0,0,0,,月岛流 富岳铁槌斩
+Dialogue: 0,0:11:21.08,0:11:24.26,mushibugyo_CN,,0,0,0,,就凭这点伎俩是打不倒我的
+Dialogue: 0,0:11:27.34,0:11:29.22,mushibugyo_CN,,0,0,0,,不过姑且夸奖你一下 鼠辈
+Dialogue: 0,0:11:29.94,0:11:33.02,mushibugyo_CN,,0,0,0,,你能像那个居合武士那样 让我尽兴
+Dialogue: 0,0:11:35.54,0:11:36.30,mushibugyo_CN,,0,0,0,,月岛阁下
+Dialogue: 0,0:11:45.10,0:11:48.28,mushibugyo_CN,,0,0,0,,在毒气中痛苦地死去便是
+Dialogue: 0,0:12:10.18,0:12:11.66,mushibugyo_CN,,0,0,0,,公主殿下 您不能留着它
+Dialogue: 0,0:12:12.14,0:12:13.64,mushibugyo_CN,,0,0,0,,请把它交给属下
+Dialogue: 0,0:12:13.90,0:12:14.62,mushibugyo_CN,,0,0,0,,我不要
+Dialogue: 0,0:12:17.64,0:12:19.44,mushibugyo_CN,,0,0,0,,这…这是…
+Dialogue: 0,0:12:20.74,0:12:22.80,mushibugyo_CN,,0,0,0,,这些景象 是怎么回事
+Dialogue: 0,0:12:24.94,0:12:28.52,mushibugyo_CN,,0,0,0,,那个少女 跟侍女小姐一模一样
+Dialogue: 0,0:12:31.20,0:12:32.42,mushibugyo_CN,,0,0,0,,在吵什么
+Dialogue: 0,0:12:33.58,0:12:35.26,mushibugyo_CN,,0,0,0,,爹爹 娘亲
+Dialogue: 0,0:12:35.82,0:12:39.06,mushibugyo_CN,,0,0,0,,大家都在欺负小虫 我要救它
+Dialogue: 0,0:12:44.20,0:12:47.92,mushibugyo_CN,,0,0,0,,看 它让人打成这样 多可怜啊
+Dialogue: 0,0:12:49.16,0:12:49.96,mushibugyo_CN,,0,0,0,,奈阿公主
+Dialogue: 0,0:12:50.18,0:12:53.24,mushibugyo_CN,,0,0,0,,你们都愣着干什么 快去把它拿过来
+Dialogue: 0,0:12:54.16,0:12:54.88,mushibugyo_CN,,0,0,0,,可是…
+Dialogue: 0,0:12:56.36,0:12:59.82,mushibugyo_CN,,0,0,0,,不要怕 我会保护你的
+Dialogue: 0,0:13:01.30,0:13:02.88,mushibugyo_CN,,0,0,0,,她这个样子 谁的话都不听了
+Dialogue: 0,0:13:11.46,0:13:12.86,mushibugyo_CN,,0,0,0,,拿你没办法啊
+Dialogue: 0,0:13:14.96,0:13:15.86,mushibugyo_CN,,0,0,0,,爹爹
+Dialogue: 0,0:13:23.26,0:13:25.30,mushibugyo_CN,,0,0,0,,守不住了 已经全军覆灭了
+Dialogue: 0,0:13:26.16,0:13:27.34,mushibugyo_CN,,0,0,0,,我方军队已经…
+Dialogue: 0,0:13:34.36,0:13:35.94,mushibugyo_CN,,0,0,0,,好了 你快跑吧
+Dialogue: 0,0:13:38.88,0:13:42.20,mushibugyo_CN,,0,0,0,,不行 你已经不能再跟着我了
+Dialogue: 0,0:13:42.78,0:13:46.00,mushibugyo_CN,,0,0,0,,这座城不久就会陷入敌手
+Dialogue: 0,0:13:47.04,0:13:48.14,mushibugyo_CN,,0,0,0,,那样一来我就…
+Dialogue: 0,0:13:51.74,0:13:53.74,mushibugyo_CN,,0,0,0,,再见了 可爱的小虫子
+Dialogue: 0,0:14:20.70,0:14:21.60,mushibugyo_CN,,0,0,0,,奈阿公主
+Dialogue: 0,0:14:22.08,0:14:23.90,mushibugyo_CN,,0,0,0,,奈阿公主 你在哪里
+Dialogue: 0,0:14:24.60,0:14:27.12,mushibugyo_CN,,0,0,0,,咦 我这是…
+Dialogue: 0,0:14:28.70,0:14:32.38,mushibugyo_CN,,0,0,0,,爹爹 娘亲 你们在哪里
+Dialogue: 0,0:14:36.12,0:14:39.74,mushibugyo_CN,,0,0,0,,敌人在放毒 保护主公
+Dialogue: 0,0:14:42.36,0:14:43.26,mushibugyo_CN,,0,0,0,,你们…
+Dialogue: 0,0:14:47.70,0:14:48.42,mushibugyo_CN,,0,0,0,,怎么回事…
+Dialogue: 0,0:14:48.66,0:14:50.14,mushibugyo_CN,,0,0,0,,奈阿公主 你在哪里
+Dialogue: 0,0:14:50.74,0:14:52.42,mushibugyo_CN,,0,0,0,,听见了就回答我
+Dialogue: 0,0:14:53.62,0:14:55.54,mushibugyo_CN,,0,0,0,,爹爹 娘亲
+Dialogue: 0,0:14:56.38,0:14:58.50,mushibugyo_CN,,0,0,0,,主公 您快逃…
+Dialogue: 0,0:15:01.84,0:15:03.34,mushibugyo_CN,,0,0,0,,哪里来的怪物
+Dialogue: 0,0:15:06.02,0:15:08.76,mushibugyo_CN,,0,0,0,,别过来 不许过来
+Dialogue: 0,0:15:09.26,0:15:11.88,mushibugyo_CN,,0,0,0,,爹爹 不要冲女儿发火啊
+Dialogue: 0,0:15:12.38,0:15:14.54,mushibugyo_CN,,0,0,0,,我已经把小虫子放到外边…
+Dialogue: 0,0:15:20.08,0:15:21.64,mushibugyo_CN,,0,0,0,,别过来
+Dialogue: 0,0:15:24.06,0:15:24.64,mushibugyo_CN,,0,0,0,,您怎么了
+Dialogue: 0,0:15:25.14,0:15:26.66,mushibugyo_CN,,0,0,0,,不许…过来…
+Dialogue: 0,0:15:59.26,0:16:02.90,mushibugyo_CN,,0,0,0,,力…力量…你说「力量」
+Dialogue: 0,0:16:03.78,0:16:04.54,mushibugyo_CN,,0,0,0,,什么意思
+Dialogue: 0,0:16:05.30,0:16:07.88,mushibugyo_CN,,0,0,0,,你把你的力量给了我…
+Dialogue: 0,0:16:09.44,0:16:13.26,mushibugyo_CN,,0,0,0,,那么 这些都是我…
+Dialogue: 0,0:16:30.84,0:16:33.96,mushibugyo_CN,,0,0,0,,不！
+Dialogue: 0,0:16:41.98,0:16:42.76,mushibugyo_CN,,0,0,0,,月岛
+Dialogue: 0,0:16:44.00,0:16:45.84,mushibugyo_CN,,0,0,0,,你为什么会在这里
+Dialogue: 0,0:16:48.18,0:16:49.38,mushibugyo_CN,,0,0,0,,侍…侍女小姐…
+Dialogue: 0,0:16:51.58,0:16:53.56,mushibugyo_CN,,0,0,0,,你都看到了吗…我的过去…
+Dialogue: 0,0:16:55.16,0:16:57.02,mushibugyo_CN,,0,0,0,,我那段不祥的过去
+Dialogue: 0,0:17:00.64,0:17:02.16,mushibugyo_CN,,0,0,0,,大家都会变得不幸
+Dialogue: 0,0:17:03.38,0:17:07.64,mushibugyo_CN,,0,0,0,,在我身边的人 都会变得不幸
+Dialogue: 0,0:17:08.88,0:17:10.06,mushibugyo_CN,,0,0,0,,是我太愚蠢了
+Dialogue: 0,0:17:11.46,0:17:14.58,mushibugyo_CN,,0,0,0,,一切都是从那个时候开始的
+Dialogue: 0,0:17:17.04,0:17:19.98,mushibugyo_CN,,0,0,0,,都是因为我对虫子起了怜悯之心
+Dialogue: 0,0:17:26.46,0:17:28.02,mushibugyo_CN,,0,0,0,,不是那样的
+Dialogue: 0,0:17:28.30,0:17:33.28,mushibugyo_CN,,0,0,0,,侍女小姐那颗想要保护虫子的善良的心并没有错
+Dialogue: 0,0:17:34.00,0:17:34.48,mushibugyo_CN,,0,0,0,,你说什么
+Dialogue: 0,0:17:35.24,0:17:40.20,mushibugyo_CN,,0,0,0,,如果认为保护弱小是错的
+Dialogue: 0,0:17:41.06,0:17:44.34,mushibugyo_CN,,0,0,0,,那么错的 就是这个世界
+Dialogue: 0,0:17:45.14,0:17:49.12,mushibugyo_CN,,0,0,0,,你一定经历过在下难以想象的苦痛
+Dialogue: 0,0:17:49.68,0:17:53.44,mushibugyo_CN,,0,0,0,,但是在下相信 做了正确之事的侍女小姐
+Dialogue: 0,0:17:53.76,0:18:00.44,mushibugyo_CN,,0,0,0,,一定会拥有幸福的未来
+Dialogue: 0,0:18:02.60,0:18:03.14,mushibugyo_CN,,0,0,0,,月岛…
+Dialogue: 0,0:18:14.44,0:18:15.50,mushibugyo_CN,,0,0,0,,好温暖
+Dialogue: 0,0:18:16.64,0:18:19.64,mushibugyo_CN,,0,0,0,,为何你会如此温暖
+Dialogue: 0,0:18:24.04,0:18:27.36,mushibugyo_CN,,0,0,0,,感觉到了吗 我心跳的声音
+Dialogue: 0,0:18:27.62,0:18:28.68,mushibugyo_CN,,0,0,0,,是…
+Dialogue: 0,0:18:28.90,0:18:31.00,mushibugyo_CN,,0,0,0,,这都是你给予我的
+Dialogue: 0,0:18:31.94,0:18:35.52,mushibugyo_CN,,0,0,0,,我的心已经冰封了百年
+Dialogue: 0,0:18:38.20,0:18:40.14,mushibugyo_CN,,0,0,0,,让它融化的…
+Dialogue: 0,0:18:40.86,0:18:42.72,mushibugyo_CN,,0,0,0,,月岛 就是你啊
+Dialogue: 0,0:18:44.42,0:18:45.66,mushibugyo_CN,,0,0,0,,可知你的笑容
+Dialogue: 0,0:18:47.66,0:18:48.48,mushibugyo_CN,,0,0,0,,你的温暖
+Dialogue: 0,0:18:49.12,0:18:51.84,mushibugyo_CN,,0,0,0,,在旅途中 曾如何打动过我
+Dialogue: 0,0:18:53.54,0:18:56.08,mushibugyo_CN,,0,0,0,,到现在 它们都还深藏在我心中
+Dialogue: 0,0:18:57.88,0:19:00.56,mushibugyo_CN,,0,0,0,,这就是人类的温柔吧
+Dialogue: 0,0:19:01.88,0:19:04.00,mushibugyo_CN,,0,0,0,,谢谢你 月岛
+Dialogue: 0,0:19:05.16,0:19:07.70,mushibugyo_CN,,0,0,0,,在下才要谢谢你
+Dialogue: 0,0:19:08.66,0:19:12.22,mushibugyo_CN,,0,0,0,,在下也同样 从侍女小姐的笑容中获得了力量
+Dialogue: 0,0:19:12.60,0:19:14.22,mushibugyo_CN,,0,0,0,,小春小姐 火钵小姐
+Dialogue: 0,0:19:14.70,0:19:16.46,mushibugyo_CN,,0,0,0,,还有恋川大人 天间大人
+Dialogue: 0,0:19:17.14,0:19:20.96,mushibugyo_CN,,0,0,0,,无涯大人…虽然他不大会对我笑…
+Dialogue: 0,0:19:21.90,0:19:26.50,mushibugyo_CN,,0,0,0,,看见侍女小姐的笑容 在下就会感到充满力量
+Dialogue: 0,0:19:38.20,0:19:40.28,mushibugyo_CN,,0,0,0,,好了 我们一起努力来完成使命吧
+Dialogue: 0,0:19:40.62,0:19:44.38,mushibugyo_CN,,0,0,0,,月岛仁兵卫 一定会陪您到最后的
+Dialogue: 0,0:19:54.52,0:19:57.26,mushibugyo_CN,,0,0,0,,你的使命到此为止了
+Dialogue: 0,0:19:58.34,0:20:03.00,mushibugyo_CN,,0,0,0,,你给我的温暖 我永远不会忘记的
+Dialogue: 0,0:20:06.32,0:20:07.56,mushibugyo_CN,,0,0,0,,侍…侍女小姐…
+Dialogue: 0,0:20:15.46,0:20:17.42,mushibugyo_CN,,0,0,0,,侍…侍女小姐…
+Dialogue: 0,0:20:19.54,0:20:23.32,mushibugyo_CN,,0,0,0,,侍 女 小 姐…
+Dialogue: 0,0:20:24.38,0:20:29.66,mushibugyo_CN,,0,0,0,,这正是公主殿下恢复力量的标志
+Dialogue: 0,0:20:32.34,0:20:33.50,mushibugyo_CN,,0,0,0,,有什么好笑的
+Dialogue: 0,0:20:34.14,0:20:37.38,mushibugyo_CN,,0,0,0,,公主殿下进入常世之井 恢复力量
+Dialogue: 0,0:20:37.60,0:20:39.88,mushibugyo_CN,,0,0,0,,不如说正是我等的期望
+Dialogue: 0,0:20:40.24,0:20:40.64,mushibugyo_CN,,0,0,0,,什么…
+Dialogue: 0,0:20:41.50,0:20:44.12,mushibugyo_CN,,0,0,0,,完全恢复力量的公主
+Dialogue: 0,0:20:44.64,0:20:49.28,mushibugyo_CN,,0,0,0,,会和吾王一起 将这个国家的人类斩尽杀绝
+Dialogue: 0,0:20:50.30,0:20:51.42,mushibugyo_CN,,0,0,0,,你胡说什么…
+Dialogue: 0,0:20:51.56,0:20:56.82,mushibugyo_CN,,0,0,0,,你以为常世之井会毫无代价地赋予虫子力量吗
+Dialogue: 0,0:20:58.52,0:21:01.70,mushibugyo_CN,,0,0,0,,从常世之井取走力量之人
+Dialogue: 0,0:21:01.76,0:21:04.20,mushibugyo_CN,,0,0,0,,作为代价会被剥夺记忆
+Dialogue: 0,0:21:05.24,0:21:08.50,mushibugyo_CN,,0,0,0,,公主殿下完全恢复力量
+Dialogue: 0,0:21:08.92,0:21:12.76,mushibugyo_CN,,0,0,0,,就意味着会失去所有的记忆
+Dialogue: 0,0:21:14.10,0:21:18.24,mushibugyo_CN,,0,0,0,,侍…侍女小姐的记忆会…消失…
+Dialogue: 0,0:21:19.36,0:21:21.46,mushibugyo_CN,,0,0,0,,我等最后的希望…
+Dialogue: 0,0:21:22.50,0:21:23.48,mushibugyo_CN,,0,0,0,,怎会这样…
+Dialogue: 0,0:21:24.96,0:21:28.42,mushibugyo_CN,,0,0,0,,是你们输了 人类
+Dialogue: 0,0:00:00.90,0:00:00.90,Default,,0,0,0,,
+Dialogue: 0,0:23:00.92,0:23:04.46,mushibugyo_CN,,0,0,0,,火钵小姐 我要用兜裆布把侍女小姐从井里拉出来
+Dialogue: 0,0:23:04.70,0:23:05.62,mushibugyo_CN,,0,0,0,,请你脱下来吧
+Dialogue: 0,0:23:05.62,0:23:06.74,mushibugyo_CN,,0,0,0,,OK 我脱脱脱
+Dialogue: 0,0:23:06.74,0:23:08.20,mushibugyo_CN,,0,0,0,,怎么可能脱啦
+Dialogue: 0,0:23:09.98,0:23:14.84,mushibugyo_CN,,0,0,0,,下回 虫奉行 许下的诺言是绝望中的希望
+Dialogue: 0,0:00:00.90,0:00:02.88,Default,,0,0,0,,
+

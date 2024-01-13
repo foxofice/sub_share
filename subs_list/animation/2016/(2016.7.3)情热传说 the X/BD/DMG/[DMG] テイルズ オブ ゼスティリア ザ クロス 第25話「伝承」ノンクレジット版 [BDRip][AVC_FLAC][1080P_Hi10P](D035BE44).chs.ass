@@ -1,0 +1,574 @@
+﻿[Script Info]
+Title: [Tales_of_Zestiria_the_X][25][ノンクレジット版]
+Original Script: DMG
+ScriptType: v4.00+
+PlayResX: 1280
+PlayResY: 720
+YCbCr Matrix: TV.709
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H00000000,&HFF400040,0,0,0,0,100,100,0,0,1,2.2,0,2,45,45,13,1
+Style: Comment,方正大黑_GBK,39,&H00FFFFFF,&H000000FF,&H00000000,&HFF000000,0,0,0,0,100,100,0,0,1,2.2,0,8,10,45,10,1
+Style: Sorey,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H001E427D,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Alisha,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H001C538C,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Rose,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H00361F82,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Lailah,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H003724AD,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Mikleo,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H00842C19,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Edna,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H00155EB7,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Dezel/Zaveid,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H00105428,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Velvet,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H0024075A,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Seres,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H001A0C9D,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Rokurou,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H0045471C,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Magilou,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H007832A1,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Symonne,方正大黑_GBK,50,&H00FFFFFF,&H000000FF,&H006F2D2E,&H00000000,0,0,0,0,100,100,0,0,1,2.2,0,2,10,10,13,1
+Style: Staff,方正准圆_GBK,35,&H20FFFFFF,&HF0000000,&H20000000,&H000F0F0F,0,0,0,0,100,100,0,0,1,1.7,0,8,30,30,10,1
+Style: Title,方正仿宋_GBK,60,&HA4FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,20,0,1,2,0,1,53,10,10,1
+Style: OPJP,DFGMinchoP-W5,35,&H00FFFFFF,&HFFFFFFF0,&H00CBD6E2,&H008A90A0,0,0,0,0,100,100,0,0,1,1.2,0.5,9,45,15,13,128
+Style: OPCH,方正准雅宋_GBK,40,&H00FFFFFF,&HFFFFFFF0,&H00CBD6E2,&H008A90A0,0,0,0,0,100,100,0,0,1,1.2,0.5,9,45,12,10,1
+Style: EDJP,DFGMinchoP-W3,35,&H00FFFFFF,&HF0000000,&H59A59999,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,2,45,45,15,1
+Style: EDCH,方正细雅宋_GBK,40,&H00FFFFFF,&HF0000000,&H00A59999,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,8,45,45,10,1
+Style: CQEG,DFGMinchoP-W3,35,&H00FFFFFF,&HF0000000,&H59A59999,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,9,45,15,10,1
+Style: CQCH,方正细雅宋_GBK,40,&H00FFFFFF,&HF0000000,&H00A59999,&HF0000000,-1,0,0,0,100,100,0,0,1,2,0,9,45,15,10,1
+Style: ONSCREEN,方正大黑_GBK,30,&HFF282B2D,&H00000000,&H00282B2D,&H00000000,-1,0,0,0,100,100,0,0,3,2,0,5,20,20,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Comment,,0,0,0,,——Staff——
+Dialogue: 0,0:23:17.89,0:23:22.06,Staff,,0,0,0,,{\fade(500,500)}本字幕由动漫国字幕组制作(dmguo.org)\N仅供试看,请支持购买正版音像制品
+Dialogue: 0,0:23:23.10,0:23:26.86,Staff,,0,0,0,,{\fade(500,500)}翻译:心语   时轴:河马君   后期&BDRip:小圣
+Comment: 0,0:00:00.00,0:00:00.00,Comment,,0,0,0,,——OP——
+Dialogue: 0,0:03:22.18,0:03:29.31,OPJP,,0,0,0,,{\fad(150,150)\blur2}僕だけのものじゃなくなった夢
+Dialogue: 0,0:03:29.60,0:03:35.73,OPJP,,0,0,0,,{\fad(150,150)\blur2}明日を導いて
+Dialogue: 0,0:03:36.11,0:03:39.90,OPJP,,0,0,0,,{\fad(150,150)\blur2}現実とFight　運命にDive
+Dialogue: 0,0:03:40.11,0:03:42.82,OPJP,,0,0,0,,{\fad(150,150)\blur2}ほとばしる情熱(おもい)
+Dialogue: 0,0:03:42.99,0:03:46.37,OPJP,,0,0,0,,{\fad(150,150)\blur2}何度息絶えそうでも
+Dialogue: 0,0:03:46.66,0:03:49.66,OPJP,,0,0,0,,{\fad(150,150)\blur2}ただ真っ直ぐに
+Dialogue: 0,0:03:49.87,0:03:53.58,OPJP,,0,0,0,,{\fad(150,150)\blur2}Don't give up the fight　Time to ignite
+Dialogue: 0,0:03:54.00,0:04:00.63,OPJP,,0,0,0,,{\fad(150,150)\blur2}この身をかけて　挑む世界
+Dialogue: 0,0:04:00.92,0:04:07.51,OPJP,,0,0,0,,{\fad(150,150)\blur2}いっそあるがままに
+Dialogue: 0,0:04:07.89,0:04:12.35,OPJP,,0,0,0,,{\fad(150,150)\blur2}その全てを包み込むよ
+Dialogue: 0,0:03:22.18,0:03:29.31,OPCH,,0,0,0,,{\fad(150,150)\blur2}心中的梦 早已不再只属于自己
+Dialogue: 0,0:03:29.60,0:03:35.73,OPCH,,0,0,0,,{\fad(150,150)\blur2}掀开那 新的一页
+Dialogue: 0,0:03:36.11,0:03:39.90,OPCH,,0,0,0,,{\fad(150,150)\blur2}将现实挫败 把命运主宰
+Dialogue: 0,0:03:40.11,0:03:42.82,OPCH,,0,0,0,,{\fad(150,150)\blur2}满腔热诚正澎湃
+Dialogue: 0,0:03:42.99,0:03:46.37,OPCH,,0,0,0,,{\fad(150,150)\blur2}哪怕残酷到令人窒息
+Dialogue: 0,0:03:46.66,0:03:49.66,OPCH,,0,0,0,,{\fad(150,150)\blur2}也会不离不弃
+Dialogue: 0,0:03:49.87,0:03:53.58,OPCH,,0,0,0,,{\fad(150,150)\blur2}莫轻易言败 卷土又重来
+Dialogue: 0,0:03:54.00,0:04:00.63,OPCH,,0,0,0,,{\fad(150,150)\blur2}尽全力冲破障碍 向世界宣战
+Dialogue: 0,0:04:00.92,0:04:07.51,OPCH,,0,0,0,,{\fad(150,150)\blur2}我愿以原本的姿态
+Dialogue: 0,0:04:07.89,0:04:12.35,OPCH,,0,0,0,,{\fad(150,150)\blur2}用悲悯之心 包容一切阴霾
+Dialogue: 0,0:04:14.06,0:04:18.32,OPJP,,0,0,0,,{\fad(150,150)\blur2}響け　風ノ唄　目を閉じれば
+Dialogue: 0,0:04:18.48,0:04:21.74,OPJP,,0,0,0,,{\fad(150,150)\blur2}心の声　背中押すよ
+Dialogue: 0,0:04:21.74,0:04:27.28,OPJP,,0,0,0,,{\fad(150,150)\blur2}目指す雲は　ずっともっと高く
+Dialogue: 0,0:04:27.58,0:04:31.95,OPJP,,0,0,0,,{\fad(150,150)\blur2}届け　風ノ唄　耳澄ませば
+Dialogue: 0,0:04:31.95,0:04:35.25,OPJP,,0,0,0,,{\fad(150,150)\blur2}心の声　溢れ出すよ
+Dialogue: 0,0:04:35.33,0:04:40.38,OPJP,,0,0,0,,{\fad(150,150)\blur2}眩いほどの輝きを放つ
+Dialogue: 0,0:04:40.67,0:04:44.18,OPJP,,0,0,0,,{\fad(150,150)\blur2}君よ　青い旋律になれ
+Dialogue: 0,0:04:47.30,0:04:51.02,OPCH,,0,0,0,,{\fad(150,150)\blur2}その願い　高く舞い上がれ
+Dialogue: 0,0:04:14.06,0:04:18.32,OPCH,,0,0,0,,{\fad(150,150)\blur2}唱响吧 风中的歌谣 只要闭上双眼
+Dialogue: 0,0:04:18.48,0:04:21.74,OPCH,,0,0,0,,{\fad(150,150)\blur2}心中的呐喊 鞭策你我向前
+Dialogue: 0,0:04:21.74,0:04:27.28,OPCH,,0,0,0,,{\fad(150,150)\blur2}云端的理想 比任何时候都更高更远
+Dialogue: 0,0:04:27.58,0:04:31.95,OPCH,,0,0,0,,{\fad(150,150)\blur2}送达吧 风中的歌谣 只要侧耳聆听
+Dialogue: 0,0:04:31.95,0:04:35.25,OPCH,,0,0,0,,{\fad(150,150)\blur2}心中的呐喊 永远不会停息
+Dialogue: 0,0:04:35.33,0:04:40.38,OPCH,,0,0,0,,{\fad(150,150)\blur2}看那炫目光辉 照亮了前方辽阔大地
+Dialogue: 0,0:04:40.67,0:04:44.18,OPCH,,0,0,0,,{\fad(150,150)\blur2}风儿啊 化作奔涌的碧蓝旋律吧
+Dialogue: 0,0:04:47.30,0:04:51.02,OPCH,,0,0,0,,{\fad(150,150)\blur2}希望啊 插上翅膀尽情翱翔吧
+Comment: 0,0:00:00.00,0:00:00.00,Comment,,0,0,0,,——CQ——
+Dialogue: 0,0:09:14.07,0:09:18.32,CQEG,,0,0,0,,{\fad(150,150)\blur2}It's our journey's end
+Dialogue: 0,0:09:19.33,0:09:25.71,CQEG,,0,0,0,,{\fad(150,150)\blur2}Through it all, we made it out as friends
+Dialogue: 0,0:09:26.54,0:09:32.21,CQEG,,0,0,0,,{\fad(150,150)\blur2}Together we shared a dream
+Dialogue: 0,0:09:32.96,0:09:42.52,CQEG,,0,0,0,,{\fad(150,150)\blur2}All along discovering a new beginning
+Dialogue: 0,0:10:10.67,0:10:17.30,CQEG,,0,0,0,,{\fad(150,150)\blur2}I know we're not so different
+Dialogue: 0,0:10:17.68,0:10:24.01,CQEG,,0,0,0,,{\fad(150,150)\blur2}We all have hopes and dreams and wishes
+Dialogue: 0,0:10:24.31,0:10:27.31,CQEG,,0,0,0,,{\fad(150,150)\blur2}Now I see
+Dialogue: 0,0:10:27.77,0:10:31.02,CQEG,,0,0,0,,{\fad(150,150)\blur2}And I'm grateful for it
+Dialogue: 0,0:10:31.61,0:10:36.36,CQEG,,0,0,0,,{\fad(150,150)\blur2}Once my foe, you're now my friend
+Dialogue: 0,0:10:36.61,0:10:42.95,CQEG,,0,0,0,,{\fad(150,150)\blur2}And we will rise again
+Dialogue: 0,0:10:44.12,0:10:48.33,CQEG,,0,0,0,,{\fad(150,150)\blur2}As we say good-bye
+Dialogue: 0,0:10:49.25,0:10:52.13,CQEG,,0,0,0,,{\fad(150,150)\blur2}Other doors are opening
+Dialogue: 0,0:10:52.38,0:10:54.30,CQEG,,0,0,0,,{\fad(150,150)\blur2}We celebrate
+Dialogue: 0,0:10:54.30,0:10:57.92,CQEG,,0,0,0,,{\fad(150,150)\blur2}Let us raise our voices
+Dialogue: 0,0:10:57.92,0:11:01.64,CQEG,,0,0,0,,{\fad(150,150)\blur2}And go hand in hand
+Dialogue: 0,0:11:02.97,0:11:05.14,CQEG,,0,0,0,,{\fad(150,150)\blur2}We will fight again
+Dialogue: 0,0:11:05.14,0:11:07.39,CQEG,,0,0,0,,{\fad(150,150)\blur2}Our strength unites us
+Dialogue: 0,0:11:07.64,0:11:11.77,CQEG,,0,0,0,,{\fad(150,150)\blur2}At journey's end
+Dialogue: 0,0:12:06.45,0:12:10.62,CQEG,,0,0,0,,{\fad(150,150)\blur2}It's our journey's end
+Dialogue: 0,0:12:11.54,0:12:18.17,CQEG,,0,0,0,,{\fad(150,150)\blur2}Through it all, we made it out as friends
+Dialogue: 0,0:12:18.38,0:12:27.85,CQEG,,0,0,0,,{\fad(150,150)\blur2}United, we prayed for peace and a brighter day
+Dialogue: 0,0:12:28.72,0:12:35.23,CQEG,,0,0,0,,{\fad(150,150)\blur2}All the hope we have inside is now ascending
+Dialogue: 0,0:12:35.52,0:12:41.99,CQEG,,0,0,0,,{\fad(150,150)\blur2}I know, we're not so different
+Dialogue: 0,0:12:42.32,0:12:48.87,CQEG,,0,0,0,,{\fad(150,150)\blur2}We all have hopes and dreams and wishes
+Dialogue: 0,0:12:49.12,0:12:51.87,CQEG,,0,0,0,,{\fad(150,150)\blur2}Now I see
+Dialogue: 0,0:12:52.66,0:12:55.42,CQEG,,0,0,0,,{\fad(150,150)\blur2}I can finally see
+Dialogue: 0,0:12:56.50,0:13:01.21,CQEG,,0,0,0,,{\fad(150,150)\blur2}Once my foe, you're now my friend
+Dialogue: 0,0:13:01.42,0:13:07.72,CQEG,,0,0,0,,{\fad(150,150)\blur2}And we will rise again
+Dialogue: 0,0:13:08.14,0:13:12.56,CQEG,,0,0,0,,{\fad(150,150)\blur2}Through the ups and downs
+Dialogue: 0,0:13:13.10,0:13:15.98,CQEG,,0,0,0,,{\fad(150,150)\blur2}Brother fighting brother
+Dialogue: 0,0:13:16.31,0:13:21.86,CQEG,,0,0,0,,{\fad(150,150)\blur2}We rose as one, banded strong together
+Dialogue: 0,0:13:21.86,0:13:25.95,CQEG,,0,0,0,,{\fad(150,150)\blur2}And though tears were shed
+Dialogue: 0,0:13:27.03,0:13:29.16,CQEG,,0,0,0,,{\fad(150,150)\blur2}Onward we will find
+Dialogue: 0,0:13:29.16,0:13:31.49,CQEG,,0,0,0,,{\fad(150,150)\blur2}A new beginning
+Dialogue: 0,0:13:31.70,0:13:35.29,CQEG,,0,0,0,,{\fad(150,150)\blur2}At journey's end
+Dialogue: 0,0:13:35.58,0:13:43.46,CQEG,,0,0,0,,{\fad(150,150)\blur2}Always staying true to your heart's desire
+Dialogue: 0,0:13:43.59,0:13:46.47,CQEG,,0,0,0,,{\fad(150,150)\blur2}It will be your guiding light
+Dialogue: 0,0:13:46.76,0:13:49.30,CQEG,,0,0,0,,{\fad(150,150)\blur2}Through the darkness
+Dialogue: 0,0:13:49.30,0:13:53.10,CQEG,,0,0,0,,{\fad(150,150)\blur2}When the storm descends
+Dialogue: 0,0:13:54.31,0:13:56.56,CQEG,,0,0,0,,{\fad(150,150)\blur2}You must look within
+Dialogue: 0,0:13:56.81,0:13:58.98,CQEG,,0,0,0,,{\fad(150,150)\blur2}Dawn is breaking
+Dialogue: 0,0:13:59.19,0:14:03.73,CQEG,,0,0,0,,{\fad(150,150)\blur2}At journey's end
+Dialogue: 0,0:14:47.53,0:14:53.45,CQEG,,0,0,0,,{\fad(150,150)\blur2}I know, we're not so different...
+Dialogue: 0,0:14:59.50,0:15:05.92,CQEG,,0,0,0,,{\fad(150,150)\blur2}I know, we're not so different
+Dialogue: 0,0:15:06.30,0:15:12.80,CQEG,,0,0,0,,{\fad(150,150)\blur2}We all have hopes and dreams and wishes
+Dialogue: 0,0:15:13.10,0:15:16.10,CQEG,,0,0,0,,{\fad(150,150)\blur2}Now I see
+Dialogue: 0,0:15:16.64,0:15:19.14,CQEG,,0,0,0,,{\fad(150,150)\blur2}I can finally see
+Dialogue: 0,0:15:20.48,0:15:25.23,CQEG,,0,0,0,,{\fad(150,150)\blur2}Once my foe, you're now my friend
+Dialogue: 0,0:15:25.48,0:15:31.74,CQEG,,0,0,0,,{\fad(150,150)\blur2}And we will rise again
+Dialogue: 0,0:15:32.07,0:15:36.54,CQEG,,0,0,0,,{\fad(150,150)\blur2}Through the ups and downs
+Dialogue: 0,0:15:36.91,0:15:40.12,CQEG,,0,0,0,,{\fad(150,150)\blur2}Brother fighting brother
+Dialogue: 0,0:15:40.21,0:15:45.75,CQEG,,0,0,0,,{\fad(150,150)\blur2}We rose as one, banded strong together
+Dialogue: 0,0:15:45.75,0:15:49.59,CQEG,,0,0,0,,{\fad(150,150)\blur2}And though tears were shed
+Dialogue: 0,0:15:50.92,0:15:53.26,CQEG,,0,0,0,,{\fad(150,150)\blur2}Onward we will find
+Dialogue: 0,0:15:53.26,0:15:55.30,CQEG,,0,0,0,,{\fad(150,150)\blur2}A new beginning
+Dialogue: 0,0:15:55.60,0:15:59.73,CQEG,,0,0,0,,{\fad(150,150)\blur2}At journey's end
+Dialogue: 0,0:16:19.24,0:16:28.05,CQEG,,0,0,0,,{\fad(150,150)\blur2}Always staying true to your heart's desires
+Dialogue: 0,0:16:28.17,0:16:30.30,CQEG,,0,0,0,,{\fad(150,150)\blur2}Will steer you home
+Dialogue: 0,0:16:30.46,0:16:33.84,CQEG,,0,0,0,,{\fad(150,150)\blur2}Over stormy waters
+Dialogue: 0,0:16:33.84,0:16:41.14,CQEG,,0,0,0,,{\fad(150,150)\blur2}Let your voice inside be your guide when
+Dialogue: 0,0:16:41.14,0:16:43.35,CQEG,,0,0,0,,{\fad(150,150)\blur2}The tide is turning
+Dialogue: 0,0:16:43.64,0:16:48.07,CQEG,,0,0,0,,{\fad(150,150)\blur2}At journey's end
+Dialogue: 0,0:18:39.09,0:18:40.93,CQEG,,0,0,0,,{\fad(150,150)\blur2}Don't have to stand alone
+Dialogue: 0,0:18:40.93,0:18:44.85,CQEG,,0,0,0,,{\fad(150,150)\blur2}We're strong, you're not alone
+Dialogue: 0,0:18:45.14,0:18:48.31,CQEG,,0,0,0,,{\fad(150,150)\blur2}Apart we face the dark water
+Dialogue: 0,0:18:48.60,0:18:52.06,CQEG,,0,0,0,,{\fad(150,150)\blur2}Together we can all be greater
+Dialogue: 0,0:18:52.98,0:18:54.65,CQEG,,0,0,0,,{\fad(150,150)\blur2}Don't have to walk alone
+Dialogue: 0,0:18:54.65,0:18:58.78,CQEG,,0,0,0,,{\fad(150,150)\blur2}I'm here beside you
+Dialogue: 0,0:18:58.82,0:19:01.11,CQEG,,0,0,0,,{\fad(150,150)\blur2}Now that the fighting's done
+Dialogue: 0,0:19:01.11,0:19:06.12,CQEG,,0,0,0,,{\fad(150,150)\blur2}I know there's nothing we can't do as one
+Dialogue: 0,0:19:07.62,0:19:12.46,CQEG,,0,0,0,,{\fad(150,150)\blur2}It' our journey's end
+Dialogue: 0,0:19:13.13,0:19:16.51,CQEG,,0,0,0,,{\fad(150,150)\blur2}Through it all we made it out
+Dialogue: 0,0:19:16.51,0:19:21.84,CQEG,,0,0,0,,{\fad(150,150)\blur2}Now joined as one with determination
+Dialogue: 0,0:19:21.93,0:19:26.26,CQEG,,0,0,0,,{\fad(150,150)\blur2}To defeat the odds
+Dialogue: 0,0:19:27.06,0:19:29.43,CQEG,,0,0,0,,{\fad(150,150)\blur2}Raise our flag again
+Dialogue: 0,0:19:29.43,0:19:31.65,CQEG,,0,0,0,,{\fad(150,150)\blur2}Our hope defines us
+Dialogue: 0,0:19:31.90,0:19:36.19,CQEG,,0,0,0,,{\fad(150,150)\blur2}At journey's end
+Dialogue: 0,0:19:36.90,0:19:39.99,CQEG,,0,0,0,,{\fad(150,150)\blur2}Journey's end...
+Dialogue: 0,0:19:44.74,0:19:48.70,CQEG,,0,0,0,,{\fad(150,150)\blur2}Our journey's end...
+Dialogue: 0,0:19:53.29,0:19:58.92,CQEG,,0,0,0,,{\fad(150,150)\blur2}At journey's end
+Dialogue: 0,0:09:14.07,0:09:18.32,CQCH,,0,0,0,,{\fad(150,150)\blur2}旅途到了终点
+Dialogue: 0,0:09:19.33,0:09:25.71,CQCH,,0,0,0,,{\fad(150,150)\blur2}一路走来 友情历久弥坚
+Dialogue: 0,0:09:26.54,0:09:32.21,CQCH,,0,0,0,,{\fad(150,150)\blur2}心怀同一个梦想
+Dialogue: 0,0:09:32.96,0:09:42.52,CQCH,,0,0,0,,{\fad(150,150)\blur2}不懈追求 寻觅新的起点
+Dialogue: 0,0:10:10.67,0:10:17.30,CQCH,,0,0,0,,{\fad(150,150)\blur2}我知道 你我从来都一样
+Dialogue: 0,0:10:17.68,0:10:24.01,CQCH,,0,0,0,,{\fad(150,150)\blur2}相信希望 拥抱梦想和祈愿
+Dialogue: 0,0:10:24.31,0:10:27.31,CQCH,,0,0,0,,{\fad(150,150)\blur2}我终于明白
+Dialogue: 0,0:10:27.77,0:10:31.02,CQCH,,0,0,0,,{\fad(150,150)\blur2}还要感谢上天
+Dialogue: 0,0:10:31.61,0:10:36.36,CQCH,,0,0,0,,{\fad(150,150)\blur2}昔日对手也能和解
+Dialogue: 0,0:10:36.61,0:10:42.95,CQCH,,0,0,0,,{\fad(150,150)\blur2}再度一飞冲天
+Dialogue: 0,0:10:44.12,0:10:48.33,CQCH,,0,0,0,,{\fad(150,150)\blur2}你挥手道别
+Dialogue: 0,0:10:49.25,0:10:52.13,CQCH,,0,0,0,,{\fad(150,150)\blur2}另一扇门正打开
+Dialogue: 0,0:10:52.38,0:10:54.30,CQCH,,0,0,0,,{\fad(150,150)\blur2}干下庆贺的酒
+Dialogue: 0,0:10:54.30,0:10:57.92,CQCH,,0,0,0,,{\fad(150,150)\blur2}让我们高歌一曲
+Dialogue: 0,0:10:57.92,0:11:01.64,CQCH,,0,0,0,,{\fad(150,150)\blur2}再携手向前
+Dialogue: 0,0:11:02.97,0:11:05.14,CQCH,,0,0,0,,{\fad(150,150)\blur2}面对新的危险
+Dialogue: 0,0:11:05.14,0:11:07.39,CQCH,,0,0,0,,{\fad(150,150)\blur2}坚韧让我们并肩
+Dialogue: 0,0:11:07.64,0:11:11.77,CQCH,,0,0,0,,{\fad(150,150)\blur2}在旅途终点
+Dialogue: 0,0:12:06.45,0:12:10.62,CQCH,,0,0,0,,{\fad(150,150)\blur2}旅途到了终点
+Dialogue: 0,0:12:11.54,0:12:18.17,CQCH,,0,0,0,,{\fad(150,150)\blur2}一路走来 友情历久弥坚
+Dialogue: 0,0:12:18.38,0:12:27.85,CQCH,,0,0,0,,{\fad(150,150)\blur2}与你一同祈祷和平 还有美好明天
+Dialogue: 0,0:12:28.72,0:12:35.23,CQCH,,0,0,0,,{\fad(150,150)\blur2}心中的希望正在茁壮成长
+Dialogue: 0,0:12:35.52,0:12:41.99,CQCH,,0,0,0,,{\fad(150,150)\blur2}我知道 你我从来都一样
+Dialogue: 0,0:12:42.32,0:12:48.87,CQCH,,0,0,0,,{\fad(150,150)\blur2}相信希望 拥抱梦想和祈愿
+Dialogue: 0,0:12:49.12,0:12:51.87,CQCH,,0,0,0,,{\fad(150,150)\blur2}我终于明白
+Dialogue: 0,0:12:52.66,0:12:55.42,CQCH,,0,0,0,,{\fad(150,150)\blur2}事实胜于雄辩
+Dialogue: 0,0:12:56.50,0:13:01.21,CQCH,,0,0,0,,{\fad(150,150)\blur2}昔日对手也能和解
+Dialogue: 0,0:13:01.42,0:13:07.72,CQCH,,0,0,0,,{\fad(150,150)\blur2}再度一飞冲天
+Dialogue: 0,0:13:08.14,0:13:12.56,CQCH,,0,0,0,,{\fad(150,150)\blur2}起伏盛衰经年
+Dialogue: 0,0:13:13.10,0:13:15.98,CQCH,,0,0,0,,{\fad(150,150)\blur2}在手足相残的岁月
+Dialogue: 0,0:13:16.31,0:13:21.86,CQCH,,0,0,0,,{\fad(150,150)\blur2}我们团结一心 彼此尽弃前嫌
+Dialogue: 0,0:13:21.86,0:13:25.95,CQCH,,0,0,0,,{\fad(150,150)\blur2}擦干泪水向前
+Dialogue: 0,0:13:27.03,0:13:29.16,CQCH,,0,0,0,,{\fad(150,150)\blur2}就能最终发现
+Dialogue: 0,0:13:29.16,0:13:31.49,CQCH,,0,0,0,,{\fad(150,150)\blur2}一个新的起点
+Dialogue: 0,0:13:31.70,0:13:35.29,CQCH,,0,0,0,,{\fad(150,150)\blur2}在旅途终点
+Dialogue: 0,0:13:35.58,0:13:43.46,CQCH,,0,0,0,,{\fad(150,150)\blur2}千万要忠于 自己内心的愿望
+Dialogue: 0,0:13:43.59,0:13:46.47,CQCH,,0,0,0,,{\fad(150,150)\blur2}它是海上的灯塔
+Dialogue: 0,0:13:46.76,0:13:49.30,CQCH,,0,0,0,,{\fad(150,150)\blur2}助你度过阴霾
+Dialogue: 0,0:13:49.30,0:13:53.10,CQCH,,0,0,0,,{\fad(150,150)\blur2}当暴风雨退却
+Dialogue: 0,0:13:54.31,0:13:56.56,CQCH,,0,0,0,,{\fad(150,150)\blur2}请举目望远
+Dialogue: 0,0:13:56.81,0:13:58.98,CQCH,,0,0,0,,{\fad(150,150)\blur2}晨光耀眼
+Dialogue: 0,0:13:59.19,0:14:03.73,CQCH,,0,0,0,,{\fad(150,150)\blur2}在旅途终点
+Dialogue: 0,0:14:47.53,0:14:53.45,CQCH,,0,0,0,,{\fad(150,150)\blur2}我知道 你我从来都一样…
+Dialogue: 0,0:14:59.50,0:15:05.92,CQCH,,0,0,0,,{\fad(150,150)\blur2}我知道 你我从来都一样
+Dialogue: 0,0:15:06.30,0:15:12.80,CQCH,,0,0,0,,{\fad(150,150)\blur2}相信希望 拥抱梦想和祈愿
+Dialogue: 0,0:15:13.10,0:15:16.10,CQCH,,0,0,0,,{\fad(150,150)\blur2}我终于明白
+Dialogue: 0,0:15:16.64,0:15:19.14,CQCH,,0,0,0,,{\fad(150,150)\blur2}事实胜于雄辩
+Dialogue: 0,0:15:20.48,0:15:25.23,CQCH,,0,0,0,,{\fad(150,150)\blur2}昔日对手也能和解
+Dialogue: 0,0:15:25.48,0:15:31.74,CQCH,,0,0,0,,{\fad(150,150)\blur2}再度一飞冲天
+Dialogue: 0,0:15:32.07,0:15:36.54,CQCH,,0,0,0,,{\fad(150,150)\blur2}起伏盛衰经年
+Dialogue: 0,0:15:36.91,0:15:40.12,CQCH,,0,0,0,,{\fad(150,150)\blur2}在手足相残的岁月
+Dialogue: 0,0:15:40.21,0:15:45.75,CQCH,,0,0,0,,{\fad(150,150)\blur2}我们团结一心 彼此尽弃前嫌
+Dialogue: 0,0:15:45.75,0:15:49.59,CQCH,,0,0,0,,{\fad(150,150)\blur2}擦干泪水向前
+Dialogue: 0,0:15:50.92,0:15:53.26,CQCH,,0,0,0,,{\fad(150,150)\blur2}就能最终发现
+Dialogue: 0,0:15:53.26,0:15:55.30,CQCH,,0,0,0,,{\fad(150,150)\blur2}一个新的起点
+Dialogue: 0,0:15:55.60,0:15:59.73,CQCH,,0,0,0,,{\fad(150,150)\blur2}在旅途终点
+Dialogue: 0,0:16:19.24,0:16:28.05,CQCH,,0,0,0,,{\fad(150,150)\blur2}千万要忠于 自己内心的愿望
+Dialogue: 0,0:16:28.17,0:16:30.30,CQCH,,0,0,0,,{\fad(150,150)\blur2}它是海上的罗盘
+Dialogue: 0,0:16:30.46,0:16:33.84,CQCH,,0,0,0,,{\fad(150,150)\blur2}把你送回港湾
+Dialogue: 0,0:16:33.84,0:16:41.14,CQCH,,0,0,0,,{\fad(150,150)\blur2}让内心的声音 指引你向前
+Dialogue: 0,0:16:41.14,0:16:43.35,CQCH,,0,0,0,,{\fad(150,150)\blur2}任潮流变幻
+Dialogue: 0,0:16:43.64,0:16:48.07,CQCH,,0,0,0,,{\fad(150,150)\blur2}在旅途终点
+Dialogue: 0,0:18:39.09,0:18:40.93,CQCH,,0,0,0,,{\fad(150,150)\blur2}不必独自面对
+Dialogue: 0,0:18:40.93,0:18:44.85,CQCH,,0,0,0,,{\fad(150,150)\blur2}你还有值得信赖的伙伴
+Dialogue: 0,0:18:45.14,0:18:48.31,CQCH,,0,0,0,,{\fad(150,150)\blur2}分开时面对深沉大海
+Dialogue: 0,0:18:48.60,0:18:52.06,CQCH,,0,0,0,,{\fad(150,150)\blur2}团聚时突破自身极限
+Dialogue: 0,0:18:52.98,0:18:54.65,CQCH,,0,0,0,,{\fad(150,150)\blur2}不必独自向前
+Dialogue: 0,0:18:54.65,0:18:58.78,CQCH,,0,0,0,,{\fad(150,150)\blur2}还有我在身边
+Dialogue: 0,0:18:58.82,0:19:01.11,CQCH,,0,0,0,,{\fad(150,150)\blur2}战斗已经结束
+Dialogue: 0,0:19:01.11,0:19:06.12,CQCH,,0,0,0,,{\fad(150,150)\blur2}相信 我们的团结可以战胜一切
+Dialogue: 0,0:19:07.62,0:19:12.46,CQCH,,0,0,0,,{\fad(150,150)\blur2}旅途走到终点
+Dialogue: 0,0:19:13.13,0:19:16.51,CQCH,,0,0,0,,{\fad(150,150)\blur2}克服了无数艰险
+Dialogue: 0,0:19:16.51,0:19:21.84,CQCH,,0,0,0,,{\fad(150,150)\blur2}怀着决心 终于聚集在前线
+Dialogue: 0,0:19:21.93,0:19:26.26,CQCH,,0,0,0,,{\fad(150,150)\blur2}为了击败奸邪
+Dialogue: 0,0:19:27.06,0:19:29.43,CQCH,,0,0,0,,{\fad(150,150)\blur2}重新扬起旗帜
+Dialogue: 0,0:19:29.43,0:19:31.65,CQCH,,0,0,0,,{\fad(150,150)\blur2}希望定义你我
+Dialogue: 0,0:19:31.90,0:19:36.19,CQCH,,0,0,0,,{\fad(150,150)\blur2}在旅途终点
+Dialogue: 0,0:19:36.90,0:19:39.99,CQCH,,0,0,0,,{\fad(150,150)\blur2}旅途终点…
+Dialogue: 0,0:19:44.74,0:19:48.70,CQCH,,0,0,0,,{\fad(150,150)\blur2}旅途的终点…
+Dialogue: 0,0:19:53.29,0:19:58.92,CQCH,,0,0,0,,{\fad(150,150)\blur2}在旅途终点
+Comment: 0,0:00:00.00,0:00:00.00,Comment,,0,0,0,,——ED——
+Comment: 0,0:00:00.00,0:00:00.00,Comment,,0,0,0,,——Title——
+Dialogue: 1,0:00:46.27,0:00:48.15,Title,,0,0,0,in,{\bord0\blur6\fad(700,0)\t(600,1815,0.8,\blur0)\move(46,496,52,490,0,1820)}传说
+Dialogue: 1,0:00:46.27,0:00:48.15,Title,,0,0,0,in,{\bord0\blur6\fad(700,0)\t(600,1815,0.8,\blur0)\move(46,484,52,490,0,1820)}传说
+Dialogue: 1,0:00:46.27,0:00:48.15,Title,,0,0,0,in,{\bord0\blur6\fad(700,0)\t(600,1815,0.8,\blur0)\move(58,484,52,490,0,1820)}传说
+Dialogue: 1,0:00:46.27,0:00:48.15,Title,,0,0,0,in,{\bord0\blur6\fad(700,0)\t(600,1815,0.8,\blur0)\move(58,496,52,490,0,1820)}传说
+Dialogue: 1,0:00:48.15,0:00:49.77,Title,,0,0,0,stay,{\bord0\blur0\pos(52,490)\1a&H22&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,42,500,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,43,499,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,44,498,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,45,497,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,46,496,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,47,495,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,48,494,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,49,493,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,50,492,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,51,491,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,42,480,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,43,481,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,44,482,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,45,483,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,46,484,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,47,485,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,48,486,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,49,487,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,50,488,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,51,489,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,62,480,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,61,481,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,60,482,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,59,483,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,58,484,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,57,485,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,56,486,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,55,487,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,54,488,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,53,489,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,62,500,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,61,499,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,60,498,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,59,497,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,58,496,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,57,495,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,56,494,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,55,493,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,54,492,0,1750)\alpha&HEE&}传说
+Dialogue: 1,0:00:49.77,0:00:51.94,Title,,0,0,0,out,{\bord0\blur0\fad(0,1750)\t(0,1750,2,\blur6)\move(52,490,53,491,0,1750)\alpha&HEE&}传说
+Dialogue: 0,0:00:47.69,0:00:49.77,Title,,0,0,0,shadow,{\1a&H44&\c&H000000&\bord0.8\blur4\pos(52,490)\fad(530,0)}传说
+Dialogue: 0,0:00:49.77,0:00:51.94,Title,,0,0,0,shadow,{\bord0\blur4\fad(0,1750)\t(0,1750,,\blur6)\move(52,490,47,495,0,1750)\alpha&H88&\c&H000000&}传说
+Dialogue: 0,0:00:49.77,0:00:51.94,Title,,0,0,0,shadow,{\bord0\blur4\fad(0,1750)\t(0,1750,,\blur6)\move(52,490,47,485,0,1750)\alpha&H88&\c&H000000&}传说
+Dialogue: 0,0:00:49.77,0:00:51.94,Title,,0,0,0,shadow,{\bord0\blur4\fad(0,1750)\t(0,1750,,\blur6)\move(52,490,57,485,0,1750)\alpha&H88&\c&H000000&}传说
+Dialogue: 0,0:00:49.77,0:00:51.94,Title,,0,0,0,shadow,{\bord0\blur4\fad(0,1750)\t(0,1750,,\blur6)\move(52,490,57,495,0,1750)\alpha&H88&\c&H000000&}传说
+Comment: 0,0:00:00.00,0:00:00.00,Comment,,0,0,0,,——Text——
+Dialogue: 0,0:00:03.60,0:00:06.56,Sorey,,0,0,0,,地 水 火 风
+Dialogue: 0,0:00:07.19,0:00:08.82,Sorey,,0,0,0,,集一切力量
+Dialogue: 0,0:00:09.36,0:00:12.61,Sorey,,0,0,0,,现在此唤出各位的真名!
+Dialogue: 0,0:00:13.49,0:00:14.57,Sorey,,0,0,0,,法耶斯·梅玛
+Dialogue: 0,0:00:14.86,0:00:16.12,Sorey,,0,0,0,,路兹洛希维·瑞雷依
+Dialogue: 0,0:00:16.45,0:00:17.58,Sorey,,0,0,0,,哈库蒂姆·尤芭
+Dialogue: 0,0:00:17.95,0:00:19.08,Sorey,,0,0,0,,菲尔克·扎迪亚
+Dialogue: 0,0:00:19.83,0:00:23.62,Sorey,,0,0,0,,现合为一体 助我净化灾祸之显主吧!
+Dialogue: 0,0:00:53.49,0:00:55.91,Alisha,,0,0,0,,这神依…真厉害
+Dialogue: 0,0:00:56.66,0:00:58.53,Rose,,0,0,0,,我能感到力量的波动正在不断传过来
+Dialogue: 0,0:01:04.62,0:01:05.46,Mikleo,,0,0,0,,没事吧!
+Dialogue: 0,0:01:06.25,0:01:08.63,Sorey,,0,0,0,,嗯…你们呢
+Dialogue: 0,0:01:09.00,0:01:11.55,Edna,,0,0,0,,集中精力管好你自己就行了
+Dialogue: 0,0:01:12.26,0:01:14.55,Edna,,0,0,0,,我们会自己撑住的
+Dialogue: 0,0:01:15.55,0:01:18.47,Sorey,,0,0,0,,嗯 艾德娜你还是老样子
+Dialogue: 0,0:01:20.89,0:01:21.89,Lailah,,0,0,0,,史雷!
+Dialogue: 0,0:01:22.47,0:01:25.94,Lailah,,0,0,0,,一口气和所有天族神依 负担果然还是太大了
+Dialogue: 0,0:01:26.27,0:01:32.69,Sorey,,0,0,0,,这感觉…就像正背着数万人在原木上行走一样
+Dialogue: 0,0:01:33.61,0:01:35.74,Rose,,0,0,0,,我们当时也说过类似的话…
+Dialogue: 0,0:01:36.65,0:01:37.24,Alisha,,0,0,0,,嗯
+Dialogue: 0,0:01:38.61,0:01:40.49,Alisha,,0,0,0,,不过 史雷他能行
+Dialogue: 0,0:01:41.20,0:01:42.87,Alisha,,0,0,0,,就算让他放弃 他也会坚持下去的
+Dialogue: 0,0:01:45.00,0:01:48.75,Dezel/Zaveid,,0,0,0,,毕竟能忍才是男子汉
+Dialogue: 0,0:01:49.00,0:01:50.63,Mikleo,,0,0,0,,听到没有 史雷
+Dialogue: 0,0:01:52.00,0:01:53.80,Sorey,,0,0,0,,你们真是我的好伙伴
+Dialogue: 0,0:02:35.63,0:02:37.22,Sorey,,0,0,0,,连说话的能力都失去了
+Dialogue: 0,0:02:38.22,0:02:40.76,Sorey,,0,0,0,,赫珥达尔夫 你现在怎么想?
+Dialogue: 0,0:02:41.55,0:02:44.89,Sorey,,0,0,0,,我现在便要净化你!
+Dialogue: 0,0:02:49.19,0:02:50.90,Sorey,,0,0,0,,各位 要上了!
+Dialogue: 0,0:02:51.15,0:02:51.94,Default,,0,0,0,,{\3vc(&H3724AD&,&H842C19&,&H105428&,&H155EB7&)} 好!
+Dialogue: 0,0:03:23.43,0:03:25.18,Sorey,,0,0,0,,你身上的诅咒…
+Dialogue: 0,0:03:27.14,0:03:28.85,Sorey,,0,0,0,,就由我来…
+Dialogue: 0,0:03:31.48,0:03:33.40,Sorey,,0,0,0,,全数净化掉!
+Dialogue: 0,0:03:39.57,0:03:41.57,Alisha,,0,0,0,,史雷 尽管把秽气…
+Dialogue: 0,0:03:41.57,0:03:42.95,Rose,,0,0,0,,分到我们这边来吧!
+Dialogue: 0,0:03:43.91,0:03:45.41,Sorey,,0,0,0,,嗯 拜托了!
+Dialogue: 0,0:04:01.55,0:04:02.63,Sorey,,0,0,0,,我相信
+Dialogue: 0,0:04:02.84,0:04:04.30,Sorey,,0,0,0,,寄宿着秽气的人类
+Dialogue: 0,0:04:04.64,0:04:05.64,Sorey,,0,0,0,,长鸣着心中的警钟
+Dialogue: 0,0:04:05.89,0:04:07.31,Sorey,,0,0,0,,不断对抗着恶念
+Dialogue: 0,0:04:07.31,0:04:09.27,Sorey,,0,0,0,,所以人才能变得坚强
+Dialogue: 0,0:04:09.85,0:04:12.19,Sorey,,0,0,0,,才能接受自身的弱小
+Dialogue: 0,0:04:37.42,0:04:39.13,Sorey,,0,0,0,,这是拼尽全力的一击!
+Dialogue: 0,0:04:57.15,0:04:58.65,Mikleo,,0,0,0,,成功了 史雷
+Dialogue: 0,0:04:58.86,0:05:00.48,Dezel/Zaveid,,0,0,0,,真了不起
+Dialogue: 0,0:05:00.73,0:05:02.03,Edna,,0,0,0,,实在厉害
+Dialogue: 0,0:05:02.94,0:05:06.36,Lailah,,0,0,0,,灾祸之显主身上已经没有秽气了
+Dialogue: 0,0:05:06.78,0:05:08.41,Alisha,,0,0,0,,我也到了极限
+Dialogue: 0,0:05:09.12,0:05:10.58,Rose,,0,0,0,,负荷满了
+Dialogue: 0,0:05:11.62,0:05:12.25,Sorey,,0,0,0,,嗯…
+Dialogue: 0,0:05:17.42,0:05:18.92,Mikleo,,0,0,0,,史…史雷…
+Dialogue: 0,0:05:19.84,0:05:21.55,Mikleo,,0,0,0,,灾祸之显主…
+Dialogue: 0,0:05:23.05,0:05:25.01,Sorey,,0,0,0,,还没有变回人类?
+Dialogue: 0,0:05:25.01,0:05:26.80,Edna,,0,0,0,,应该已经净化完毕了吧?
+Dialogue: 0,0:05:36.02,0:05:38.48,Lailah,,0,0,0,,这是…秽气!
+Dialogue: 0,0:05:39.23,0:05:41.90,Dezel/Zaveid,,0,0,0,,秽气从地脉喷涌而出
+Dialogue: 0,0:05:42.15,0:05:45.07,Edna,,0,0,0,,又填入被清空的容器
+Dialogue: 0,0:05:45.53,0:05:47.07,Sorey,,0,0,0,,居然会这样…
+Dialogue: 0,0:05:47.57,0:05:50.62,Dezel/Zaveid,,0,0,0,,世界的一切秽气都在通过地脉集聚
+Dialogue: 0,0:05:50.78,0:05:53.79,Dezel/Zaveid,,0,0,0,,企图复活灾祸之显主
+Dialogue: 0,0:05:58.04,0:06:06.92,Default,,0,0,0,,我唯一的愿望…便是消失
+Dialogue: 0,0:06:07.47,0:06:13.06,Default,,0,0,0,,连这一点…都不被允许吗
+Dialogue: 0,0:06:13.51,0:06:14.47,Sorey,,0,0,0,,赫珥达尔夫?
+Dialogue: 0,0:06:21.81,0:06:25.40,Lailah,,0,0,0,,秽气的强度比刚才还要高
+Dialogue: 0,0:06:26.03,0:06:29.99,Mikleo,,0,0,0,,这不就意味着新的灾祸之显主要诞生了吗?
+Dialogue: 0,0:06:30.66,0:06:32.58,Sorey,,0,0,0,,赫珥达尔夫曾经说过
+Dialogue: 0,0:06:33.24,0:06:35.41,Sorey,,0,0,0,,人类的秽气不会枯竭
+Dialogue: 0,0:06:36.20,0:06:39.96,Edna,,0,0,0,,真是讽刺…这就是天理
+Dialogue: 0,0:06:39.96,0:06:42.00,Alisha,,0,0,0,,人类真的无法避免毁灭吗?
+Dialogue: 0,0:06:42.92,0:06:45.76,Rose,,0,0,0,,那我们来这里又是为了什么?
+Dialogue: 0,0:06:46.42,0:06:47.84,Edna,,0,0,0,,史雷不是说了吗?
+Dialogue: 0,0:06:48.47,0:06:49.93,Edna,,0,0,0,,人类心怀着秽气
+Dialogue: 0,0:06:50.13,0:06:52.51,Edna,,0,0,0,,在对抗恶念的过程中不断成长
+Dialogue: 0,0:06:53.14,0:06:55.39,Edna,,0,0,0,,如果这个世界也是一样的…
+Dialogue: 0,0:06:57.31,0:06:59.94,Mikleo,,0,0,0,,…所以世界原来也需要秽气?
+Dialogue: 0,0:07:00.48,0:07:04.11,Dezel/Zaveid,,0,0,0,,可是 世界无法承受这么多秽气
+Dialogue: 0,0:07:04.40,0:07:05.44,Dezel/Zaveid,,0,0,0,,会毁灭的
+Dialogue: 0,0:07:21.58,0:07:24.09,Sorey,,0,0,0,,世界会被秽气吞噬吗?
+Dialogue: 0,0:07:24.71,0:07:27.09,Sorey,,0,0,0,,人类能够把秽气全部净化吗?
+Dialogue: 0,0:07:28.01,0:07:29.88,Sorey,,0,0,0,,这种问题有什么意义!
+Dialogue: 0,0:07:31.05,0:07:34.14,Sorey,,0,0,0,,人类本来就是含糊的 不完整的
+Dialogue: 0,0:07:34.51,0:07:35.85,Sorey,,0,0,0,,所以才值得珍爱
+Dialogue: 0,0:07:36.39,0:07:38.68,Sorey,,0,0,0,,我是绝对…绝对不会放弃的!
+Dialogue: 0,0:07:39.48,0:07:42.90,Mikleo,,0,0,0,,可是 我们都用尽了力量…
+Dialogue: 0,0:07:44.11,0:07:45.23,Sorey,,0,0,0,,各位 听我说
+Dialogue: 0,0:07:45.82,0:07:48.03,Sorey,,0,0,0,,虽然是无意识的
+Dialogue: 0,0:07:48.03,0:07:49.82,Sorey,,0,0,0,,但赫珥达尔夫依然在抵抗着秽气
+Dialogue: 0,0:07:50.57,0:07:52.15,Sorey,,0,0,0,,要做个了结 只有趁现在了!
+Dialogue: 0,0:07:52.74,0:07:53.57,Mikleo,,0,0,0,,做了结?
+Dialogue: 0,0:07:53.91,0:07:57.95,Sorey,,0,0,0,,我要把他封印到地脉的更深处
+Dialogue: 0,0:07:58.91,0:08:00.75,Mikleo,,0,0,0,,可究竟要怎么做…?
+Dialogue: 0,0:08:01.54,0:08:02.87,Sorey,,0,0,0,,我也一起去
+Dialogue: 0,0:08:05.71,0:08:07.38,Sorey,,0,0,0,,我知道这很花时间
+Dialogue: 0,0:08:07.84,0:08:12.22,Sorey,,0,0,0,,但我打算逐渐平息他的怒火 最终达到净化
+Dialogue: 0,0:08:15.22,0:08:17.10,Sorey,,0,0,0,,没有别的办法了
+Dialogue: 0,0:08:21.31,0:08:25.52,Mikleo,,0,0,0,,你要是不在了 谁来净化这个世界!
+Dialogue: 0,0:08:26.69,0:08:29.53,Sorey,,0,0,0,,就算我不在 也已经没关系了
+Dialogue: 0,0:08:32.24,0:08:33.95,Sorey,,0,0,0,,世界会存续下去的
+Dialogue: 0,0:08:34.66,0:08:36.03,Sorey,,0,0,0,,我相信她
+Dialogue: 0,0:08:36.74,0:08:37.62,Alisha,,0,0,0,,史雷…
+Dialogue: 0,0:08:37.83,0:08:40.29,Rose,,0,0,0,,既然要净化 难道不需要我们吗?
+Dialogue: 0,0:08:40.62,0:08:43.71,Rose,,0,0,0,,反正如果你死了 我们也…
+Dialogue: 0,0:08:44.25,0:08:46.67,Sorey,,0,0,0,,不 我一个人去
+Dialogue: 0,0:08:47.21,0:08:48.00,Alisha,,0,0,0,,可是…
+Dialogue: 0,0:08:48.46,0:08:49.80,Sorey,,0,0,0,,如果我侥幸没死…
+Dialogue: 0,0:08:50.30,0:08:53.13,Sorey,,0,0,0,,也不知道要花上多少年
+Dialogue: 0,0:08:53.80,0:08:54.55,Sorey,,0,0,0,,我回来之前
+Dialogue: 0,0:08:54.84,0:08:59.22,Sorey,,0,0,0,,希望你们把我们的这场战斗以及秽气的知识传达给全世界
+Dialogue: 0,0:09:00.22,0:09:00.89,Rose,,0,0,0,,可是!
+Dialogue: 0,0:09:01.47,0:09:06.10,Sorey,,0,0,0,,毕竟人类没法看到或者触碰米克里欧他们嘛
+Dialogue: 0,0:09:07.35,0:09:08.40,Mikleo,,0,0,0,,那还真是对不住了
+Dialogue: 0,0:09:10.69,0:09:11.44,Sorey,,0,0,0,,拜托你了
+Dialogue: 0,0:09:13.03,0:09:16.20,Sorey,,0,0,0,,那么各位 进行最后的神依吧
+Dialogue: 0,0:09:17.53,0:09:18.49,Sorey,,0,0,0,,法耶斯·梅玛
+Dialogue: 0,0:09:19.45,0:09:20.66,Sorey,,0,0,0,,路兹洛希维·瑞雷依
+Dialogue: 0,0:09:21.41,0:09:22.45,Sorey,,0,0,0,,哈库蒂姆·尤芭
+Dialogue: 0,0:09:23.45,0:09:24.58,Sorey,,0,0,0,,菲尔克·扎迪亚
+Dialogue: 0,0:09:54.53,0:09:55.32,Alisha,,0,0,0,,史雷!
+Dialogue: 0,0:10:23.93,0:10:25.14,Sorey,,0,0,0,,我相信!
+Dialogue: 0,0:10:25.14,0:10:29.10,Sorey,,0,0,0,,人类与天族共同生活的世界终将到来!
+Dialogue: 0,0:10:32.23,0:10:33.98,Mikleo,,0,0,0,,史雷!
+Dialogue: 0,0:10:48.04,0:10:49.00,Mikleo,,0,0,0,,史雷…
+Dialogue: 0,0:10:53.54,0:10:55.42,Alisha,,0,0,0,,我们没有死…
+Dialogue: 0,0:10:56.38,0:10:57.72,Alisha,,0,0,0,,史雷还活着!
+Dialogue: 0,0:10:58.01,0:10:59.72,Rose,,0,0,0,,是啊 他还活着!
+Dialogue: 0,0:11:03.43,0:11:04.39,Dezel/Zaveid,,0,0,0,,玛欧提拉斯
+Dialogue: 0,0:11:05.43,0:11:10.23,Default,,0,0,0,,我们朝着清净的世界踏出了第一步
+Dialogue: 0,0:11:11.69,0:11:12.86,Default,,0,0,0,,各位 谢谢你们
+Dialogue: 0,0:11:13.61,0:11:15.40,Default,,0,0,0,,莱菈 谢谢你
+Dialogue: 0,0:11:16.15,0:11:18.74,Default,,0,0,0,,导师史雷 谢谢你
+Dialogue: 0,0:11:23.07,0:11:23.66,Edna,,0,0,0,,米子…
+Dialogue: 0,0:11:25.49,0:11:27.20,Mikleo,,0,0,0,,不能再消沉下去了
+Dialogue: 0,0:11:27.83,0:11:31.29,Mikleo,,0,0,0,,我们得完成史雷托付的任务才行
+Comment: 0,0:00:00.98,0:00:00.98,Default,,0,0,0,,嗯
+Dialogue: 0,0:11:35.38,0:11:36.38,Mikleo,,0,0,0,,为了一个美好的世界!
+Dialogue: 0,0:12:35.73,0:12:36.61,Default,,0,0,0,,打扰了
+Dialogue: 0,0:12:37.98,0:12:40.78,Default,,0,0,0,,艾丽莎公主 会场已经就绪
+Dialogue: 0,0:12:42.03,0:12:44.70,Default,,0,0,0,,她已经不是公主了 希蕾儿
+Dialogue: 0,0:12:44.95,0:12:46.53,Default,,0,0,0,,啊…也对
+Dialogue: 0,0:12:47.07,0:12:49.79,Default,,0,0,0,,是啊 艾丽莎大人已经成了…
+Dialogue: 0,0:12:51.83,0:12:54.21,Default,,0,0,0,,女王 这一刻终于来了
+Dialogue: 0,0:13:02.30,0:13:04.93,Alisha,,0,0,0,,是 玛尔特兰先生
+Dialogue: 0,0:13:14.27,0:13:18.73,Alisha,,0,0,0,,我不去访问洛兰斯 真的合适吗?
+Dialogue: 0,0:13:19.31,0:13:20.32,Default,,0,0,0,,放心吧
+Dialogue: 0,0:13:21.32,0:13:27.36,Default,,0,0,0,,多兰皇帝表示 他很想来看看水之都瑞迪雷克
+Dialogue: 0,0:13:28.45,0:13:30.78,Default,,0,0,0,,似乎是听了谢尔盖团长的进言
+Dialogue: 0,0:13:31.58,0:13:33.54,Default,,0,0,0,,但愿他能喜欢这里
+Dialogue: 0,0:13:41.00,0:13:45.05,Alisha,,0,0,0,,今天 在感谢这场盛会终于来临的同时
+Dialogue: 0,0:13:45.42,0:13:48.51,Alisha,,0,0,0,,我们还有一些话想向大家传递下去
+Dialogue: 0,0:13:49.47,0:13:52.93,Alisha,,0,0,0,,关于导师的决心 以及天族的献身…
+Dialogue: 0,0:14:09.11,0:14:09.99,Alisha,,0,0,0,,共同前进吧
+Dialogue: 0,0:14:10.99,0:14:14.87,Alisha,,0,0,0,,为了人民和全世界的生灵!
+Dialogue: 0,0:14:16.41,0:14:18.21,Alisha,,0,0,0,,导师的意志与我们同在!
+Dialogue: 0,0:14:50.11,0:14:52.03,Lailah,,0,0,0,,「从这个村子开始吧」
+Dialogue: 0,0:14:53.03,0:14:54.74,Lailah,,0,0,0,,起始之村 卡姆兰
+Dialogue: 0,0:14:57.20,0:14:59.41,Lailah,,0,0,0,,出发吧 导师
+Dialogue: 0,0:15:19.85,0:15:21.73,Dezel/Zaveid,,0,0,0,,又开始吃了吗
+Dialogue: 0,0:15:25.90,0:15:28.03,Edna,,0,0,0,,供品自己又不会消失
+Dialogue: 0,0:15:29.28,0:15:31.28,Dezel/Zaveid,,0,0,0,,又不是非得吃掉
+Dialogue: 0,0:15:33.12,0:15:35.99,Dezel/Zaveid,,0,0,0,,东西消失就会被认为灵验
+Dialogue: 0,0:15:36.70,0:15:39.04,Dezel/Zaveid,,0,0,0,,所以供品当然越来越多
+Dialogue: 0,0:15:39.71,0:15:40.96,Edna,,0,0,0,,这个真的很好吃
+Dialogue: 0,0:15:41.62,0:15:43.33,Dezel/Zaveid,,0,0,0,,问题不在这儿
+Dialogue: 0,0:15:44.29,0:15:45.59,Edna,,0,0,0,,我有什么办法
+Dialogue: 0,0:15:46.30,0:15:49.42,Edna,,0,0,0,,谁叫上次的旅行让我喜欢上吃东西了
+Dialogue: 0,0:15:50.51,0:15:51.59,Dezel/Zaveid,,0,0,0,,好吧
+Dialogue: 0,0:15:52.89,0:15:57.06,Dezel/Zaveid,,0,0,0,,这算是天族和人友好相处的证据
+Dialogue: 0,0:15:57.72,0:15:59.68,Dezel/Zaveid,,0,0,0,,秽气也不多不少
+Dialogue: 0,0:16:00.52,0:16:02.14,Edna,,0,0,0,,一片和平的景象
+Dialogue: 0,0:16:02.90,0:16:03.98,Edna,,0,0,0,,这不也挺好的吗?
+Dialogue: 0,0:16:06.36,0:16:08.15,Edna,,0,0,0,,哥哥也正在慢慢地…
+Dialogue: 0,0:16:09.69,0:16:10.78,Edna,,0,0,0,,重要的是…
+Dialogue: 0,0:16:13.91,0:16:16.16,Edna,,0,0,0,,自己的选择 对吧?
+Dialogue: 0,0:16:17.87,0:16:18.45,Edna,,0,0,0,,史雷…
+Dialogue: 0,0:16:28.00,0:16:28.88,Default,,0,0,0,,艾德娜…
+Dialogue: 0,0:16:33.38,0:16:36.39,Edna,,0,0,0,,来这里露脸 会吓着大家的
+Dialogue: 0,0:16:37.35,0:16:38.22,Edna,,0,0,0,,哥哥
+Dialogue: 0,0:16:48.65,0:16:49.86,Default,,0,0,0,,啊 是萝洁!
+Dialogue: 0,0:16:51.19,0:16:52.49,Default,,0,0,0,,萝洁!
+Dialogue: 0,0:16:52.74,0:16:53.82,Rose,,0,0,0,,你们好!
+Dialogue: 0,0:17:01.75,0:17:02.66,Rose,,0,0,0,,艾吉尤!
+Dialogue: 0,0:17:03.87,0:17:04.58,Default,,0,0,0,,小姐
+Dialogue: 0,0:17:08.09,0:17:09.21,Rose,,0,0,0,,怎么样了?
+Dialogue: 0,0:17:09.54,0:17:13.30,Default,,0,0,0,,嗯 今年的货依然量大质优
+Dialogue: 0,0:17:20.06,0:17:20.81,Rose,,0,0,0,,要吃吗
+Dialogue: 0,0:17:22.85,0:17:25.31,Rose,,0,0,0,,能拿走一些吗?
+Dialogue: 0,0:17:25.69,0:17:27.35,Rose,,0,0,0,,我想带点给她
+Dialogue: 0,0:17:31.02,0:17:32.53,Rose,,0,0,0,,真是差劲
+Dialogue: 0,0:17:32.82,0:17:34.86,Alisha,,0,0,0,,哪…哪有
+Dialogue: 0,0:17:35.36,0:17:37.11,Alisha,,0,0,0,,味道是没问题的
+Dialogue: 0,0:17:37.28,0:17:40.53,Rose,,0,0,0,,之所以好吃 都是因为我拿来的材料
+Dialogue: 0,0:17:42.58,0:17:45.58,Alisha,,0,0,0,,凭你的水平 也没资格说我吧
+Dialogue: 0,0:17:45.87,0:17:47.46,Rose,,0,0,0,,那也比你高明些
+Dialogue: 0,0:17:47.92,0:17:49.63,Alisha,,0,0,0,,你根本不如我
+Dialogue: 0,0:17:50.21,0:17:52.59,Default,,0,0,0,,你们俩在干什么呢
+Dialogue: 0,0:17:53.30,0:17:55.47,Default,,0,0,0,,简直无语
+Dialogue: 0,0:17:55.47,0:17:58.01,Default,,0,0,0,,这样还怎么嫁出去
+Dialogue: 0,0:17:59.93,0:18:01.39,Default,,0,0,0,,艾丽莎大人!
+Dialogue: 0,0:18:05.14,0:18:07.06,Default,,0,0,0,,听我说 怡安她啊…
+Dialogue: 0,0:18:07.56,0:18:08.98,Default,,0,0,0,,又被甩了!
+Dialogue: 0,0:18:09.23,0:18:10.44,Default,,0,0,0,,希蕾儿要你多嘴!
+Dialogue: 0,0:18:10.44,0:18:13.73,Default,,0,0,0,,对方的回复是 「不太喜欢比自己更强悍的女性」
+Dialogue: 0,0:18:14.19,0:18:16.70,Default,,0,0,0,,这种人我还不愿意要呢!
+Dialogue: 0,0:18:17.07,0:18:18.32,Default,,0,0,0,,是吗
+Dialogue: 0,0:18:18.32,0:18:21.41,Default,,0,0,0,,看你手里还攥着这玩意 是我也得逃了
+Dialogue: 0,0:18:23.58,0:18:25.08,Default,,0,0,0,,希蕾儿!
+Dialogue: 0,0:18:25.50,0:18:27.29,Default,,0,0,0,,给我站住!
+Dialogue: 0,0:18:30.33,0:18:34.30,Alisha,,0,0,0,,萝洁 我之前见到了米克里欧大人
+Dialogue: 0,0:18:35.09,0:18:36.26,Rose,,0,0,0,,他还好吗?
+Dialogue: 0,0:18:36.97,0:18:39.93,Alisha,,0,0,0,,嗯 他还在旅行
+Dialogue: 0,0:18:40.68,0:18:44.93,Alisha,,0,0,0,,说是要多探访些遗迹 等史雷回来好向他炫耀
+Dialogue: 0,0:18:45.60,0:18:47.73,Alisha,,0,0,0,,对历史的探求也在继续
+Dialogue: 0,0:18:48.23,0:18:49.69,Rose,,0,0,0,,真不愧是他
+Dialogue: 0,0:18:50.40,0:18:52.94,Rose,,0,0,0,,哦 你还随身带着它呢
+Dialogue: 0,0:18:54.48,0:18:54.98,Rose,,0,0,0,,就那个
+Dialogue: 0,0:18:57.65,0:18:58.49,Alisha,,0,0,0,,当然了
+Dialogue: 0,0:18:59.45,0:19:01.57,Rose,,0,0,0,,还想去周游世界吗?
+Dialogue: 0,0:19:03.08,0:19:05.37,Alisha,,0,0,0,,从前 我对史雷说过
+Dialogue: 0,0:19:06.24,0:19:09.33,Alisha,,0,0,0,,把世上的遗迹游历个遍是我的梦想
+Dialogue: 0,0:19:10.29,0:19:13.34,Alisha,,0,0,0,,看过天遗见闻录的人 无一例外地会说这句话
+Dialogue: 0,0:19:14.04,0:19:16.96,Alisha,,0,0,0,,到了现在 我依然是他们中的一员
+Dialogue: 0,0:19:17.59,0:19:21.68,Rose,,0,0,0,,真好 你还是我喜欢的那个公主殿下
+Dialogue: 0,0:19:23.14,0:19:24.60,Alisha,,0,0,0,,我也喜欢你 萝洁
+Dialogue: 0,0:19:25.47,0:19:26.68,Rose,,0,0,0,,谢谢你 艾丽莎
+Dialogue: 0,0:19:28.23,0:19:31.48,Rose,,0,0,0,,虽然不知道是谁写的 但似乎修订了不少
+Dialogue: 0,0:19:32.44,0:19:33.61,Alisha,,0,0,0,,谁写的…
+Dialogue: 0,0:19:36.23,0:19:38.49,Rose,,0,0,0,,好了 往后翻往后翻
+Dialogue: 0,0:19:39.11,0:19:39.65,Alisha,,0,0,0,,嗯
+Dialogue: 0,0:20:05.22,0:20:09.06,Default,,0,0,0,,总有一天 我也要当上导师 去遗迹里探险!
+Dialogue: 0,0:20:09.68,0:20:11.56,Default,,0,0,0,,那我就要当天族!
+Dialogue: 0,0:20:11.98,0:20:14.81,Default,,0,0,0,,真蠢 人怎么能当天族呢
+Dialogue: 0,0:20:15.40,0:20:16.98,Default,,0,0,0,,这可不好说吧
+Dialogue: 0,0:20:17.48,0:20:19.61,Default,,0,0,0,,但导师是比天族更强的
+Dialogue: 0,0:20:19.99,0:20:21.78,Default,,0,0,0,,天族也很强啊
+Dialogue: 0,0:20:21.95,0:20:24.03,Default,,0,0,0,,而且还有厉害的秘技呢
+Dialogue: 0,0:20:24.74,0:20:25.82,Default,,0,0,0,,双重水流!
+Dialogue: 0,0:20:31.16,0:20:32.37,Default,,0,0,0,,好厉害!
+Dialogue: 0,0:20:32.37,0:20:33.46,Default,,0,0,0,,刚才是怎么回事?
+Dialogue: 0,0:20:33.46,0:20:34.33,Default,,0,0,0,,再来一次…
+Dialogue: 0,0:20:35.04,0:20:38.09,Mikleo,,0,0,0,,那名导师 是我的朋友
+Dialogue: 0,0:20:46.89,0:20:48.51,Mikleo,,0,0,0,,这么久了 要不要去见见呢
+Dialogue: 0,0:20:50.68,0:20:53.64,Sorey,,0,0,0,,你说的是 见我吗?
+Dialogue: 0,0:20:55.27,0:20:56.02,Mikleo,,0,0,0,,史雷…
+Dialogue: 0,0:20:56.52,0:20:58.90,Mikleo,,0,0,0,,难道说 是你吗?
+Dialogue: 0,0:21:00.23,0:21:02.99,Sorey,,0,0,0,,陪神契约似乎还在运作
+Dialogue: 0,0:21:04.40,0:21:06.53,Mikleo,,0,0,0,,我预料到有一天会出现这种情况
+Dialogue: 0,0:21:06.95,0:21:08.87,Mikleo,,0,0,0,,就一直没有把通道关闭
+Dialogue: 0,0:21:09.28,0:21:10.12,Mikleo,,0,0,0,,你在哪里?
+Dialogue: 0,0:21:10.66,0:21:13.00,Sorey,,0,0,0,,应该…离你不远
+Dialogue: 0,0:21:28.76,0:21:30.47,Sorey,,0,0,0,,你来过很多次了吧
+Dialogue: 0,0:21:30.81,0:21:31.68,Sorey,,0,0,0,,谢了
+Dialogue: 0,0:21:35.23,0:21:35.94,Mikleo,,0,0,0,,史雷!
+Dialogue: 0,0:21:39.23,0:21:40.65,Sorey,,0,0,0,,我也很高兴
+Dialogue: 0,0:21:47.28,0:21:49.49,Mikleo,,0,0,0,,史雷你在这里 就表明…
+Dialogue: 0,0:21:50.37,0:21:51.37,Mikleo,,0,0,0,,赫珥达尔夫他…
+Dialogue: 0,0:21:52.29,0:21:54.04,Sorey,,0,0,0,,在另一个城市
+Dialogue: 0,0:21:54.50,0:21:56.71,Sorey,,0,0,0,,说是要重新开始
+Dialogue: 0,0:21:57.67,0:21:59.29,Mikleo,,0,0,0,,所以你成功了吧
+Dialogue: 0,0:22:00.50,0:22:02.05,Mikleo,,0,0,0,,那你之后怎么打算?
+Dialogue: 0,0:22:02.75,0:22:05.05,Sorey,,0,0,0,,我想先回一趟何方
+Dialogue: 0,0:22:05.84,0:22:06.34,Mikleo,,0,0,0,,嗯
+Dialogue: 0,0:22:07.13,0:22:09.14,Sorey,,0,0,0,,不知道爷爷还好吗
+Dialogue: 0,0:22:09.76,0:22:11.18,Mikleo,,0,0,0,,当然好了
+Dialogue: 0,0:22:11.93,0:22:12.68,Sorey,,0,0,0,,我想也是
+Dialogue: 0,0:22:13.27,0:22:15.73,Sorey,,0,0,0,,但我们要不要稍微绕个路呢?
+Dialogue: 0,0:22:15.89,0:22:18.73,Sorey,,0,0,0,,附近似乎有个遗迹 看上去挺有意思的
+Dialogue: 0,0:22:19.23,0:22:20.40,Sorey,,0,0,0,,我们比比看吧
+Dialogue: 0,0:22:24.28,0:22:26.03,Mikleo,,0,0,0,,这次当然也是我赢
+Dialogue: 0,0:22:26.82,0:22:29.86,Sorey,,0,0,0,,什么? 这次是我赢才对
+Dialogue: 0,0:22:33.79,0:22:35.41,Sorey,,0,0,0,,那我们就一起出发吧
+Dialogue: 0,0:22:35.75,0:22:36.25,Mikleo,,0,0,0,,也好
+Dialogue: 0,0:22:36.96,0:22:38.29,Sorey,,0,0,0,,路兹洛希维·瑞雷依
+Dialogue: 0,0:22:40.71,0:22:42.34,Sorey,,0,0,0,,走起!
+Dialogue: 0,0:22:48.26,0:22:50.51,Sorey,,0,0,0,,米克里欧 你变强了不少啊
+Dialogue: 0,0:22:51.30,0:22:52.72,Mikleo,,0,0,0,,你也一样啊
+Dialogue: 0,0:23:10.91,0:23:12.03,Sorey,,0,0,0,,这就是…
+Dialogue: 0,0:23:17.66,0:23:18.50,Sorey,,0,0,0,,这就是…!
+Dialogue: 0,0:23:19.87,0:23:20.92,Sorey,,0,0,0,,世界!
+Dialogue: 0,0:23:31.89,0:23:32.39,Default,,0,0,0,,{\K50\fn方正准雅宋_GBK\fs60\pos(255,545)\2c&H000000&\1vc(&H999891&,&HFDFDFD&,&H999891&,&HFDFDFD&)}导师的旅途
+Dialogue: 0,0:23:32.39,0:23:35.93,Default,,0,0,0,,{\fn方正准雅宋_GBK\fs60\pos(255,545)\2c&H000000&\1vc(&H999891&,&HFDFDFD&,&H999891&,&HFDFDFD&)}导师的旅途
+Dialogue: 0,0:23:32.68,0:23:33.68,Default,,0,0,0,,{\K99\fn方正准雅宋_GBK\fs60\pos(410,620)\2c&H000000&\1vc(&H999891&,&HFDFDFD&,&H999891&,&HFDFDFD&)}依然在继续——————
+Dialogue: 0,0:23:33.68,0:23:35.93,Default,,0,0,0,,{\fn方正准雅宋_GBK\fs60\pos(410,620)\2c&H000000&\1vc(&H999891&,&HFDFDFD&,&H999891&,&HFDFDFD&)}依然在继续——————
+Comment: 0,0:19:43.53,0:19:45.53,Comment,,0,0,0,,

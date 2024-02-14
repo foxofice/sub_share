@@ -436,7 +436,11 @@ namespace sub_db
 						// 进度条
 						int progress_value =	COMMON.m_k_MAX_PROGRESS_VALUE * i_year / dirs_year.Length	+
 												COMMON.m_k_MAX_PROGRESS_VALUE * (i_video + 1) / (dirs_year.Length * dirs_video.Length);
-						COMMON.SetProgressValue(progress_value);
+
+						FORMS.invoke(() =>
+						{
+							COMMON.SetProgressValue(progress_value);
+						});
 					}	// for dirs_video
 
 					if(can_refresh_UI_tick <= m_sw.ElapsedMilliseconds)

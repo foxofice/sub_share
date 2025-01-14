@@ -277,6 +277,7 @@ namespace sub_db
 										(string)dr[DATA.e_ColumnName.path.ToString()],
 										(string)dr[DATA.e_ColumnName.source.ToString()],
 										(string)dr[DATA.e_ColumnName.sub_name.ToString()]);
+			dir = Uri.EscapeDataString(dir);
 
 			Process.Start($"https://github.com/foxofice/sub_share/tree/master/subs_list/{dir}");
 		}

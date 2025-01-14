@@ -43,10 +43,10 @@
 			this.statusStrip_Main = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel_ItemsCount = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabel_MovieCount = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel_ErrorMsg = new System.Windows.Forms.ToolStripStatusLabel();
 			this.pictureBox_Search = new System.Windows.Forms.PictureBox();
 			this.radioButton_SearchByName = new System.Windows.Forms.RadioButton();
 			this.radioButton_SearchBySQL = new System.Windows.Forms.RadioButton();
-			this.toolStripStatusLabel_ErrorMsg = new System.Windows.Forms.ToolStripStatusLabel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView_Main)).BeginInit();
 			this.toolStrip_Main.SuspendLayout();
 			this.statusStrip_Main.SuspendLayout();
@@ -115,8 +115,8 @@
 			this.toolStripButton_UpdateDB.Image = global::sub_db.Resource1.DB_Refresh;
 			this.toolStripButton_UpdateDB.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton_UpdateDB.Name = "toolStripButton_UpdateDB";
-			this.toolStripButton_UpdateDB.Size = new System.Drawing.Size(109, 22);
-			this.toolStripButton_UpdateDB.Text = "更新数据库(F5)";
+			this.toolStripButton_UpdateDB.Size = new System.Drawing.Size(146, 22);
+			this.toolStripButton_UpdateDB.Text = "更新数据库(Ctrl + F5)";
 			this.toolStripButton_UpdateDB.Click += new System.EventHandler(this.ToolStripButton_UpdateDB_Click);
 			// 
 			// toolStripButton_Folder
@@ -133,8 +133,8 @@
 			this.toolStripButton_URL.Image = global::sub_db.Resource1.link;
 			this.toolStripButton_URL.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton_URL.Name = "toolStripButton_URL";
-			this.toolStripButton_URL.Size = new System.Drawing.Size(121, 22);
-			this.toolStripButton_URL.Text = "打开远程链接(F1)";
+			this.toolStripButton_URL.Size = new System.Drawing.Size(158, 22);
+			this.toolStripButton_URL.Text = "打开远程链接(Ctrl + F1)";
 			this.toolStripButton_URL.Click += new System.EventHandler(this.ToolStripButton_URL_Click);
 			// 
 			// toolStripButton_Search
@@ -142,8 +142,8 @@
 			this.toolStripButton_Search.Image = global::sub_db.Resource1.Search;
 			this.toolStripButton_Search.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton_Search.Name = "toolStripButton_Search";
-			this.toolStripButton_Search.Size = new System.Drawing.Size(97, 22);
-			this.toolStripButton_Search.Text = "高级查找(F3)";
+			this.toolStripButton_Search.Size = new System.Drawing.Size(134, 22);
+			this.toolStripButton_Search.Text = "高级查找(Ctrl + F3)";
 			this.toolStripButton_Search.Click += new System.EventHandler(this.ToolStripButton_Search_Click);
 			// 
 			// toolStripSplitButton_Languages
@@ -203,6 +203,14 @@
 			this.toolStripStatusLabel_MovieCount.Size = new System.Drawing.Size(55, 17);
 			this.toolStripStatusLabel_MovieCount.Text = "0 部影片";
 			// 
+			// toolStripStatusLabel_ErrorMsg
+			// 
+			this.toolStripStatusLabel_ErrorMsg.ForeColor = System.Drawing.Color.Red;
+			this.toolStripStatusLabel_ErrorMsg.Name = "toolStripStatusLabel_ErrorMsg";
+			this.toolStripStatusLabel_ErrorMsg.Size = new System.Drawing.Size(63, 17);
+			this.toolStripStatusLabel_ErrorMsg.Text = "(err_msg)";
+			this.toolStripStatusLabel_ErrorMsg.Visible = false;
+			// 
 			// pictureBox_Search
 			// 
 			this.pictureBox_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -236,14 +244,6 @@
 			this.radioButton_SearchBySQL.TabIndex = 7;
 			this.radioButton_SearchBySQL.Text = "使用查询语句查找";
 			this.radioButton_SearchBySQL.UseVisualStyleBackColor = true;
-			// 
-			// toolStripStatusLabel_ErrorMsg
-			// 
-			this.toolStripStatusLabel_ErrorMsg.ForeColor = System.Drawing.Color.Red;
-			this.toolStripStatusLabel_ErrorMsg.Name = "toolStripStatusLabel_ErrorMsg";
-			this.toolStripStatusLabel_ErrorMsg.Size = new System.Drawing.Size(63, 17);
-			this.toolStripStatusLabel_ErrorMsg.Text = "(err_msg)";
-			this.toolStripStatusLabel_ErrorMsg.Visible = false;
 			// 
 			// frm_Mainform
 			// 

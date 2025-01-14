@@ -40,8 +40,10 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_UpdateDatabase_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			e.Cancel = true;
-			this.Hide();
+			e.Cancel = (this.Owner != null);
+
+			if(e.CloseReason == CloseReason.UserClosing)
+				this.Hide();
 		}
 
 		/*==============================================================

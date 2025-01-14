@@ -40,6 +40,8 @@ namespace sub_db
 			this.Icon		= IMAGE.img2icon(Resource1.Logo);
 			this.Text		= $"{COMMON.m_k_PROGRAM_NAME} {COMMON.m_k_VERSION}";
 
+			m_UpdateDatabase.Owner	= this;
+
 			// 读取配置文件
 			CONFIG.read_config();
 
@@ -56,15 +58,11 @@ namespace sub_db
 		 *==============================================================*/
 		private void frm_Mainform_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			if(MessageBox.Show(	LANGUAGES.txt(1),	// 是否要退出程序？
-								$"{COMMON.m_k_PROGRAM_NAME} {COMMON.m_k_VERSION}",
-								MessageBoxButtons.YesNo,
-								MessageBoxIcon.Question,
-								MessageBoxDefaultButton.Button2 ) == DialogResult.No)
-			{
-				e.Cancel = true;
-				return;
-			}
+			e.Cancel = (MessageBox.Show(LANGUAGES.txt(1),    // 是否要退出程序？
+										$"{COMMON.m_k_PROGRAM_NAME} {COMMON.m_k_VERSION}",
+										MessageBoxButtons.YesNo,
+										MessageBoxIcon.Question,
+										MessageBoxDefaultButton.Button2) == DialogResult.No);
 		}
 
 		/*==============================================================
@@ -88,14 +86,14 @@ namespace sub_db
 			// Alt + Enter
 			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.OpenDir,	COMMON.e_KeyModifiers.Alt,	Keys.Enter);
 
-			// F1
-			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.OpenURL,	COMMON.e_KeyModifiers.None,	Keys.F1);
+			// Ctrl + F1
+			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.OpenURL,	COMMON.e_KeyModifiers.Ctrl,	Keys.F1);
 
-			// F3
-			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.Search,	COMMON.e_KeyModifiers.None,	Keys.F3);
+			// Ctrl + F3
+			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.Search,	COMMON.e_KeyModifiers.Ctrl,	Keys.F3);
 
-			// F5
-			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.UpdateDB,	COMMON.e_KeyModifiers.None,	Keys.F5);
+			// Ctrl + F5
+			COMMON.RegHotKey(this.Handle, (int)COMMON.e_HotKeyID.UpdateDB,	COMMON.e_KeyModifiers.Ctrl,	Keys.F5);
 		}
 
 		/*==============================================================

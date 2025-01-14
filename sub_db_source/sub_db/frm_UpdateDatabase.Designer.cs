@@ -51,6 +51,7 @@
             this.columnHeader_Log});
 			this.listView_Log.FullRowSelect = true;
 			this.listView_Log.GridLines = true;
+			this.listView_Log.HideSelection = false;
 			this.listView_Log.Location = new System.Drawing.Point(0, 0);
 			this.listView_Log.Name = "listView_Log";
 			this.listView_Log.Size = new System.Drawing.Size(634, 411);
@@ -156,7 +157,6 @@
 			this.Name = "frm_UpdateDatabase";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "更新数据库";
-			this.TopMost = true;
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_UpdateDatabase_FormClosing);
 			this.Load += new System.EventHandler(this.frm_UpdateDatabase_Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox_Stop)).EndInit();

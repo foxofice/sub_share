@@ -125,10 +125,10 @@ namespace sub_db
 			m_s_current_language_idx = index;
 
 			// 顶部菜单按钮
-			mainform.toolStripButton_UpdateDB.Text			= txt(10) + "(F5)";			// 更新数据库
+			mainform.toolStripButton_UpdateDB.Text			= txt(10) + "(Ctrl + F5)";	// 更新数据库
 			mainform.toolStripButton_Folder.Text			= txt(15) + "(Alt + Enter)";// 打开本地文件夹
-			mainform.toolStripButton_URL.Text				= txt(16) + "(F1)";			// 打开远程链接
-			mainform.toolStripButton_Search.Text			= txt(11) + "(F3)";			// 高级查找
+			mainform.toolStripButton_URL.Text				= txt(16) + "(Ctrl + F1)";	// 打开远程链接
+			mainform.toolStripButton_Search.Text			= txt(11) + "(Ctrl + F3)";	// 高级查找
 			mainform.toolStripSplitButton_Languages.Text	= txt(12);					// 语言(Languages)
 			mainform.toolStripButton_Settings.Text			= txt(13);					// 设置
 			mainform.toolStripButton_About.Text				= txt(14);					// 关于

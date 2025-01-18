@@ -14,6 +14,8 @@ namespace sub_db
 		// 字幕信息
 		internal class c_SubInfo
 		{
+			internal DateTime	m_time		= DateTime.MinValue;	// 最早放送日期
+
 			// 番剧名称
 			internal string		m_name_chs	= "";					// (简体)
 			internal string		m_name_cht	= "";					// (繁体)
@@ -21,7 +23,6 @@ namespace sub_db
 			internal string		m_name_en	= "";					// (英文)
 			internal string		m_name_rome	= "";					// (罗马字)
 
-			internal DateTime	m_time		= DateTime.MinValue;	// 最早放送日期
 			internal string		m_type		= "";					// 分类（animation/movie/...）
 			internal string		m_source	= "";					// 字幕匹配的片源（DB/DVD/TV/test/...）
 			internal string		m_sub_name	= "";					// 字幕名称
@@ -42,13 +43,14 @@ namespace sub_db
 		// 数据各列的名字
 		internal enum e_ColumnName
 		{
+			time,
+
 			name_chs,
 			name_cht,
 			name_jp,
 			name_en,
 			name_rome,
 
-			time,
 			type,
 			source,
 			sub_name,
@@ -69,13 +71,14 @@ namespace sub_db
 			{
 				string[] columns_desc =
 				{
+					e_ColumnName.time.ToString(),		"System.DateTime",
+
 					e_ColumnName.name_chs.ToString(),	"System.String",
 					e_ColumnName.name_cht.ToString(),	"System.String",
 					e_ColumnName.name_jp.ToString(),	"System.String",
 					e_ColumnName.name_en.ToString(),	"System.String",
 					e_ColumnName.name_rome.ToString(),	"System.String",
 
-					e_ColumnName.time.ToString(),		"System.DateTime",
 					e_ColumnName.type.ToString(),		"System.String",
 					e_ColumnName.source.ToString(),		"System.String",
 					e_ColumnName.sub_name.ToString(),	"System.String",
@@ -89,7 +92,7 @@ namespace sub_db
 				{
 					m_s_dt.Columns.Add(columns_desc[i], Type.GetType(columns_desc[i + 1]));
 					m_s_dt_search.Columns.Add(columns_desc[i], Type.GetType(columns_desc[i + 1]));
-				}
+				}	// for
 			}
 		}
 
@@ -107,13 +110,15 @@ namespace sub_db
 			foreach(c_SubInfo sub_info in m_s_all_subs)
 			{
 				DataRow dr = m_s_dt.NewRow();
+
+				dr[e_ColumnName.time.ToString()]		= sub_info.m_time;
+
 				dr[e_ColumnName.name_chs.ToString()]	= sub_info.m_name_chs;
 				dr[e_ColumnName.name_cht.ToString()]	= sub_info.m_name_cht;
 				dr[e_ColumnName.name_jp.ToString()]		= sub_info.m_name_jp;
 				dr[e_ColumnName.name_en.ToString()]		= sub_info.m_name_en;
 				dr[e_ColumnName.name_rome.ToString()]	= sub_info.m_name_rome;
 
-				dr[e_ColumnName.time.ToString()]		= sub_info.m_time;
 				dr[e_ColumnName.type.ToString()]		= sub_info.m_type;
 				dr[e_ColumnName.source.ToString()]		= sub_info.m_source;
 				dr[e_ColumnName.sub_name.ToString()]	= sub_info.m_sub_name;
@@ -150,13 +155,14 @@ namespace sub_db
 				c_SubInfo sub_info = new c_SubInfo();
 				m_s_all_subs.Add(sub_info);
 
+				sub_info.m_time			= (DateTime)dr[e_ColumnName.time.ToString()];
+
 				sub_info.m_name_chs		= (string)dr[e_ColumnName.name_chs.ToString()];
 				sub_info.m_name_cht		= (string)dr[e_ColumnName.name_cht.ToString()];
 				sub_info.m_name_jp		= (string)dr[e_ColumnName.name_jp.ToString()];
 				sub_info.m_name_en		= (string)dr[e_ColumnName.name_en.ToString()];
 				sub_info.m_name_rome	= (string)dr[e_ColumnName.name_rome.ToString()];
 
-				sub_info.m_time			= (DateTime)dr[e_ColumnName.time.ToString()];
 				sub_info.m_type			= (string)dr[e_ColumnName.type.ToString()];
 				sub_info.m_source		= (string)dr[e_ColumnName.source.ToString()];
 				sub_info.m_sub_name		= (string)dr[e_ColumnName.sub_name.ToString()];

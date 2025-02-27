@@ -1,0 +1,464 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: MMSUB
+Original Script: MMSUB
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,方正粗雅宋_GBK,68,&H00FFFFFF,&HF0000000,&H00018EF1,&H80000000,0,0,0,0,100,100,3,0,1,3,0,2,20,20,20,1
+Style: Sign,方正大黑_GBK,66,&H00FFFFFF,&HF0000000,&H00000000,&H80000000,0,0,0,0,100,100,2,0,1,3,0,8,90,90,30,1
+Style: Title,方正大黑_GBK,70,&H00FFFFFF,&HF0000000,&H00000000,&H80000000,0,0,0,0,100,100,4,0,1,3,0,2,20,20,20,1
+Style: OP english,Bahnschrift,60,&H00FFFFFF,&H000000FF,&H00AE7D00,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,20,20,30,1
+Style: OP chinese,方正兰亭黑_GBK,55,&H00FFFFFF,&H000000FF,&H00018EF1,&H00000000,-1,0,0,0,100,100,6,0,1,3,0,2,20,20,20,1
+Style: ED english,Bahnschrift,60,&H00FFFFFF,&H000000FF,&H00AE7D00,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,20,20,30,1
+Style: ED chineses,方正兰亭黑_GBK,55,&H00FFFFFF,&H000000FF,&H00018EF1,&H00000000,-1,0,0,0,100,100,6,0,1,3,0,2,20,20,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:06.17,0:00:07.24,Default,,0,0,0,,{\blur3}Are you ready?
+Dialogue: 0,0:00:07.47,0:00:10.15,Default,,0,0,0,,{\blur3}GOH官方频道震撼来袭
+Dialogue: 0,0:00:10.23,0:00:12.18,Default,,0,0,0,,{\blur3}直击你的心
+Dialogue: 0,0:00:12.32,0:00:14.14,Default,,0,0,0,,{\blur3}千金小护士Heal
+Dialogue: 0,0:00:14.75,0:00:16.87,Default,,0,0,0,,{\blur3}我是性感俏护士Sai
+Dialogue: 0,0:00:17.56,0:00:22.71,Default,,0,0,0,,{\blur3}全世界196个国家 73亿的GOH粉丝们
+Dialogue: 0,0:00:22.72,0:00:23.99,Default,,0,0,0,,{\blur3}让各位久等了
+Dialogue: 0,0:00:24.74,0:00:27.19,Default,,0,0,0,,{\blur3}首尔地区预赛终于要迎来高潮了
+Dialogue: 0,0:00:27.31,0:00:28.84,Default,,0,0,0,,{\blur3}前四强已然出炉
+Dialogue: 0,0:00:30.14,0:00:33.44,Default,,0,0,0,,{\blur3}月光剑法的继承人 Milky White 刘美罗
+Dialogue: 0,0:00:33.62,0:00:36.49,Default,,0,0,0,,{\blur3}最强的全接触空手道大师 韩大伟
+Dialogue: 0,0:00:36.83,0:00:40.29,Default,,0,0,0,,{\blur3}变幻自如的踢技新式跆拳道好手 陈毛利
+Dialogue: 0,0:00:40.54,0:00:43.14,Default,,0,0,0,,{\blur3}巴西神秘柔术家 Byeun Jaehee
+Dialogue: 0,0:00:43.24,0:00:44.35,Default,,0,0,0,,{\blur3}这周末敬请关注
+Dialogue: 0,0:00:44.35,0:00:48.37,Default,,0,0,0,,{\blur3}韩大伟选手与刘美罗选手之间的龙争虎斗吧
+Dialogue: 0,0:00:55.00,0:00:55.99,Default,,0,0,0,,{\blur3}对不住
+Dialogue: 0,0:00:56.17,0:00:57.52,Default,,0,0,0,,{\blur3}这回你得败在我手上了
+Dialogue: 0,0:00:57.99,0:01:00.82,Default,,0,0,0,,{\blur3}我要让所有人看到月光剑法的强大
+Dialogue: 0,0:01:01.85,0:01:03.06,Default,,0,0,0,,{\blur3}还请手下留情
+Dialogue: 0,0:01:05.15,0:01:06.26,Default,,0,0,0,,{\blur3}我也会赢下比赛的
+Dialogue: 0,0:01:07.19,0:01:08.42,Default,,0,0,0,,{\blur3}咱们决赛场上见
+Dialogue: 0,0:01:09.62,0:01:11.76,Default,,0,0,0,,{\blur3}我只能跟你们之间赢的那方打比赛吗?
+Dialogue: 0,0:01:11.99,0:01:13.69,Default,,0,0,0,,{\blur3}啊啊 好纠结
+Dialogue: 0,0:01:14.01,0:01:17.13,Default,,0,0,0,,{\blur3}干脆你们俩平局晋级算了
+Dialogue: 0,0:01:19.86,0:01:21.13,Default,,0,0,0,,{\blur3}There she is
+Dialogue: 0,0:01:35.00,0:01:36.17,Default,,0,0,0,,{\blur3}见到你的那一刻我就确定了
+Dialogue: 0,0:01:36.33,0:01:39.73,Default,,0,0,0,,{\blur3}我的人生只为与你邂逅而存在
+Dialogue: 0,0:01:41.24,0:01:42.09,Default,,0,0,0,,{\blur3}诶
+Dialogue: 0,0:01:42.76,0:01:45.09,Default,,0,0,0,,{\blur3}美丽的小姐 请你
+Dialogue: 0,0:01:46.13,0:01:47.40,Default,,0,0,0,,{\blur3}嫁给我吧
+Dialogue: 0,0:03:21.47,0:03:25.97,Title,,0,0,0,,marriage bonds
+Dialogue: 0,0:03:35.10,0:03:36.29,Default,,0,0,0,,{\blur3}美罗姐姐
+Dialogue: 0,0:03:36.56,0:03:38.19,Default,,0,0,0,,{\blur3}你喜欢什么样的婚纱?
+Dialogue: 0,0:03:39.82,0:03:40.83,Default,,0,0,0,,{\blur3}白色的吧
+Dialogue: 0,0:03:42.44,0:03:43.35,Default,,0,0,0,,{\blur3}粉色的
+Dialogue: 0,0:03:43.90,0:03:45.76,Default,,0,0,0,,{\blur3}你看粉色的多可爱呀
+Dialogue: 0,0:03:46.28,0:03:47.81,Default,,0,0,0,,{\blur3}婚宴你打算邀请谁
+Dialogue: 0,0:03:48.62,0:03:50.36,Default,,0,0,0,,{\blur3}不会搞得很高调的
+Dialogue: 0,0:03:50.51,0:03:51.70,Default,,0,0,0,,{\blur3}我毕竟还在上学
+Dialogue: 0,0:03:51.77,0:03:53.08,Default,,0,0,0,,{\blur3}光办个婚礼就行
+Dialogue: 0,0:03:53.23,0:03:54.76,Default,,0,0,0,,{\blur3}那蜜月旅行呢?
+Dialogue: 0,0:03:55.63,0:03:56.97,Default,,0,0,0,,{\blur3}这个嘛
+Dialogue: 0,0:03:58.59,0:04:00.08,Default,,0,0,0,,{\blur3}简直像在做梦一样
+Dialogue: 0,0:04:00.15,0:04:03.39,Default,,0,0,0,,{\blur3}我姐姐居然要跟大名鼎鼎的晟金结婚耶
+Dialogue: 0,0:04:04.81,0:04:07.12,Default,,0,0,0,,{\blur3}俊美强大的格斗家
+Dialogue: 0,0:04:07.99,0:04:12.64,Default,,0,0,0,,{\blur3}体育娱乐界的代表人物 年轻的实业家
+Dialogue: 0,0:04:14.90,0:04:18.37,Default,,0,0,0,,{\blur3}这样一个鼎鼎有名的人物 竟然会对美罗姐姐一见钟情
+Dialogue: 0,0:04:19.36,0:04:20.46,Default,,0,0,0,,{\blur3}刘美罗小姐
+Dialogue: 0,0:04:20.75,0:04:23.38,Default,,0,0,0,,{\blur3}希望你能接受我的求婚
+Dialogue: 0,0:04:26.29,0:04:28.30,Default,,0,0,0,,{\blur3}你是货真价实的原石
+Dialogue: 0,0:04:29.37,0:04:30.80,Default,,0,0,0,,{\blur3}强大又美丽
+Dialogue: 0,0:04:31.08,0:04:33.03,Default,,0,0,0,,{\blur3}蕴藏着无穷无尽的可能
+Dialogue: 0,0:04:33.73,0:04:36.76,Default,,0,0,0,,{\blur3}除了你 我想不出还有谁有资格当我的伴侣
+Dialogue: 0,0:04:37.66,0:04:40.64,Default,,0,0,0,,{\blur3}太高看我了 我只是一个普普通通的学生罢了
+Dialogue: 0,0:04:40.80,0:04:42.17,Default,,0,0,0,,{\blur3}No problem
+Dialogue: 0,0:04:42.40,0:04:45.58,Default,,0,0,0,,{\blur3}为了多了解你一点 我调查了一下月光剑法的事
+Dialogue: 0,0:04:46.09,0:04:47.31,Default,,0,0,0,,{\blur3}Marvelous
+Dialogue: 0,0:04:48.18,0:04:49.85,Default,,0,0,0,,{\blur3}那般厉害的剑法
+Dialogue: 0,0:04:49.90,0:04:51.63,Default,,0,0,0,,{\blur3}怎么就被生生埋没了这么多年呢
+Dialogue: 0,0:04:52.48,0:04:54.55,Default,,0,0,0,,{\blur3}我不会让它再这般籍籍无名下去的
+Dialogue: 0,0:04:54.90,0:04:56.21,Default,,0,0,0,,{\blur3}不管是你还是月光剑法
+Dialogue: 0,0:04:56.39,0:04:59.26,Default,,0,0,0,,{\blur3}我能让你们绽放出本该属于你们的光彩
+Dialogue: 0,0:04:59.87,0:05:01.73,Default,,0,0,0,,{\blur3}没错 如果是我的话
+Dialogue: 0,0:05:04.15,0:05:05.82,Default,,0,0,0,,{\blur3}抓住未来吧 美罗小姐
+Dialogue: 0,0:05:06.63,0:05:07.70,Default,,0,0,0,,{\blur3}与我一起
+Dialogue: 0,0:05:07.86,0:05:09.28,Default,,0,0,0,,{\blur3}飞向世界的舞台
+Dialogue: 0,0:05:12.80,0:05:13.86,Default,,0,0,0,,{\blur3}你看你看
+Dialogue: 0,0:05:14.01,0:05:15.27,Default,,0,0,0,,{\blur3}这套超美
+Dialogue: 0,0:05:15.66,0:05:17.04,Default,,0,0,0,,{\blur3}抓住未来
+Dialogue: 0,0:05:20.46,0:05:23.30,Default,,0,0,0,,{\blur3}这就是拘泥于落伍剑法的下场
+Dialogue: 0,0:05:24.07,0:05:26.12,Default,,0,0,0,,{\blur3}月光剑算是走到尽头了
+Dialogue: 0,0:05:26.45,0:05:27.87,Default,,0,0,0,,{\blur3}说是有继承人
+Dialogue: 0,0:05:27.93,0:05:30.20,Default,,0,0,0,,{\blur3}可单凭一个那么点儿的小女娃能干嘛
+Dialogue: 0,0:05:32.06,0:05:32.90,Default,,0,0,0,,{\blur3}美罗
+Dialogue: 0,0:05:33.30,0:05:35.21,Default,,0,0,0,,{\blur3}从今天起 你就跟叔叔我一起生活吧
+Dialogue: 0,0:05:35.76,0:05:38.97,Default,,0,0,0,,{\blur3}我会保护好哥哥留下的月光剑的
+Dialogue: 0,0:05:56.20,0:05:57.79,Default,,0,0,0,,{\blur3}今后还请大家多指教
+Dialogue: 0,0:05:58.27,0:05:59.59,Default,,0,0,0,,{\blur3}请指教
+Dialogue: 0,0:06:14.29,0:06:16.28,Default,,0,0,0,,{\blur3}什么嘛 就没见过这么弱的
+Dialogue: 0,0:06:16.65,0:06:17.75,Default,,0,0,0,,{\blur3}可拉倒吧
+Dialogue: 0,0:06:27.78,0:06:30.37,Default,,0,0,0,,{\blur3}月光剑的未来由我来肩负
+Dialogue: 0,0:06:31.22,0:06:33.08,Default,,0,0,0,,{\blur3}因为我才是继承人
+Dialogue: 0,0:06:36.35,0:06:38.06,Default,,0,0,0,,{\blur3}像您这般人物
+Dialogue: 0,0:06:38.23,0:06:39.46,Default,,0,0,0,,{\blur3}怎么会想要娶我们家的美罗
+Dialogue: 0,0:06:40.03,0:06:41.68,Default,,0,0,0,,{\blur3}她还是个孩子
+Dialogue: 0,0:06:44.19,0:06:46.11,Default,,0,0,0,,{\blur3}因为我在她身上感受到了光的存在
+Dialogue: 0,0:06:46.53,0:06:47.57,Default,,0,0,0,,{\blur3}那是其他人所不具备的
+Dialogue: 0,0:06:47.57,0:06:49.73,Default,,0,0,0,,{\blur3}一种独一无二的纯粹的可能性
+Dialogue: 0,0:06:49.92,0:06:52.56,Default,,0,0,0,,{\blur3}没错 她就是一颗货真价实的原石
+Dialogue: 0,0:06:53.41,0:06:54.59,Default,,0,0,0,,{\blur3}月光剑也一样
+Dialogue: 0,0:06:55.10,0:06:57.96,Default,,0,0,0,,{\blur3}我的脑海里 已经有一套普及月光剑
+Dialogue: 0,0:06:57.96,0:07:02.08,Default,,0,0,0,,{\blur3}让其名扬海内外的完整计划了
+Dialogue: 0,0:07:02.99,0:07:03.94,Default,,0,0,0,,{\blur3}五年后
+Dialogue: 0,0:07:04.19,0:07:07.49,Default,,0,0,0,,{\blur3}修习月光剑的人将不亚于空手道和柔道
+Dialogue: 0,0:07:07.55,0:07:09.37,Default,,0,0,0,,{\blur3}登上奥运舞台也不是梦
+Dialogue: 0,0:07:09.92,0:07:13.90,Default,,0,0,0,,{\blur3}我会让您和您兄长所没能实现的梦成为现实
+Dialogue: 0,0:07:15.06,0:07:17.19,Default,,0,0,0,,{\blur3}一定会很幸福的
+Dialogue: 0,0:07:17.38,0:07:18.19,Default,,0,0,0,,{\blur3}不管是美罗
+Dialogue: 0,0:07:18.19,0:07:19.69,Default,,0,0,0,,{\blur3}还是你们大家
+Dialogue: 0,0:07:22.20,0:07:24.15,Default,,0,0,0,,{\blur3}点个双层烤肉堡?
+Dialogue: 0,0:07:24.61,0:07:27.70,Default,,0,0,0,,{\blur3}可是特制铁板鸡肉堡也好想吃的说
+Dialogue: 0,0:07:29.99,0:07:32.84,Default,,0,0,0,,{\blur3}双层烤肉堡的酱简直让人欲罢不能
+Dialogue: 0,0:07:32.94,0:07:35.76,Default,,0,0,0,,{\blur3}可是想想铁板鸡肉堡香辣的味道又让我口水直流
+Dialogue: 0,0:07:36.83,0:07:37.75,Default,,0,0,0,,{\blur3}{\an8}怎么办?
+Dialogue: 0,0:07:36.90,0:07:39.93,Default,,0,0,0,,{\blur3}话说晟金居然要结婚了耶 感觉不会再爱了
+Dialogue: 0,0:07:40.02,0:07:42.78,Default,,0,0,0,,{\blur3}而且女方还跟咱们一样 只是个高中生
+Dialogue: 0,0:07:43.02,0:07:44.53,Default,,0,0,0,,{\blur3}不带这样的吧
+Dialogue: 0,0:07:44.68,0:07:46.90,Default,,0,0,0,,{\blur3}什么GOH的参赛选手刘美罗
+Dialogue: 0,0:07:47.31,0:07:48.22,Default,,0,0,0,,{\blur3}给我看看
+Dialogue: 0,0:07:47.94,0:07:49.32,Sign,,0,0,0,,{\an1\frz270\fs50}{\pos(1580,70)}{\c&H000000&\3c&HFFFFFF&\bord2}SJ娱乐会长吴晟金\N与GOH参赛选手刘美罗结婚!?
+Dialogue: 0,0:07:51.48,0:07:53.27,Default,,0,0,0,,{\blur3}听说你要结婚了
+Dialogue: 0,0:07:53.28,0:07:54.15,Default,,0,0,0,,{\blur3}是真的吗?
+Dialogue: 0,0:07:54.51,0:07:55.76,Default,,0,0,0,,{\blur3}干嘛突然问这个
+Dialogue: 0,0:07:56.52,0:07:59.04,Default,,0,0,0,,{\blur3}话说你从哪儿打听到我家住哪儿的?
+Dialogue: 0,0:07:59.26,0:08:00.37,Default,,0,0,0,,{\blur3}我问了总部那边的人
+Dialogue: 0,0:08:01.29,0:08:02.69,Default,,0,0,0,,{\blur3}比赛怎么办啊
+Dialogue: 0,0:08:02.83,0:08:04.50,Default,,0,0,0,,{\blur3}眼看着就要打半决赛了
+Dialogue: 0,0:08:04.84,0:08:08.07,Default,,0,0,0,,{\blur3}你难道就不想打进全国大赛去见识更厉害的选手吗?
+Dialogue: 0,0:08:08.07,0:08:09.49,Default,,0,0,0,,{\blur3}与你无关
+Dialogue: 0,0:08:09.77,0:08:11.49,Default,,0,0,0,,{\blur3}他就那么重要吗?
+Dialogue: 0,0:08:11.98,0:08:13.51,Default,,0,0,0,,{\blur3}你要弃月光剑不顾了吗?
+Dialogue: 0,0:08:13.85,0:08:15.62,Default,,0,0,0,,{\blur3}我什么时候说过这话
+Dialogue: 0,0:08:15.92,0:08:19.32,Default,,0,0,0,,{\blur3}不是你跟运营人员说的吗? 结婚后就要退赛
+Dialogue: 0,0:08:19.81,0:08:21.25,Default,,0,0,0,,{\blur3}那不就是要舍弃月光剑的意思吗?
+Dialogue: 0,0:08:21.33,0:08:23.58,Default,,0,0,0,,{\blur3}我就是为了月光剑才要结婚的
+Dialogue: 0,0:08:23.86,0:08:25.72,Default,,0,0,0,,{\blur3}哈? 不懂
+Dialogue: 0,0:08:25.82,0:08:27.45,Default,,0,0,0,,{\blur3}难道不是因为两情相悦所以才结婚的吗
+Dialogue: 0,0:08:28.18,0:08:29.62,Default,,0,0,0,,{\blur3}跟你没有一毛钱的关系吧
+Dialogue: 0,0:08:29.64,0:08:30.52,Default,,0,0,0,,{\blur3}走啊
+Dialogue: 0,0:08:35.56,0:08:36.86,Default,,0,0,0,,{\blur3}美罗姐姐
+Dialogue: 0,0:08:37.60,0:08:38.69,Default,,0,0,0,,{\blur3}刚刚那个人
+Dialogue: 0,0:08:39.64,0:08:41.91,Default,,0,0,0,,{\blur3}没事 不用管他
+Dialogue: 0,0:08:45.80,0:08:46.66,Default,,0,0,0,,{\blur3}等等
+Dialogue: 0,0:08:47.09,0:08:48.27,Default,,0,0,0,,{\blur3}快点
+Dialogue: 0,0:08:48.47,0:08:50.72,Default,,0,0,0,,{\blur3}我正在送外卖耶
+Dialogue: 0,0:08:51.34,0:08:52.88,Default,,0,0,0,,{\blur3}美罗摊上大事儿了
+Dialogue: 0,0:08:53.65,0:08:55.75,Default,,0,0,0,,{\blur3}她居然要闪婚 这里面肯定有内情
+Dialogue: 0,0:08:55.82,0:08:56.79,Default,,0,0,0,,{\blur3}绝对的
+Dialogue: 0,0:08:57.70,0:08:59.27,Default,,0,0,0,,{\blur3}面都要坨了
+Dialogue: 0,0:08:59.48,0:09:00.88,Default,,0,0,0,,{\blur3}我全吃了行了吧
+Dialogue: 0,0:09:01.08,0:09:02.09,Default,,0,0,0,,{\blur3}恕我直言
+Dialogue: 0,0:09:02.54,0:09:05.05,Default,,0,0,0,,{\blur3}对旁人的生活指手画脚是不对的
+Dialogue: 0,0:09:05.12,0:09:06.88,Default,,0,0,0,,{\blur3}美罗可能是被骗婚了
+Dialogue: 0,0:09:08.10,0:09:10.65,Default,,0,0,0,,{\blur3}对方说不定是想将她卖到国外去
+Dialogue: 0,0:09:11.15,0:09:14.11,Default,,0,0,0,,{\blur3}那人的地下室里关着一群小姑娘
+Dialogue: 0,0:09:14.21,0:09:16.76,Default,,0,0,0,,{\blur3}地下室里还有好多可怕的东西
+Dialogue: 0,0:09:17.63,0:09:19.03,Default,,0,0,0,,{\blur3}你看什么奇怪的电影了吧
+Dialogue: 0,0:09:19.64,0:09:22.91,Default,,0,0,0,,{\blur3}我爷爷说了 艺术源于生活高于生活
+Dialogue: 0,0:09:24.39,0:09:26.04,Default,,0,0,0,,{\blur3}你这样说有些不礼貌哦
+Dialogue: 0,0:09:26.18,0:09:29.89,Default,,0,0,0,,{\blur3}美罗看起来一点都不幸福
+Dialogue: 0,0:09:35.97,0:09:37.61,Default,,0,0,0,,{\blur3}我总感觉 这样不对
+Dialogue: 0,0:09:38.20,0:09:39.71,Default,,0,0,0,,{\blur3}现在的美罗 怎么说呢
+Dialogue: 0,0:09:40.72,0:09:42.29,Default,,0,0,0,,{\blur3}总感觉哪里怪怪的
+Dialogue: 0,0:09:42.76,0:09:44.12,Default,,0,0,0,,{\blur3}就是很不对劲
+Dialogue: 0,0:09:44.68,0:09:45.85,Default,,0,0,0,,{\blur3}就算真如你所说
+Dialogue: 0,0:09:46.54,0:09:49.09,Default,,0,0,0,,{\blur3}也不是咱们这些外人该跑去提意见的
+Dialogue: 0,0:09:50.00,0:09:51.76,Default,,0,0,0,,{\blur3}因为这是美罗自己的人生
+Dialogue: 0,0:10:24.84,0:10:25.88,Default,,0,0,0,,{\blur3}妆容完美
+Dialogue: 0,0:10:26.01,0:10:27.00,Default,,0,0,0,,{\blur3}珠宝戴齐
+Dialogue: 0,0:10:27.16,0:10:29.63,Default,,0,0,0,,{\blur3}命定的白马王子到位
+Dialogue: 0,0:10:29.94,0:10:31.54,Default,,0,0,0,,{\blur3}这下万无一失了
+Dialogue: 0,0:10:38.89,0:10:41.43,Default,,0,0,0,,{\blur3}休息日就给自己放放假 出去玩会儿吧
+Dialogue: 0,0:10:41.96,0:10:43.53,Default,,0,0,0,,{\blur3}等我洗完这一堆就去
+Dialogue: 0,0:10:46.75,0:10:48.20,Default,,0,0,0,,{\blur3}咱们去新开的那家商店瞧瞧吧
+Dialogue: 0,0:10:48.25,0:10:49.87,Default,,0,0,0,,{\blur3}好呀 正好我想买新衣服了
+Dialogue: 0,0:10:52.17,0:10:55.55,Default,,0,0,0,,{\blur3}美罗 也给你买几身那样的衣服吧
+Dialogue: 0,0:10:55.78,0:10:56.99,Default,,0,0,0,,{\blur3}我就算了
+Dialogue: 0,0:10:57.39,0:10:58.53,Default,,0,0,0,,{\blur3}我对那些没兴趣
+Dialogue: 0,0:11:02.20,0:11:03.28,Default,,0,0,0,,{\blur3}谢谢你哦
+Dialogue: 0,0:11:03.59,0:11:05.53,Default,,0,0,0,,{\blur3}婚礼就快开始了 秀美也快去准备吧
+Dialogue: 0,0:11:05.53,0:11:06.39,Default,,0,0,0,,{\blur3}好嘞
+Dialogue: 0,0:11:15.06,0:11:16.22,Default,,0,0,0,,{\blur3}非常抱歉
+Dialogue: 0,0:11:17.16,0:11:20.07,Default,,0,0,0,,{\blur3}希望您能取消这场婚礼
+Dialogue: 0,0:11:21.36,0:11:24.23,Default,,0,0,0,,{\blur3}那孩子以为自己做出了成熟的决定
+Dialogue: 0,0:11:24.97,0:11:27.70,Default,,0,0,0,,{\blur3}我之前也认为自己该尊重她的决定
+Dialogue: 0,0:11:28.12,0:11:31.06,Default,,0,0,0,,{\blur3}可她终究还只是个孩子
+Dialogue: 0,0:11:31.11,0:11:32.63,Default,,0,0,0,,{\blur3}别担心 叔叔
+Dialogue: 0,0:11:34.31,0:11:35.32,Default,,0,0,0,,{\blur3}美罗
+Dialogue: 0,0:11:35.60,0:11:37.05,Default,,0,0,0,,{\blur3}我很幸福
+Dialogue: 0,0:11:37.75,0:11:39.23,Default,,0,0,0,,{\blur3}毕竟我的愿望就要实现了
+Dialogue: 0,0:11:41.19,0:11:43.34,Default,,0,0,0,,{\blur3}借着你的名望与权力
+Dialogue: 0,0:11:43.53,0:11:45.43,Default,,0,0,0,,{\blur3}月光剑将迎来一个不一样的未来
+Dialogue: 0,0:11:46.20,0:11:48.15,Default,,0,0,0,,{\blur3}所以我选择了你
+Dialogue: 0,0:11:49.07,0:11:51.29,Default,,0,0,0,,{\blur3}尽管来利用我好了
+Dialogue: 0,0:11:51.74,0:11:54.30,Default,,0,0,0,,{\blur3}这才是人生赢家该走的路
+Dialogue: 0,0:11:54.94,0:11:58.34,Default,,0,0,0,,{\blur3}月光剑会名扬海内外吗
+Dialogue: 0,0:11:58.45,0:11:59.70,Default,,0,0,0,,{\blur3}Of course
+Dialogue: 0,0:12:00.26,0:12:03.34,Default,,0,0,0,,{\blur3}之前你不得已放弃掉的那些 今后我将全部拱手奉上
+Dialogue: 0,0:12:03.90,0:12:06.36,Default,,0,0,0,,{\blur3}去把握世界吧 美罗
+Dialogue: 0,0:12:07.92,0:12:08.93,Default,,0,0,0,,{\blur3}好
+Dialogue: 0,0:12:13.37,0:12:15.94,Default,,0,0,0,,{\blur3}美罗姐姐
+Dialogue: 0,0:12:21.19,0:12:22.70,Default,,0,0,0,,{\blur3}我真傻
+Dialogue: 0,0:12:22.87,0:12:24.63,Default,,0,0,0,,{\blur3}什么都没看明白
+Dialogue: 0,0:12:24.94,0:12:27.08,Default,,0,0,0,,{\blur3}明明一起生活了这么久
+Dialogue: 0,0:12:27.67,0:12:28.97,Default,,0,0,0,,{\blur3}对不起
+Dialogue: 0,0:12:28.99,0:12:31.50,Default,,0,0,0,,{\blur3}我就知道这事儿另有内情
+Dialogue: 0,0:12:36.17,0:12:37.38,Default,,0,0,0,,{\blur3}原来如此
+Dialogue: 0,0:12:37.61,0:12:39.23,Default,,0,0,0,,{\blur3}难怪美罗会做出那种决定
+Dialogue: 0,0:12:40.11,0:12:43.51,Default,,0,0,0,,{\blur3}我希望美罗姐姐能幸福
+Dialogue: 0,0:12:44.04,0:12:45.78,Default,,0,0,0,,{\blur3}嗯 我也一样
+Dialogue: 0,0:12:49.79,0:12:53.67,Default,,0,0,0,,{\blur3}没有邀请函的客人 恕我们无法让您进去
+Dialogue: 0,0:12:54.29,0:12:56.22,Default,,0,0,0,,{\blur3}我是美罗的朋友
+Dialogue: 0,0:12:56.24,0:12:57.67,Default,,0,0,0,,{\blur3}我想跟她说两句话
+Dialogue: 0,0:12:59.96,0:13:03.78,Default,,0,0,0,,{\blur3}我们说得很明白了 没有邀请函就不能进去
+Dialogue: 0,0:13:05.25,0:13:06.43,Default,,0,0,0,,{\blur3}行吧行吧
+Dialogue: 0,0:13:09.63,0:13:12.34,Default,,0,0,0,,{\blur3}我要去解救我的朋友
+Dialogue: 0,0:13:13.82,0:13:15.83,Default,,0,0,0,,{\blur3}若您不肯守规矩
+Dialogue: 0,0:13:15.83,0:13:18.05,Default,,0,0,0,,{\blur3}那我们也只能动粗让您知难而退了
+Dialogue: 0,0:13:34.57,0:13:35.87,Default,,0,0,0,,{\blur3}去把它弄到手
+Dialogue: 0,0:13:36.62,0:13:39.03,Default,,0,0,0,,{\blur3}能够支配神明的圣剑
+Dialogue: 0,0:13:39.61,0:13:42.42,Default,,0,0,0,,{\blur3}以及能让圣剑发挥威能的手
+Dialogue: 0,0:13:45.74,0:13:48.32,Default,,0,0,0,,{\blur3}能够支配神明的圣剑
+Dialogue: 0,0:13:51.22,0:13:53.54,Default,,0,0,0,,{\blur3}以及能让圣剑发挥威能的手
+Dialogue: 0,0:14:00.43,0:14:03.05,Default,,0,0,0,,{\blur3}又不能对这些家伙使跆拳道
+Dialogue: 0,0:14:03.78,0:14:04.74,Default,,0,0,0,,{\blur3}哥哥
+Dialogue: 0,0:14:11.19,0:14:12.41,Default,,0,0,0,,{\blur3}你在干什么?
+Dialogue: 0,0:14:12.45,0:14:13.82,Default,,0,0,0,,{\blur3}终于等到你
+Dialogue: 0,0:14:13.93,0:14:15.11,Default,,0,0,0,,{\blur3}你又是什么人?
+Dialogue: 0,0:14:21.92,0:14:23.13,Default,,0,0,0,,{\blur3}我只是推了他一把而已
+Dialogue: 0,0:14:23.69,0:14:24.89,Default,,0,0,0,,{\blur3}二位哥哥
+Dialogue: 0,0:14:25.10,0:14:26.36,Default,,0,0,0,,{\blur3}这边这边
+Dialogue: 0,0:14:30.81,0:14:32.81,Default,,0,0,0,,{\blur3}美罗 你在做什么蠢事
+Dialogue: 0,0:14:33.61,0:14:35.64,Default,,0,0,0,,{\blur3}老实说 那件婚纱一点都不适合你
+Dialogue: 0,0:14:36.37,0:14:38.06,Default,,0,0,0,,{\blur3}二位来此有何贵干
+Dialogue: 0,0:14:38.22,0:14:39.35,Default,,0,0,0,,{\blur3}这让我很伤脑筋啊
+Dialogue: 0,0:14:39.35,0:14:41.36,Default,,0,0,0,,{\blur3}在这值得纪念的重要日子里
+Dialogue: 0,0:14:41.75,0:14:43.44,Default,,0,0,0,,{\blur3}保安是怎么干活儿的
+Dialogue: 0,0:14:44.81,0:14:46.61,Default,,0,0,0,,{\blur3}这不会是你们干的吧
+Dialogue: 0,0:14:47.18,0:14:48.46,Default,,0,0,0,,{\blur3}我们只是推了他们一把
+Dialogue: 0,0:14:49.38,0:14:50.71,Default,,0,0,0,,{\blur3}可恶
+Dialogue: 0,0:14:51.29,0:14:53.55,Default,,0,0,0,,{\blur3}这群没用的保安
+Dialogue: 0,0:14:53.92,0:14:56.51,Default,,0,0,0,,{\blur3}连两只小苍蝇都赶不走
+Dialogue: 0,0:14:56.76,0:14:58.06,Default,,0,0,0,,{\blur3}闭嘴吧恶徒
+Dialogue: 0,0:14:58.12,0:15:00.15,Default,,0,0,0,,{\blur3}我知道的 你肯定对美罗没安好心
+Dialogue: 0,0:15:00.45,0:15:02.73,Default,,0,0,0,,{\blur3}嗡嗡嗡嗡 没完没了是吧
+Dialogue: 0,0:15:03.05,0:15:05.72,Default,,0,0,0,,{\blur3}看样子 只能我亲自动手了
+Dialogue: 0,0:15:15.98,0:15:16.77,Default,,0,0,0,,{\blur3}你去
+Dialogue: 0,0:15:16.86,0:15:17.63,Default,,0,0,0,,{\blur3}谢了
+Dialogue: 0,0:15:19.10,0:15:21.35,Default,,0,0,0,,{\blur3}我并没有邀请你们
+Dialogue: 0,0:15:21.64,0:15:23.49,Default,,0,0,0,,{\blur3}你是真心想要结婚的吗?
+Dialogue: 0,0:15:24.48,0:15:25.36,Default,,0,0,0,,{\blur3}比赛
+Dialogue: 0,0:15:25.39,0:15:27.02,Default,,0,0,0,,{\blur3}好不容易打出了名堂
+Dialogue: 0,0:15:27.21,0:15:30.78,Default,,0,0,0,,{\blur3}你不是很期待在半决赛上跟大伟交手吗?
+Dialogue: 0,0:15:31.08,0:15:32.57,Default,,0,0,0,,{\blur3}与你无关
+Dialogue: 0,0:15:33.01,0:15:35.36,Default,,0,0,0,,{\blur3}这就是你一直想做的事吗?
+Dialogue: 0,0:15:35.60,0:15:37.57,Default,,0,0,0,,{\blur3}你对月光剑的情意
+Dialogue: 0,0:15:37.57,0:15:38.88,Default,,0,0,0,,{\blur3}就只是这样吗?
+Dialogue: 0,0:15:42.76,0:15:45.02,Default,,0,0,0,,{\blur3}我知道一家新开的美甲店
+Dialogue: 0,0:15:47.21,0:15:48.29,Default,,0,0,0,,{\blur3}梦想这种东西
+Dialogue: 0,0:15:48.55,0:15:51.16,Default,,0,0,0,,{\blur3}若不是靠自己的力量 就算实现了又有什么意义
+Dialogue: 0,0:15:53.70,0:15:54.82,Default,,0,0,0,,{\blur3}请你做我的女朋友吧
+Dialogue: 0,0:15:57.36,0:16:00.21,Default,,0,0,0,,{\blur3}月光剑只有强者才能继承
+Dialogue: 0,0:16:07.99,0:16:09.96,Default,,0,0,0,,{\blur3}好不容易拼到了现在
+Dialogue: 0,0:16:10.13,0:16:11.33,Default,,0,0,0,,{\blur3}你要全部将之舍弃吗?
+Dialogue: 0,0:16:12.82,0:16:14.66,Sign,,0,0,0,,{\pos(866,880)\fad(280,267)}暂时扣押财产
+Dialogue: 0,0:16:16.05,0:16:17.49,Default,,0,0,0,,{\blur3}别说的那么简单
+Dialogue: 0,0:16:22.39,0:16:24.22,Default,,0,0,0,,{\blur3}你果然很强嘛
+Dialogue: 0,0:16:28.30,0:16:30.43,Default,,0,0,0,,{\blur3}你都这么强了 月光剑也一定能
+Dialogue: 0,0:16:30.63,0:16:31.59,Default,,0,0,0,,{\blur3}吵死了
+Dialogue: 0,0:16:32.42,0:16:34.48,Default,,0,0,0,,{\blur3}你根本什么都不知道
+Dialogue: 0,0:16:41.62,0:16:43.70,Default,,0,0,0,,{\blur3}够了 美罗
+Dialogue: 0,0:16:44.44,0:16:47.82,Default,,0,0,0,,{\blur3}哥哥他一定也不想看到你这样的
+Dialogue: 0,0:16:48.14,0:16:49.72,Default,,0,0,0,,{\blur3}我也会努力的
+Dialogue: 0,0:16:49.91,0:16:54.13,Default,,0,0,0,,{\blur3}美罗姐姐应该跟自己真正爱的人幸福地过一辈子
+Dialogue: 0,0:16:55.59,0:16:57.68,Default,,0,0,0,,{\blur3}但是 我
+Dialogue: 0,0:16:58.42,0:17:00.28,Default,,0,0,0,,{\blur3}这有什么难的
+Dialogue: 0,0:17:02.76,0:17:04.12,Default,,0,0,0,,{\blur3}随性而为就好
+Dialogue: 0,0:17:14.22,0:17:18.43,Default,,0,0,0,,{\blur3}以己之技 为己所欲
+Dialogue: 0,0:17:18.65,0:17:21.29,Default,,0,0,0,,{\blur3}此乃吾等家传剑法之奥义
+Dialogue: 0,0:17:40.96,0:17:43.51,Default,,0,0,0,,{\blur3}对不起 我没办法跟你结婚
+Dialogue: 0,0:17:46.55,0:17:50.73,Default,,0,0,0,,{\blur3}我要用我力所能及的方式去守护月光剑
+Dialogue: 0,0:17:58.49,0:18:00.25,Default,,0,0,0,,{\blur3}Stop fooling yourself（别自欺欺人了）
+Dialogue: 0,0:18:00.25,0:18:01.99,Default,,0,0,0,,{\blur3}you stupid little girl（你个傻丫头）
+Dialogue: 0,0:18:02.37,0:18:03.48,Default,,0,0,0,,{\blur3}我想要的
+Dialogue: 0,0:18:03.85,0:18:06.49,Default,,0,0,0,,{\blur3}不过是月光剑及其继承者的力量罢了
+Dialogue: 0,0:18:06.83,0:18:07.97,Default,,0,0,0,,{\blur3}这股力量
+Dialogue: 0,0:18:16.57,0:18:17.40,Default,,0,0,0,,{\blur3}快跑
+Dialogue: 0,0:18:39.68,0:18:41.38,Default,,0,0,0,,{\blur3}月光剑法 第六式
+Dialogue: 0,0:18:42.79,0:18:43.76,Default,,0,0,0,,{\blur3}猿臂
+Dialogue: 0,0:18:57.15,0:19:00.37,Default,,0,0,0,,{\blur3}没想到事情会闹这么大
+Dialogue: 0,0:19:01.31,0:19:02.45,Default,,0,0,0,,{\blur3}谁说不是呢
+Dialogue: 0,0:19:02.60,0:19:04.28,Default,,0,0,0,,{\blur3}那个 你们两个
+Dialogue: 0,0:19:05.38,0:19:07.15,Default,,0,0,0,,{\blur3}今天的事 那什么
+Dialogue: 0,0:19:09.27,0:19:11.62,Default,,0,0,0,,{\blur3}干嘛 我们好不容易把你救了出来
+Dialogue: 0,0:19:11.69,0:19:13.07,Default,,0,0,0,,{\blur3}你好歹道声谢吧
+Dialogue: 0,0:19:13.16,0:19:15.23,Default,,0,0,0,,{\blur3}我又没求你来救我
+Dialogue: 0,0:19:17.29,0:19:19.09,Default,,0,0,0,,{\blur3}这个归我了
+Dialogue: 0,0:19:19.59,0:19:20.55,Default,,0,0,0,,{\blur3}Good bye
+Dialogue: 0,0:19:21.29,0:19:22.21,Default,,0,0,0,,{\blur3}这个混蛋
+Dialogue: 0,0:19:22.36,0:19:23.07,Default,,0,0,0,,{\blur3}算了
+Dialogue: 0,0:19:23.66,0:19:24.84,Default,,0,0,0,,{\blur3}他爱要就给他好了
+Dialogue: 0,0:19:25.97,0:19:29.15,Default,,0,0,0,,{\blur3}父亲的心一直在我的心里
+Dialogue: 0,0:19:32.36,0:19:34.17,Default,,0,0,0,,{\blur3}美罗姐姐笑了
+Dialogue: 0,0:19:35.54,0:19:36.53,Default,,0,0,0,,{\blur3}是啊
+Dialogue: 0,0:19:47.59,0:19:48.62,Default,,0,0,0,,{\blur3}快把AED拿来
+Dialogue: 0,0:19:48.66,0:19:49.33,Default,,0,0,0,,{\blur3}是
+Dialogue: 0,0:19:49.33,0:19:51.03,Default,,0,0,0,,{\blur3}还有肾上腺素和取血
+Dialogue: 0,0:19:51.03,0:19:52.87,Default,,0,0,0,,{\blur3}AED怎么还没到 快点
+Dialogue: 0,0:19:52.97,0:19:55.16,Default,,0,0,0,,{\blur3}医生 为防万一 用不用把hANP也拿来
+Dialogue: 0,0:19:55.55,0:19:56.65,Default,,0,0,0,,{\blur3}麻烦你了
+Dialogue: 0,0:19:57.01,0:19:58.12,Default,,0,0,0,,{\blur3}还是没脉搏
+Dialogue: 0,0:19:58.21,0:19:58.98,Default,,0,0,0,,{\blur3}再来一次
+Dialogue: 0,0:19:59.32,0:20:00.38,Default,,0,0,0,,{\blur3}肾上腺素拿来了
+Dialogue: 0,0:20:00.38,0:20:01.52,Default,,0,0,0,,{\blur3}等等等等
+Dialogue: 0,0:20:02.12,0:20:03.24,Default,,0,0,0,,{\blur3}睁开眼啊
+Dialogue: 0,0:20:11.76,0:20:12.97,Default,,0,0,0,,{\blur3}哎呀呀
+Dialogue: 0,0:20:13.67,0:20:16.48,Default,,0,0,0,,{\blur3}这么晚了还要工作 真是辛苦了呢
+Dialogue: 0,0:20:16.90,0:20:18.74,Default,,0,0,0,,{\blur3}为了好朋友吗?
+Dialogue: 0,0:20:18.79,0:20:22.85,Default,,0,0,0,,{\blur3}多么美丽的友情 我都要感动哭了
+Dialogue: 0,0:20:23.21,0:20:24.33,Default,,0,0,0,,{\blur3}不过呢
+Dialogue: 0,0:20:24.45,0:20:27.63,Default,,0,0,0,,{\blur3}那小子马上就要被阎王爷收走了
+Dialogue: 0,0:20:45.36,0:20:47.34,Default,,0,0,0,,{\blur3}完了 睡过头了
+Dialogue: 0,0:20:47.57,0:20:48.97,Default,,0,0,0,,{\blur3}比赛已经开始了吧
+Dialogue: 0,0:20:49.17,0:20:50.38,Default,,0,0,0,,{\blur3}美罗 大伟
+Dialogue: 0,0:20:50.55,0:20:52.27,Default,,0,0,0,,{\blur3}你们俩要一起晋级啊
+Dialogue: 0,0:20:59.17,0:21:01.59,Default,,0,0,0,,{\blur3}那打得是不是有点狠啊
+Dialogue: 0,0:21:11.90,0:21:12.86,Default,,0,0,0,,{\blur3}Stop Stop
+Dialogue: 0,0:21:14.45,0:21:15.37,Default,,0,0,0,,{\blur3}Knock down
+Dialogue: 0,0:21:39.66,0:21:40.80,Default,,0,0,0,,{\blur3}决赛见
+Dialogue: 0,0:23:22.98,0:23:24.54,Default,,0,0,0,,{\blur3}喂 看这儿
+Dialogue: 0,0:23:28.09,0:23:30.32,Default,,0,0,0,,{\blur3}谢谢你们今天赶来救我
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:02:07.00,0:02:08.57,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你让我不得消停
+Dialogue: 0,0:02:08.57,0:02:10.59,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我要严肃对待
+Dialogue: 0,0:02:10.59,0:02:12.42,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}因为我知道你想要我
+Dialogue: 0,0:02:12.42,0:02:14.24,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}由衷而发
+Dialogue: 0,0:02:14.42,0:02:16.22,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你让我说不出话
+Dialogue: 0,0:02:16.22,0:02:17.93,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}开口无言
+Dialogue: 0,0:02:17.97,0:02:19.82,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我努力为你保守秘密
+Dialogue: 0,0:02:19.85,0:02:21.26,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}但终究还是泄露了
+Dialogue: 0,0:02:21.35,0:02:22.97,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你极速前进 又缓慢前行
+Dialogue: 0,0:02:23.02,0:02:24.81,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你浑身冰冷 一蹶不振
+Dialogue: 0,0:02:25.64,0:02:27.02,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你引诱我现身
+Dialogue: 0,0:02:27.02,0:02:28.56,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}直到你的城墙全部倒塌
+Dialogue: 0,0:02:28.94,0:02:30.44,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}然后你就一无所有
+Dialogue: 0,0:02:30.44,0:02:33.57,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}但我不会放弃
+Dialogue: 0,0:02:33.57,0:02:35.82,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:02:42.38,0:02:43.72,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}对抗
+Dialogue: 0,0:02:48.37,0:02:50.79,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:03:03.13,0:03:05.52,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:03:05.52,0:03:07.19,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你极速前进 又缓慢前行
+Dialogue: 0,0:03:07.19,0:03:09.40,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你浑身冰冷 一蹶不振
+Dialogue: 0,0:03:09.44,0:03:10.90,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你极速前进 又缓慢前行
+Dialogue: 0,0:03:13.27,0:03:14.69,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}然后你就一无所有
+Dialogue: 0,0:03:14.69,0:03:16.82,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}但我不会放弃
+Dialogue: 0,0:03:16.82,0:03:17.95,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}然后你就一无所有
+Dialogue: 0,0:03:17.99,0:03:20.95,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:02:07.00,0:02:08.57,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You've been keeping me busy
+Dialogue: 0,0:02:08.57,0:02:10.59,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll take it hot right now
+Dialogue: 0,0:02:10.59,0:02:12.42,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Cause I know that you want me
+Dialogue: 0,0:02:12.42,0:02:14.24,OP english,,0,0,0,,{\blur1}{\fad(150,150)}From the inside out
+Dialogue: 0,0:02:14.42,0:02:16.22,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You got me speechless
+Dialogue: 0,0:02:16.22,0:02:17.93,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Opening my mouth
+Dialogue: 0,0:02:17.97,0:02:19.82,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I was keeping your secret
+Dialogue: 0,0:02:19.85,0:02:21.26,OP english,,0,0,0,,{\blur1}{\fad(150,150)}But the word got out
+Dialogue: 0,0:02:21.35,0:02:22.97,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're fast then you're slow
+Dialogue: 0,0:02:23.02,0:02:24.81,OP english,,0,0,0,,{\blur1}{\fad(150,150)}While you're cold then you fall
+Dialogue: 0,0:02:25.64,0:02:27.02,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're luring me out now
+Dialogue: 0,0:02:27.02,0:02:28.56,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Til your walls come down
+Dialogue: 0,0:02:28.94,0:02:30.44,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Yes then you're no
+Dialogue: 0,0:02:30.44,0:02:33.57,OP english,,0,0,0,,{\blur1}{\fad(150,150)}But I'm not letting go oh-oh
+Dialogue: 0,0:02:33.57,0:02:35.82,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:02:42.38,0:02:43.72,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Contradiction
+Dialogue: 0,0:02:48.37,0:02:50.79,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:03:03.13,0:03:05.52,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:03:05.52,0:03:07.19,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're fast then you're slow
+Dialogue: 0,0:03:07.19,0:03:09.40,OP english,,0,0,0,,{\blur1}{\fad(150,150)}While you're cold then you fall
+Dialogue: 0,0:03:09.44,0:03:10.90,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're fast then you're slow
+Dialogue: 0,0:03:13.27,0:03:14.69,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Yes then you're no
+Dialogue: 0,0:03:14.69,0:03:16.82,OP english,,0,0,0,,{\blur1}{\fad(150,150)}But I'm not letting go oh-oh
+Dialogue: 0,0:03:16.82,0:03:17.95,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Yes then you're no
+Dialogue: 0,0:03:17.99,0:03:20.95,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:21:56.02,0:21:58.05,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}当我们在一起时 我们就会更强大
+Dialogue: 0,0:21:58.05,0:22:00.56,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}让我们一起高飞 让我们一起探索
+Dialogue: 0,0:22:00.56,0:22:02.92,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们知道 我们会走到最后
+Dialogue: 0,0:22:02.92,0:22:05.31,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}请相信 我们真的可以做到
+Dialogue: 0,0:22:05.94,0:22:08.48,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们并不孤单 也不必任人摆布
+Dialogue: 0,0:22:08.48,0:22:10.88,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}所以我们现在必须抓住时机
+Dialogue: 0,0:22:10.88,0:22:13.31,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}不要掩饰 也不要放弃
+Dialogue: 0,0:22:13.31,0:22:15.33,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}每一次我们都会正中目标
+Dialogue: 0,0:22:15.33,0:22:17.75,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}所以 就让我们继续前行吧
+Dialogue: 0,0:22:17.75,0:22:20.20,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们会无往不胜
+Dialogue: 0,0:22:20.20,0:22:22.83,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}分享你我的梦想
+Dialogue: 0,0:22:22.83,0:22:24.93,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们一直都在期待着希望出现
+Dialogue: 0,0:22:24.93,0:22:29.30,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}如果你伸出手来 我会给你依靠
+Dialogue: 0,0:22:29.40,0:22:33.85,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}为了你 我会不顾一切
+Dialogue: 0,0:22:34.29,0:22:36.20,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}遇到困难时
+Dialogue: 0,0:22:36.20,0:22:42.45,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们一起面对 绝不会抛下彼此
+Dialogue: 0,0:22:42.75,0:22:44.25,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们必定会战无不胜
+Dialogue: 0,0:22:44.25,0:22:47.45,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:22:47.45,0:22:49.00,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们知道 我们会取得胜利
+Dialogue: 0,0:22:49.00,0:22:52.15,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:22:52.85,0:22:57.25,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们一起高飞 我们帮助彼此走向胜利
+Dialogue: 0,0:22:57.25,0:22:58.45,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们必定会战无不胜
+Dialogue: 0,0:22:58.45,0:23:01.75,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:23:01.75,0:23:03.20,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们必定会战无不胜
+Dialogue: 0,0:23:03.20,0:23:06.45,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:23:06.45,0:23:08.00,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们知道 我们会取得胜利
+Dialogue: 0,0:23:08.00,0:23:12.22,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:21:56.02,0:21:58.05,ED english,,0,0,0,,{\blur1}{\fad(150,200)}When we're together we're stronger
+Dialogue: 0,0:21:58.05,0:22:00.56,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Let's go all up high let's go discover
+Dialogue: 0,0:22:00.56,0:22:02.92,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we know we are going to make it
+Dialogue: 0,0:22:02.92,0:22:05.31,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Just believe we can do this really
+Dialogue: 0,0:22:05.94,0:22:08.48,ED english,,0,0,0,,{\blur1}{\fad(150,200)}We're not alone or even owned
+Dialogue: 0,0:22:08.48,0:22:10.88,ED english,,0,0,0,,{\blur1}{\fad(150,200)}So now we must seize this moment
+Dialogue: 0,0:22:10.88,0:22:13.31,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Never hide or never lose
+Dialogue: 0,0:22:13.31,0:22:15.33,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Every time we're right on target
+Dialogue: 0,0:22:15.33,0:22:17.75,ED english,,0,0,0,,{\blur1}{\fad(150,200)}So let's just keep going
+Dialogue: 0,0:22:17.75,0:22:20.20,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we're gonna keep on Winning
+Dialogue: 0,0:22:20.20,0:22:22.83,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Sharing dreams you and me
+Dialogue: 0,0:22:22.83,0:22:24.93,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All the hopes that we've been waiting
+Dialogue: 0,0:22:24.93,0:22:29.30,ED english,,0,0,0,,{\blur1}{\fad(150,200)}If you reach out I'll be there for you
+Dialogue: 0,0:22:29.40,0:22:33.85,ED english,,0,0,0,,{\blur1}{\fad(150,200)}There's nothing I would not do for you
+Dialogue: 0,0:22:34.29,0:22:36.20,ED english,,0,0,0,,{\blur1}{\fad(150,200)}When troubles coming in
+Dialogue: 0,0:22:36.20,0:22:42.45,ED english,,0,0,0,,{\blur1}{\fad(150,200)}We'll fight them all together not alone
+Dialogue: 0,0:22:42.75,0:22:44.25,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All we do is just Win
+Dialogue: 0,0:22:44.25,0:22:47.45,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:22:47.45,0:22:49.00,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we know that we'll Win
+Dialogue: 0,0:22:49.00,0:22:52.15,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:22:52.85,0:22:57.25,ED english,,0,0,0,,{\blur1}{\fad(150,200)}We lift us up high we help each other to Win it
+Dialogue: 0,0:22:57.25,0:22:58.45,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All we do is just Win
+Dialogue: 0,0:22:58.45,0:23:01.75,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:23:01.75,0:23:03.20,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All we do is just Win
+Dialogue: 0,0:23:03.20,0:23:06.45,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:23:06.45,0:23:08.00,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we know that we'll Win
+Dialogue: 0,0:23:08.00,0:23:12.22,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+

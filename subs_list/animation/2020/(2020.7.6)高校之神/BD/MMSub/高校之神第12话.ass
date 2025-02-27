@@ -1,0 +1,389 @@
+﻿[Script Info]
+;SrtEdit 6.3.2012.1001
+;Copyright(C) 2005-2012 Yuan Weiguo
+
+Title: MMSUB
+Original Script: MMSUB
+Original Translation: 
+Original Timing: 
+Original Editing: 
+Script Updated By: 
+Update Details: 
+ScriptType: v4.00+
+Collisions: Reverse
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+Synch Point: 0
+WrapStyle: 0
+ScaledBorderAndShadow: no
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,MLUGD6WT,68,&H00FFFFFF,&HF0000000,&H00018EF1,&H80000000,0,0,0,0,100,100,3,0,1,3,0,2,20,20,20,1
+Style: Sign,方正大黑_GBK,66,&H00FFFFFF,&HF0000000,&H00000000,&H80000000,0,0,0,0,100,100,2,0,1,3,0,8,90,90,30,1
+Style: Title,B5UUJDUH,70,&H00FFFFFF,&HF0000000,&H00000000,&H80000000,0,0,0,0,100,100,4,0,1,3,0,2,20,20,20,1
+Style: OP english,KZRNZPUY,60,&H00FFFFFF,&H000000FF,&H00AE7D00,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,20,20,30,1
+Style: OP chinese,4FOJTCHU,55,&H00FFFFFF,&H000000FF,&H00018EF1,&H00000000,-1,0,0,0,100,100,6,0,1,3,0,2,20,20,20,1
+Style: ED english,KZRNZPUY,60,&H00FFFFFF,&H000000FF,&H00AE7D00,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,20,20,30,1
+Style: ED chineses,4FOJTCHU,55,&H00FFFFFF,&H000000FF,&H00018EF1,&H00000000,-1,0,0,0,100,100,6,0,1,3,0,2,20,20,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.60,0:00:03.78,Default,,0,0,0,,{\blur3}神啊
+Dialogue: 0,0:00:04.13,0:00:05.68,Default,,0,0,0,,{\blur3}钥匙已现
+Dialogue: 0,0:00:05.93,0:00:07.69,Default,,0,0,0,,{\blur3}肃清之时来临了
+Dialogue: 0,0:00:10.58,0:00:12.09,Default,,0,0,0,,{\blur3}自这一刻起
+Dialogue: 0,0:00:12.57,0:00:14.97,Default,,0,0,0,,{\blur3}高校之神终止
+Dialogue: 0,0:00:19.98,0:00:21.77,Default,,0,0,0,,{\blur3}那是什么东西啊
+Dialogue: 0,0:00:25.24,0:00:27.72,Default,,0,0,0,,{\blur3}今在 昔在
+Dialogue: 0,0:00:28.30,0:00:29.73,Default,,0,0,0,,{\blur3}那注定要来的
+Dialogue: 0,0:00:31.14,0:00:34.19,Default,,0,0,0,,{\blur3}以后永在的全能者在此降临
+Dialogue: 0,0:00:34.71,0:00:37.58,Default,,0,0,0,,{\blur3}世间自此迎来始和终
+Dialogue: 0,0:00:54.91,0:00:58.40,Default,,0,0,0,,{\blur3}神啊 请接纳我等吧
+Dialogue: 0,0:01:11.96,0:01:13.27,Default,,0,0,0,,{\blur3}我的爱孙
+Dialogue: 0,0:01:14.21,0:01:17.44,Default,,0,0,0,,{\blur3}你的仇 祖父来替你报
+Dialogue: 0,0:01:18.68,0:01:20.65,Default,,0,0,0,,{\blur3}哪怕要赔上这条老命
+Dialogue: 0,0:02:51.77,0:02:56.02,Title,,0,0,0,,fox/god
+Dialogue: 0,0:03:03.81,0:03:04.78,Default,,0,0,0,,{\blur3}妈妈
+Dialogue: 0,0:03:05.98,0:03:07.54,Default,,0,0,0,,{\blur3}妈妈你不去吗?
+Dialogue: 0,0:03:10.01,0:03:11.05,Default,,0,0,0,,{\blur3}小泽
+Dialogue: 0,0:03:11.75,0:03:14.30,Default,,0,0,0,,{\blur3}妈妈祝你前程似锦
+Dialogue: 0,0:03:17.78,0:03:19.09,Default,,0,0,0,,{\blur3}好 我知道了
+Dialogue: 0,0:03:20.39,0:03:22.03,Default,,0,0,0,,{\blur3}转账刚刚完成了
+Dialogue: 0,0:03:22.94,0:03:25.36,Default,,0,0,0,,{\blur3}血缘羁绊这种东西最是无用
+Dialogue: 0,0:03:26.25,0:03:30.20,Default,,0,0,0,,{\blur3}只有个人能力是实实在在值得相信的
+Dialogue: 0,0:03:30.58,0:03:32.36,Default,,0,0,0,,{\blur3}你很有资质
+Dialogue: 0,0:03:32.94,0:03:36.46,Default,,0,0,0,,{\blur3}继承我全部衣钵的资质
+Dialogue: 0,0:03:37.21,0:03:38.99,Default,,0,0,0,,{\blur3}你记好
+Dialogue: 0,0:03:39.60,0:03:42.88,Default,,0,0,0,,{\blur3}那种人只配被称为丧家之犬
+Dialogue: 0,0:03:44.68,0:03:48.03,Default,,0,0,0,,{\blur3}道歉 给我道歉 道歉
+Dialogue: 0,0:03:48.06,0:03:49.48,Default,,0,0,0,,{\blur3}喂 你在做什么?
+Dialogue: 0,0:03:50.83,0:03:52.79,Default,,0,0,0,,{\blur3}放开我 放开我
+Dialogue: 0,0:03:51.07,0:03:52.07,Default,,0,0,0,,{\blur3}{\an8}你冷静一点
+Dialogue: 0,0:03:57.88,0:04:01.44,Default,,0,0,0,,{\blur3}败者需要找出自己失败的原因
+Dialogue: 0,0:04:02.33,0:04:04.04,Default,,0,0,0,,{\blur3}但胜者则不同
+Dialogue: 0,0:04:04.34,0:04:08.25,Default,,0,0,0,,{\blur3}他们从一开始便坚信自己终将胜利
+Dialogue: 0,0:04:08.25,0:04:09.84,Default,,0,0,0,,{\blur3}积极寻找通往胜利的路
+Dialogue: 0,0:04:14.47,0:04:17.49,Default,,0,0,0,,{\blur3}不择手段
+Dialogue: 0,0:04:20.01,0:04:23.30,Default,,0,0,0,,{\blur3}我知道 父亲大人
+Dialogue: 0,0:04:23.92,0:04:26.24,Default,,0,0,0,,{\blur3}我不会让自己成为丧家之犬的
+Dialogue: 0,0:04:27.12,0:04:32.21,Default,,0,0,0,,{\blur3}你的权力你的财力还有这世上的一切 全是
+Dialogue: 0,0:04:33.27,0:04:34.42,Default,,0,0,0,,{\blur3}我的
+Dialogue: 0,0:05:21.36,0:05:22.59,Default,,0,0,0,,{\blur3}一样的
+Dialogue: 0,0:05:23.12,0:05:24.80,Default,,0,0,0,,{\blur3}你终究也是
+Dialogue: 0,0:05:25.03,0:05:26.16,Default,,0,0,0,,{\blur3}一头野兽
+Dialogue: 0,0:05:30.03,0:05:30.91,Default,,0,0,0,,{\blur3}胜雅
+Dialogue: 0,0:05:32.03,0:05:33.05,Default,,0,0,0,,{\blur3}出什么事了?
+Dialogue: 0,0:05:35.00,0:05:36.39,Default,,0,0,0,,{\blur3}一表
+Dialogue: 0,0:05:37.15,0:05:38.74,Default,,0,0,0,,{\blur3}一表他
+Dialogue: 0,0:05:45.80,0:05:46.92,Default,,0,0,0,,{\blur3}5000万
+Dialogue: 0,0:05:47.55,0:05:50.34,Default,,0,0,0,,{\blur3}6000万 7000万 8000万
+Dialogue: 0,0:05:51.11,0:05:52.83,Default,,0,0,0,,{\blur3}来来来 再多来点
+Dialogue: 0,0:05:54.10,0:05:54.98,Default,,0,0,0,,{\blur3}昌植
+Dialogue: 0,0:06:10.84,0:06:11.69,Default,,0,0,0,,{\blur3}那是
+Dialogue: 0,0:06:22.02,0:06:23.47,Default,,0,0,0,,{\blur3}是了 武真
+Dialogue: 0,0:06:24.46,0:06:26.41,Default,,0,0,0,,{\blur3}你又迟到了
+Dialogue: 0,0:06:27.38,0:06:29.71,Default,,0,0,0,,{\blur3}若就这样接触到钥匙
+Dialogue: 0,0:06:30.47,0:06:34.37,Default,,0,0,0,,{\blur3}整个世界都得灰飞烟灭
+Dialogue: 0,0:06:37.28,0:06:38.41,Default,,0,0,0,,{\blur3}这正是
+Dialogue: 0,0:06:38.59,0:06:40.11,Default,,0,0,0,,{\blur3}我们要的
+Dialogue: 0,0:06:43.19,0:06:44.72,Default,,0,0,0,,{\blur3}那是什么啊
+Dialogue: 0,0:06:45.91,0:06:47.40,Default,,0,0,0,,{\blur3}那是谁的借力吗?
+Dialogue: 0,0:07:15.78,0:07:17.54,Default,,0,0,0,,{\blur3}你记好
+Dialogue: 0,0:07:18.10,0:07:21.22,Default,,0,0,0,,{\blur3}那种人只配被称为丧家之犬
+Dialogue: 0,0:07:23.19,0:07:24.21,Default,,0,0,0,,{\blur3}我
+Dialogue: 0,0:07:31.17,0:07:32.72,Default,,0,0,0,,{\blur3}不是丧家之犬
+Dialogue: 0,0:07:33.49,0:07:34.52,Default,,0,0,0,,{\blur3}一表
+Dialogue: 0,0:07:51.16,0:07:52.14,Default,,0,0,0,,{\blur3}钥匙
+Dialogue: 0,0:07:52.87,0:07:53.87,Default,,0,0,0,,{\blur3}觉醒了
+Dialogue: 0,0:08:15.42,0:08:17.37,Default,,0,0,0,,{\blur3}钥匙归我了
+Dialogue: 0,0:08:21.86,0:08:22.68,Default,,0,0,0,,{\blur3}见鬼
+Dialogue: 0,0:08:45.09,0:08:46.03,Default,,0,0,0,,{\blur3}钥匙
+Dialogue: 0,0:08:46.42,0:08:47.29,Default,,0,0,0,,{\blur3}终于
+Dialogue: 0,0:08:54.17,0:08:56.16,Default,,0,0,0,,{\blur3}这帮人的目标就是这个吗?
+Dialogue: 0,0:08:57.32,0:08:57.99,Default,,0,0,0,,{\blur3}喂
+Dialogue: 0,0:08:58.41,0:08:59.27,Default,,0,0,0,,{\blur3}振作点
+Dialogue: 0,0:09:01.09,0:09:02.52,Default,,0,0,0,,{\blur3}他流了好多血
+Dialogue: 0,0:09:03.09,0:09:04.87,Default,,0,0,0,,{\blur3}纳米机器治疗没跟上吗?
+Dialogue: 0,0:09:18.64,0:09:20.82,Default,,0,0,0,,{\blur3}看样子不得不废除盟约了
+Dialogue: 0,0:09:21.32,0:09:23.55,Default,,0,0,0,,{\blur3}很遗憾 朴武真议员
+Dialogue: 0,0:09:24.08,0:09:26.60,Default,,0,0,0,,{\blur3}我们绝不能轻易屈服
+Dialogue: 0,0:09:28.31,0:09:31.86,Default,,0,0,0,,{\blur3}我会证明给你们看 远古的神在人类科技面前
+Dialogue: 0,0:09:32.58,0:09:35.38,Default,,0,0,0,,{\blur3}根本就毫无意义
+Dialogue: 0,0:09:40.55,0:09:41.62,Default,,0,0,0,,{\blur3}因为那是
+Dialogue: 0,0:09:41.88,0:09:44.39,Default,,0,0,0,,{\blur3}我们身为世界守护者
+Dialogue: 0,0:09:44.74,0:09:46.38,Default,,0,0,0,,{\blur3}所肩负的使命
+Dialogue: 0,0:09:48.96,0:09:50.40,Default,,0,0,0,,{\blur3}确认到有核导弹发射升空
+Dialogue: 0,0:09:50.76,0:09:52.46,Default,,0,0,0,,{\blur3}总数567
+Dialogue: 0,0:09:52.63,0:09:53.85,Default,,0,0,0,,{\blur3}目标 首尔上空
+Dialogue: 0,0:09:54.14,0:09:56.28,Default,,0,0,0,,{\blur3}距离敌方导弹坠落约剩40分钟
+Dialogue: 0,0:09:58.94,0:10:02.28,Default,,0,0,0,,{\blur3}你想让这个国家从世界上消失吗 朴武真
+Dialogue: 0,0:10:03.23,0:10:04.94,Default,,0,0,0,,{\blur3}总统阁下 还请速速前往掩体壕
+Dialogue: 0,0:10:05.63,0:10:07.62,Default,,0,0,0,,{\blur3}究竟发生了什么?
+Dialogue: 0,0:10:08.48,0:10:09.33,Default,,0,0,0,,{\blur3}见鬼
+Dialogue: 0,0:10:09.49,0:10:12.16,Default,,0,0,0,,{\blur3}若能打破制约 这种程度又算得了什么
+Dialogue: 0,0:10:12.86,0:10:15.16,Default,,0,0,0,,{\blur3}可要想打破制约就需要钥匙
+Dialogue: 0,0:10:15.52,0:10:17.21,Default,,0,0,0,,{\blur3}这里是ERSS
+Dialogue: 0,0:10:17.52,0:10:18.43,Default,,0,0,0,,{\blur3}能听到吗
+Dialogue: 0,0:10:19.41,0:10:24.09,Default,,0,0,0,,{\blur3}就在刚刚 我们发现美军发射了大量的核导弹
+Dialogue: 0,0:10:24.84,0:10:26.56,Default,,0,0,0,,{\blur3}情况相当严峻
+Dialogue: 0,0:10:27.37,0:10:28.18,Default,,0,0,0,,{\blur3}该死
+Dialogue: 0,0:10:33.63,0:10:35.09,Default,,0,0,0,,{\blur3}这边没解决之前
+Dialogue: 0,0:10:35.62,0:10:37.35,Default,,0,0,0,,{\blur3}你们先在里面玩会儿吧
+Dialogue: 0,0:10:41.30,0:10:42.20,Default,,0,0,0,,{\blur3}要干嘛
+Dialogue: 0,0:11:09.04,0:11:11.70,Default,,0,0,0,,{\blur3}大伟 美罗 一表
+Dialogue: 0,0:11:13.03,0:11:14.51,Default,,0,0,0,,{\blur3}大家都去哪儿了?
+Dialogue: 0,0:11:15.66,0:11:17.28,Default,,0,0,0,,{\blur3}这到底是什么地方啊
+Dialogue: 0,0:11:17.52,0:11:19.11,Default,,0,0,0,,{\blur3}一表 一表
+Dialogue: 0,0:11:20.76,0:11:24.68,Default,,0,0,0,,{\blur3}之后我们被诸葛泽的攻击波及到
+Dialogue: 0,0:11:25.93,0:11:27.80,Default,,0,0,0,,{\blur3}一表哥就和诸葛
+Dialogue: 0,0:11:28.34,0:11:29.28,Default,,0,0,0,,{\blur3}一表
+Dialogue: 0,0:11:29.69,0:11:31.05,Default,,0,0,0,,{\blur3}一表他没事吧
+Dialogue: 0,0:11:31.39,0:11:32.33,Default,,0,0,0,,{\blur3}我也不清楚
+Dialogue: 0,0:11:32.87,0:11:35.56,Default,,0,0,0,,{\blur3}我估计大家都被丢到这里来了
+Dialogue: 0,0:11:37.20,0:11:40.04,Default,,0,0,0,,{\blur3}求求你 救救一表
+Dialogue: 0,0:11:40.69,0:11:41.62,Default,,0,0,0,,{\blur3}胜雅小姐
+Dialogue: 0,0:11:42.71,0:11:43.65,Default,,0,0,0,,{\blur3}借力
+Dialogue: 0,0:11:44.37,0:11:45.30,Default,,0,0,0,,{\blur3}神兽獬豸
+Dialogue: 0,0:11:51.08,0:11:53.01,Default,,0,0,0,,{\blur3}这水有治愈之力
+Dialogue: 0,0:11:53.67,0:11:55.24,Default,,0,0,0,,{\blur3}多少能撑一会儿吧
+Dialogue: 0,0:11:56.02,0:11:57.55,Default,,0,0,0,,{\blur3}这是你的借力吗
+Dialogue: 0,0:11:58.72,0:12:02.29,Default,,0,0,0,,{\blur3}我本打算在完全掌握它之前暂时保密的
+Dialogue: 0,0:12:04.75,0:12:06.18,Default,,0,0,0,,{\blur3}大概能撑多久
+Dialogue: 0,0:12:06.71,0:12:09.42,Default,,0,0,0,,{\blur3}老实说 我也无法准确估计
+Dialogue: 0,0:12:10.26,0:12:13.61,Default,,0,0,0,,{\blur3}咱们得快点找到毛利离开这里
+Dialogue: 0,0:12:14.06,0:12:15.08,Default,,0,0,0,,{\blur3}说的也是
+Dialogue: 0,0:12:15.52,0:12:18.16,Default,,0,0,0,,{\blur3}既然大家都被丢到这里来了 那么当然
+Dialogue: 0,0:12:18.26,0:12:20.11,Default,,0,0,0,,{\blur3}他也一样 对吧
+Dialogue: 0,0:12:23.34,0:12:28.47,Default,,0,0,0,,{\blur3}中府 血海 上环 云门
+Dialogue: 0,0:12:30.06,0:12:31.70,Default,,0,0,0,,{\blur3}这样应该能起到止血效果
+Dialogue: 0,0:12:33.00,0:12:35.92,Default,,0,0,0,,{\blur3}一表 队里的其他人还有你
+Dialogue: 0,0:12:35.92,0:12:38.02,Default,,0,0,0,,{\blur3}大家都是被诸葛泽伤成这样的吗
+Dialogue: 0,0:12:38.27,0:12:39.50,Default,,0,0,0,,{\blur3}他这个人很危险
+Dialogue: 0,0:12:40.14,0:12:41.81,Default,,0,0,0,,{\blur3}一表一直在提防他
+Dialogue: 0,0:12:43.08,0:12:44.01,Default,,0,0,0,,{\blur3}还有你
+Dialogue: 0,0:12:44.99,0:12:45.83,Default,,0,0,0,,{\blur3}我
+Dialogue: 0,0:12:45.87,0:12:49.23,Default,,0,0,0,,{\blur3}他希望你能强大起来 强大到可以打败诸葛泽
+Dialogue: 0,0:12:49.98,0:12:52.65,Default,,0,0,0,,{\blur3}非常好 但这还不够
+Dialogue: 0,0:12:53.14,0:12:55.22,Default,,0,0,0,,{\blur3}你还有更广阔的发展空间
+Dialogue: 0,0:12:56.55,0:12:59.03,Default,,0,0,0,,{\blur3}不是说好要保密的吗
+Dialogue: 0,0:12:59.58,0:13:00.42,Default,,0,0,0,,{\blur3}一表
+Dialogue: 0,0:13:01.53,0:13:02.39,Default,,0,0,0,,{\blur3}你还好吗?
+Dialogue: 0,0:13:07.70,0:13:08.56,Default,,0,0,0,,{\blur3}那东西呢?
+Dialogue: 0,0:13:10.86,0:13:12.52,Default,,0,0,0,,{\blur3}虽然我也不知道这东西到底是什么
+Dialogue: 0,0:13:12.52,0:13:15.35,Default,,0,0,0,,{\blur3}又是为何会在我的体内
+Dialogue: 0,0:13:16.15,0:13:18.34,Default,,0,0,0,,{\blur3}但它让我感觉到一股异常强大的力量
+Dialogue: 0,0:13:19.49,0:13:20.66,Default,,0,0,0,,{\blur3}我把它交给你了
+Dialogue: 0,0:13:21.51,0:13:23.17,Default,,0,0,0,,{\blur3}可这是你的
+Dialogue: 0,0:13:23.83,0:13:25.90,Default,,0,0,0,,{\blur3}绝对不能让它落到诸葛泽手中
+Dialogue: 0,0:13:26.84,0:13:28.67,Default,,0,0,0,,{\blur3}一旦让他得到了这股力量
+Dialogue: 0,0:13:29.20,0:13:30.95,Default,,0,0,0,,{\blur3}肯定会出大事的
+Dialogue: 0,0:13:37.25,0:13:38.33,Default,,0,0,0,,{\blur3}紧急速报
+Dialogue: 0,0:13:38.78,0:13:41.79,Default,,0,0,0,,{\blur3}联合参谋本部刚刚公布一则消息
+Dialogue: 0,0:13:41.79,0:13:44.12,Default,,0,0,0,,{\blur3}有数个不明飞行物体正向首尔市内逼近
+Dialogue: 0,0:13:44.56,0:13:47.86,Default,,0,0,0,,{\blur3}约在40分钟后抵达首尔
+Dialogue: 0,0:13:48.20,0:13:51.72,Default,,0,0,0,,{\blur3}请仍在室外的民众迅速到牢固的建筑物内避难
+Dialogue: 0,0:13:51.72,0:13:53.38,Default,,0,0,0,,{\blur3}这么多人要怎么避难啊
+Dialogue: 0,0:13:53.85,0:13:55.76,Default,,0,0,0,,{\blur3}各个避难所早就人满为患了
+Dialogue: 0,0:13:56.05,0:13:57.63,Default,,0,0,0,,{\blur3}再逃能逃到哪儿去呀
+Dialogue: 0,0:14:22.37,0:14:23.42,Default,,0,0,0,,{\blur3}8亿
+Dialogue: 0,0:14:23.87,0:14:25.05,Default,,0,0,0,,{\blur3}8亿1000万
+Dialogue: 0,0:14:25.53,0:14:27.18,Default,,0,0,0,,{\blur3}8亿2000万
+Dialogue: 0,0:14:28.63,0:14:30.32,Default,,0,0,0,,{\blur3}老老实实认输不好吗?
+Dialogue: 0,0:14:32.70,0:14:35.39,Default,,0,0,0,,{\blur3}就凭你们还想与神为敌
+Dialogue: 0,0:14:36.04,0:14:37.70,Default,,0,0,0,,{\blur3}一亿年以后再说吧
+Dialogue: 0,0:14:48.14,0:14:49.41,Default,,0,0,0,,{\blur3}钥匙在哪儿?
+Dialogue: 0,0:14:51.03,0:14:54.30,Default,,0,0,0,,{\blur3}你在说什么 我完全听不懂啊
+Dialogue: 0,0:14:54.73,0:14:57.09,Default,,0,0,0,,{\blur3}倒是你 问别人问题
+Dialogue: 0,0:14:57.40,0:14:59.34,Default,,0,0,0,,{\blur3}是不是该摆出应有的态度来
+Dialogue: 0,0:14:59.70,0:15:02.51,Default,,0,0,0,,{\blur3}我再问一遍 钥匙在哪儿
+Dialogue: 0,0:15:03.28,0:15:04.42,Default,,0,0,0,,{\blur3}他口中的钥匙
+Dialogue: 0,0:15:04.59,0:15:06.85,Default,,0,0,0,,{\blur3}难道是刚刚从一表体内飞出来的那个
+Dialogue: 0,0:15:07.35,0:15:08.42,Default,,0,0,0,,{\blur3}要是让他找到人
+Dialogue: 0,0:15:08.57,0:15:10.79,Default,,0,0,0,,{\blur3}这回绝对会被他杀了的
+Dialogue: 0,0:15:13.68,0:15:14.89,Default,,0,0,0,,{\blur3}我改主意了
+Dialogue: 0,0:15:16.24,0:15:17.13,Default,,0,0,0,,{\blur3}去死吧
+Dialogue: 0,0:15:22.48,0:15:23.85,Default,,0,0,0,,{\blur3}崩天画戟
+Dialogue: 0,0:15:25.68,0:15:26.56,Default,,0,0,0,,{\blur3}借力
+Dialogue: 0,0:15:27.22,0:15:28.02,Default,,0,0,0,,{\blur3}神兽獬豸
+Dialogue: 0,0:15:37.94,0:15:39.66,Default,,0,0,0,,{\blur3}大伟 美罗
+Dialogue: 0,0:15:40.26,0:15:41.36,Default,,0,0,0,,{\blur3}你们在哪儿?
+Dialogue: 0,0:15:44.92,0:15:46.16,Default,,0,0,0,,{\blur3}大伟 美罗
+Dialogue: 0,0:15:47.98,0:15:49.31,Default,,0,0,0,,{\blur3}钥匙在哪儿?
+Dialogue: 0,0:15:51.28,0:15:52.58,Default,,0,0,0,,{\blur3}在你身上对吧
+Dialogue: 0,0:15:53.32,0:15:55.04,Default,,0,0,0,,{\blur3}你把它藏起来我也知道
+Dialogue: 0,0:15:55.54,0:15:57.03,Default,,0,0,0,,{\blur3}快跑 毛利
+Dialogue: 0,0:15:58.24,0:15:59.21,Default,,0,0,0,,{\blur3}这家伙
+Dialogue: 0,0:15:59.71,0:16:01.01,Default,,0,0,0,,{\blur3}疯了
+Dialogue: 0,0:16:01.81,0:16:02.90,Default,,0,0,0,,{\blur3}为什么?
+Dialogue: 0,0:16:03.88,0:16:05.93,Default,,0,0,0,,{\blur3}为什么要做这种事?
+Dialogue: 0,0:16:06.20,0:16:08.64,Default,,0,0,0,,{\blur3}大伟美罗还有一表全被你
+Dialogue: 0,0:16:08.72,0:16:10.11,Default,,0,0,0,,{\blur3}一群丧家之犬
+Dialogue: 0,0:16:10.41,0:16:12.01,Default,,0,0,0,,{\blur3}我想怎么做都可以
+Dialogue: 0,0:16:12.38,0:16:13.67,Default,,0,0,0,,{\blur3}我是胜者
+Dialogue: 0,0:16:13.95,0:16:16.69,Default,,0,0,0,,{\blur3}成为完完全全的胜者
+Dialogue: 0,0:16:17.40,0:16:21.31,Default,,0,0,0,,{\blur3}没错 我要得到这所有的一切
+Dialogue: 0,0:16:22.02,0:16:23.53,Default,,0,0,0,,{\blur3}把钥匙给我
+Dialogue: 0,0:16:40.14,0:16:42.17,Default,,0,0,0,,{\blur3}接纳神吧
+Dialogue: 0,0:16:43.11,0:16:44.68,Default,,0,0,0,,{\blur3}不
+Dialogue: 0,0:16:53.91,0:16:55.32,Default,,0,0,0,,{\blur3}力气怎么这么大啊
+Dialogue: 0,0:16:59.39,0:17:01.85,Default,,0,0,0,,{\blur3}我 撑不住了
+Dialogue: 0,0:17:08.03,0:17:11.00,Default,,0,0,0,,{\blur3}今在 昔在
+Dialogue: 0,0:17:11.40,0:17:13.39,Default,,0,0,0,,{\blur3}那注定要来的
+Dialogue: 0,0:17:13.83,0:17:16.94,Default,,0,0,0,,{\blur3}以后永在的全能者在此降临
+Dialogue: 0,0:17:17.38,0:17:19.98,Default,,0,0,0,,{\blur3}世间自此迎来始和终
+Dialogue: 0,0:17:20.46,0:17:22.13,Default,,0,0,0,,{\blur3}右手张翼
+Dialogue: 0,0:17:22.59,0:17:24.08,Default,,0,0,0,,{\blur3}缩地千里
+Dialogue: 0,0:17:24.54,0:17:27.20,Default,,0,0,0,,{\blur3}百万无垢之灵
+Dialogue: 0,0:17:39.98,0:17:41.12,Default,,0,0,0,,{\blur3}可恶
+Dialogue: 0,0:17:45.74,0:17:48.01,Default,,0,0,0,,{\blur3}把钥匙给我
+Dialogue: 0,0:17:53.94,0:17:55.71,Default,,0,0,0,,{\blur3}陈毛利独创
+Dialogue: 0,0:17:56.44,0:17:57.94,Default,,0,0,0,,{\blur3}双龙脚
+Dialogue: 0,0:18:03.16,0:18:04.85,Default,,0,0,0,,{\blur3}把钥匙给我
+Dialogue: 0,0:18:10.94,0:18:12.62,Default,,0,0,0,,{\blur3}这是什么地方
+Dialogue: 0,0:18:15.94,0:18:17.37,Default,,0,0,0,,{\blur3}竟然是转移
+Dialogue: 0,0:18:17.89,0:18:18.86,Default,,0,0,0,,{\blur3}莫非
+Dialogue: 0,0:18:19.25,0:18:21.21,Default,,0,0,0,,{\blur3}是将所有首尔的市民都
+Dialogue: 0,0:18:21.40,0:18:22.79,Default,,0,0,0,,{\blur3}能做到这种事的
+Dialogue: 0,0:18:24.07,0:18:25.71,Default,,0,0,0,,{\blur3}载山那个老家伙
+Dialogue: 0,0:18:27.55,0:18:28.45,Default,,0,0,0,,{\blur3}看那里
+Dialogue: 0,0:18:37.46,0:18:40.75,Default,,0,0,0,,{\blur3}竟然一口气将首尔市民全部转移走了
+Dialogue: 0,0:18:41.19,0:18:42.76,Default,,0,0,0,,{\blur3}真乃奇人也
+Dialogue: 0,0:18:43.14,0:18:45.32,Default,,0,0,0,,{\blur3}六人众 全载山
+Dialogue: 0,0:18:46.10,0:18:48.01,Default,,0,0,0,,{\blur3}左手炼金术
+Dialogue: 0,0:18:48.49,0:18:50.85,Default,,0,0,0,,{\blur3}以真理之名铸造
+Dialogue: 0,0:18:51.46,0:18:54.46,Default,,0,0,0,,{\blur3}刺穿神的圣楔
+Dialogue: 0,0:18:55.24,0:18:56.12,Default,,0,0,0,,{\blur3}什么
+Dialogue: 0,0:19:09.94,0:19:11.94,Default,,0,0,0,,{\blur3}我以全载山之名召唤
+Dialogue: 0,0:19:11.94,0:19:14.00,Default,,0,0,0,,{\blur3}群星啊 降临吧
+Dialogue: 0,0:19:18.01,0:19:19.52,Default,,0,0,0,,{\blur3}住 住手
+Dialogue: 0,0:19:28.47,0:19:29.94,Default,,0,0,0,,{\blur3}我要为我孙儿报仇
+Dialogue: 0,0:19:30.37,0:19:32.13,Default,,0,0,0,,{\blur3}死 也要拖着你一起
+Dialogue: 0,0:20:13.42,0:20:17.14,Default,,0,0,0,,{\blur3}究竟是怎么一回事啊
+Dialogue: 0,0:20:19.93,0:20:21.65,Default,,0,0,0,,{\blur3}那 那是什么?
+Dialogue: 0,0:20:36.33,0:20:38.68,Default,,0,0,0,,{\blur3}钥匙 在哪儿?
+Dialogue: 0,0:20:41.01,0:20:41.77,Default,,0,0,0,,{\blur3}毛利
+Dialogue: 0,0:20:48.76,0:20:50.52,Default,,0,0,0,,{\blur3}是时候结束了
+Dialogue: 0,0:20:52.01,0:20:52.74,Default,,0,0,0,,{\blur3}毛利
+Dialogue: 0,0:20:57.28,0:20:58.48,Default,,0,0,0,,{\blur3}该死
+Dialogue: 0,0:20:59.18,0:21:00.45,Default,,0,0,0,,{\blur3}活该
+Dialogue: 0,0:21:07.58,0:21:09.65,Default,,0,0,0,,{\blur3}费了我这么大的功夫
+Dialogue: 0,0:21:10.28,0:21:11.86,Default,,0,0,0,,{\blur3}钥匙
+Dialogue: 0,0:21:13.45,0:21:14.68,Default,,0,0,0,,{\blur3}可恶
+Dialogue: 0,0:21:15.58,0:21:18.93,Default,,0,0,0,,{\blur3}这下我可以超越神
+Dialogue: 0,0:21:19.03,0:21:21.48,Default,,0,0,0,,{\blur3}超越一切了
+Dialogue: 0,0:21:45.94,0:21:47.14,Default,,0,0,0,,{\blur3}那是什么
+Dialogue: 0,0:21:57.09,0:21:58.60,Default,,0,0,0,,{\blur3}丧家之犬
+Dialogue: 0,0:22:00.02,0:22:01.13,Default,,0,0,0,,{\blur3}都该死
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:01:37.00,0:01:38.57,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你让我不得消停
+Dialogue: 0,0:01:38.57,0:01:40.59,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我要严肃对待
+Dialogue: 0,0:01:40.59,0:01:42.42,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}因为我知道你想要我
+Dialogue: 0,0:01:42.42,0:01:44.24,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}由衷而发
+Dialogue: 0,0:01:44.42,0:01:46.22,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你让我说不出话
+Dialogue: 0,0:01:46.22,0:01:47.93,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}开口无言
+Dialogue: 0,0:01:47.97,0:01:49.82,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我努力为你保守秘密
+Dialogue: 0,0:01:49.85,0:01:51.26,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}但终究还是泄露了
+Dialogue: 0,0:01:51.35,0:01:52.97,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你极速前进 又缓慢前行
+Dialogue: 0,0:01:53.02,0:01:54.81,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你浑身冰冷 一蹶不振
+Dialogue: 0,0:01:55.64,0:01:57.02,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你引诱我现身
+Dialogue: 0,0:01:57.02,0:01:58.56,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}直到你的城墙全部倒塌
+Dialogue: 0,0:01:58.94,0:02:00.44,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}然后你就一无所有
+Dialogue: 0,0:02:00.44,0:02:03.57,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}但我不会放弃
+Dialogue: 0,0:02:03.57,0:02:05.82,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:02:12.38,0:02:13.72,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}对抗
+Dialogue: 0,0:02:18.37,0:02:20.79,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:02:33.13,0:02:35.52,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:02:35.52,0:02:37.19,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你极速前进 又缓慢前行
+Dialogue: 0,0:02:37.19,0:02:39.40,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你浑身冰冷 一蹶不振
+Dialogue: 0,0:02:39.44,0:02:40.90,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}你极速前进 又缓慢前行
+Dialogue: 0,0:02:43.27,0:02:44.69,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}然后你就一无所有
+Dialogue: 0,0:02:44.69,0:02:46.82,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}但我不会放弃
+Dialogue: 0,0:02:46.82,0:02:47.95,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}然后你就一无所有
+Dialogue: 0,0:02:47.99,0:02:50.95,OP chinese,,0,0,0,,{\blur1}{\fad(150,150)}我会与你对抗
+Dialogue: 0,0:01:37.00,0:01:38.57,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You've been keeping me busy
+Dialogue: 0,0:01:38.57,0:01:40.59,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll take it hot right now
+Dialogue: 0,0:01:40.59,0:01:42.42,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Cause I know that you want me
+Dialogue: 0,0:01:42.42,0:01:44.24,OP english,,0,0,0,,{\blur1}{\fad(150,150)}From the inside out
+Dialogue: 0,0:01:44.42,0:01:46.22,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You got me speechless
+Dialogue: 0,0:01:46.22,0:01:47.93,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Opening my mouth
+Dialogue: 0,0:01:47.97,0:01:49.82,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I was keeping your secret
+Dialogue: 0,0:01:49.85,0:01:51.26,OP english,,0,0,0,,{\blur1}{\fad(150,150)}But the word got out
+Dialogue: 0,0:01:51.35,0:01:52.97,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're fast then you're slow
+Dialogue: 0,0:01:53.02,0:01:54.81,OP english,,0,0,0,,{\blur1}{\fad(150,150)}While you're cold then you fall
+Dialogue: 0,0:01:55.64,0:01:57.02,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're luring me out now
+Dialogue: 0,0:01:57.02,0:01:58.56,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Til your walls come down
+Dialogue: 0,0:01:58.94,0:02:00.44,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Yes then you're no
+Dialogue: 0,0:02:00.44,0:02:03.57,OP english,,0,0,0,,{\blur1}{\fad(150,150)}But I'm not letting go oh-oh
+Dialogue: 0,0:02:03.57,0:02:05.82,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:02:12.38,0:02:13.72,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Contradiction
+Dialogue: 0,0:02:18.37,0:02:20.79,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:02:33.13,0:02:35.52,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:02:35.52,0:02:37.19,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're fast then you're slow
+Dialogue: 0,0:02:37.19,0:02:39.40,OP english,,0,0,0,,{\blur1}{\fad(150,150)}While you're cold then you fall
+Dialogue: 0,0:02:39.44,0:02:40.90,OP english,,0,0,0,,{\blur1}{\fad(150,150)}You're fast then you're slow
+Dialogue: 0,0:02:43.27,0:02:44.69,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Yes then you're no
+Dialogue: 0,0:02:44.69,0:02:46.82,OP english,,0,0,0,,{\blur1}{\fad(150,150)}But I'm not letting go oh-oh
+Dialogue: 0,0:02:46.82,0:02:47.95,OP english,,0,0,0,,{\blur1}{\fad(150,150)}Yes then you're no
+Dialogue: 0,0:02:47.99,0:02:50.95,OP english,,0,0,0,,{\blur1}{\fad(150,150)}I'll be your Contradiction
+Dialogue: 0,0:22:07.00,0:22:09.03,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}当我们在一起时 我们就会更强大
+Dialogue: 0,0:22:09.03,0:22:11.54,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}让我们一起高飞 让我们一起探索
+Dialogue: 0,0:22:11.54,0:22:13.90,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们知道 我们会走到最后
+Dialogue: 0,0:22:13.90,0:22:16.29,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}请相信 我们真的可以做到
+Dialogue: 0,0:22:16.92,0:22:19.46,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们并不孤单 也不必任人摆布
+Dialogue: 0,0:22:19.46,0:22:21.86,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}所以我们现在必须抓住时机
+Dialogue: 0,0:22:21.86,0:22:24.29,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}不要掩饰 也不要放弃
+Dialogue: 0,0:22:24.29,0:22:26.31,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}每一次我们都会正中目标
+Dialogue: 0,0:22:26.31,0:22:28.73,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}所以 就让我们继续前行吧
+Dialogue: 0,0:22:28.73,0:22:31.18,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们会无往不胜
+Dialogue: 0,0:22:31.18,0:22:33.81,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}分享你我的梦想
+Dialogue: 0,0:22:33.81,0:22:35.91,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们一直都在期待着希望出现
+Dialogue: 0,0:22:35.91,0:22:40.28,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}如果你伸出手来 我会给你依靠
+Dialogue: 0,0:22:40.38,0:22:44.83,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}为了你 我会不顾一切
+Dialogue: 0,0:22:45.27,0:22:47.18,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}遇到困难时
+Dialogue: 0,0:22:47.18,0:22:53.43,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们一起面对 绝不会抛下彼此
+Dialogue: 0,0:22:53.73,0:22:55.23,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们必定会战无不胜
+Dialogue: 0,0:22:55.23,0:22:58.43,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:22:58.43,0:22:59.98,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们知道 我们会取得胜利
+Dialogue: 0,0:22:59.98,0:23:03.13,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:23:03.83,0:23:08.23,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们一起高飞 我们帮助彼此走向胜利
+Dialogue: 0,0:23:08.23,0:23:09.43,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们必定会战无不胜
+Dialogue: 0,0:23:09.43,0:23:12.73,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:23:12.73,0:23:14.18,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}我们必定会战无不胜
+Dialogue: 0,0:23:14.18,0:23:17.43,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:23:17.43,0:23:18.98,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}因为我们知道 我们会取得胜利
+Dialogue: 0,0:23:18.98,0:23:23.20,ED chineses,,0,0,0,,{\blur1}{\fad(150,200)}
+Dialogue: 0,0:22:07.00,0:22:09.03,ED english,,0,0,0,,{\blur1}{\fad(150,200)}When we're together we're stronger
+Dialogue: 0,0:22:09.03,0:22:11.54,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Let's go all up high let's go discover
+Dialogue: 0,0:22:11.54,0:22:13.90,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we know we are going to make it
+Dialogue: 0,0:22:13.90,0:22:16.29,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Just believe we can do this really
+Dialogue: 0,0:22:16.92,0:22:19.46,ED english,,0,0,0,,{\blur1}{\fad(150,200)}We're not alone or even owned
+Dialogue: 0,0:22:19.46,0:22:21.86,ED english,,0,0,0,,{\blur1}{\fad(150,200)}So now we must seize this moment
+Dialogue: 0,0:22:21.86,0:22:24.29,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Never hide or never lose
+Dialogue: 0,0:22:24.29,0:22:26.31,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Every time we're right on target
+Dialogue: 0,0:22:26.31,0:22:28.73,ED english,,0,0,0,,{\blur1}{\fad(150,200)}So let's just keep going
+Dialogue: 0,0:22:28.73,0:22:31.18,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we're gonna keep on Winning
+Dialogue: 0,0:22:31.18,0:22:33.81,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Sharing dreams you and me
+Dialogue: 0,0:22:33.81,0:22:35.91,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All the hopes that we've been waiting
+Dialogue: 0,0:22:35.91,0:22:40.28,ED english,,0,0,0,,{\blur1}{\fad(150,200)}If you reach out I'll be there for you
+Dialogue: 0,0:22:40.38,0:22:44.83,ED english,,0,0,0,,{\blur1}{\fad(150,200)}There's nothing I would not do for you
+Dialogue: 0,0:22:45.27,0:22:47.18,ED english,,0,0,0,,{\blur1}{\fad(150,200)}When troubles coming in
+Dialogue: 0,0:22:47.18,0:22:53.43,ED english,,0,0,0,,{\blur1}{\fad(150,200)}We'll fight them all together not alone
+Dialogue: 0,0:22:53.73,0:22:55.23,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All we do is just Win
+Dialogue: 0,0:22:55.23,0:22:58.43,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:22:58.43,0:22:59.98,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we know that we'll Win
+Dialogue: 0,0:22:59.98,0:23:03.13,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:23:03.83,0:23:08.23,ED english,,0,0,0,,{\blur1}{\fad(150,200)}We lift us up high we help each other to Win it
+Dialogue: 0,0:23:08.23,0:23:09.43,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All we do is just Win
+Dialogue: 0,0:23:09.43,0:23:12.73,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:23:12.73,0:23:14.18,ED english,,0,0,0,,{\blur1}{\fad(150,200)}All we do is just Win
+Dialogue: 0,0:23:14.18,0:23:17.43,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:23:17.43,0:23:18.98,ED english,,0,0,0,,{\blur1}{\fad(150,200)}Cause we know that we'll Win
+Dialogue: 0,0:23:18.98,0:23:23.20,ED english,,0,0,0,,{\blur1}{\fad(150,200)}{\pos(960,1030)}La La La La La La La La
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,
+

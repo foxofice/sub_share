@@ -90,7 +90,7 @@ Subtitles DataBase 有几处需要说明的地方：
 
 需要提交权限的同学可以联系我，欢迎各字幕组和手抄大佬加入。
 
-Q群：`1003173547`
+Q群：`1003173547`（群主大号已炸，现在🐶tx的东西一点都不能用。后续会更新 IM 的新版本，等更新完毕后将正式对外开放使用）
 
 8B71A5DF03C47F647336BC78402E5F8E18E77A5242C5FCD7C811E65406B457711FB2239EC33AB27BDA8B6102B4929301
 aes_cfb_decrypt(code, sha384(user).left(32), sha384(user).right(16).reverse())

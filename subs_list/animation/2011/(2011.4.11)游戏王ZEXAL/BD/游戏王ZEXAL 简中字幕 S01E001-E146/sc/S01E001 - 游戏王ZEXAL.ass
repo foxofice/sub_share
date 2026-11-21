@@ -1,0 +1,394 @@
+﻿[Script Info]
+; This is an Advanced Sub Station Alpha v4+ script.
+; For Sub Station Alpha info and downloads,
+; go to http://www.eswat.demon.co.uk/
+; or email kotus@eswat.demon.co.uk
+; 
+; Advanced Sub Station Alpha script format developed by #Anime-Fansubs@EfNET
+; http://www.anime-fansubs.org
+; 
+; For additional info and downloads go to http://vobsub.edensrising.com/
+; or email gabest@freemail.hu
+; 
+; Note: This file was saved by Subresync.
+; 
+ScriptType: v4.00+
+Collisions: Normal
+ScaledBorderAndShadow: Yes
+PlayResX: 1280
+PlayResY: 720
+Timer: 100.0000
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,ZCOOL KuaiLe,44,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,-1,0,0,0,100,100,0,0,1,3,0,2,20,20,30,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:14.53,0:00:19.05,Default,,0000,0000,0000,,{\fnYusei Magic}((この扉を開く者は 新たなる力を得る。\N{\fnZCOOL KuaiLe}((打开这扇门的人 将获得全新的力量。
+Dialogue: 0,0:00:20.10,0:00:25.82,Default,,0000,0000,0000,,{\fnYusei Magic}しかし　その者は代償として いちばん大事なものを失う。\N{\fnZCOOL KuaiLe}但是 那人将作为代价 失去最重要的东西。
+Dialogue: 0,0:00:29.08,0:00:31.34,Default,,0000,0000,0000,,{\fnYusei Magic}（遊馬）オレのいちばん大事なもの…。\N{\fnZCOOL KuaiLe}（游马）我最重要东西…
+Dialogue: 0,0:00:38.61,0:00:39.77,Default,,0000,0000,0000,,{\fnYusei Magic}痛ぇ…。\N{\fnZCOOL KuaiLe}好痛…
+Dialogue: 0,0:00:41.68,0:00:43.40,Default,,0000,0000,0000,,{\fnYusei Magic}ハァ…　またあの夢。\N{\fnZCOOL KuaiLe}哈… 又是那个梦。
+Dialogue: 0,0:00:45.40,0:00:46.33,Default,,0000,0000,0000,,{\fnYusei Magic}ヤベエ！\N{\fnZCOOL KuaiLe}糟了！
+Dialogue: 0,0:00:46.96,0:00:47.97,Default,,0000,0000,0000,,{\fnYusei Magic}遅刻だ！\N{\fnZCOOL KuaiLe}要迟到了！
+Dialogue: 0,0:00:48.84,0:00:49.57,Default,,0000,0000,0000,,{\fnYusei Magic}遅刻　遅刻！\N{\fnZCOOL KuaiLe}迟到 迟到！
+Dialogue: 0,0:00:52.07,0:00:55.23,Default,,0000,0000,0000,,{\fnYusei Magic}（明里）デスク　３時からの配信 一面あけといてね。\N{\fnZCOOL KuaiLe}（明里）桌子 3点开始的直播 帮我空出一整面哦。
+Dialogue: 0,0:00:57.60,0:00:59.05,Default,,0000,0000,0000,,{\fnYusei Magic}いい記事が書けそうなの。\N{\fnZCOOL KuaiLe}感觉能写出好报道。
+Dialogue: 0,0:00:59.33,0:01:02.49,Default,,0000,0000,0000,,{\fnYusei Magic}明里姉ちゃん！ 起こしてくれたっていいだろ！\N{\fnZCOOL KuaiLe}明里姐！ 你就不能叫我起来吗！
+Dialogue: 0,0:01:02.68,0:01:04.96,Default,,0000,0000,0000,,{\fnYusei Magic}朝は　ニュース配信で忙しいの。\N{\fnZCOOL KuaiLe}早上 要忙新闻直播嘛。
+Dialogue: 0,0:01:05.74,0:01:07.84,Default,,0000,0000,0000,,{\fnYusei Magic}中学生になったら 自分で起きなさい。\N{\fnZCOOL KuaiLe}上了初中就自己起床。
+Dialogue: 0,0:01:08.51,0:01:09.57,Default,,0000,0000,0000,,{\fnYusei Magic}イー！\N{\fnZCOOL KuaiLe}好！
+Dialogue: 0,0:01:11.24,0:01:11.97,Default,,0000,0000,0000,,{\fnYusei Magic}いってきます。\N{\fnZCOOL KuaiLe}我出门了。
+Dialogue: 0,0:01:12.35,0:01:15.53,Default,,0000,0000,0000,,{\fnYusei Magic}（春）ああ　遊馬  朝ごはん食べたのかい？\N{\fnZCOOL KuaiLe}（春）啊 游马 早饭吃了吗？
+Dialogue: 0,0:01:15.57,0:01:17.34,Default,,0000,0000,0000,,{\fnYusei Magic}そんなのいいよ　遅刻　遅刻！\N{\fnZCOOL KuaiLe}那种事无所谓啦 迟到 迟到！
+Dialogue: 0,0:01:20.71,0:01:22.79,Default,,0000,0000,0000,,{\fnYusei Magic}なにすんだよ　ばあちゃん！\N{\fnZCOOL KuaiLe}你干嘛啊 奶奶！
+Dialogue: 0,0:01:22.86,0:01:26.07,Default,,0000,0000,0000,,{\fnYusei Magic}朝飯は　一日の元気の源。\N{\fnZCOOL KuaiLe}早饭 是一天活力的源泉。
+Dialogue: 0,0:01:26.40,0:01:27.77,Default,,0000,0000,0000,,{\fnYusei Magic}食べなきゃいかん！\N{\fnZCOOL KuaiLe}不吃可不行！
+Dialogue: 0,0:01:28.36,0:01:30.93,Default,,0000,0000,0000,,{\fnYusei Magic}わかった…　わかりました！\N{\fnZCOOL KuaiLe}知道了…我知道了！
+Dialogue: 0,0:01:38.55,0:01:39.26,Default,,0000,0000,0000,,{\fnYusei Magic}オソウジ。\N{\fnZCOOL KuaiLe}打扫。
+Dialogue: 0,0:01:39.26,0:01:40.54,Default,,0000,0000,0000,,{\fnYusei Magic}どけ～！\N{\fnZCOOL KuaiLe}让开～！
+Dialogue: 0,0:01:40.54,0:01:42.29,Default,,0000,0000,0000,,{\fnYusei Magic}オソウジ！\N{\fnZCOOL KuaiLe}打扫！
+Dialogue: 0,0:01:41.61,0:01:42.29,Default,,0000,0000,0000,,{\fnYusei Magic}悪いな。\N{\fnZCOOL KuaiLe}抱歉了。
+Dialogue: 0,0:01:42.57,0:01:43.72,Default,,0000,0000,0000,,{\fnYusei Magic}（鉄男）遊馬！\N{\fnZCOOL KuaiLe}（铁男）游马！
+Dialogue: 0,0:01:45.45,0:01:46.05,Default,,0000,0000,0000,,{\fnYusei Magic}鉄男。\N{\fnZCOOL KuaiLe}铁男。
+Dialogue: 0,0:01:46.15,0:01:47.63,Default,,0000,0000,0000,,{\fnYusei Magic}教室まで勝負だ。\N{\fnZCOOL KuaiLe}到教室一决胜负。
+Dialogue: 0,0:01:48.13,0:01:51.14,Default,,0000,0000,0000,,{\fnYusei Magic}その腹じゃ オレには勝てないぜ。\N{\fnZCOOL KuaiLe}就凭你那肚子，赢不了我的。
+Dialogue: 0,0:01:51.78,0:01:52.58,Default,,0000,0000,0000,,{\fnYusei Magic}（２人）それっ！\N{\fnZCOOL KuaiLe}（两人）嘿！
+Dialogue: 0,0:01:53.29,0:01:55.50,Default,,0000,0000,0000,,{\fnYusei Magic}かっとビングだ　オレ！\N{\fnZCOOL KuaiLe}一飞冲天吧，我！
+Dialogue: 0,0:01:58.73,0:01:59.37,Default,,0000,0000,0000,,{\fnYusei Magic}それっ！\N{\fnZCOOL KuaiLe}嘿！
+Dialogue: 0,0:01:59.12,0:02:01.72,Default,,0000,0000,0000,,{\fnYusei Magic}オソウジ！\N{\fnZCOOL KuaiLe}打扫！
+Dialogue: 0,0:02:06.66,0:02:07.38,Default,,0000,0000,0000,,{\fnYusei Magic}クッソ～！\N{\fnZCOOL KuaiLe}可恶～！
+Dialogue: 0,0:02:07.38,0:02:13.79,Default,,0000,0000,0000,,{\fnYusei Magic}オソウジ　オソウジ　オソウジ…。\N{\fnZCOOL KuaiLe}打扫 打扫 打扫…。
+Dialogue: 0,0:02:11.02,0:02:11.95,Default,,0000,0000,0000,,{\fnYusei Magic}オレのデッキ！\N{\fnZCOOL KuaiLe}我的卡组！
+Dialogue: 0,0:02:12.55,0:02:13.77,Default,,0000,0000,0000,,{\fnYusei Magic}やめろ　お前ら。\N{\fnZCOOL KuaiLe}住手，你们。
+Dialogue: 0,0:02:14.31,0:02:16.85,Default,,0000,0000,0000,,{\fnYusei Magic}ゴミ　ゴミ　ゴミ…。\N{\fnZCOOL KuaiLe}垃圾 垃圾 垃圾…。
+Dialogue: 0,0:02:14.99,0:02:16.85,Default,,0000,0000,0000,,{\fnYusei Magic}オレのデッキは　ゴミじゃねえ。\N{\fnZCOOL KuaiLe}我的卡组才不是垃圾。
+Dialogue: 0,0:02:17.14,0:02:20.08,Default,,0000,0000,0000,,{\fnYusei Magic}クズ　クズ　クズ…。\N{\fnZCOOL KuaiLe}废物 废物 废物…。
+Dialogue: 0,0:02:18.78,0:02:20.08,Default,,0000,0000,0000,,{\fnYusei Magic}クズデッキでもねえ！\N{\fnZCOOL KuaiLe}才不是什么废卡组！
+Dialogue: 0,0:02:20.63,0:02:24.66,Default,,0000,0000,0000,,{\fnYusei Magic}ヘタクソ　ヘタクソ　ヘタクソ…。\N{\fnZCOOL KuaiLe}菜鸟 菜鸟 菜鸟…。
+Dialogue: 0,0:02:22.83,0:02:25.71,Default,,0000,0000,0000,,{\fnYusei Magic}お前ら　わざとやってんだろ～！\N{\fnZCOOL KuaiLe}你们这帮家伙 是故意的吧～！
+Dialogue: 0,0:02:26.77,0:02:29.60,Default,,0000,0000,0000,,{\fnYusei Magic}ねえ　小鳥  あれ　遊馬君よね？\N{\fnZCOOL KuaiLe}呐 小鸟 那个 是游马吧？
+Dialogue: 0,0:02:30.39,0:02:31.59,Default,,0000,0000,0000,,{\fnYusei Magic}（小鳥）さ　さあ…。\N{\fnZCOOL KuaiLe}（小鸟）这 这个嘛…。
+Dialogue: 0,0:02:32.39,0:02:33.83,Default,,0000,0000,0000,,{\fnYusei Magic}《ホント　バカなんだから》\N{\fnZCOOL KuaiLe}《真是的 明明就是个笨蛋》
+Dialogue: 0,0:02:43.09,0:02:44.09,Default,,0000,0000,0000,,{\fnYusei Magic}（鉄男）ムリムリ！\N{\fnZCOOL KuaiLe}（铁男）不可能不可能！
+Dialogue: 0,0:02:44.68,0:02:47.39,Default,,0000,0000,0000,,{\fnYusei Magic}とび箱２０段なんて ムリに決まってんだろ。\N{\fnZCOOL KuaiLe}跳箱20段什么的 肯定不可能啊。
+Dialogue: 0,0:02:47.62,0:02:49.91,Default,,0000,0000,0000,,{\fnYusei Magic}それぐらいの高さは　飛んでやる。\N{\fnZCOOL KuaiLe}那种高度 我就飞给你看。
+Dialogue: 0,0:02:50.17,0:02:54.22,Default,,0000,0000,0000,,{\fnYusei Magic}かっとビングだ　オレ！\N{\fnZCOOL KuaiLe}一飞冲天啊 我！
+Dialogue: 0,0:02:57.18,0:02:58.41,Default,,0000,0000,0000,,{\fnYusei Magic}大丈夫？　遊馬。\N{\fnZCOOL KuaiLe}没事吧？ 游马。
+Dialogue: 0,0:03:00.00,0:03:01.26,Default,,0000,0000,0000,,{\fnYusei Magic}かっとビングだぜ…。\N{\fnZCOOL KuaiLe}一飞冲天啦…。
+Dialogue: 0,0:03:00.00,0:03:02.54,Default,,0000,0000,0000,,{\fnYusei Magic}アハハハ　バッカじゃねえの！\N{\fnZCOOL KuaiLe}啊哈哈哈哈 蠢死了吧！
+Dialogue: 0,0:03:05.62,0:03:06.57,Default,,0000,0000,0000,,{\fnYusei Magic}頑張れ！\N{\fnZCOOL KuaiLe}加油！
+Dialogue: 0,0:03:07.07,0:03:09.67,Default,,0000,0000,0000,,{\fnYusei Magic}ムリムリ　できるわけねえだろ。\N{\fnZCOOL KuaiLe}不可能不可能 怎么可能做得到啊。
+Dialogue: 0,0:03:10.03,0:03:11.85,Default,,0000,0000,0000,,{\fnYusei Magic}《こんな距離は息つぎなしで…》\N{\fnZCOOL KuaiLe}《这种距离连气都不用换…》
+Dialogue: 0,0:03:12.35,0:03:14.42,Default,,0000,0000,0000,,{\fnYusei Magic}かっとビングだ…。\N{\fnZCOOL KuaiLe}一飞冲天…。
+Dialogue: 0,0:03:14.73,0:03:15.28,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬！\N{\fnZCOOL KuaiLe}游马！
+Dialogue: 0,0:03:23.82,0:03:26.45,Default,,0000,0000,0000,,{\fnYusei Magic}もう～　本当にバカなんだから！\N{\fnZCOOL KuaiLe}真是的～ 真的是个笨蛋！
+Dialogue: 0,0:03:27.71,0:03:30.78,Default,,0000,0000,0000,,{\fnYusei Magic}チャレンジだよ。　かっとび   かっとビング！\N{\fnZCOOL KuaiLe}这是挑战哦。 一飞 一飞冲天！
+Dialogue: 0,0:03:31.45,0:03:33.96,Default,,0000,0000,0000,,{\fnYusei Magic}って言っても  どれもできてないじゃない。\N{\fnZCOOL KuaiLe}话虽这么说，可你哪样都没做到啊。
+Dialogue: 0,0:03:34.34,0:03:36.19,Default,,0000,0000,0000,,{\fnYusei Magic}わかってないなぁ　小鳥は。\N{\fnZCOOL KuaiLe}小鸟你根本不懂啊。
+Dialogue: 0,0:03:36.76,0:03:38.73,Default,,0000,0000,0000,,{\fnYusei Magic}大事なのは　かっとび続けること。\N{\fnZCOOL KuaiLe}重要的是持续一飞冲天。
+Dialogue: 0,0:03:39.26,0:03:42.34,Default,,0000,0000,0000,,{\fnYusei Magic}諦めなきゃ　いつか  たどりつけるかもしれない。\N{\fnZCOOL KuaiLe}只要不放弃，总有一天或许就能到达。
+Dialogue: 0,0:03:43.46,0:03:47.12,Default,,0000,0000,0000,,{\fnYusei Magic}なんつったって  オレには　この鍵があるんだからさ。\N{\fnZCOOL KuaiLe}不管怎么说，我可有这把钥匙呢。
+Dialogue: 0,0:03:47.85,0:03:51.55,Default,,0000,0000,0000,,{\fnYusei Magic}（小鳥）それって　冒険家だった お父さんと お母さんの 形見なんでしょ？\N{\fnZCOOL KuaiLe}（小鸟）那不是说，是当过冒险家的爸爸和妈妈的遗物吗？
+Dialogue: 0,0:03:51.91,0:03:56.24,Default,,0000,0000,0000,,{\fnYusei Magic}ああ！　この鍵は  いろんな可能性の扉を開けられんだ！\N{\fnZCOOL KuaiLe}啊啊！这把钥匙能打开各种可能性的门！
+Dialogue: 0,0:03:56.64,0:03:57.69,Default,,0000,0000,0000,,{\fnYusei Magic}へぇ～。\N{\fnZCOOL KuaiLe}哦～。
+Dialogue: 0,0:03:58.04,0:03:59.67,Default,,0000,0000,0000,,{\fnYusei Magic}ホントに　そんな力があるの？\N{\fnZCOOL KuaiLe}真的有那种力量吗？
+Dialogue: 0,0:04:00.21,0:04:00.60,Default,,0000,0000,0000,,{\fnYusei Magic}ない！\N{\fnZCOOL KuaiLe}没有！
+Dialogue: 0,0:04:01.85,0:04:02.65,Default,,0000,0000,0000,,{\fnYusei Magic}ないの！？\N{\fnZCOOL KuaiLe}没有吗！？
+Dialogue: 0,0:04:03.55,0:04:06.85,Default,,0000,0000,0000,,{\fnYusei Magic}でも　この鍵を持ってると かっとべる気がするんだ！\N{\fnZCOOL KuaiLe}但是，拿着这把钥匙就感觉能一飞冲天！
+Dialogue: 0,0:04:07.40,0:04:08.84,Default,,0000,0000,0000,,{\fnYusei Magic}くぅ～！\N{\fnZCOOL KuaiLe}唔～！
+Dialogue: 0,0:04:09.34,0:04:11.00,Default,,0000,0000,0000,,{\fnYusei Magic}かっとビングだぜ！\N{\fnZCOOL KuaiLe}就是一飞冲天啊！
+Dialogue: 0,0:04:15.63,0:04:18.55,Default,,0000,0000,0000,,{\fnYusei Magic}《そんなオレのいちばんの かっとビングは…》\N{\fnZCOOL KuaiLe}《而我最棒的一飞冲天是……》
+Dialogue: 0,0:04:21.13,0:04:21.76,Default,,0000,0000,0000,,{\fnYusei Magic}きたぜ！\N{\fnZCOOL KuaiLe}来了！
+Dialogue: 0,0:04:21.96,0:04:23.76,Default,,0000,0000,0000,,{\fnYusei Magic}おお！　やってる　やってる！\N{\fnZCOOL KuaiLe}哦哦！在玩呢在玩呢！
+Dialogue: 0,0:04:24.29,0:04:24.85,Default,,0000,0000,0000,,{\fnYusei Magic}それ！\N{\fnZCOOL KuaiLe}就是那个！
+Dialogue: 0,0:04:27.98,0:04:29.64,Default,,0000,0000,0000,,{\fnYusei Magic}Ｄゲイザー　セット！\N{\fnZCOOL KuaiLe}D视镜，设置！
+Dialogue: 0,0:04:47.03,0:04:50.19,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　デュエルで世界チャンピオンになるんだ！\N{\fnZCOOL KuaiLe}我要在决斗中成为世界冠军！
+Dialogue: 0,0:06:30.01,0:06:31.69,Default,,0000,0000,0000,,{\fnYusei Magic}さて　今日は誰と…。\N{\fnZCOOL KuaiLe}那么 今天要跟谁……
+Dialogue: 0,0:06:31.69,0:06:33.13,Default,,0000,0000,0000,,{\fnYusei Magic}連敗記録に挑むの？\N{\fnZCOOL KuaiLe}来挑战连败纪录呢？
+Dialogue: 0,0:06:33.70,0:06:36.56,Default,,0000,0000,0000,,{\fnYusei Magic}うわっ！　テンション下がるな。\N{\fnZCOOL KuaiLe}哇！ 真让人提不起劲啊。
+Dialogue: 0,0:06:37.12,0:06:40.00,Default,,0000,0000,0000,,{\fnYusei Magic}かっとび続ければ  いつか連敗記録だって…。\N{\fnZCOOL KuaiLe}只要一直冲下去 总有一天连败纪录也……
+Dialogue: 0,0:06:40.35,0:06:41.55,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬　あれ！\N{\fnZCOOL KuaiLe}游马 你看！
+Dialogue: 0,0:06:43.58,0:06:44.21,Default,,0000,0000,0000,,{\fnYusei Magic}鉄男だ！\N{\fnZCOOL KuaiLe}是铁男！
+Dialogue: 0,0:06:46.85,0:06:48.99,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬　鉄男君の相手って…。\N{\fnZCOOL KuaiLe}游马 铁男君的对手是……
+Dialogue: 0,0:06:49.38,0:06:49.74,Default,,0000,0000,0000,,{\fnYusei Magic}あっ！\N{\fnZCOOL KuaiLe}啊！
+Dialogue: 0,0:06:50.58,0:06:51.55,Default,,0000,0000,0000,,{\fnYusei Magic}シャーク！\N{\fnZCOOL KuaiLe}鲨鱼！
+Dialogue: 0,0:06:52.22,0:06:53.32,Default,,0000,0000,0000,,{\fnYusei Magic}（シャーク）エクシーズ召喚！\N{\fnZCOOL KuaiLe}（鲨鱼）超量召唤！
+Dialogue: 0,0:06:54.12,0:06:57.83,Default,,0000,0000,0000,,{\fnYusei Magic}同じレベルのモンスターが  ２体以上フィールドに揃ったとき→\N{\fnZCOOL KuaiLe}当相同等级的怪兽有2只以上在场上集齐时{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:06:58.53,0:07:02.37,Default,,0000,0000,0000,,{\fnYusei Magic}そのモンスターを素材として  モンスターエクシーズを特殊召喚する！\N{\fnZCOOL KuaiLe}以那些怪兽为素材 将怪兽超量特殊召唤！
+Dialogue: 0,0:07:04.09,0:07:07.99,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　レベル３のスカル・クラーケンと  ビッグ・ジョーズをオーバーレイ！\N{\fnZCOOL KuaiLe}我将等级3的骷髅章鱼和巨齿鲨叠放！
+Dialogue: 0,0:07:10.63,0:07:11.97,Default,,0000,0000,0000,,{\fnYusei Magic}エクシーズ召喚！\N{\fnZCOOL KuaiLe}超量召唤！
+Dialogue: 0,0:07:14.15,0:07:17.59,Default,,0000,0000,0000,,{\fnYusei Magic}こい！　潜航母艦　エアロ・シャーク！\N{\fnZCOOL KuaiLe}出来吧！ 潜航母舰 航空鲨！
+Dialogue: 0,0:07:22.05,0:07:23.08,Default,,0000,0000,0000,,{\fnYusei Magic}エクシーズ召喚？\N{\fnZCOOL KuaiLe}超量召唤？
+Dialogue: 0,0:07:23.45,0:07:23.98,Default,,0000,0000,0000,,{\fnYusei Magic}ああ！\N{\fnZCOOL KuaiLe}嗯！
+Dialogue: 0,0:07:24.61,0:07:26.62,Default,,0000,0000,0000,,{\fnYusei Magic}エクシーズ召喚　最大の特徴は→\N{\fnZCOOL KuaiLe}超量召唤最大的特征就是{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:07:27.12,0:07:29.33,Default,,0000,0000,0000,,{\fnYusei Magic}素材となったモンスターは 墓地へ行かず→\N{\fnZCOOL KuaiLe}作为素材的怪兽不会送去墓地{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:07:29.65,0:07:33.31,Default,,0000,0000,0000,,{\fnYusei Magic}オーバーレイユニットとなって  モンスターエクシーズをサポートするんだ。\N{\fnZCOOL KuaiLe}而是变成叠放单位 来支援怪兽超量。
+Dialogue: 0,0:07:34.78,0:07:37.19,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　１枚もモンスターエクシーズを  持ってないけど→\N{\fnZCOOL KuaiLe}我啊，一张超量怪兽都没有{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:07:37.54,0:07:39.26,Default,,0000,0000,0000,,{\fnYusei Magic}とにかく　すごいんだぜ！\N{\fnZCOOL KuaiLe}总之就是超厉害的！
+Dialogue: 0,0:07:39.93,0:07:42.72,Default,,0000,0000,0000,,{\fnYusei Magic}いけ　エアロ・シャーク！　ダイレクトアタック！\N{\fnZCOOL KuaiLe}上吧，空气鲨！直接攻击！
+Dialogue: 0,0:07:55.08,0:07:56.58,Default,,0000,0000,0000,,{\fnYusei Magic}鉄男…　あっ！\N{\fnZCOOL KuaiLe}铁男……啊！
+Dialogue: 0,0:07:57.31,0:08:00.47,Default,,0000,0000,0000,,{\fnYusei Magic}フッ　約束どおり　コイツはいただくぜ。\N{\fnZCOOL KuaiLe}哼，按照约定，这家伙我就收下了。
+Dialogue: 0,0:08:01.08,0:08:02.77,Default,,0000,0000,0000,,{\fnYusei Magic}鉄男のデッキをどうするつもりだ？\N{\fnZCOOL KuaiLe}你打算把铁男的卡组怎么样？
+Dialogue: 0,0:08:03.28,0:08:04.85,Default,,0000,0000,0000,,{\fnYusei Magic}ん？　誰だ　お前。\N{\fnZCOOL KuaiLe}嗯？你是谁啊。
+Dialogue: 0,0:08:05.27,0:08:08.28,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　九十九遊馬。　コイツのクラスメートだ。\N{\fnZCOOL KuaiLe}我是九十九游马。这家伙的同学。
+Dialogue: 0,0:08:08.77,0:08:11.83,Default,,0000,0000,0000,,{\fnYusei Magic}お前　このお方が誰か 知ってるんだろうな。\N{\fnZCOOL KuaiLe}你，应该知道这位大人是谁吧。
+Dialogue: 0,0:08:12.33,0:08:13.83,Default,,0000,0000,0000,,{\fnYusei Magic}ああ　知ってるさ。\N{\fnZCOOL KuaiLe}啊，当然知道。
+Dialogue: 0,0:08:14.29,0:08:16.84,Default,,0000,0000,0000,,{\fnYusei Magic}この学校一の札付き　シャーク。\N{\fnZCOOL KuaiLe}这学校头号的问题人物，鲨鱼。
+Dialogue: 0,0:08:17.75,0:08:18.66,Default,,0000,0000,0000,,{\fnYusei Magic}言ってくれるな。\N{\fnZCOOL KuaiLe}真敢说啊。
+Dialogue: 0,0:08:19.30,0:08:21.92,Default,,0000,0000,0000,,{\fnYusei Magic}だがこれは正当な報酬だぜ。\N{\fnZCOOL KuaiLe}但这是正当的报酬。
+Dialogue: 0,0:08:22.20,0:08:22.72,Default,,0000,0000,0000,,{\fnYusei Magic}何？\N{\fnZCOOL KuaiLe}什么？
+Dialogue: 0,0:08:23.13,0:08:23.90,Default,,0000,0000,0000,,{\fnYusei Magic}今のデュエル。\N{\fnZCOOL KuaiLe}刚才的决斗。
+Dialogue: 0,0:08:24.32,0:08:26.15,Default,,0000,0000,0000,,{\fnYusei Magic}オレたちは　互いのデッキをかけた。\N{\fnZCOOL KuaiLe}我们赌上了彼此的卡组。
+Dialogue: 0,0:08:27.16,0:08:28.31,Default,,0000,0000,0000,,{\fnYusei Magic}何でそんなことを。\N{\fnZCOOL KuaiLe}为什么要做那种事。
+Dialogue: 0,0:08:29.04,0:08:34.12,Default,,0000,0000,0000,,{\fnYusei Magic}コイツらに　オレはデュエリストを  名乗る腕じゃないって  因縁つけられて。\N{\fnZCOOL KuaiLe}这帮家伙找我麻烦，说我没资格自称决斗者。
+Dialogue: 0,0:08:34.71,0:08:38.31,Default,,0000,0000,0000,,{\fnYusei Magic}クッ　ならオレが　コイツをデュエルで倒して→\N{\fnZCOOL KuaiLe}唔，那我就用决斗打倒这家伙{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:08:38.64,0:08:40.01,Default,,0000,0000,0000,,{\fnYusei Magic}デッキを取り返してやらぁ！\N{\fnZCOOL KuaiLe}把卡组夺回来！
+Dialogue: 0,0:08:40.28,0:08:41.00,Default,,0000,0000,0000,,{\fnYusei Magic}バカ。\N{\fnZCOOL KuaiLe}笨蛋。
+Dialogue: 0,0:08:41.57,0:08:45.01,Default,,0000,0000,0000,,{\fnYusei Magic}シャークさんは全国大会に  出場してたほどの腕だぜ。\N{\fnZCOOL KuaiLe}鲨鱼先生可是参加过全国大赛的水平啊。
+Dialogue: 0,0:08:45.23,0:08:47.26,Default,,0000,0000,0000,,{\fnYusei Magic}テメエらが勝てる相手じゃねえ。\N{\fnZCOOL KuaiLe}不是你们能赢的对手。
+Dialogue: 0,0:08:47.61,0:08:48.83,Default,,0000,0000,0000,,{\fnYusei Magic}そんなのわかるかよ。\N{\fnZCOOL KuaiLe}那种事谁知道啊。
+Dialogue: 0,0:08:49.42,0:08:51.40,Default,,0000,0000,0000,,{\fnYusei Magic}オレだって  デュエルチャンピオン目指してんだ！\N{\fnZCOOL KuaiLe}我也是以决斗冠军为目标的！
+Dialogue: 0,0:08:52.16,0:08:53.50,Default,,0000,0000,0000,,{\fnYusei Magic}デュエルチャンピオンだと？\N{\fnZCOOL KuaiLe}决斗冠军？
+Dialogue: 0,0:08:54.59,0:08:58.00,Default,,0000,0000,0000,,{\fnYusei Magic}お前は　デュエルチャンピオンが  どれほどのものか知ってるのか？\N{\fnZCOOL KuaiLe}你知道决斗冠军到底有多厉害吗？
+Dialogue: 0,0:08:58.17,0:09:00.23,Default,,0000,0000,0000,,{\fnYusei Magic}それは知らないけど。\N{\fnZCOOL KuaiLe}那个我倒是不知道。
+Dialogue: 0,0:09:00.85,0:09:03.84,Default,,0000,0000,0000,,{\fnYusei Magic}なら　そんなこと  軽々しく口にすんじゃねえ！\N{\fnZCOOL KuaiLe}那就别这么轻易地把这话挂在嘴边！
+Dialogue: 0,0:09:04.44,0:09:06.77,Default,,0000,0000,0000,,{\fnYusei Magic}ゆ　夢を見るのはオレの自由だろ。\N{\fnZCOOL KuaiLe}做、做梦是我的自由吧。
+Dialogue: 0,0:09:07.27,0:09:07.97,Default,,0000,0000,0000,,{\fnYusei Magic}夢ね。\N{\fnZCOOL KuaiLe}做梦啊。
+Dialogue: 0,0:09:09.55,0:09:11.21,Default,,0000,0000,0000,,{\fnYusei Magic}このデッキを  返してほしかったら→\N{\fnZCOOL KuaiLe}想要回这副卡组的话{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:09:11.82,0:09:14.08,Default,,0000,0000,0000,,{\fnYusei Magic}お前のいちばん  大事なものを差し出しな。\N{\fnZCOOL KuaiLe}就把你最重要的东西交出来。
+Dialogue: 0,0:09:15.80,0:09:17.91,Default,,0000,0000,0000,,{\fnYusei Magic}オレのいちばん大事なもの？\N{\fnZCOOL KuaiLe}我最重要东西？
+Dialogue: 0,0:09:20.79,0:09:22.43,Default,,0000,0000,0000,,{\fnYusei Magic}な　何すんだよ！\N{\fnZCOOL KuaiLe}你、你干什么啊！
+Dialogue: 0,0:09:22.43,0:09:22.69,Default,,0000,0000,0000,,{\fnYusei Magic}フン。\N{\fnZCOOL KuaiLe}哼。
+Dialogue: 0,0:09:23.34,0:09:25.95,Default,,0000,0000,0000,,{\fnYusei Magic}どうやらこれは  相当　大事なものらしいな。\N{\fnZCOOL KuaiLe}看来这东西对你来说相当重要啊。
+Dialogue: 0,0:09:26.35,0:09:26.93,Default,,0000,0000,0000,,{\fnYusei Magic}返せ！\N{\fnZCOOL KuaiLe}还给我！
+Dialogue: 0,0:09:27.27,0:09:30.23,Default,,0000,0000,0000,,{\fnYusei Magic}オレがコイツの本当の価値を   教えてやろうか。\N{\fnZCOOL KuaiLe}要不要我来告诉你这家伙真正的价值。
+Dialogue: 0,0:09:30.68,0:09:31.13,Default,,0000,0000,0000,,{\fnYusei Magic}えっ？\N{\fnZCOOL KuaiLe}哎？
+Dialogue: 0,0:09:31.68,0:09:33.09,Default,,0000,0000,0000,,{\fnYusei Magic}大事なものってのはな\N{\fnZCOOL KuaiLe}重要的东西啊
+Dialogue: 0,0:09:33.83,0:09:35.38,Default,,0000,0000,0000,,{\fnYusei Magic}失ってみるとわかるんだよ。\N{\fnZCOOL KuaiLe}失去之后才会明白。
+Dialogue: 0,0:09:36.39,0:09:37.92,Default,,0000,0000,0000,,{\fnYusei Magic}本当の価値が。\N{\fnZCOOL KuaiLe}它真正的价值。
+Dialogue: 0,0:09:38.65,0:09:39.15,Default,,0000,0000,0000,,{\fnYusei Magic}（２人）あっ！\N{\fnZCOOL KuaiLe}（两人）啊！
+Dialogue: 0,0:09:46.90,0:09:48.28,Default,,0000,0000,0000,,{\fnYusei Magic}テメエよくも！\N{\fnZCOOL KuaiLe}你这混蛋竟敢！
+Dialogue: 0,0:09:48.67,0:09:52.51,Default,,0000,0000,0000,,{\fnYusei Magic}お前の大事なものは壊れ  今消えちまったぜ。\N{\fnZCOOL KuaiLe}你最重要的东西已经被毁掉，现在彻底消失了。
+Dialogue: 0,0:09:56.24,0:09:59.60,Default,,0000,0000,0000,,{\fnYusei Magic}残念だが　このデッキを  返すわけにはいかねえ。\N{\fnZCOOL KuaiLe}很遗憾，这副卡组我可不能还给你。
+Dialogue: 0,0:09:59.86,0:10:01.17,Default,,0000,0000,0000,,{\fnYusei Magic}汚ねえぞ　シャーク！\N{\fnZCOOL KuaiLe}太卑鄙了，鲨鱼！
+Dialogue: 0,0:10:01.17,0:10:01.86,Default,,0000,0000,0000,,{\fnYusei Magic}やめろ！\N{\fnZCOOL KuaiLe}住手！
+Dialogue: 0,0:10:01.98,0:10:03.73,Default,,0000,0000,0000,,{\fnYusei Magic}だが　チャンスはやろう。\N{\fnZCOOL KuaiLe}不过，我给你一个机会。
+Dialogue: 0,0:10:04.26,0:10:08.12,Default,,0000,0000,0000,,{\fnYusei Magic}お前が未来のデュエルチャンピオンだと  ほざくなら　デュエルで勝負だ。\N{\fnZCOOL KuaiLe}你要是敢说自己会成为未来的决斗冠军，那就用决斗来分胜负。
+Dialogue: 0,0:10:08.95,0:10:11.25,Default,,0000,0000,0000,,{\fnYusei Magic}オレに勝てば　このデッキは返してやる。\N{\fnZCOOL KuaiLe}赢了我，这副卡组就还给你。
+Dialogue: 0,0:10:11.46,0:10:15.34,Default,,0000,0000,0000,,{\fnYusei Magic}しかし　オレが勝ったら  お前のデッキをもらう。\N{\fnZCOOL KuaiLe}但是，如果我赢了，你的卡组就归我了。
+Dialogue: 0,0:10:16.14,0:10:18.58,Default,,0000,0000,0000,,{\fnYusei Magic}今度の日曜。　場所は　駅前広場。\N{\fnZCOOL KuaiLe}这周日。地点是站前广场。
+Dialogue: 0,0:10:19.37,0:10:23.25,Default,,0000,0000,0000,,{\fnYusei Magic}デッキを取り返したかったら  そこに来な　アハハハッ。\N{\fnZCOOL KuaiLe}想拿回卡组的话，就到那儿来，啊哈哈哈！
+Dialogue: 0,0:10:27.33,0:10:31.23,Default,,0000,0000,0000,,{\fnYusei Magic}((この扉を開く者が  新たなる力を得る。\N{\fnZCOOL KuaiLe}（（打开这扇门的人将获得新的力量。
+Dialogue: 0,0:10:32.06,0:10:37.15,Default,,0000,0000,0000,,{\fnYusei Magic}しかし　そのものは代償として  いちばん大事なものを失う))\N{\fnZCOOL KuaiLe}但是，那个人将作为代价，失去最重要的东西））
+Dialogue: 0,0:10:42.08,0:10:43.85,Default,,0000,0000,0000,,{\fnYusei Magic}これじゃあ　もう。\N{\fnZCOOL KuaiLe}这样的话，已经。
+Dialogue: 0,0:10:48.32,0:10:51.22,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬　今日は２０段　挑戦しないの？\N{\fnZCOOL KuaiLe}游马，今天不挑战第20段吗？
+Dialogue: 0,0:10:54.48,0:10:55.20,Default,,0000,0000,0000,,{\fnYusei Magic}今日はいい。\N{\fnZCOOL KuaiLe}今天算了。
+Dialogue: 0,0:10:56.28,0:10:56.87,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬。\N{\fnZCOOL KuaiLe}游马。
+Dialogue: 0,0:10:59.81,0:11:02.30,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬！　かっとビングしないのか？\N{\fnZCOOL KuaiLe}游马！不一飞冲天吗？
+Dialogue: 0,0:11:02.53,0:11:03.44,Default,,0000,0000,0000,,{\fnYusei Magic}また今度な…\N{\fnZCOOL KuaiLe}下次吧……
+Dialogue: 0,0:11:04.93,0:11:07.16,Default,,0000,0000,0000,,{\fnYusei Magic}ほら　元気出しなよ　遊馬。\N{\fnZCOOL KuaiLe}来，打起精神来啊，游马。
+Dialogue: 0,0:11:07.63,0:11:08.70,Default,,0000,0000,0000,,{\fnYusei Magic}わかってるって。\N{\fnZCOOL KuaiLe}我知道啦。
+Dialogue: 0,0:11:09.69,0:11:12.65,Default,,0000,0000,0000,,{\fnYusei Magic}けど　まるで腹に力が入らねえ。\N{\fnZCOOL KuaiLe}可是，完全提不起劲啊。
+Dialogue: 0,0:11:13.79,0:11:17.13,Default,,0000,0000,0000,,{\fnYusei Magic}鍵が壊れたら  こんなに　かっとべねえなんて。\N{\fnZCOOL KuaiLe}钥匙坏了之后，居然这么飞不起来。
+Dialogue: 0,0:11:17.91,0:11:18.45,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬。\N{\fnZCOOL KuaiLe}游马。
+Dialogue: 0,0:11:26.27,0:11:27.05,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬！\N{\fnZCOOL KuaiLe}游马！
+Dialogue: 0,0:11:29.45,0:11:30.17,Default,,0000,0000,0000,,{\fnYusei Magic}鉄男。\N{\fnZCOOL KuaiLe}铁男。
+Dialogue: 0,0:11:30.61,0:11:33.50,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬　明日のデュエル行くつもりか？\N{\fnZCOOL KuaiLe}游马，明天的决斗你打算去吗？
+Dialogue: 0,0:11:34.23,0:11:35.76,Default,,0000,0000,0000,,{\fnYusei Magic}ま　まあな。\N{\fnZCOOL KuaiLe}嗯，算是吧。
+Dialogue: 0,0:11:35.96,0:11:36.49,Default,,0000,0000,0000,,{\fnYusei Magic}行くな。\N{\fnZCOOL KuaiLe}别去。
+Dialogue: 0,0:11:36.71,0:11:37.03,Default,,0000,0000,0000,,{\fnYusei Magic}えっ？\N{\fnZCOOL KuaiLe}哎？
+Dialogue: 0,0:11:37.47,0:11:38.46,Default,,0000,0000,0000,,{\fnYusei Magic}お前には無理だ。\N{\fnZCOOL KuaiLe}你赢不了的。
+Dialogue: 0,0:11:38.64,0:11:39.83,Default,,0000,0000,0000,,{\fnYusei Magic}んなことわかるかよ。\N{\fnZCOOL KuaiLe}你怎么知道啊。
+Dialogue: 0,0:11:40.17,0:11:41.92,Default,,0000,0000,0000,,{\fnYusei Magic}オレに１勝もできないお前が→\N{\fnZCOOL KuaiLe}连赢我一场都做不到的你{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:11:42.15,0:11:43.82,Default,,0000,0000,0000,,{\fnYusei Magic}シャークに勝てるわけないだろ。\N{\fnZCOOL KuaiLe}怎么可能赢得了鲨鱼。
+Dialogue: 0,0:11:44.85,0:11:47.40,Default,,0000,0000,0000,,{\fnYusei Magic}それに　もともとオレのせいだ。\N{\fnZCOOL KuaiLe}而且，本来就是我害的。
+Dialogue: 0,0:11:48.02,0:11:49.25,Default,,0000,0000,0000,,{\fnYusei Magic}借りなんてつくりたくねえ。\N{\fnZCOOL KuaiLe}我不想欠人情。
+Dialogue: 0,0:11:51.86,0:11:52.91,Default,,0000,0000,0000,,{\fnYusei Magic}勘違いするなよ。\N{\fnZCOOL KuaiLe}别误会了。
+Dialogue: 0,0:11:53.44,0:11:53.86,Default,,0000,0000,0000,,{\fnYusei Magic}えっ？\N{\fnZCOOL KuaiLe}哎？
+Dialogue: 0,0:11:54.45,0:11:55.94,Default,,0000,0000,0000,,{\fnYusei Magic}オレはお前のために行くんじゃない。\N{\fnZCOOL KuaiLe}我才不是为了你才去的。
+Dialogue: 0,0:11:56.79,0:11:59.34,Default,,0000,0000,0000,,{\fnYusei Magic}目の前で  大事なものを壊されたんだ。\N{\fnZCOOL KuaiLe}重要的东西在我眼前被毁掉了。
+Dialogue: 0,0:12:00.30,0:12:01.65,Default,,0000,0000,0000,,{\fnYusei Magic}それで引き下がるなんて。\N{\fnZCOOL KuaiLe}我怎么可能就这样退缩。
+Dialogue: 0,0:12:03.14,0:12:04.90,Default,,0000,0000,0000,,{\fnYusei Magic}父ちゃん母ちゃんなら  きっと逃げない。\N{\fnZCOOL KuaiLe}换成老爸老妈的话，绝对不会逃。
+Dialogue: 0,0:12:05.85,0:12:07.86,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　オレのために戦うんだ！\N{\fnZCOOL KuaiLe}我是为了我自己而战！
+Dialogue: 0,0:12:09.57,0:12:09.88,Default,,0000,0000,0000,,{\fnYusei Magic}うん。\N{\fnZCOOL KuaiLe}嗯。
+Dialogue: 0,0:12:11.35,0:12:15.04,Default,,0000,0000,0000,,{\fnYusei Magic}うぅ…　勝手にしろ。　これを　やる。\N{\fnZCOOL KuaiLe}呜……随你便吧。这个，给你。
+Dialogue: 0,0:12:18.53,0:12:20.73,Default,,0000,0000,0000,,{\fnYusei Magic}お前…　探してくれたのか？\N{\fnZCOOL KuaiLe}你……帮我找过了吗？
+Dialogue: 0,0:12:21.19,0:12:23.53,Default,,0000,0000,0000,,{\fnYusei Magic}ヘッ！　たまたま　見つけただけだ。\N{\fnZCOOL KuaiLe}哼！只是碰巧找到的而已。
+Dialogue: 0,0:12:27.75,0:12:28.81,Default,,0000,0000,0000,,{\fnYusei Magic}う～ん…。\N{\fnZCOOL KuaiLe}嗯……
+Dialogue: 0,0:12:29.99,0:12:32.41,Default,,0000,0000,0000,,{\fnYusei Magic}このカード　どうやって使うんだろ？\N{\fnZCOOL KuaiLe}这张卡，该怎么用啊？
+Dialogue: 0,0:12:33.92,0:12:35.94,Default,,0000,0000,0000,,{\fnYusei Magic}このデッキは父ちゃんが使ってたデッキ。\N{\fnZCOOL KuaiLe}这个卡组是老爸用过的卡组。
+Dialogue: 0,0:12:36.66,0:12:39.78,Default,,0000,0000,0000,,{\fnYusei Magic}オレが　ちゃんと使いこなせれば  きっと　強いはずなんだ。\N{\fnZCOOL KuaiLe}只要我能好好运用它，一定会很强的。
+Dialogue: 0,0:12:41.24,0:12:43.18,Default,,0000,0000,0000,,{\fnYusei Magic}いってきます！  遊馬。\N{\fnZCOOL KuaiLe}我出门了！游马。
+Dialogue: 0,0:12:43.67,0:12:45.27,Default,,0000,0000,0000,,{\fnYusei Magic}な…　何？　ばあちゃん！\N{\fnZCOOL KuaiLe}什……什么？奶奶！
+Dialogue: 0,0:12:45.60,0:12:45.94,Default,,0000,0000,0000,,{\fnYusei Magic}ほれ！\N{\fnZCOOL KuaiLe}拿着！
+Dialogue: 0,0:12:47.64,0:12:48.34,Default,,0000,0000,0000,,{\fnYusei Magic}何！？　これ！\N{\fnZCOOL KuaiLe}什么！？这是！
+Dialogue: 0,0:12:48.69,0:12:51.96,Default,,0000,0000,0000,,{\fnYusei Magic}持ってけ。  腹が減っては　戦はできん。\N{\fnZCOOL KuaiLe}带上吧。饿着肚子可没法打仗。
+Dialogue: 0,0:12:58.56,0:13:00.83,Default,,0000,0000,0000,,{\fnYusei Magic}（シャーク）おじけづかなかったのは  褒めてやるが→\N{\fnZCOOL KuaiLe}（鲨鱼）没被吓破胆这一点 我倒是可以夸夸你{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:13:01.29,0:13:05.38,Default,,0000,0000,0000,,{\fnYusei Magic}シッポを巻いて　逃げりゃ  お前のデッキだけは助かったものを。\N{\fnZCOOL KuaiLe}要是你夹着尾巴逃跑的话 至少还能保住你的卡组。
+Dialogue: 0,0:13:05.64,0:13:10.00,Default,,0000,0000,0000,,{\fnYusei Magic}お前みたいなヤツから逃げるなら  デュエリストをやめたほうが　ましだぜ。\N{\fnZCOOL KuaiLe}如果要从你这种家伙面前逃跑的话 那还不如别当决斗者了。
+Dialogue: 0,0:13:10.61,0:13:11.55,Default,,0000,0000,0000,,{\fnYusei Magic}《やるっきゃねえ！》\N{\fnZCOOL KuaiLe}《只能上了！》
+Dialogue: 0,0:13:12.47,0:13:14.78,Default,,0000,0000,0000,,{\fnYusei Magic}かっとビングだ　オレ！\N{\fnZCOOL KuaiLe}一飞冲天吧 我！
+Dialogue: 0,0:13:20.33,0:13:21.93,Default,,0000,0000,0000,,{\fnYusei Magic}デュエルディスク　セット！\N{\fnZCOOL KuaiLe}决斗盘 设置！
+Dialogue: 0,0:13:25.33,0:13:26.99,Default,,0000,0000,0000,,{\fnYusei Magic}Ｄゲイザー　セット！\N{\fnZCOOL KuaiLe}D视镜 设置！
+Dialogue: 0,0:13:33.09,0:13:35.01,Default,,0000,0000,0000,,{\fnYusei Magic}デュエルターゲット　ロックオン！\N{\fnZCOOL KuaiLe}决斗目标 锁定！
+Dialogue: 0,0:13:38.48,0:13:40.48,Default,,0000,0000,0000,,{\fnYusei Magic}[ｽﾋﾟｰｶ]ＡＲヴィジョン　リンク完了。\N{\fnZCOOL KuaiLe}[喇叭]AR影像 连接完成。
+Dialogue: 0,0:13:40.69,0:13:41.35,Default,,0000,0000,0000,,{\fnYusei Magic}（２人）デュエル！\N{\fnZCOOL KuaiLe}（2人）决斗！
+Dialogue: 0,0:13:43.88,0:13:46.01,Default,,0000,0000,0000,,{\fnYusei Magic}頑張れ　遊馬！\N{\fnZCOOL KuaiLe}加油 游马！
+Dialogue: 0,0:13:46.85,0:13:49.94,Default,,0000,0000,0000,,{\fnYusei Magic}いくぜ！　オレのターン　ドロー！！\N{\fnZCOOL KuaiLe}上了！ 我的回合 抽卡！！
+Dialogue: 0,0:13:51.61,0:13:54.04,Default,,0000,0000,0000,,{\fnYusei Magic}オレの手札で  いちばん強いモンスターは…。\N{\fnZCOOL KuaiLe}我手牌里 最强的怪兽是…。
+Dialogue: 0,0:13:55.34,0:13:57.50,Default,,0000,0000,0000,,{\fnYusei Magic}ズババナイト　召喚！\N{\fnZCOOL KuaiLe}刷拉拉骑士 召唤！
+Dialogue: 0,0:14:03.52,0:14:06.82,Default,,0000,0000,0000,,{\fnYusei Magic}先攻は　最初のターン  攻撃できないんだよな。\N{\fnZCOOL KuaiLe}先攻的话 第一个回合 是不能攻击的吧。
+Dialogue: 0,0:14:07.25,0:14:09.19,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　これで　ターンエンドだ。\N{\fnZCOOL KuaiLe}我就 这样 回合结束。
+Dialogue: 0,0:14:10.31,0:14:14.15,Default,,0000,0000,0000,,{\fnYusei Magic}フッ！　攻撃力　１６００のカードが  いちばん強いだと？\N{\fnZCOOL KuaiLe}哼！ 攻击力 1600的卡 就是最强的？
+Dialogue: 0,0:14:14.84,0:14:17.19,Default,,0000,0000,0000,,{\fnYusei Magic}オレのターン　ドロー！\N{\fnZCOOL KuaiLe}我的回合 抽卡！
+Dialogue: 0,0:14:20.10,0:14:22.01,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　ビッグ・ジョーズを召喚！\N{\fnZCOOL KuaiLe}我 召唤大嘴鲨！
+Dialogue: 0,0:14:29.70,0:14:31.20,Default,,0000,0000,0000,,{\fnYusei Magic}攻撃力　１８００！？\N{\fnZCOOL KuaiLe}攻击力 1800！？
+Dialogue: 0,0:14:31.86,0:14:34.20,Default,,0000,0000,0000,,{\fnYusei Magic}ズババナイトの攻撃力は　１６００。\N{\fnZCOOL KuaiLe}兹巴巴骑士的攻击力是 1600。
+Dialogue: 0,0:14:34.87,0:14:36.47,Default,,0000,0000,0000,,{\fnYusei Magic}ビッグ・ジョーズは　１８００。\N{\fnZCOOL KuaiLe}大嘴鲨是 1800。
+Dialogue: 0,0:14:37.45,0:14:41.81,Default,,0000,0000,0000,,{\fnYusei Magic}攻撃表示同士で　バトルすれば  攻撃力が少ないほうが破壊され→\N{\fnZCOOL KuaiLe}攻击表示之间进行战斗的话，攻击力低的一方会被破坏{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:14:42.08,0:14:43.89,Default,,0000,0000,0000,,{\fnYusei Magic}数値の差だけ　ダメージをくらう。\N{\fnZCOOL KuaiLe}并受到数值差的伤害。
+Dialogue: 0,0:14:44.41,0:14:47.28,Default,,0000,0000,0000,,{\fnYusei Magic}ズババナイトより強いモンスターが  手札にあったのか！\N{\fnZCOOL KuaiLe}比兹巴巴骑士更强的怪兽，在你的手牌里吗！
+Dialogue: 0,0:14:47.41,0:14:50.49,Default,,0000,0000,0000,,{\fnYusei Magic}その程度のザコは  守備表示で出すんだな。\N{\fnZCOOL KuaiLe}那种程度的杂鱼，就该守备表示放出来啊。
+Dialogue: 0,0:14:51.02,0:14:55.48,Default,,0000,0000,0000,,{\fnYusei Magic}もっとも　それ以上のモンスターを  持っていても　無意味だったがね。\N{\fnZCOOL KuaiLe}不过嘛，就算你有更强的怪兽，也是毫无意义的。
+Dialogue: 0,0:14:56.84,0:14:59.54,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　マジックカード　アクア・ジェットを発動！\N{\fnZCOOL KuaiLe}我发动魔法卡 水之喷射！
+Dialogue: 0,0:15:00.16,0:15:01.80,Default,,0000,0000,0000,,{\fnYusei Magic}このターンのエンドフェイズまで→\N{\fnZCOOL KuaiLe}直到这个回合的结束阶段{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:15:02.19,0:15:05.34,Default,,0000,0000,0000,,{\fnYusei Magic}水属性のモンスターの攻撃力を  １０００ポイント　アップ！\N{\fnZCOOL KuaiLe}水属性怪兽的攻击力提升 1000点！
+Dialogue: 0,0:15:06.29,0:15:06.77,Default,,0000,0000,0000,,{\fnYusei Magic}出た！\N{\fnZCOOL KuaiLe}来了！
+Dialogue: 0,0:15:06.87,0:15:08.63,Default,,0000,0000,0000,,{\fnYusei Magic}シャークさんのマジックコンボだ。\N{\fnZCOOL KuaiLe}这是鲨鱼先生的魔法连招。
+Dialogue: 0,0:15:09.67,0:15:12.27,Default,,0000,0000,0000,,{\fnYusei Magic}バトルだ。　いけ　ビッグ・ジョーズ！\N{\fnZCOOL KuaiLe}进入战斗。上吧，大嘴鲨！
+Dialogue: 0,0:15:13.33,0:15:14.53,Default,,0000,0000,0000,,{\fnYusei Magic}ビッグマウス！\N{\fnZCOOL KuaiLe}大嘴咬！
+Dialogue: 0,0:15:20.14,0:15:22.11,Default,,0000,0000,0000,,{\fnYusei Magic}（ズババナイト）ズババソード！\N{\fnZCOOL KuaiLe}（兹巴巴骑士）兹巴巴剑！
+Dialogue: 0,0:15:26.35,0:15:28.71,Default,,0000,0000,0000,,{\fnYusei Magic}ズババ！　くっ…。\N{\fnZCOOL KuaiLe}兹巴巴！唔……。
+Dialogue: 0,0:15:29.15,0:15:32.30,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　カードを１枚　伏せて　ターンエンドだ。\N{\fnZCOOL KuaiLe}我盖放1张卡，回合结束。
+Dialogue: 0,0:15:32.83,0:15:33.74,Default,,0000,0000,0000,,{\fnYusei Magic}クソ…。\N{\fnZCOOL KuaiLe}可恶……。
+Dialogue: 0,0:15:34.53,0:15:37.11,Default,,0000,0000,0000,,{\fnYusei Magic}まだ　ライフを　１２００ポイント  削られただけだ。\N{\fnZCOOL KuaiLe}不过是生命值被削了 1200点而已。
+Dialogue: 0,0:15:37.50,0:15:39.00,Default,,0000,0000,0000,,{\fnYusei Magic}オレのターン　ドロー！\N{\fnZCOOL KuaiLe}我的回合，抽卡！
+Dialogue: 0,0:15:40.18,0:15:42.17,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　ガガガマジシャンを召喚！\N{\fnZCOOL KuaiLe}我召唤 我我我魔术师！
+Dialogue: 0,0:15:44.05,0:15:46.15,Default,,0000,0000,0000,,{\fnYusei Magic}頼むぜ　ガガガマジシャン…。\N{\fnZCOOL KuaiLe}拜托了 我我我魔术师……。
+Dialogue: 0,0:15:48.00,0:15:51.76,Default,,0000,0000,0000,,{\fnYusei Magic}（シャーク）なに？  攻撃力　１５００で　攻撃表示だと？\N{\fnZCOOL KuaiLe}（鲨鱼）什么？ 攻击力1500 还攻击表示？
+Dialogue: 0,0:15:52.44,0:15:54.66,Default,,0000,0000,0000,,{\fnYusei Magic}フン…　とんだプレイングミスだぜ。\N{\fnZCOOL KuaiLe}哼…… 真是天大的失误啊。
+Dialogue: 0,0:15:55.05,0:15:55.92,Default,,0000,0000,0000,,{\fnYusei Magic}いいや　違う。\N{\fnZCOOL KuaiLe}不 不对。
+Dialogue: 0,0:15:57.22,0:16:01.17,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　手札から  ワンダー・ワンドを　ガガガマジシャンに装備。\N{\fnZCOOL KuaiLe}我从手牌 将神奇魔杖 装备给我我我魔术师。
+Dialogue: 0,0:16:02.17,0:16:06.30,Default,,0000,0000,0000,,{\fnYusei Magic}ワンダー・ワンドを装備したモンスターは  攻撃力を　５００ポイント上げる。\N{\fnZCOOL KuaiLe}装备了神奇魔杖的怪兽 攻击力提升500点。
+Dialogue: 0,0:16:08.31,0:16:12.41,Default,,0000,0000,0000,,{\fnYusei Magic}攻撃力が低いなら  オレだって　装備魔法で　パワーアップだ！\N{\fnZCOOL KuaiLe}攻击力低的话 那我就用装备魔法来强化！
+Dialogue: 0,0:16:12.51,0:16:16.00,Default,,0000,0000,0000,,{\fnYusei Magic}やった！　これで  ビッグ・ジョーズの攻撃力を上回ったわ。\N{\fnZCOOL KuaiLe}太好了！ 这样一来就超过大嘴鲨的攻击力了。
+Dialogue: 0,0:16:16.53,0:16:20.17,Default,,0000,0000,0000,,{\fnYusei Magic}いけ！　ガガガマジシャン。  ビッグ・ジョーズに攻撃！\N{\fnZCOOL KuaiLe}上吧！ 我我我魔术师。 攻击大嘴鲨！
+Dialogue: 0,0:16:20.95,0:16:23.68,Default,,0000,0000,0000,,{\fnYusei Magic}オレの伏せカードを  まったく警戒しないとはな。\N{\fnZCOOL KuaiLe}居然对我的盖牌 完全不警戒啊。
+Dialogue: 0,0:16:24.22,0:16:25.16,Default,,0000,0000,0000,,{\fnYusei Magic}トラップ発動！\N{\fnZCOOL KuaiLe}陷阱发动！
+Dialogue: 0,0:16:27.38,0:16:28.26,Default,,0000,0000,0000,,{\fnYusei Magic}トラップカード！？\N{\fnZCOOL KuaiLe}陷阱卡！？
+Dialogue: 0,0:16:28.68,0:16:30.08,Default,,0000,0000,0000,,{\fnYusei Magic}（シャーク）ゼウスブレス！\N{\fnZCOOL KuaiLe}（鲨鱼）宙斯之息！
+Dialogue: 0,0:16:31.57,0:16:34.58,Default,,0000,0000,0000,,{\fnYusei Magic}このカードは　相手モンスターが  攻撃してきたとき→\N{\fnZCOOL KuaiLe}这张卡在 对方怪兽 攻击过来时{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:16:34.87,0:16:37.04,Default,,0000,0000,0000,,{\fnYusei Magic}その攻撃を無効にする。\N{\fnZCOOL KuaiLe}无效那次攻击。
+Dialogue: 0,0:16:39.87,0:16:43.48,Default,,0000,0000,0000,,{\fnYusei Magic}更に　自分フィールドに  水属性モンスターがいるとき→\N{\fnZCOOL KuaiLe}并且 自己场上有 水属性怪兽时{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:16:43.86,0:16:46.97,Default,,0000,0000,0000,,{\fnYusei Magic}８００ポイントのダメージを  相手プレイヤーに与える。\N{\fnZCOOL KuaiLe}给予对方玩家 800点伤害。
+Dialogue: 0,0:16:47.53,0:16:49.99,Default,,0000,0000,0000,,{\fnYusei Magic}オレのビッグ・ジョーズは　水属性モンスター。\N{\fnZCOOL KuaiLe}我的大嘴鲨是 水属性怪兽。
+Dialogue: 0,0:16:50.73,0:16:54.07,Default,,0000,0000,0000,,{\fnYusei Magic}よって　お前には  ８００ポイントのダメージを受けてもらう。\N{\fnZCOOL KuaiLe}因此 你就接下 这800点伤害吧。
+Dialogue: 0,0:17:03.29,0:17:05.06,Default,,0000,0000,0000,,{\fnYusei Magic}クソ…　うん？\N{\fnZCOOL KuaiLe}可恶……嗯？
+Dialogue: 0,0:17:05.72,0:17:07.68,Default,,0000,0000,0000,,{\fnYusei Magic}そうか…　トラップカードか。\N{\fnZCOOL KuaiLe}这样啊……是盖牌吗。
+Dialogue: 0,0:17:07.98,0:17:08.69,Default,,0000,0000,0000,,{\fnYusei Magic}よっしゃ！\N{\fnZCOOL KuaiLe}好嘞！
+Dialogue: 0,0:17:09.52,0:17:12.71,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　トラップカードを  １枚　伏せて　ターンエンド。\N{\fnZCOOL KuaiLe}我盖下一张盖牌，回合结束。
+Dialogue: 0,0:17:13.27,0:17:17.10,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬…　伏せカードには  マジックとトラップの２種類がある。\N{\fnZCOOL KuaiLe}游马……盖牌分为魔法和陷阱两种。
+Dialogue: 0,0:17:17.43,0:17:19.50,Default,,0000,0000,0000,,{\fnYusei Magic}声に出しちゃ　ダメだ。\N{\fnZCOOL KuaiLe}不能说出来啊。
+Dialogue: 0,0:17:18.88,0:17:21.16,Default,,0000,0000,0000,,{\fnYusei Magic}もう！　しっかりしろ！！\N{\fnZCOOL KuaiLe}真是的！振作一点！！
+Dialogue: 0,0:17:21.66,0:17:22.41,Default,,0000,0000,0000,,{\fnYusei Magic}マヌケめ。\N{\fnZCOOL KuaiLe}蠢货。
+Dialogue: 0,0:17:23.77,0:17:25.42,Default,,0000,0000,0000,,{\fnYusei Magic}オレのターン　ドロー。\N{\fnZCOOL KuaiLe}我的回合，抽卡。
+Dialogue: 0,0:17:26.39,0:17:28.33,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　スカル・クラーケンを召喚。\N{\fnZCOOL KuaiLe}我召唤骷髅章鱼。
+Dialogue: 0,0:17:34.08,0:17:35.28,Default,,0000,0000,0000,,{\fnYusei Magic}攻撃力　６００…。\N{\fnZCOOL KuaiLe}攻击力600……。
+Dialogue: 0,0:17:35.76,0:17:38.51,Default,,0000,0000,0000,,{\fnYusei Magic}よし　ヤツの場に  オレのガガガマジシャンより→\N{\fnZCOOL KuaiLe}好，那家伙的场上没有比我场上的我我我魔术师{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:17:38.66,0:17:40.79,Default,,0000,0000,0000,,{\fnYusei Magic}攻撃力の高いモンスターは　いない。\N{\fnZCOOL KuaiLe}攻击力更高的怪兽。
+Dialogue: 0,0:17:42.02,0:17:43.42,Default,,0000,0000,0000,,{\fnYusei Magic}そう　うまくいくかよ。\N{\fnZCOOL KuaiLe}哪有那么顺利啊。
+Dialogue: 0,0:17:44.07,0:17:46.57,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　スカル・クラーケンの効果発動。\N{\fnZCOOL KuaiLe}我发动骷髅章鱼的效果。
+Dialogue: 0,0:17:47.23,0:17:49.57,Default,,0000,0000,0000,,{\fnYusei Magic}スカル・クラーケンは　召喚したとき→\N{\fnZCOOL KuaiLe}骷髅章鱼在召唤时{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:17:50.00,0:17:54.43,Default,,0000,0000,0000,,{\fnYusei Magic}相手フィールドにある表表示の  マジック　トラップカードを１枚　破壊できる。\N{\fnZCOOL KuaiLe}可以破坏对方场上表侧表示的一张魔法、陷阱卡。
+Dialogue: 0,0:17:54.97,0:17:57.37,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　ワンダー・ワンドを破壊する。\N{\fnZCOOL KuaiLe}我破坏神奇魔杖。
+Dialogue: 0,0:17:57.64,0:17:58.23,Default,,0000,0000,0000,,{\fnYusei Magic}なに！？\N{\fnZCOOL KuaiLe}什么！？
+Dialogue: 0,0:17:58.74,0:18:02.66,Default,,0000,0000,0000,,{\fnYusei Magic}これで　ガガガマジシャンの攻撃力は  ビッグ・ジョーズよりも下回った。\N{\fnZCOOL KuaiLe}这样一来，我我我魔术师的攻击力就低于巨齿鲨了。
+Dialogue: 0,0:18:03.05,0:18:03.63,Default,,0000,0000,0000,,{\fnYusei Magic}まずい…。\N{\fnZCOOL KuaiLe}糟了……
+Dialogue: 0,0:18:03.93,0:18:04.38,Default,,0000,0000,0000,,{\fnYusei Magic}えっ？\N{\fnZCOOL KuaiLe}哎？
+Dialogue: 0,0:18:04.92,0:18:07.28,Default,,0000,0000,0000,,{\fnYusei Magic}これでシャークのモンスターが２体　揃った。\N{\fnZCOOL KuaiLe}这样一来，鲨鱼的怪兽就凑齐2只了。
+Dialogue: 0,0:18:07.72,0:18:10.26,Default,,0000,0000,0000,,{\fnYusei Magic}この布陣は  オレとデュエルしたときと同じ。\N{\fnZCOOL KuaiLe}这个布阵，和我跟他决斗的时候一样。
+Dialogue: 0,0:18:11.01,0:18:13.29,Default,,0000,0000,0000,,{\fnYusei Magic}ヤツは　エクシーズ召喚をやるつもりか？\N{\fnZCOOL KuaiLe}那家伙是打算超量召唤吗？
+Dialogue: 0,0:18:13.88,0:18:16.57,Default,,0000,0000,0000,,{\fnYusei Magic}くっ…　やっぱ　遊馬じゃ勝てねえ。\N{\fnZCOOL KuaiLe}唔……果然，靠游马是赢不了的。
+Dialogue: 0,0:18:17.54,0:18:18.11,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬…。\N{\fnZCOOL KuaiLe}游马……
+Dialogue: 0,0:18:19.12,0:18:21.43,Default,,0000,0000,0000,,{\fnYusei Magic}どうした？　そんな　ヘボい腕で→\N{\fnZCOOL KuaiLe}怎么了？就凭这种烂水平{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:18:21.73,0:18:24.23,Default,,0000,0000,0000,,{\fnYusei Magic}本気で　デュエルチャンピオンに  なるつもりかよ！\N{\fnZCOOL KuaiLe}你还真想当决斗冠军吗！
+Dialogue: 0,0:18:24.44,0:18:27.60,Default,,0000,0000,0000,,{\fnYusei Magic}《くっ…　ダメだ　やっぱり　鍵が…。\N{\fnZCOOL KuaiLe}《唔……不行，果然钥匙……。
+Dialogue: 0,0:18:28.13,0:18:30.40,Default,,0000,0000,0000,,{\fnYusei Magic}鍵が壊れてるから  全然　かっとべねえ。\N{\fnZCOOL KuaiLe}钥匙坏了，所以完全燃不起来。
+Dialogue: 0,0:18:30.73,0:18:32.23,Default,,0000,0000,0000,,{\fnYusei Magic}鍵さえ壊れてなけりゃ…》\N{\fnZCOOL KuaiLe}要是钥匙没坏的话……》
+Dialogue: 0,0:18:32.50,0:18:34.39,Default,,0000,0000,0000,,{\fnYusei Magic}そんなもんに  まだ　すがってるから→\N{\fnZCOOL KuaiLe}就是因为你还依赖那种东西{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:18:34.77,0:18:36.29,Default,,0000,0000,0000,,{\fnYusei Magic}デュエルに勝てねえんだよ！\N{\fnZCOOL KuaiLe}才赢不了决斗啊！
+Dialogue: 0,0:18:36.59,0:18:37.52,Default,,0000,0000,0000,,{\fnYusei Magic}なんだと？\N{\fnZCOOL KuaiLe}你说什么？
+Dialogue: 0,0:18:37.83,0:18:39.30,Default,,0000,0000,0000,,{\fnYusei Magic}いいこと思いついたぜ。\N{\fnZCOOL KuaiLe}我想到个好主意。
+Dialogue: 0,0:18:39.79,0:18:41.73,Default,,0000,0000,0000,,{\fnYusei Magic}オレが　お前のデッキを奪ったら→\N{\fnZCOOL KuaiLe}要是我把你的卡组抢过来{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:18:41.98,0:18:44.78,Default,,0000,0000,0000,,{\fnYusei Magic}その鍵　同様  目の前で破り捨ててやる！\N{\fnZCOOL KuaiLe}那钥匙也一样，我就在你眼前撕碎扔掉！
+Dialogue: 0,0:18:45.08,0:18:46.34,Default,,0000,0000,0000,,{\fnYusei Magic}テメエ…。\N{\fnZCOOL KuaiLe}你这混蛋……。
+Dialogue: 0,0:18:46.85,0:18:50.14,Default,,0000,0000,0000,,{\fnYusei Magic}しょせん　お前は  自分じゃ何もできないヤツなんだよ。\N{\fnZCOOL KuaiLe}说到底，你就是个自己什么都做不到的家伙。
+Dialogue: 0,0:18:50.79,0:18:52.24,Default,,0000,0000,0000,,{\fnYusei Magic}ハハハハハ！\N{\fnZCOOL KuaiLe}哈哈哈哈哈！
+Dialogue: 0,0:18:52.86,0:18:55.68,Default,,0000,0000,0000,,{\fnYusei Magic}ふざけるな！  オレは　そんなヤツじゃねえ！！\N{\fnZCOOL KuaiLe}少开玩笑了！我才不是那种人！！
+Dialogue: 0,0:18:56.19,0:18:58.90,Default,,0000,0000,0000,,{\fnYusei Magic}いくら失敗したって  いくら笑われたって→\N{\fnZCOOL KuaiLe}不管失败多少次，不管被嘲笑多少次{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:18:59.23,0:19:01.80,Default,,0000,0000,0000,,{\fnYusei Magic}今まで　オレが  かっとび続けてきたのは→\N{\fnZCOOL KuaiLe}至今为止，我之所以能一直一飞冲天{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:19:02.27,0:19:04.73,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　オレを信じてきたからだ！\N{\fnZCOOL KuaiLe}是因为我一直相信着自己！
+Dialogue: 0,0:19:05.09,0:19:08.87,Default,,0000,0000,0000,,{\fnYusei Magic}オレのかっとビングは  まだ…　まだ終わってねえ！！\N{\fnZCOOL KuaiLe}我的一飞冲天还没有……还没有结束！！
+Dialogue: 0,0:19:17.38,0:19:19.42,Default,,0000,0000,0000,,{\fnYusei Magic}あ…　鍵が…。\N{\fnZCOOL KuaiLe}啊……钥匙……
+Dialogue: 0,0:19:19.79,0:19:22.31,Default,,0000,0000,0000,,{\fnYusei Magic}≪さぁ　扉を開けろ。\N{\fnZCOOL KuaiLe}{\fnNoto Sans CJK SC}≪{\fnZCOOL KuaiLe}来吧，打开门吧。
+Dialogue: 0,0:19:22.48,0:19:22.87,Default,,0000,0000,0000,,{\fnYusei Magic}え？\N{\fnZCOOL KuaiLe}哎？
+Dialogue: 0,0:19:23.82,0:19:25.07,Default,,0000,0000,0000,,{\fnYusei Magic}こ…　ここは！？\N{\fnZCOOL KuaiLe}这……这里是！？
+Dialogue: 0,0:19:25.98,0:19:27.37,Default,,0000,0000,0000,,{\fnYusei Magic}≪扉を開けろ。\N{\fnZCOOL KuaiLe}{\fnNoto Sans CJK SC}≪{\fnZCOOL KuaiLe}打开门吧。
+Dialogue: 0,0:19:28.11,0:19:31.03,Default,,0000,0000,0000,,{\fnYusei Magic}≪さすれば  お前は　新たな力を手に入れる。\N{\fnZCOOL KuaiLe}{\fnNoto Sans CJK SC}≪{\fnZCOOL KuaiLe}如此一来，你就能获得新的力量。
+Dialogue: 0,0:19:31.97,0:19:37.03,Default,,0000,0000,0000,,{\fnYusei Magic}≪だが　その代償として  いちばん大事なものを失う。\N{\fnZCOOL KuaiLe}{\fnNoto Sans CJK SC}≪{\fnZCOOL KuaiLe}但是作为代价，你将失去最重要的东西。
+Dialogue: 0,0:19:38.94,0:19:41.30,Default,,0000,0000,0000,,{\fnYusei Magic}うおぉ～っ！\N{\fnZCOOL KuaiLe}呜哦哦～！
+Dialogue: 0,0:19:41.59,0:19:43.30,Default,,0000,0000,0000,,{\fnYusei Magic}超かっとビングだ！\N{\fnZCOOL KuaiLe}超一飞冲天！
+Dialogue: 0,0:19:43.55,0:19:44.77,Default,,0000,0000,0000,,{\fnYusei Magic}オレーッ！！\N{\fnZCOOL KuaiLe}我——！！
+Dialogue: 0,0:20:01.65,0:20:04.58,Default,,0000,0000,0000,,{\fnYusei Magic}イテテ…　え？　なんだ！？\N{\fnZCOOL KuaiLe}好痛痛……哎？什么！？
+Dialogue: 0,0:20:09.94,0:20:11.41,Default,,0000,0000,0000,,{\fnYusei Magic}な…　なんだ？　今の…。\N{\fnZCOOL KuaiLe}什……什么？刚才的……
+Dialogue: 0,0:20:12.19,0:20:13.74,Default,,0000,0000,0000,,{\fnYusei Magic}夢？　あ…。\N{\fnZCOOL KuaiLe}梦？啊……
+Dialogue: 0,0:20:15.14,0:20:18.26,Default,,0000,0000,0000,,{\fnYusei Magic}いや…　どうなってんだ？\N{\fnZCOOL KuaiLe}不……到底怎么回事？
+Dialogue: 0,0:20:18.97,0:20:21.46,Default,,0000,0000,0000,,{\fnYusei Magic}なんだ？　力がみなぎる。\N{\fnZCOOL KuaiLe}怎么回事？力量涌上来了。
+Dialogue: 0,0:20:22.01,0:20:23.65,Default,,0000,0000,0000,,{\fnYusei Magic}うお～っ！\N{\fnZCOOL KuaiLe}呜噢～！
+Dialogue: 0,0:20:23.89,0:20:26.79,Default,,0000,0000,0000,,{\fnYusei Magic}（ナンバーズ）さぁ　私を呼べ。　ナンバーズを。\N{\fnZCOOL KuaiLe}（No.）来吧，呼唤我。呼唤 No.
+Dialogue: 0,0:20:27.32,0:20:29.48,Default,,0000,0000,0000,,{\fnYusei Magic}うおぉ～っ！\N{\fnZCOOL KuaiLe}呜噢噢～！
+Dialogue: 0,0:20:30.08,0:20:33.69,Default,,0000,0000,0000,,{\fnYusei Magic}オレは　レベル３のビッグジョーズと  スカルクラーケンを　オーバーレイ！\N{\fnZCOOL KuaiLe}我把等级3的大颚鲨和骷髅章鱼叠放！
+Dialogue: 0,0:20:38.98,0:20:42.56,Default,,0000,0000,0000,,{\fnYusei Magic}２体のモンスターで  オーバーレイネットワークを構築！\N{\fnZCOOL KuaiLe}用2只怪兽构建叠放网络！
+Dialogue: 0,0:20:46.24,0:20:49.97,Default,,0000,0000,0000,,{\fnYusei Magic}来い！　ナンバーズ１７　リバイスドラゴン！\N{\fnZCOOL KuaiLe}出来吧！No.17 修正龙！
+Dialogue: 0,0:21:08.44,0:21:09.40,Default,,0000,0000,0000,,{\fnYusei Magic}ナンバーズ！？\N{\fnZCOOL KuaiLe}No.！？
+Dialogue: 0,0:21:10.30,0:21:12.57,Default,,0000,0000,0000,,{\fnYusei Magic}あれは　オレのときに  呼んだモンスターじゃない！\N{\fnZCOOL KuaiLe}那不是我那时候呼唤的怪兽！
+Dialogue: 0,0:21:12.71,0:21:14.37,Default,,0000,0000,0000,,{\fnYusei Magic}じゃあ…　なんなの？\N{\fnZCOOL KuaiLe}那……到底是什么？
+Dialogue: 0,0:21:14.85,0:21:17.47,Default,,0000,0000,0000,,{\fnYusei Magic}わからねえ。  ナンバーズなんて聞いたことねえし…。\N{\fnZCOOL KuaiLe}不知道。No.什么的听都没听过……
+Dialogue: 0,0:21:18.97,0:21:20.81,Default,,0000,0000,0000,,{\fnYusei Magic}リバイスドラゴンの効果　発動！\N{\fnZCOOL KuaiLe}修正龙的效果 发动！
+Dialogue: 0,0:21:21.29,0:21:24.54,Default,,0000,0000,0000,,{\fnYusei Magic}１ターンに一度  オーバーレイユニットを使うことで→\N{\fnZCOOL KuaiLe}1回合1次，通过使用叠放单位{\fnNoto Sans CJK SC}→
+Dialogue: 0,0:21:24.74,0:21:28.09,Default,,0000,0000,0000,,{\fnYusei Magic}リバイスドラゴンの攻撃力は  ５００ポイントアップする。\N{\fnZCOOL KuaiLe}修正龙的攻击力上升500点。
+Dialogue: 0,0:21:28.17,0:21:28.82,Default,,0000,0000,0000,,{\fnYusei Magic}何！？\N{\fnZCOOL KuaiLe}什么！？
+Dialogue: 0,0:21:30.66,0:21:32.43,Default,,0000,0000,0000,,{\fnYusei Magic}いけ　リバイスドラゴン！\N{\fnZCOOL KuaiLe}上吧，修正龙！
+Dialogue: 0,0:21:33.81,0:21:35.05,Default,,0000,0000,0000,,{\fnYusei Magic}バイスストリーム！\N{\fnZCOOL KuaiLe}恶毒洪流！
+Dialogue: 0,0:21:45.37,0:21:46.07,Default,,0000,0000,0000,,{\fnYusei Magic}遊馬！\N{\fnZCOOL KuaiLe}游马！
+Dialogue: 0,0:21:46.50,0:21:48.35,Default,,0000,0000,0000,,{\fnYusei Magic}どうやら　勝負は決まったな。\N{\fnZCOOL KuaiLe}看来胜负已定了。
+Dialogue: 0,0:21:48.70,0:21:50.93,Default,,0000,0000,0000,,{\fnYusei Magic}次の一撃で決めてやるぜ！\N{\fnZCOOL KuaiLe}下一击就解决你！
+Dialogue: 0,0:21:51.56,0:21:55.86,Default,,0000,0000,0000,,{\fnYusei Magic}うぅ…　痛ぇ…。  クソ！　やっぱり　オレじゃあ…。\N{\fnZCOOL KuaiLe}呜……好痛……。可恶！果然靠我……。
+Dialogue: 0,0:21:56.14,0:21:56.63,Default,,0000,0000,0000,,{\fnYusei Magic}（アストラル）立て！\N{\fnZCOOL KuaiLe}（星光体）站起来！
+Dialogue: 0,0:21:57.23,0:21:58.60,Default,,0000,0000,0000,,{\fnYusei Magic}え？　あぁっ！\N{\fnZCOOL KuaiLe}哎？啊！
+Dialogue: 0,0:22:01.72,0:22:02.37,Default,,0000,0000,0000,,{\fnYusei Magic}勝つぞ。\N{\fnZCOOL KuaiLe}要赢。
+Dialogue: 0,0:22:04.40,0:22:05.45,Default,,0000,0000,0000,,{\fnYusei Magic}誰だ　お前…。\N{\fnZCOOL KuaiLe}你是谁……。
+Dialogue: 0,0:22:12.95,0:22:14.78,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:22:16.84,0:22:18.10,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:22:18.74,0:22:20.62,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:22:21.55,0:22:22.83,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:22:23.23,0:22:24.07,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:41.02,0:23:43.56,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:43.86,0:23:45.42,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:45.60,0:23:46.57,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:46.73,0:23:49.26,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:49.66,0:23:53.05,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:53.28,0:23:54.42,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:54.78,0:23:55.75,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:56.29,0:23:57.84,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:23:58.19,0:24:01.38,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:24:01.82,0:24:04.00,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:24:04.20,0:24:05.67,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:24:05.97,0:24:07.11,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:24:07.51,0:24:09.51,Default,,0000,0000,0000,,{\fnZCOOL KuaiLe}
+Dialogue: 0,0:24:11.91,0:24:12.80,Default,,0000,0000,0000,,{\fnYusei Magic}答えは…。\N{\fnZCOOL KuaiLe}答案是……。
+Dialogue: 0,0:24:13.74,0:24:14.97,Default,,0000,0000,0000,,{\fnYusei Magic}モンスターだ！\N{\fnZCOOL KuaiLe}怪兽！
+Dialogue: 0,0:24:15.40,0:24:19.93,Default,,0000,0000,0000,,{\fnYusei Magic}熱いバトルには　やっぱり  強力なモンスターは欠かせないよな。\N{\fnZCOOL KuaiLe}热血的战斗果然少不了强力的怪兽啊。
+Dialogue: 0,0:24:20.54,0:24:24.31,Default,,0000,0000,0000,,{\fnYusei Magic}次回は　どんなモンスターが出てくるか  楽しみだぜ！\N{\fnZCOOL KuaiLe}下回会有什么样的怪兽登场，真让人期待啊！

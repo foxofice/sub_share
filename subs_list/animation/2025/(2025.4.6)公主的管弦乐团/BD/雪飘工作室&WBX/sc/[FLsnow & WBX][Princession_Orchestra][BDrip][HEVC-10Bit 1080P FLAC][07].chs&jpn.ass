@@ -1,0 +1,904 @@
+﻿[Script Info]
+Title: プリンセッション・オーケストラ BD 07
+Original Script: FLsnow
+Synch Point: 0
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+YCbCr Matrix: TV.601
+
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Ripple,Droid Sans Fallback,75,&H00FFFFFF,&H00FFFFFF,&H00EFA639,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Zeal,Droid Sans Fallback,75,&H00FFFFFF,&H00FFFFFF,&H000203E4,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Meteor,Droid Sans Fallback,75,&H00FFFFFF,&H00FFFFFF,&H0007BA8E,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Default2,Droid Sans Fallback,75,&H00000000,&H00FFFFFF,&H00FFFFFF,&H64000000,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Default,Droid Sans Fallback,75,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Default Jp,Droid Sans Fallback,50,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Zeal Jp,Droid Sans Fallback,50,&H00FFFFFF,&H00FFFFFF,&H000203E4,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Ripple Jp,Droid Sans Fallback,50,&H00FFFFFF,&H00FFFFFF,&H00EFA639,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Meteor Jp,Droid Sans Fallback,50,&H00FFFFFF,&H00FFFFFF,&H0007BA8E,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: Default Jp2,Droid Sans Fallback,50,&H00000000,&H00FFFFFF,&H00FFFFFF,&H64000000,-1,0,0,0,100,100,2,0,1,3,4,2,15,15,30,1
+Style: OP,幼圆,50,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,2,0,1,2,0,2,15,15,10,1
+Style: OP2,幼圆,50,&H00FFFFFF,&H00FFFFFF,&H00FFFFFF,&H64000000,-1,0,0,0,100,100,2,0,1,5,3,2,15,15,10,1
+Style: ED,幼圆,40,&H00000000,&H00FFFFFF,&H00FFFFFF,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,0,2,30,15,15,1
+Style: LIVE Zeal,幼圆,40,&H00FFFFFF,&H00FFFFFF,&H000203E4,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,2,8,15,15,20,1
+Style: LIVE Zeal Jp,Droid Sans Fallback,50,&H00FFFFFF,&H00FFFFFF,&H000203E4,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,2,8,15,15,80,1
+Style: LIVE Ripple,幼圆,40,&H00FFFFFF,&H00FFFFFF,&H00EFA639,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,2,7,15,15,20,1
+Style: LIVE Ripple Jp,Droid Sans Fallback,50,&H00FFFFFF,&H00FFFFFF,&H00EFA639,&H64FFFFFF,-1,0,0,0,100,100,2,0,1,3,2,7,15,15,80,1
+Style: LIVE Meteor,幼圆,40,&H00FFFFFF,&H00FFFFFF,&H000AD8A6,&H64000000,-1,0,0,0,100,100,2,0,1,3,2,7,15,15,20,1
+Style: LIVE Meteor Jp,Droid Sans Fallback,50,&H00FFFFFF,&H00FFFFFF,&H000AD8A6,&H64000000,-1,0,0,0,100,100,2,0,1,3,2,7,15,15,80,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:06.61,0:00:07.43,Ripple Jp,NTP,0,0,0,,いくよ！
+Dialogue: 0,0:00:07.59,0:00:08.20,Meteor Jp,NTP,0,0,0,,がってん！
+Dialogue: 0,0:00:08.36,0:00:08.96,Zeal Jp,NTP,0,0,0,,えぇ！
+Dialogue: 0,0:00:16.33,0:00:19.03,Meteor Jp,NTP,0,0,0,,そいや！ほいほいほいほい ほいっと！
+Dialogue: 0,0:00:49.11,0:00:51.37,Default Jp2,NTP,0,0,0,,ﾁｯ おもしろくもねえ
+Dialogue: 0,0:00:53.37,0:00:57.92,Zeal Jp,NTP,0,0,0,,だいぶ戦い方がわかってきたわね ﾅｲﾄもﾋﾞｼｮｯﾌﾟも
+Dialogue: 0,0:00:58.13,0:01:01.83,Ripple Jp,NTP,0,0,0,,うん 今日は 歌のｶｹﾗなしでも 何とかなったね！
+Dialogue: 0,0:01:02.03,0:01:07.23,Meteor Jp,NTP,0,0,0,,これは 確実にきてますね！私たちの時代が！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:02:43.04,0:02:45.50,Default Jp2,NTP,0,0,0,,くっそ～ んっ？
+Dialogue: 0,0:02:45.88,0:02:49.12,Default Jp2,NTP,0,0,0,,お疲れさん ｷﾞｰﾀ 戦果は？
+Dialogue: 0,0:02:49.69,0:02:52.95,Default Jp2,NTP,0,0,0,,嫌みか！ 見てたくせにさぁ！
+Dialogue: 0,0:02:53.11,0:02:55.09,Default Jp2,NTP,0,0,0,,ﾊﾊﾊﾊｯ 言うなよ
+Dialogue: 0,0:02:55.29,0:02:59.27,Default Jp2,NTP,0,0,0,,で どうだった お嬢ちゃんたちの歯応えは？
+Dialogue: 0,0:02:59.61,0:03:03.56,Default Jp2,NTP,0,0,0,,あいつら もうﾅｲﾄもﾋﾞｼｮｯﾌﾟも 軽くひねりやがるよ
+Dialogue: 0,0:03:04.31,0:03:08.44,Default Jp2,NTP,0,0,0,,やつらを調子づかせるのは そろそろ終わりにしたいな…
+Dialogue: 0,0:03:09.33,0:03:11.48,Default Jp2,NTP,0,0,0,,なんかいい考えでもあんのかよ？
+Dialogue: 0,0:03:11.68,0:03:12.85,Default Jp2,NTP,0,0,0,,ﾌｯ…
+Dialogue: 0,0:03:13.18,0:03:17.76,Default Jp2,NTP,0,0,0,,新たなｼﾞｬﾏｵｯｸが完成した これより実地ﾃｽﾄに移る
+Dialogue: 0,0:03:17.99,0:03:23.04,Default Jp2,NTP,0,0,0,,おっ！ 待ってました！なぁなぁ 俺に遊ばせてくれよ！
+Dialogue: 0,0:03:23.51,0:03:25.00,Default Jp2,NTP,0,0,0,,ざれ言を言うな
+Dialogue: 0,0:03:25.18,0:03:26.38,Default Jp2,NTP,0,0,0,,なんでだよ!?
+Dialogue: 0,0:03:26.75,0:03:31.81,Default Jp2,NTP,0,0,0,,以前 お前にﾋﾞｼｮｯﾌﾟを任せたことを 後悔しているからな
+Dialogue: 0,0:03:32.00,0:03:35.40,Default Jp2,NTP,0,0,0,,んぐ…！ あれは…
+Dialogue: 0,0:03:35.84,0:03:37.62,Default Jp2,NTP,0,0,0,,まだ本気じゃねえよ！
+Dialogue: 0,0:03:38.01,0:03:41.33,Default Jp2,NTP,0,0,0,,とにかく 今回は 私が行く
+Dialogue: 0,0:03:41.76,0:03:44.28,Default Jp2,NTP,0,0,0,,お前はおとなしく留守番していろ
+Dialogue: 0,0:03:44.47,0:03:45.34,Default Jp2,NTP,0,0,0,,ﾌﾝｯ！
+Dialogue: 0,0:03:47.40,0:03:51.98,Default Jp2,NTP,0,0,0,,近接特化のﾅｲﾄ 遠距離仕様のﾋﾞｼｮｯﾌﾟ
+Dialogue: 0,0:03:52.24,0:03:54.87,Default Jp2,NTP,0,0,0,,なら 今度の新型は？
+Dialogue: 0,0:03:55.36,0:03:58.56,Default Jp2,NTP,0,0,0,,まぁ見てるといい 退屈はさせん
+Dialogue: 0,0:03:59.31,0:04:02.68,Default Jp2,NTP,0,0,0,,まっ だいたい予想はつくがな
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:04:24.66,0:04:26.40,Ripple Jp,NTP,0,0,0,,よ～し！
+Dialogue: 0,0:04:27.23,0:04:30.99,Ripple Jp,NTP,0,0,0,,まずは これを こうして～
+Dialogue: 0,0:04:31.53,0:04:33.48,Ripple Jp,NTP,0,0,0,,ﾊﾞﾀｰを溶かす～
+Dialogue: 0,0:04:33.67,0:04:35.36,Default Jp,NTP,0,0,0,,600ﾜｯﾄで30秒だね
+Dialogue: 0,0:04:35.54,0:04:36.59,Default Jp,NTP,0,0,0,,（電子ﾚﾝｼﾞの音）
+Dialogue: 0,0:04:36.74,0:04:39.95,Ripple Jp,NTP,0,0,0,,さっきのに～ 入れて～ 混ぜる！
+Dialogue: 0,0:04:42.22,0:04:43.20,Ripple Jp,NTP,0,0,0,,よし！
+Dialogue: 0,0:04:43.98,0:04:47.08,Ripple Jp,NTP,0,0,0,,こうして こねま～す
+Dialogue: 0,0:04:50.75,0:04:53.08,Ripple Jp,NTP,0,0,0,,あとは ﾚﾝｼﾞで…
+Dialogue: 0,0:04:55.82,0:04:58.73,Default Jp,NTP,0,0,0,,ﾚﾝｼﾞで 600ﾜｯﾄ ２分加熱だ！
+Dialogue: 0,0:04:59.06,0:05:00.59,Default Jp,NTP,0,0,0,,熱いから気をつけて!!
+Dialogue: 0,0:05:00.93,0:05:01.50,Default Jp,NTP,0,0,0,,（電子ﾚﾝｼﾞの音）
+Dialogue: 0,0:05:01.64,0:05:03.77,Ripple Jp,NTP,0,0,0,,最後の仕上げ～！
+Dialogue: 0,0:05:08.87,0:05:11.04,Ripple Jp,NTP,0,0,0,,よ～し 出来上がり～！
+Dialogue: 0,0:05:11.84,0:05:12.99,Default Jp,NTP,0,0,0,,ど～れ
+Dialogue: 0,0:05:13.34,0:05:14.80,Ripple Jp,NTP,0,0,0,,あっ…
+Dialogue: 0,0:05:15.17,0:05:17.29,Default Jp,NTP,0,0,0,,うん とってもおいしい！
+Dialogue: 0,0:05:17.81,0:05:19.22,Ripple Jp,NTP,0,0,0,,よかった～
+Dialogue: 0,0:05:20.79,0:05:23.96,Default Jp,NTP,0,0,0,,ずいぶん上手になったわね みなも
+Dialogue: 0,0:05:24.15,0:05:25.61,Ripple Jp,NTP,0,0,0,,いやいや～！
+Dialogue: 0,0:05:25.79,0:05:29.76,Ripple Jp,NTP,0,0,0,,簡単なお菓子だし このくらい誰だってできるよ～
+Dialogue: 0,0:05:30.33,0:05:32.42,Default Jp,NTP,0,0,0,,簡単だからこそよ
+Dialogue: 0,0:05:32.82,0:05:35.60,Default Jp,NTP,0,0,0,,ｼﾝﾌﾟﾙなものほど ごまかしがきかなくて
+Dialogue: 0,0:05:35.84,0:05:38.22,Default Jp,NTP,0,0,0,,おいしく作るのは難しいの
+Dialogue: 0,0:05:38.87,0:05:41.51,Ripple Jp,NTP,0,0,0,,そ そういうものなんだ…
+Dialogue: 0,0:05:41.97,0:05:47.41,Ripple Jp,NTP,0,0,0,,ｴﾍﾍ… さすが お菓子の専門学校の先生だね お母さん！
+Dialogue: 0,0:05:49.30,0:05:50.94,Default Jp,NTP,0,0,0,,あ～っ！
+Dialogue: 0,0:05:51.61,0:05:53.85,Default Jp,NTP,0,0,0,,お母さんたち ずる～い！
+Dialogue: 0,0:05:54.01,0:05:56.08,Default Jp,NTP,0,0,0,,僕も食べたい～！
+Dialogue: 0,0:05:56.23,0:06:00.15,Default Jp,NTP,0,0,0,,食べたい 食べたい食べたい 食べたい食べたい 食べたい食べたい食べたい～！
+Dialogue: 0,0:06:00.84,0:06:02.10,Ripple Jp,NTP,0,0,0,,りっくん
+Dialogue: 0,0:06:02.57,0:06:05.00,Ripple Jp,NTP,0,0,0,,朝ごはん前だからﾀﾞﾒだよ
+Dialogue: 0,0:06:05.27,0:06:07.53,Ripple Jp,NTP,0,0,0,,おなかいっぱいになっちゃうからね
+Dialogue: 0,0:06:07.99,0:06:11.29,Default Jp,NTP,0,0,0,,う～ 別腹！ 別腹だから!!
+Dialogue: 0,0:06:11.44,0:06:13.79,Default Jp,NTP,0,0,0,,ｸｯｷｰは の み も の～！
+Dialogue: 0,0:06:14.70,0:06:18.13,Ripple Jp,NTP,0,0,0,,どこで覚えてきたの そんな言葉…
+Dialogue: 0,0:06:19.04,0:06:21.43,Ripple Jp,NTP,0,0,0,,んもう １個だけだよ
+Dialogue: 0,0:06:21.61,0:06:24.18,Default Jp,NTP,0,0,0,,わ～い！ お姉ちゃん大好き～!!
+Dialogue: 0,0:06:25.46,0:06:26.71,Ripple Jp,NTP,0,0,0,,ほら あ～ん
+Dialogue: 0,0:06:26.86,0:06:28.45,Default Jp,NTP,0,0,0,,あ～ん
+Dialogue: 0,0:06:30.04,0:06:31.62,Default Jp,NTP,0,0,0,,ん～ おいしい！
+Dialogue: 0,0:06:32.87,0:06:34.46,Default Jp,NTP,0,0,0,,ありがとう お姉ちゃ～ん！
+Dialogue: 0,0:06:35.25,0:06:37.07,Ripple Jp,NTP,0,0,0,,困った子なんだから…
+Dialogue: 0,0:06:37.23,0:06:39.08,Default Jp,NTP,0,0,0,,ごめんなさいね みなも
+Dialogue: 0,0:06:39.16,0:06:40.76,Ripple Jp,NTP,0,0,0,,えっ えっ!?
+Dialogue: 0,0:06:40.94,0:06:43.80,Default Jp,NTP,0,0,0,,お母さん みなもに頼りっきりよね
+Dialogue: 0,0:06:44.06,0:06:46.56,Default Jp,NTP,0,0,0,,おうちのこととか りくのことも
+Dialogue: 0,0:06:47.94,0:06:49.51,Ripple Jp,NTP,0,0,0,,あっ…
+Dialogue: 0,0:06:51.40,0:06:55.86,Default Jp,NTP,0,0,0,,お父さんも 朝は日が昇る前に 出勤しないといけないし
+Dialogue: 0,0:06:56.09,0:07:00.61,Default Jp,NTP,0,0,0,,毎日一緒に朝ごはんを食べるなんてことも なかなかできないでしょ？
+Dialogue: 0,0:07:02.07,0:07:06.00,Ripple Jp,NTP,0,0,0,,ううん そんなこと… 全然ないよ
+Dialogue: 0,0:07:06.20,0:07:12.43,Ripple Jp,NTP,0,0,0,,お母さんやお父さんのお仕事はすごいことだし みんなに必要とされてるんだから
+Dialogue: 0,0:07:12.61,0:07:15.47,Ripple Jp,NTP,0,0,0,,私は それを応援できて うれしいよ
+Dialogue: 0,0:07:18.01,0:07:18.99,Ripple Jp,NTP,0,0,0,,あっ…
+Dialogue: 0,0:07:19.14,0:07:20.96,Default Jp,NTP,0,0,0,,ありがとうね みなも
+Dialogue: 0,0:07:21.68,0:07:24.90,Ripple Jp,NTP,0,0,0,,私は 大丈夫だよ お母さん
+Dialogue: 0,0:07:26.26,0:07:29.80,Ripple Jp,NTP,0,0,0,,あっ ほら 新しいお友達もできたし
+Dialogue: 0,0:07:29.98,0:07:31.63,Default Jp,NTP,0,0,0,,じゃあ あれって…
+Dialogue: 0,0:07:32.20,0:07:34.72,Default Jp,NTP,0,0,0,,そのお友達にあげるものだったの？
+Dialogue: 0,0:07:35.10,0:07:36.92,Ripple Jp,NTP,0,0,0,,うん そうだよ～
+Dialogue: 0,0:07:37.24,0:07:39.27,Default Jp,NTP,0,0,0,,作りすぎじゃなかったのね…
+Dialogue: 0,0:07:39.44,0:07:42.27,Ripple Jp,NTP,0,0,0,,ｱﾊﾊ… 若干 作りすぎました～
+Dialogue: 0,0:07:44.50,0:07:45.69,Ripple Jp,NTP,0,0,0,,あっ
+Dialogue: 0,0:07:45.86,0:07:49.27,Ripple Jp,NTP,0,0,0,,あっ お母さん そろそろ時間 大丈夫？
+Dialogue: 0,0:07:49.82,0:07:51.85,Default Jp,NTP,0,0,0,,あら もうこんな時間？
+Dialogue: 0,0:07:52.26,0:07:55.13,Default Jp,NTP,0,0,0,,ごめんね みなも お見送りは けっこ～！
+Dialogue: 0,0:07:55.65,0:07:57.22,Ripple Jp,NTP,0,0,0,,いってらっしゃ～い！
+Dialogue: 0,0:08:05.04,0:08:08.26,Ripple Jp,NTP,0,0,0,,りっくん ちゃんとﾄﾏﾄ食べないとﾀﾞﾒでしょ
+Dialogue: 0,0:08:08.48,0:08:11.88,Default Jp,NTP,0,0,0,,お姉ちゃんこそ ﾌﾞﾛｯｺﾘｰ食べなさ～い
+Dialogue: 0,0:08:12.13,0:08:12.98,Ripple Jp,NTP,0,0,0,,なぬ…
+Dialogue: 0,0:08:18.42,0:08:20.90,Ripple Jp,NTP,0,0,0,,物々交換で手を打とうか
+Dialogue: 0,0:08:21.07,0:08:23.18,Default Jp,NTP,0,0,0,,商談成立！
+Dialogue: 0,0:08:28.91,0:08:30.54,Ripple Jp,NTP,0,400,0,,{\an3}ごちそうさま
+Dialogue: 0,0:08:28.91,0:08:30.54,Default Jp,NTP,400,0,0,,{\an1}ごちそうさま
+Dialogue: 0,0:08:28.93,0:08:31.55,Default Jp,NTP,0,0,0,,{\an8}本日のﾗｯｷｰｶﾗｰはﾋﾟﾝｸです
+Dialogue: 0,0:08:32.03,0:08:34.82,Default Jp,NTP,0,0,0,,それでは 今日も元気にいってらっしゃ～い！
+Dialogue: 0,0:08:35.86,0:08:37.15,Ripple Jp,NTP,0,0,0,,いってきま～す！
+Dialogue: 0,0:08:35.86,0:08:37.15,Default Jp,NTP,0,0,0,,{\an1}きま～す！
+Dialogue: 0,0:08:37.91,0:08:39.91,Default Jp,NTP,0,0,0,,おっと！ ﾅｲｽﾀｲﾐﾝｸﾞ！
+Dialogue: 0,0:08:40.45,0:08:42.29,Default Jp,NTP,0,0,0,,今日の給食 何かなぁ？
+Dialogue: 0,0:08:42.45,0:08:43.53,Ripple Jp,NTP,0,0,0,,なんだろうね～
+Dialogue: 0,0:08:44.10,0:08:45.27,Default Jp,NTP,0,0,0,,おはよ みなも
+Dialogue: 0,0:08:47.01,0:08:48.66,Ripple Jp,NTP,0,0,0,,おはよう なっち
+Dialogue: 0,0:08:49.24,0:08:50.90,Default Jp,NTP,0,0,0,,おはよう なつ姉！
+Dialogue: 0,0:08:51.29,0:08:54.00,Default Jp,NTP,0,0,0,,おっ 今日は りく坊も一緒か
+Dialogue: 0,0:08:56.67,0:08:58.15,Default Jp,NTP,0,0,0,,ねぇねぇ なつ姉！
+Dialogue: 0,0:08:58.45,0:09:00.68,Default Jp,NTP,0,0,0,,昨日の 『ｽﾄﾗｲﾊﾞｰ』観た？
+Dialogue: 0,0:09:00.90,0:09:02.54,Default Jp,NTP,0,0,0,,おぉ 観た観た
+Dialogue: 0,0:09:02.79,0:09:05.99,Default Jp,NTP,0,0,0,,銀河伝説魔人 めっちゃ強かったな～
+Dialogue: 0,0:09:06.31,0:09:08.75,Ripple Jp,NTP,0,0,0,,何 その銀河伝説魔人って…
+Dialogue: 0,0:09:09.00,0:09:13.24,Default Jp,NTP,0,0,0,,そんなん銀河の伝説に出てくる 魔人に決まってんじゃん
+Dialogue: 0,0:09:13.42,0:09:15.88,Default Jp,NTP,0,0,0,,お姉ちゃんは不勉強だな～
+Dialogue: 0,0:09:16.14,0:09:19.02,Ripple Jp,NTP,0,0,0,,あ はい… すみません…
+Dialogue: 0,0:09:19.37,0:09:21.39,Default Jp,NTP,0,0,0,,それじゃね お姉ちゃんたち！
+Dialogue: 0,0:09:23.06,0:09:26.59,Ripple Jp,NTP,0,0,0,,りっく～ん ちゃんとお勉強するんだよ～
+Dialogue: 0,0:09:26.94,0:09:30.25,Default Jp,NTP,0,0,0,,相変わらず母親みたいだな～ みなもは
+Dialogue: 0,0:09:30.75,0:09:33.83,Ripple Jp,NTP,0,0,0,,え～ これくらい普通だよ
+Dialogue: 0,0:09:34.58,0:09:35.43,Default Jp,NTP,0,0,0,,ふむ…
+Dialogue: 0,0:09:36.80,0:09:38.75,Ripple Jp,NTP,0,0,0,,えっ!? なになに!?
+Dialogue: 0,0:09:38.95,0:09:41.98,Default Jp,NTP,0,0,0,,ん～？ べっつに～
+Dialogue: 0,0:09:42.59,0:09:46.37,Default Jp,NTP,0,0,0,,そこに みなもの頭があったから かな？
+Dialogue: 0,0:09:46.55,0:09:49.41,Ripple Jp,NTP,0,0,0,,わけわかんないよ なっち…
+Dialogue: 0,0:09:49.83,0:09:51.11,Default Jp,NTP,0,0,0,,ﾌﾌﾌｯ
+Dialogue: 0,0:09:53.07,0:09:54.62,Ripple Jp,NTP,0,0,0,,そうだ なっち
+Dialogue: 0,0:09:54.78,0:09:57.80,Ripple Jp,NTP,0,0,0,,忘れないうちに これ 渡しておくね
+Dialogue: 0,0:09:58.41,0:10:00.57,Default Jp,NTP,0,0,0,,おっ ｻﾝｷｭｰ！
+Dialogue: 0,0:10:01.08,0:10:03.59,Default Jp,NTP,0,0,0,,久々だなぁ みなものｸｯｷｰ
+Dialogue: 0,0:10:04.19,0:10:06.92,Default Jp,NTP,0,0,0,,私 大好物なんだよね これ
+Dialogue: 0,0:10:07.12,0:10:10.54,Ripple Jp,NTP,0,0,0,,え～ そんな大したものじゃないのに～
+Dialogue: 0,0:10:11.43,0:10:16.75,Default Jp,NTP,0,0,0,,私からすれば 料理できる人類は みんな雲の上の存在だよ…
+Dialogue: 0,0:10:17.23,0:10:22.24,Ripple Jp,NTP,0,0,0,,ｱﾊﾊﾊ… なっち 得意料理は 具なしｻﾝﾄﾞｲｯﾁとかだもんね
+Dialogue: 0,0:10:22.39,0:10:23.80,Default Jp,NTP,0,0,0,,うぅ…
+Dialogue: 0,0:10:26.71,0:10:28.54,Default Jp,NTP,0,0,0,,（ﾁｬｲﾑ）
+Dialogue: 0,0:10:28.70,0:10:31.72,Default Jp,NTP,0,0,0,,あ～ めんどくさいなぁ
+Dialogue: 0,0:10:31.95,0:10:35.42,Ripple Jp,NTP,0,0,0,,んもう 放送委員を選んだのは なっちでしょ～
+Dialogue: 0,0:10:35.83,0:10:40.72,Ripple Jp,NTP,0,0,0,,自分でﾗｲﾌﾞするときのためにも 音響機材に慣れておきたいって
+Dialogue: 0,0:10:40.93,0:10:44.96,Default Jp,NTP,0,0,0,,まぁねぇ… いくらｱﾘｽﾋﾟｱﾝが 手伝ってくれるっていっても
+Dialogue: 0,0:10:45.15,0:10:48.11,Default Jp,NTP,0,0,0,,一とおりは わかるように なってないとﾀﾞﾒだよね～
+Dialogue: 0,0:10:48.51,0:10:50.26,Default Jp,NTP,0,0,0,,自分のことなんだし～
+Dialogue: 0,0:10:50.68,0:10:54.86,Ripple Jp,NTP,0,0,0,,じゃあ びしっとする！ほら なっち 頑張っておいで！
+Dialogue: 0,0:10:55.37,0:10:58.01,Default Jp,NTP,0,0,0,,へいへい そうしますかね～
+Dialogue: 0,0:10:58.61,0:11:02.15,Default Jp,NTP,0,0,0,,ごめんね みなも 一緒に帰れんくて
+Dialogue: 0,0:11:02.36,0:11:06.78,Ripple Jp,NTP,0,0,0,,いいよ～ 私も 今日は これからちょっと用事あったし
+Dialogue: 0,0:11:07.01,0:11:09.15,Default Jp,NTP,0,0,0,,用事？ なんぞ？
+Dialogue: 0,0:11:09.35,0:11:12.43,Ripple Jp,NTP,0,0,0,,あっ え～っと… ほ ほら なっち！
+Dialogue: 0,0:11:12.64,0:11:15.36,Ripple Jp,NTP,0,0,0,,早く行かないと 委員会に遅れちゃうよ～！
+Dialogue: 0,0:11:15.51,0:11:16.97,Default Jp,NTP,0,0,0,,いや まだ始まらんけどさ…
+Dialogue: 0,0:11:17.17,0:11:20.38,Default Jp,NTP,0,0,0,,おぉ！ まぁ いっか
+Dialogue: 0,0:11:20.55,0:11:21.64,Default Jp,NTP,0,0,0,,それじゃ みなも
+Dialogue: 0,0:11:21.92,0:11:23.44,Default Jp,NTP,0,0,0,,帰ったら またLINKするね
+Dialogue: 0,0:11:25.68,0:11:28.12,Ripple Jp,NTP,0,0,0,,うん 頑張って なっち！
+Dialogue: 0,0:11:28.81,0:11:30.30,Ripple Jp,NTP,0,0,0,,よ～し じゃあ…
+Dialogue: 0,0:11:30.46,0:11:31.81,Zeal Jp,NTP,0,0,0,,私たちも行きましょうか
+Dialogue: 0,0:11:32.17,0:11:34.55,Ripple Jp,NTP,0,0,0,,か かがりちゃん!? 見てたの!?
+Dialogue: 0,0:11:34.76,0:11:38.61,Zeal Jp,NTP,0,0,0,,ﾌﾌｯ 少しだけね 目に入ってしまって
+Dialogue: 0,0:11:39.06,0:11:40.46,Ripple Jp,NTP,0,0,0,,ど どこから？
+Dialogue: 0,0:11:40.62,0:11:46.31,Zeal Jp,NTP,0,0,0,,陽ノ下さんが｢あ～ めんどくさいなぁ｣って 言ってた辺りからかしら
+Dialogue: 0,0:11:46.46,0:11:47.88,Ripple Jp,NTP,0,0,0,,ほぼ全部だよね!?
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:11:54.00,0:11:58.57,Meteor Jp,NTP,0,0,0,,ささ ど～ぞ ど～ぞ ﾊﾟｲｾﾝたち
+Dialogue: 0,0:11:59.34,0:12:01.59,Meteor Jp,NTP,0,0,0,,狭いところで すみませんけど
+Dialogue: 0,0:12:01.86,0:12:05.31,Ripple Jp,NTP,0,0,0,,わぁ… ここが ながせちゃんのお部屋かぁ
+Dialogue: 0,0:12:05.49,0:12:11.53,Meteor Jp,NTP,0,0,0,,ｳｪﾍﾍ… あんまり乙女の部屋を じろじろと見回さないでください…
+Dialogue: 0,0:12:11.68,0:12:12.89,Meteor Jp,NTP,0,0,0,,恥ずかしいっす
+Dialogue: 0,0:12:13.24,0:12:16.46,Ripple Jp,NTP,0,0,0,,あの 私たちも一応 乙女…
+Dialogue: 0,0:12:16.87,0:12:18.34,Zeal Jp,NTP,0,0,0,,ﾌﾌﾌｯ
+Dialogue: 0,0:12:18.50,0:12:20.10,Default Jp,NTP,0,0,0,,ﾆｬｰｵ
+Dialogue: 0,0:12:22.53,0:12:23.28,Ripple Jp,NTP,0,0,0,,猫だ
+Dialogue: 0,0:12:23.43,0:12:24.09,Zeal Jp,NTP,0,0,0,,猫ね
+Dialogue: 0,0:12:24.67,0:12:26.27,Default Jp,NTP,0,0,0,,ﾆｬｰｵ
+Dialogue: 0,0:12:26.43,0:12:29.68,Meteor Jp,NTP,0,0,0,,すけさん ｱｲﾘﾝ また潜り込んでたか
+Dialogue: 0,0:12:29.97,0:12:31.68,Meteor Jp,NTP,0,0,0,,猫は気にしないでください
+Dialogue: 0,0:12:31.84,0:12:37.06,Meteor Jp,NTP,0,0,0,,ささ！ 親睦を深めるために 女子会しましょ 女子会！
+Dialogue: 0,0:12:38.76,0:12:40.81,Default Jp,NTP,0,0,0,,ﾆｬｰ
+Dialogue: 0,0:12:40.99,0:12:43.78,Ripple Jp,NTP,0,0,0,,私 ﾁﾝﾁﾗ飼ってみたいんだよね～
+Dialogue: 0,0:12:43.93,0:12:44.89,Meteor Jp,NTP,0,0,0,,ﾁﾝﾁﾗ？
+Dialogue: 0,0:12:45.02,0:12:46.46,Meteor Jp,NTP,0,0,0,,何食べるんすか？ ﾁﾝﾁﾗって
+Dialogue: 0,0:12:46.62,0:12:48.00,Ripple Jp,NTP,0,0,0,,ﾁﾝﾁﾗね ﾁﾓｼｰ
+Dialogue: 0,0:12:48.24,0:12:50.00,Meteor Jp,NTP,0,0,0,,ﾁﾓｼｰ？
+Dialogue: 0,0:12:53.29,0:12:56.39,Ripple Jp,NTP,0,0,0,,はい！今日のために作ってきたよ～！
+Dialogue: 0,0:12:56.83,0:12:58.44,Meteor Jp,NTP,0,0,0,,ありがとうございます！
+Dialogue: 0,0:12:58.61,0:12:59.70,Zeal Jp,NTP,0,0,0,,わぁ！
+Dialogue: 0,0:12:59.85,0:13:02.30,Zeal Jp,NTP,0,0,0,,うわぁ！ うわぁ～！
+Dialogue: 0,0:13:04.48,0:13:05.75,Meteor Jp,NTP,0,0,0,,あ～ん
+Dialogue: 0,0:13:07.74,0:13:10.82,Meteor Jp,NTP,0,0,0,,うまっ!? 何これ めっちゃおいしい！
+Dialogue: 0,0:13:10.98,0:13:12.29,Meteor Jp,NTP,0,0,0,,ﾌﾟﾛの味ですね！
+Dialogue: 0,0:13:12.46,0:13:15.04,Ripple Jp,NTP,0,0,0,,そ そんな大げさな…
+Dialogue: 0,0:13:15.21,0:13:19.96,Ripple Jp,NTP,0,0,0,,あ でも お母さんのﾚｼﾋﾟだから ﾌﾟﾛの味にはなるのかも？
+Dialogue: 0,0:13:20.12,0:13:25.11,Meteor Jp,NTP,0,0,0,,あ～ お菓子作りの専門学校の先生をやってるって 言ってましたもんね
+Dialogue: 0,0:13:34.61,0:13:35.86,Zeal Jp,NTP,0,0,0,,あ～
+Dialogue: 0,0:13:37.19,0:13:38.42,Zeal Jp,NTP,0,0,0,,あ～ん
+Dialogue: 0,0:13:45.88,0:13:47.62,Zeal Jp,NTP,0,0,0,,ｱﾊｯ
+Dialogue: 0,0:13:47.89,0:13:52.56,Meteor Jp,NTP,0,0,0,,みなもﾊﾟｲｾﾝ… なんか かわいい生き物がいますよ…
+Dialogue: 0,0:13:53.40,0:13:54.69,Ripple Jp,NTP,0,0,0,,うん… いるね…
+Dialogue: 0,0:13:55.41,0:13:57.03,Zeal Jp,NTP,0,0,0,,ﾊｯ！
+Dialogue: 0,0:13:58.73,0:14:00.38,Zeal Jp,NTP,0,0,0,,(せきばらい)
+Dialogue: 0,0:14:01.05,0:14:02.92,Zeal Jp,NTP,0,0,0,,とてもおいしいわよ みなも
+Dialogue: 0,0:14:03.06,0:14:04.61,Default Jp,NTP,0,0,0,,ずるいよ…
+Dialogue: 0,0:14:04.83,0:14:07.29,Default Jp,NTP,0,0,0,,君たちばっかり おいしいもの食べて
+Dialogue: 0,0:14:07.62,0:14:09.66,Default Jp,NTP,0,0,0,,僕だけ仲間外れ…
+Dialogue: 0,0:14:09.84,0:14:14.02,Meteor Jp,NTP,0,0,0,,ごめんね ﾅﾋﾞｰﾕ 女子会なんだよ これがね
+Dialogue: 0,0:14:14.28,0:14:18.40,Ripple Jp,NTP,0,0,0,,ﾅﾋﾞｰﾕの分も ちゃんとあるから そっち行ったときに渡すね
+Dialogue: 0,0:14:18.57,0:14:20.54,Default Jp,NTP,0,0,0,,さすが みなもだね！
+Dialogue: 0,0:14:21.23,0:14:23.99,Zeal Jp,NTP,0,0,0,,この間のﾗｲﾌﾞ とってもすてきだったわ～
+Dialogue: 0,0:14:24.14,0:14:26.54,Meteor Jp,NTP,0,0,0,,あ～ そんな 恥ずかしいっす
+Dialogue: 0,0:14:26.69,0:14:28.29,Zeal Jp,NTP,0,0,0,,ｷﾗｯ ｷﾗｯ ｷﾗｯ…
+Dialogue: 0,0:14:28.44,0:14:29.16,Meteor Jp,NTP,0,0,0,,やめてくださいよ～
+Dialogue: 0,0:14:29.54,0:14:32.49,Zeal Jp,NTP,0,0,0,,みなも 飲むかしゃべるか どっちかにしなさい
+Dialogue: 0,0:14:32.66,0:14:33.46,Meteor Jp,NTP,0,0,0,,そうですよ！
+Dialogue: 0,0:14:33.71,0:14:35.00,Ripple Jp,NTP,0,0,0,,は～い！
+Dialogue: 0,0:14:35.64,0:14:36.83,Ripple Jp,NTP,0,0,0,,なが～い
+Dialogue: 0,0:14:37.02,0:14:38.60,Meteor Jp,NTP,0,0,0,,ｱｲﾘﾝ よかったね～
+Dialogue: 0,0:14:39.07,0:14:40.10,Ripple Jp,NTP,0,0,0,,こんな伸びるの？
+Dialogue: 0,0:14:40.26,0:14:40.83,Zeal Jp,NTP,0,0,0,,お餅みたい
+Dialogue: 0,0:14:45.72,0:14:47.95,Default Jp,NTP,0,0,0,,（笑い声）
+Dialogue: 0,0:14:48.72,0:14:53.80,Meteor Jp,NTP,0,0,0,,でも みなもﾊﾟｲｾﾝのお母さんすごいっす ﾊﾟﾃｨｼｴってことですよね？
+Dialogue: 0,0:14:54.16,0:14:56.07,Ripple Jp,NTP,0,0,0,,そう… なのかな？
+Dialogue: 0,0:14:56.24,0:14:59.10,Ripple Jp,NTP,0,0,0,,別に お店開いてるわけじゃないけど
+Dialogue: 0,0:14:59.48,0:15:04.57,Meteor Jp,NTP,0,0,0,,それに かがりﾊﾟｲｾﾝのご両親も有名人だし うらやましいです
+Dialogue: 0,0:15:04.95,0:15:08.50,Meteor Jp,NTP,0,0,0,,うちの両親 普通の会社員だし 主婦だし
+Dialogue: 0,0:15:08.67,0:15:12.00,Zeal Jp,NTP,0,0,0,,なに言ってるの それも立派なお仕事よ
+Dialogue: 0,0:15:12.27,0:15:18.42,Ripple Jp,NTP,0,0,0,,うん うちはお父さんもお母さんも お仕事の時間帯が違っているから
+Dialogue: 0,0:15:18.62,0:15:21.48,Ripple Jp,NTP,0,0,0,,なかなか そろって ごはん食べられないし
+Dialogue: 0,0:15:21.66,0:15:23.65,Ripple Jp,NTP,0,0,0,,それは ちょっぴり寂しいかな…
+Dialogue: 0,0:15:23.88,0:15:26.70,Meteor Jp,NTP,0,0,0,,なるほど そういうものか～
+Dialogue: 0,0:15:26.89,0:15:29.73,Default Jp,NTP,0,0,0,,みなものお父さんは 何をやってる人なの？
+Dialogue: 0,0:15:29.91,0:15:33.06,Ripple Jp,NTP,0,0,0,,えっとね… ｱﾅｳﾝｻｰ
+Dialogue: 0,0:15:33.23,0:15:34.29,Meteor Jp,NTP,0,0,0,,はっ？
+Dialogue: 0,0:15:34.73,0:15:37.08,Ripple Jp,NTP,0,0,0,,ｱﾅｳﾝｻｰ ﾃﾚﾋﾞの
+Dialogue: 0,0:15:37.24,0:15:38.30,Meteor Jp,NTP,0,0,0,,はぁ!?
+Dialogue: 0,0:15:38.73,0:15:42.53,Ripple Jp,NTP,0,0,0,,んと 知らない？空野誠志郎って
+Dialogue: 0,0:15:42.74,0:15:45.40,Zeal Jp,NTP,450,0,0,,{\an1}空野誠志郎!?
+Dialogue: 0,0:15:42.74,0:15:45.40,Meteor Jp,NTP,0,450,0,,{\an3}空野誠志郎!?
+Dialogue: 0,0:15:45.87,0:15:47.81,Ripple Jp,NTP,0,0,0,,う うん
+Dialogue: 0,0:15:48.00,0:15:52.94,Meteor Jp,NTP,0,0,0,,空野ｱﾅって言ったら 『ｱｻﾊｯﾁ』の司会の人じゃないですか！
+Dialogue: 0,0:15:53.13,0:15:55.37,Meteor Jp,NTP,0,0,0,,うちも毎朝 観てますよ！
+Dialogue: 0,0:15:55.56,0:15:58.68,Zeal Jp,NTP,0,0,0,,空野…！確かに名字は一緒だけど
+Dialogue: 0,0:15:58.85,0:16:02.92,Zeal Jp,NTP,0,0,0,,あなたのお父様だったの みなも！空野ｱﾅが!?
+Dialogue: 0,0:16:03.10,0:16:06.65,Ripple Jp,NTP,0,0,0,,近い近い近い かがりちゃん 近いよ！
+Dialogue: 0,0:16:07.11,0:16:08.79,Zeal Jp,NTP,0,0,0,,あっ
+Dialogue: 0,0:16:09.40,0:16:10.74,Zeal Jp,NTP,0,0,0,,ごめんなさい…
+Dialogue: 0,0:16:11.14,0:16:13.96,Meteor Jp,NTP,0,0,0,,う～ん かがりﾊﾟｲｾﾝ？
+Dialogue: 0,0:16:14.39,0:16:17.36,Meteor Jp,NTP,0,0,0,,空野ｱﾅ お好きなんです？
+Dialogue: 0,0:16:17.53,0:16:18.76,Zeal Jp,NTP,0,0,0,,そうね…
+Dialogue: 0,0:16:19.19,0:16:23.54,Zeal Jp,NTP,0,0,0,,空野ｱﾅの話す言葉って 発音も美しくて 声の大きさも適切で 相手に伝わりやすくて
+Dialogue: 0,0:16:23.70,0:16:26.61,Zeal Jp,NTP,0,0,0,,好感が持てるから とてもいいなって ずっと思っていたの
+Dialogue: 0,0:16:26.99,0:16:30.88,Meteor Jp,NTP,0,0,0,,めっちゃ早口になりましたね かがりﾊﾟｲｾﾝ
+Dialogue: 0,0:16:31.09,0:16:34.70,Ripple Jp,NTP,0,0,0,,ｱﾊ ｱﾊﾊ… なんか恥ずかしいね
+Dialogue: 0,0:16:34.87,0:16:38.07,Ripple Jp,NTP,0,0,0,,自分のお父さんのこと 褒められるのって
+Dialogue: 0,0:16:38.47,0:16:43.18,Ripple Jp,NTP,0,0,0,,でも そう言ってもらえて うれしいな ｴﾍﾍｯ
+Dialogue: 0,0:16:45.63,0:16:49.17,Meteor Jp,NTP,0,0,0,,そんなに空野ｱﾅのﾌｧﾝなら ｻｲﾝもらったらどうです？
+Dialogue: 0,0:16:49.37,0:16:50.55,Zeal Jp,NTP,0,0,0,,恐れ多いわ…
+Dialogue: 0,0:16:50.77,0:16:54.47,Ripple Jp,NTP,0,0,0,,う～ん じゃあ うち来て お父さんと会う？
+Dialogue: 0,0:16:54.62,0:16:55.83,Zeal Jp,NTP,0,0,0,,もっと恐れ多いわ！
+Dialogue: 0,0:16:55.96,0:16:57.64,Default Jp,NTP,0,0,0,,ふぁっ？ これは…
+Dialogue: 0,0:16:56.41,0:16:57.98,Ripple Jp,NTP,0,0,0,,{\an3}じゃあ 一緒に..
+Dialogue: 0,0:16:58.16,0:17:01.34,Default Jp,NTP,0,0,0,,みんな！ｼﾞｬﾏｵｯｸが出現したみたいだ！こっちに来て！
+Dialogue: 0,0:17:01.90,0:17:05.11,Meteor Jp,NTP,0,0,0,,また～!? あいつら休みないのか！
+Dialogue: 0,0:17:05.29,0:17:07.05,Ripple Jp,NTP,0,0,0,,早くやっつけないと！
+Dialogue: 0,0:17:07.35,0:17:09.11,Zeal Jp,NTP,0,0,0,,えぇ すぐに行きましょう！
+Dialogue: 0,0:17:09.28,0:17:12.07,Meteor Jp,NTP,0,0,0,,おちおちお茶もできないわ～
+Dialogue: 0,0:17:20.73,0:17:21.55,Default Jp,NTP,0,0,0,,あっ！
+Dialogue: 0,0:17:21.70,0:17:22.50,Ripple Jp,NTP,0,0,0,,ﾅﾋﾞｰﾕ！
+Dialogue: 0,0:17:22.72,0:17:24.36,Zeal Jp,NTP,0,0,0,,ﾐｭｰﾁｶﾗを取られた子は？
+Dialogue: 0,0:17:24.73,0:17:26.55,Default Jp,NTP,0,0,0,,いないよ！避難誘導も済んだ！
+Dialogue: 0,0:17:26.74,0:17:29.52,Meteor Jp,NTP,0,0,0,,さっすが ﾅﾋﾞｰﾕさまさまだね！
+Dialogue: 0,0:17:29.72,0:17:31.43,Default Jp,NTP,0,0,0,,みんな あとはお願い！
+Dialogue: 0,0:17:31.59,0:17:32.99,Ripple Jp,NTP,0,0,0,,うん 任せて！
+Dialogue: 0,0:17:33.17,0:17:36.09,Ripple Jp,NTP,0,0,0,,かがりちゃん ながせちゃん やっちゃうよ！
+Dialogue: 0,0:17:36.31,0:17:36.84,Zeal Jp,NTP,0,0,0,,えぇ！
+Dialogue: 0,0:17:37.02,0:17:38.11,Meteor Jp,NTP,0,0,0,,がってん！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:17:47.35,0:17:49.26,Ripple Jp,NTP,0,0,0,,ﾌﾟﾘﾝｾｽ･ﾘｯﾌﾟﾙ！
+Dialogue: 0,0:17:51.02,0:17:52.46,Zeal Jp,NTP,0,0,0,,ﾌﾟﾘﾝｾｽ･ｼﾞｰﾙ
+Dialogue: 0,0:17:49.67,0:17:50.76,Meteor Jp,NTP,0,0,0,,ﾌﾟﾘﾝｾｽ･ﾐｰﾃｨｱ！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:17:57.26,0:18:01.86,Default Jp2,NTP,0,0,0,,現れたか ﾌﾟﾘﾝｾｽ せいぜい歓迎してやろう
+Dialogue: 0,0:18:02.33,0:18:03.82,Default Jp2,NTP,0,0,0,,ゆけ ｼﾞｬﾏｵｯｸ！
+Dialogue: 0,0:18:12.75,0:18:14.68,Ripple Jp,NTP,0,0,0,,よ～いしょっ！
+Dialogue: 0,0:18:19.54,0:18:21.86,Zeal Jp,NTP,0,0,0,,1 2
+Dialogue: 0,0:18:23.48,0:18:24.72,Zeal Jp,NTP,0,0,0,,3！
+Dialogue: 0,0:18:37.64,0:18:40.42,Default Jp2,NTP,0,0,0,,やはり以前よりも戦い慣れている
+Dialogue: 0,0:18:40.87,0:18:43.86,Default Jp2,NTP,0,0,0,,なおのこと あれを出す必要があるな
+Dialogue: 0,0:18:45.19,0:18:46.73,Meteor Jp,NTP,0,0,0,,んっ？ あいつは!?
+Dialogue: 0,0:19:01.05,0:19:01.94,Ripple Jp,NTP,0,0,0,,ｼﾞｰﾙ！
+Dialogue: 0,0:19:02.09,0:19:02.82,Meteor Jp,NTP,0,0,0,,大丈夫です!?
+Dialogue: 0,0:19:03.31,0:19:06.58,Default Jp2,NTP,0,0,0,,ﾌﾝ… 私を見くびってもらっては困る
+Dialogue: 0,0:19:07.50,0:19:10.25,Default Jp2,NTP,0,0,0,,このﾊﾞﾝﾄﾞ･ｽﾅｯﾁのﾍﾞｽをな
+Dialogue: 0,0:19:11.00,0:19:12.77,Ripple Jp,NTP,0,0,0,,ﾊﾞﾝﾄﾞ･ｽﾅｯﾁ…？
+Dialogue: 0,0:19:13.13,0:19:15.32,Zeal Jp,NTP,0,0,0,,それが… あなたたちの組織！
+Dialogue: 0,0:19:15.77,0:19:20.49,Default Jp2,NTP,0,0,0,,では そろそろ見せてやろう 来い ｼﾞｬﾏｵｯｸ･ﾙｰｸ！
+Dialogue: 0,0:19:24.00,0:19:27.75,Ripple Jp,NTP,0,0,0,,知らないｼﾞｬﾏｵｯｸ まだ新しいのが出てくるの!?
+Dialogue: 0,0:19:32.35,0:19:33.53,Zeal Jp,NTP,0,0,0,,なに…？
+Dialogue: 1,0:19:35.01,0:19:36.83,Ripple Jp,NTP,0,0,0,,{\clip(0,0,960,1080)}飛んできた～!?
+Dialogue: 0,0:19:35.01,0:19:36.83,Meteor Jp,NTP,0,0,0,,{\clip(960,0,1920,1080)}飛んできた～!?
+Dialogue: 0,0:19:38.97,0:19:40.74,Ripple Jp,NTP,0,0,0,,ﾋﾞ ﾋﾞｯｸﾘした…
+Dialogue: 0,0:19:41.32,0:19:44.12,Zeal Jp,NTP,0,0,0,,でも 両腕が飛んでいったなら ﾁｬﾝｽよ
+Dialogue: 0,0:19:44.83,0:19:47.33,Default Jp,NTP,0,0,0,,（地響き）
+Dialogue: 0,0:19:47.50,0:19:48.55,Meteor Jp,NTP,0,0,0,,ほわあ!?
+Dialogue: 1,0:19:49.44,0:19:52.80,Meteor Jp,NTP,0,0,0,,{\clip(0,0,960,1080)}戻ってきた～!? うわぁ～！
+Dialogue: 0,0:19:49.44,0:19:52.80,Ripple Jp,NTP,0,0,0,,{\clip(960,0,1920,1080)}戻ってきた～!? うわぁ～！
+Dialogue: 0,0:19:57.54,0:20:01.97,Meteor Jp,NTP,0,0,0,,もう怒った！私のﾐｭｰﾁｶﾗ ﾘﾐｯﾄﾌﾞﾚｲｸ！
+Dialogue: 0,0:20:04.69,0:20:09.96,Meteor Jp,NTP,0,0,0,,ﾐｰﾃｨｱ ｱｽﾃﾛｲﾄﾞｼｬﾜｰ！
+Dialogue: 0,0:20:12.97,0:20:14.73,Meteor Jp,NTP,0,0,0,,にゃんですと～!?
+Dialogue: 0,0:20:15.09,0:20:16.82,Zeal Jp,NTP,0,0,0,,ﾊﾞﾘｱだというの…!?
+Dialogue: 0,0:20:16.98,0:20:19.21,Default Jp,NTP,0,0,0,,だったらｼﾞｰﾙ！ 君もだ！
+Dialogue: 0,0:20:19.56,0:20:20.85,Zeal Jp,NTP,0,0,0,,そうね！
+Dialogue: 0,0:20:22.74,0:20:27.89,Zeal Jp,NTP,0,0,0,,ｼﾞｰﾙ ﾗｲｼﾞﾝｸﾞﾎﾞﾙｹｰﾉ!!
+Dialogue: 0,0:20:32.18,0:20:33.86,Default Jp,NTP,0,0,0,,これでもﾀﾞﾒか…
+Dialogue: 0,0:20:34.20,0:20:37.78,Default Jp2,NTP,0,0,0,,ﾌﾝ… どうやらお前たちの力も そこまでの…
+Dialogue: 0,0:20:37.92,0:20:39.05,Ripple Jp,NTP,0,0,0,,まだ終わりじゃない!!
+Dialogue: 0,0:20:39.20,0:20:40.24,Default Jp2,NTP,0,0,0,,なに!?
+Dialogue: 0,0:20:43.38,0:20:48.85,Ripple Jp,NTP,0,0,0,,ﾘｯﾌﾟﾙ ｼｬｲﾆｰｽﾄﾘｰﾑ!!
+Dialogue: 0,0:20:58.93,0:21:03.29,Meteor Jp,NTP,0,0,0,,{\clip(960,0,1920,1080)}いっけ～！
+Dialogue: 1,0:20:58.93,0:21:03.29,Zeal Jp,NTP,0,0,0,,{\clip(0,0,960,1080)}いっけ～！
+Dialogue: 0,0:21:08.54,0:21:09.92,Default Jp2,NTP,0,0,0,,ここまでか…
+Dialogue: 0,0:21:10.38,0:21:13.44,Default Jp2,NTP,0,0,0,,だが 成果は上々と言えるだろうな
+Dialogue: 0,0:21:17.08,0:21:19.61,Default Jp,NTP,0,0,0,,みんな お疲れ～！
+Dialogue: 0,0:21:20.07,0:21:22.68,Meteor Jp,NTP,0,0,0,,し しんどかったぁ…
+Dialogue: 0,0:21:22.84,0:21:26.88,Ripple Jp,NTP,0,0,0,,まさか ３人がかりじゃないと やっつけられないなんて…
+Dialogue: 0,0:21:27.06,0:21:29.22,Default Jp,NTP,0,0,0,,ﾊﾊﾊﾊ… あっ…
+Dialogue: 0,0:21:31.84,0:21:32.92,Default Jp,NTP,0,0,0,,かがり？
+Dialogue: 0,0:21:33.07,0:21:36.98,Zeal Jp,NTP,0,0,0,,ﾎﾟｰﾝ ﾅｲﾄ ﾋﾞｼｮｯﾌﾟ 今回は ﾙｰｸ
+Dialogue: 0,0:21:37.18,0:21:41.80,Zeal Jp,NTP,0,0,0,,そして ｼﾞｬﾏｵｯｸを操る あの男たち ﾊﾞﾝﾄﾞ･ｽﾅｯﾁ
+Dialogue: 0,0:21:42.10,0:21:44.63,Zeal Jp,NTP,0,0,0,,敵は どんどん強くなる一方ね
+Dialogue: 0,0:21:45.13,0:21:47.27,Zeal Jp,NTP,0,0,0,,なんとか… しなくては
+Dialogue: 0,0:21:47.64,0:21:51.13,Meteor Jp,NTP,0,0,0,,こんなんでしんどい言ってたら ﾀﾞﾒってことですね
+Dialogue: 0,0:21:51.60,0:21:52.78,Ripple Jp,NTP,0,0,0,,そうだね…
+Dialogue: 0,0:21:54.96,0:21:58.80,Ripple Jp,NTP,0,0,0,,私たちが みんなを守らないと！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:23:34.54,0:23:35.85,Ripple Jp,NTP,0,0,0,,ガ ガオォ！
+Dialogue: 0,0:23:36.02,0:23:39.41,Ripple Jp,NTP,0,0,0,,ス スーパーチンチラ大魔王だぞ かちっちゃうぞ
+Dialogue: 0,0:23:39.56,0:23:41.81,Ripple Jp,NTP,0,0,0,,次回 プリンセッション
+Dialogue: 0,0:23:41.85,0:23:43.03,Ripple Jp,NTP,0,0,0,,ガオォ！
+Dialogue: 0,0:23:43.19,0:23:44.19,Default Jp,NTP,0,0,0,,仲いいね
+Dialogue: 0,0:23:44.37,0:23:48.05,Default Jp,NTP,0,0,0,,お 知ってる チンチラで怒る時 黄色液体飛ばしてらしよ
+Dialogue: 0,0:23:48.20,0:23:49.65,Ripple Jp,NTP,0,0,0,,変なこと言わないで！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default Jp,NTP,0,0,0,,
+Dialogue: 0,0:00:06.61,0:00:07.43,Ripple,NTP,0,0,0,,上了！
+Dialogue: 0,0:00:07.59,0:00:08.20,Meteor,NTP,0,0,0,,收到！
+Dialogue: 0,0:00:08.36,0:00:08.96,Zeal,NTP,0,0,0,,诶！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:12.45,0:00:17.93,LIVE Ripple Jp,NTP,0,0,0,,誰かのため 力になる 自分のためだから
+Dialogue: 0,0:00:18.09,0:00:23.52,LIVE Ripple Jp,NTP,0,0,0,,他の誰でもないよ 私の決意
+Dialogue: 0,0:00:23.85,0:00:26.57,LIVE Ripple Jp,NTP,0,0,0,,邪魔させない 強い想い
+Dialogue: 0,0:00:26.73,0:00:29.38,LIVE Ripple Jp,NTP,0,0,0,,奪わせない フラグメント
+Dialogue: 0,0:00:29.62,0:00:32.22,LIVE Ripple Jp,NTP,0,0,0,,生まれたての結晶は
+Dialogue: 0,0:00:32.22,0:00:37.24,LIVE Ripple Jp,NTP,0,0,0,,一生懸命 絶対 絶対 守ってみせる
+Dialogue: 0,0:00:00.00,0:00:00.00,*Default,NTP,0,0,0,,
+Dialogue: 0,0:00:12.45,0:00:17.93,LIVE Ripple,NTP,0,0,0,,我为人人 人人为我
+Dialogue: 0,0:00:18.09,0:00:23.52,LIVE Ripple,NTP,0,0,0,,我的决心 独一无二
+Dialogue: 0,0:00:23.85,0:00:26.57,LIVE Ripple,NTP,0,0,0,,强烈的信念 容不得妨碍
+Dialogue: 0,0:00:26.73,0:00:29.38,LIVE Ripple,NTP,0,0,0,,点点碎片 无人能夺
+Dialogue: 0,0:00:29.62,0:00:32.22,LIVE Ripple,NTP,0,0,0,,由其聚集的结晶
+Dialogue: 0,0:00:32.22,0:00:37.24,LIVE Ripple,NTP,0,0,0,,竭尽全力 保护到底
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:16.33,0:00:19.03,Meteor,NTP,0,0,0,,走你！嘿嘿嘿嘿 走一个！
+Dialogue: 0,0:00:49.11,0:00:51.37,Default2,NTP,0,0,0,,嘁 没意思
+Dialogue: 0,0:00:53.37,0:00:57.92,Zeal,NTP,0,0,0,,与马和相战斗的方式 基本已经掌握了
+Dialogue: 0,0:00:58.13,0:01:01.83,Ripple,NTP,0,0,0,,嗯 今天没用歌的碎片 也解决了！
+Dialogue: 0,0:01:02.03,0:01:07.23,Meteor,NTP,0,0,0,,这下能确定了吧！我们的时代来了！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:02:43.04,0:02:45.50,Default2,NTP,0,0,0,,混蛋 嗯？
+Dialogue: 0,0:02:45.88,0:02:49.12,Default2,NTP,0,0,0,,辛苦了 吉塔 战果呢？
+Dialogue: 0,0:02:49.69,0:02:52.95,Default2,NTP,0,0,0,,挖苦我是吧！你都看到了吧！
+Dialogue: 0,0:02:53.11,0:02:55.09,Default2,NTP,0,0,0,,哈哈哈 别这么说
+Dialogue: 0,0:02:55.29,0:02:59.27,Default2,NTP,0,0,0,,那么怎么样 小妹妹们的对应？
+Dialogue: 0,0:02:59.61,0:03:03.56,Default2,NTP,0,0,0,,她们已经能轻松搞定马和相了
+Dialogue: 0,0:03:04.31,0:03:08.44,Default2,NTP,0,0,0,,差不多也该让她们收收骨头了...
+Dialogue: 0,0:03:09.33,0:03:11.48,Default2,NTP,0,0,0,,你有什么好主意吗？
+Dialogue: 0,0:03:11.68,0:03:12.85,Default2,NTP,0,0,0,,哼...
+Dialogue: 0,0:03:13.18,0:03:17.76,Default2,NTP,0,0,0,,新型的邪音魔完成了 即刻就前去实战测试
+Dialogue: 0,0:03:17.99,0:03:23.04,Default2,NTP,0,0,0,,喔！就等着呢！快点快点 给我玩玩！
+Dialogue: 0,0:03:23.51,0:03:25.00,Default2,NTP,0,0,0,,开什么玩笑
+Dialogue: 0,0:03:25.18,0:03:26.38,Default2,NTP,0,0,0,,什么意思!?
+Dialogue: 0,0:03:26.75,0:03:31.81,Default2,NTP,0,0,0,,真是后悔 之前那次把相交给你
+Dialogue: 0,0:03:32.00,0:03:35.40,Default2,NTP,0,0,0,,嗯...！那是...
+Dialogue: 0,0:03:35.84,0:03:37.62,Default2,NTP,0,0,0,,我没认真起来！
+Dialogue: 0,0:03:38.01,0:03:41.33,Default2,NTP,0,0,0,,不扯了 这次我去
+Dialogue: 0,0:03:41.76,0:03:44.28,Default2,NTP,0,0,0,,你就老实点 看家吧
+Dialogue: 0,0:03:44.47,0:03:45.34,Default2,NTP,0,0,0,,哼！
+Dialogue: 0,0:03:47.40,0:03:51.98,Default2,NTP,0,0,0,,肉搏特化的马 远距离攻击的相
+Dialogue: 0,0:03:52.24,0:03:54.87,Default2,NTP,0,0,0,,那么 这次新型的会是？
+Dialogue: 0,0:03:55.36,0:03:58.56,Default2,NTP,0,0,0,,你们就看着吧 不会无聊的
+Dialogue: 0,0:03:59.31,0:04:02.68,Default2,NTP,0,0,0,,得了 大体上是猜到了
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:04:06.30,0:04:08.47,Default,NTP,0,0,0,,预感有新
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:04:16.44,0:04:22.65,Default,NTP,0,0,0,,{\an7\pos(1521.667,38)}{\fs50}雪球曲奇\N材料清单 约能做25个\N低筋面粉 70克\N无盐黄油 40克\N细砂糖 15克\N杏仁粉 20克
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:04:24.66,0:04:26.40,Ripple,NTP,0,0,0,,好嘞！
+Dialogue: 0,0:04:27.23,0:04:30.99,Ripple,NTP,0,0,0,,首先把这些 搅拌
+Dialogue: 0,0:04:31.53,0:04:33.48,Ripple,NTP,0,0,0,,融化黄油
+Dialogue: 0,0:04:33.67,0:04:35.36,Default,NTP,0,0,0,,600瓦加热30秒
+Dialogue: 0,0:04:35.54,0:04:36.59,Default,NTP,0,0,0,,（烤箱叮音）
+Dialogue: 0,0:04:36.74,0:04:39.95,Ripple,NTP,0,0,0,,加到刚才做好的 搅拌！
+Dialogue: 0,0:04:42.22,0:04:43.20,Ripple,NTP,0,0,0,,好！
+Dialogue: 0,0:04:43.98,0:04:47.08,Ripple,NTP,0,0,0,,这样捏成型
+Dialogue: 0,0:04:50.75,0:04:53.08,Ripple,NTP,0,0,0,,再放入烤箱...
+Dialogue: 0,0:04:55.82,0:04:58.73,Default,NTP,0,0,0,,用烤箱600瓦 加热2分钟！
+Dialogue: 0,0:04:59.06,0:05:00.59,Default,NTP,0,0,0,,小心烫手哦!!
+Dialogue: 0,0:05:00.93,0:05:01.50,Default,NTP,0,0,0,,（烤箱叮音）
+Dialogue: 0,0:05:01.64,0:05:03.77,Ripple,NTP,0,0,0,,最后的收尾！
+Dialogue: 0,0:05:08.87,0:05:11.04,Ripple,NTP,0,0,0,,好了 出炉了！
+Dialogue: 0,0:05:11.84,0:05:12.99,Default,NTP,0,0,0,,我尝尝
+Dialogue: 0,0:05:13.34,0:05:14.80,Ripple,NTP,0,0,0,,啊...
+Dialogue: 0,0:05:15.17,0:05:17.29,Default,NTP,0,0,0,,嗯 非常好吃！
+Dialogue: 0,0:05:17.81,0:05:19.22,Ripple,NTP,0,0,0,,太好了
+Dialogue: 0,0:05:20.79,0:05:23.96,Default,NTP,0,0,0,,变得很熟练了呢 水萌
+Dialogue: 0,0:05:24.15,0:05:25.61,Ripple,NTP,0,0,0,,不不！
+Dialogue: 0,0:05:25.79,0:05:29.76,Ripple,NTP,0,0,0,,只是很简单的点心 这种程度谁都能办到的
+Dialogue: 0,0:05:30.33,0:05:32.42,Default,NTP,0,0,0,,越简单越难
+Dialogue: 0,0:05:32.82,0:05:35.60,Default,NTP,0,0,0,,越是简洁的东西 才越难糊弄
+Dialogue: 0,0:05:35.84,0:05:38.22,Default,NTP,0,0,0,,要做得美味是很难的
+Dialogue: 0,0:05:38.87,0:05:41.51,Ripple,NTP,0,0,0,,是 是这样的吗...
+Dialogue: 0,0:05:41.97,0:05:47.41,Ripple,NTP,0,0,0,,诶嘿嘿... 不愧是点心制作专业学校的老师 妈妈！
+Dialogue: 0,0:05:49.30,0:05:50.94,Default,NTP,0,0,0,,啊！
+Dialogue: 0,0:05:51.61,0:05:53.85,Default,NTP,0,0,0,,妈妈你们 好赖皮！
+Dialogue: 0,0:05:54.01,0:05:56.08,Default,NTP,0,0,0,,我也要吃！
+Dialogue: 0,0:05:56.23,0:06:00.15,Default,NTP,0,0,0,,要吃 要吃 要吃 要吃 要吃 要吃 要吃 要吃！
+Dialogue: 0,0:06:00.84,0:06:02.10,Ripple,NTP,0,0,0,,小陆
+Dialogue: 0,0:06:02.57,0:06:05.00,Ripple,NTP,0,0,0,,还没吃早饭 不行
+Dialogue: 0,0:06:05.27,0:06:07.53,Ripple,NTP,0,0,0,,会吃饱的
+Dialogue: 0,0:06:07.99,0:06:11.29,Default,NTP,0,0,0,,呜 另一个胃！会进另一个胃的!!
+Dialogue: 0,0:06:11.44,0:06:13.79,Default,NTP,0,0,0,,曲奇是饮料！
+Dialogue: 0,0:06:14.70,0:06:18.13,Ripple,NTP,0,0,0,,这种话 是从哪里学来的...
+Dialogue: 0,0:06:19.04,0:06:21.43,Ripple,NTP,0,0,0,,真是的 只能吃一个哦
+Dialogue: 0,0:06:21.61,0:06:24.18,Default,NTP,0,0,0,,哇！爱死姐姐了!!
+Dialogue: 0,0:06:25.46,0:06:26.71,Ripple,NTP,0,0,0,,来 啊
+Dialogue: 0,0:06:26.86,0:06:28.45,Default,NTP,0,0,0,,啊
+Dialogue: 0,0:06:30.04,0:06:31.62,Default,NTP,0,0,0,,嗯 好吃！
+Dialogue: 0,0:06:32.87,0:06:34.46,Default,NTP,0,0,0,,谢谢 姐姐！
+Dialogue: 0,0:06:35.25,0:06:37.07,Ripple,NTP,0,0,0,,真是个调皮的孩子...
+Dialogue: 0,0:06:37.23,0:06:39.08,Default,NTP,0,0,0,,抱歉了 水萌
+Dialogue: 0,0:06:39.16,0:06:40.76,Ripple,NTP,0,0,0,,诶 诶!?
+Dialogue: 0,0:06:40.94,0:06:43.80,Default,NTP,0,0,0,,妈妈太依赖水萌了
+Dialogue: 0,0:06:44.06,0:06:46.56,Default,NTP,0,0,0,,把家里事 还有小陆都交给你
+Dialogue: 0,0:06:47.94,0:06:49.51,Ripple,NTP,0,0,0,,啊...
+Dialogue: 0,0:06:51.40,0:06:55.86,Default,NTP,0,0,0,,爸爸也是 必须要在日出前就出勤
+Dialogue: 0,0:06:56.09,0:07:00.61,Default,NTP,0,0,0,,很少有机会 能一起吃早饭的吧？
+Dialogue: 0,0:07:02.07,0:07:06.00,Ripple,NTP,0,0,0,,没有的 完全没有... 这么回事的
+Dialogue: 0,0:07:06.20,0:07:12.43,Ripple,NTP,0,0,0,,妈妈爸爸的工作都很伟大 对大家都有意义
+Dialogue: 0,0:07:12.61,0:07:15.47,Ripple,NTP,0,0,0,,我能为你们助力 很开心的
+Dialogue: 0,0:07:18.01,0:07:18.99,Ripple,NTP,0,0,0,,啊...
+Dialogue: 0,0:07:19.14,0:07:20.96,Default,NTP,0,0,0,,谢谢 水萌
+Dialogue: 0,0:07:21.68,0:07:24.90,Ripple,NTP,0,0,0,,我没问题的 妈妈
+Dialogue: 0,0:07:26.26,0:07:29.80,Ripple,NTP,0,0,0,,啊 对了 我也交到新朋友了
+Dialogue: 0,0:07:29.98,0:07:31.63,Default,NTP,0,0,0,,那么那些是...
+Dialogue: 0,0:07:32.20,0:07:34.72,Default,NTP,0,0,0,,要送给新朋友的吗？
+Dialogue: 0,0:07:35.10,0:07:36.92,Ripple,NTP,0,0,0,,嗯 对的
+Dialogue: 0,0:07:37.24,0:07:39.27,Default,NTP,0,0,0,,是不是做多了呢...
+Dialogue: 0,0:07:39.44,0:07:42.27,Ripple,NTP,0,0,0,,啊哈哈哈... 稍微做多了一点
+Dialogue: 0,0:07:44.50,0:07:45.69,Ripple,NTP,0,0,0,,啊
+Dialogue: 0,0:07:45.86,0:07:49.27,Ripple,NTP,0,0,0,,啊 妈妈 快到点了 来得及吧？
+Dialogue: 0,0:07:49.82,0:07:51.85,Default,NTP,0,0,0,,啊 都这个点了？
+Dialogue: 0,0:07:52.26,0:07:55.13,Default,NTP,0,0,0,,抱歉 水萌 不用送了！
+Dialogue: 0,0:07:55.65,0:07:57.22,Ripple,NTP,0,0,0,,一路顺风！
+Dialogue: 0,0:08:05.04,0:08:08.26,Ripple,NTP,0,0,0,,小陆 怎么可以把番茄剩下
+Dialogue: 0,0:08:08.48,0:08:11.88,Default,NTP,0,0,0,,姐姐才是 你倒是吃花椰菜啊
+Dialogue: 0,0:08:12.13,0:08:12.98,Ripple,NTP,0,0,0,,怒...
+Dialogue: 0,0:08:18.42,0:08:20.90,Ripple,NTP,0,0,0,,以物换物 就此打住吧
+Dialogue: 0,0:08:21.07,0:08:23.18,Default,NTP,0,0,0,,谈判成立！
+Dialogue: 0,0:08:28.91,0:08:30.54,Ripple,NTP,0,400,0,,{\an3}我吃饱了
+Dialogue: 0,0:08:28.91,0:08:30.54,Default,NTP,400,0,0,,{\an1}我吃饱了
+Dialogue: 0,0:08:30.40,0:08:34.99,Default,NTP,0,0,0,,{\an7}早八策划
+Dialogue: 0,0:08:28.93,0:08:31.55,Default,NTP,0,0,0,,{\an8}今天的幸运色是粉红
+Dialogue: 0,0:08:32.03,0:08:34.82,Default,NTP,0,0,0,,祝大家 充满活力地开始一天！
+Dialogue: 0,0:08:35.86,0:08:37.15,Ripple,NTP,0,0,0,,我出门了！
+Dialogue: 0,0:08:35.86,0:08:37.15,Default,NTP,0,0,0,,{\an1}出门了！
+Dialogue: 0,0:08:37.91,0:08:39.91,Default,NTP,0,0,0,,噢哟！时机正好！
+Dialogue: 0,0:08:40.45,0:08:42.29,Default,NTP,0,0,0,,今天学校会吃什么呢？
+Dialogue: 0,0:08:42.45,0:08:43.53,Ripple,NTP,0,0,0,,会是什么呢
+Dialogue: 0,0:08:44.10,0:08:45.27,Default,NTP,0,0,0,,早 水萌
+Dialogue: 0,0:08:47.01,0:08:48.66,Ripple,NTP,0,0,0,,早 夏夏
+Dialogue: 0,0:08:49.24,0:08:50.90,Default,NTP,0,0,0,,早 夏姐！
+Dialogue: 0,0:08:51.29,0:08:54.00,Default,NTP,0,0,0,,哦 今天陆仔也一起啊
+Dialogue: 0,0:08:56.67,0:08:58.15,Default,NTP,0,0,0,,夏姐 夏姐！
+Dialogue: 0,0:08:58.45,0:09:00.68,Default,NTP,0,0,0,,有看昨天的《奋斗者》吗？
+Dialogue: 0,0:08:58.45,0:09:00.68,Default,NTP,0,0,0,,{\an7}{\fs50}有在奈亚子里出现过的蒙面好汉类特摄片
+Dialogue: 0,0:09:00.90,0:09:02.54,Default,NTP,0,0,0,,喔 看了看了
+Dialogue: 0,0:09:02.79,0:09:05.99,Default,NTP,0,0,0,,银河传说魔人 超强的啊
+Dialogue: 0,0:09:06.31,0:09:08.75,Ripple,NTP,0,0,0,,啥啊 银河传说魔人...
+Dialogue: 0,0:09:09.00,0:09:13.24,Default,NTP,0,0,0,,那当然是在银河的传说里出现的魔人
+Dialogue: 0,0:09:13.42,0:09:15.88,Default,NTP,0,0,0,,姐姐缺少学习呢
+Dialogue: 0,0:09:16.14,0:09:19.02,Ripple,NTP,0,0,0,,啊 是... 对不起...
+Dialogue: 0,0:09:19.37,0:09:21.39,Default,NTP,0,0,0,,我走了 姐姐们！
+Dialogue: 0,0:09:23.06,0:09:26.59,Ripple,NTP,0,0,0,,小陆 要好好学习
+Dialogue: 0,0:09:26.94,0:09:30.25,Default,NTP,0,0,0,,还是像老妈子一样呢 水萌
+Dialogue: 0,0:09:30.75,0:09:33.83,Ripple,NTP,0,0,0,,诶 这种程度还不至于吧
+Dialogue: 0,0:09:34.58,0:09:35.43,Default,NTP,0,0,0,,呼...
+Dialogue: 0,0:09:36.80,0:09:38.75,Ripple,NTP,0,0,0,,诶!? 怎么了!?
+Dialogue: 0,0:09:38.95,0:09:41.98,Default,NTP,0,0,0,,嗯？没什么
+Dialogue: 0,0:09:42.59,0:09:46.37,Default,NTP,0,0,0,,是因为水萌的脑袋就在那里吧？
+Dialogue: 0,0:09:46.55,0:09:49.41,Ripple,NTP,0,0,0,,莫名其妙的 夏夏...
+Dialogue: 0,0:09:49.83,0:09:51.11,Default,NTP,0,0,0,,嘻嘻嘻
+Dialogue: 0,0:09:53.07,0:09:54.62,Ripple,NTP,0,0,0,,对了 夏夏
+Dialogue: 0,0:09:54.78,0:09:57.80,Ripple,NTP,0,0,0,,趁还没忘记 先把这个给你
+Dialogue: 0,0:09:58.41,0:10:00.57,Default,NTP,0,0,0,,喔 谢了！
+Dialogue: 0,0:10:01.08,0:10:03.59,Default,NTP,0,0,0,,好久没吃到了 水萌的曲奇
+Dialogue: 0,0:10:04.19,0:10:06.92,Default,NTP,0,0,0,,是我喜欢的东西呢 这个
+Dialogue: 0,0:10:07.12,0:10:10.54,Ripple,NTP,0,0,0,,诶 也不是什么高贵的东西
+Dialogue: 0,0:10:11.43,0:10:16.75,Default,NTP,0,0,0,,对我而言 会烹饪的人类 那都是在云之上的...
+Dialogue: 0,0:10:17.23,0:10:22.24,Ripple,NTP,0,0,0,,啊哈哈哈... 夏夏的拿手菜是无夹心三明治这类的呢
+Dialogue: 0,0:10:22.39,0:10:23.80,Default,NTP,0,0,0,,呜...
+Dialogue: 0,0:10:26.71,0:10:28.54,Default,NTP,0,0,0,,（铃声）
+Dialogue: 0,0:10:28.70,0:10:31.72,Default,NTP,0,0,0,,啊 好麻烦啊
+Dialogue: 0,0:10:31.95,0:10:35.42,Ripple,NTP,0,0,0,,真是的 选当放送委员的是夏夏自己吧
+Dialogue: 0,0:10:35.83,0:10:40.72,Ripple,NTP,0,0,0,,你不是说 为了在表演的时候 能够熟练使用音响器材
+Dialogue: 0,0:10:40.93,0:10:44.96,Default,NTP,0,0,0,,也是啊... 再怎么有爱丽丝比亚人协助
+Dialogue: 0,0:10:45.15,0:10:48.11,Default,NTP,0,0,0,,也必须要能够独自操作的吧
+Dialogue: 0,0:10:48.51,0:10:50.26,Default,NTP,0,0,0,,毕竟是自己的事情
+Dialogue: 0,0:10:50.68,0:10:54.86,Ripple,NTP,0,0,0,,那就要鞭策自己！去吧 夏夏 加油！
+Dialogue: 0,0:10:55.37,0:10:58.01,Default,NTP,0,0,0,,好好 就听你的
+Dialogue: 0,0:10:58.61,0:11:02.15,Default,NTP,0,0,0,,抱歉 水萌 没法一起回家了
+Dialogue: 0,0:11:02.36,0:11:06.78,Ripple,NTP,0,0,0,,没关系 我今天也有点事情要去做
+Dialogue: 0,0:11:07.01,0:11:09.15,Default,NTP,0,0,0,,事情？什么？
+Dialogue: 0,0:11:09.35,0:11:12.43,Ripple,NTP,0,0,0,,啊 诶... 好 好了 夏夏！
+Dialogue: 0,0:11:12.64,0:11:15.36,Ripple,NTP,0,0,0,,你不赶快去 委员会议要迟到了！
+Dialogue: 0,0:11:15.51,0:11:16.97,Default,NTP,0,0,0,,不 还没开始呢...
+Dialogue: 0,0:11:17.17,0:11:20.38,Default,NTP,0,0,0,,哦！好吧 就这样吧
+Dialogue: 0,0:11:20.55,0:11:21.64,Default,NTP,0,0,0,,再见 水萌
+Dialogue: 0,0:11:21.92,0:11:23.44,Default,NTP,0,0,0,,等回去了 LINK联络
+Dialogue: 0,0:11:25.68,0:11:28.12,Ripple,NTP,0,0,0,,嗯 加油 夏夏！
+Dialogue: 0,0:11:28.81,0:11:30.30,Ripple,NTP,0,0,0,,好了 我也...
+Dialogue: 0,0:11:30.46,0:11:31.81,Zeal,NTP,0,0,0,,我们也走吧
+Dialogue: 0,0:11:32.17,0:11:34.55,Ripple,NTP,0,0,0,,小 小篝!? 看到了吗!?
+Dialogue: 0,0:11:34.76,0:11:38.61,Zeal,NTP,0,0,0,,嘻嘻 一点点呢 正好瞥见
+Dialogue: 0,0:11:39.06,0:11:40.46,Ripple,NTP,0,0,0,,从 从什么时候开始？
+Dialogue: 0,0:11:40.62,0:11:46.31,Zeal,NTP,0,0,0,,从阳之下同学说“啊 好麻烦啊”这里吧
+Dialogue: 0,0:11:46.46,0:11:47.88,Ripple,NTP,0,0,0,,几乎是全程了吧!?
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:11:49.02,0:11:53.02,Default,NTP,0,0,0,,{\c&HF61BE3&\pos(1430,290)}{\fad(320,0)}（吵闹）
+Dialogue: 0,0:11:54.00,0:11:58.57,Meteor,NTP,0,0,0,,快快 请进请进 老大姐们
+Dialogue: 0,0:11:59.34,0:12:01.59,Meteor,NTP,0,0,0,,房间狭窄 照顾不周
+Dialogue: 0,0:12:01.86,0:12:05.31,Ripple,NTP,0,0,0,,哇... 这里就是流星的房间啊
+Dialogue: 0,0:12:05.49,0:12:11.53,Meteor,NTP,0,0,0,,诶嘿嘿嘿嘿... 可别一直盯着少女的房间看哦...
+Dialogue: 0,0:12:11.68,0:12:12.89,Meteor,NTP,0,0,0,,很难为情的
+Dialogue: 0,0:12:13.24,0:12:16.46,Ripple,NTP,0,0,0,,那啥 我们也是少女啊...
+Dialogue: 0,0:12:16.87,0:12:18.34,Zeal,NTP,0,0,0,,嘻嘻嘻
+Dialogue: 0,0:12:18.50,0:12:20.10,Default,NTP,0,0,0,,喵哦
+Dialogue: 0,0:12:22.53,0:12:23.28,Ripple,NTP,0,0,0,,是猫啊
+Dialogue: 0,0:12:23.43,0:12:24.09,Zeal,NTP,0,0,0,,是猫呢
+Dialogue: 0,0:12:24.67,0:12:26.27,Default,NTP,0,0,0,,喵哦
+Dialogue: 0,0:12:26.43,0:12:29.68,Meteor,NTP,0,0,0,,大助 艾琳 又溜进来了吗
+Dialogue: 0,0:12:29.97,0:12:31.68,Meteor,NTP,0,0,0,,请别在意猫
+Dialogue: 0,0:12:31.84,0:12:37.06,Meteor,NTP,0,0,0,,好好！为了加深了解 开始女生会吧 女生会！
+Dialogue: 0,0:12:38.76,0:12:40.81,Default,NTP,0,0,0,,喵
+Dialogue: 0,0:12:40.99,0:12:43.78,Ripple,NTP,0,0,0,,我 很想养龙猫呢
+Dialogue: 0,0:12:43.93,0:12:44.89,Zeal,NTP,0,0,0,,龙猫？
+Dialogue: 0,0:12:45.02,0:12:46.46,Meteor,NTP,0,0,0,,要喂什么的？龙猫
+Dialogue: 0,0:12:46.62,0:12:48.00,Ripple,NTP,0,0,0,,龙猫啊 猫尾草
+Dialogue: 0,0:12:48.24,0:12:50.00,Zeal,NTP,0,0,0,,猫尾草？
+Dialogue: 0,0:12:53.29,0:12:56.39,Ripple,NTP,0,0,0,,给！今天特别做的哦！
+Dialogue: 0,0:12:56.83,0:12:58.44,Meteor,NTP,0,0,0,,非常感谢！
+Dialogue: 0,0:12:58.61,0:12:59.70,Zeal,NTP,0,0,0,,哇！
+Dialogue: 0,0:12:59.85,0:13:02.30,Zeal,NTP,0,0,0,,呜哇！呜哇！
+Dialogue: 0,0:13:04.48,0:13:05.75,Meteor,NTP,0,0,0,,啊
+Dialogue: 0,0:13:07.74,0:13:10.82,Meteor,NTP,0,0,0,,好吃!? 这什么 超级好吃！
+Dialogue: 0,0:13:10.98,0:13:12.29,Meteor,NTP,0,0,0,,职业的味道呢！
+Dialogue: 0,0:13:12.46,0:13:15.04,Ripple,NTP,0,0,0,,没 没那么夸张...
+Dialogue: 0,0:13:15.21,0:13:19.96,Ripple,NTP,0,0,0,,啊 不过是按妈妈的食谱做的 可能还真是职业的味道？
+Dialogue: 0,0:13:20.12,0:13:25.11,Meteor,NTP,0,0,0,,哦 说过的呢 在做点心的专业学校当老师
+Dialogue: 0,0:13:34.61,0:13:35.86,Zeal,NTP,0,0,0,,啊
+Dialogue: 0,0:13:37.19,0:13:38.42,Zeal,NTP,0,0,0,,啊
+Dialogue: 0,0:13:45.88,0:13:47.62,Zeal,NTP,0,0,0,,啊哈
+Dialogue: 0,0:13:47.89,0:13:52.56,Meteor,NTP,0,0,0,,水萌老大姐... 咱房间里好像有个可爱的生物...
+Dialogue: 0,0:13:53.40,0:13:54.69,Ripple,NTP,0,0,0,,嗯... 有的呢...
+Dialogue: 0,0:13:55.41,0:13:57.03,Zeal,NTP,0,0,0,,哈！
+Dialogue: 0,0:13:58.73,0:14:00.38,Zeal,NTP,0,0,0,,咳咳
+Dialogue: 0,0:14:01.05,0:14:02.92,Zeal,NTP,0,0,0,,非常好吃哦 水萌
+Dialogue: 0,0:14:03.06,0:14:04.61,Default,NTP,0,0,0,,真赖皮...
+Dialogue: 0,0:14:04.83,0:14:07.29,Default,NTP,0,0,0,,就你们一个劲地吃美食
+Dialogue: 0,0:14:07.62,0:14:09.66,Default,NTP,0,0,0,,就我被撇一边...
+Dialogue: 0,0:14:09.84,0:14:14.02,Meteor,NTP,0,0,0,,抱歉 纳比尤 这次毕竟是女生会
+Dialogue: 0,0:14:14.28,0:14:18.40,Ripple,NTP,0,0,0,,纳比尤的份有做的 等过去那边给你
+Dialogue: 0,0:14:18.57,0:14:20.54,Default,NTP,0,0,0,,不愧是水萌！
+Dialogue: 0,0:14:21.23,0:14:23.99,Zeal,NTP,0,0,0,,上次的音乐会 超棒的
+Dialogue: 0,0:14:24.14,0:14:26.54,Meteor,NTP,0,0,0,,啊 没有的 好难为情的
+Dialogue: 0,0:14:26.69,0:14:28.29,Zeal,NTP,0,0,0,,闪亮 闪亮 闪亮...
+Dialogue: 0,0:14:28.44,0:14:29.16,Meteor,NTP,0,0,0,,别说了啊
+Dialogue: 0,0:14:29.54,0:14:32.49,Zeal,NTP,0,0,0,,水萌 要喝要说你选一个
+Dialogue: 0,0:14:32.66,0:14:33.46,Meteor,NTP,0,0,0,,就是！
+Dialogue: 0,0:14:33.71,0:14:35.00,Ripple,NTP,0,0,0,,是！
+Dialogue: 0,0:14:35.64,0:14:36.83,Ripple,NTP,0,0,0,,变长
+Dialogue: 0,0:14:37.02,0:14:38.60,Meteor,NTP,0,0,0,,艾琳 很开心吧
+Dialogue: 0,0:14:39.07,0:14:40.10,Ripple,NTP,0,0,0,,是这样伸长的吗？
+Dialogue: 0,0:14:40.26,0:14:40.83,Zeal,NTP,0,0,0,,像年糕一样
+Dialogue: 0,0:14:45.72,0:14:47.95,Default,NTP,0,0,0,,（笑声）
+Dialogue: 0,0:14:48.72,0:14:53.80,Meteor,NTP,0,0,0,,不过 水萌老大姐的妈妈真厉害 是西点师吧？
+Dialogue: 0,0:14:54.16,0:14:56.07,Ripple,NTP,0,0,0,,是... 是不是吗？
+Dialogue: 0,0:14:56.24,0:14:59.10,Ripple,NTP,0,0,0,,虽然也没有开自己的店
+Dialogue: 0,0:14:59.48,0:15:04.57,Meteor,NTP,0,0,0,,小篝老大姐的父母也是有名人 好羡慕啊
+Dialogue: 0,0:15:04.95,0:15:08.50,Meteor,NTP,0,0,0,,我家父母 就是普通的公司员工 主妇
+Dialogue: 0,0:15:08.67,0:15:12.00,Zeal,NTP,0,0,0,,你说什么呢 那也是很伟大的工作
+Dialogue: 0,0:15:12.27,0:15:18.42,Ripple,NTP,0,0,0,,嗯 我家父母工作的时间段都岔开的
+Dialogue: 0,0:15:18.62,0:15:21.48,Ripple,NTP,0,0,0,,很少有机会能一起吃饭
+Dialogue: 0,0:15:21.66,0:15:23.65,Ripple,NTP,0,0,0,,有时候会有点寂寞呢...
+Dialogue: 0,0:15:23.88,0:15:26.70,Meteor,NTP,0,0,0,,懂了 是这样的啊
+Dialogue: 0,0:15:26.89,0:15:29.73,Default,NTP,0,0,0,,水萌爸爸是做什么工作的？
+Dialogue: 0,0:15:29.91,0:15:33.06,Ripple,NTP,0,0,0,,诶... 主播
+Dialogue: 0,0:15:33.23,0:15:34.29,Meteor,NTP,0,0,0,,哈？
+Dialogue: 0,0:15:34.73,0:15:37.08,Ripple,NTP,0,0,0,,主播 电视台的
+Dialogue: 0,0:15:37.24,0:15:38.30,Meteor,NTP,0,0,0,,哈!?
+Dialogue: 0,0:15:38.73,0:15:42.53,Ripple,NTP,0,0,0,,嗯 没看到过吗？叫做空野诚志郎
+Dialogue: 0,0:15:42.74,0:15:45.40,Zeal,NTP,400,0,0,,{\an1}空野诚志郎!?
+Dialogue: 0,0:15:42.74,0:15:45.40,Meteor,NTP,0,400,0,,{\an3}空野诚志郎!?
+Dialogue: 0,0:15:45.87,0:15:47.81,Ripple,NTP,0,0,0,,嗯 嗯
+Dialogue: 0,0:15:48.00,0:15:52.94,Meteor,NTP,0,0,0,,提到空野主播 不就是《早八》的主持人吗！
+Dialogue: 0,0:15:53.13,0:15:55.37,Meteor,NTP,0,0,0,,我家每天都看的！
+Dialogue: 0,0:15:55.56,0:15:58.68,Zeal,NTP,0,0,0,,空野...！确实是一个姓氏
+Dialogue: 0,0:15:58.85,0:16:02.92,Zeal,NTP,0,0,0,,居然是你爸爸吗 水萌！空野主播!?
+Dialogue: 0,0:16:03.10,0:16:06.65,Ripple,NTP,0,0,0,,好近好近好近 小篝 靠得太近了！
+Dialogue: 0,0:16:07.11,0:16:08.79,Zeal,NTP,0,0,0,,啊
+Dialogue: 0,0:16:09.40,0:16:10.74,Zeal,NTP,0,0,0,,抱歉...
+Dialogue: 0,0:16:11.14,0:16:13.96,Meteor,NTP,0,0,0,,嗯 小篝老大姐？
+Dialogue: 0,0:16:14.39,0:16:17.36,Meteor,NTP,0,0,0,,你喜欢空野主播吗？
+Dialogue: 0,0:16:17.53,0:16:18.76,Zeal,NTP,0,0,0,,是啊...
+Dialogue: 0,0:16:19.19,0:16:23.54,Zeal,NTP,0,0,0,,空野主播的播音 发音优美 音量适宜 容易听清楚内容
+Dialogue: 0,0:16:23.70,0:16:26.61,Zeal,NTP,0,0,0,,一直都对他很有好感 觉得他很优秀
+Dialogue: 0,0:16:26.99,0:16:30.88,Meteor,NTP,0,0,0,,语速都变超快了呢 小篝老大姐
+Dialogue: 0,0:16:31.09,0:16:34.70,Ripple,NTP,0,0,0,,啊哈 啊哈哈... 有点难为情呢
+Dialogue: 0,0:16:34.87,0:16:38.07,Ripple,NTP,0,0,0,,自家爸爸被表扬了
+Dialogue: 0,0:16:38.47,0:16:43.18,Ripple,NTP,0,0,0,,不过 你们能这么说 我很开心 诶嘿嘿
+Dialogue: 0,0:16:45.63,0:16:49.17,Meteor,NTP,0,0,0,,你这么喜欢空野主播的话 去求个签名吧？
+Dialogue: 0,0:16:49.37,0:16:50.55,Zeal,NTP,0,0,0,,诚惶诚恐...
+Dialogue: 0,0:16:50.77,0:16:54.47,Ripple,NTP,0,0,0,,嗯 那来我家 见见我爸爸？
+Dialogue: 0,0:16:54.62,0:16:55.83,Zeal,NTP,0,0,0,,更诚惶诚恐了！
+Dialogue: 0,0:16:55.96,0:16:57.64,Default,NTP,0,0,0,,呼！这是...
+Dialogue: 0,0:16:56.41,0:16:57.98,Ripple,NTP,0,0,0,,{\an3}那一起...
+Dialogue: 0,0:16:58.16,0:17:01.34,Default,NTP,0,0,0,,大家！似乎是邪音魔出现了！快来这里！
+Dialogue: 0,0:17:01.90,0:17:05.11,Meteor,NTP,0,0,0,,又来!? 他们全年无休的吗！
+Dialogue: 0,0:17:05.29,0:17:07.05,Ripple,NTP,0,0,0,,要快点解决掉！
+Dialogue: 0,0:17:07.35,0:17:09.11,Zeal,NTP,0,0,0,,诶 马上就动身吧！
+Dialogue: 0,0:17:09.28,0:17:12.07,Meteor,NTP,0,0,0,,玩着玩着连茶都没喝完
+Dialogue: 0,0:17:20.73,0:17:21.55,Default,NTP,0,0,0,,啊！
+Dialogue: 0,0:17:21.70,0:17:22.50,Ripple,NTP,0,0,0,,纳比尤！
+Dialogue: 0,0:17:22.72,0:17:24.36,Zeal,NTP,0,0,0,,有被夺走音悦力量的女生吗？
+Dialogue: 0,0:17:24.73,0:17:26.55,Default,NTP,0,0,0,,没有！已经指引人们避难了！
+Dialogue: 0,0:17:26.74,0:17:29.52,Meteor,NTP,0,0,0,,厉害 纳比尤真能干！
+Dialogue: 0,0:17:29.72,0:17:31.43,Default,NTP,0,0,0,,大家 就交给你们了！
+Dialogue: 0,0:17:31.59,0:17:32.99,Ripple,NTP,0,0,0,,嗯 看我们的！
+Dialogue: 0,0:17:33.17,0:17:36.09,Ripple,NTP,0,0,0,,小篝 流星 上了！
+Dialogue: 0,0:17:36.31,0:17:36.84,Zeal,NTP,0,0,0,,诶！
+Dialogue: 0,0:17:37.02,0:17:38.11,Meteor,NTP,0,0,0,,收到！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:17:47.35,0:17:49.26,Ripple,NTP,0,0,0,,涟漪公主！
+Dialogue: 0,0:17:47.35,0:17:49.26,Ripple,NTP,0,0,0,,{\fs50}Princess Ripple！
+Dialogue: 0,0:17:51.02,0:17:52.46,Zeal,NTP,0,0,0,,热情公主
+Dialogue: 0,0:17:51.02,0:17:52.46,Zeal,NTP,0,0,0,,{\fs50}Princess Zeal
+Dialogue: 0,0:17:49.67,0:17:50.76,Meteor,NTP,0,0,0,,流星公主！
+Dialogue: 0,0:17:49.67,0:17:50.76,Meteor,NTP,0,0,0,,{\fs50}Princess Meteor！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:17:53.45,0:17:59.44,LIVE Zeal,NTP,0,0,0,,{\an7}来到这美丽世界 追逐你心中梦想
+Dialogue: 0,0:17:59.73,0:18:05.73,LIVE Zeal,NTP,0,0,0,,{\an7}因为这是闪耀的 属于人们的场所
+Dialogue: 0,0:18:05.92,0:18:16.38,LIVE Zeal,NTP,0,0,0,,{\an7}为保护心灵碎片 万不能失去赤诚
+Dialogue: 0,0:18:16.62,0:18:17.79,LIVE Zeal,NTP,0,0,0,,{\an7}（相信在自己心中）
+Dialogue: 0,0:18:17.92,0:18:24.19,LIVE Zeal,NTP,0,0,0,,{\an7}用手紧紧把握住 不让光芒被夺走
+Dialogue: 0,0:18:24.58,0:18:31.00,LIVE Zeal,NTP,0,0,0,,{\an7}我紧握勇气 怀揣于胸中
+Dialogue: 0,0:18:31.00,0:18:31.77,LIVE Zeal,,0,0,0,,{\an7}褪去面纱
+Dialogue: 0,0:18:31.77,0:18:35.77,LIVE Zeal,NTP,0,0,0,,{\an7}绝不想输 绝不放弃
+Dialogue: 0,0:18:35.97,0:18:38.40,LIVE Zeal,NTP,0,0,0,,{\an7}不会放手热情
+Dialogue: 0,0:18:38.42,0:18:44.29,LIVE Zeal,NTP,0,0,0,,{\an7}这美丽自由的场所 不容任何人的破坏
+Dialogue: 0,0:18:44.51,0:18:50.29,LIVE Zeal,NTP,0,0,0,,{\an7}因此感受痛苦 如若向着幸福
+Dialogue: 0,0:18:50.76,0:18:53.56,LIVE Zeal,NTP,0,0,0,,{\an7}即使再多再痛 也一定要忍耐
+Dialogue: 0,0:18:53.70,0:19:01.90,LIVE Zeal,NTP,0,0,0,,{\an7}为了他人而放声高歌 坚信着一定能够传到
+Dialogue: 0,0:13:29.08,0:13:29.57,LIVE Zeal,,0,0,0,,
+Dialogue: 0,0:17:53.45,0:17:59.44,LIVE Zeal Jp,NTP,0,0,0,,{\an7}さあ うつくしい世界で 夢を追いかけてく
+Dialogue: 0,0:17:59.73,0:18:05.73,LIVE Zeal Jp,NTP,0,0,0,,{\an7}さあ 輝いていくの みんなの場所だから
+Dialogue: 0,0:18:05.92,0:18:16.38,LIVE Zeal Jp,NTP,0,0,0,,{\an7}心のカケラを守るため 熱い想い 見失わずに
+Dialogue: 0,0:18:16.62,0:18:17.79,LIVE Zeal Jp,NTP,0,0,0,,{\an7}（Believe in my heart）
+Dialogue: 0,0:18:17.92,0:18:24.19,LIVE Zeal Jp,NTP,0,0,0,,{\an7}いくつもの光照らし 奪われないように掴んでくの
+Dialogue: 0,0:18:24.58,0:18:31.00,LIVE Zeal Jp,NTP,0,0,0,,{\an7}今 握り締めた勇気 胸に抱きしめて
+Dialogue: 0,0:18:31.00,0:18:31.77,LIVE Zeal Jp,,0,0,0,,{\an7}ヴェールを脱いで
+Dialogue: 0,0:18:31.77,0:18:35.77,LIVE Zeal Jp,NTP,0,0,0,,{\an7}絶対まけたくない まけられない
+Dialogue: 0,0:18:35.97,0:18:38.40,LIVE Zeal Jp,NTP,0,0,0,,{\an7}離さない Zeal
+Dialogue: 0,0:18:38.42,0:18:44.29,LIVE Zeal Jp,NTP,0,0,0,,{\an7}美しい 自由の場所 誰にも邪魔させない
+Dialogue: 0,0:18:44.51,0:18:50.29,LIVE Zeal Jp,NTP,0,0,0,,{\an7}生み出される 幸せへの痛みだったなら
+Dialogue: 0,0:18:50.76,0:18:53.56,LIVE Zeal Jp,NTP,0,0,0,,{\an7}何度だって耐えていく
+Dialogue: 0,0:18:53.70,0:19:01.90,LIVE Zeal Jp,NTP,0,0,0,,{\an7}歌うの 誰かのため 必ず 届くと信じて
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:17:57.26,0:18:01.86,Default2,NTP,0,0,0,,出现了啊 公主 盛情招待你们吧
+Dialogue: 0,0:18:02.33,0:18:03.82,Default2,NTP,0,0,0,,上 邪音魔！
+Dialogue: 0,0:18:12.75,0:18:14.68,Ripple,NTP,0,0,0,,看招！
+Dialogue: 0,0:18:19.54,0:18:21.86,Zeal,NTP,0,0,0,,1 2
+Dialogue: 0,0:18:23.48,0:18:24.72,Zeal,NTP,0,0,0,,3！
+Dialogue: 0,0:18:37.64,0:18:40.42,Default2,NTP,0,0,0,,果然比之前更熟悉战斗了
+Dialogue: 0,0:18:40.87,0:18:43.86,Default2,NTP,0,0,0,,这样的话 就有必须派出那个了
+Dialogue: 0,0:18:45.19,0:18:46.73,Meteor,NTP,0,0,0,,嗯？他是谁!?
+Dialogue: 0,0:19:01.05,0:19:01.94,Ripple,NTP,0,0,0,,Zeal！
+Dialogue: 0,0:19:02.09,0:19:02.82,Meteor,NTP,0,0,0,,没事吧!?
+Dialogue: 0,0:19:03.31,0:19:06.58,Default2,NTP,0,0,0,,哼... 居然把我给看扁了
+Dialogue: 0,0:19:07.50,0:19:10.25,Default2,NTP,0,0,0,,我可是豪夺乐队的贝斯
+Dialogue: 0,0:19:07.50,0:19:10.25,Default2,NTP,0,0,0,,{\fs50}Band Snatch
+Dialogue: 0,0:19:11.00,0:19:12.77,Ripple,NTP,0,0,0,,豪夺乐队...？
+Dialogue: 0,0:19:13.13,0:19:15.32,Zeal,NTP,0,0,0,,这就是... 你们的组织！
+Dialogue: 0,0:19:15.77,0:19:20.49,Default2,NTP,0,0,0,,是时候让你们见识一下了 来吧 邪音魔·車！
+Dialogue: 0,0:19:24.00,0:19:27.75,Ripple,NTP,0,0,0,,没见过的邪音魔 还能召唤出了新型的!?
+Dialogue: 0,0:19:32.35,0:19:33.53,Zeal,NTP,0,0,0,,什么...？
+Dialogue: 0,0:19:35.01,0:19:36.83,Zeal,NTP,0,0,0,,飞过来了!?
+Dialogue: 0,0:19:38.97,0:19:40.74,Ripple,NTP,0,0,0,,吓 吓了一大跳...
+Dialogue: 0,0:19:41.32,0:19:44.12,Zeal,NTP,0,0,0,,不过 它两只手腕都发射了 现在是机会了
+Dialogue: 0,0:19:44.83,0:19:47.33,Default,NTP,0,0,0,,（地鸣）
+Dialogue: 0,0:19:47.50,0:19:48.55,Meteor,NTP,0,0,0,,哈啊!?
+Dialogue: 0,0:19:49.44,0:19:52.80,Zeal,NTP,0,0,0,,飞回来了!? 呜哇！
+Dialogue: 0,0:19:57.54,0:20:01.97,Meteor,NTP,0,0,0,,生气了！我的音悦力量 极限突破！
+Dialogue: 0,0:20:04.69,0:20:09.96,Meteor,NTP,0,0,0,,小行星流星雨！
+Dialogue: 0,0:20:04.69,0:20:09.96,Meteor,NTP,0,0,0,,{\fs50}Meteor Asteroid Shower！
+Dialogue: 0,0:20:12.97,0:20:14.73,Meteor,NTP,0,0,0,,什喵玩意!?
+Dialogue: 0,0:20:15.09,0:20:16.82,Zeal,NTP,0,0,0,,是护盾吗...!?
+Dialogue: 0,0:20:16.98,0:20:19.21,Default,NTP,0,0,0,,那Zeal！你也上！
+Dialogue: 0,0:20:19.56,0:20:20.85,Zeal,NTP,0,0,0,,是啊！
+Dialogue: 0,0:20:22.74,0:20:27.89,Zeal,NTP,0,0,0,,热情熔岩喷发!!
+Dialogue: 0,0:20:22.74,0:20:27.89,Zeal,NTP,0,0,0,,{\fs50}Zeal Rising Volcano!!
+Dialogue: 0,0:20:32.18,0:20:33.86,Default,NTP,0,0,0,,这也不行吗...
+Dialogue: 0,0:20:34.20,0:20:37.78,Default2,NTP,0,0,0,,哼... 看来你们的力量也就到这个...
+Dialogue: 0,0:20:37.92,0:20:39.05,Ripple,NTP,0,0,0,,还没有结束!!
+Dialogue: 0,0:20:39.20,0:20:40.24,Default2,NTP,0,0,0,,什么!?
+Dialogue: 0,0:20:43.38,0:20:48.85,Ripple,NTP,0,0,0,,涟漪闪耀奔流!!
+Dialogue: 0,0:20:43.38,0:20:48.85,Ripple,NTP,0,0,0,,{\fs50}Ripple Shiny Stream!!
+Dialogue: 0,0:20:58.93,0:21:03.29,Ripple,NTP,0,0,0,,冲啊！
+Dialogue: 0,0:21:08.54,0:21:09.92,Default2,NTP,0,0,0,,到此为止了吗...
+Dialogue: 0,0:21:10.38,0:21:13.44,Default2,NTP,0,0,0,,不过 可以说是成果颇丰
+Dialogue: 0,0:21:17.08,0:21:19.61,Default,NTP,0,0,0,,大家 辛苦了！
+Dialogue: 0,0:21:20.07,0:21:22.68,Meteor,NTP,0,0,0,,好 好累啊...
+Dialogue: 0,0:21:22.84,0:21:26.88,Ripple,NTP,0,0,0,,没想到 集合3个人的力量 才勉强解决...
+Dialogue: 0,0:21:27.06,0:21:29.22,Default,NTP,0,0,0,,哈哈哈... 啊...
+Dialogue: 0,0:21:31.84,0:21:32.92,Default,NTP,0,0,0,,篝？
+Dialogue: 0,0:21:33.07,0:21:36.98,Zeal,NTP,0,0,0,,卒 马 相 这次是車
+Dialogue: 0,0:21:37.18,0:21:41.80,Zeal,NTP,0,0,0,,以及操纵邪音魔的那些男人·豪夺乐队
+Dialogue: 0,0:21:42.10,0:21:44.63,Zeal,NTP,0,0,0,,敌人是逐渐变强的团伙
+Dialogue: 0,0:21:45.13,0:21:47.27,Zeal,NTP,0,0,0,,必须设法... 应对
+Dialogue: 0,0:21:47.64,0:21:51.13,Meteor,NTP,0,0,0,,这样就喊累 是不行的吧
+Dialogue: 0,0:21:51.60,0:21:52.78,Ripple,NTP,0,0,0,,是啊...
+Dialogue: 0,0:21:54.96,0:21:58.80,Ripple,NTP,0,0,0,,我们 必须要保护大家！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:23:34.54,0:23:35.85,Ripple,NTP,0,0,0,,嘎 嘎嗷！
+Dialogue: 0,0:23:36.02,0:23:39.41,Ripple,NTP,0,0,0,,我 我是超级龙猫大魔王 咬你哦！
+Dialogue: 0,0:23:39.56,0:23:41.81,Ripple,NTP,0,0,0,,下集 公主协奏
+Dialogue: 0,0:23:39.56,0:23:41.81,Ripple,NTP,920,0,0,,{\an1}{\fs50}Princession
+Dialogue: 0,0:23:41.85,0:23:43.03,Ripple,NTP,0,0,0,,嘎嗷！
+Dialogue: 0,0:23:43.19,0:23:44.19,Default,NTP,0,0,0,,姐弟亲啊
+Dialogue: 0,0:23:44.37,0:23:48.05,Default,NTP,0,0,0,,哦 听说过吗 龙猫发怒的时候 会飚黄色液体
+Dialogue: 0,0:23:48.20,0:23:49.65,Ripple,NTP,0,0,0,,别说奇怪的话！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 1,0:01:09.00,0:01:11.11,OP,NTP,0,0,0,,{\c&H000000&\2a&HFF&\3a&HFF&}{\K195}我们是辉煌公主
+Dialogue: 1,0:01:11.11,0:01:13.85,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}绝对歌姬宣言！
+Dialogue: 2,0:01:11.11,0:01:13.85,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}绝对歌姬宣言！
+Dialogue: 3,0:01:11.11,0:01:13.85,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}绝对歌姬宣言！
+Dialogue: 0,0:01:11.11,0:01:13.85,OP2,NTP,0,0,0,,{\be5}绝对歌姬宣言！
+Dialogue: 1,0:01:13.85,0:01:16.64,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}不要小瞧少女的梦想
+Dialogue: 2,0:01:13.85,0:01:16.64,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}不要小瞧少女的梦想
+Dialogue: 3,0:01:13.85,0:01:16.64,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}不要小瞧少女的梦想
+Dialogue: 0,0:01:13.85,0:01:16.64,OP2,NTP,0,0,0,,{\be5}不要小瞧少女的梦想
+Dialogue: 1,0:01:16.64,0:01:19.22,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}奏响...公主协奏！
+Dialogue: 2,0:01:16.64,0:01:19.22,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}奏响...公主协奏！
+Dialogue: 3,0:01:16.64,0:01:19.22,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}奏响...公主协奏！
+Dialogue: 0,0:01:16.64,0:01:19.22,OP2,NTP,0,0,0,,{\be5}奏响...公主协奏！
+Dialogue: 1,0:01:30.48,0:01:33.03,OP,NTP,0,0,0,,{\c&HC6EA2A&}女孩子无论在何时
+Dialogue: 0,0:01:30.48,0:01:33.03,OP2,NTP,0,0,0,,{\be5}女孩子无论在何时
+Dialogue: 1,0:01:33.05,0:01:35.90,OP,NTP,0,0,0,,{\c&HC6EA2A&}心里都一定蕴藏着
+Dialogue: 0,0:01:33.05,0:01:35.90,OP2,NTP,0,0,0,,{\be5}心里都一定蕴藏着
+Dialogue: 1,0:01:35.90,0:01:39.78,OP,NTP,0,0,0,,{\c&HAE85E8&}闪耀梦色的钻石
+Dialogue: 0,0:01:35.90,0:01:39.78,OP2,NTP,0,0,0,,{\be5}闪耀梦色的钻石
+Dialogue: 1,0:01:39.78,0:01:41.14,OP,NTP,0,0,0,,{\c&HAE85E8&}正熊熊燃烧
+Dialogue: 0,0:01:39.78,0:01:41.14,OP2,NTP,0,0,0,,{\be5}正熊熊燃烧
+Dialogue: 1,0:01:41.14,0:01:43.41,OP,NTP,0,0,0,,{\c&H44FFF6&}让这份使命 闪闪发光吧
+Dialogue: 0,0:01:41.14,0:01:43.41,OP2,NTP,0,0,0,,{\be5}让这份使命 闪闪发光吧
+Dialogue: 1,0:01:43.41,0:01:46.44,OP,NTP,0,0,0,,{\c&H44FFF6&}就如同星星般闪耀
+Dialogue: 0,0:01:43.41,0:01:46.44,OP2,NTP,0,0,0,,{\be5}就如同星星般闪耀
+Dialogue: 1,0:01:46.58,0:01:47.37,OP,NTP,0,0,0,,{\c&HC6EA2A&}不会输
+Dialogue: 0,0:01:46.58,0:01:47.37,OP2,NTP,0,0,0,,{\be5}不会输
+Dialogue: 1,0:01:47.37,0:01:48.04,OP,NTP,0,0,0,,{\c&HAE85E8&}不会逃
+Dialogue: 0,0:01:47.37,0:01:48.04,OP2,NTP,0,0,0,,{\be5}不会逃
+Dialogue: 1,0:01:48.04,0:01:49.50,OP,NTP,0,0,0,,{\c&H44FFF6&}绝不放弃
+Dialogue: 0,0:01:48.04,0:01:49.50,OP2,NTP,0,0,0,,{\be5}绝不放弃
+Dialogue: 1,0:01:49.50,0:01:52.25,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}那可是梦想啊
+Dialogue: 2,0:01:49.50,0:01:52.25,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}那可是梦想啊
+Dialogue: 3,0:01:49.50,0:01:52.25,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}那可是梦想啊
+Dialogue: 0,0:01:49.50,0:01:52.25,OP2,NTP,0,0,0,,{\be5}那可是梦想啊
+Dialogue: 1,0:01:52.25,0:01:54.82,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}“知道吗... 当小孩装成小孩”
+Dialogue: 2,0:01:52.25,0:01:54.82,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}“知道吗... 当小孩装成小孩”
+Dialogue: 3,0:01:52.25,0:01:54.82,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}“知道吗... 当小孩装成小孩”
+Dialogue: 0,0:01:52.25,0:01:54.82,OP2,NTP,0,0,0,,{\be5}“知道吗... 当小孩装成小孩”
+Dialogue: 1,0:01:54.82,0:01:57.53,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}“...其实啊 就已经开始长大”
+Dialogue: 2,0:01:54.82,0:01:57.53,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}“...其实啊 就已经开始长大”
+Dialogue: 3,0:01:54.82,0:01:57.53,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}“...其实啊 就已经开始长大”
+Dialogue: 0,0:01:54.82,0:01:57.53,OP2,NTP,0,0,0,,{\be5}“...其实啊 就已经开始长大”
+Dialogue: 1,0:01:57.53,0:02:00.05,OP,NTP,0,0,0,,{\c&HC6EA2A&}我们的友谊和声
+Dialogue: 0,0:01:57.53,0:02:00.05,OP2,NTP,0,0,0,,{\be5}我们的友谊和声
+Dialogue: 2,0:02:00.05,0:02:02.72,OP,NTP,0,0,0,,{\c&HAE85E8&}化作波浪扩展开
+Dialogue: 0,0:02:00.05,0:02:02.72,OP2,NTP,0,0,0,,{\be5}化作波浪扩展开
+Dialogue: 3,0:02:02.72,0:02:05.39,OP,NTP,0,0,0,,{\c&H44FFF6&}猛扎进音符海中！
+Dialogue: 0,0:02:02.72,0:02:05.39,OP2,NTP,0,0,0,,{\be5}猛扎进音符海中！
+Dialogue: 1,0:02:05.39,0:02:07.64,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}开始追寻梦想吧（3.2.1！）
+Dialogue: 2,0:02:05.39,0:02:07.64,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}开始追寻梦想吧（3.2.1！）
+Dialogue: 3,0:02:05.39,0:02:07.64,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}开始追寻梦想吧（3.2.1！）
+Dialogue: 0,0:02:05.39,0:02:07.64,OP2,NTP,0,0,0,,{\be5}开始追寻梦想吧（3.2.1！）
+Dialogue: 1,0:02:07.64,0:02:10.21,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}绝对歌姬宣言！
+Dialogue: 2,0:02:07.64,0:02:10.21,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}绝对歌姬宣言！
+Dialogue: 3,0:02:07.64,0:02:10.21,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}绝对歌姬宣言！
+Dialogue: 0,0:02:07.64,0:02:10.21,OP2,NTP,0,0,0,,{\be5}绝对歌姬宣言！
+Dialogue: 1,0:02:10.21,0:02:13.13,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}以最强的微笑 令你沉醉其中
+Dialogue: 2,0:02:10.21,0:02:13.13,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}以最强的微笑 令你沉醉其中
+Dialogue: 3,0:02:10.21,0:02:13.13,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}以最强的微笑 令你沉醉其中
+Dialogue: 0,0:02:10.21,0:02:13.13,OP2,NTP,0,0,0,,{\be5}以最强的微笑 令你沉醉其中
+Dialogue: 1,0:02:13.13,0:02:15.40,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}让这人生独一无二的
+Dialogue: 2,0:02:13.13,0:02:15.40,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}让这人生独一无二的
+Dialogue: 3,0:02:13.13,0:02:15.40,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}让这人生独一无二的
+Dialogue: 0,0:02:13.13,0:02:15.40,OP2,NTP,0,0,0,,{\be5}让这人生独一无二的
+Dialogue: 1,0:02:15.40,0:02:18.47,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}管弦乐怒放
+Dialogue: 2,0:02:15.40,0:02:18.47,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}管弦乐怒放
+Dialogue: 3,0:02:15.40,0:02:18.47,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}管弦乐怒放
+Dialogue: 0,0:02:15.40,0:02:18.47,OP2,NTP,0,0,0,,{\be5}管弦乐怒放
+Dialogue: 1,0:02:18.76,0:02:21.24,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}Jump！{\c&HAE85E8&}化好妆造
+Dialogue: 2,0:02:18.76,0:02:21.24,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}Jump！{\c&HAE85E8&}化好妆造
+Dialogue: 3,0:02:18.76,0:02:21.24,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}Jump！{\c&HAE85E8&}化好妆造
+Dialogue: 0,0:02:18.76,0:02:21.24,OP2,NTP,0,0,0,,{\be5}Jump！化好妆造
+Dialogue: 1,0:02:21.24,0:02:23.56,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}Jump！{\c&H44FFF6&}秀发飞扬
+Dialogue: 2,0:02:21.24,0:02:23.56,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}Jump！{\c&H44FFF6&}秀发飞扬
+Dialogue: 3,0:02:21.24,0:02:23.56,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}Jump！{\c&H44FFF6&}秀发飞扬
+Dialogue: 0,0:02:21.24,0:02:23.56,OP2,NTP,0,0,0,,{\be5}Jump！秀发飞扬
+Dialogue: 1,0:02:23.56,0:02:28.52,OP,NTP,0,0,0,,{\c&HC6EA2A&}打开乐园-爱丽丝比亚-的门扉
+Dialogue: 0,0:02:23.56,0:02:28.52,OP2,NTP,0,0,0,,{\be5}打开乐园-爱丽丝比亚-的门扉
+Dialogue: 1,0:02:28.52,0:02:33.11,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}展开自己色彩的音乐羽翼
+Dialogue: 2,0:02:28.52,0:02:33.11,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}展开自己色彩的音乐羽翼
+Dialogue: 3,0:02:28.52,0:02:33.11,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}展开自己色彩的音乐羽翼
+Dialogue: 0,0:02:28.52,0:02:33.11,OP2,NTP,0,0,0,,{\be5}展开自己色彩的音乐羽翼
+Dialogue: 1,0:02:34.32,0:02:36.57,OP,NTP,0,0,0,,{\clip(0,0,1920,1040)}{\c&HC6EA2A&}哆来咪发 向着天空 飞舞☆
+Dialogue: 2,0:02:34.32,0:02:36.57,OP,NTP,0,0,0,,{\clip(0,1040,1920,1055)}{\c&H44FFF6&}哆来咪发 向着天空 飞舞☆
+Dialogue: 3,0:02:34.32,0:02:36.57,OP,NTP,0,0,0,,{\clip(0,1055,1920,1080)}{\c&HAE85E8&}哆来咪发 向着天空 飞舞☆
+Dialogue: 0,0:02:34.32,0:02:36.57,OP2,NTP,0,0,0,,{\be5}哆来咪发 向着天空 飞舞☆
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:22:15.83,0:22:19.14,ED,NTP,0,0,0,,震颤的脚 摇摆的心
+Dialogue: 0,0:22:19.14,0:22:22.40,ED,NTP,0,0,0,,充满不安的每天
+Dialogue: 0,0:22:22.40,0:22:24.19,ED,NTP,0,0,0,,无数次即将淹于
+Dialogue: 0,0:22:24.19,0:22:28.78,ED,NTP,0,0,0,,艰巨的使命之中
+Dialogue: 0,0:22:28.78,0:22:32.07,ED,NTP,0,0,0,,有亲朋好友们在
+Dialogue: 0,0:22:32.07,0:22:35.66,ED,NTP,0,0,0,,有想守护的世界
+Dialogue: 0,0:22:35.66,0:22:39.25,ED,NTP,0,0,0,,信念猛地推动我
+Dialogue: 0,0:22:39.25,0:22:45.30,ED,NTP,0,0,0,,不用迷茫 相信自己 向前进吧
+Dialogue: 0,0:22:45.30,0:22:49.01,ED,NTP,0,0,0,,无须反顾
+Dialogue: 0,0:22:50.05,0:22:53.27,ED,NTP,0,0,0,,看着天 向前跑
+Dialogue: 0,0:22:53.27,0:22:56.89,ED,NTP,0,0,0,,太阳和眼睛对上了
+Dialogue: 0,0:22:56.89,0:23:03.27,ED,NTP,0,0,0,,无论何种命运 都会在其最后 绽放耀眼光芒
+Dialogue: 0,0:23:03.61,0:23:06.86,ED,NTP,0,0,0,,我们并不孤单
+Dialogue: 0,0:23:06.86,0:23:10.45,ED,NTP,0,0,0,,相互扶持 相互温暖
+Dialogue: 0,0:23:10.74,0:23:13.99,ED,NTP,0,0,0,,以音乐相系的奇迹
+Dialogue: 0,0:23:14.20,0:23:15.62,ED,NTP,0,0,0,,放声高歌
+Dialogue: 0,0:23:15.87,0:23:17.24,ED,NTP,0,0,0,,大家一起
+Dialogue: 0,0:23:17.55,0:23:20.08,ED,NTP,0,0,0,,向着明日
+Dialogue: 0,0:23:20.71,0:23:22.08,ED,NTP,0,0,0,,与你
+Dialogue: 0,0:23:22.46,0:23:23.83,ED,NTP,0,0,0,,协奏的
+Dialogue: 0,0:23:24.00,0:23:26.05,ED,NTP,0,0,0,,管弦乐
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,

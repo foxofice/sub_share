@@ -574,7 +574,7 @@ button, input, select {
 /* ================== Anime Grid & Cards ================== */
 .anime-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 22px;
   min-height: 400px;
 }
@@ -599,14 +599,18 @@ button, input, select {
 }
 
 .anime-card:hover .poster-img {
-  transform: scale(1.05);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* Poster Box */
 .poster-box {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 11;
+  aspect-ratio: 1 / 1.42;
   background: var(--surface-2);
   overflow: hidden;
 }
@@ -1275,12 +1279,11 @@ button, input, select {
 
 /* Main Loader */
 .main-loader {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 80px 20px;
-  color: var(--ink-dim);
+  display: none !important;
+}
+.main-loader[hidden],
+.main-loader.is-hidden {
+  display: none !important;
 }
 
 .spinner {
@@ -1344,4 +1347,165 @@ button, input, select {
     padding-bottom: 4px;
     flex-wrap: nowrap;
   }
+}
+
+
+/* ================== Top Progress Bar & Skeletons ================== */
+.top-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #50E3C2, var(--blue));
+  box-shadow: 0 0 10px var(--accent-glow);
+  z-index: 99999;
+  transition: width 0.25s ease, opacity 0.35s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.skeleton-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-card);
+}
+
+.skeleton-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1.42;
+  background: var(--surface-2);
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-line {
+  background: var(--surface-2);
+  border-radius: var(--radius-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-line--title {
+  height: 18px;
+  width: 80%;
+}
+
+.skeleton-line--sub {
+  height: 13px;
+  width: 55%;
+}
+
+.skeleton-line--meta {
+  height: 22px;
+  width: 40%;
+  border-radius: 999px;
+  margin-top: 4px;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton-thumb::after,
+.skeleton-line::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite ease-in-out;
+}
+
+:root[data-theme="light"] .skeleton-thumb::after,
+:root[data-theme="light"] .skeleton-line::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(0, 0, 0, 0.06) 50%,
+    transparent 100%
+  );
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anime-card {
+  animation: cardEnter 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.pagination-summary {
+  font-size: 13px;
+  color: var(--ink-dim);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.pagination-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.page-size-selector {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--ink-dim);
+  margin-left: 8px;
+}
+
+.page-size-btn {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  color: var(--ink-dim);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.page-size-btn:hover {
+  border-color: var(--accent);
+  color: var(--ink);
+}
+
+.page-size-btn.is-active {
+  background: var(--surface-2);
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
 }

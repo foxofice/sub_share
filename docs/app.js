@@ -45,7 +45,7 @@
     },
     pagination: {
       page: 1,
-      pageSize: 36,
+      pageSize: 60,
       total: 0
     },
     seedCovers: {},     // 预填充封面（含本地 covers/ 路径）
@@ -832,19 +832,34 @@
   }
 
   // =============== 分页控件 ===============
+  
   function renderPagination(page, pageSize, total) {
     const container = $('#pagination');
     if (!container) return;
 
-    if (total <= pageSize) {
-      container.hidden = true;
+    if (total <= pageSize && pageSize === 60) {
+      container.innerHTML = `<div class="pagination-summary">· 已显示全部 ${total} 部番剧 ·</div>`;
+      container.hidden = false;
       return;
     }
-    container.hidden = false;
 
     const totalPages = Math.ceil(total / pageSize);
     let html = '';
 
+    html += `<div class="pagination-summary">
+      <span>第 <strong>${page}</strong> / <strong>${totalPages}</strong> 页</span>
+      <span>·</span>
+      <span>共 <strong>${total}</strong> 部</span>
+      <span>·</span>
+      <span class="page-size-selector">
+        每页
+        <button type="button" class="page-size-btn ${pageSize === 30 ? 'is-active' : ''}" data-size="30">30</button>
+        <button type="button" class="page-size-btn ${pageSize === 60 ? 'is-active' : ''}" data-size="60">60</button>
+        <button type="button" class="page-size-btn ${pageSize === 120 ? 'is-active' : ''}" data-size="120">120</button>
+      </span>
+    </div>`;
+
+    html += `<div class="pagination-controls">`;
     html += `<button class="page-btn" ${page <= 1 ? 'disabled' : ''} data-page="${page - 1}">‹ 上一页</button>`;
 
     let pages = [];
@@ -869,15 +884,28 @@
     });
 
     html += `<button class="page-btn" ${page >= totalPages ? 'disabled' : ''} data-page="${page + 1}">下一页 ›</button>`;
-    html += `<span class="page-info">共 ${total} 部 / ${totalPages} 页</span>`;
+    html += `</div>`;
 
     container.innerHTML = html;
+    container.hidden = false;
 
-    $$('.page-btn[data-page]', container).forEach(btn => {
+    $('.page-btn[data-page]', container).forEach(btn => {
       btn.addEventListener('click', () => {
         const p = parseInt(btn.dataset.page, 10);
         if (p >= 1 && p <= totalPages && p !== state.pagination.page) {
           state.pagination.page = p;
+          renderCurrentPage();
+          window.scrollTo({ top: $('#searchSection').offsetTop - 70, behavior: 'smooth' });
+        }
+      });
+    });
+
+    $('.page-size-btn[data-size]', container).forEach(btn => {
+      btn.addEventListener('click', () => {
+        const sz = parseInt(btn.dataset.size, 10);
+        if (sz && sz !== state.pagination.pageSize) {
+          state.pagination.pageSize = sz;
+          state.pagination.page = 1;
           renderCurrentPage();
           window.scrollTo({ top: $('#searchSection').offsetTop - 70, behavior: 'smooth' });
         }
@@ -1067,12 +1095,71 @@
     }, 2000);
   }
 
+  
+  let progressTimer = null;
   function showLoading(show, text = '加载中...') {
+    const bar = $('#topProgressBar');
     const loader = $('#mainLoader');
-    if (!loader) return;
-    loader.hidden = !show;
-    const txt = $('.loader-text', loader);
-    if (txt) txt.textContent = text;
+
+    if (show) {
+      if (bar) {
+        bar.style.opacity = '1';
+        bar.style.width = '25%';
+        clearInterval(progressTimer);
+        let current = 25;
+        progressTimer = setInterval(() => {
+          if (current < 85) {
+            current += (85 - current) * 0.18;
+            bar.style.width = current + '%';
+          }
+        }, 150);
+      }
+      renderSkeletons(15);
+      if (loader) {
+        loader.hidden = true;
+        loader.style.display = 'none';
+      }
+    } else {
+      clearInterval(progressTimer);
+      if (bar) {
+        bar.style.width = '100%';
+        setTimeout(() => {
+          bar.style.opacity = '0';
+          setTimeout(() => {
+            bar.style.width = '0%';
+          }, 350);
+        }, 200);
+      }
+      if (loader) {
+        loader.hidden = true;
+        loader.style.display = 'none';
+      }
+    }
+  }
+
+  function renderSkeletons(count = 15) {
+    const grid = $('#animeGrid');
+    if (!grid) return;
+    if (state.animeList && state.animeList.length > 0 && grid.children.length > 0 && !grid.querySelector('.skeleton-card')) {
+      return;
+    }
+    const frag = document.createDocumentFragment();
+    for (let i = 0; i < count; i++) {
+      const card = document.createElement('div');
+      card.className = 'skeleton-card';
+      card.setAttribute('aria-hidden', 'true');
+      card.innerHTML = `
+        <div class="skeleton-thumb"></div>
+        <div class="skeleton-body">
+          <div class="skeleton-line skeleton-line--title"></div>
+          <div class="skeleton-line skeleton-line--sub"></div>
+          <div class="skeleton-line skeleton-line--meta"></div>
+        </div>
+      `;
+      frag.appendChild(card);
+    }
+    grid.innerHTML = '';
+    grid.appendChild(frag);
   }
 
   function resetAllFilters() {

@@ -1135,7 +1135,8 @@
     }
   }
 
-  function renderSkeletons(count = 15) {
+  
+  function renderSkeletons(count = 18) {
     const grid = $('#animeGrid');
     if (!grid) return;
     if (state.animeList && state.animeList.length > 0 && grid.children.length > 0 && !grid.querySelector('.skeleton-card')) {
@@ -1151,7 +1152,8 @@
         <div class="skeleton-body">
           <div class="skeleton-line skeleton-line--title"></div>
           <div class="skeleton-line skeleton-line--sub"></div>
-          <div class="skeleton-line skeleton-line--meta"></div>
+          <div class="skeleton-line skeleton-line--chips"></div>
+          <div class="skeleton-line skeleton-line--actions"></div>
         </div>
       `;
       frag.appendChild(card);

@@ -29,6 +29,35 @@
   const IDB_DB_NAME = 'subshare_bangumi_cache_v2';
   const IDB_STORE_NAME = 'anime_covers';
 
+  // =============== zst 数据源与加载策略（地址来自 TECH_BRIEF 实测，不得臆测） ===============
+  const ZST_URLS = [
+    'https://cdn.jsdelivr.net/gh/foxofice/sub_share@master/Subtitles%20DataBase/Files/db.json.zst',
+    'https://raw.githubusercontent.com/foxofice/sub_share/master/Subtitles%20DataBase/Files/db.json.zst'
+  ];
+  const FZSTD_URL = 'https://cdn.jsdelivr.net/npm/fzstd@0.1.1/umd/index.js';
+  const TIMEOUT = {
+    zst: 6000,        // zst 单源
+    fzstd: 5000,      // fzstd 脚本
+    localJson: 4000,  // 本地 subtitles.json
+    xml: 4000,        // XML 每源
+    seed: 4000,       // seed_covers.json
+    global: 12000     // 全局护栏
+  };
+  const STAGE_TEXT = {
+    init: '正在初始化数据索引...',
+    download: '正在下载字幕数据...',
+    decompress: '正在解压字幕数据...',
+    finalize: '正在整理字幕条目...',
+    local: '正在读取本地索引...',
+    xml: '正在从备用数据源读取...'
+  };
+  const ZST_EXPECTED_BYTES = 234497;  // TECH_BRIEF 实测压缩文件大小，供下载进度条按真实字节计算
+  const MIN_ZST_BYTES = 1000;         // 小于此字节数判为无效
+  const MIN_VALID_COUNT = 4000;       // 少于此条数触发降级（4684 条属正常，不降级）
+  const MAX_CORE_MISSING_RATIO = 0.3; // 核心字段缺失超过 30% 判为无效
+  const TOAST_DEGRADE_MS = 2500;      // 降级弱提示 2.5s
+  const TOAST_FAILURE_MS = 2500;      // 失败提示 2.5s
+
   // =============== 全局状态 ===============
   const state = {
     rawList: [],        // 4,749 条单条字幕记录（已彻底过滤 R18）
@@ -56,7 +85,12 @@
     idb: null
   };
 
-  
+  // =============== 数据加载并发控制 ===============
+  let isLoading = false;          // 加载中重复点击防护锁
+  let loadGeneration = 0;         // 请求序号：拖拽导入时自增，作废旧 zst 回调
+  let fzstdLoadPromise = null;    // fzstd 脚本预取缓存（失败后可重试）
+  let activeGuard = null;         // 当前全局护栏 AbortController
+
   // =============== 辅助路径与元数据匹配函数 ===============
   function getRepoFolderUrl(path) {
     if (!path) return `https://github.com/${GITHUB_REPO}/tree/master/subs_list`;
@@ -354,56 +388,405 @@
 
   const scraper = new BangumiScraper();
 
-  // =============== 数据载入引擎 ===============
-  async function loadData() {
-    showLoading(true, '正在载入字幕索引数据...');
+  // =============== 数据载入引擎（zst 优先 + 无感多级降级） ===============
 
-    // 1. 优先加载预置种子封面 (包含已下载到 covers/ 的本地高质量海报)
-    try {
-      const seedResp = await fetch('./seed_covers.json');
-      if (seedResp.ok) {
-        state.seedCovers = await seedResp.json();
-      }
-    } catch (e) {}
-
-    // 2. 加载字幕数据（过滤 R18）
-    let dataList = null;
-    try {
-      const jsonResp = await fetch('./subtitles.json');
-      if (jsonResp.ok) {
-        dataList = await jsonResp.json();
-      }
-    } catch (e) {}
-
-    if (!dataList || dataList.length === 0) {
-      dataList = await fetchAndParseXml();
+  // 稳定的阶段文案节点：只创建一次，后续仅更新 textContent，不重建节点
+  function getStageNode() {
+    const loader = $('#mainLoader');
+    if (!loader) return null;
+    let stage = loader.__stageNode;
+    if (!stage || !stage.isConnected) {
+      stage = document.createElement('span');
+      stage.className = 'loader-stage-text';
+      stage.setAttribute('role', 'status');
+      stage.setAttribute('aria-live', 'polite');
+      loader.appendChild(stage);
+      loader.__stageNode = stage;
     }
-
-    if (!dataList || dataList.length === 0) {
-      showToast('数据载入失败，请检查网络或在设置中切换镜像源', false);
-      showLoading(false);
-      return;
-    }
-
-    // 严格过滤剔除任何 R18 内容
-    state.rawList = dataList.filter(item => {
-      const t = (item.type || '').toLowerCase();
-      const p = (item.path || '').toLowerCase();
-      return t !== 'r18' && !p.startsWith('r18');
-    });
-
-    buildAnimeAggregation();
-
-    // 3. 拉取 GitHub Commits 动态
-    fetchRecentCommits();
-
-    // 4. 首次渲染
-    applyFiltersAndSort();
-    renderStats();
-    showLoading(false);
+    return stage;
   }
 
-  async function fetchAndParseXml() {
+  // 设置阶段文案；传空串隐藏 loader。文案容器 role=status / aria-live=polite
+  function setStage(text) {
+    const loader = $('#mainLoader');
+    if (!loader) return;
+    const stage = getStageNode();
+    if (!text) {
+      loader.hidden = true;
+      loader.style.display = 'none';
+      return;
+    }
+    if (stage && stage.textContent !== text) stage.textContent = text;
+    loader.hidden = false;
+    // 作者样式 .main-loader{display:flex} 会压过 hidden 属性，必须内联显式显示
+    loader.style.display = 'flex';
+  }
+
+  // 双 rAF：强制绘制一帧，让同步解压前的文案真正落地（reduced-motion 下同样保留）
+  function afterTwoFrames() {
+    return new Promise(resolve => {
+      requestAnimationFrame(() => requestAnimationFrame(resolve));
+    });
+  }
+
+  // 带超时的 fetch；父信号（全局护栏）可提前 abort；timer 与 listener 均清理
+  function fetchWithTimeout(url, options, timeoutMs, parentSignal) {
+    return new Promise((resolve, reject) => {
+      if (parentSignal && parentSignal.aborted) {
+        reject(new Error('aborted by guard'));
+        return;
+      }
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      const onParentAbort = () => controller.abort();
+      if (parentSignal) parentSignal.addEventListener('abort', onParentAbort, { once: true });
+      const cleanup = () => {
+        clearTimeout(timer);
+        if (parentSignal) parentSignal.removeEventListener('abort', onParentAbort);
+      };
+      fetch(url, Object.assign({}, options || {}, { signal: controller.signal }))
+        .then(res => { cleanup(); resolve(res); }, err => { cleanup(); reject(err); });
+    });
+  }
+
+  // 预取 fzstd（UMD 暴露 window.fzstd）；失败返回 null 由调用方降级，缓存失败后允许重试
+  function loadFzstdScript() {
+    if (window.fzstd && typeof window.fzstd.decompress === 'function') {
+      return Promise.resolve(window.fzstd);
+    }
+    if (fzstdLoadPromise) return fzstdLoadPromise;
+    fzstdLoadPromise = new Promise((resolve) => {
+      const script = document.createElement('script');
+      script.src = FZSTD_URL;
+      script.async = true;
+      script.setAttribute('data-fzstd-loader', '1');
+      let settled = false;
+      const finish = (result) => {
+        if (settled) return;
+        settled = true;
+        clearTimeout(timer);
+        script.onload = null;
+        script.onerror = null;
+        if (!result) fzstdLoadPromise = null;
+        resolve(result);
+      };
+      const timer = setTimeout(() => {
+        if (script.parentNode) script.parentNode.removeChild(script);
+        finish(null);
+      }, TIMEOUT.fzstd);
+      script.onload = () => finish(window.fzstd && typeof window.fzstd.decompress === 'function' ? window.fzstd : null);
+      script.onerror = () => finish(null);
+      document.head.appendChild(script);
+    });
+    return fzstdLoadPromise;
+  }
+
+  // 下载单个 zst 源 + 流式真实进度 + 字节数校验
+  async function fetchZstBytes(url, parentSignal, onProgress) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), TIMEOUT.zst);
+    const onParentAbort = () => controller.abort();
+    if (parentSignal) {
+      if (parentSignal.aborted) controller.abort();
+      else parentSignal.addEventListener('abort', onParentAbort, { once: true });
+    }
+    const cleanup = () => {
+      clearTimeout(timer);
+      if (parentSignal) parentSignal.removeEventListener('abort', onParentAbort);
+    };
+
+    try {
+      const resp = await fetch(url, { cache: 'no-store', signal: controller.signal });
+      if (!resp.ok) throw new Error('HTTP ' + resp.status);
+
+      let buf;
+      if (resp.body && typeof resp.body.getReader === 'function') {
+        const reader = resp.body.getReader();
+        const chunks = [];
+        let loaded = 0;
+        while (true) {
+          const { done, value } = await reader.read();
+          if (done) break;
+          chunks.push(value);
+          loaded += value.length;
+          if (onProgress) onProgress(loaded);
+        }
+        const merged = new Uint8Array(loaded);
+        let offset = 0;
+        for (const chunk of chunks) {
+          merged.set(chunk, offset);
+          offset += chunk.length;
+        }
+        buf = merged.buffer;
+      } else {
+        buf = await resp.arrayBuffer();
+        if (onProgress) onProgress(buf.byteLength);
+      }
+      if (!buf || buf.byteLength < MIN_ZST_BYTES) throw new Error('zst too small');
+      return buf;
+    } finally {
+      cleanup();
+    }
+  }
+
+  // 同步解压（阻塞主线程）：调用前必须已 setStage(decompress) 且经过双 rAF
+  function decompressZst(arrayBuffer) {
+    const fzstd = window.fzstd;
+    if (!fzstd || typeof fzstd.decompress !== 'function') throw new Error('fzstd unavailable');
+    const uint8 = fzstd.decompress(new Uint8Array(arrayBuffer));
+    if (!uint8 || !uint8.length) throw new Error('decompress empty');
+    return new TextDecoder('utf-8').decode(uint8);
+  }
+
+  // 单条字段适配：name_* -> chs/cht/jp/en/rome；核心字段缺失逐条回退，不整条丢弃
+  function adaptZstItem(raw, index) {
+    const rawPath = typeof raw.path === 'string' ? raw.path : '';
+    const path = rawPath.replace(/\\/g, '/') || `unknown_${index + 1}`;
+    const rawTime = typeof raw.time === 'string' ? raw.time : '';
+    const time = rawTime.includes('T') ? rawTime.split('T')[0] : rawTime;
+    const tail = path.split('/').filter(Boolean).pop() || '';
+    const chs = raw.name_chs || raw.name_jp || raw.name_en || tail || `unknown_${index + 1}`;
+    return {
+      id: index + 1,
+      time,
+      chs,
+      cht: raw.name_cht || '',
+      jp: raw.name_jp || '',
+      en: raw.name_en || '',
+      rome: raw.name_rome || '',
+      type: raw.type || 'animation',
+      source: raw.source || 'BD',
+      sub_name: raw.sub_name || '字幕组',
+      extension: raw.extension || '.ass',
+      path,
+      providers: raw.providers,
+      desc: raw.desc
+    };
+  }
+
+  // JSON 解析 + 结构/质量校验 + 字段适配 + R18 过滤；返回 null 表示需降级
+  function parseZstData(jsonText) {
+    let rawList;
+    try {
+      rawList = JSON.parse(jsonText);
+    } catch (e) {
+      return null;
+    }
+    if (!Array.isArray(rawList) || rawList.length < MIN_VALID_COUNT) return null;
+
+    let missing = 0;
+    for (const raw of rawList) {
+      if (!raw || typeof raw !== 'object') { missing++; continue; }
+      const pathTail = typeof raw.path === 'string'
+        ? raw.path.replace(/\\/g, '/').split('/').filter(Boolean).pop()
+        : '';
+      const hasChs = !!(raw.name_chs || raw.name_jp || raw.name_en || pathTail);
+      const hasPath = typeof raw.path === 'string' && raw.path.trim().length > 0;
+      const hasTime = typeof raw.time === 'string' && raw.time.trim().length > 0;
+      if (!hasChs || !hasPath || !hasTime) missing++;
+    }
+    if (missing / rawList.length > MAX_CORE_MISSING_RATIO) return null;
+
+    return rawList
+      .map((raw, index) => adaptZstItem(raw || {}, index))
+      .filter(item => {
+        const t = (item.type || '').toLowerCase();
+        const p = (item.path || '').toLowerCase();
+        return t !== 'r18' && !p.startsWith('r18');
+      });
+  }
+
+  // zst 链路：fzstd 脚本与二进制并行预取；主源失败才串行取备源；解压前双 rAF
+  async function loadFromZst(gen, parentSignal) {
+    setStage(STAGE_TEXT.download);
+    const scriptReady = loadFzstdScript();
+    let arrayBuffer = null;
+    for (const url of ZST_URLS) {
+      if (gen !== loadGeneration || parentSignal.aborted) return null;
+      try {
+        setDownloadProgress(0); // 换源时进度归零，避免上一源的残留宽度
+        arrayBuffer = await fetchZstBytes(url, parentSignal, setDownloadProgress);
+        if (arrayBuffer) break;
+      } catch (e) {
+        arrayBuffer = null;
+      }
+    }
+    if (!arrayBuffer) return null;
+
+    const fzstd = await scriptReady;
+    if (!fzstd || gen !== loadGeneration || parentSignal.aborted) return null;
+
+    setStage(STAGE_TEXT.decompress);
+    await afterTwoFrames();
+    if (gen !== loadGeneration || parentSignal.aborted) return null;
+
+    let jsonText;
+    try {
+      jsonText = decompressZst(arrayBuffer);
+    } catch (e) {
+      return null;
+    }
+    return parseZstData(jsonText);
+  }
+
+  // 降级 1：本地 subtitles.json
+  async function loadFromLocalJson(parentSignal) {
+    try {
+      const resp = await fetchWithTimeout('./subtitles.json', {}, TIMEOUT.localJson, parentSignal);
+      if (!resp.ok) return null;
+      const list = await resp.json();
+      if (!Array.isArray(list) || list.length === 0) return null;
+      return list;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  // 降级 2：XML 三源（复用现有 fetchAndParseXml，追加超时与全局护栏信号）
+  async function loadFromXml(parentSignal) {
+    const list = await fetchAndParseXml(parentSignal);
+    return list && list.length > 0 ? list : null;
+  }
+
+  // 种子封面并行预取；失败静默，返回空对象
+  function fetchSeedCovers(parentSignal) {
+    return fetchWithTimeout('./seed_covers.json', {}, TIMEOUT.seed, parentSignal)
+      .then(resp => resp.ok ? resp.json() : {})
+      .catch(() => ({}));
+  }
+
+  // 加载前重置数据态；保留 filters / viewMode / theme / seedCovers
+  function resetLoadState() {
+    state.rawList = [];
+    state.animeList = [];
+    state.filteredAnime = [];
+    state.filteredFlat = [];
+    state.recentPaths = new Set();
+    state.latestCommit = null;
+    state.pagination.page = 1;
+  }
+
+  // 失败空态：复用 .empty-state 结构 + 原生重试按钮（键盘可达）
+  function renderLoadFailure() {
+    const grid = $('#animeGrid');
+    if (grid) {
+      grid.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon"><svg class="icon" viewBox="0 0 24 24"><use href="#i-db"/></svg></div>
+          <h3>暂时无法加载数据</h3>
+          <p>请检查网络后重试，或稍后再来</p>
+          <button class="btn btn--ghost" type="button" id="retryLoadBtn">重试加载</button>
+        </div>
+      `;
+      $('#retryLoadBtn')?.addEventListener('click', () => { loadData(); });
+    }
+    const pagination = $('#pagination');
+    if (pagination) pagination.hidden = true;
+    showToast('字幕数据加载失败，请稍后重试', false, TOAST_FAILURE_MS, true);
+  }
+
+  // 成功：统计区幂等增强「已载入 N 条字幕」，数字用 strong 继承 --accent，不破坏原三个统计位
+  function showLoadedStats(count) {
+    const nav = $('#navStats');
+    if (!nav) return;
+    let hint = $('#loadedStatsHint');
+    if (!hint) {
+      const sep = document.createElement('span');
+      sep.setAttribute('aria-hidden', 'true');
+      sep.textContent = '·';
+      hint = document.createElement('span');
+      hint.id = 'loadedStatsHint';
+      hint.appendChild(document.createTextNode('已载入 '));
+      hint.appendChild(document.createElement('strong'));
+      hint.appendChild(document.createTextNode(' 条字幕'));
+      nav.appendChild(sep);
+      nav.appendChild(hint);
+    }
+    const num = $('strong', hint);
+    if (num) num.textContent = Number(count).toLocaleString();
+  }
+
+  async function loadData() {
+    if (isLoading) return;
+    isLoading = true;
+    const gen = ++loadGeneration;
+    const guard = new AbortController();
+    activeGuard = guard;
+    const guardTimer = setTimeout(() => guard.abort(), TIMEOUT.global);
+
+    try {
+      resetLoadState();
+      showLoading(true, STAGE_TEXT.init);
+      const seedPromise = fetchSeedCovers(guard.signal);
+
+      let dataList = null;
+
+      // 1. zst（jsDelivr 主 -> raw 备，串行），fzstd 并行预取
+      if (!guard.signal.aborted) {
+        try {
+          dataList = await loadFromZst(gen, guard.signal);
+        } catch (e) {
+          dataList = null;
+        }
+      }
+      if (gen !== loadGeneration) return;
+
+      // 2. 降级本地 subtitles.json
+      if (!dataList && !guard.signal.aborted) {
+        setStage(STAGE_TEXT.local);
+        dataList = await loadFromLocalJson(guard.signal);
+        if (dataList) showToast('已自动切换数据源，不影响使用', true, TOAST_DEGRADE_MS);
+      }
+      if (gen !== loadGeneration) return;
+
+      // 3. 降级 XML 三源
+      if (!dataList && !guard.signal.aborted) {
+        setStage(STAGE_TEXT.xml);
+        dataList = await loadFromXml(guard.signal);
+        if (dataList) showToast('已自动切换数据源，不影响使用', true, TOAST_DEGRADE_MS);
+      }
+      if (gen !== loadGeneration) return;
+
+      // 4. 全部失败
+      if (!dataList || dataList.length === 0) {
+        renderLoadFailure();
+        return;
+      }
+
+      // 5. 成功整理：先更新文案并双 rAF，再做同步过滤/聚合/渲染
+      setStage(STAGE_TEXT.finalize);
+      await afterTwoFrames();
+      if (gen !== loadGeneration) return;
+
+      state.seedCovers = await seedPromise;
+      if (gen !== loadGeneration) return;
+
+      state.rawList = dataList.filter(item => {
+        const t = (item.type || '').toLowerCase();
+        const p = (item.path || '').toLowerCase();
+        return t !== 'r18' && !p.startsWith('r18');
+      });
+
+      buildAnimeAggregation();
+      fetchRecentCommits();
+      applyFiltersAndSort(); // 内部调用 renderCurrentPage，保留用户搜索词后再渲染
+      renderStats();
+      showLoadedStats(state.rawList.length);
+      // 成功不弹 toast，条数在统计区以 --accent 数字呈现
+    } catch (e) {
+      if (gen === loadGeneration) renderLoadFailure();
+    } finally {
+      clearTimeout(guardTimer);
+      if (gen === loadGeneration) {
+        activeGuard = null;
+        setStage('');
+        showLoading(false);
+        isLoading = false;
+      }
+    }
+  }
+
+  async function fetchAndParseXml(parentSignal) {
     const urls = [
       './Subtitles%20DataBase/Files/db.xml',
       'https://cdn.jsdelivr.net/gh/foxofice/sub_share@master/Subtitles%20DataBase/Files/db.xml',
@@ -411,11 +794,13 @@
     ];
 
     for (const url of urls) {
+      if (parentSignal && parentSignal.aborted) break;
       try {
-        const resp = await fetch(url);
+        const resp = await fetchWithTimeout(url, {}, TIMEOUT.xml, parentSignal);
         if (!resp.ok) continue;
         const xmlText = await resp.text();
-        return parseXmlData(xmlText);
+        const parsed = parseXmlData(xmlText);
+        if (parsed.length > 0) return parsed;
       } catch (e) {}
     }
     return [];
@@ -1088,23 +1473,33 @@
   }
 
   let toastTimer = null;
-  function showToast(msg, ok = true) {
+  // ok 决定错误样式，duration 可选（默认 2000ms 不破坏既有调用），urgent 临时升级 assertive
+  function showToast(msg, ok = true, duration = 2000, urgent = false) {
     const toast = $('#toast');
     if (!toast) return;
     toast.textContent = msg;
     toast.classList.toggle('toast--error', !ok);
+    if (urgent) {
+      toast.setAttribute('role', 'alert');
+      toast.setAttribute('aria-live', 'assertive');
+    } else {
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+    }
     toast.classList.add('show');
     clearTimeout(toastTimer);
     toastTimer = setTimeout(() => {
       toast.classList.remove('show');
-    }, 2000);
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+    }, duration);
   }
 
   
   let progressTimer = null;
-  function showLoading(show, text = '加载中...') {
+  // text 参数现在真正生效：阶段文案写入 #mainLoader 的稳定子节点，显示于骨架卡上方
+  function showLoading(show, text) {
     const bar = $('#topProgressBar');
-    const loader = $('#mainLoader');
 
     if (show) {
       if (bar) {
@@ -1120,10 +1515,7 @@
         }, 150);
       }
       renderSkeletons(15);
-      if (loader) {
-        loader.hidden = true;
-        loader.style.display = 'none';
-      }
+      setStage(text || STAGE_TEXT.init);
     } else {
       clearInterval(progressTimer);
       if (bar) {
@@ -1135,11 +1527,18 @@
           }, 350);
         }, 200);
       }
-      if (loader) {
-        loader.hidden = true;
-        loader.style.display = 'none';
-      }
+      setStage('');
     }
+  }
+
+  // 下载阶段按真实字节更新顶部进度条（已接收字节 / 234497）；首次调用停掉渐进假动画
+  function setDownloadProgress(loaded) {
+    const bar = $('#topProgressBar');
+    if (!bar) return;
+    clearInterval(progressTimer);
+    const ratio = Math.max(0, Math.min(1, Number(loaded) / ZST_EXPECTED_BYTES));
+    bar.style.opacity = '1';
+    bar.style.width = (ratio * 100) + '%';
   }
 
   
@@ -1326,6 +1725,16 @@
         e.preventDefault();
         dropZone.classList.remove('is-dragover');
         if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+          // 用户主动导入优先：自增请求序号 + 中断护栏，彻底作废旧 zst 回调
+          const wasLoading = isLoading;
+          loadGeneration += 1;
+          isLoading = false;
+          if (activeGuard) {
+            activeGuard.abort();
+            activeGuard = null;
+          }
+          if (wasLoading) showLoading(false); else setStage('');
+
           const file = e.dataTransfer.files[0];
           const reader = new FileReader();
           reader.onload = (ev) => {
@@ -1336,6 +1745,7 @@
                 buildAnimeAggregation();
                 applyFiltersAndSort();
                 renderStats();
+                showLoadedStats(list.length);
                 showToast(`成功本地解析导入 ${list.length} 条字幕记录！`, true);
                 closeSettingsModal();
               } else {

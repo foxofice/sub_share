@@ -738,7 +738,7 @@
           ${thumbHtml}
         </div>
         <div class="poster-badges">
-          ${isRecent ? '<span class="badge badge--new">🔥 最新更新</span>' : ''}
+          ${isRecent ? '<span class="badge badge--new">🔥 最新</span>' : ''}
           ${anime.type === 'movie' ? '<span class="badge badge--gold">电影</span>' : ''}
           <span class="badge badge--dark">${yearStr || '经典'}</span>
         </div>
@@ -755,21 +755,19 @@
           ${escapeHtml(anime.jp || anime.en || '—')}
         </p>
 
-        <div class="anime-meta">
-          <span class="meta-tag"><svg class="icon"><use href="#i-db"/></svg> ${verCount} 套字幕</span>
-          <span class="meta-sub" title="${escapeHtml(Array.from(anime.subNames).join(', '))}">${escapeHtml(subGroups || '收录完成')}</span>
-        </div>
-
         <div class="anime-chips">
-          ${Array.from(anime.sources).slice(0, 3).map(s => `<span class="chip chip--source">${escapeHtml(s)}</span>`).join('')}
-          ${Array.from(anime.extensions).map(e => `<span class="chip chip--ext">${escapeHtml(e.replace('.', ''))}</span>`).join('')}
+          <span class="chip chip--count" title="${escapeHtml(Array.from(anime.subNames).join(', '))}">
+            <svg class="icon"><use href="#i-db"/></svg> ${verCount}套
+          </span>
+          ${Array.from(anime.sources).slice(0, 2).map(s => `<span class="chip chip--source">${escapeHtml(s)}</span>`).join('')}
+          ${Array.from(anime.extensions).slice(0, 2).map(e => `<span class="chip chip--ext">${escapeHtml(e.replace('.', ''))}</span>`).join('')}
         </div>
 
         <div class="anime-actions">
-          <a class="btn btn--primary btn--sm action-gh" href="${repoUrl}" target="_blank" rel="noopener noreferrer" title="直接前往 GitHub 仓库所在目录">
-            <svg class="icon"><use href="#i-external"/></svg> 仓库目录
+          <a class="btn btn--primary btn--sm action-gh" href="${repoUrl}" target="_blank" rel="noopener noreferrer" title="前往 GitHub 仓库目录">
+            <svg class="icon"><use href="#i-external"/></svg> 仓库
           </a>
-          <button class="btn btn--ghost btn--sm action-detail" type="button" title="查看所有字幕版本与详情">
+          <button class="btn btn--ghost btn--sm action-detail" type="button" title="查看所有字幕与详情">
             详情
           </button>
         </div>

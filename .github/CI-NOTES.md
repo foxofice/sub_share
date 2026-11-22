@@ -60,3 +60,9 @@ node scripts/sync-db.mjs \
 - `zstd` 由工作流通过 `apt-get` 安装（runner 不保证预装）；
 - 工作流使用 Node 24 运行时（`actions/checkout@v7`、`setup-node@v7`、`upload-artifact@v7`、`download-artifact@v8`、`configure-pages@v6`、`upload-pages-artifact@v5`、`deploy-pages@v5`），不再触发 Node 20 弃用提示；
 - 若之后调整目录规范，请同步修改 `scripts/sync-db.mjs` 的层级识别规则。
+
+## 站点源
+
+站点唯一源是 `gh-pages` 分支：`sync` 生成数据后由 `publish` 把 `subtitles.json`、`seed_covers.json` 推到该分支，`deploy` 再把它作为 Pages 产物发布。
+
+master 下的 `docs/` 只是早期站点副本（`app.js` 46 KB、`subtitles.json` 1.8 MB 等），与 `gh-pages` 内容重复，已删除；master 根目录的 `app.js` / `index.html` / `styles.css` 属于旧版静态页，也不再作为发布源。清理后只需维护 `gh-pages` 一份站点文件。

@@ -1,5 +1,6 @@
 // Application shell — FlClash-style layout:
 // left navigation sidebar + page header + card-based pages, dark/light theme.
+// Filters use hand-rolled pill groups (reliable click path on all DPI scales).
 use crate::app::{self, Globals, LogLevel};
 use crate::db::{SubInfo, COLUMNS};
 use crate::scan;
@@ -11,17 +12,13 @@ use gpui::{
     Render, SharedString, StatefulInteractiveElement as _, Styled as _, Window, WindowBounds,
     WindowOptions,
 };
-use gpui_component::{
-    button::Button,
-    input::{Input, InputEvent, InputState},
-    select::{Select, SelectEvent, SelectState},
-    table::{Column, ColumnSort, DataTable, TableDelegate, TableEvent, TableState},
-    IndexPath, Icon, Root, Sizable as _, Theme, ThemeMode, TitleBar, ActiveTheme as _, h_flex,
-    v_flex,
-};
 use gpui::prelude::FluentBuilder as _;
-use gpui_component::button::ButtonVariants as _;
-use gpui_component::searchable_list::SearchableVec;
+use gpui_component::{
+    button::{Button, ButtonVariants as _},
+    input::{Input, InputEvent, InputState},
+    table::{Column, ColumnSort, DataTable, TableDelegate, TableEvent, TableState},
+    Icon, Root, Sizable as _, Theme, ThemeMode, TitleBar, ActiveTheme as _, h_flex, v_flex,
+};
 use gpui_kit::assets::IconName;
 
 // ---------------------------------------------------------------------------
@@ -212,85 +209,52 @@ impl TableDelegate for SubTableDelegate {
 
 pub struct MainView {
     page: Page,
-    // Data page state.
     table: Entity<TableState<SubTableDelegate>>,
     input: Entity<InputState>,
-    type_sel: Entity<SelectState<SearchableVec<String>>>,
-    source_sel: Entity<SelectState<SearchableVec<String>>>,
-    lang_sel: Entity<SelectState<SearchableVec<String>>>,
+    /// Filter pill items: item 0 is the localized "(All)" marker.
+    type_items: Vec<String>,
+    source_items: Vec<String>,
     selected_row: Option<usize>,
     filtered: Vec<SubInfo>,
-    /// Set from click handlers; executed during render where a Window exists.
     pending_clear: bool,
     pending_reload: bool,
-    /// Cached dashboard stats: (total rows, series, types, last update text).
     stats: Option<(usize, usize, usize, String)>,
-    /// Bumped on every page switch / theme switch, used as animation key.
+    applied_type: String,
+    applied_source: String,
+    applied_version: u64,
+    pending_sync: Option<Filters>,
     page_epoch: u64,
     theme_epoch: u64,
-    // Embedded pages.
     update_view: Entity<crate::windows::UpdateView>,
     search_view: Entity<crate::windows::SearchView>,
 }
 
 impl MainView {
     pub fn new(window: &mut Window, cx: &mut Context<Self>) -> Self {
-        let input = cx.new(|cx| {
-            InputState::new(window, cx).placeholder(app::t(cx, 500))
-        });
+        let input = cx.new(|cx| InputState::new(window, cx).placeholder(app::t(cx, 500)));
 
-        let g = Globals::global(cx);
-        let db_subs = g.db.0.read().unwrap().subs.clone();
-
-        let (types, sources) = {
-            let mut t: std::collections::BTreeSet<String> = Default::default();
-            let mut s: std::collections::BTreeSet<String> = Default::default();
-            for sub in &db_subs {
-                if !sub.r#type.is_empty() {
-                    t.insert(sub.r#type.clone());
-                }
-                if !sub.source.is_empty() {
-                    s.insert(sub.source.clone());
-                }
-            }
-            (t, s)
+        let db_subs = {
+            let g = Globals::global(cx);
+            g.db.0.read().unwrap().subs.clone()
         };
 
+        let (mut types, mut sources): (
+            std::collections::BTreeSet<String>,
+            std::collections::BTreeSet<String>,
+        ) = Default::default();
+        for sub in &db_subs {
+            if !sub.r#type.is_empty() {
+                types.insert(sub.r#type.clone());
+            }
+            if !sub.source.is_empty() {
+                sources.insert(sub.source.clone());
+            }
+        }
         let all_label = app::t(cx, 503);
         let mut type_items = vec![all_label.clone()];
         type_items.extend(types.into_iter());
         let mut source_items = vec![all_label.clone()];
         source_items.extend(sources.into_iter());
-
-        let type_sel = cx.new(|cx| {
-            SelectState::new(
-                SearchableVec::new(type_items),
-                Some(IndexPath::default().row(0)),
-                window,
-                cx,
-            )
-        });
-        let source_sel = cx.new(|cx| {
-            SelectState::new(
-                SearchableVec::new(source_items),
-                Some(IndexPath::default().row(0)),
-                window,
-                cx,
-            )
-        });
-
-        let lang = Globals::global(cx).lang.clone();
-        let lang_names = lang.read(cx).language_names();
-        let current = lang.read(cx).current.clone();
-        let cur_ix = lang_names.iter().position(|n| *n == current).unwrap_or(0);
-        let lang_sel = cx.new(|cx| {
-            SelectState::new(
-                SearchableVec::new(lang_names),
-                Some(IndexPath::default().row(cur_ix)),
-                window,
-                cx,
-            )
-        });
 
         let table = cx.new(|cx| TableState::new(SubTableDelegate::new(), window, cx));
 
@@ -301,14 +265,17 @@ impl MainView {
             page: Page::Dashboard,
             table,
             input,
-            type_sel,
-            source_sel,
-            lang_sel,
+            type_items,
+            source_items,
             selected_row: None,
             filtered: Vec::new(),
             pending_clear: false,
             pending_reload: false,
             stats: None,
+            applied_type: String::new(),
+            applied_source: String::new(),
+            applied_version: 0,
+            pending_sync: None,
             page_epoch: 1,
             theme_epoch: 1,
             update_view,
@@ -320,39 +287,17 @@ impl MainView {
             if matches!(event, InputEvent::Change | InputEvent::PressEnter { .. }) {
                 let value = this.input.read(cx).value().trim().to_string();
                 let store = Globals::global(cx).filters.clone();
+                let changed = store.read(cx).filters.name != value;
                 store.update(cx, |store, cx| {
-                    store.filters.name = value;
-                    store.version += 1;
-                    cx.notify();
+                    if store.filters.name != value {
+                        store.filters.name = value;
+                        store.version += 1;
+                        cx.notify();
+                    }
                 });
-                this.apply_filters(cx);
-            }
-        })
-        .detach();
-
-        cx.subscribe(&this.type_sel, |this, _, event: &SelectEvent<_>, cx| {
-            if let SelectEvent::Confirm(Some(v)) = event {
-                this.set_filter(|f| f.r#type = normalize_all(&v), cx);
-            }
-        })
-        .detach();
-
-        cx.subscribe(&this.source_sel, |this, _, event: &SelectEvent<_>, cx| {
-            if let SelectEvent::Confirm(Some(v)) = event {
-                this.set_filter(|f| f.source = normalize_all(&v), cx);
-            }
-        })
-        .detach();
-
-        cx.subscribe(&this.lang_sel, |this, _, event: &SelectEvent<_>, cx| {
-            if let SelectEvent::Confirm(Some(v)) = event {
-                let lang = Globals::global(cx).lang.clone();
-                lang.update(cx, |l, cx| {
-                    l.set_language(&v);
-                    cx.notify();
-                });
-                this.table.update(cx, |st, cx| st.refresh(cx));
-                cx.notify();
+                if changed {
+                    this.apply_filters(cx);
+                }
             }
         })
         .detach();
@@ -383,22 +328,33 @@ impl MainView {
         })
         .detach();
 
-        // React to filter changes from the advanced search page: jump to the
-        // database page to show the results.
+        // Filter changes (advanced search page / filter pills) — sync the
+        // visible controls and land on the database page.
         let filters_entity = Globals::global(cx).filters.clone();
         cx.observe(&filters_entity, |this, _, cx| {
+            let (version, filters) = {
+                let g = Globals::global(cx);
+                let f = g.filters.read(cx);
+                (f.version, f.filters.clone())
+            };
+            if version != this.applied_version {
+                this.pending_sync = Some(filters.clone());
+            }
             this.apply_filters(cx);
-            // Advanced search (and any filter change) lands on the database
-            // page so the results are visible immediately.
-            let active = Globals::global(cx).filters.read(cx).filters.is_active();
-            if active && this.page != Page::Database {
+            let active = filters.is_active();
+            let jump = Globals::global(cx)
+                .jump_after_reload
+                .load(std::sync::atomic::Ordering::Relaxed);
+            if active
+                && this.page != Page::Database
+                && (jump || version != this.applied_version)
+            {
                 this.set_page(Page::Database, cx);
             }
             cx.notify();
         })
         .detach();
 
-        // React to language changes.
         let lang_entity = Globals::global(cx).lang.clone();
         cx.observe(&lang_entity, |this, _, cx| {
             this.table.update(cx, |st, cx| st.refresh(cx));
@@ -406,7 +362,6 @@ impl MainView {
         })
         .detach();
 
-        // Re-render (log page) when new log entries arrive.
         let log_entity = Globals::global(cx).log.clone();
         cx.observe(&log_entity, |_, _, cx| cx.notify()).detach();
 
@@ -420,6 +375,74 @@ impl MainView {
             uv.update(cx, |v, cx| v.start_remote_download(cx));
         }
         this
+    }
+
+    /// Switch page with a transition animation.
+    pub fn set_page(&mut self, page: Page, cx: &mut Context<Self>) {
+        if self.page != page {
+            self.page = page;
+            self.page_epoch += 1;
+        }
+        cx.notify();
+    }
+
+    /// Ask the shell to reload the database during its next render.
+    pub fn mark_pending_reload(&mut self) {
+        self.pending_reload = true;
+    }
+
+    pub fn apply_filters(&mut self, cx: &mut Context<Self>) {
+        let g = Globals::global(cx);
+        let filters = g.filters.read(cx).filters.clone();
+        self.applied_version = g.filters.read(cx).version;
+
+        let subs = g.db.0.read().unwrap().subs.clone();
+        let ix = search::filter_all(&subs, &filters);
+        let rows: Vec<SubInfo> = ix.into_iter().map(|i| subs[i].clone()).collect();
+
+        self.filtered = rows.clone();
+        let keep_sort = self.table.read(cx).delegate().sort;
+        self.table.update(cx, |st, cx| {
+            st.delegate_mut().rows = rows;
+            if let Some((c, desc)) = keep_sort {
+                st.delegate_mut().sort_rows(c, desc);
+            }
+            cx.notify();
+        });
+        cx.notify();
+    }
+
+    /// Called when the database was replaced (update page finished).
+    pub fn on_db_reloaded(&mut self, cx: &mut Context<Self>) {
+        let g = Globals::global(cx);
+        let subs = g.db.0.read().unwrap().subs.clone();
+
+        let mut types: std::collections::BTreeSet<String> = Default::default();
+        let mut sources: std::collections::BTreeSet<String> = Default::default();
+        for sub in &subs {
+            if !sub.r#type.is_empty() {
+                types.insert(sub.r#type.clone());
+            }
+            if !sub.source.is_empty() {
+                sources.insert(sub.source.clone());
+            }
+        }
+        let all_label = app::t(cx, 503);
+        let mut type_items = vec![all_label.clone()];
+        type_items.extend(types.into_iter());
+        let mut source_items = vec![all_label.clone()];
+        source_items.extend(sources.into_iter());
+        self.type_items = type_items;
+        self.source_items = source_items;
+
+        self.filtered = subs;
+        self.table.update(cx, |st, cx| {
+            st.delegate_mut().sort = None;
+            st.refresh(cx);
+            cx.notify();
+        });
+        self.refresh_stats(cx);
+        self.apply_filters(cx);
     }
 
     fn refresh_stats(&mut self, cx: &mut Context<Self>) {
@@ -442,127 +465,9 @@ impl MainView {
         self.stats = Some((subs.len(), series.len(), types.len(), last));
     }
 
-    fn set_filter(&mut self, f: impl FnOnce(&mut Filters), cx: &mut Context<Self>) {
-        let filters = Globals::global(cx).filters.clone();
-        filters.update(cx, |store, cx| {
-            f(&mut store.filters);
-            store.version += 1;
-            cx.notify();
-        });
-        self.apply_filters(cx);
-    }
-
-    /// Switch page with a transition animation.
-    pub fn set_page(&mut self, page: Page, cx: &mut Context<Self>) {
-        if self.page != page {
-            self.page = page;
-            self.page_epoch += 1;
-        }
-        cx.notify();
-    }
-
-    /// Ask the shell to reload the database during its next render.
-    pub fn mark_pending_reload(&mut self) {
-        self.pending_reload = true;
-    }
-
-    pub fn apply_filters(&mut self, cx: &mut Context<Self>) {
-        let g = Globals::global(cx);
-        let filters = g.filters.read(cx).filters.clone();
-
-        let subs = g.db.0.read().unwrap().subs.clone();
-        let ix = search::filter_all(&subs, &filters);
-        let rows: Vec<SubInfo> = ix.into_iter().map(|i| subs[i].clone()).collect();
-
-        self.filtered = rows.clone();
-        let keep_sort = self.table.read(cx).delegate().sort;
-        self.table.update(cx, |st, cx| {
-            st.delegate_mut().rows = rows;
-            if let Some((c, desc)) = keep_sort {
-                st.delegate_mut().sort_rows(c, desc);
-            }
-            cx.notify();
-        });
-        cx.notify();
-    }
-
-    /// Called when the database was replaced (update page finished).
-    pub fn on_db_reloaded(&mut self, window: &mut Window, cx: &mut Context<Self>) {
-        let g = Globals::global(cx);
-        let subs = g.db.0.read().unwrap().subs.clone();
-
-        let (mut types, mut sources) = (
-            std::collections::BTreeSet::new(),
-            std::collections::BTreeSet::new(),
-        );
-        for sub in &subs {
-            if !sub.r#type.is_empty() {
-                types.insert(sub.r#type.clone());
-            }
-            if !sub.source.is_empty() {
-                sources.insert(sub.source.clone());
-            }
-        }
-        let all_label = app::t(cx, 503);
-        let mut type_items = vec![all_label.clone()];
-        type_items.extend(types.into_iter());
-        let mut source_items = vec![all_label.clone()];
-        source_items.extend(sources.into_iter());
-
-        self.type_sel.update(cx, |s, cx| {
-            let cur = s.selected_index(cx).map(|ix| ix.row);
-            *s = SelectState::new(
-                SearchableVec::new(type_items),
-                Some(IndexPath::default().row(cur.unwrap_or(0))),
-                window,
-                cx,
-            );
-        });
-        self.source_sel.update(cx, |s, cx| {
-            let cur = s.selected_index(cx).map(|ix| ix.row);
-            *s = SelectState::new(
-                SearchableVec::new(source_items),
-                Some(IndexPath::default().row(cur.unwrap_or(0))),
-                window,
-                cx,
-            );
-        });
-        self.attach_select_subscriptions(cx);
-
-        self.filtered = subs;
-        self.table.update(cx, |st, cx| {
-            st.delegate_mut().sort = None;
-            st.refresh(cx);
-            cx.notify();
-        });
-        let jump = Globals::global(cx)
-            .jump_after_reload
-            .load(std::sync::atomic::Ordering::Relaxed);
-        if jump && self.page != Page::Database {
-            self.page = Page::Database;
-            self.page_epoch += 1;
-        }
-        self.refresh_stats(cx);
-        self.apply_filters(cx);
-    }
-
-    fn attach_select_subscriptions(&mut self, cx: &mut Context<Self>) {
-        cx.subscribe(&self.type_sel, |this, _, event: &SelectEvent<_>, cx| {
-            if let SelectEvent::Confirm(Some(v)) = event {
-                this.set_filter(|f| f.r#type = normalize_all(&v), cx);
-            }
-        })
-        .detach();
-        cx.subscribe(&self.source_sel, |this, _, event: &SelectEvent<_>, cx| {
-            if let SelectEvent::Confirm(Some(v)) = event {
-                this.set_filter(|f| f.source = normalize_all(&v), cx);
-            }
-        })
-        .detach();
-    }
-
     fn selected_sub(&self, cx: &Context<Self>) -> Option<SubInfo> {
-        self.selected_row.and_then(|ix| self.filtered.get(ix).cloned())
+        self.selected_row
+            .and_then(|ix| self.filtered.get(ix).cloned())
     }
 
     pub fn open_local_folder(&mut self, cx: &mut Context<Self>) {
@@ -636,7 +541,7 @@ impl MainView {
             .child(SharedString::from(text))
     }
 
-    /// Primary-filled pill (selected state, like FlClash's active tab).
+    /// Primary-filled pill (selected state).
     fn chip_active(&self, cx: &Context<Self>, icon: IconName, text: String) -> impl IntoElement {
         h_flex()
             .rounded_full()
@@ -650,7 +555,82 @@ impl MainView {
             .child(SharedString::from(text))
     }
 
-    /// FlClash-style sidebar: gray active pill, blue left indicator bar.
+    /// Filter pill (type/source quick filters). Item 0 = "(All)".
+    fn filter_pill(
+        &self,
+        cx: &Context<Self>,
+        kind: &'static str,
+        ix: usize,
+        label: &str,
+    ) -> impl IntoElement {
+        let active = if ix == 0 {
+            match kind {
+                "type" => self.applied_type.is_empty(),
+                _ => self.applied_source.is_empty(),
+            }
+        } else {
+            match kind {
+                "type" => self.applied_type == *label,
+                _ => self.applied_source == *label,
+            }
+        };
+        let shell = cx.entity().downgrade();
+        let kind2 = kind;
+        let label2 = label.to_string();
+        div()
+            .id((kind, ix))
+            .px_3()
+            .py(px(4.))
+            .rounded_full()
+            .cursor_pointer()
+            .text_size(px(12.))
+            .bg(if active {
+                cx.theme().primary
+            } else {
+                cx.theme().muted
+            })
+            .text_color(if active {
+                cx.theme().primary_foreground
+            } else {
+                cx.theme().muted_foreground
+            })
+            .hover(|s| {
+                s.bg(if active {
+                    cx.theme().primary
+                } else {
+                    cx.theme().accent
+                })
+            })
+            .on_click(move |_, _, cx| {
+                let value = if ix == 0 {
+                    String::new()
+                } else {
+                    label2.clone()
+                };
+                let shell = shell.clone();
+                shell.update(cx, |m, cx| {
+                    let store = Globals::global(cx).filters.clone();
+                    store.update(cx, |store, cx| {
+                        if kind2 == "type" {
+                            store.filters.r#type = value.clone();
+                        } else {
+                            store.filters.source = value.clone();
+                        }
+                        store.version += 1;
+                        cx.notify();
+                    });
+                    if kind2 == "type" {
+                        m.applied_type = value;
+                    } else {
+                        m.applied_source = value;
+                    }
+                    m.apply_filters(cx);
+                });
+            })
+            .child(SharedString::from(label.to_string()))
+    }
+
+    /// FlClash-style sidebar with active pill highlight.
     fn render_sidebar(&self, cx: &mut Context<Self>) -> impl IntoElement {
         let dark = cx.theme().mode.is_dark();
         let sf = crate::theme::surfaces(dark);
@@ -663,94 +643,96 @@ impl MainView {
             (Page::About, IconName::Info, 100),
         ];
 
-        let nav = v_flex().px_2().gap_1().children(items.iter().map(
-            |(page, icon, title_id)| {
-                let page = *page;
-                let icon = *icon;
-                let title_id = *title_id;
-                let active = self.page == page;
-                let shell = cx.entity();
-                let epoch = self.page_epoch;
-                let mut item = h_flex()
-                    .id(("nav", title_id as usize))
-                    .relative()
-                    .h(px(38.))
-                    .px_3()
-                    .gap_2p5()
-                    .items_center()
-                    .rounded(px(10.))
-                    .cursor_pointer()
-                    .hover(|s| s.bg(gpui::rgb(sf.hover)))
-                    .on_click(move |_, _, cx| {
-                        shell.update(cx, |shell, cx| {
-                            shell.set_page(page, cx);
+        let epoch = self.page_epoch;
+        let nav = v_flex().px_2().gap_1().children(
+            items
+                .iter()
+                .map(|(page, icon, title_id)| {
+                    let page = *page;
+                    let icon = *icon;
+                    let title_id = *title_id;
+                    let active = self.page == page;
+                    let shell = cx.entity();
+                    let mut item = h_flex()
+                        .id(format!("nav-{title_id}"))
+                        .relative()
+                        .h(px(38.))
+                        .px_3()
+                        .gap_2p5()
+                        .items_center()
+                        .rounded(px(10.))
+                        .cursor_pointer()
+                        .hover(|s| s.bg(gpui::rgb(sf.hover)))
+                        .on_click(move |_, _, cx| {
+                            shell.update(cx, |shell, cx| {
+                                shell.set_page(page, cx);
+                            });
                         });
-                    });
-                if active {
-                    item = item.child(
-                        div()
-                            .absolute()
-                            .inset_0()
-                            .rounded(px(10.))
-                            .bg(gpui::rgb(sf.sidebar_pill))
-                            .with_animation(
-                                ("nav-pill", epoch),
-                                Animation::new(std::time::Duration::from_millis(220))
-                                    .with_easing(ease_out_quint()),
-                                |el, t| el.opacity(t),
-                            ),
-                    );
-                }
-                item = item
-                    .child(
-                        div()
-                            .w(px(18.))
-                            .flex_shrink_0()
-                            .flex()
-                            .items_center()
-                            .text_color(if active {
-                                cx.theme().primary
-                            } else {
-                                gpui::rgb(sf.chevron).into()
-                            })
-                            .child(Icon::new(icon).size(px(17.))),
-                    )
-                    .child(
-                        div()
-                            .text_size(px(13.))
-                            .text_color(if active {
-                                cx.theme().foreground
-                            } else {
-                                gpui::rgb(sf.sidebar_text).into()
-                            })
-                            .font_weight(if active {
-                                gpui::FontWeight::SEMIBOLD
-                            } else {
-                                gpui::FontWeight::NORMAL
-                            })
-                            .child(SharedString::from(app::t(cx, title_id))),
-                    );
-                if active {
-                    item = item.child(
-                        div()
-                            .absolute()
-                            .left(px(-8.))
-                            .top(px(10.))
-                            .h(px(18.))
-                            .w(px(3.))
-                            .rounded_full()
-                            .bg(cx.theme().primary)
-                            .with_animation(
-                                ("nav-bar", epoch),
-                                Animation::new(std::time::Duration::from_millis(280))
-                                    .with_easing(ease_out_quint()),
-                                |el, t| el.opacity(t).h(px(6. + 12. * t)),
-                            ),
-                    );
-                }
-                item
-            },
-        ));
+                    if active {
+                        item = item.child(
+                            div()
+                                .absolute()
+                                .inset_0()
+                                .rounded(px(10.))
+                                .bg(gpui::rgb(sf.sidebar_pill))
+                                .with_animation(
+                                    ("nav-pill", epoch),
+                                    Animation::new(std::time::Duration::from_millis(220))
+                                        .with_easing(ease_out_quint()),
+                                    |el, t| el.opacity(t),
+                                ),
+                        );
+                    }
+                    item = item
+                        .child(
+                            div()
+                                .w(px(18.))
+                                .flex_shrink_0()
+                                .flex()
+                                .items_center()
+                                .text_color(if active {
+                                    cx.theme().primary
+                                } else {
+                                    gpui::rgb(sf.chevron).into()
+                                })
+                                .child(Icon::new(icon).size(px(17.))),
+                        )
+                        .child(
+                            div()
+                                .text_size(px(13.))
+                                .text_color(if active {
+                                    cx.theme().foreground
+                                } else {
+                                    gpui::rgb(sf.sidebar_text).into()
+                                })
+                                .font_weight(if active {
+                                    gpui::FontWeight::SEMIBOLD
+                                } else {
+                                    gpui::FontWeight::NORMAL
+                                })
+                                .child(SharedString::from(app::t(cx, title_id))),
+                        );
+                    if active {
+                        item = item.child(
+                            div()
+                                .absolute()
+                                .left(px(-8.))
+                                .top(px(10.))
+                                .h(px(18.))
+                                .w(px(3.))
+                                .rounded_full()
+                                .bg(cx.theme().primary)
+                                .with_animation(
+                                    ("nav-bar", epoch),
+                                    Animation::new(std::time::Duration::from_millis(280))
+                                        .with_easing(ease_out_quint()),
+                                    |el, t| el.opacity(t).h(px(6. + 12. * t)),
+                                ),
+                        );
+                    }
+                    item
+                }),
+        );
 
         // Theme toggle (light <-> dark).
         let shell_for_theme = cx.entity().downgrade();
@@ -778,6 +760,50 @@ impl MainView {
                 });
             });
 
+        // Language pills (Chinese first).
+        let lang_now = Globals::global(cx).lang.read(cx).current.clone();
+        let lang_pills = h_flex().gap_1().flex_wrap().children(
+            Globals::global(cx)
+                .lang
+                .read(cx)
+                .language_names()
+                .into_iter()
+                .map(|name| {
+                    let shell = cx.entity().downgrade();
+                    let on = name == lang_now;
+                    let name_click = name.clone();
+                    div()
+                        .id(format!("lang-{name}"))
+                        .px_2()
+                        .py(px(3.))
+                        .rounded(px(8.))
+                        .cursor_pointer()
+                        .text_size(px(11.))
+                        .bg(if on {
+                            cx.theme().primary
+                        } else {
+                            gpui::rgba(0x00000000).into()
+                        })
+                        .text_color(if on {
+                            cx.theme().primary_foreground
+                        } else {
+                            cx.theme().muted_foreground
+                        })
+                        .on_click(move |_, _, cx| {
+                            let _ = shell.update(cx, |m, cx| {
+                                let lang = Globals::global(cx).lang.clone();
+                                lang.update(cx, |l, cx| {
+                                    l.set_language(&name_click);
+                                    cx.notify();
+                                });
+                                m.table.update(cx, |st, cx| st.refresh(cx));
+                                cx.notify();
+                            });
+                        })
+                        .child(SharedString::from(name.clone()))
+                }),
+        );
+
         v_flex()
             .w(px(200.))
             .flex_shrink_0()
@@ -787,46 +813,46 @@ impl MainView {
             .border_r_1()
             .border_color(cx.theme().border.opacity(0.6))
             .child(
-              v_flex().gap_2().child(
-                // Logo header
-                h_flex()
-                    .px_3()
-                    .pt_4()
-                    .pb_3()
-                    .gap_2p5()
-                    .items_center()
+                v_flex()
+                    .gap_2()
                     .child(
-                        div()
-                            .size(px(34.))
-                            .rounded(px(10.))
-                            .flex()
+                        h_flex()
+                            .px_3()
+                            .pt_4()
+                            .pb_3()
+                            .gap_2p5()
                             .items_center()
-                            .justify_center()
-                            .bg(cx.theme().primary)
-                            .text_color(cx.theme().primary_foreground)
-                            .child(Icon::new(IconName::Database).size(px(18.))),
-                    )
-                    .child(
-                        v_flex()
-                            .min_w_0()
                             .child(
                                 div()
-                                    .text_size(px(13.))
-                                    .font_weight(gpui::FontWeight::SEMIBOLD)
-                                    .child(SharedString::from("SubAtlas")),
+                                    .size(px(34.))
+                                    .rounded(px(10.))
+                                    .flex()
+                                    .items_center()
+                                    .justify_center()
+                                    .bg(cx.theme().primary)
+                                    .text_color(cx.theme().primary_foreground)
+                                    .child(Icon::new(IconName::Database).size(px(18.))),
                             )
                             .child(
-                                div()
-                                    .text_size(px(10.))
-                                    .text_color(cx.theme().muted_foreground)
-                                    .child(SharedString::from(crate::windows::VERSION)),
+                                v_flex()
+                                    .min_w_0()
+                                    .child(
+                                        div()
+                                            .text_size(px(13.))
+                                            .font_weight(gpui::FontWeight::SEMIBOLD)
+                                            .child(SharedString::from("SubAtlas")),
+                                    )
+                                    .child(
+                                        div()
+                                            .text_size(px(10.))
+                                            .text_color(cx.theme().muted_foreground)
+                                            .child(SharedString::from(crate::windows::VERSION)),
+                                    ),
                             ),
-                    ),
-            )
-              .child(nav),
+                    )
+                    .child(nav),
             )
             .child(
-                // Footer: theme toggle + language
                 h_flex()
                     .px_3()
                     .py_3()
@@ -835,16 +861,7 @@ impl MainView {
                     .border_t_1()
                     .border_color(cx.theme().border.opacity(0.6))
                     .child(theme_btn)
-                    .child(
-                        div()
-                            .flex_1()
-                            .min_w_0()
-                            .child(
-                                Select::new(&self.lang_sel)
-                                    .menu_width(px(150.))
-                                    .with_size(gpui_component::Size::Small),
-                            ),
-                    ),
+                    .child(lang_pills),
             )
     }
 
@@ -916,7 +933,6 @@ impl MainView {
             .clone()
             .unwrap_or_else(|| (0, 0, 0, "-".into()));
 
-        // FlClash stat card: small header (icon + muted label), big value.
         let epoch = self.page_epoch;
         let stat = |ix: usize, label: String, value: String, big: bool, icon: IconName| {
             v_flex()
@@ -967,6 +983,7 @@ impl MainView {
                 )
         };
 
+        let shell = cx.entity();
         let action = |id: &'static str,
                       label: String,
                       sub: String,
@@ -974,7 +991,6 @@ impl MainView {
                       shell: &Entity<MainView>,
                       page: Page| {
             let shell = shell.clone();
-            let sf = crate::theme::surfaces(dark);
             h_flex()
                 .id(id)
                 .px_4()
@@ -1025,7 +1041,6 @@ impl MainView {
                 )
         };
 
-        let shell = cx.entity();
         v_flex()
             .id("dash-page")
             .flex_1()
@@ -1038,15 +1053,15 @@ impl MainView {
             .child(
                 div().flex().flex_wrap().gap_3().children([
                     stat(0, app::t(cx, 564), format!("{total}"), true, IconName::Database),
-                    stat(1, app::t(cx, 565), format!("{n_series}"), true, IconName::Layers),
-                    stat(2, app::t(cx, 563), format!("{n_types}"), true, IconName::Table),
                     stat(
-                        3,
-                        app::fmt1(cx, 505, last.clone()),
-                        last,
-                        false,
-                        IconName::Clock,
+                        1,
+                        app::t(cx, 565),
+                        format!("{n_series}"),
+                        true,
+                        IconName::Layers,
                     ),
+                    stat(2, app::t(cx, 563), format!("{n_types}"), true, IconName::Table),
+                    stat(3, app::fmt1(cx, 505, last.clone()), last, false, IconName::Clock),
                 ]),
             )
             .child(
@@ -1174,7 +1189,7 @@ impl MainView {
             )
     }
 
-    /// Database page: chips + search bar + table card.
+    /// Database page: chips + search bar + filter pills + table card.
     fn render_database_page(&self, cx: &mut Context<Self>) -> impl IntoElement {
         let table = self.table.clone();
         let n_rows = self.filtered.len();
@@ -1190,6 +1205,7 @@ impl MainView {
             .filter(|d| d.year() >= 1970)
             .map(|d| d.format("%Y-%m-%d %H:%M").to_string())
             .unwrap_or_else(|| "-".into());
+        let filters_now = Globals::global(cx).filters.read(cx).filters.clone();
 
         v_flex()
             .size_full()
@@ -1202,7 +1218,14 @@ impl MainView {
                     .flex_wrap()
                     .child(self.chip(cx, IconName::Database, app::fmt1(cx, 451, n_rows.to_string())))
                     .child(self.chip(cx, IconName::Layers, app::fmt1(cx, 452, n_series.to_string())))
-                    .child(self.chip(cx, IconName::Clock, app::fmt1(cx, 505, last))),
+                    .child(self.chip(cx, IconName::Clock, app::fmt1(cx, 505, last)))
+                    .when(filters_now.is_active(), |el| {
+                        el.child(self.chip_active(
+                            cx,
+                            IconName::SlidersHorizontal,
+                            format!("{} · {}", app::t(cx, 591), filter_summary(cx, &filters_now)),
+                        ))
+                    }),
             )
             .child(
                 h_flex()
@@ -1213,20 +1236,6 @@ impl MainView {
                             Input::new(&self.input)
                                 .cleanable(true)
                                 .w_full()
-                                .with_size(gpui_component::Size::Small),
-                        ),
-                    )
-                    .child(
-                        div().w(px(150.)).child(
-                            Select::new(&self.type_sel)
-                                .menu_width(px(150.))
-                                .with_size(gpui_component::Size::Small),
-                        ),
-                    )
-                    .child(
-                        div().w(px(140.)).child(
-                            Select::new(&self.source_sel)
-                                .menu_width(px(150.))
                                 .with_size(gpui_component::Size::Small),
                         ),
                     )
@@ -1254,6 +1263,44 @@ impl MainView {
                     ),
             )
             .child(
+                h_flex()
+                    .gap_2()
+                    .items_center()
+                    .flex_wrap()
+                    .child(
+                        div()
+                            .text_size(px(12.))
+                            .text_color(cx.theme().muted_foreground)
+                            .child(SharedString::from(app::t(cx, 536))),
+                    )
+                    .child(
+                        h_flex().gap_1().flex_wrap().children(
+                            self.type_items.iter().enumerate().map(|(i, label)| {
+                                self.filter_pill(cx, "type", i, label)
+                            }),
+                        ),
+                    ),
+            )
+            .child(
+                h_flex()
+                    .gap_2()
+                    .items_center()
+                    .flex_wrap()
+                    .child(
+                        div()
+                            .text_size(px(12.))
+                            .text_color(cx.theme().muted_foreground)
+                            .child(SharedString::from(app::t(cx, 537))),
+                    )
+                    .child(
+                        h_flex().gap_1().flex_wrap().children(
+                            self.source_items.iter().enumerate().map(|(i, label)| {
+                                self.filter_pill(cx, "source", i, label)
+                            }),
+                        ),
+                    ),
+            )
+            .child(
                 div()
                     .flex_1()
                     .min_h_0()
@@ -1276,10 +1323,8 @@ impl MainView {
                 .flex_1()
                 .min_h_0()
                 .overflow_y_scroll()
-                .mx_6()
-                .mb_5()
-                .p_4()
                 .max_w(px(760.))
+                .p_4()
                 .child(self.update_view.clone())
                 .into_any_element(),
             Page::Search => self
@@ -1288,10 +1333,8 @@ impl MainView {
                 .flex_1()
                 .min_h_0()
                 .overflow_y_scroll()
-                .mx_6()
-                .mb_5()
-                .p_4()
                 .max_w(px(760.))
+                .p_4()
                 .child(self.search_view.clone())
                 .into_any_element(),
             Page::Log => self
@@ -1299,8 +1342,6 @@ impl MainView {
                 .flex_1()
                 .min_h_0()
                 .overflow_hidden()
-                .mx_6()
-                .mb_5()
                 .child(crate::windows::log_page(cx))
                 .into_any_element(),
             Page::About => v_flex()
@@ -1308,23 +1349,15 @@ impl MainView {
                 .flex_1()
                 .min_h_0()
                 .overflow_y_scroll()
-                .px_6()
-                .pb_6()
                 .child(
                     div()
                         .flex_shrink_0()
+                        .px_6()
+                        .pb_6()
                         .child(crate::windows::about_page(cx)),
                 )
                 .into_any_element(),
         }
-    }
-}
-
-fn normalize_all(v: &str) -> String {
-    if v.starts_with('(') && v.ends_with(')') {
-        String::new()
-    } else {
-        v.to_string()
     }
 }
 
@@ -1342,30 +1375,55 @@ pub fn percent_encode(s: &str) -> String {
     out
 }
 
+/// Human-readable summary of the active filters, e.g.
+/// `名称=Lupin · 类型=animation · 放送>=2020-01-01`.
+fn filter_summary(cx: &gpui::App, f: &Filters) -> String {
+    let mut parts: Vec<String> = Vec::new();
+    let mut push = |label: String, value: &str| {
+        if !value.is_empty() {
+            parts.push(format!("{label}={value}"));
+        }
+    };
+    push(app::t(cx, 531), &f.name);
+    push(app::t(cx, 538), &f.sub_name);
+    push(app::t(cx, 539), &f.extension);
+    push(app::t(cx, 537), &f.source);
+    push(app::t(cx, 540), &f.providers);
+    push(app::t(cx, 541), &f.desc);
+    push(app::t(cx, 536), &f.r#type);
+    if let Some((op, d)) = &f.time_op {
+        parts.push(format!("{} {} {}", app::t(cx, 530), op, d.format("%Y-%m-%d")));
+    }
+    if parts.is_empty() {
+        parts.push("…".into());
+    }
+    parts.join(" · ")
+}
+
 impl Render for MainView {
     fn render(&mut self, window: &mut Window, cx: &mut Context<Self>) -> impl IntoElement {
+        // Sync visible controls with filters that arrived from elsewhere
+        // (advanced search page). Needs a Window for input updates.
+        if let Some(filters) = self.pending_sync.take() {
+            if self.input.read(cx).value().trim() != filters.name {
+                let name = filters.name.clone();
+                self.input.update(cx, |st, cx| st.set_value(name, window, cx));
+            }
+            self.applied_type = filters.r#type.clone();
+            self.applied_source = filters.source.clone();
+            self.applied_version = Globals::global(cx).filters.read(cx).version;
+        }
         if self.pending_reload {
             self.pending_reload = false;
-            self.on_db_reloaded(window, cx);
+            self.on_db_reloaded(cx);
         }
-        if self.pending_clear {
-            self.pending_clear = false;
-            self.type_sel.update(cx, |s, cx| {
-                s.set_selected_index(Some(IndexPath::default().row(0)), window, cx);
-            });
-            self.source_sel.update(cx, |s, cx| {
-                s.set_selected_index(Some(IndexPath::default().row(0)), window, cx);
-            });
-            self.input.update(cx, |st, cx| st.set_value("", window, cx));
-            self.apply_filters(cx);
-        }
+
         h_flex()
             .id("main-root")
             .size_full()
             .bg(cx.theme().background)
             .text_color(cx.theme().foreground)
             .on_key_down(|event: &gpui::KeyDownEvent, _, cx| {
-                // Hotkeys: F5 -> update page, F3 -> advanced search, F4 -> log.
                 let target = match event.keystroke.key.as_str() {
                     "f5" => Some(Page::Update),
                     "f3" => Some(Page::Search),
@@ -1418,7 +1476,7 @@ impl Render for MainView {
                                 Animation::new(std::time::Duration::from_millis(220))
                                     .with_easing(ease_out_quint()),
                                 |el, t| el.opacity(t).mt(px((1.0 - t) * 10.)),
-                            ),
+                            )
                     ),
             )
     }
@@ -1427,7 +1485,6 @@ impl Render for MainView {
 /// Open the main window (called from main.rs).
 pub fn open_main_window(cx: &mut gpui::App) -> gpui::WindowHandle<Root> {
     let cfg = Globals::global(cx).config.lock().unwrap().clone();
-    // Clamp the persisted geometry so the window always fits a 1080p screen.
     let (mut w, mut h) = if cfg.window_width > 200 && cfg.window_height > 200 {
         (cfg.window_width as f32, cfg.window_height as f32)
     } else {
@@ -1444,6 +1501,11 @@ pub fn open_main_window(cx: &mut gpui::App) -> gpui::WindowHandle<Root> {
     let opts = WindowOptions {
         window_bounds: Some(WindowBounds::Windowed(bounds)),
         window_min_size: Some(size(px(1000.), px(640.))),
+        titlebar: Some(gpui::TitlebarOptions {
+            title: Some("SubAtlas".into()),
+            appears_transparent: true,
+            ..Default::default()
+        }),
         ..TitleBar::window_options()
     };
 

@@ -1,0 +1,596 @@
+﻿[Script Info]
+Title: ひろがるスカイ！プリキュア 第34回
+Original Script: FLsnow
+Synch Point: 0
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureSky,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00F8721F,&H64FFD51E,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CurePri,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00A384FB,&H64CAB8FF,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureWin,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H000F6FFF,&H648AE3FC,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureBut,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00AC3DFF,&H6424E1FE,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureMaj,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00F348AE,&H641B1B1D,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: DarkBnd,Droid Sans Fallback,83,&H00000000,&H00FFFFFF,&H00FFFFFF,&H641B1B1D,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: OP,幼圆,50,&H00FFFFFF,&H000019FF,&H0048C6E1,&H96FFFFFF,-1,0,0,0,100,100,0,0,1,2,2,2,15,15,8,1
+Style: ED,幼圆,53,&H00A779D7,&H00BB8DF1,&H00FFFFFF,&H96FFFFFF,-1,0,0,0,100,100,0,0,1,1.5,1,2,15,15,8,1
+Style: IN_CN,幼圆,50,&H00C98EFC,&H000000FF,&H00FFFFFF,&HC8000000,-1,0,0,0,100,100,0,0,1,2,1,7,20,10,70,1
+Style: IN_JP,Droid Sans Fallback,40,&H00C98EFC,&H000000FF,&H00FFFFFF,&HC8000000,-1,0,0,0,100,100,0,0,1,2,1,7,20,10,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:02.77,0:00:08.71,DarkBnd,NTP,0,0,0,,怎么能够忘记 你们让我蒙受的屈辱
+Dialogue: 0,0:00:09.05,0:00:10.01,CureSky,NTP,0,0,0,,不许动！
+Dialogue: 0,0:00:11.31,0:00:12.44,CurePri,NTP,0,0,0,,不许动！
+Dialogue: 0,0:00:13.37,0:00:17.12,CureSky,NTP,0,0,0,,你要敢动一丝 {\3c&HBB8DF1&\4c&HFFFFFF&}绝对饶不了你！
+Dialogue: 0,0:00:17.40,0:00:18.50,DarkBnd,NTP,0,0,0,,呀！
+Dialogue: 0,0:00:18.65,0:00:19.69,Default,NTP,0,0,0,,（隔壁砸墙声）
+Dialogue: 0,0:00:20.14,0:00:22.51,Default,NTP,0,0,0,,叽叽喳喳的烦死了！
+Dialogue: 0,0:00:22.78,0:00:24.17,DarkBnd,NTP,0,0,0,,对不起
+Dialogue: 0,0:00:28.75,0:00:30.21,Default,NTP,0,0,0,,{\an8}{\fs50}咸黄油（黄油也暗指蚱蜢,话说大家知道butterfly 黄油苍蝇的梗吗...）
+Dialogue: 0,0:00:37.68,0:00:41.05,DarkBnd,NTP,0,0,0,,时机已到 现在正是雪耻的时候！
+Dialogue: 0,0:00:41.29,0:00:46.45,DarkBnd,NTP,0,0,0,,给我等着 我虚蜢达大人 会把你们打入绝望的谷底！
+Dialogue: 0,0:00:46.61,0:00:47.16,Default,NTP,0,0,0,,（隔壁砸墙声）
+Dialogue: 0,0:00:47.30,0:00:48.18,DarkBnd,NTP,0,0,0,,啊！
+Dialogue: 0,0:00:48.44,0:00:50.06,Default,NTP,0,0,0,,给我适可而止！
+Dialogue: 0,0:00:50.24,0:00:52.90,Default,NTP,0,0,0,,我才出夜班 睡都睡不着！
+Dialogue: 0,0:00:58.30,0:01:00.78,DarkBnd,NTP,0,0,0,,混蛋 这个混账邻居
+Dialogue: 0,0:01:01.01,0:01:03.81,DarkBnd,NTP,0,0,0,,你以为这样我就怂了吗？
+Dialogue: 0,0:01:04.13,0:01:07.17,DarkBnd,NTP,0,0,0,,我会让你后悔找我的茬！
+Dialogue: 0,0:01:07.39,0:01:08.81,DarkBnd,NTP,0,0,0,,好烫！
+Dialogue: 0,0:01:10.12,0:01:15.05,DarkBnd,NTP,0,0,0,,算了 今天就放过你 捡了一条命呢
+Dialogue: 0,0:01:15.62,0:01:17.57,DarkBnd,NTP,0,0,0,,啊 糟糕！到点了！
+Dialogue: 0,0:01:20.85,0:01:22.19,DarkBnd,NTP,0,0,0,,必须去打工了
+Dialogue: 0,0:01:23.68,0:01:25.78,DarkBnd,NTP,0,0,0,,还剩218日元
+Dialogue: 0,0:01:26.18,0:01:28.86,DarkBnd,NTP,0,0,0,,这个月要怎么熬过去啊
+Dialogue: 0,0:01:29.57,0:01:30.12,CureSky,NTP,0,0,0,,诶！
+Dialogue: 0,0:01:30.29,0:01:30.98,DarkBnd,NTP,0,0,0,,呀！
+Dialogue: 0,0:01:31.18,0:01:32.94,DarkBnd,NTP,0,0,0,,啊！排水沟！
+Dialogue: 0,0:01:33.28,0:01:35.51,CureSky,NTP,0,0,0,,今天的画书 是新作啊
+Dialogue: 0,0:01:35.71,0:01:36.62,CurePri,NTP,0,0,0,,嗯
+Dialogue: 0,0:01:37.46,0:01:38.90,DarkBnd,NTP,0,0,0,,是臭丫头们...
+Dialogue: 0,0:01:39.12,0:01:41.09,CurePri,NTP,0,0,0,,《公主的花园》
+Dialogue: 0,0:01:41.79,0:01:42.96,CureMaj,NTP,0,0,0,,哇...
+Dialogue: 0,0:01:43.14,0:01:46.54,CureSky,NTP,0,0,0,,是公主系列啊 我可喜欢了
+Dialogue: 0,0:01:46.77,0:01:47.97,CureMaj,NTP,0,0,0,,小空也喜欢！
+Dialogue: 0,0:01:48.18,0:01:49.78,CureWin,NTP,0,0,0,,都已经画了10本了？
+Dialogue: 0,0:01:50.01,0:01:51.75,CurePri,NTP,0,0,0,,一画就停不下来
+Dialogue: 0,0:01:52.13,0:01:54.97,CurePri,NTP,0,0,0,,希望大家都能够喜欢...
+Dialogue: 0,0:01:55.15,0:01:56.22,CureWin,NTP,0,0,0,,肯定会喜欢的！
+Dialogue: 0,0:01:56.43,0:01:59.36,CureWin,NTP,0,0,0,,你看公主都这么开心了
+Dialogue: 0,0:01:59.54,0:02:01.19,CureMaj,NTP,0,0,0,,可喜欢了
+Dialogue: 0,0:02:01.71,0:02:04.04,CureBut,NTP,0,0,0,,小白 就走画书作家这条路吧？
+Dialogue: 0,0:02:04.23,0:02:05.02,CurePri,NTP,0,0,0,,诶？
+Dialogue: 0,0:02:05.20,0:02:08.51,CureSky,NTP,0,0,0,,好主意 真白同学的话 绝对能成的
+Dialogue: 0,0:02:10.05,0:02:11.24,CurePri,NTP,0,0,0,,会吗？
+Dialogue: 0,0:02:12.14,0:02:13.58,CurePri,NTP,0,0,0,,画书作家...
+Dialogue: 0,0:02:14.13,0:02:15.85,CurePri,NTP,0,0,0,,希望能够当上...
+Dialogue: 0,0:02:16.71,0:02:21.03,DarkBnd,NTP,0,0,0,,什么画书作家？害得我这么惨
+Dialogue: 0,0:02:22.92,0:02:26.75,DarkBnd,NTP,0,0,0,,我要粉碎你这个梦想！
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:04:00.14,0:04:05.61,Default,NTP,0,0,0,,{\fad(500,0)}{\c&HFCB856&\3c&HFFF4DE&\4c&HFFFFFF&}蜢蜢！真白与归来的那个人
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:04:08.46,0:04:10.77,DarkBnd,NTP,0,0,0,,我可是用头脑作战的
+Dialogue: 0,0:04:10.95,0:04:16.16,DarkBnd,NTP,0,0,0,,作战计划要不断提炼再提炼 让Precure们中招 确确实实地...
+Dialogue: 0,0:04:16.38,0:04:17.31,Default,NTP,0,0,0,,喂 打工的！
+Dialogue: 0,0:04:17.47,0:04:18.39,DarkBnd,NTP,0,0,0,,是！
+Dialogue: 0,0:04:18.57,0:04:21.37,Default,NTP,0,0,0,,快指挥车辆通过！都堵车了！
+Dialogue: 0,0:04:21.55,0:04:23.08,DarkBnd,NTP,0,0,0,,对不起
+Dialogue: 0,0:04:25.44,0:04:27.62,Default,NTP,0,0,0,,欢迎光临天窗市图书馆
+Dialogue: 0,0:04:27.86,0:04:31.91,Default,NTP,0,0,0,,今天这位小姐姐会跟大家讲她创作的故事
+Dialogue: 0,0:04:35.33,0:04:38.68,CurePri,NTP,0,0,0,,我叫虹丘真白 请多关照
+Dialogue: 0,0:04:38.88,0:04:41.84,Default,NTP,0,0,0,,（掌声...）
+Dialogue: 0,0:04:42.02,0:04:43.73,CurePri,NTP,0,0,0,,公主的花园
+Dialogue: 0,0:04:44.42,0:04:47.42,CurePri,NTP,0,0,0,,南国的公主非常喜欢花
+Dialogue: 0,0:04:47.74,0:04:53.63,CurePri,NTP,0,0,0,,在城堡庭院里种了红的黄的白的蓝的 各种颜色的花
+Dialogue: 0,0:04:54.69,0:04:57.91,CurePri,NTP,0,0,0,,公主在遥望着花朵的时候 突然想到
+Dialogue: 0,0:04:58.22,0:05:01.16,CurePri,NTP,0,0,0,,还要种更多种颜色的花
+Dialogue: 0,0:05:03.64,0:05:05.67,CurePri,NTP,0,0,0,,这时候园丁说了
+Dialogue: 0,0:05:05.88,0:05:08.78,CurePri,NTP,0,0,0,,邻国有一种七色花
+Dialogue: 0,0:05:05.88,0:05:08.78,CurePri,NTP,0,0,0,,{\fs50}（露露伦伦伦... 看过花仙子应该都已经...）
+Dialogue: 0,0:05:07.34,0:05:09.61,Default,NTP,0,0,0,,{\an8}（嬉闹声）
+Dialogue: 0,0:05:13.10,0:05:14.88,Default,NTP,0,0,0,,听话 嘘...
+Dialogue: 0,0:05:18.19,0:05:20.79,CurePri,NTP,0,0,0,,公主两眼放光
+Dialogue: 0,0:05:20.98,0:05:23.42,CurePri,NTP,0,0,0,,好想欣赏一下七色花呢
+Dialogue: 0,0:05:23.66,0:05:24.36,Default,NTP,0,0,0,,走吧
+Dialogue: 0,0:05:24.56,0:05:25.55,Default,NTP,0,0,0,,嗯
+Dialogue: 0,0:05:26.57,0:05:28.89,CurePri,NTP,0,0,0,,怎么了？还没讲完呢？
+Dialogue: 0,0:05:29.97,0:05:31.43,Default,NTP,0,0,0,,没什么意思啊
+Dialogue: 0,0:05:32.08,0:05:33.18,CurePri,NTP,0,0,0,,诶？
+Dialogue: 0,0:05:33.62,0:05:36.44,Default,NTP,0,0,0,,抱歉 喂 别乱跑！
+Dialogue: 0,0:05:41.07,0:05:42.87,CureSky,NTP,0,0,0,,真白同学 继续！
+Dialogue: 0,0:05:43.25,0:05:47.42,CurePri,NTP,0,0,0,,啊 抱歉 我继续讲
+Dialogue: 0,0:05:51.91,0:05:55.18,CurePri,NTP,0,0,0,,那花已经不再是七色的了
+Dialogue: 0,0:05:55.45,0:05:57.83,CurePri,NTP,0,0,0,,但是内心依旧是七色的
+Dialogue: 0,0:05:58.24,0:06:02.69,CurePri,NTP,0,0,0,,公主也更加喜欢花了
+Dialogue: 0,0:06:03.94,0:06:05.11,CurePri,NTP,0,0,0,,结束了
+Dialogue: 0,0:06:05.33,0:06:08.75,Default,NTP,0,0,0,,（掌声）
+Dialogue: 0,0:06:08.92,0:06:10.01,Default,NTP,0,0,0,,好有趣！
+Dialogue: 0,0:06:10.21,0:06:11.90,Default,NTP,0,0,0,,公主很可爱！
+Dialogue: 0,0:06:12.25,0:06:13.58,Default,NTP,0,0,0,,花很漂亮！
+Dialogue: 0,0:06:13.86,0:06:14.68,Default,NTP,0,0,0,,漂亮！
+Dialogue: 0,0:06:14.85,0:06:15.91,CurePri,NTP,0,0,0,,谢谢
+Dialogue: 0,0:06:16.87,0:06:20.27,Default,NTP,0,0,0,,你真厉害呢 能让我们翻一翻吗
+Dialogue: 0,0:06:20.50,0:06:21.90,CurePri,NTP,0,0,0,,当然可以
+Dialogue: 0,0:06:22.54,0:06:23.50,Default,NTP,0,0,0,,哇...
+Dialogue: 0,0:06:23.87,0:06:26.64,Default,NTP,0,0,0,,（嬉闹声）
+Dialogue: 0,0:06:27.25,0:06:28.32,Default,NTP,0,0,0,,等等
+Dialogue: 0,0:06:29.63,0:06:31.37,Default,NTP,0,0,0,,没什么意思啊
+Dialogue: 0,0:06:34.95,0:06:36.70,CureBut,NTP,0,0,0,,没什么好在意的
+Dialogue: 0,0:06:36.93,0:06:39.39,CureBut,NTP,0,0,0,,小朋友的个性不同 他们属于活泼好动的
+Dialogue: 0,0:06:39.62,0:06:42.46,CurePri,NTP,0,0,0,,嗯 是这样呢...
+Dialogue: 0,0:06:48.65,0:06:50.50,CureMaj,NTP,0,0,0,,花 红色的！
+Dialogue: 0,0:06:50.67,0:06:52.40,CureBut,NTP,0,0,0,,真的呢 好漂亮
+Dialogue: 0,0:06:53.20,0:06:56.46,CureSky,NTP,0,0,0,,小空 那边有黄色的花哦
+Dialogue: 0,0:06:56.99,0:06:58.92,CureMaj,NTP,0,0,0,,黄的！
+Dialogue: 0,0:06:59.13,0:07:03.05,CurePri,NTP,0,0,0,,诶 我能去那边采风吗？
+Dialogue: 0,0:07:03.36,0:07:04.38,CureBut,NTP,0,0,0,,OK！
+Dialogue: 0,0:07:04.66,0:07:07.12,CureSky,NTP,0,0,0,,莫非是为了下一作做准备？
+Dialogue: 0,0:07:07.33,0:07:08.45,CureSky,NTP,0,0,0,,加油啊！
+Dialogue: 0,0:07:36.15,0:07:37.64,CurePri,NTP,0,0,0,,啊...
+Dialogue: 0,0:07:43.16,0:07:44.84,CurePri,NTP,0,0,0,,哈...
+Dialogue: 0,0:07:48.39,0:07:50.24,CurePri,NTP,0,0,0,,你好 你的东西掉了
+Dialogue: 0,0:07:50.42,0:07:52.61,DarkBnd,NTP,0,0,0,,诶？我重要的笔吗？
+Dialogue: 0,0:07:53.42,0:07:54.57,DarkBnd,NTP,0,0,0,,谢谢
+Dialogue: 0,0:07:54.76,0:07:58.01,DarkBnd,NTP,0,0,0,,我是美术系的学生 孟达
+Dialogue: 0,0:07:54.76,0:07:58.01,DarkBnd,NTP,0,0,0,,{\fs50\pos(1230,975)}纹田
+Dialogue: 0,0:07:58.59,0:08:01.84,CurePri,NTP,0,0,0,,美术系... 你是美院的大学生吗？
+Dialogue: 0,0:08:02.05,0:08:04.49,DarkBnd,NTP,0,0,0,,是的 我的志向是成为画家！
+Dialogue: 0,0:08:04.70,0:08:06.90,DarkBnd,NTP,0,0,0,,经常来这里作画
+Dialogue: 0,0:08:07.19,0:08:11.02,DarkBnd,NTP,0,0,0,,嘿嘿嘿... 喜欢画画 那肯定会对美大生有兴趣
+Dialogue: 0,0:08:11.21,0:08:12.64,DarkBnd,NTP,0,0,0,,在按我的计划走呢
+Dialogue: 0,0:08:12.85,0:08:14.58,CurePri,NTP,0,0,0,,你画的是哪种风格的？
+Dialogue: 0,0:08:15.00,0:08:16.11,DarkBnd,NTP,0,0,0,,这样的！
+Dialogue: 0,0:08:16.52,0:08:19.58,CurePri,NTP,0,0,0,,哇... 好棒的画
+Dialogue: 0,0:08:19.80,0:08:20.97,DarkBnd,NTP,0,0,0,,谢谢
+Dialogue: 0,0:08:21.50,0:08:23.19,DarkBnd,NTP,0,0,0,,噗 她信了
+Dialogue: 0,0:08:23.37,0:08:26.37,DarkBnd,NTP,0,0,0,,那是在网上随便搜的！
+Dialogue: 0,0:08:26.59,0:08:31.65,DarkBnd,NTP,0,0,0,,接下来 就把你的画贬到一文不值 挫挫你的锐气！
+Dialogue: 0,0:08:31.81,0:08:33.83,DarkBnd,NTP,0,0,0,,你喜欢画哪种风格的画？
+Dialogue: 0,0:08:37.40,0:08:39.64,CurePri,NTP,0,0,0,,我还差得远呢
+Dialogue: 0,0:08:41.88,0:08:43.18,DarkBnd,NTP,0,0,0,,怎么了？
+Dialogue: 0,0:08:43.38,0:08:46.14,DarkBnd,NTP,0,0,0,,我都什么还没干 她怎么就沮丧起来了
+Dialogue: 0,0:08:46.53,0:08:48.58,DarkBnd,NTP,0,0,0,,你是有什么烦恼吗？
+Dialogue: 0,0:08:49.47,0:08:51.57,CureSky,NTP,0,0,0,,啊 小空 是蝴蝶哦
+Dialogue: 0,0:08:51.78,0:08:53.12,CureMaj,NTP,0,0,0,,蝴蝶
+Dialogue: 0,0:08:53.35,0:08:54.63,CureBut,NTP,0,0,0,,那是蛾啦
+Dialogue: 0,0:08:56.96,0:08:58.94,CurePri,NTP,0,0,0,,就遇到了这种事情
+Dialogue: 0,0:08:59.20,0:09:00.33,DarkBnd,NTP,0,0,0,,这样的啊
+Dialogue: 0,0:09:00.51,0:09:02.59,DarkBnd,NTP,0,0,0,,呀哈哈哈！什么啊？笑死了！
+Dialogue: 0,0:09:02.84,0:09:06.65,DarkBnd,NTP,0,0,0,,都不用我来挫你的锐气 活该啊！
+Dialogue: 0,0:09:06.85,0:09:10.13,DarkBnd,NTP,0,0,0,,那就让我来给你的梦想钉棺材板！
+Dialogue: 0,0:09:10.42,0:09:12.75,DarkBnd,NTP,0,0,0,,你想要当画书作家吗？
+Dialogue: 0,0:09:13.00,0:09:18.46,CurePri,NTP,0,0,0,,诶？真能当上就好了...
+Dialogue: 0,0:09:18.99,0:09:21.19,DarkBnd,NTP,0,0,0,,哼 就这程度
+Dialogue: 0,0:09:21.44,0:09:25.85,DarkBnd,NTP,0,0,0,,当上职业作家 被批评了也是在所难免的吧？
+Dialogue: 0,0:09:26.41,0:09:29.30,DarkBnd,NTP,0,0,0,,不想有类似境遇 也就只有放弃了
+Dialogue: 0,0:09:30.78,0:09:34.21,DarkBnd,NTP,0,0,0,,也有人说过我的画很无聊...
+Dialogue: 0,0:09:34.49,0:09:38.73,CurePri,NTP,0,0,0,,后来呢？孟达大哥是怎么克服的？
+Dialogue: 0,0:09:39.40,0:09:41.73,DarkBnd,NTP,0,0,0,,很好 还差一脚
+Dialogue: 0,0:09:45.02,0:09:46.59,DarkBnd,NTP,0,0,0,,开始吧
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:09:54.94,0:09:56.51,CurePri,NTP,0,0,0,,孟达大哥...
+Dialogue: 0,0:09:57.30,0:10:01.07,CurePri,NTP,0,0,0,,被人说画无聊的时候 是怎么克服的？
+Dialogue: 0,0:10:01.29,0:10:04.65,DarkBnd,NTP,0,0,0,,没什么啊 我没什么想法
+Dialogue: 0,0:10:04.85,0:10:05.77,CurePri,NTP,0,0,0,,诶？
+Dialogue: 0,0:10:05.98,0:10:09.19,DarkBnd,NTP,0,0,0,,我可是有坚定的思想觉悟的
+Dialogue: 0,0:10:09.76,0:10:11.64,DarkBnd,NTP,0,0,0,,做好了被批评的思想准备
+Dialogue: 0,0:10:12.52,0:10:13.84,CurePri,NTP,0,0,0,,思想觉悟...
+Dialogue: 0,0:10:14.03,0:10:14.89,DarkBnd,NTP,0,0,0,,是的
+Dialogue: 0,0:10:15.11,0:10:17.64,DarkBnd,NTP,0,0,0,,桀桀桀！听进去了！听进去了！
+Dialogue: 0,0:10:17.90,0:10:21.45,DarkBnd,NTP,0,0,0,,没做好被批判的思想准备 就动手画了啊 真是可怜的娃！
+Dialogue: 0,0:10:21.65,0:10:24.54,DarkBnd,NTP,0,0,0,,肯定也不是为了什么远大理想才开始画的吧！
+Dialogue: 0,0:10:24.74,0:10:26.54,DarkBnd,NTP,0,0,0,,快点放弃吧！
+Dialogue: 0,0:10:26.71,0:10:28.15,CureSky,NTP,0,0,0,,真白同学！
+Dialogue: 0,0:10:28.43,0:10:29.65,CurePri,NTP,0,0,0,,小晴！
+Dialogue: 0,0:10:30.53,0:10:32.54,DarkBnd,NTP,0,0,0,,嘁 碍事的来了
+Dialogue: 0,0:10:32.81,0:10:34.18,CurePri,NTP,0,0,0,,这位是孟达大哥
+Dialogue: 0,0:10:34.41,0:10:35.54,CureSky,NTP,0,0,0,,你好
+Dialogue: 0,0:10:35.89,0:10:36.95,DarkBnd,NTP,0,0,0,,你... 你们好
+Dialogue: 0,0:10:37.14,0:10:38.80,CurePri,NTP,0,0,0,,他画画可棒了
+Dialogue: 0,0:10:39.11,0:10:39.79,CureSky,NTP,0,0,0,,诶
+Dialogue: 0,0:10:40.06,0:10:42.14,CureSky,NTP,0,0,0,,我叫做晴雯丽
+Dialogue: 0,0:10:42.37,0:10:44.75,CureSky,NTP,0,0,0,,请让我也看看你的画
+Dialogue: 0,0:10:45.12,0:10:47.42,DarkBnd,NTP,0,0,0,,可... 可以 我看看...
+Dialogue: 0,0:10:47.60,0:10:50.41,CureSky,NTP,0,0,0,,就是这个吧？哦 白花花的呢
+Dialogue: 0,0:10:50.59,0:10:52.01,DarkBnd,NTP,0,0,0,,啊 那块画布是...
+Dialogue: 0,0:10:52.20,0:10:54.73,CureSky,NTP,0,0,0,,嗯 我一丁点儿都不懂
+Dialogue: 0,0:10:54.96,0:10:57.91,DarkBnd,NTP,0,0,0,,废话不是吗 一笔都还没画呢！
+Dialogue: 0,0:10:58.14,0:11:00.69,DarkBnd,NTP,0,0,0,,只是为了假装美大生 才带着的
+Dialogue: 0,0:11:00.91,0:11:02.52,DarkBnd,NTP,0,0,0,,要快点蒙混过去...
+Dialogue: 0,0:11:03.30,0:11:04.41,CureMaj,NTP,0,0,0,,秋千！
+Dialogue: 0,0:11:04.96,0:11:06.20,CureMaj,NTP,0,0,0,,真白也来！
+Dialogue: 0,0:11:06.38,0:11:07.62,CurePri,NTP,0,0,0,,来了 来了
+Dialogue: 0,0:11:08.76,0:11:09.97,CureMaj,NTP,0,0,0,,好朋友！
+Dialogue: 0,0:11:10.15,0:11:11.06,CurePri,NTP,0,0,0,,诶？
+Dialogue: 0,0:11:11.85,0:11:13.51,CurePri,NTP,0,0,0,,都说 好漂亮啊
+Dialogue: 0,0:11:13.80,0:11:16.87,CurePri,NTP,0,0,0,,大家已经是好朋友了
+Dialogue: 0,0:11:17.48,0:11:19.20,CureMaj,NTP,0,0,0,,秋千 好朋友！
+Dialogue: 0,0:11:21.00,0:11:22.34,CurePri,NTP,0,0,0,,小空...
+Dialogue: 0,0:11:23.18,0:11:25.29,DarkBnd,NTP,0,0,0,,这丫头要看到什么时候
+Dialogue: 0,0:11:25.53,0:11:28.58,CureSky,NTP,0,0,0,,对了！让大伙也欣赏一下吧
+Dialogue: 0,0:11:28.98,0:11:30.26,CureSky,NTP,0,0,0,,大伙
+Dialogue: 0,0:11:30.53,0:11:31.58,CureBut,NTP,0,0,0,,什么？什么？
+Dialogue: 0,0:11:31.77,0:11:32.92,CureWin,NTP,0,0,0,,怎么了？
+Dialogue: 0,0:11:33.11,0:11:34.54,DarkBnd,NTP,0,0,0,,呀！
+Dialogue: 0,0:11:36.52,0:11:38.59,CurePri,NTP,0,0,0,,这位是美大生·孟达大哥
+Dialogue: 0,0:11:38.78,0:11:40.08,DarkBnd,NTP,0,0,0,,你们好
+Dialogue: 0,0:11:40.26,0:11:41.93,DarkBnd,NTP,0,0,0,,Precure全员集合！
+Dialogue: 0,0:11:42.18,0:11:44.88,DarkBnd,NTP,0,0,0,,要是我的真面目暴露了...
+Dialogue: 0,0:11:45.23,0:11:46.85,DarkBnd,NTP,0,0,0,,呀！
+Dialogue: 0,0:11:47.06,0:11:49.70,DarkBnd,NTP,0,0,0,,不会 我的变身没有破绽！
+Dialogue: 0,0:11:50.20,0:11:52.92,CureSky,NTP,0,0,0,,画了一副雪白的画呢 你们看
+Dialogue: 0,0:11:53.16,0:11:54.18,CureWin,NTP,0,0,0,,是呢
+Dialogue: 0,0:11:54.67,0:11:56.08,CureBut,NTP,0,0,0,,话说
+Dialogue: 0,0:11:57.64,0:11:59.90,CureBut,NTP,0,0,0,,我们是不是有过面缘？
+Dialogue: 0,0:12:00.11,0:12:02.20,DarkBnd,NTP,0,0,0,,不 还是第一次见面
+Dialogue: 0,0:12:02.41,0:12:03.52,CureBut,NTP,0,0,0,,是错觉吗
+Dialogue: 0,0:12:03.71,0:12:04.79,DarkBnd,NTP,0,0,0,,对对
+Dialogue: 0,0:12:04.96,0:12:06.35,CureBut,NTP,0,0,0,,啊哈哈哈...
+Dialogue: 0,0:12:06.54,0:12:08.67,DarkBnd,NTP,0,0,0,,哈！有什么东西在！
+Dialogue: 0,0:12:09.14,0:12:10.74,DarkBnd,NTP,0,0,0,,盯着我不放！
+Dialogue: 0,0:12:11.10,0:12:12.65,DarkBnd,NTP,0,0,0,,为什么 是察觉到了吗？
+Dialogue: 0,0:12:12.84,0:12:14.83,DarkBnd,NTP,0,0,0,,不肯定 绝对不可能...
+Dialogue: 0,0:12:15.01,0:12:15.66,CureMaj,NTP,0,0,0,,蚱蜢！
+Dialogue: 0,0:12:15.83,0:12:17.76,DarkBnd,NTP,0,0,0,,蜢！
+Dialogue: 0,0:12:18.02,0:12:21.37,DarkBnd,NTP,0,0,0,,被看穿了！我的伪装应该是完美的！
+Dialogue: 0,0:12:22.07,0:12:22.94,CureMaj,NTP,0,0,0,,蚱蜢！
+Dialogue: 0,0:12:23.19,0:12:24.49,CureBut,NTP,0,0,0,,真的是蚱蜢呢
+Dialogue: 0,0:12:24.87,0:12:26.28,CureWin,NTP,0,0,0,,是蚱蜢呢
+Dialogue: 0,0:12:26.63,0:12:28.12,CureSky,NTP,0,0,0,,大伙一起抓住它吧！
+Dialogue: 0,0:12:28.34,0:12:29.47,DarkBnd,NTP,0,0,0,,呀！
+Dialogue: 0,0:12:31.18,0:12:33.30,DarkBnd,NTP,0,0,0,,这下我万事俱休了！
+Dialogue: 0,0:12:36.81,0:12:37.78,CureBut,NTP,0,0,0,,什么？
+Dialogue: 0,0:12:43.47,0:12:44.31,CureSky,NTP,0,0,0,,是你！
+Dialogue: 0,0:12:44.65,0:12:46.57,DarkBnd,NTP,0,0,0,,啊 来的好呀！
+Dialogue: 0,0:12:46.75,0:12:47.68,DarkBnd,NTP,0,0,0,,不 才不好啊！
+Dialogue: 0,0:12:47.86,0:12:50.22,DarkBnd,NTP,0,0,0,,暗塌谷帝国不会原谅失败者
+Dialogue: 0,0:12:51.02,0:12:52.81,DarkBnd,NTP,0,0,0,,被抓住了 可能要被处刑！
+Dialogue: 0,0:12:53.11,0:12:54.28,DarkBnd,NTP,0,0,0,,啊！
+Dialogue: 0,0:12:54.43,0:12:55.30,CurePri,NTP,0,0,0,,孟达大哥！
+Dialogue: 0,0:12:58.30,0:13:00.57,CureMaj,NTP,0,0,0,,蚱蜢蚱蜢 蚱蜢！
+Dialogue: 0,0:13:01.46,0:13:02.55,Default,NTP,0,0,0,,在闹什么？
+Dialogue: 0,0:13:03.94,0:13:07.01,DarkBnd,NTP,0,0,0,,暗塌谷能量 召唤
+Dialogue: 0,0:13:14.56,0:13:17.64,DarkBnd,NTP,0,0,0,,凶暴兽！
+Dialogue: 0,0:13:20.07,0:13:21.04,CureWin,NTP,0,0,0,,凶暴兽？
+Dialogue: 0,0:13:21.25,0:13:23.27,CureSky,NTP,0,0,0,,与平时不同！怎么回事？
+Dialogue: 0,0:13:23.64,0:13:25.14,DarkBnd,NTP,0,0,0,,与它战斗 就会明白
+Dialogue: 0,0:13:25.44,0:13:26.55,CurePri,NTP,0,0,0,,大伙 上吧！
+Dialogue: 0,0:13:26.73,0:13:27.78,CureSky,NTP,0,0,0,,是！
+Dialogue: 0,0:13:26.73,0:13:27.78,CureBut,NTP,0,0,0,,{\an3}OK！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:13:32.60,0:13:34.40,CureWin,,0,0,0,,{\clip(0,0,948,1080)}{\4c&HAC3DFF&}天空幻镜！
+Dialogue: 1,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(948,0,951,1080)}{\3c&H1C6AFF&\4c&H9C42FF&}天空幻镜！
+Dialogue: 2,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(951,0,954,1080)}{\3c&H2766FF&\4c&H8C47FF&}天空幻镜！
+Dialogue: 3,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(954,0,957,1080)}{\3c&H3D60FF&\4c&H794DFF&}天空幻镜！
+Dialogue: 4,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(957,0,960,1080)}{\3c&H525AFF&\4c&H6753FF&}天空幻镜！
+Dialogue: 5,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(960,0,963,1080)}{\3c&H6753FF&\4c&H525AFF&}天空幻镜！
+Dialogue: 6,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(963,0,966,1080)}{\3c&H794DFF&\4c&H3D60FF&}天空幻镜！
+Dialogue: 7,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(966,0,969,1080)}{\3c&H8C47FF&\4c&H2766FF&}天空幻镜！
+Dialogue: 8,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(969,0,972,1080)}{\3c&H9C42FF&\4c&H1C6AFF&}天空幻镜！
+Dialogue: 9,0:13:32.60,0:13:34.40,CureBut,,0,0,0,,{\clip(972,0,1920,1080)}{\4c&H0F6FFF&}天空幻镜！
+Dialogue: 0,0:13:32.60,0:13:34.40,CureSky,,0,0,0,,{\clip(0,0,948,1080)}{\4c&HA384FB&}{\fs50}Sky Mirage！
+Dialogue: 1,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(948,0,951,1080)}{\4c&HB080D9&\3c&HE5734A&}{\fs50}Sky Mirage！
+Dialogue: 2,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(951,0,954,1080)}{\4c&HBA7FC3&\3c&HE17758&}{\fs50}Sky Mirage！
+Dialogue: 3,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(954,0,957,1080)}{\4c&HBE7DB5&\3c&HDC786C&}{\fs50}Sky Mirage！
+Dialogue: 4,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(957,0,960,1080)}{\4c&HC67CA0&\3c&HD37A7D&}{\fs50}Sky Mirage！
+Dialogue: 5,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(960,0,963,1080)}{\4c&HD37A7D&\3c&HC67CA0&}{\fs50}Sky Mirage！
+Dialogue: 6,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(963,0,966,1080)}{\4c&HDC786C&\3c&HBE7DB5&}{\fs50}Sky Mirage！
+Dialogue: 7,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(966,0,969,1080)}{\4c&HE17758&\3c&HBA7FC3&}{\fs50}Sky Mirage！
+Dialogue: 8,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(969,0,972,1080)}{\4c&HE5734A&\3c&HB080D9&}{\fs50}Sky Mirage！
+Dialogue: 9,0:13:32.60,0:13:34.40,CurePri,,0,0,0,,{\clip(972,0,1920,1080)}{\4c&HF8721F&}{\fs50}Sky Mirage！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:13:35.87,0:13:37.81,CureSky,,0,0,0,,{\clip(0,0,948,1080)}{\4c&HA384FB&}天籁接通！
+Dialogue: 1,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(948,0,951,1080)}{\4c&HB080D9&\3c&HE5734A&}天籁接通！
+Dialogue: 2,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(951,0,954,1080)}{\4c&HBA7FC3&\3c&HE17758&}天籁接通！
+Dialogue: 3,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(954,0,957,1080)}{\4c&HBE7DB5&\3c&HDC786C&}天籁接通！
+Dialogue: 4,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(957,0,960,1080)}{\4c&HC67CA0&\3c&HD37A7D&}天籁接通！
+Dialogue: 5,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(960,0,963,1080)}{\4c&HD37A7D&\3c&HC67CA0&}天籁接通！
+Dialogue: 6,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(963,0,966,1080)}{\4c&HDC786C&\3c&HBE7DB5&}天籁接通！
+Dialogue: 7,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(966,0,969,1080)}{\4c&HE17758&\3c&HBA7FC3&}天籁接通！
+Dialogue: 8,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(969,0,972,1080)}{\4c&HE5734A&\3c&HB080D9&}天籁接通！
+Dialogue: 9,0:13:35.87,0:13:37.81,CurePri,,0,0,0,,{\clip(972,0,1920,1080)}{\4c&HF8721F&}天籁接通！
+Dialogue: 0,0:13:35.87,0:13:37.81,CureWin,,0,0,0,,{\clip(0,0,948,1080)}{\4c&HAC3DFF&}{\fs50}Tone Connect！
+Dialogue: 1,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(948,0,951,1080)}{\3c&H1C6AFF&\4c&H9C42FF&}{\fs50}Tone Connect！
+Dialogue: 2,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(951,0,954,1080)}{\3c&H2766FF&\4c&H8C47FF&}{\fs50}Tone Connect！
+Dialogue: 3,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(954,0,957,1080)}{\3c&H3D60FF&\4c&H794DFF&}{\fs50}Tone Connect！
+Dialogue: 4,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(957,0,960,1080)}{\3c&H525AFF&\4c&H6753FF&}{\fs50}Tone Connect！
+Dialogue: 5,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(960,0,963,1080)}{\3c&H6753FF&\4c&H525AFF&}{\fs50}Tone Connect！
+Dialogue: 6,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(963,0,966,1080)}{\3c&H794DFF&\4c&H3D60FF&}{\fs50}Tone Connect！
+Dialogue: 7,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(966,0,969,1080)}{\3c&H8C47FF&\4c&H2766FF&}{\fs50}Tone Connect！
+Dialogue: 8,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(969,0,972,1080)}{\3c&H9C42FF&\4c&H1C6AFF&}{\fs50}Tone Connect！
+Dialogue: 9,0:13:35.87,0:13:37.81,CureBut,,0,0,0,,{\clip(972,0,1920,1080)}{\4c&H0F6FFF&}{\fs50}Tone Connect！
+Dialogue: 0,0:00:00.18,0:00:00.18,CurePri,,0,0,0,,
+Dialogue: 0,0:13:42.10,0:13:43.82,CurePri,NTP,0,0,0,,海阔天空变身！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:13:45.86,0:13:46.93,CurePri,NTP,0,0,0,,棱镜！
+Dialogue: 0,0:13:45.86,0:13:46.93,CurePri,NTP,0,0,0,,{\fs50}Prism！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:13:55.02,0:13:56.64,CurePri,NTP,0,0,0,,闪耀起步！
+Dialogue: 0,0:13:55.02,0:13:56.64,CurePri,NTP,0,0,0,,{\fs50\pos(995,970)}HOP
+Dialogue: 0,0:14:03.17,0:14:04.83,CurePri,NTP,0,0,0,,爽朗飞奔！
+Dialogue: 0,0:14:03.17,0:14:04.83,CurePri,NTP,0,0,0,,{\fs50\pos(995,970)}STEP
+Dialogue: 0,0:14:10.81,0:14:12.70,CurePri,NTP,0,0,0,,畅快跃起！
+Dialogue: 0,0:14:10.81,0:14:12.70,CurePri,NTP,0,0,0,,{\fs50\pos(995,970)}JUMP
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:14:33.08,0:14:35.34,CureSky,NTP,0,0,0,,广阔无限的蓝天！
+Dialogue: 0,0:14:36.62,0:14:37.99,CureSky,NTP,0,0,0,,Cure Sky！
+Dialogue: 0,0:14:36.62,0:14:37.99,CureSky,NTP,0,0,0,,{\fs50}天空愈卫！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:14:42.30,0:14:45.23,CurePri,NTP,0,0,0,,辽阔拂远的柔光！
+Dialogue: 0,0:14:45.92,0:14:47.36,CurePri,NTP,0,0,0,,Cure Prism！
+Dialogue: 0,0:14:45.92,0:14:47.36,CurePri,NTP,0,0,0,,{\fs50}棱镜愈卫！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:14:50.88,0:14:52.95,CureWin,NTP,0,0,0,,高阔凌云的勇气！
+Dialogue: 0,0:14:53.86,0:14:55.36,CureWin,NTP,0,0,0,,Cure Wing！
+Dialogue: 0,0:14:53.86,0:14:55.36,CureWin,NTP,0,0,0,,{\fs50}飞翼愈卫！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:14:59.20,0:15:01.45,CureBut,NTP,0,0,0,,壮阔飞扬的神彩！
+Dialogue: 0,0:14:59.20,0:15:01.45,CureBut,NTP,0,0,0,,{\fs50\pos(1095,970)}Wonderful
+Dialogue: 0,0:15:02.10,0:15:03.65,CureBut,NTP,0,0,0,,Cure Butterfly！
+Dialogue: 0,0:15:02.10,0:15:03.65,CureBut,NTP,0,0,0,,{\fs50}蝴蝶愈卫！
+Dialogue: 0,0:00:00.18,0:00:00.18,CureBut,,0,0,0,,
+Dialogue: 0,0:15:07.34,0:15:08.75,CureMaj,NTP,0,0,0,,拜拜！
+Dialogue: 0,0:15:10.30,0:15:11.74,CureMaj,NTP,0,0,0,,小空也来！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:16.62,0:15:18.61,CureMaj,NTP,0,0,0,,天空幻镜！
+Dialogue: 0,0:15:16.62,0:15:18.61,CureMaj,NTP,0,0,0,,{\fs50}Sky Mirage！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:20.05,0:15:21.94,CureMaj,NTP,0,0,0,,天籁接通！
+Dialogue: 0,0:15:20.05,0:15:21.94,CureMaj,NTP,0,0,0,,{\fs50}Tone Connect！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:26.56,0:15:28.40,CureMaj,NTP,0,0,0,,海阔天空变身！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:29.64,0:15:30.81,CureMaj,NTP,0,0,0,,威严仁爱！
+Dialogue: 0,0:15:29.64,0:15:30.81,CureMaj,NTP,0,0,0,,{\fs50}Majesty！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:39.02,0:15:40.44,CureMaj,NTP,0,0,0,,闪耀起步！
+Dialogue: 0,0:15:39.02,0:15:40.44,CureMaj,NTP,0,0,0,,{\fs50\pos(995,970)}HOP
+Dialogue: 0,0:15:46.99,0:15:48.50,CureMaj,NTP,0,0,0,,爽朗飞奔！
+Dialogue: 0,0:15:46.99,0:15:48.50,CureMaj,NTP,0,0,0,,{\fs50\pos(995,970)}STEP
+Dialogue: 0,0:15:54.68,0:15:56.40,CureMaj,NTP,0,0,0,,畅快跃起！
+Dialogue: 0,0:15:54.68,0:15:56.40,CureMaj,NTP,0,0,0,,{\fs50\pos(995,970)}JUMP
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:16:17.44,0:16:19.48,CureMaj,NTP,0,0,0,,崇高降世的神秘！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:16:20.29,0:16:21.66,CureMaj,NTP,0,0,0,,威爱愈卫！
+Dialogue: 0,0:16:20.29,0:16:21.66,CureMaj,NTP,0,0,0,,{\fs50}Cure Majesty！
+Dialogue: 0,0:00:00.18,0:00:00.18,CureMaj,,0,0,0,,
+Dialogue: 0,0:16:26.74,0:16:27.55,CureSky,NTP,0,0,0,,准备...
+Dialogue: 0,0:16:26.74,0:16:27.55,CureSky,NTP,0,0,0,,{\fs50}Ready...
+Dialogue: 0,0:16:27.93,0:16:28.95,CurePri,NTP,0,0,0,,冲！
+Dialogue: 0,0:16:27.93,0:16:28.95,CurePri,NTP,0,0,0,,{\fs50}Go！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 1,0:16:31.53,0:16:34.01,CureMaj,NTP,0,0,0,,{\clip(0,0,794,1080)}{\be5}海阔天空！光之美少女
+Dialogue: 2,0:16:31.53,0:16:34.01,CureWin,NTP,0,0,0,,{\clip(794,0,898,1080)}{\be5}海阔天空！光之美少女
+Dialogue: 3,0:16:31.53,0:16:34.01,CureSky,NTP,0,0,0,,{\clip(898,0,1002,1080)}{\be5}海阔天空！光之美少女
+Dialogue: 4,0:16:31.53,0:16:34.01,CurePri,NTP,0,0,0,,{\clip(1002,0,1106,1080)}{\be5}海阔天空！光之美少女
+Dialogue: 5,0:16:31.53,0:16:34.01,CureBut,NTP,0,0,0,,{\clip(1106,0,1920,1080)}{\be5}海阔天空！光之美少女
+Dialogue: 1,0:16:31.53,0:16:34.01,CureMaj,NTP,0,0,0,,{\clip(0,0,794,1080)}{\be5}{\fs50}Hirogaru Sky！Precure
+Dialogue: 2,0:16:31.53,0:16:34.01,CureWin,NTP,0,0,0,,{\clip(794,0,898,1080)}{\be5}{\fs50}Hirogaru Sky！Precure
+Dialogue: 3,0:16:31.53,0:16:34.01,CureSky,NTP,0,0,0,,{\clip(898,0,1002,1080)}{\be5}{\fs50}Hirogaru Sky！Precure
+Dialogue: 4,0:16:31.53,0:16:34.01,CurePri,NTP,0,0,0,,{\clip(1002,0,1106,1080)}{\be5}{\fs50}Hirogaru Sky！Precure
+Dialogue: 5,0:16:31.53,0:16:34.01,CureBut,NTP,0,0,0,,{\clip(1106,0,1920,1080)}{\be5}{\fs50}Hirogaru Sky！Precure
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:16:37.17,0:16:38.68,DarkBnd,NTP,0,0,0,,Cure Majesty？
+Dialogue: 0,0:16:38.93,0:16:41.56,DarkBnd,NTP,0,0,0,,怎么回事
+Dialogue: 0,0:16:41.89,0:16:43.96,DarkBnd,NTP,0,0,0,,凶暴！
+Dialogue: 0,0:16:45.11,0:16:46.78,DarkBnd,NTP,0,0,0,,凶凶凶凶...
+Dialogue: 0,0:16:46.97,0:16:48.30,CureSky,NTP,0,0,0,,喝！
+Dialogue: 0,0:16:48.49,0:16:50.99,DarkBnd,NTP,0,0,0,,凶凶凶凶...
+Dialogue: 0,0:16:51.18,0:16:51.97,CureSky,NTP,0,0,0,,诶？
+Dialogue: 0,0:16:52.53,0:16:53.60,DarkBnd,NTP,0,0,0,,凶！凶！
+Dialogue: 0,0:16:53.76,0:16:54.65,CureSky,NTP,0,0,0,,哇！
+Dialogue: 0,0:16:54.89,0:16:55.62,CurePri,NTP,0,0,0,,啊！
+Dialogue: 0,0:16:55.83,0:16:56.56,CureBut,NTP,0,0,0,,哇！
+Dialogue: 0,0:16:56.98,0:16:57.76,CureWin,NTP,0,0,0,,好快！
+Dialogue: 0,0:16:58.39,0:16:59.47,CureWin,NTP,0,0,0,,哇！
+Dialogue: 0,0:17:07.51,0:17:09.41,DarkBnd,NTP,0,0,0,,实力不俗 这招如何...
+Dialogue: 0,0:17:10.05,0:17:12.12,DarkBnd,NTP,0,0,0,,凶暴！
+Dialogue: 0,0:17:13.86,0:17:15.75,DarkBnd,NTP,0,0,0,,凶凶凶
+Dialogue: 0,0:17:21.01,0:17:22.17,CureMaj,NTP,0,0,0,,呀！
+Dialogue: 0,0:17:24.09,0:17:25.18,CureWin,NTP,0,0,0,,Majesty！
+Dialogue: 0,0:17:25.46,0:17:26.65,CureBut,NTP,0,0,0,,好强...
+Dialogue: 0,0:17:27.18,0:17:29.41,CureBut,NTP,0,0,0,,与乱暴兽不是一个水平的
+Dialogue: 0,0:17:30.06,0:17:31.15,CurePri,NTP,0,0,0,,怎么办...
+Dialogue: 0,0:17:31.42,0:17:32.59,CureSky,NTP,0,0,0,,那还用说
+Dialogue: 0,0:17:33.47,0:17:34.23,CurePri,NTP,0,0,0,,Sky
+Dialogue: 0,0:17:34.46,0:17:36.65,CureSky,NTP,0,0,0,,就像往常一样战斗
+Dialogue: 0,0:17:36.90,0:17:39.64,CureSky,NTP,0,0,0,,不管对手有多强 都不用疑问
+Dialogue: 0,0:17:40.41,0:17:44.15,CureBut,NTP,0,0,0,,对啊 早就做好了陷入苦战的思想觉悟
+Dialogue: 0,0:17:44.80,0:17:45.95,CurePri,NTP,0,0,0,,思想觉悟...
+Dialogue: 0,0:17:46.27,0:17:48.61,CureWin,NTP,0,0,0,,是为了保护珍重的事物
+Dialogue: 0,0:17:48.91,0:17:50.30,CureMaj,NTP,0,0,0,,算不了什么
+Dialogue: 0,0:17:50.83,0:17:53.83,CurePri,NTP,0,0,0,,战斗... 为了保护...
+Dialogue: 0,0:17:56.40,0:17:57.72,CurePri,NTP,0,0,0,,啊！
+Dialogue: 0,0:17:58.51,0:17:59.85,CurePri,NTP,0,0,0,,是啊
+Dialogue: 0,0:18:00.26,0:18:01.98,CureSky,NTP,0,0,0,,让我们齐心协力！
+Dialogue: 0,0:18:02.22,0:18:03.65,CureBut,NTP,0,0,0,,大伙神采飞扬地上吧！
+Dialogue: 0,0:18:03.88,0:18:04.77,CurePri,NTP,0,0,0,,嗯！
+Dialogue: 0,0:18:05.10,0:18:06.98,DarkBnd,NTP,0,0,0,,臭丫头们在嘀咕什么？
+Dialogue: 0,0:18:07.23,0:18:08.35,Default,NTP,0,0,0,,（声响...）
+Dialogue: 0,0:18:09.68,0:18:11.06,DarkBnd,NTP,0,0,0,,呀！
+Dialogue: 0,0:18:11.29,0:18:12.35,CurePri,NTP,0,0,0,,孟达大哥！
+Dialogue: 0,0:18:12.62,0:18:14.23,DarkBnd,NTP,0,0,0,,别瞄这里！
+Dialogue: 0,0:18:14.49,0:18:15.64,DarkBnd,NTP,0,0,0,,上吧
+Dialogue: 0,0:18:15.81,0:18:17.14,DarkBnd,NTP,0,0,0,,凶暴！
+Dialogue: 0,0:18:17.85,0:18:20.11,CurePri,NTP,0,0,0,,孟达大哥 我明白了！
+Dialogue: 0,0:18:20.36,0:18:22.82,DarkBnd,NTP,0,0,0,,凶暴！
+Dialogue: 0,0:18:23.12,0:18:24.38,CurePri,NTP,0,0,0,,喝！
+Dialogue: 0,0:18:24.54,0:18:25.34,DarkBnd,NTP,0,0,0,,凶凶！
+Dialogue: 0,0:18:25.51,0:18:26.95,CureSky,NTP,0,0,0,,喝！
+Dialogue: 0,0:18:27.11,0:18:28.45,DarkBnd,NTP,0,0,0,,凶凶凶凶！
+Dialogue: 0,0:18:29.03,0:18:30.00,CureSky,NTP,0,0,0,,Wing！
+Dialogue: 0,0:18:30.25,0:18:31.77,CureWin,NTP,0,0,0,,等着呢！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:18:32.81,0:18:34.72,CureBut,NTP,0,0,0,,双色合一！
+Dialogue: 0,0:18:34.93,0:18:36.10,CureBut,NTP,0,0,0,,白色！
+Dialogue: 0,0:18:34.93,0:18:36.10,CureBut,NTP,0,0,0,,{\fs50}White！
+Dialogue: 0,0:18:37.64,0:18:38.87,CureBut,NTP,0,0,0,,黄色！
+Dialogue: 0,0:18:37.64,0:18:38.87,CureBut,NTP,0,0,0,,{\fs50}Yellow！
+Dialogue: 0,0:18:42.31,0:18:45.20,CureBut,NTP,0,0,0,,速度的力量 飞扬起来！
+Dialogue: 0,0:18:47.70,0:18:48.77,DarkBnd,NTP,0,0,0,,凶暴！
+Dialogue: 0,0:18:49.55,0:18:50.59,CureWin,NTP,0,0,0,,喝！
+Dialogue: 0,0:18:50.77,0:18:52.60,DarkBnd,NTP,0,0,0,,凶凶凶！
+Dialogue: 0,0:18:52.77,0:18:54.52,DarkBnd,NTP,0,0,0,,凶暴...
+Dialogue: 0,0:18:54.74,0:18:55.74,CureSky,NTP,0,0,0,,机会来了！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 1,0:18:59.48,0:19:01.09,CureWin,NTP,0,0,0,,{\clip(0,0,960,1080)}{\be5}神威大典！
+Dialogue: 2,0:18:59.48,0:19:01.09,CureBut,NTP,0,0,0,,{\clip(960,0,1920,1080)}{\be5}神威大典！
+Dialogue: 3,0:18:59.48,0:19:01.09,CureBut,NTP,0,0,0,,{\clip(1900,0,1920,1080)}{\be5}神威大典！
+Dialogue: 1,0:18:59.48,0:19:01.09,CureSky,NTP,0,0,0,,{\clip(0,0,900,1080)}{\fs50}{\be5}Majesty Chronicon！
+Dialogue: 2,0:18:59.48,0:19:01.09,CurePri,NTP,0,0,0,,{\clip(1020,0,1920,1080)}{\fs50}{\be5}Majesty Chronicon！
+Dialogue: 3,0:18:59.48,0:19:01.09,CureMaj,NTP,0,0,0,,{\clip(900,0,1020,1080)}{\fs50}{\be5}Majesty Chronicon！
+Dialogue: 1,0:19:28.57,0:19:30.88,CureMaj,NTP,0,0,0,,{\clip(0,0,720,1080)}{\be5}起身飞向海阔天空的世界！
+Dialogue: 2,0:19:28.57,0:19:30.88,CureWin,NTP,0,0,0,,{\clip(720,0,880,1080)}{\be5}起身飞向海阔天空的世界！
+Dialogue: 3,0:19:28.57,0:19:30.88,CureSky,NTP,0,0,0,,{\clip(880,0,1040,1080)}{\be5}起身飞向海阔天空的世界！
+Dialogue: 4,0:19:28.57,0:19:30.88,CurePri,NTP,0,0,0,,{\clip(1040,0,1200,1080)}{\be5}起身飞向海阔天空的世界！
+Dialogue: 5,0:19:28.57,0:19:30.88,CureBut,NTP,0,0,0,,{\clip(1200,0,1920,1080)}{\be5}起身飞向海阔天空的世界！
+Dialogue: 1,0:19:55.47,0:19:59.59,CureMaj,NTP,0,0,0,,{\clip(0,0,794,1080)}{\be5}光美！天威虹晕！
+Dialogue: 2,0:19:55.47,0:19:59.59,CureWin,NTP,0,0,0,,{\clip(794,0,898,1080)}{\be5}光美！天威虹晕！
+Dialogue: 3,0:19:55.47,0:19:59.59,CureSky,NTP,0,0,0,,{\clip(898,0,1002,1080)}{\be5}光美！天威虹晕！
+Dialogue: 4,0:19:55.47,0:19:59.59,CurePri,NTP,0,0,0,,{\clip(1002,0,1106,1080)}{\be5}光美！天威虹晕！
+Dialogue: 5,0:19:55.47,0:19:59.59,CureBut,NTP,0,0,0,,{\clip(1106,0,1920,1080)}{\be5}光美！天威虹晕！
+Dialogue: 1,0:19:55.47,0:19:59.59,CureMaj,NTP,0,0,0,,{\clip(0,0,794,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 2,0:19:55.47,0:19:59.59,CureWin,NTP,0,0,0,,{\clip(794,0,898,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 3,0:19:55.47,0:19:59.59,CureSky,NTP,0,0,0,,{\clip(898,0,1002,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 4,0:19:55.47,0:19:59.59,CurePri,NTP,0,0,0,,{\clip(1002,0,1106,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 5,0:19:55.47,0:19:59.59,CureBut,NTP,0,0,0,,{\clip(1106,0,1920,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:20:06.82,0:20:09.29,DarkBnd,NTP,0,0,0,,豁然开朗
+Dialogue: 1,0:20:06.82,0:20:09.29,Default,NTP,0,0,0,,{\fad(500,0)}豁然开朗
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:20:18.72,0:20:20.13,DarkBnd,NTP,0,0,0,,序幕已拉开
+Dialogue: 0,0:20:23.67,0:20:26.48,DarkBnd,NTP,0,0,0,,臭丫头们 比以前更强了...
+Dialogue: 0,0:20:30.13,0:20:33.93,CurePri,NTP,0,0,0,,本来就未必是所有人都会认为有趣
+Dialogue: 0,0:20:41.68,0:20:42.92,CurePri,NTP,0,0,0,,但是...
+Dialogue: 0,0:20:48.28,0:20:49.94,Default,NTP,0,0,0,,（咕...）
+Dialogue: 0,0:20:50.11,0:20:51.46,DarkBnd,NTP,0,0,0,,肚子饿了
+Dialogue: 0,0:20:51.63,0:20:54.20,DarkBnd,NTP,0,0,0,,不过 应该已经粉碎了那个Precure的梦想
+Dialogue: 0,0:20:54.38,0:20:55.50,DarkBnd,NTP,0,0,0,,活该啊！
+Dialogue: 0,0:20:55.77,0:20:57.82,CurePri,NTP,0,0,0,,咦？孟达大哥？
+Dialogue: 0,0:20:57.99,0:20:59.00,DarkBnd,NTP,0,0,0,,呀！
+Dialogue: 0,0:20:59.19,0:21:00.00,CurePri,NTP,0,0,0,,太好了
+Dialogue: 0,0:21:00.17,0:21:02.23,CurePri,NTP,0,0,0,,好想再见你一面的
+Dialogue: 0,0:21:02.67,0:21:05.28,DarkBnd,NTP,0,0,0,,咦？我并没有暴露吗
+Dialogue: 0,0:21:06.11,0:21:08.29,CurePri,NTP,0,0,0,,我要感谢孟达大哥
+Dialogue: 0,0:21:08.46,0:21:10.67,CurePri,NTP,0,0,0,,能让我直面自己的内心
+Dialogue: 0,0:21:10.85,0:21:11.77,DarkBnd,NTP,0,0,0,,诶？
+Dialogue: 0,0:21:11.93,0:21:14.05,CurePri,NTP,0,0,0,,我喜欢画画书
+Dialogue: 0,0:21:14.24,0:21:16.37,CurePri,NTP,0,0,0,,喜欢让读者阅读我的画书
+Dialogue: 0,0:21:16.56,0:21:19.43,CurePri,NTP,0,0,0,,只要还有一个小朋友喜欢我的画书
+Dialogue: 0,0:21:19.61,0:21:21.23,CurePri,NTP,0,0,0,,我就想要继续创作下去
+Dialogue: 0,0:21:21.46,0:21:24.35,CurePri,NTP,0,0,0,,我通过学习孟达大哥的思想觉悟
+Dialogue: 0,0:21:24.58,0:21:27.89,CurePri,NTP,0,0,0,,决定要成为了一名画书作家了
+Dialogue: 0,0:21:28.11,0:21:29.56,DarkBnd,NTP,0,0,0,,诶？
+Dialogue: 0,0:21:30.14,0:21:32.02,CurePri,NTP,0,0,0,,孟达大哥也要加油
+Dialogue: 0,0:21:32.23,0:21:34.93,CurePri,NTP,0,0,0,,人生不如意事十之八九
+Dialogue: 0,0:21:35.15,0:21:38.58,CurePri,NTP,0,0,0,,向着目标努力的孟达大哥 我很佩服
+Dialogue: 0,0:21:38.96,0:21:41.42,CurePri,NTP,0,0,0,,我为你加油的
+Dialogue: 0,0:21:46.18,0:21:49.77,Default,NTP,0,0,0,,我还是第一次被人加油...
+Dialogue: 0,0:21:50.55,0:21:52.96,Default,NTP,0,0,0,,哈！不不不...
+Dialogue: 0,0:21:53.21,0:21:55.07,Default,NTP,0,0,0,,我才不需要你的加油
+Dialogue: 0,0:21:55.24,0:21:56.55,Default,NTP,0,0,0,,给我干活 孟达
+Dialogue: 0,0:21:56.71,0:21:58.19,Default,NTP,0,0,0,,对不起
+Dialogue: 0,0:21:59.11,0:21:59.98,CurePri,NTP,0,0,0,,画吧！
+Dialogue: 0,0:22:00.75,0:22:04.28,CurePri,NTP,0,0,0,,以后也要多画 尽情地画！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:22:07.22,0:22:09.81,CurePri,NTP,0,0,0,,今天是我 Cure Prism哦
+Dialogue: 0,0:22:07.22,0:22:09.81,CurePri,NTP,0,0,0,,{\fs50\pos(1060,960)}棱镜愈卫
+Dialogue: 0,0:22:10.01,0:22:12.93,CurePri,NTP,0,0,0,,大家试着跟我一起跳舞吧！
+Dialogue: 0,0:00:00.18,0:00:00.18,Default,NTP,0,0,0,,
+Dialogue: 0,0:23:46.40,0:23:48.97,CurePri,NTP,0,0,0,,小晴要当棒球队的特别教练
+Dialogue: 0,0:23:49.17,0:23:50.54,CureSky,NTP,0,0,0,,我会竭尽全力的！
+Dialogue: 0,0:23:50.76,0:23:52.83,CureWin,NTP,0,0,0,,晴雯丽肯定能够大展身手的
+Dialogue: 0,0:23:53.04,0:23:54.76,CureBut,NTP,0,0,0,,向着优胜 神采飞扬地上吧！
+Dialogue: 0,0:23:55.05,0:23:57.92,CureSky,NTP,0,0,0,,话说回来 棒球是哪种运动啊？
+Dialogue: 0,0:23:59.20,0:24:00.67,CureSky,NTP,0,0,0,,Hirogaru Sky！Precure
+Dialogue: 0,0:23:59.20,0:24:00.67,CureSky,NTP,0,0,0,,{\fs50}海阔天空！光之美少女
+Dialogue: 0,0:24:00.67,0:24:03.21,CureSky,NTP,0,0,0,,小晴来救场！王牌与英雄
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:02:27.31,0:02:29.52,OP,NTP,0,0,0,,{\fad(300,0)}（冲上蓝天！）
+Dialogue: 0,0:02:29.52,0:02:35.11,OP,NTP,0,0,0,,振翅高飞 超越云巅
+Dialogue: 0,0:02:35.32,0:02:40.66,OP,NTP,0,0,0,,飞吧！向着海阔天空的世界 Precure
+Dialogue: 0,0:02:40.66,0:02:48.37,OP,NTP,0,0,0,,（晴空万里 美丽蓝天 翱翔吧）
+Dialogue: 0,0:02:48.58,0:02:53.52,OP,NTP,0,0,0,,雨后初霁天空棱镜折射出彩虹
+Dialogue: 0,0:02:53.77,0:02:57.75,OP,NTP,0,0,0,,蓝天的景色预告着有好事发生
+Dialogue: 0,0:02:57.75,0:02:59.26,OP,NTP,0,0,0,,（蓝天的景色）
+Dialogue: 0,0:02:59.26,0:03:03.55,OP,NTP,0,0,0,,想要确认一下 便伸直了双手
+Dialogue: 0,0:03:04.14,0:03:08.14,OP,NTP,0,0,0,,抓住了名为希望的光芒
+Dialogue: 0,0:03:08.23,0:03:10.10,OP,NTP,0,0,0,,秒速紧握！紧紧握住！
+Dialogue: 0,0:03:10.23,0:03:14.69,OP,NTP,0,0,0,,战胜绝望吧
+Dialogue: 0,0:03:15.06,0:03:18.65,OP,NTP,0,0,0,,我们能坚强
+Dialogue: 0,0:03:18.65,0:03:22.03,OP,NTP,0,0,0,,{\pos(700,1070)}擦干眼泪
+Dialogue: 0,0:03:19.68,0:03:22.03,OP,NTP,0,0,0,,{\fad(300,0)}{\pos(1090,1070)}（你已经做好准备了吗）
+Dialogue: 0,0:03:22.03,0:03:24.05,OP,NTP,0,0,0,,{\pos(700,1070)}飞跃而起
+Dialogue: 0,0:03:22.44,0:03:24.05,OP,NTP,0,0,0,,{\fad(300,0)}{\pos(1090,1070)}(让我们张开勇气之翼）
+Dialogue: 0,0:03:24.41,0:03:29.79,OP,NTP,0,0,0,,振翅高飞 朝气蓬勃
+Dialogue: 0,0:03:30.00,0:03:34.46,OP,NTP,0,0,0,,把烦躁化为光芒
+Dialogue: 0,0:03:34.71,0:03:39.76,OP,NTP,0,0,0,,未知的世界 未来的图景 充满着可能
+Dialogue: 0,0:03:39.92,0:03:44.51,OP,NTP,0,0,0,,与在同一片蓝天下的伙伴
+Dialogue: 0,0:03:44.89,0:03:47.31,OP,NTP,0,0,0,,一起唤起通向明日的奇迹！
+Dialogue: 0,0:03:47.43,0:03:55.31,OP,NTP,0,0,0,,英雄少女 海阔天空！Precure
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:22:16.34,0:22:20.51,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}亲爱的闪亮天空 向天空念出魔法
+Dialogue: 1,0:22:17.01,0:22:20.51,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}亲爱的闪亮天空 向天空念出魔法
+Dialogue: 2,0:22:18.88,0:22:20.51,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}亲爱的闪亮天空 向天空念出魔法
+Dialogue: 0,0:22:20.51,0:22:24.80,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}“明天也要是个好日子”
+Dialogue: 1,0:22:20.93,0:22:24.80,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}“明天也要是个好日子”
+Dialogue: 3,0:22:22.64,0:22:24.80,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}“明天也要是个好日子”
+Dialogue: 4,0:22:23.89,0:22:24.80,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}“明天也要是个好日子”
+Dialogue: 0,0:22:24.80,0:22:28.47,ED,NTP,0,0,0,,{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}最亮星 闪烁着
+Dialogue: 1,0:22:25.31,0:22:28.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}最亮星 闪烁着
+Dialogue: 2,0:22:26.60,0:22:28.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}最亮星 闪烁着
+Dialogue: 3,0:22:27.77,0:22:28.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}最亮星 闪烁着
+Dialogue: 0,0:22:28.47,0:22:33.87,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}像是在回答“好” 你也看到了吧
+Dialogue: 1,0:22:29.14,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}像是在回答“好” 你也看到了吧
+Dialogue: 2,0:22:30.52,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}像是在回答“好” 你也看到了吧
+Dialogue: 3,0:22:31.81,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}像是在回答“好” 你也看到了吧
+Dialogue: 4,0:22:32.94,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}像是在回答“好” 你也看到了吧
+Dialogue: 0,0:22:35.83,0:22:43.32,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}暮光多么美丽 傍晚又为何会 感到些许落寞
+Dialogue: 1,0:22:36.32,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}暮光多么美丽 傍晚又为何会 感到些许落寞
+Dialogue: 2,0:22:38.49,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}暮光多么美丽 傍晚又为何会 感到些许落寞
+Dialogue: 3,0:22:39.90,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}暮光多么美丽 傍晚又为何会 感到些许落寞
+Dialogue: 5,0:22:42.66,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}暮光多么美丽 傍晚又为何会 感到些许落寞
+Dialogue: 0,0:22:43.32,0:22:50.22,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}吐口气冷静一下 向着远去的今天 说上一声谢谢你
+Dialogue: 1,0:22:43.66,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}吐口气冷静一下 向着远去的今天 说上一声谢谢你
+Dialogue: 2,0:22:45.24,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}吐口气冷静一下 向着远去的今天 说上一声谢谢你
+Dialogue: 3,0:22:46.62,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}吐口气冷静一下 向着远去的今天 说上一声谢谢你
+Dialogue: 4,0:22:47.91,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}吐口气冷静一下 向着远去的今天 说上一声谢谢你
+Dialogue: 5,0:22:49.12,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}吐口气冷静一下 向着远去的今天 说上一声谢谢你
+Dialogue: 0,0:22:50.95,0:22:58.20,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}我们梦中见 要彼此沟通 要相互扶持
+Dialogue: 1,0:22:51.46,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}我们梦中见 要彼此沟通 要相互扶持
+Dialogue: 2,0:22:53.42,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}我们梦中见 要彼此沟通 要相互扶持
+Dialogue: 3,0:22:54.88,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}我们梦中见 要彼此沟通 要相互扶持
+Dialogue: 4,0:22:56.25,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}我们梦中见 要彼此沟通 要相互扶持
+Dialogue: 5,0:22:57.63,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}我们梦中见 要彼此沟通 要相互扶持
+Dialogue: 0,0:22:58.21,0:23:06.18,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}我们距离着昨天 向未来近了2厘米
+Dialogue: 1,0:22:58.63,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}我们距离着昨天 向未来近了2厘米
+Dialogue: 2,0:23:00.72,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}我们距离着昨天 向未来近了2厘米
+Dialogue: 3,0:23:02.01,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}我们距离着昨天 向未来近了2厘米
+Dialogue: 4,0:23:02.76,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}我们距离着昨天 向未来近了2厘米
+Dialogue: 5,0:23:04.51,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}我们距离着昨天 向未来近了2厘米
+Dialogue: 0,0:23:06.32,0:23:10.49,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}亲爱的闪亮天空 天空啊拜托你了
+Dialogue: 1,0:23:06.72,0:23:10.49,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}亲爱的闪亮天空 天空啊拜托你了
+Dialogue: 2,0:23:08.85,0:23:10.49,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}\N亲爱的闪亮天空 天空啊拜托你了
+Dialogue: 0,0:23:10.49,0:23:14.77,ED,NTP,0,0,0,,{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}要快快带过来 我们的新一天
+Dialogue: 1,0:23:11.31,0:23:14.77,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}要快快带过来 我们的新一天
+Dialogue: 2,0:23:12.69,0:23:14.77,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}要快快带过来 我们的新一天
+Dialogue: 3,0:23:13.98,0:23:14.77,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}要快快带过来 我们的新一天
+Dialogue: 0,0:23:14.77,0:23:18.47,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}每天都是冒险对吧？
+Dialogue: 1,0:23:15.57,0:23:18.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}每天都是冒险对吧？
+Dialogue: 2,0:23:17.36,0:23:18.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}每天都是冒险对吧？
+Dialogue: 0,0:23:18.61,0:23:24.03,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}心里海阔天空 满是兴奋不已
+Dialogue: 1,0:23:19.07,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}心里海阔天空 满是兴奋不已
+Dialogue: 2,0:23:20.24,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}心里海阔天空 满是兴奋不已
+Dialogue: 3,0:23:21.78,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}心里海阔天空 满是兴奋不已
+Dialogue: 4,0:23:22.91,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}心里海阔天空 满是兴奋不已
+Dialogue: 0,0:23:26.32,0:23:29.87,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}我们是光之美少女
+Dialogue: 1,0:23:26.79,0:23:29.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}我们是光之美少女
+Dialogue: 2,0:23:28.45,0:23:29.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}我们是光之美少女
+Dialogue: 3,0:23:29.12,0:23:29.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}我们是光之美少女
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,

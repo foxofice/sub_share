@@ -1,0 +1,451 @@
+﻿[Script Info]
+Title: ひろがるスカイ！プリキュア 第35回
+Original Script: FLsnow
+Synch Point: 0
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureSky,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00F8721F,&H64FFD51E,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CurePri,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00A384FB,&H64CAB8FF,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureWin,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H000F6FFF,&H648AE3FC,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureBut,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00AC3DFF,&H6424E1FE,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: CureMaj,Droid Sans Fallback,83,&H00FFFFFF,&H00FFFFFF,&H00F348AE,&H641B1B1D,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: DarkBnd,Droid Sans Fallback,83,&H00000000,&H00FFFFFF,&H00FFFFFF,&H641B1B1D,-1,0,0,0,100,100,1.5,0,1,3,3,2,15,15,23,1
+Style: OP,幼圆,50,&H00FFFFFF,&H000019FF,&H0048C6E1,&H96FFFFFF,-1,0,0,0,100,100,0,0,1,2,2,2,15,15,8,1
+Style: ED,幼圆,53,&H00A779D7,&H00BB8DF1,&H00FFFFFF,&H96FFFFFF,-1,0,0,0,100,100,0,0,1,1.5,1,2,15,15,8,1
+Style: IN_CN,幼圆,50,&H00C98EFC,&H000000FF,&H00FFFFFF,&HC8000000,-1,0,0,0,100,100,0,0,1,2,1,7,20,10,70,1
+Style: IN_JP,Droid Sans Fallback,40,&H00C98EFC,&H000000FF,&H00FFFFFF,&HC8000000,-1,0,0,0,100,100,0,0,1,2,1,7,20,10,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.47,0:00:04.37,Default,NTP,0,0,0,,（下課鈴聲）
+Dialogue: 0,0:00:04.53,0:00:06.26,Default,NTP,0,0,0,,晴雯麗同學！
+Dialogue: 0,0:00:06.50,0:00:08.82,Default,NTP,0,0,0,,今天一定要加入我們足球隊！
+Dialogue: 0,0:00:09.02,0:00:10.82,Default,NTP,0,0,0,,不 來我們籃球隊！
+Dialogue: 0,0:00:11.01,0:00:13.81,Default,NTP,0,0,0,,請務必加入我們排球隊
+Dialogue: 0,0:00:14.18,0:00:15.18,Default,NTP,0,0,0,,網球！
+Dialogue: 0,0:00:15.61,0:00:16.75,Default,NTP,0,0,0,,空手道！
+Dialogue: 0,0:00:17.13,0:00:18.52,Default,NTP,0,0,0,,藤球隊！
+Dialogue: 0,0:00:18.68,0:00:19.95,Default,NTP,0,0,0,,{\an8}（哨聲）
+Dialogue: 0,0:00:18.97,0:00:21.39,CurePri,NTP,0,0,0,,暫...暫停！
+Dialogue: 0,0:00:22.40,0:00:24.70,Default,NTP,0,0,0,,晴同學要吃午餐了！
+Dialogue: 0,0:00:25.04,0:00:28.55,Default,NTP,0,0,0,,不吃飽的話 小晴是提不起勁的
+Dialogue: 0,0:00:28.89,0:00:33.47,Default,NTP,0,0,0,,邀約等吃完飯再說！
+Dialogue: 0,0:00:37.05,0:00:39.14,Default,NTP,0,0,0,,今天來找小晴的 也是絡繹不絕啊
+Dialogue: 0,0:00:39.34,0:00:41.94,Default,NTP,0,0,0,,小晴的運動神經太厲害了
+Dialogue: 0,0:00:42.21,0:00:45.58,Default,NTP,0,0,0,,真的沒有打算加入哪個社團嗎？
+Dialogue: 0,0:00:46.20,0:00:48.06,CureSky,NTP,0,0,0,,我是很喜歡體育
+Dialogue: 0,0:00:48.36,0:00:51.26,CureSky,NTP,0,0,0,,但我的目標是英雄啊！
+Dialogue: 0,0:00:51.46,0:00:52.32,Default,NTP,0,0,0,,打擾了
+Dialogue: 0,0:00:55.17,0:00:57.89,CurePri,NTP,0,0,0,,是女子棒球隊的玉葉組合
+Dialogue: 0,0:00:58.30,0:00:59.39,CureSky,NTP,0,0,0,,玉葉？
+Dialogue: 0,0:00:59.55,0:01:01.24,Default,NTP,0,0,0,,啊 晴同學不知道啊？
+Dialogue: 0,0:01:02.07,0:01:07.30,Default,NTP,0,0,0,,是投手的四宮玉和捕手的扇葉女師姐
+Dialogue: 0,0:01:02.07,0:01:07.30,Default,NTP,0,0,0,,{\an7}{\fs50}關於兩位的名字\N四宮たま（田間）指代投手位置（四壘中央） たま同時有球的意思\N扇かなめ（要）指代捕手位置（扇形球場的軸心）\N這裡給她們的組合討了一個口彩
+Dialogue: 0,0:01:08.78,0:01:12.65,Default,NTP,0,0,0,,帶領著天窗學園女子棒球隊連戰連勝
+Dialogue: 0,0:01:12.96,0:01:14.76,Default,NTP,0,0,0,,是最強的投捕！
+Dialogue: 0,0:01:16.91,0:01:18.50,CureSky,NTP,0,0,0,,頭部...
+Dialogue: 0,0:01:16.91,0:01:18.50,Default,NTP,0,0,0,,{\an8}{\fs50}battery有一層意思專指投手和捕手
+Dialogue: 0,0:01:18.64,0:01:20.07,Default,NTP,0,0,0,,晴雯麗同學！
+Dialogue: 0,0:01:20.29,0:01:21.48,CureSky,NTP,0,0,0,,在... 是！
+Dialogue: 0,0:01:22.08,0:01:25.19,Default,NTP,0,0,0,,請出任女子棒球隊的特別教練！
+Dialogue: 0,0:01:25.53,0:01:26.68,Default,NTP,0,0,0,,拜託了！
+Dialogue: 0,0:01:27.12,0:01:28.62,Default,NTP,0,0,0,,拜託你了！
+Dialogue: 0,0:01:30.19,0:01:33.77,CureSky,NTP,0,0,0,,特... 特別教練
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,
+Dialogue: 0,0:03:07.15,0:03:12.63,Default,NTP,0,0,0,,{\fad(500,0)}{\c&HFCB856&\3c&HFFF4DE&\4c&HFFFFFF&}小晴來救場！王牌與英雄
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:03:15.44,0:03:18.28,Default,NTP,0,0,0,,感謝兩位來參觀練習
+Dialogue: 0,0:03:18.78,0:03:22.82,CureSky,NTP,0,0,0,,我從女子棒球隊的隊員們身上 感受到了非比尋常的精神
+Dialogue: 0,0:03:23.59,0:03:28.67,CurePri,NTP,0,0,0,,可是棒球隊都贏了大賽 現在也是強隊吧？
+Dialogue: 0,0:03:29.72,0:03:32.08,CureSky,NTP,0,0,0,,為什麼要讓我做特別教練？
+Dialogue: 0,0:03:32.65,0:03:33.94,Default,NTP,0,0,0,,是因為...
+Dialogue: 0,0:03:34.93,0:03:39.55,Default,NTP,0,0,0,,我手肘受傷了 投不了球了
+Dialogue: 0,0:03:40.92,0:03:45.01,Default,NTP,0,0,0,,一開始只是略微有痛感 最近越來越嚴重了...
+Dialogue: 0,0:03:45.50,0:03:49.57,Default,NTP,0,0,0,,需要在下次大賽開始前好好養傷
+Dialogue: 0,0:03:50.04,0:03:53.41,Default,NTP,0,0,0,,我們想拜託晴同學擔任陪練
+Dialogue: 0,0:03:54.38,0:03:57.59,Default,NTP,0,0,0,,只要和運動神經拔群的晴同學模擬對練
+Dialogue: 0,0:03:57.88,0:04:00.22,Default,NTP,0,0,0,,我們就能變得更強
+Dialogue: 0,0:04:00.61,0:04:03.76,Default,NTP,0,0,0,,請在大賽開始前的這段時間 擔任特別教練吧！
+Dialogue: 0,0:04:05.24,0:04:07.47,CureSky,NTP,0,0,0,,“要成為努力拚搏者的後盾”
+Dialogue: 0,0:04:07.96,0:04:09.33,CureSky,NTP,0,0,0,,這才是英雄！
+Dialogue: 0,0:04:09.84,0:04:13.39,CureSky,NTP,0,0,0,,小女子不才 還請讓我擔任這個特別教練！
+Dialogue: 0,0:04:15.21,0:04:16.76,Default,NTP,0,0,0,,非常感謝！
+Dialogue: 0,0:04:18.02,0:04:22.25,CureSky,NTP,0,0,0,,話說 棒球是哪種體育運動啊？
+Dialogue: 0,0:04:24.71,0:04:27.60,CurePri,NTP,0,0,0,,只...只要教會她 肯定沒問題的
+Dialogue: 0,0:04:28.97,0:04:31.61,Default,NTP,0,0,0,,試著朝這裡盡全力投球
+Dialogue: 0,0:04:32.12,0:04:33.09,CureSky,NTP,0,0,0,,是！
+Dialogue: 0,0:04:43.48,0:04:45.53,Default,NTP,0,0,0,,投... 投得漂亮...
+Dialogue: 0,0:04:48.56,0:04:50.19,Default,NTP,0,0,0,,（擊球聲）
+Dialogue: 0,0:04:52.75,0:04:53.99,Default,NTP,0,0,0,,（擊球聲）
+Dialogue: 0,0:04:54.15,0:04:55.26,Default,NTP,0,0,0,,打得漂亮！
+Dialogue: 0,0:04:57.52,0:04:58.94,CureSky,NTP,0,0,0,,喝！
+Dialogue: 0,0:05:02.56,0:05:04.23,Default,NTP,0,0,0,,（掌聲）
+Dialogue: 0,0:05:04.40,0:05:07.70,Default,NTP,0,0,0,,能...能不能讓她留在我們女子棒球隊啊
+Dialogue: 0,0:05:08.48,0:05:10.41,Default,NTP,0,0,0,,晴同學的確非常厲害
+Dialogue: 0,0:05:10.88,0:05:15.78,Default,NTP,0,0,0,,但我們不也是為了蟬聯優勝 齊心協力拚搏到了今天嗎！
+Dialogue: 0,0:05:16.40,0:05:19.57,Default,NTP,0,0,0,,讓我們跟晴同學一起練習 變得更強吧
+Dialogue: 0,0:05:19.85,0:05:21.90,Default,NTP,0,0,0,,一起取得勝利！
+Dialogue: 0,0:05:22.58,0:05:24.53,Default,NTP,0,0,0,,是啊 抱歉 阿玉
+Dialogue: 0,0:05:24.71,0:05:27.14,Default,NTP,0,0,0,,你要好好休養 早日歸來
+Dialogue: 0,0:05:27.34,0:05:30.26,Default,NTP,0,0,0,,嗯！謝謝大家
+Dialogue: 0,0:05:31.26,0:05:33.93,CureSky,NTP,0,0,0,,玉同學和隊員們都好棒啊！
+Dialogue: 0,0:05:35.53,0:05:39.80,CureBut,NTP,0,0,0,,是嗎... 希望小玉同學的手肘快點康復
+Dialogue: 0,0:05:40.17,0:05:41.70,CureSky,NTP,0,0,0,,是 真的
+Dialogue: 0,0:05:42.15,0:05:44.44,CureWin,NTP,0,0,0,,特別教練一定要努力啊
+Dialogue: 0,0:05:45.43,0:05:47.43,CureMaj,NTP,0,0,0,,小晴 加油！
+Dialogue: 0,0:05:50.06,0:05:51.08,CureSky,NTP,0,0,0,,是！
+Dialogue: 0,0:05:52.60,0:05:53.47,CureSky,NTP,0,0,0,,嘿呦！
+Dialogue: 0,0:05:53.65,0:05:54.49,Default,NTP,0,0,0,,嘿呦！
+Dialogue: 0,0:05:54.76,0:05:55.39,CureSky,NTP,0,0,0,,嘿呦！
+Dialogue: 0,0:05:55.56,0:05:56.61,Default,NTP,0,0,0,,嘿呦！
+Dialogue: 0,0:05:57.36,0:06:00.01,Default,NTP,0,0,0,,嘁 “嘿呦”個什麼
+Dialogue: 0,0:06:00.28,0:06:04.96,Default,NTP,0,0,0,,拿不到錢還要幹粗活 莫名其妙的
+Dialogue: 0,0:06:05.13,0:06:05.93,Default,NTP,0,0,0,,孟達！
+Dialogue: 0,0:06:05.13,0:06:05.93,Default,NTP,0,0,0,,{\fs50}紋田！
+Dialogue: 0,0:06:06.36,0:06:08.37,Default,NTP,0,0,0,,對對對對... 對不起
+Dialogue: 0,0:06:27.26,0:06:28.65,CurePri,NTP,0,0,0,,辛苦了
+Dialogue: 0,0:06:30.25,0:06:31.76,CureSky,NTP,0,0,0,,嗯！
+Dialogue: 0,0:06:32.09,0:06:34.13,Default,NTP,0,0,0,,真白同學 感謝你的犒勞
+Dialogue: 0,0:06:34.56,0:06:35.72,CurePri,NTP,0,0,0,,沒什麼
+Dialogue: 0,0:06:35.96,0:06:37.38,Default,NTP,0,0,0,,也要感謝晴同學
+Dialogue: 0,0:06:38.01,0:06:40.48,Default,NTP,0,0,0,,有你在 我們的練習很順利
+Dialogue: 0,0:06:40.80,0:06:43.79,CureSky,NTP,0,0,0,,是玉同學教了我各種關於棒球的知識
+Dialogue: 0,0:06:44.32,0:06:47.02,Default,NTP,0,0,0,,我還在養傷 只能做點微不足道的小事
+Dialogue: 0,0:06:47.29,0:06:52.19,Default,NTP,0,0,0,,其實提議請晴同學來做特別教練的 就是阿玉啦
+Dialogue: 0,0:06:52.90,0:06:54.20,CurePri,NTP,0,0,0,,是嗎？
+Dialogue: 0,0:06:54.38,0:06:58.91,Default,NTP,0,0,0,,嗯 因為手肘受傷 要暫時停止練習...
+Dialogue: 0,0:06:59.88,0:07:03.76,Default,NTP,0,0,0,,阿玉要是不能參加練習的話 要蟬聯優勝可能就很難了
+Dialogue: 0,0:07:03.94,0:07:05.52,Default,NTP,0,0,0,,隊員們的情緒都很低落
+Dialogue: 0,0:07:06.58,0:07:08.13,Default,NTP,0,0,0,,但是...
+Dialogue: 0,0:07:10.14,0:07:12.11,Default,NTP,0,0,0,,我要修養 真的很對不起大家！
+Dialogue: 0,0:07:12.47,0:07:15.02,Default,NTP,0,0,0,,但是 還請大家不要放棄優勝！
+Dialogue: 0,0:07:15.75,0:07:20.81,Default,NTP,0,0,0,,為了能讓大家變得更強 我也在思考對策！
+Dialogue: 0,0:07:23.33,0:07:27.35,Default,NTP,0,0,0,,自己都已經受傷了 還為了隊伍東奔西走
+Dialogue: 0,0:07:28.33,0:07:29.80,CureSky,NTP,0,0,0,,玉同學...
+Dialogue: 0,0:07:30.20,0:07:34.48,Default,NTP,0,0,0,,已經決意要蟬聯優勝 那就絕對不能放棄
+Dialogue: 0,0:07:34.98,0:07:38.68,Default,NTP,0,0,0,,因為為了勝利而努力的人 被稱為王牌！
+Dialogue: 0,0:07:40.28,0:07:43.70,Default,NTP,0,0,0,,有點說大話了 現在都靠晴同學呢
+Dialogue: 0,0:07:44.01,0:07:46.23,CureSky,NTP,0,0,0,,玉同學的這種心情 我能夠理解！
+Dialogue: 0,0:07:46.72,0:07:49.67,CureSky,NTP,0,0,0,,讓我們一起努力 爭取優勝吧！
+Dialogue: 0,0:07:50.59,0:07:51.84,Default,NTP,0,0,0,,嗯！
+Dialogue: 0,0:07:56.26,0:07:59.44,Default,NTP,0,0,0,,絕對要康復 然後出席大賽！
+Dialogue: 0,0:08:09.02,0:08:11.48,CureSky,NTP,0,0,0,,看著玉同學 我想到了
+Dialogue: 0,0:08:13.10,0:08:17.49,CureSky,NTP,0,0,0,,棒球的王牌 大概就是守護隊伍的英雄吧
+Dialogue: 0,0:08:18.01,0:08:19.46,CurePri,NTP,0,0,0,,說不定就是這樣呢！
+Dialogue: 0,0:08:19.92,0:08:24.53,CurePri,NTP,0,0,0,,所以我才覺得 小晴和玉同學有點像呢
+Dialogue: 0,0:08:24.76,0:08:27.06,CureSky,NTP,0,0,0,,嘻嘻嘻 有嗎
+Dialogue: 0,0:08:30.33,0:08:33.66,CureSky,NTP,0,0,0,,以後一定要跟玉同學賽一次棒球
+Dialogue: 0,0:08:34.36,0:08:36.37,Default,NTP,0,0,0,,{\an8}天窗市綜合病院
+Dialogue: 0,0:08:40.24,0:08:43.14,Default,NTP,0,0,0,,玉妹妹的手肘 需要動手術
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:08:55.57,0:08:56.79,CureSky,NTP,0,0,0,,手術
+Dialogue: 0,0:08:57.16,0:09:00.25,Default,NTP,0,0,0,,是叫做棒球肘的職業病吧
+Dialogue: 0,0:09:00.85,0:09:05.49,Default,NTP,0,0,0,,只要進行手術再接受復建 就能繼續投球了
+Dialogue: 0,0:09:06.10,0:09:08.58,Default,NTP,0,0,0,,大夫說如果還想繼續棒球生涯的話
+Dialogue: 0,0:09:08.79,0:09:11.39,Default,NTP,0,0,0,,要盡可能在情況惡化前接受手術
+Dialogue: 0,0:09:12.86,0:09:15.10,Default,NTP,0,0,0,,但是 進行手術的話...
+Dialogue: 0,0:09:15.40,0:09:17.65,Default,NTP,0,0,0,,就無法出席這屆大賽了
+Dialogue: 0,0:09:20.27,0:09:21.59,CureSky,NTP,0,0,0,,怎麼會的...
+Dialogue: 0,0:09:21.76,0:09:22.80,Default,NTP,0,0,0,,求你們了！
+Dialogue: 0,0:09:23.32,0:09:25.67,Default,NTP,0,0,0,,等大賽結束了 我就會進行手術
+Dialogue: 0,0:09:25.95,0:09:27.17,Default,NTP,0,0,0,,請讓我投吧！
+Dialogue: 0,0:09:31.32,0:09:32.22,Default,NTP,0,0,0,,不行
+Dialogue: 0,0:09:33.92,0:09:35.93,Default,NTP,0,0,0,,你想要繼續打棒球的吧？
+Dialogue: 0,0:09:37.30,0:09:38.46,Default,NTP,0,0,0,,是
+Dialogue: 0,0:09:38.78,0:09:43.08,Default,NTP,0,0,0,,那就要聽大夫的話 在情況惡化前接受手術
+Dialogue: 0,0:09:43.52,0:09:46.38,Default,NTP,0,0,0,,但這關係到我們的蟬聯優勝啊？
+Dialogue: 0,0:09:47.08,0:09:48.31,Default,NTP,0,0,0,,而且...
+Dialogue: 0,0:09:48.55,0:09:53.14,Default,NTP,0,0,0,,葉女師姐要畢業了 這次是最後的大賽了...
+Dialogue: 0,0:09:53.98,0:09:55.52,CureSky,NTP,0,0,0,,玉同學...
+Dialogue: 0,0:09:55.99,0:09:57.36,Default,NTP,0,0,0,,別再哭哭啼啼的了！
+Dialogue: 0,0:09:58.83,0:10:02.88,Default,NTP,0,0,0,,我們這副德行 阿玉也沒辦法放心去進行手術吧！
+Dialogue: 0,0:10:05.12,0:10:06.37,Default,NTP,0,0,0,,是啊...
+Dialogue: 0,0:10:06.82,0:10:10.80,Default,NTP,0,0,0,,我們經過晴同學的訓練 正在不斷變強
+Dialogue: 0,0:10:11.08,0:10:14.58,Default,NTP,0,0,0,,我們會帶著阿玉的份一起努力 絕對會贏得優勝！
+Dialogue: 0,0:10:15.64,0:10:17.01,Default,NTP,0,0,0,,大家...
+Dialogue: 0,0:10:18.50,0:10:22.05,Default,NTP,0,0,0,,嗯！大家絕對會贏的吧！
+Dialogue: 0,0:10:26.67,0:10:29.15,CureSky,NTP,0,0,0,,玉同學 沒問題吧
+Dialogue: 0,0:10:30.50,0:10:33.50,Default,NTP,0,0,0,,表面上看起來還很開朗 但心裡應該很難受吧
+Dialogue: 0,0:10:34.20,0:10:35.67,CureSky,NTP,0,0,0,,為什麼...
+Dialogue: 0,0:10:36.58,0:10:39.29,Default,NTP,0,0,0,,因為阿玉是王牌啊
+Dialogue: 0,0:10:41.49,0:10:45.70,Default,NTP,0,0,0,,王牌背負著隊伍的勝利 隻身一人站在投墩上
+Dialogue: 0,0:10:46.93,0:10:50.56,Default,NTP,0,0,0,,是隊伍的中心 必須得引領大家
+Dialogue: 0,0:10:51.91,0:10:56.99,Default,NTP,0,0,0,,所以無法在大家面前 說自己難受和害怕吧
+Dialogue: 0,0:10:59.08,0:11:04.03,Default,NTP,0,0,0,,其實已經決定我來代替阿玉 擔任這次大賽的投手了
+Dialogue: 0,0:11:04.31,0:11:05.74,CureSky,NTP,0,0,0,,葉女師姐嗎
+Dialogue: 0,0:11:06.27,0:11:09.91,Default,NTP,0,0,0,,跟晴同學一起訓練了這麼久 沒有問題的
+Dialogue: 0,0:11:11.00,0:11:16.99,Default,NTP,0,0,0,,而且... 我不希望阿玉有因為自己修養 才導致了輸球 這種念頭
+Dialogue: 0,0:11:17.62,0:11:20.94,Default,NTP,0,0,0,,所以絕對要為她贏下大賽
+Dialogue: 0,0:11:25.37,0:11:27.95,CurePri,NTP,0,0,0,,明天就是第一場比賽了
+Dialogue: 0,0:11:28.64,0:11:31.62,CurePri,NTP,0,0,0,,橫幅應該能夠趕上
+Dialogue: 0,0:11:31.93,0:11:37.22,CureSky,NTP,0,0,0,,明天...怎麼連我...都緊張起來了！
+Dialogue: 0,0:11:38.27,0:11:42.59,CureBut,NTP,0,0,0,,因為你一直擔任特別教練啊 會緊張很正常的
+Dialogue: 0,0:11:43.28,0:11:47.96,CureWin,NTP,0,0,0,,那麼... 玉同學手術那方面 情況怎麼樣了？
+Dialogue: 0,0:11:49.27,0:11:52.77,CureSky,NTP,0,0,0,,她的手術... 也定在明天
+Dialogue: 0,0:11:52.94,0:11:54.69,CureBut,NTP,0,0,0,,和比賽重了啊
+Dialogue: 0,0:11:55.24,0:11:56.39,CureSky,NTP,0,0,0,,是的
+Dialogue: 0,0:11:56.57,0:11:57.62,CureMaj,NTP,0,0,0,,手數？
+Dialogue: 0,0:11:57.90,0:12:02.00,CureWin,NTP,0,0,0,,就是大夫治療痛痛的地方的方式
+Dialogue: 0,0:12:02.31,0:12:04.26,CureMaj,NTP,0,0,0,,手數 可怕？
+Dialogue: 0,0:12:04.66,0:12:07.82,CurePri,NTP,0,0,0,,是啊 玉同學肯定也很不安
+Dialogue: 0,0:12:08.07,0:12:09.91,CureBut,NTP,0,0,0,,我們也給她加油吧
+Dialogue: 0,0:12:11.01,0:12:12.46,CureSky,NTP,0,0,0,,加油...
+Dialogue: 0,0:12:13.38,0:12:17.59,Default,NTP,0,0,0,,{\an8}天窗市市營球場
+Dialogue: 0,0:12:15.67,0:12:17.55,CureBut,NTP,0,0,0,,哇 好火熱的現場
+Dialogue: 0,0:12:17.90,0:12:19.56,CureBut,NTP,0,0,0,,連我們都飛揚起來了！
+Dialogue: 0,0:12:19.73,0:12:20.82,CureMaj,NTP,0,0,0,,飛揚！
+Dialogue: 0,0:12:21.14,0:12:22.42,CureSky,NTP,0,0,0,,嗯？
+Dialogue: 0,0:12:24.99,0:12:26.14,CureSky,NTP,0,0,0,,老師！
+Dialogue: 0,0:12:27.43,0:12:30.04,Default,NTP,0,0,0,,四宮有沒有聯絡你們倆？
+Dialogue: 0,0:12:30.33,0:12:31.66,CureSky,NTP,0,0,0,,玉同學嗎？
+Dialogue: 0,0:12:32.25,0:12:36.70,Default,NTP,0,0,0,,阿玉她... 離開了醫院
+Dialogue: 0,0:12:36.88,0:12:38.13,CureSky,NTP,0,0,0,,欸
+Dialogue: 0,0:12:38.31,0:12:40.40,Default,NTP,0,0,0,,阿玉她很難受吧...
+Dialogue: 0,0:12:40.70,0:12:45.14,Default,NTP,0,0,0,,笨蛋阿玉！明明說好要都要努力的！
+Dialogue: 0,0:12:46.30,0:12:48.66,Default,NTP,0,0,0,,明知道會她留下遺憾
+Dialogue: 0,0:12:50.71,0:12:52.18,CureSky,NTP,0,0,0,,葉女師姐...
+Dialogue: 0,0:12:52.86,0:12:54.85,CureSky,NTP,0,0,0,,我們一定會找到她
+Dialogue: 0,0:12:55.19,0:12:57.81,CureSky,NTP,0,0,0,,大家請把精神集中到比賽上
+Dialogue: 0,0:12:58.08,0:12:59.03,Default,NTP,0,0,0,,晴同學...
+Dialogue: 0,0:13:21.77,0:13:23.07,CureSky,NTP,0,0,0,,玉同學！
+Dialogue: 0,0:13:29.21,0:13:31.77,Default,NTP,0,0,0,,我配不上王牌的名號吧
+Dialogue: 0,0:13:32.04,0:13:35.59,Default,NTP,0,0,0,,既不能出席大賽 還從醫院逃了出來...
+Dialogue: 0,0:13:35.83,0:13:37.33,CureSky,NTP,0,0,0,,沒有這回事！
+Dialogue: 0,0:13:37.77,0:13:39.73,CureSky,NTP,0,0,0,,你很害怕吧 我能理解...
+Dialogue: 0,0:13:39.90,0:13:41.55,Default,NTP,0,0,0,,晴同學是不會理解的！
+Dialogue: 0,0:13:42.94,0:13:45.72,Default,NTP,0,0,0,,因為喜愛棒球 一門心思打棒球！
+Dialogue: 0,0:13:46.16,0:13:48.61,Default,NTP,0,0,0,,偏偏要做手肘手術
+Dialogue: 0,0:13:48.85,0:13:52.10,Default,NTP,0,0,0,,都怪我 隊伍說不定就要輸了！
+Dialogue: 0,0:13:53.17,0:13:57.80,Default,NTP,0,0,0,,大家都在球場 我卻一個人在醫院...
+Dialogue: 0,0:13:58.76,0:14:02.07,Default,NTP,0,0,0,,我這種感受 你怎麼可能懂...
+Dialogue: 0,0:14:03.86,0:14:05.17,CureSky,NTP,0,0,0,,玉同學...
+Dialogue: 0,0:14:05.39,0:14:06.72,DarkBnd,NTP,0,0,0,,Precure
+Dialogue: 0,0:14:09.67,0:14:10.94,CureSky,NTP,0,0,0,,一人之下！
+Dialogue: 0,0:14:09.67,0:14:10.94,Default,NTP,0,0,0,,{\an7}{\fs50}借再次出現名字 這個機會補充一下\N這位的名字還有兩層意思\N一個是希臘語的影（σκια）+head\N還有一個是... 光頭
+Dialogue: 0,0:14:11.58,0:14:13.47,DarkBnd,NTP,0,0,0,,要請你在這裡消失
+Dialogue: 0,0:14:14.01,0:14:17.21,DarkBnd,NTP,0,0,0,,暗塌谷能量 召喚
+Dialogue: 0,0:14:24.59,0:14:27.63,DarkBnd,NTP,0,0,0,,兇暴獸！
+Dialogue: 0,0:14:28.06,0:14:29.89,Default,NTP,0,0,0,,怪 怪物
+Dialogue: 0,0:14:31.72,0:14:34.08,Default,NTP,0,0,0,,晴... 晴同學 快跑吧！
+Dialogue: 0,0:14:35.36,0:14:38.85,CureSky,NTP,0,0,0,,我懂的 孤身一人戰鬥的感受
+Dialogue: 0,0:14:39.03,0:14:40.14,Default,NTP,0,0,0,,欸？
+Dialogue: 0,0:14:41.87,0:14:43.94,CureSky,NTP,0,0,0,,且看我英雄亮相！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:14:48.90,0:14:50.70,CureSky,,0,0,0,,天空幻鏡！
+Dialogue: 0,0:14:48.90,0:14:50.70,CureSky,,0,0,0,,{\fs50}Sky Mirage！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:14:52.17,0:14:54.11,CureSky,,0,0,0,,天籟接通！
+Dialogue: 0,0:14:52.17,0:14:54.11,CureSky,,0,0,0,,{\fs50}Tone Connect！
+Dialogue: 0,0:00:00.16,0:00:00.16,CurePri,,0,0,0,,
+Dialogue: 0,0:14:58.40,0:15:00.12,CureSky,NTP,0,0,0,,海闊天空變身！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:02.16,0:15:03.23,CureSky,NTP,0,0,0,,天空！
+Dialogue: 0,0:15:02.16,0:15:03.23,CureSky,NTP,0,0,0,,{\fs50}Sky！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:11.32,0:15:12.94,CureSky,NTP,0,0,0,,閃耀起步！
+Dialogue: 0,0:15:11.32,0:15:12.94,CureSky,NTP,0,0,0,,{\fs50\pos(995,970)}HOP
+Dialogue: 0,0:15:19.47,0:15:21.13,CureSky,NTP,0,0,0,,爽朗飛奔！
+Dialogue: 0,0:15:19.47,0:15:21.13,CureSky,NTP,0,0,0,,{\fs50\pos(995,970)}STEP
+Dialogue: 0,0:15:27.11,0:15:29.00,CureSky,NTP,0,0,0,,暢快躍起！
+Dialogue: 0,0:15:27.11,0:15:29.00,CureSky,NTP,0,0,0,,{\fs50\pos(995,970)}JUMP
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:49.38,0:15:51.64,CureSky,NTP,0,0,0,,廣闊無限的藍天！
+Dialogue: 0,0:15:52.92,0:15:54.29,CureSky,NTP,0,0,0,,Cure Sky！
+Dialogue: 0,0:15:52.92,0:15:54.29,CureSky,NTP,0,0,0,,{\fs50}天空愈衛！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:15:59.31,0:16:01.34,Default,NTP,0,0,0,,Cure... Sky？
+Dialogue: 0,0:16:02.09,0:16:03.50,DarkBnd,NTP,0,0,0,,兇...
+Dialogue: 0,0:16:04.22,0:16:05.53,DarkBnd,NTP,0,0,0,,暴！
+Dialogue: 0,0:16:08.61,0:16:11.65,CureSky,NTP,0,0,0,,喝！
+Dialogue: 0,0:16:11.82,0:16:15.72,Default,NTP,0,0,0,,我有聽說過 和怪物戰鬥的英雄的傳聞...
+Dialogue: 0,0:16:17.05,0:16:19.76,Default,NTP,0,0,0,,晴同學就是那個Precure...
+Dialogue: 0,0:16:20.54,0:16:22.58,DarkBnd,NTP,0,0,0,,兇暴！
+Dialogue: 0,0:16:23.92,0:16:25.68,CureSky,NTP,0,0,0,,哇！啊！
+Dialogue: 0,0:16:30.91,0:16:32.96,Default,NTP,0,0,0,,晴... 晴同學 快逃吧！
+Dialogue: 0,0:16:33.17,0:16:34.25,Default,NTP,0,0,0,,繼續下去的話...
+Dialogue: 0,0:16:34.43,0:16:36.80,CureSky,NTP,0,0,0,,我以前有過這樣的想法
+Dialogue: 0,0:16:37.78,0:16:40.91,CureSky,NTP,0,0,0,,孤獨一人也不畏懼 這才是英雄
+Dialogue: 0,0:16:41.62,0:16:45.40,CureSky,NTP,0,0,0,,但是有一個人教會了我 這種想法是錯誤的
+Dialogue: 0,0:16:46.55,0:16:51.19,CureSky,NTP,0,0,0,,要感謝她 我感覺現在更像一個英雄了呢
+Dialogue: 0,0:16:54.91,0:16:56.76,CureSky,NTP,0,0,0,,我聽葉女師姐說了
+Dialogue: 0,0:16:57.40,0:17:02.09,CureSky,NTP,0,0,0,,王牌背負著隊伍的勝利 隻身一人站在投墩上
+Dialogue: 0,0:17:03.21,0:17:07.11,CureSky,NTP,0,0,0,,請不要一個人承擔一切
+Dialogue: 0,0:17:07.40,0:17:08.34,Default,NTP,0,0,0,,晴同學...
+Dialogue: 0,0:17:08.72,0:17:11.68,CureSky,NTP,0,0,0,,我和玉同學都不是孤身一人！
+Dialogue: 0,0:17:23.29,0:17:26.44,Default,NTP,0,0,0,,阿玉 我也很害怕的
+Dialogue: 0,0:17:27.03,0:17:29.45,Default,NTP,0,0,0,,我居然代替你站上了投墩
+Dialogue: 0,0:17:30.25,0:17:33.26,Default,NTP,0,0,0,,但是... 我們不是孤身一人
+Dialogue: 0,0:17:34.17,0:17:35.80,Default,NTP,0,0,0,,我們會帶著阿玉的份
+Dialogue: 0,0:17:36.44,0:17:38.96,Default,NTP,0,0,0,,我們絕對會贏下比賽的
+Dialogue: 0,0:17:41.77,0:17:44.07,CureWin,NTP,0,0,0,,喝！
+Dialogue: 0,0:17:49.30,0:17:50.49,CureMaj,NTP,0,0,0,,喝！
+Dialogue: 0,0:17:53.85,0:17:54.92,CureMaj,NTP,0,0,0,,Butterfly！
+Dialogue: 0,0:17:56.33,0:17:57.99,CureBut,NTP,0,0,0,,雙色合一！
+Dialogue: 0,0:17:58.45,0:17:59.36,CureBut,NTP,0,0,0,,紅色！
+Dialogue: 0,0:17:58.45,0:17:59.36,CureBut,NTP,0,0,0,,{\fs50}Red！
+Dialogue: 0,0:18:01.01,0:18:02.09,CureBut,NTP,0,0,0,,白色！
+Dialogue: 0,0:18:01.01,0:18:02.09,CureBut,NTP,0,0,0,,{\fs50}White！
+Dialogue: 0,0:18:06.10,0:18:08.62,CureBut,NTP,0,0,0,,活力 飛揚起來吧！
+Dialogue: 0,0:18:12.80,0:18:14.54,DarkBnd,NTP,0,0,0,,兇暴！
+Dialogue: 0,0:18:17.01,0:18:18.77,DarkBnd,NTP,0,0,0,,兇暴！
+Dialogue: 0,0:18:19.08,0:18:20.30,CureBut,NTP,0,0,0,,喝！
+Dialogue: 0,0:18:21.11,0:18:23.71,CureSky,NTP,0,0,0,,喝！呀！
+Dialogue: 0,0:18:26.62,0:18:27.94,CurePri,NTP,0,0,0,,喝！
+Dialogue: 0,0:18:34.72,0:18:35.89,CureSky,NTP,0,0,0,,Prism！
+Dialogue: 0,0:18:36.97,0:18:38.12,CurePri,NTP,0,0,0,,嗯！
+Dialogue: 0,0:18:47.18,0:18:48.76,CureSky,NTP,0,0,0,,喝！
+Dialogue: 0,0:18:51.68,0:18:54.52,DarkBnd,NTP,0,0,0,,兇...暴...
+Dialogue: 0,0:18:55.03,0:18:56.30,CureSky,NTP,0,0,0,,趁現在！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 1,0:19:00.13,0:19:01.74,CureWin,NTP,0,0,0,,{\clip(0,0,960,1080)}{\be5}神威大典！
+Dialogue: 2,0:19:00.13,0:19:01.74,CureBut,NTP,0,0,0,,{\clip(960,0,1920,1080)}{\be5}神威大典！
+Dialogue: 3,0:19:00.13,0:19:01.74,CureBut,NTP,0,0,0,,{\clip(1900,0,1920,1080)}{\be5}神威大典！
+Dialogue: 1,0:19:00.13,0:19:01.74,CureSky,NTP,0,0,0,,{\clip(0,0,900,1080)}{\fs50}{\be5}Majesty Chronicon！
+Dialogue: 2,0:19:00.13,0:19:01.74,CurePri,NTP,0,0,0,,{\clip(1020,0,1920,1080)}{\fs50}{\be5}Majesty Chronicon！
+Dialogue: 3,0:19:00.13,0:19:01.74,CureMaj,NTP,0,0,0,,{\clip(900,0,1020,1080)}{\fs50}{\be5}Majesty Chronicon！
+Dialogue: 1,0:19:29.22,0:19:31.53,CureMaj,NTP,0,0,0,,{\clip(0,0,720,1080)}{\be5}起身飛向海闊天空的世界！
+Dialogue: 2,0:19:29.22,0:19:31.53,CureWin,NTP,0,0,0,,{\clip(720,0,880,1080)}{\be5}起身飛向海闊天空的世界！
+Dialogue: 3,0:19:29.22,0:19:31.53,CureSky,NTP,0,0,0,,{\clip(880,0,1040,1080)}{\be5}起身飛向海闊天空的世界！
+Dialogue: 4,0:19:29.22,0:19:31.53,CurePri,NTP,0,0,0,,{\clip(1040,0,1200,1080)}{\be5}起身飛向海闊天空的世界！
+Dialogue: 5,0:19:29.22,0:19:31.53,CureBut,NTP,0,0,0,,{\clip(1200,0,1920,1080)}{\be5}起身飛向海闊天空的世界！
+Dialogue: 1,0:19:56.12,0:20:00.24,CureMaj,NTP,0,0,0,,{\clip(0,0,794,1080)}{\be5}光美！天威虹暈！
+Dialogue: 2,0:19:56.12,0:20:00.24,CureWin,NTP,0,0,0,,{\clip(794,0,898,1080)}{\be5}光美！天威虹暈！
+Dialogue: 3,0:19:56.12,0:20:00.24,CureSky,NTP,0,0,0,,{\clip(898,0,1002,1080)}{\be5}光美！天威虹暈！
+Dialogue: 4,0:19:56.12,0:20:00.24,CurePri,NTP,0,0,0,,{\clip(1002,0,1106,1080)}{\be5}光美！天威虹暈！
+Dialogue: 5,0:19:56.12,0:20:00.24,CureBut,NTP,0,0,0,,{\clip(1106,0,1920,1080)}{\be5}光美！天威虹暈！
+Dialogue: 1,0:19:56.12,0:20:00.24,CureMaj,NTP,0,0,0,,{\clip(0,0,794,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 2,0:19:56.12,0:20:00.24,CureWin,NTP,0,0,0,,{\clip(794,0,898,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 3,0:19:56.12,0:20:00.24,CureSky,NTP,0,0,0,,{\clip(898,0,1002,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 4,0:19:56.12,0:20:00.24,CurePri,NTP,0,0,0,,{\clip(1002,0,1106,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 5,0:19:56.12,0:20:00.24,CureBut,NTP,0,0,0,,{\clip(1106,0,1920,1080)}{\be5}{\fs50}Precure！Majestic Halation！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:20:07.47,0:20:09.94,DarkBnd,NTP,0,0,0,,豁然開朗
+Dialogue: 1,0:20:07.47,0:20:09.94,Default,NTP,0,0,0,,{\fad(500,0)}豁然開朗
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:20:24.54,0:20:26.29,Default,NTP,0,0,0,,晴同學 抱歉
+Dialogue: 0,0:20:26.45,0:20:27.48,CureSky,NTP,0,0,0,,欸？
+Dialogue: 0,0:20:27.65,0:20:30.15,Default,NTP,0,0,0,,我說了很過分的話
+Dialogue: 0,0:20:30.75,0:20:34.12,Default,NTP,0,0,0,,還有... 謝謝你救了我
+Dialogue: 0,0:20:34.34,0:20:36.93,CureSky,NTP,0,0,0,,不 沒什麼... 啊！
+Dialogue: 0,0:20:37.15,0:20:40.75,CureSky,NTP,0,0,0,,關... 關於... 剛才的事情...
+Dialogue: 0,0:20:41.01,0:20:44.52,Default,NTP,0,0,0,,放心吧 那是屬於我和晴同學的秘密吧
+Dialogue: 0,0:20:45.09,0:20:48.54,Default,NTP,0,0,0,,作為交換 我哭過的事情也要保密哦
+Dialogue: 0,0:20:49.83,0:20:51.15,CureSky,NTP,0,0,0,,是！
+Dialogue: 0,0:20:53.82,0:20:55.18,Default,NTP,0,0,0,,啊...
+Dialogue: 0,0:20:55.81,0:20:56.97,Default,NTP,0,0,0,,大家...
+Dialogue: 0,0:20:58.90,0:21:01.01,Default,NTP,0,0,0,,抱歉讓你們擔心了！
+Dialogue: 0,0:21:03.73,0:21:06.06,Default,NTP,0,0,0,,第一場比賽 贏了
+Dialogue: 0,0:21:11.12,0:21:13.74,Default,NTP,0,0,0,,接著就輪到我了
+Dialogue: 0,0:21:14.54,0:21:19.76,Default,NTP,0,0,0,,{\an8}玉同學 你不是孤身一人！
+Dialogue: 0,0:21:15.93,0:21:19.48,CureSky,NTP,0,0,0,,加油！加油啊 玉同學！
+Dialogue: 0,0:21:20.06,0:21:22.75,Default,NTP,0,0,0,,晴同學... 謝謝
+Dialogue: 0,0:21:22.90,0:21:25.03,Default,NTP,0,0,0,,晴同學是我的英雄哦
+Dialogue: 0,0:21:25.40,0:21:28.19,Default,NTP,0,0,0,,是“我們女子棒球隊的” 才對吧
+Dialogue: 0,0:21:28.75,0:21:32.05,Default,NTP,0,0,0,,真心感謝你！晴同學！
+Dialogue: 0,0:21:35.31,0:21:37.77,Default,NTP,0,0,0,,{\an7}{\fs50}隊伍\N天窗隊\N記得那個機場嗎？隔壁市敢情還真叫桃空...
+Dialogue: 0,0:21:41.36,0:21:43.70,Default,NTP,0,0,0,,奮戰!!天窗學園女子棒球隊 投！擊！跑！
+Dialogue: 0,0:21:41.36,0:21:43.70,Default,NTP,0,0,0,,{\fs50\pos(1330,960)}Hop！Step！Jump！
+Dialogue: 0,0:21:41.36,0:21:43.70,Default,NTP,0,0,0,,{\an7}{\fs50}正好有這個機會 hop step jump是三級跳的術語\N日語裡多用來形容漸進的狀態\N很多作品裡都能見到吧\N甜點裡兔子的口頭禪也是一種變體
+Dialogue: 0,0:21:53.29,0:21:56.81,Default,NTP,0,0,0,,（歡呼聲）
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:22:06.64,0:22:09.26,CureSky,NTP,0,0,0,,今天是我 Cure Sky！
+Dialogue: 0,0:22:06.64,0:22:09.26,CureSky,NTP,0,0,0,,{\fs50\pos(1080,960)}天空愈衛
+Dialogue: 0,0:22:09.64,0:22:12.77,CureSky,NTP,0,0,0,,大家和我一起跳吧！
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:23:46.40,0:23:47.08,CureBut,NTP,0,0,0,,哈...
+Dialogue: 0,0:23:47.28,0:23:49.06,CurePri,NTP,0,0,0,,小蝶 怎麼了？
+Dialogue: 0,0:23:49.22,0:23:51.69,CureSky,NTP,0,0,0,,無精打采的小蝶姐 好少見啊
+Dialogue: 0,0:23:51.94,0:23:54.39,CureBut,NTP,0,0,0,,我作為保育員能夠做到的事...
+Dialogue: 0,0:23:54.74,0:23:57.56,CureWin,NTP,0,0,0,,話說回來 最強的保育員究竟是什麼？
+Dialogue: 0,0:23:59.07,0:24:00.54,CureSky,NTP,0,0,0,,Hirogaru Sky！Precure
+Dialogue: 0,0:23:59.07,0:24:00.54,CureSky,NTP,0,0,0,,{\fs50}海闊天空！光之美少女
+Dialogue: 0,0:24:00.54,0:24:03.17,CureSky,NTP,0,0,0,,蝶華 不配為最強的保育員!?
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:01:34.28,0:01:36.49,OP,NTP,0,0,0,,{\fad(300,0)}（衝上藍天！）
+Dialogue: 0,0:01:36.49,0:01:42.08,OP,NTP,0,0,0,,振翅高飛 超越雲巔
+Dialogue: 0,0:01:42.29,0:01:47.63,OP,NTP,0,0,0,,飛吧！向著海闊天空的世界 Precure
+Dialogue: 0,0:01:47.63,0:01:55.34,OP,NTP,0,0,0,,（晴空萬里 美麗藍天 翱翔吧）
+Dialogue: 0,0:01:55.55,0:02:00.51,OP,NTP,0,0,0,,雨後初霽天空稜鏡折射出彩虹
+Dialogue: 0,0:02:00.76,0:02:04.72,OP,NTP,0,0,0,,藍天的景色預告著有好事發生
+Dialogue: 0,0:02:04.72,0:02:06.23,OP,NTP,0,0,0,,（藍天的景色）
+Dialogue: 0,0:02:06.23,0:02:10.52,OP,NTP,0,0,0,,想要確認一下 便伸直了雙手
+Dialogue: 0,0:02:11.11,0:02:15.11,OP,NTP,0,0,0,,抓住了名為希望的光芒
+Dialogue: 0,0:02:15.20,0:02:17.07,OP,NTP,0,0,0,,秒速緊握！緊緊握住！
+Dialogue: 0,0:02:17.20,0:02:21.66,OP,NTP,0,0,0,,戰勝絕望吧
+Dialogue: 0,0:02:22.03,0:02:25.62,OP,NTP,0,0,0,,我們能堅強
+Dialogue: 0,0:02:25.62,0:02:29.04,OP,NTP,0,0,0,,{\pos(700,1070)}擦乾眼淚
+Dialogue: 0,0:02:26.65,0:02:29.04,OP,NTP,0,0,0,,{\fad(300,0)}{\pos(1090,1070)}（你已經做好準備了嗎）
+Dialogue: 0,0:02:29.04,0:02:31.04,OP,NTP,0,0,0,,{\pos(700,1070)}飛躍而起
+Dialogue: 0,0:02:29.41,0:02:31.04,OP,NTP,0,0,0,,{\fad(300,0)}{\pos(1090,1070)}(讓我們張開勇氣之翼）
+Dialogue: 0,0:02:31.38,0:02:36.76,OP,NTP,0,0,0,,振翅高飛 朝氣蓬勃
+Dialogue: 0,0:02:36.97,0:02:41.43,OP,NTP,0,0,0,,把煩躁化為光芒
+Dialogue: 0,0:02:41.68,0:02:46.73,OP,NTP,0,0,0,,未知的世界 未來的圖景 充滿著可能
+Dialogue: 0,0:02:46.89,0:02:51.48,OP,NTP,0,0,0,,與在同一片藍天下的伙伴
+Dialogue: 0,0:02:51.86,0:02:54.28,OP,NTP,0,0,0,,一起喚起通向明日的奇蹟！
+Dialogue: 0,0:02:54.40,0:03:02.28,OP,NTP,0,0,0,,英雄少女 海闊天空！Precure
+Dialogue: 0,0:00:00.16,0:00:00.16,Default,NTP,0,0,0,,
+Dialogue: 0,0:22:16.34,0:22:20.51,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}親愛的閃亮天空 向天空唸出魔法
+Dialogue: 1,0:22:17.01,0:22:20.51,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}親愛的閃亮天空 向天空唸出魔法
+Dialogue: 2,0:22:18.88,0:22:20.51,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}親愛的閃亮天空 向天空唸出魔法
+Dialogue: 0,0:22:20.51,0:22:24.80,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}“明天也要是個好日子”
+Dialogue: 1,0:22:20.93,0:22:24.80,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}“明天也要是個好日子”
+Dialogue: 3,0:22:22.64,0:22:24.80,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}“明天也要是個好日子”
+Dialogue: 4,0:22:23.89,0:22:24.80,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}“明天也要是個好日子”
+Dialogue: 0,0:22:24.80,0:22:28.47,ED,NTP,0,0,0,,{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}最亮星 閃爍著
+Dialogue: 1,0:22:25.31,0:22:28.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}最亮星 閃爍著
+Dialogue: 2,0:22:26.60,0:22:28.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}最亮星 閃爍著
+Dialogue: 3,0:22:27.77,0:22:28.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}最亮星 閃爍著
+Dialogue: 0,0:22:28.47,0:22:33.87,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}像是在回答“好” 你也看到了吧
+Dialogue: 1,0:22:29.14,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}像是在回答“好” 你也看到了吧
+Dialogue: 2,0:22:30.52,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}像是在回答“好” 你也看到了吧
+Dialogue: 3,0:22:31.81,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}像是在回答“好” 你也看到了吧
+Dialogue: 4,0:22:32.94,0:22:33.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}像是在回答“好” 你也看到了吧
+Dialogue: 0,0:22:35.83,0:22:43.32,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}暮光多麼美麗 傍晚又為何會 感到些許落寞
+Dialogue: 1,0:22:36.32,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}暮光多麼美麗 傍晚又為何會 感到些許落寞
+Dialogue: 2,0:22:38.49,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}暮光多麼美麗 傍晚又為何會 感到些許落寞
+Dialogue: 3,0:22:39.90,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}暮光多麼美麗 傍晚又為何會 感到些許落寞
+Dialogue: 5,0:22:42.66,0:22:43.32,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}暮光多麼美麗 傍晚又為何會 感到些許落寞
+Dialogue: 0,0:22:43.32,0:22:50.22,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}吐口氣冷靜一下 向著遠去的今天 說上一聲謝謝你
+Dialogue: 1,0:22:43.66,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}吐口氣冷靜一下 向著遠去的今天 說上一聲謝謝你
+Dialogue: 2,0:22:45.24,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}吐口氣冷靜一下 向著遠去的今天 說上一聲謝謝你
+Dialogue: 3,0:22:46.62,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}吐口氣冷靜一下 向著遠去的今天 說上一聲謝謝你
+Dialogue: 4,0:22:47.91,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}吐口氣冷靜一下 向著遠去的今天 說上一聲謝謝你
+Dialogue: 5,0:22:49.12,0:22:50.22,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}吐口氣冷靜一下 向著遠去的今天 說上一聲謝謝你
+Dialogue: 0,0:22:50.95,0:22:58.20,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}我們夢中見 要彼此溝通 要相互扶持
+Dialogue: 1,0:22:51.46,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}我們夢中見 要彼此溝通 要相互扶持
+Dialogue: 2,0:22:53.42,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}我們夢中見 要彼此溝通 要相互扶持
+Dialogue: 3,0:22:54.88,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}我們夢中見 要彼此溝通 要相互扶持
+Dialogue: 4,0:22:56.25,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}我們夢中見 要彼此溝通 要相互扶持
+Dialogue: 5,0:22:57.63,0:22:58.20,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}我們夢中見 要彼此溝通 要相互扶持
+Dialogue: 0,0:22:58.21,0:23:06.18,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}我們距離著昨天 向未來近了2公分
+Dialogue: 1,0:22:58.63,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}我們距離著昨天 向未來近了2公分
+Dialogue: 2,0:23:00.72,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}我們距離著昨天 向未來近了2公分
+Dialogue: 3,0:23:02.01,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}我們距離著昨天 向未來近了2公分
+Dialogue: 4,0:23:02.76,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}我們距離著昨天 向未來近了2公分
+Dialogue: 5,0:23:04.51,0:23:06.18,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}我們距離著昨天 向未來近了2公分
+Dialogue: 0,0:23:06.32,0:23:10.49,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}親愛的閃亮天空 天空啊拜託你了
+Dialogue: 1,0:23:06.72,0:23:10.49,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}親愛的閃亮天空 天空啊拜託你了
+Dialogue: 2,0:23:08.85,0:23:10.49,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}\N親愛的閃亮天空 天空啊拜託你了
+Dialogue: 0,0:23:10.49,0:23:14.77,ED,NTP,0,0,0,,{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}要快快帶過來 我們的新一天
+Dialogue: 1,0:23:11.31,0:23:14.77,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}要快快帶過來 我們的新一天
+Dialogue: 2,0:23:12.69,0:23:14.77,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}要快快帶過來 我們的新一天
+Dialogue: 3,0:23:13.98,0:23:14.77,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC3DC&\3c&H95526B&\4c&HFFC3DC&}要快快帶過來 我們的新一天
+Dialogue: 0,0:23:14.77,0:23:18.47,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}每天都是冒險對吧？
+Dialogue: 1,0:23:15.57,0:23:18.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}每天都是冒險對吧？
+Dialogue: 2,0:23:17.36,0:23:18.47,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}每天都是冒險對吧？
+Dialogue: 0,0:23:18.61,0:23:24.03,ED,NTP,0,0,0,,{\c&HFFE9B9&\3c&H9E7055&\4c&HFFE9B9&}心裏海闊天空 滿是興奮不已
+Dialogue: 1,0:23:19.07,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}心裏海闊天空 滿是興奮不已
+Dialogue: 2,0:23:20.24,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}心裏海闊天空 滿是興奮不已
+Dialogue: 3,0:23:21.78,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}心裏海闊天空 滿是興奮不已
+Dialogue: 4,0:23:22.91,0:23:24.03,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}心裏海闊天空 滿是興奮不已
+Dialogue: 0,0:23:26.32,0:23:29.87,ED,NTP,0,0,0,,{\c&HA7F6BD&\3c&H479D52&\4c&HA7F6BD&}我們是光之美少女
+Dialogue: 1,0:23:26.79,0:23:29.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBEECFF&\3c&H278AA7&\4c&HA7F6BD&}我們是光之美少女
+Dialogue: 2,0:23:28.45,0:23:29.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HBDC1FF&\3c&H676ABA&\4c&HBDC1FF&}我們是光之美少女
+Dialogue: 3,0:23:29.12,0:23:29.87,ED,NTP,0,0,0,,{\fad(500,0)}{\c&HFFC7FF&\3c&HA85CB4&\4c&HFFC7FF&}我們是光之美少女
+Dialogue: 0,0:00:00.00,0:00:00.00,Default,NTP,0,0,0,,

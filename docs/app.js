@@ -887,7 +887,7 @@
     container.innerHTML = html;
     container.hidden = false;
 
-    $('.page-btn[data-page]', container).forEach(btn => {
+    $$('.page-btn[data-page]', container).forEach(btn => {
       btn.addEventListener('click', () => {
         const p = parseInt(btn.dataset.page, 10);
         if (p >= 1 && p <= totalPages && p !== state.pagination.page) {
@@ -898,7 +898,7 @@
       });
     });
 
-    $('.page-size-btn[data-size]', container).forEach(btn => {
+    $$('.page-size-btn[data-size]', container).forEach(btn => {
       btn.addEventListener('click', () => {
         const sz = parseInt(btn.dataset.size, 10);
         if (sz && sz !== state.pagination.pageSize) {

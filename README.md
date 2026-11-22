@@ -1,98 +1,168 @@
-﻿### 【注意】2025.9.22开始，本人所有github项目将不再更新。由于github恶心的强制2FA，导致github账号在浏览器无法登陆（似乎 TortoiseGit 目前还可以，但不知道能坚持多久）。最新的项目仓库地址将在以后公布，请持续关注本人网站（www.acgdev.com）。
+# SubAtlas · 字幕库
 
-### 欢迎来到【字幕共享计划】
-<hr />
+**SubAtlas** 是 [foxofice/sub_db](https://github.com/foxofice/sub_db)（Subtitles Database）的现代化重写版：
+**Rust + GPUI** 构建的原生桌面应用，单文件 exe，FlClash 风格界面，专注「字幕共享计划」（[foxofice/sub_share](https://github.com/foxofice/sub_share)）的本地检索与数据同步。
 
-此计划是为了改进目前字幕的共享和下载方式，让共享字幕、搜索字幕、下载字幕变得更简便，制作了`Subtitles DataBase`工具。
+- 在线字幕站：[https://foxofice.github.io/sub_share/](https://foxofice.github.io/sub_share/)
+- 数据仓库：[foxofice/sub_share · Subtitles DataBase](https://github.com/foxofice/sub_share/tree/master/Subtitles%20DataBase)
 
-<img src="doc/01.png" />
+![仪表盘](docs/dashboard.jpg)
 
-Subtitles DataBase 有几处需要说明的地方：
+---
 
-`更新数据库`：根据本地数据生成数据库（主要给字幕上传者使用）
+## 功能特性
 
-`高级查找`：使用各种条件搜索
+### 仪表盘
+- 记录总数 / 番剧数 / 类型数 / 上次更新时间 四张统计卡
+- 快捷操作：开始下载、开始扫描、高级查找、字幕库、**在线字幕站**
+- 卡片错峰渐入动效
 
-<img src="doc/02.png" />
+### 字幕库（数据表）
+- 13 列数据表（时间 / 简繁日英罗马音名称 / 类型 / 片源 / 字幕名 / 后缀 / 字幕组 / 描述 / 路径）
+- 列宽拖拽、列排序（自然排序，数字按大小）
+- 即时搜索：**简繁自动转换组合匹配**（与原版一致的 LCMapString 逻辑）
+- 类型 / 片源快捷筛选、一键重置
+- 双击行打开本地字幕文件夹；右上角打开本地文件夹 / GitHub 远程目录
+- 右上角**导出 JSON + zstd**（原生保存对话框）
 
-`查询语句`：使用类似 SQL 的语法进行查询
+### 更新数据库
+| 方式 | 说明 |
+| --- | --- |
+| 远程同步 | 优先下载 **`db.json.zst`（JSON + zstd）**，不可用时自动回退 `db.xml`；完成后两种格式同时落盘 |
+| 本地扫描 | 扫描 `类型\年份\(日期)名称\片源\字幕` 目录树，支持**全部扫描**或**部分扫描**（按类型 + 年份） |
+| 首次运行 | 本地无数据库时**自动远程下载**并进入字幕库 |
+| 容错 | 本地路径不存在时自动切换为远程同步 |
 
-比如
-`[time] >= '2010.1.1' and [time] <= '2011.1.1' and [extension] like '%srt%'`
+- 下载引擎：**ufetch-core** —— 自适应多连接、慢段接管、断点续传、自动重试
+- 进度面板：已下载/总量 · 实时速度 · 百分比
+- 完成态：绿色结果卡（例：`✓ 更新完成 · 4957 条记录 · db.json.zst · 221 KB · 0.0s`），失败为红色错误卡
+- 日志明确记录实际同步的文件与大小
 
-如果不熟悉 SQL 的用户，可以使用「高级查找」界面，效果差不多
+![远程同步](docs/sync.jpg)
 
-<img src="doc/03.png" />
+### 高级查找
+- 番剧名称（简繁自动匹配）、字幕名称、后缀、片源、字幕组、描述
+- 放送日期比较：`=` / `<` / `<=` / `>` / `>=`
+- 搜索后自动跳转到字幕库展示结果
 
-**如果你是收藏党，打算下载所有字幕到本地计算机，可以：**
+### 其他
+- **深 / 浅色主题**一键切换（默认浅色）；页面切换淡入、侧栏选中胶囊、主题切换淡入等动效
+- 日志页、关于页（内嵌更新日志、在线字幕站与仓库链接）
+- 快捷键：`F5` 更新数据库、`F3` 高级查找、`F4` 日志
+- **单包 exe**：语言表、更新日志、关于页内容全部内嵌，除数据库文件外无任何外部依赖
 
-    你可以检出我们的整个git仓库（包含「Subtitles DataBase」工具及源代码、仓库中的所有字幕文件）
+![关于](docs/about.jpg)
 
-**如果你只是追番党，不打算下载所有字幕文件到本地计算机，可以：**
+---
 
-    只下载 Subtitles DataBase 工具（不到1M），选定需要的记录后，点击顶部菜单的【打开远程链接】就会在网站上显示你需要的结果
-<hr />
+## 运行
 
-【格式】
+1. 下载 / 构建 `SubAtlas.exe`；
+2. 放置到任意可写目录，直接双击运行；
+3. 程序在 exe 同级使用 `Files\` 目录：
 
-提交字幕一般的格式如下（也可以直接参考git仓库中已提交的字幕）：
+| 文件 | 说明 | 必需 |
+| --- | --- | --- |
+| `Files\db.json.zst` | **首选**数据库（zstd 压缩的 JSON） | 可选（缺失时自动下载） |
+| `Files\db.xml` | 兼容格式（.NET DataTable XML，供原版工具使用） | 可选 |
+| `Files\config.txt` | 窗口位置/大小、列宽、字幕库路径 | 自动生成 |
 
-**影片说明文件（可忽略，但不建议忽略）**
+环境要求：Windows 10/11（x64）。无需安装 .NET / 运行库。
 
-    sub_list/<type>/<year>/(<date>)<name>/info.txt
+---
 
-例如：
+## 构建
 
-    subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte
+```powershell
+# 需要 Rust 1.88+（edition 2024）与 MSVC Build Tools
+cargo build --release
+# 产物：target\release\SubAtlas.exe（约 26 MB，静态依赖）
+```
 
-**字幕文件**
+依赖要点：
 
-    sub_list/<type>/<year>/(<date>)<name>/<source>/<sub_name>/<字幕文件>
+- `gpui-kit` / `gpui-component`（GPUI 组件库，Lucide 图标）
+- `ufetch-core`（git 依赖，下载引擎，LGPL-3.0-or-later）
+- `serde` / `serde_json` / `zstd`（JSON + zstd 数据库）
+- `rfd`（原生保存对话框）
 
-例如：
+---
 
-    subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Charlotte 夏洛特][简繁日双语字幕][01-13][TVrip][1080P]/[kamigami] Charlotte - 01 [1920×1080 x264 AAC Sub(Chs,Cht,Jap)].Chs-Jap.ass
+## 目录结构
 
-**字幕补充说明（可忽略，用途添加字幕提供者/字幕组、字幕说明等）**
+```
+src/
+  main.rs      程序入口：GPUI 应用、主题、全局状态
+  app.rs       全局状态（配置 / 数据库 / 语言 / 日志 / 过滤器）
+  ui.rs        应用外壳：侧边栏导航、仪表盘、字幕库页面、动效
+  windows.rs   更新数据库、高级查找、日志、关于页面 + 导出
+  theme.rs     FlClash 配色（浅色/深色语义主题）
+  db.rs        数据模型 + db.json.zst / db.xml 读写与自动迁移
+  scan.rs      本地目录扫描（全部/部分扫描）
+  search.rs    简繁组合搜索与过滤
+  dl.rs        ufetch-core 下载封装（进度/取消）
+  config.rs    config.txt 读写（兼容原版键名）
+  i18n.rs      内置中英文语言表 + Files\Languages 扩展
+assets/        应用图标、上游更新日志（内嵌）
+docs/          README 截图
+```
 
-    sub_list/<type>/<year>/(<date>)<name>/<source>/<sub_name>.txt
+---
 
-例如：
+## 数据格式
 
-    subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte/TV/[诸神字幕组][Charlotte 夏洛特][简繁日双语字幕][01-13][TVrip][1080P].txt
+### `db.json.zst`（首选）
 
-**以上参数说明**
+`zstd(JSON array)`，每个元素：
 
-`<type>` 分类（例如：animation、movie 等，可自定添加。animation 表示动画。同时欢迎大家提交里番字幕）
+```json
+{
+  "time": "1970-04-01",
+  "name_chs": "明日之丈（第一部）",
+  "name_cht": "小拳王（第一部）",
+  "name_jp": "あしたのジョー S1",
+  "name_en": "Tomorrow's Joe S1",
+  "name_rome": "Ashita no Jō S1",
+  "type": "animation",
+  "source": "BD",
+  "sub_name": "冷番补完字幕组",
+  "extension": ".ass",
+  "providers": "",
+  "desc": "",
+  "path": "animation\\1970\\(1970.4.1)明日之丈 第1季"
+}
+```
 
-`<year>` 影片放送的年份
+压缩效果参考：`db.xml` 约 2.9 MB → `db.json.zst` 约 **220–235 KB（≈8%）**。
 
-`<date>` 影片放送的日期（如果不知道具体哪天，可以写成：(1998)或(1998.5)这样，忽略月、日）
+### 加载与回退规则
 
-`<name>` 影片名字
+1. 同时存在两种文件时，按**修改时间**选择较新的一个；
+2. 仅存在 `db.xml` 时解析后**自动迁移**生成 `db.json.zst`；
+3. `db.json.zst` 损坏时回退 `db.xml`；
+4. 本地扫描 / 远程同步完成后**同时写入**两种格式（保持与原版工具兼容）。
 
-`<source>` 匹配的源（例如：BD TV Web test 等，可自行添加，但为了方便查找应该尽量统一。BD 表示 BDrip，test 表示未校对）
+> 上游 `db.json.zst` 由本工具生成并提交到 [Subtitles DataBase/Files](https://github.com/foxofice/sub_share/tree/master/Subtitles%20DataBase/Files)。
 
-`<sub_name>` 一整套字幕的名称
+---
 
-`<字幕文件>` 例如 01.ass
+## 与上游 sub_db 的差异
 
-**最简单的例子可以参考：**
+- 界面：单窗口 + 侧边栏导航 + 卡片式页面（FlClash 风格），替代多窗口 WinForms
+- 存储：新增 JSON + zstd 优先格式，XML 完整保留
+- 下载：ufetch-core 引擎替代原多线程 Range 下载
+- 移除「SQL 查询语句」模式，改用高级查找字段组合
+- 快捷键调整：`F5` 更新数据库 / `F3` 高级查找 / `F4` 日志
 
-    subs_list/animation/2003/(2003.10.4)暗与帽子与书之旅人
+---
 
-**有个复杂的例子（包括 info.txt、各种字幕说明），可以参考：**
+## 许可证与致谢
 
-    subs_list/animation/2015/(2015.7.4)夏洛特 Charlotte
+本项目以 **LGPL-3.0-or-later** 发布；静态链接的 [ufetch-core](https://github.com/LianXia233/ufetch-core) 同为 LGPL-3.0-or-later，按 LGPLv3 第 4 节提供可重新链接方式（源码随仓库提供）。
 
-**【为了多语言兼容性，提交的所有文本格式的文件，请尽量使用 `UTF8` 编码】**
-<hr />
+致谢：
 
-注意：由于字幕太多，可能部分字幕缺少出处或必要的补充说明，可以联系本人修改or补充、或者直接取得提交权限自行修改。
-
-需要提交权限的同学可以联系我，欢迎各字幕组和手抄大佬加入。
-
-Q群：`1003173547`（群主大号已炸，现在🐶tx的东西一点都不能用。后续会更新 IM 的新版本，等更新完毕后将正式对外开放使用）
-
-8B71A5DF03C47F647336BC78402E5F8E18E77A5242C5FCD7C811E65406B457711FB2239EC33AB27BDA8B6102B4929301
-aes_cfb_decrypt(code, sha384(user).left(32), sha384(user).right(16).reverse())
+- [foxofice/sub_db](https://github.com/foxofice/sub_db)、[foxofice/sub_share](https://github.com/foxofice/sub_share) —— 数据与原始设计
+- [FlClash](https://github.com/chen08209/FlClash) —— 界面设计参考
+- [GPUI](https://github.com/zed-industries/zed) / [gpui-kit](https://github.com/longbridge/gpui-kit) / [Lucide](https://lucide.dev) 图标
+- [ufetch-core](https://github.com/LianXia233/ufetch-core) —— 下载引擎

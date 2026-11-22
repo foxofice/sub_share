@@ -1,0 +1,35 @@
+[package]
+name = "sub_atlas"
+version = "0.23.0"
+edition = "2024"
+description = "SubAtlas - a modern Rust + GPUI subtitle database desktop app (rewrite of foxofice/sub_db)"
+build = "build.rs"
+
+[[bin]]
+name = "SubAtlas"
+path = "src/main.rs"
+
+[dependencies]
+anyhow = "1"
+chrono = "0.4"
+gpui-kit = "0.10"
+gpui-component = "0.10"
+gpui = { package = "gpui-pre", version = "0.3.12" }
+open = "5"
+quick-xml = "0.37"
+sys-locale = "0.3"
+windows-sys = { version = "0.59", features = ["Win32_Globalization"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+zstd = "0.14.4"
+rfd = "0.18.0"
+ufetch-core = { git = "https://github.com/LianXia233/ufetch-core", version = "0.1.0" }
+tokio = { version = "1.54.1", features = ["rt-multi-thread", "time", "macros", "sync"] }
+
+[build-dependencies]
+winresource = "0.1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true

@@ -1,0 +1,921 @@
+﻿[Script Info]
+Title: [UHA-WINGS&VCB-Studio] Overtake! [02][Ma10p_1080p][x265_flac].tc
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+PlayResX: 1920
+PlayResY: 1080
+LayoutResX: 1920
+LayoutResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: overtake op cn - 01-furigana,方正悠黑_GBK 508R,30,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,5,0,1,10,10,0,1
+Style: overtake op jp - 01-furigana,DFGothicP-W5,22.5,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,5,0,7,10,10,10,1
+Style: overtake phone-furigana,思源黑体 CN Bold,35,&H00F3EEF0,&H000000FF,&H00211A19,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake alive-furigana,方正舒体_GBK,45,&H00654F47,&H000000FF,&H00191310,&H00D5D2CE,-1,0,0,0,100,100,0,0,1,0,1.5,2,10,10,10,1
+Style: overtake newspaper-furigana,思源宋体 CN Heavy,25,&H001D1C1A,&H000000FF,&H009D9A94,&H00000000,0,0,0,0,100,100,0,0,1,2.5,0,2,10,10,10,1
+Style: overtake prize-2-furigana,思源宋体 CN Heavy,35,&H000E0E0E,&H000000FF,&H00756E6F,&H00756E6F,0,0,0,0,100,100,0,0,1,1.5,2,2,10,10,10,1
+Style: overtake prize-1-furigana,思源黑体 CN Medium,35,&H00847C7E,&H000000FF,&H00171616,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake sakura-furigana,方正兰亭特黑_GBK,50,&H001A1A1A,&H000000FF,&H00F6F6F6,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake banner-furigana,思源黑体 CN Heavy,25,&H00362D2C,&H000000FF,&H00FEFEFE,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,2,10,10,10,1
+Style: overtake - title1-furigana,方正兰亭黑长_GBK,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,1,0,2,15,15,15,1
+Style: overtake input-furigana,思源黑体 CN Medium,40,&H00000000,&H000000FF,&H00DDDEDF,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,15,15,15,1
+Style: overtake lost-furigana,华康少女文字W5,30,&H00FFFFFF,&H000000FF,&H00553145,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake search-furigana,思源黑体 CN Medium,20,&H006E6F73,&H000000FF,&H00FEFEFD,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake notice-furigana,思源黑体 CN Medium,25,&H00E7E5E6,&H000000FF,&H006E6A6E,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake chat-furigana,思源黑体 CN Medium,22.5,&H00545259,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,2,10,10,10,1
+Style: overtake - title2-furigana,思源黑体 CN Bold,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake ed cn-furigana,方正悠黑_GBK 508R,25,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,1,0,2,10,10,8,1
+Style: overtake ed jp-furigana,DFGothicP-W5,17.5,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,1,0,2,10,10,65,1
+Style: overtake op cn-furigana,方正悠黑_GBK 508R,30,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,0,0,3,5,1,2,10,10,0,1
+Style: overtake op jp-furigana,DFGothicP-W5,20,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,10,0,3,10,1,8,10,10,10,1
+Style: overtake hero-furigana,思源黑体 Heavy,25,&H009733F9,&H000000FF,&H00F6F3F3,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake advertisement-furigana,思源黑体 CN Bold,20,&H003D3D3D,&H000000FF,&H00F4F3F3,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,2,10,10,10,1
+Style: overtake contacts-furigana,方正兰亭圆_GBK_中,30,&H00DAE2FC,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake stop-furigana,思源黑体 CN Medium,50,&H00171749,&H000000FF,&H00444253,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake - staff-furigana,思源黑体 CN Bold,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,0,8,15,15,15,1
+Style: overtake - title-furigana,方正兰亭黑长_GBK,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,1,0,2,15,15,15,1
+Style: overtake - note-furigana,思源黑体 CN Bold,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0.75,0,7,15,15,10,1
+Style: overtake - text-furigana,思源黑体 CN Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,15,15,15,1
+Style: overtake - text,思源黑体 CN Bold,80,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,15,15,15,1
+Style: overtake - note,思源黑体 CN Bold,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,7,15,15,10,1
+Style: overtake - title,方正兰亭黑长_GBK,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,2,0,2,15,15,15,1
+Style: overtake - staff,思源黑体 CN Bold,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,8,15,15,15,1
+Style: overtake stop,思源黑体 CN Medium,100,&H00171749,&H000000FF,&H00444253,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake contacts,方正兰亭圆_GBK_中,60,&H00DAE2FC,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake advertisement,思源黑体 CN Bold,40,&H003D3D3D,&H000000FF,&H00F4F3F3,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake hero,思源黑体 Heavy,50,&H009733F9,&H000000FF,&H00F6F3F3,&H00000000,0,0,0,0,100,100,0,0,1,4,0,2,10,10,10,1
+Style: overtake op jp,DFGothicP-W5,40,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,10,0,3,20,2,8,10,10,10,1
+Style: overtake op cn,方正悠黑_GBK 508R,60,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,0,0,3,10,2,2,10,10,0,1
+Style: overtake ed jp,DFGothicP-W5,35,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,2,0,2,10,10,65,1
+Style: overtake ed cn,方正悠黑_GBK 508R,50,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,2,0,2,10,10,8,1
+Style: overtake - title2,思源黑体 CN Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake chat,思源黑体 CN Medium,45,&H00545259,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake notice,思源黑体 CN Medium,50,&H00E7E5E6,&H000000FF,&H006E6A6E,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake search,思源黑体 CN Medium,40,&H006E6F73,&H000000FF,&H00FEFEFD,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake lost,华康少女文字W5,60,&H00FFFFFF,&H000000FF,&H00553145,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,10,10,10,1
+Style: overtake input,思源黑体 CN Medium,80,&H00000000,&H000000FF,&H00DDDEDF,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,15,15,15,1
+Style: overtake - title1,方正兰亭黑长_GBK,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,2,0,2,15,15,15,1
+Style: overtake banner,思源黑体 CN Heavy,50,&H00362D2C,&H000000FF,&H00FEFEFE,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake sakura,方正兰亭特黑_GBK,100,&H001A1A1A,&H000000FF,&H00F6F6F6,&H00000000,0,0,0,0,100,100,0,0,1,4,0,2,10,10,10,1
+Style: overtake prize-1,思源黑体 CN Medium,70,&H00847C7E,&H000000FF,&H00171616,&H00000000,0,0,0,0,100,100,0,0,1,6,0,2,10,10,10,1
+Style: overtake prize-2,思源宋体 CN Heavy,70,&H000E0E0E,&H000000FF,&H00756E6F,&H00756E6F,0,0,0,0,100,100,0,0,1,3,4,2,10,10,10,1
+Style: overtake newspaper,思源宋体 CN Heavy,50,&H001D1C1A,&H000000FF,&H009D9A94,&H00000000,0,0,0,0,100,100,0,0,1,5,0,2,10,10,10,1
+Style: overtake alive,方正舒体_GBK,90,&H00654F47,&H000000FF,&H00191310,&H00D5D2CE,-1,0,0,0,100,100,0,0,1,0,3,2,10,10,10,1
+Style: overtake phone,思源黑体 CN Bold,70,&H00F3EEF0,&H000000FF,&H00211A19,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake op jp - 01,DFGothicP-W5,45,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,10,0,7,10,10,10,1
+Style: overtake op cn - 01,方正悠黑_GBK 508R,60,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,10,0,1,10,10,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.00,0:00:09.00,overtake - staff,,0,0,0,,{\fad(1000,1000)}本字幕由悠哈璃羽字幕社製作，僅用於日語交流使用\N請勿私自二次上傳及用作商業用途
+Dialogue: 0,0:00:11.00,0:00:17.00,overtake - staff,,0,0,0,,{\fad(1000,1000)}翻譯＆校對：cz@阿羅拖拉機  時後：萌新時刻準備擺爛
+Dialogue: 0,0:00:01.61,0:00:02.92,overtake - text,,0,0,0,,拜託了！
+Dialogue: 0,0:00:03.16,0:00:05.84,overtake - text,,0,0,0,,請讓我成為你們隊伍的贊助！
+Dialogue: 0,0:00:07.41,0:00:08.99,overtake - text,,0,0,0,,我想為你們加油！
+Dialogue: 0,0:00:17.66,0:00:19.63,overtake - text,,0,0,0,,這拍得真不錯
+Dialogue: 0,0:00:22.05,0:00:24.27,overtake - text,,0,0,0,,真勁
+Dialogue: 0,0:00:24.27,0:00:26.58,overtake - text,,0,0,0,,勁？什麼意思
+Dialogue: 0,0:00:26.67,0:00:29.80,overtake - text,,0,0,0,,那是只是碰巧拍下的
+Dialogue: 0,0:00:29.93,0:00:33.93,overtake - text,,0,0,0,,是嗎  拍得真有那個味道了  真不愧是專業的
+Dialogue: 0,0:00:33.99,0:00:35.37,overtake - text,,0,0,0,,亞梨子要看看嗎
+Dialogue: 0,0:00:35.37,0:00:36.85,overtake - text,,0,0,0,,我看看
+Dialogue: 0,0:00:38.26,0:00:40.34,overtake - text,,0,0,0,,喂  靠太近啦
+Dialogue: 0,0:00:42.15,0:00:43.67,overtake - text,,0,0,0,,我回來了
+Dialogue: 0,0:00:44.03,0:00:46.05,overtake - text,,0,0,0,,小悠  歡迎回來
+Dialogue: 0,0:00:46.85,0:00:48.61,overtake - text,,0,0,0,,有客人來了  悠
+Dialogue: 0,0:00:48.73,0:00:49.90,overtake - text,,0,0,0,,你好！
+Dialogue: 0,0:00:50.37,0:00:51.90,overtake - text,,0,0,0,,我叫真賀孝哉
+Dialogue: 0,0:00:52.37,0:00:53.69,overtake - text,,0,0,0,,你是那時的…
+Dialogue: 0,0:00:54.31,0:00:56.05,overtake - text,,0,0,0,,這下厲害了  悠
+Dialogue: 0,0:00:56.19,0:00:58.49,overtake - text,,0,0,0,,他被你駕駛的樣子迷住了
+Dialogue: 0,0:00:58.49,0:01:00.91,overtake - text,,0,0,0,,就來找我們想要做贊助商呢
+Dialogue: 0,0:01:01.04,0:01:01.81,overtake - text,,0,0,0,,我的？
+Dialogue: 0,0:01:02.23,0:01:04.51,overtake - text,,0,0,0,,好像是在東京做攝影師呢
+Dialogue: 0,0:01:04.78,0:01:08.12,overtake - text,,0,0,0,,因為拍的是照片  所以應該叫攝像師
+Dialogue: 0,0:01:08.23,0:01:11.17,overtake - text,,0,0,0,,也拍了你昨天的照片
+Dialogue: 0,0:01:16.87,0:01:18.35,overtake - text,,0,0,0,,對吧  很色吧
+Dialogue: 0,0:01:18.35,0:01:22.12,overtake - text,,0,0,0,,大叔  不是色  是勁啦
+Dialogue: 0,0:01:22.26,0:01:25.06,overtake - text,,0,0,0,,居然說成了色  真好笑
+Dialogue: 0,0:01:29.25,0:01:30.99,overtake - text,,0,0,0,,等下  這是討飯吃的傢伙
+Dialogue: 0,0:01:30.99,0:01:34.08,overtake - text,,0,0,0,,分期還沒還完呢！
+Dialogue: 0,0:00:01.00,0:00:01.00,overtake - text,,0,0,0,,——OP——
+Comment: 0,0:04:19.34,0:04:21.34,overtake op jp,,0,0,0,template char,!retime("line",-300,50)!{\pos($scenter,$smiddle)\an5\1a&Hff\3a&HFF\4a&HFF\t(!$scenter-($sleft/2)!,!$scenter-($sleft/2)+50!,\1a&HFF\3a&H00\4a&H00)\t(!$scenter-($sleft/2)+200!,!$scenter-($sleft/2)+300!,\1a&H00\3a&Hff\bord0\4a&H00)}
+Comment: 0,0:04:19.34,0:04:21.34,overtake op cn,,0,0,0,template char,!retime("line",-300,50)!{\pos($scenter,$smiddle)\an5\1a&HFF\3a&HFF\4a&HFF\t(!$scenter-($sleft/2)!,!$scenter-($sleft/2)+50!,\1a&HFF\3a&H00\4a&H00)\t(!$scenter-($sleft/2)+200!,!$scenter-($sleft/2)+300!,\1a&H00\3a&Hff\bord0\4a&H00)}
+Comment: 0,0:01:35.46,0:01:42.02,overtake op jp,,0,0,0,karaoke,Blowing in the wind… waiting for the time to start…
+Comment: 0,0:01:42.02,0:01:48.61,overtake op jp,,0,0,0,karaoke,急な雨に遭って　水平線は煙った
+Comment: 0,0:01:48.81,0:01:55.16,overtake op jp,,0,0,0,karaoke,見果てぬ　夢のかたちも
+Comment: 0,0:01:56.94,0:02:03.63,overtake op jp,,0,0,0,karaoke,欠けたなにかを　それでも抱く期待を
+Comment: 0,0:02:03.79,0:02:09.70,overtake op jp,,0,0,0,karaoke,この手に　離さぬままで
+Comment: 0,0:02:10.09,0:02:16.59,overtake op jp,,0,0,0,karaoke,通り過ぎてく曖昧な毎日も　かけがえのない
+Comment: 0,0:02:16.68,0:02:19.54,overtake op jp,,0,0,0,karaoke,軌跡だって　もう知ってるから
+Comment: 0,0:02:19.54,0:02:26.98,overtake op jp,,0,0,0,karaoke,待ち続けるより　手を伸ばせば　そこに未来
+Comment: 0,0:02:26.98,0:02:34.35,overtake op jp,,0,0,0,karaoke,さあ　どんな今日にさえ　明日が来て　僕ら進んできただろう
+Comment: 0,0:02:34.52,0:02:41.95,overtake op jp,,0,0,0,karaoke,曇天の日々だって　終わりが来て　青天がのぞくだろう
+Comment: 0,0:02:41.95,0:02:49.32,overtake op jp,,0,0,0,karaoke,声なき声が今も聞こえている
+Comment: 0,0:02:49.50,0:02:57.25,overtake op jp,,0,0,0,karaoke,名もなき風が髪を揺らす
+Comment: 0,0:01:35.46,0:01:42.02,overtake op cn,,0,0,0,karaoke,無論今天如何  明天依舊到來  我們仍會前進
+Comment: 0,0:01:42.02,0:01:48.61,overtake op cn,,0,0,0,karaoke,突然降下的雨  讓地平線模糊不清
+Comment: 0,0:01:48.81,0:01:55.16,overtake op cn,,0,0,0,karaoke,一併模糊了那未曾實現的夢想
+Comment: 0,0:01:56.94,0:02:03.63,overtake op cn,,0,0,0,karaoke,即便缺少了什麼  但也依然抱有期待
+Comment: 0,0:02:03.79,0:02:09.70,overtake op cn,,0,0,0,karaoke,緊緊抓著這雙手一刻不曾放開
+Comment: 0,0:02:10.09,0:02:16.59,overtake op cn,,0,0,0,karaoke,共同度過的曖昧每一天  同樣不可缺少
+Comment: 0,0:02:16.68,0:02:19.54,overtake op cn,,0,0,0,karaoke,往後的軌跡  其實早已知曉
+Comment: 0,0:02:19.54,0:02:26.98,overtake op cn,,0,0,0,karaoke,與其一直等待  不如伸手去觸及未來
+Comment: 0,0:02:26.98,0:02:34.35,overtake op cn,,0,0,0,karaoke,無論今天如何  明天依舊到來  我們仍會前進
+Comment: 0,0:02:34.52,0:02:41.95,overtake op cn,,0,0,0,karaoke,陰翳的日子總會過去  之後便是晴天
+Comment: 0,0:02:41.95,0:02:49.32,overtake op cn,,0,0,0,karaoke,不曾發出的聲音  如今也已經知曉
+Comment: 0,0:02:49.50,0:02:57.25,overtake op cn,,0,0,0,karaoke,那沒有名字的風  吹動著你的頭髮
+Dialogue: 0,0:03:04.69,0:03:06.96,overtake - text,,0,0,0,,哎呀  真是感動啊
+Dialogue: 0,0:03:07.81,0:03:11.91,overtake - text,,0,0,0,,從彎角一口氣超車那下  真讓人忍不住全情投入
+Dialogue: 0,0:03:13.41,0:03:18.19,overtake - text,,0,0,0,,那個說一個人也能跑的人  沒想到這麼有實力啊
+Dialogue: 0,0:03:18.58,0:03:20.41,overtake - text,,0,0,0,,最後還是退出比賽了
+Dialogue: 0,0:03:20.58,0:03:24.78,overtake - text,,0,0,0,,抱歉  雖然是這樣  不是這回事
+Dialogue: 0,0:03:25.44,0:03:26.63,overtake - text,,0,0,0,,就是…
+Dialogue: 0,0:03:27.12,0:03:31.95,overtake - text,,0,0,0,,不禁讓人回想起來  努力原來是這樣的啊
+Dialogue: 0,0:03:33.04,0:03:37.04,overtake - text,,0,0,0,,然後  就坐立不安想要做些什麼了
+Dialogue: 0,0:03:37.13,0:03:38.05,overtake - text,,0,0,0,,大紅人
+Dialogue: 0,0:03:39.65,0:03:44.97,overtake - text,,0,0,0,,沒有  你還要來贊助我們  感覺攝影師可真賺錢呢
+Dialogue: 0,0:03:45.04,0:03:48.81,overtake - text,,0,0,0,,不  我雖然是職業攝像師
+Dialogue: 0,0:03:48.81,0:03:51.83,overtake - text,,0,0,0,,但也沒有機會幫當紅藝人拍攝  所以也沒賺什麼錢
+Dialogue: 0,0:03:57.91,0:04:00.62,overtake - text,,0,0,0,,啊  這個
+Dialogue: 0,0:04:00.76,0:04:05.22,overtake - text,,0,0,0,,原來是這樣的  居然用硬木板增強車身剛性
+Dialogue: 0,0:04:05.22,0:04:08.76,overtake - text,,0,0,0,,跟笑生先生他們隊閃閃發光的車真是大相徑庭啊
+Dialogue: 0,0:04:12.24,0:04:13.92,overtake - text,,0,0,0,,不過你放心吧
+Dialogue: 0,0:04:14.09,0:04:17.24,overtake - text,,0,0,0,,我成為贊助之後  你們就不用被這些條件束縛…
+Dialogue: 0,0:04:17.36,0:04:18.65,overtake - note,,0,0,0,,{\pos(861,950)}skid block
+Dialogue: 0,0:04:17.36,0:04:18.65,overtake - text,,0,0,0,,防托底木板
+Dialogue: 0,0:04:20.51,0:04:23.24,overtake - text,,0,0,0,,把木板固定在車底板下部
+Dialogue: 0,0:04:23.32,0:04:27.08,overtake - text,,0,0,0,,以此降低下壓力  並提高安全性
+Dialogue: 0,0:04:27.25,0:04:31.09,overtake - text,,0,0,0,,並不是用來增強車身的  這是依據技術規則執行的
+Dialogue: 0,0:04:31.43,0:04:34.09,overtake - text,,0,0,0,,如果木板磨損超過一定程度  就會被取消資格
+Dialogue: 0,0:04:34.21,0:04:36.49,overtake - text,,0,0,0,,是這麼規定的嗎…
+Dialogue: 0,0:04:37.06,0:04:41.75,overtake - text,,0,0,0,,是為了限制過度降低車身  控制車身高度嗎
+Dialogue: 0,0:04:42.07,0:04:44.38,overtake - text,,0,0,0,,那幾條輪胎  你覺得要多少錢？
+Dialogue: 0,0:04:44.65,0:04:49.93,overtake - text,,0,0,0,,那個…普通車輛的輪胎一條大概是2萬日元
+Dialogue: 0,0:04:50.10,0:04:52.97,overtake - text,,0,0,0,,怎麼說也比普通輪胎貴吧
+Dialogue: 0,0:04:53.19,0:04:54.77,overtake - text,,0,0,0,,一套大概10萬日元
+Dialogue: 0,0:04:54.84,0:04:56.18,overtake - text,,0,0,0,,還挺貴的
+Dialogue: 0,0:04:56.45,0:04:58.03,overtake - text,,0,0,0,,因為是賽車專用的
+Dialogue: 0,0:04:58.25,0:05:01.64,overtake - text,,0,0,0,,但是10萬的話  應該能承受得起…
+Dialogue: 0,0:05:01.71,0:05:04.96,overtake - text,,0,0,0,,每次比賽要用3套  一年有7場比賽
+Dialogue: 0,0:05:06.03,0:05:07.57,overtake - text,,0,0,0,,平常練習也需要用輪胎
+Dialogue: 0,0:05:07.63,0:05:10.92,overtake - text,,0,0,0,,這麼算下來  一年光是輪胎就要花差不多250萬日元
+Dialogue: 0,0:05:11.09,0:05:14.09,overtake - text,,0,0,0,,但是這只是像我們這樣的私人車隊的開支
+Dialogue: 0,0:05:14.43,0:05:19.00,overtake - text,,0,0,0,,頂級車隊的練習量大  一年下來估計超過400萬日元了
+Dialogue: 0,0:05:19.00,0:05:19.97,overtake - text,,0,0,0,,4？
+Dialogue: 0,0:05:21.95,0:05:26.11,overtake - text,,0,0,0,,引擎是租用的  包含維護費用每年需要105萬
+Dialogue: 0,0:05:26.11,0:05:32.04,overtake - text,,0,0,0,,還有車子的修理費  更換備件的費用  機油費  燃油費
+Dialogue: 0,0:05:32.83,0:05:35.38,overtake - text,,0,0,0,,每年最少也得花1100萬吧
+Dialogue: 0,0:05:35.66,0:05:37.56,overtake - text,,0,0,0,,當然每支車隊情況不一樣
+Dialogue: 0,0:05:37.67,0:05:40.90,overtake - text,,0,0,0,,Belsorriso大概要花1800萬吧
+Dialogue: 0,0:05:40.90,0:05:45.44,overtake - text,,0,0,0,,小牧Motors本身就是修理廠  能省下不少工時費
+Dialogue: 0,0:05:45.81,0:05:49.15,overtake - text,,0,0,0,,但是對相機的分期都沒還完的人來說…
+Dialogue: 0,0:05:58.28,0:05:59.34,overtake - text,,0,0,0,,應該是不可能的
+Dialogue: 0,0:06:00.12,0:06:01.91,overtake - text,,0,0,0,,既沒有知識也沒有錢的人
+Dialogue: 0,0:06:01.97,0:06:04.06,overtake - text,,0,0,0,,只憑一時興起和衝勁  是沒法當贊助的
+Dialogue: 0,0:06:16.77,0:06:19.36,overtake - text,,0,0,0,,真不好意思  這孩子太目中無人了
+Dialogue: 0,0:06:21.70,0:06:25.78,overtake - text,,0,0,0,,我也以為東京的攝影師很賺錢呢
+Dialogue: 0,0:06:26.39,0:06:28.37,overtake - text,,0,0,0,,沒能符合你的期待  真是抱歉
+Dialogue: 0,0:06:28.87,0:06:30.71,overtake - text,,0,0,0,,開玩笑的
+Dialogue: 0,0:06:30.81,0:06:33.21,overtake - text,,0,0,0,,光是對我們感興趣  就已經很讓人開心了
+Dialogue: 0,0:06:33.67,0:06:37.57,overtake - text,,0,0,0,,最近喜歡賽車的人也慢慢變少了
+Dialogue: 0,0:06:40.31,0:06:43.77,overtake - text,,0,0,0,,這是紀念遺照  我摯友的
+Dialogue: 0,0:06:45.23,0:06:49.15,overtake - text,,0,0,0,,別看我這樣  以前我可是個有幾下子的機械師哦
+Dialogue: 0,0:06:49.23,0:06:50.95,overtake - text,,0,0,0,,人家都叫我「修理哥小太」
+Dialogue: 0,0:06:51.81,0:06:56.78,overtake - text,,0,0,0,,悠的父親是當時的車手  跟我不知為何很合得來
+Dialogue: 0,0:06:57.47,0:06:59.61,overtake - text,,0,0,0,,我們兩家的關係也很好
+Dialogue: 0,0:07:00.37,0:07:05.51,overtake - text,,0,0,0,,那傢伙的妻子住院的時候  還把悠託付給我們照顧呢
+Dialogue: 0,0:07:06.21,0:07:09.02,overtake - text,,0,0,0,,大概是他妻子過世兩年後吧
+Dialogue: 0,0:07:09.88,0:07:13.10,overtake - text,,0,0,0,,我為了繼承這裡  退出了車隊
+Dialogue: 0,0:07:13.73,0:07:17.51,overtake - text,,0,0,0,,不久之後  透…
+Dialogue: 0,0:07:18.03,0:07:22.48,overtake - text,,0,0,0,,悠的父親  就因為比賽中的意外…
+Dialogue: 0,0:07:23.67,0:07:28.22,overtake - text,,0,0,0,,悠在最開始的幾年都住在親戚家裡
+Dialogue: 0,0:07:29.43,0:07:33.43,overtake - text,,0,0,0,,但在他還是小學生的時候  就一個人走路來了我這裡
+Dialogue: 0,0:07:33.55,0:07:35.23,overtake - text,,0,0,0,,走了整整兩天時間
+Dialogue: 0,0:07:37.63,0:07:40.39,overtake - text,,0,0,0,,他說想要成為像父親一樣的賽車手
+Dialogue: 0,0:07:40.57,0:07:43.39,overtake - text,,0,0,0,,想要加入大叔我的車隊…
+Dialogue: 0,0:07:44.53,0:07:48.09,overtake - text,,0,0,0,,他貌似還不知道我已經退出車隊了
+Dialogue: 0,0:07:48.43,0:07:52.36,overtake - text,,0,0,0,,他緊緊握著小小的拳頭  拚命低下頭拜託我了
+Dialogue: 0,0:07:52.86,0:07:56.38,overtake - text,,0,0,0,,回想起那時候的事  還是那麼令人動容啊
+Dialogue: 0,0:07:57.60,0:07:59.78,overtake - text,,0,0,0,,那時候我就想到了
+Dialogue: 0,0:08:00.21,0:08:04.53,overtake - text,,0,0,0,,既然退出車隊了  那自己再成立一支車隊不就好了
+Dialogue: 0,0:08:05.25,0:08:09.98,overtake - text,,0,0,0,,在那之後  悠就一直是我家的孩子  我家的賽車手了
+Dialogue: 0,0:08:10.37,0:08:12.42,overtake - text,,0,0,0,,雖然我們預算不多
+Dialogue: 0,0:08:12.48,0:08:16.07,overtake - text,,0,0,0,,但我和我兒子錮太郎都能修理賽車
+Dialogue: 0,0:08:16.57,0:08:18.46,overtake - text,,0,0,0,,悠雖然有些傲氣
+Dialogue: 0,0:08:18.62,0:08:23.48,overtake - text,,0,0,0,,但是他會在練習空閒時去送報紙  把賺到的錢補貼車隊
+Dialogue: 0,0:08:25.57,0:08:27.04,overtake - text,,0,0,0,,所以剛才才會…
+Dialogue: 0,0:08:27.87,0:08:30.81,overtake - text,,0,0,0,,我都跟他說不用這樣了
+Dialogue: 0,0:08:31.19,0:08:35.72,overtake - text,,0,0,0,,一個人想太多和不服輸的那股勁  真是跟他父親一模一樣
+Dialogue: 0,0:08:36.57,0:08:38.61,overtake - text,,0,0,0,,抱歉  我還…
+Dialogue: 0,0:08:38.67,0:08:41.84,overtake - text,,0,0,0,,都說沒關係啦  有這份心意就足夠了
+Dialogue: 0,0:08:42.01,0:08:45.41,overtake - text,,0,0,0,,你能誇讚悠  真是很謝謝你
+Dialogue: 0,0:08:55.58,0:08:57.60,overtake - text,,0,0,0,,我到底在做什麼啊
+Dialogue: 0,0:08:58.38,0:09:01.62,overtake - text,,0,0,0,,一個人突然興起  直接跑來人家這兒
+Dialogue: 0,0:09:02.47,0:09:03.71,overtake - text,,0,0,0,,應該是不可能的
+Dialogue: 0,0:09:04.48,0:09:06.12,overtake - text,,0,0,0,,既沒有知識也沒有錢的人
+Dialogue: 0,0:09:06.12,0:09:08.17,overtake - text,,0,0,0,,只憑一時興起和衝勁  是沒法當贊助的
+Dialogue: 0,0:09:08.73,0:09:10.23,overtake stop,,0,0,0,,{\frz355.8\pos(1160,286)}車輛禁止通行
+Dialogue: 0,0:09:10.51,0:09:12.79,overtake - text,,0,0,0,,說得完全沒錯  簡直讓人無話可說
+Dialogue: 0,0:09:16.86,0:09:17.99,overtake contacts,,0,0,0,,{\frz13.87\move(816,354,823,277,50,309)}小冴
+Dialogue: 0,0:09:18.93,0:09:20.19,overtake - text,,0,0,0,,喂
+Dialogue: 0,0:09:20.29,0:09:21.75,overtake - text,,0,0,0,,怎麼啦  小冴
+Dialogue: 0,0:09:21.75,0:09:24.85,overtake - text,,0,0,0,,都說了別叫人家小冴
+Dialogue: 0,0:09:25.43,0:09:27.55,overtake - text,,0,0,0,,白天都打給你幾次了
+Dialogue: 0,0:09:28.07,0:09:29.48,overtake - text,,0,0,0,,什麼  去御殿場了？
+Dialogue: 0,0:09:29.83,0:09:31.82,overtake - text,,0,0,0,,啊  有點事…
+Dialogue: 0,0:09:33.39,0:09:34.82,overtake - text,,0,0,0,,算了
+Dialogue: 0,0:09:34.95,0:09:36.95,overtake - text,,0,0,0,,話說明天有空嗎
+Dialogue: 0,0:09:37.08,0:09:39.02,overtake - text,,0,0,0,,有拍攝的工作想給你
+Dialogue: 0,0:09:39.17,0:09:40.48,overtake - text,,0,0,0,,明天？
+Dialogue: 0,0:09:40.56,0:09:44.88,overtake - text,,0,0,0,,對方說如果能指定攝像師的話  希望交給你負責
+Dialogue: 0,0:09:44.99,0:09:46.23,overtake - text,,0,0,0,,對方是？
+Dialogue: 0,0:09:46.37,0:09:51.40,overtake - text,,0,0,0,,之前也給他們拍過吧  Belsorriso的笑生先生
+Dialogue: 0,0:09:51.78,0:09:55.73,overtake - text,,0,0,0,,我們打算給他們車隊再出一期特輯
+Dialogue: 0,0:09:55.73,0:09:57.32,overtake - text,,0,0,0,,我接我接  請讓我接吧
+Dialogue: 0,0:09:57.32,0:09:59.51,overtake - text,,0,0,0,,小冴  請務必讓我接下！
+Dialogue: 0,0:10:07.59,0:10:09.50,overtake - text,,0,0,0,,真好賺啊
+Dialogue: 0,0:10:10.29,0:10:11.19,overtake - text,,0,0,0,,真賀
+Dialogue: 0,0:10:13.09,0:10:14.41,overtake - text,,0,0,0,,笑生先生
+Dialogue: 0,0:10:15.69,0:10:18.51,overtake - text,,0,0,0,,歡迎  謝謝你特地過來
+Dialogue: 0,0:10:18.63,0:10:19.78,overtake - text,,0,0,0,,你辛苦了
+Dialogue: 0,0:10:20.21,0:10:22.38,overtake - text,,0,0,0,,感謝您今天指定我來負責這次工作
+Dialogue: 0,0:10:22.52,0:10:24.18,overtake - text,,0,0,0,,抱歉占用你時間了
+Dialogue: 0,0:10:24.56,0:10:25.89,overtake - text,,0,0,0,,那我們走吧
+Dialogue: 0,0:10:27.29,0:10:28.51,overtake - text,,0,0,0,,去我們的車庫
+Dialogue: 0,0:10:29.55,0:10:31.13,overtake - text,,0,0,0,,我來開車
+Dialogue: 0,0:10:55.89,0:10:57.05,overtake - text,,0,0,0,,真厲害
+Dialogue: 0,0:10:57.30,0:10:58.89,overtake - text,,0,0,0,,你可以隨便拍哦
+Dialogue: 0,0:10:59.07,0:11:02.03,overtake - text,,0,0,0,,照片方面就全交給真賀你了
+Dialogue: 0,0:11:04.99,0:11:11.21,overtake - text,,0,0,0,,話說回來  Belsorriso車隊的重心應該是Super GT吧
+Dialogue: 0,0:11:12.34,0:11:15.32,overtake - text,,0,0,0,,對  500組別和300組別的
+Dialogue: 0,0:11:15.97,0:11:18.07,overtake - text,,0,0,0,,300組別的現在開出去了
+Dialogue: 0,0:11:19.25,0:11:20.89,overtake - text,,0,0,0,,500 300…
+Dialogue: 0,0:11:19.25,0:11:20.89,overtake - note,,0,0,0,,註：指GT500和GT300兩個組別，以馬力輸出上限500匹和300匹為區分
+Dialogue: 0,0:11:21.10,0:11:24.46,overtake - text,,0,0,0,,F4的話各方面還是剛起步
+Dialogue: 0,0:11:24.65,0:11:27.87,overtake - text,,0,0,0,,也就是說  有很多賽車
+Dialogue: 0,0:11:28.72,0:11:29.84,overtake - text,,0,0,0,,是這樣沒錯
+Dialogue: 0,0:11:29.93,0:11:32.25,overtake - text,,0,0,0,,看上去非常花錢呢
+Dialogue: 0,0:11:32.51,0:11:38.51,overtake - text,,0,0,0,,GT是挺花錢  在這方面來說F4花在賽車上的錢倒是不多
+Dialogue: 0,0:11:38.79,0:11:41.37,overtake - text,,0,0,0,,畢竟F4是追求同等條件的競技
+Dialogue: 0,0:11:41.49,0:11:43.17,overtake - text,,0,0,0,,同等條件？
+Dialogue: 0,0:11:43.57,0:11:47.31,overtake - text,,0,0,0,,指的是所有參賽賽車  要在同樣的條件下比賽
+Dialogue: 0,0:11:47.69,0:11:50.64,overtake - text,,0,0,0,,所以不能在車輛動力上花錢
+Dialogue: 0,0:11:50.81,0:11:52.82,overtake - text,,0,0,0,,但是每年1100…
+Dialogue: 0,0:11:53.44,0:11:58.23,overtake - text,,0,0,0,,聽說Belsorriso車隊應該是每年要花1800萬日元吧
+Dialogue: 0,0:11:58.52,0:12:00.78,overtake - text,,0,0,0,,在賽車比賽中這還算是便宜的了
+Dialogue: 0,0:12:00.90,0:12:02.07,overtake - text,,0,0,0,,便宜…
+Dialogue: 0,0:12:02.85,0:12:07.62,overtake - text,,0,0,0,,換句話說  也只能在F4賽車上投入這麼多錢了
+Dialogue: 0,0:12:07.87,0:12:10.76,overtake - text,,0,0,0,,但是  對於車手來說就不一樣了
+Dialogue: 0,0:12:12.20,0:12:15.38,overtake - text,,0,0,0,,在車手身上  無論花多少錢都沒關係
+Dialogue: 0,0:12:18.87,0:12:22.35,overtake - text,,0,0,0,,指的是上學嗎  駕駛學校
+Dialogue: 0,0:12:22.49,0:12:23.33,overtake - text,,0,0,0,,沒錯
+Dialogue: 0,0:12:23.72,0:12:27.49,overtake - text,,0,0,0,,效仿著名賽車廠商一樣  自己舉辦駕駛課程
+Dialogue: 0,0:12:26.87,0:12:29.06,overtake - text,,0,0,0,,{\an8}如果偏離行車線  導致出彎加速變慢
+Dialogue: 0,0:12:29.26,0:12:30.67,overtake - text,,0,0,0,,圈速就會變慢了
+Dialogue: 0,0:12:33.85,0:12:37.39,overtake - text,,0,0,0,,他們也兼任這個項目的測試車手
+Dialogue: 0,0:12:37.83,0:12:41.17,overtake - text,,0,0,0,,以我們承擔一部分資金花費為條件
+Dialogue: 0,0:12:41.28,0:12:43.05,overtake - text,,0,0,0,,在遴選中選擇了他們
+Dialogue: 0,0:12:45.55,0:12:47.45,overtake - text,,0,0,0,,贊助商備選？
+Dialogue: 0,0:12:47.68,0:12:52.31,overtake - text,,0,0,0,,熟人介紹了幾家願意成為贊助商的公司
+Dialogue: 0,0:12:53.43,0:12:56.43,overtake - text,,0,0,0,,現在還有這麼出手闊綽的公司啊
+Dialogue: 0,0:12:56.60,0:12:58.07,overtake - text,,0,0,0,,我回來了
+Dialogue: 0,0:12:58.80,0:12:59.83,overtake - text,,0,0,0,,歡迎回來
+Dialogue: 0,0:13:00.13,0:13:02.41,overtake - text,,0,0,0,,悠  歡迎回來
+Dialogue: 0,0:13:03.67,0:13:06.15,overtake - text,,0,0,0,,快看  是贊助商備選哦
+Dialogue: 0,0:13:06.27,0:13:07.39,overtake - text,,0,0,0,,備選？
+Dialogue: 0,0:13:07.85,0:13:11.88,overtake - text,,0,0,0,,他們好像都有興趣  但沒有當場決定
+Dialogue: 0,0:13:11.88,0:13:16.55,overtake - text,,0,0,0,,所以我就讓他們親眼看過悠駕駛的樣子之後再決定
+Dialogue: 0,0:13:42.36,0:13:46.83,overtake - text,,0,0,0,,十分抱歉  這次的提議就當沒有提出過吧
+Dialogue: 0,0:13:47.23,0:13:48.83,overtake - text,,0,0,0,,抱歉  我們也是
+Dialogue: 0,0:13:48.92,0:13:51.81,overtake - text,,0,0,0,,但是  這才看了一場
+Dialogue: 0,0:13:51.96,0:13:54.03,overtake - text,,0,0,0,,也不必僅憑這次就做出判斷…
+Dialogue: 0,0:13:54.22,0:13:58.21,overtake - text,,0,0,0,,要是成績躍升  或者更換車手的話
+Dialogue: 0,0:13:58.21,0:13:59.61,overtake - text,,0,0,0,,就請再聯繫我吧
+Dialogue: 0,0:14:04.59,0:14:07.47,overtake - text,,0,0,0,,抱歉  都怪我的展示太差了
+Dialogue: 0,0:14:08.73,0:14:12.13,overtake - text,,0,0,0,,沒事  做得不好的人不是你
+Dialogue: 0,0:14:27.85,0:14:29.29,overtake - text,,0,0,0,,我回來了
+Dialogue: 0,0:14:46.77,0:14:47.66,overtake - text,,0,0,0,,你好
+Dialogue: 0,0:14:49.10,0:14:50.66,overtake - text,,0,0,0,,最近的事情  真是抱歉
+Dialogue: 0,0:14:51.32,0:14:54.63,overtake - text,,0,0,0,,我一興奮起來就容易看不清周圍了
+Dialogue: 0,0:14:55.57,0:14:58.23,overtake - text,,0,0,0,,就像坐過山車一樣往上衝
+Dialogue: 0,0:14:58.85,0:15:01.36,overtake - text,,0,0,0,,小冴也罵了我好幾回了
+Dialogue: 0,0:15:01.73,0:15:04.23,overtake - text,,0,0,0,,小冴…是我前妻
+Dialogue: 0,0:15:07.12,0:15:09.03,overtake - text,,0,0,0,,光有衝勁和氣勢
+Dialogue: 0,0:15:10.55,0:15:12.41,overtake - text,,0,0,0,,真是說得沒錯
+Dialogue: 0,0:15:13.89,0:15:19.11,overtake - text,,0,0,0,,況且小牧Motors  沒有依靠別人也一路走過來了
+Dialogue: 0,0:15:19.96,0:15:26.63,overtake - text,,0,0,0,,這時突然跑來一個連賽車門道都不懂的外行人指手畫腳
+Dialogue: 0,0:15:28.47,0:15:31.91,overtake - text,,0,0,0,,只是光添麻煩罷了
+Dialogue: 0,0:15:32.98,0:15:33.97,overtake - text,,0,0,0,,十分抱歉
+Dialogue: 0,0:15:35.39,0:15:37.78,overtake - text,,0,0,0,,嗯  不…
+Dialogue: 0,0:15:38.56,0:15:39.67,overtake - text,,0,0,0,,所以…
+Dialogue: 0,0:15:43.59,0:15:45.37,overtake - text,,0,0,0,,我決定一步步慢慢來
+Dialogue: 0,0:15:47.93,0:15:50.40,overtake - text,,0,0,0,,畢竟我也做了很久自由職業了
+Dialogue: 0,0:15:50.63,0:15:56.30,overtake - text,,0,0,0,,雖然算不上大咖  但是工作上的人脈也算認識不少
+Dialogue: 0,0:15:57.16,0:15:58.13,overtake - text,,0,0,0,,所以啊
+Dialogue: 0,0:15:58.93,0:16:03.16,overtake - text,,0,0,0,,能理解F4  小牧Motors
+Dialogue: 0,0:16:04.13,0:16:07.03,overtake - text,,0,0,0,,以及你的閃光點的贊助
+Dialogue: 0,0:16:07.36,0:16:08.91,overtake - text,,0,0,0,,就讓我們接下來慢慢找吧
+Dialogue: 0,0:16:16.24,0:16:18.04,overtake - text,,0,0,0,,小牧  在吧
+Dialogue: 0,0:16:18.14,0:16:19.57,overtake - text,,0,0,0,,怎麼了
+Dialogue: 0,0:16:20.04,0:16:25.06,overtake - text,,0,0,0,,買了台新的輕卡  希望你幫忙在門板上印上名字
+Dialogue: 0,0:16:25.30,0:16:26.33,overtake - text,,0,0,0,,收到
+Dialogue: 0,0:16:26.52,0:16:29.11,overtake - text,,0,0,0,,還是印店名跟電話號碼就好了吧
+Dialogue: 0,0:16:29.25,0:16:31.90,overtake - text,,0,0,0,,對  我已經把車開來了
+Dialogue: 0,0:16:34.17,0:16:36.94,overtake - text,,0,0,0,,就…就是這個！
+Dialogue: 0,0:16:37.17,0:16:41.43,overtake - text,,0,0,0,,也就是說  以在F4賽車車身上印廣告的形式為條件
+Dialogue: 0,0:16:41.43,0:16:43.59,overtake - text,,0,0,0,,以此進行小額融資
+Dialogue: 0,0:16:45.09,0:16:47.25,overtake - text,,0,0,0,,這是很常見的方法
+Dialogue: 0,0:16:47.25,0:16:47.66,overtake - text,,0,0,0,,欸？
+Dialogue: 0,0:16:48.83,0:16:52.29,overtake - text,,0,0,0,,你看  在賽車和賽車服上都有吧
+Dialogue: 0,0:16:52.29,0:16:53.77,overtake - text,,0,0,0,,贊助商的logo
+Dialogue: 0,0:16:54.63,0:16:57.15,overtake - text,,0,0,0,,不是因為這樣看上去很時髦嗎
+Dialogue: 0,0:16:57.15,0:17:01.24,overtake - text,,0,0,0,,畢竟賽車上印的logo都很有設計感呢
+Dialogue: 0,0:17:01.33,0:17:04.00,overtake - text,,0,0,0,,雖然我們沒有贊助商  所以是一片空白
+Dialogue: 0,0:17:04.00,0:17:05.88,overtake - text,,0,0,0,,那就能隨便加了
+Dialogue: 0,0:17:06.00,0:17:07.86,overtake - text,,0,0,0,,隨便加…
+Dialogue: 0,0:17:07.93,0:17:08.89,overtake - text,,0,0,0,,總之！
+Dialogue: 0,0:17:09.82,0:17:11.71,overtake - text,,0,0,0,,我立馬去問問看
+Dialogue: 0,0:17:11.87,0:17:15.71,overtake - text,,0,0,0,,等下  你剛剛不還說慢慢找嗎
+Dialogue: 0,0:17:16.01,0:17:18.13,overtake - text,,0,0,0,,也說了過山車吧
+Dialogue: 0,0:17:20.64,0:17:22.33,overtake - text,,0,0,0,,那我們走吧
+Dialogue: 0,0:17:22.33,0:17:23.51,overtake - text,,0,0,0,,等下
+Dialogue: 0,0:17:27.49,0:17:28.81,overtake - text,,0,0,0,,打擾了
+Dialogue: 0,0:17:29.23,0:17:30.82,overtake - text,,0,0,0,,賽車比賽？
+Dialogue: 0,0:17:28.88,0:17:30.69,overtake advertisement,,0,0,0,,{\pos(1402,517.429)\frz341.1}賽車比賽 {\fs80\1c&H0F0F0F&}F4{\fs40\1c&H3D3D3D&} 四級方程式
+Dialogue: 0,0:17:28.88,0:17:30.69,overtake advertisement,,0,0,0,,{\frz338.3\pos(1308.143,585.857)}車隊
+Dialogue: 0,0:17:28.88,0:17:30.69,overtake advertisement,,0,0,0,,{\fs80\1c&H0F0F0F&\pos(1290.857,648.714)\frz339.2}小牧Motors
+Dialogue: 0,0:17:28.88,0:17:30.69,overtake advertisement,,0,0,0,,{\pos(1242.286,785.429)\frz335.6}要在賽車車身上\N張貼您店鋪的廣告嗎
+Dialogue: 0,0:17:30.95,0:17:33.09,overtake - text,,0,0,0,,沒錯  叫做F4
+Dialogue: 0,0:17:33.46,0:17:34.66,overtake - text,,0,0,0,,四級方程式
+Dialogue: 0,0:17:34.95,0:17:37.17,overtake - text,,0,0,0,,第一次聽說
+Dialogue: 0,0:17:37.31,0:17:42.47,overtake - text,,0,0,0,,這次就是邀請您在車身上張貼您店鋪的廣告
+Dialogue: 0,0:17:42.66,0:17:44.24,overtake - text,,0,0,0,,廣告啊
+Dialogue: 0,0:17:44.68,0:17:48.27,overtake - text,,0,0,0,,雖然也想放  但是我們生意也不好做啊
+Dialogue: 0,0:17:49.48,0:17:52.44,overtake - text,,0,0,0,,你是小牧那邊的孩子吧  是你在駕駛嗎
+Dialogue: 0,0:17:53.96,0:17:55.09,overtake - text,,0,0,0,,是的
+Dialogue: 0,0:17:55.36,0:17:56.17,overtake - text,,0,0,0,,那個…
+Dialogue: 0,0:17:57.41,0:17:58.97,overtake - text,,0,0,0,,還是這麼小的孩子啊
+Dialogue: 0,0:18:01.66,0:18:03.11,overtake - text,,0,0,0,,很帥氣啊
+Dialogue: 0,0:18:04.43,0:18:08.07,overtake - text,,0,0,0,,看到他駕駛的樣子  連我也變得著迷了
+Dialogue: 0,0:18:10.60,0:18:12.61,overtake - text,,0,0,0,,給你  要加油哦
+Dialogue: 0,0:18:13.85,0:18:14.56,overtake - text,,0,0,0,,好的
+Dialogue: 0,0:18:15.29,0:18:18.92,overtake - text,,0,0,0,,廣告的事  等孩子他媽回來我們再商量一下
+Dialogue: 0,0:18:19.19,0:18:20.34,overtake - text,,0,0,0,,十分感謝
+Dialogue: 0,0:18:21.22,0:18:22.53,overtake - text,,0,0,0,,十分感謝
+Dialogue: 0,0:18:24.25,0:18:27.20,overtake - text,,0,0,0,,好  感覺不錯繼續加油！
+Dialogue: 0,0:18:30.73,0:18:31.65,overtake - text,,0,0,0,,怎麼了？
+Dialogue: 0,0:18:32.34,0:18:33.57,overtake - text,,0,0,0,,沒什麼
+Dialogue: 0,0:18:35.43,0:18:36.73,overtake - text,,0,0,0,,是小牧家的呀
+Dialogue: 0,0:18:36.73,0:18:38.27,overtake - text,,0,0,0,,沒錯
+Dialogue: 0,0:18:38.40,0:18:40.63,overtake - text,,0,0,0,,您有看過賽車比賽嗎
+Dialogue: 0,0:18:40.63,0:18:42.51,overtake - text,,0,0,0,,十分讓人震撼的哦
+Dialogue: 0,0:18:42.65,0:18:44.29,overtake - text,,0,0,0,,真厲害
+Dialogue: 0,0:18:44.73,0:18:47.40,overtake - text,,0,0,0,,但是我們好像不太需要廣告…
+Dialogue: 0,0:18:47.99,0:18:51.54,overtake - text,,0,0,0,,對了  要不給你們這個吧
+Dialogue: 0,0:18:51.97,0:18:53.71,overtake - text,,0,0,0,,請您務必考慮
+Dialogue: 0,0:18:53.94,0:18:57.37,overtake - text,,0,0,0,,抱歉  我得問問社長
+Dialogue: 0,0:18:58.68,0:19:00.51,overtake - text,,0,0,0,,請您稍等一下
+Dialogue: 0,0:19:01.56,0:19:03.71,overtake - text,,0,0,0,,要小心駕駛哦
+Dialogue: 0,0:19:03.99,0:19:05.65,overtake - text,,0,0,0,,F4啊
+Dialogue: 0,0:19:05.83,0:19:08.13,overtake - text,,0,0,0,,方便的話  請務必來看一次
+Dialogue: 0,0:19:08.43,0:19:11.11,overtake - text,,0,0,0,,我們早上很早就營業了…
+Dialogue: 0,0:19:11.95,0:19:13.40,overtake - text,,0,0,0,,考慮一下吧
+Dialogue: 0,0:19:16.32,0:19:17.10,overtake - text,,0,0,0,,拿去
+Dialogue: 0,0:19:17.27,0:19:19.84,overtake - text,,0,0,0,,我們只能以這種方式支持了…
+Dialogue: 0,0:19:20.45,0:19:21.93,overtake - text,,0,0,0,,加油哦  小伙子
+Dialogue: 0,0:19:26.93,0:19:29.69,overtake - text,,0,0,0,,沒想到居然毫無收穫
+Dialogue: 0,0:19:30.65,0:19:33.18,overtake - text,,0,0,0,,這方面倒是收穫滿滿
+Dialogue: 0,0:19:34.39,0:19:37.25,overtake - text,,0,0,0,,也能當作車手的燃料啦
+Dialogue: 0,0:19:38.28,0:19:41.21,overtake - text,,0,0,0,,這麼一想  這也算是一種贊助？
+Dialogue: 0,0:19:41.78,0:19:45.25,overtake - text,,0,0,0,,但是  炸可樂餅又不能貼在賽車上
+Dialogue: 0,0:19:48.38,0:19:49.18,overtake - text,,0,0,0,,怎麼了
+Dialogue: 0,0:19:53.92,0:19:54.91,overtake - text,,0,0,0,,哥哥！
+Dialogue: 0,0:19:56.42,0:19:58.55,overtake - text,,0,0,0,,哥哥你是賽車手吧
+Dialogue: 0,0:19:58.70,0:20:00.63,overtake - text,,0,0,0,,剛才我在肉店看到了
+Dialogue: 0,0:20:02.35,0:20:05.39,overtake - text,,0,0,0,,你真厲害  就像賽車人一樣
+Dialogue: 0,0:20:05.70,0:20:07.24,overtake - text,,0,0,0,,你聽說過嗎  賽車人
+Dialogue: 0,0:20:07.47,0:20:09.79,overtake - text,,0,0,0,,又帥氣  速度又快
+Dialogue: 0,0:20:09.79,0:20:10.93,overtake - text,,0,0,0,,總之就是很帥
+Dialogue: 0,0:20:12.68,0:20:14.93,overtake - text,,0,0,0,,發車線就位
+Dialogue: 0,0:20:15.00,0:20:17.29,overtake - text,,0,0,0,,出發！賽車人
+Dialogue: 0,0:20:18.63,0:20:19.51,overtake - text,,0,0,0,,那個
+Dialogue: 0,0:20:20.37,0:20:22.87,overtake - text,,0,0,0,,厲害厲害  感覺很強呢
+Dialogue: 0,0:20:22.98,0:20:27.02,overtake - text,,0,0,0,,超強的  還要和邪惡的賽車手戰鬥
+Dialogue: 0,0:20:27.02,0:20:28.64,overtake - text,,0,0,0,,但每次都是第一名呢
+Dialogue: 0,0:20:28.85,0:20:31.45,overtake - text,,0,0,0,,哥哥  你有拿過第一名嗎
+Dialogue: 0,0:20:39.10,0:20:41.09,overtake - text,,0,0,0,,重要的是氣勢啊！
+Dialogue: 0,0:20:42.22,0:20:44.74,overtake - text,,0,0,0,,賽車人的師傅是這麼說的
+Dialogue: 0,0:20:44.74,0:20:49.29,overtake - text,,0,0,0,,什麼都要靠氣勢往前衝  一口氣衝刺
+Dialogue: 0,0:20:49.29,0:20:52.29,overtake - text,,0,0,0,,就能成為第一名！
+Dialogue: 0,0:20:54.23,0:20:56.24,overtake - text,,0,0,0,,對了  給你個好東西
+Dialogue: 0,0:20:57.21,0:20:59.33,overtake - text,,0,0,0,,絕對會讓你變得最強的東西
+Dialogue: 0,0:21:00.82,0:21:01.49,overtake - text,,0,0,0,,給
+Dialogue: 0,0:21:03.95,0:21:05.06,overtake - text,,0,0,0,,再見
+Dialogue: 0,0:21:11.43,0:21:13.61,overtake - text,,0,0,0,,這也是很重要的贊助呢
+Dialogue: 0,0:21:27.89,0:21:32.43,overtake hero,,0,0,0,,{\fad(1440,0)\pos(1163,685)}灼熱的氣勢 \N\h\h\h\h\h\h\h\h\h\h\h\h\h\h\h\h\h\h\h\h 是英雄的證明！
+Dialogue: 0,0:21:32.45,0:21:35.94,overtake - title,,0,0,0,,{\fsp10\pos(1406.857,613.429)}衝勁和{\1c&H000000&\3c&HFFFFFF&}氣勢
+Dialogue: 0,0:21:32.45,0:21:35.94,overtake - title,,0,0,0,,{\c&HFFFFFF&\fs45\pos(1428.428,897)}告訴你了，是過山車.
+Dialogue: 0,0:00:01.00,0:00:01.00,overtake - text,,0,0,0,,——ED——
+Comment: 0,0:22:09.69,0:22:11.69,overtake ed jp,,0,0,0,template line,{\fad(300,300)}
+Comment: 0,0:22:09.69,0:22:11.69,overtake ed cn,,0,0,0,template line,{\fad(300,300)}
+Comment: 0,0:21:36.61,0:21:40.87,overtake ed jp,,0,0,0,karaoke,シグナルが青に変わる
+Comment: 0,0:21:41.06,0:21:45.37,overtake ed jp,,0,0,0,karaoke,迷わずにアクセルを踏み込んで
+Comment: 0,0:21:45.48,0:21:49.66,overtake ed jp,,0,0,0,karaoke,駆け抜けた　孤独な夜
+Comment: 0,0:21:49.82,0:21:55.23,overtake ed jp,,0,0,0,karaoke,願いをのせた　一筋のShooting star light
+Comment: 0,0:21:55.23,0:22:00.21,overtake ed jp,,0,0,0,karaoke,追い掛ける　僕らの夢
+Comment: 0,0:22:02.66,0:22:11.14,overtake ed jp,,0,0,0,karaoke,ループする日常で知らずに擦り減らした心で
+Comment: 0,0:22:11.35,0:22:19.58,overtake ed jp,,0,0,0,karaoke,まだ信じたい　不可能を可能に　なりふり構わずに
+Comment: 0,0:22:19.58,0:22:28.32,overtake ed jp,,0,0,0,karaoke,平坦な道じゃない　後戻りをする事さえ容易じゃない
+Comment: 0,0:22:28.32,0:22:37.44,overtake ed jp,,0,0,0,karaoke,「頑張った分だけちゃんと報われるといいのにな」ってキミが笑う
+Comment: 0,0:22:37.80,0:22:42.13,overtake ed jp,,0,0,0,karaoke,疲れたらここへおいで
+Comment: 0,0:22:42.13,0:22:50.90,overtake ed jp,,0,0,0,karaoke,スペアのない心で彷徨った眼差しに光が射す
+Comment: 0,0:22:50.90,0:22:56.65,overtake ed jp,,0,0,0,karaoke,あの日の願いの行方を見届けよう
+Comment: 0,0:22:56.66,0:23:01.93,overtake ed jp,,0,0,0,karaoke,向こう見ずな僕らのまま
+Comment: 0,0:21:36.61,0:21:40.87,overtake ed cn,,0,0,0,karaoke,信號燈變為綠色
+Comment: 0,0:21:41.06,0:21:45.37,overtake ed cn,,0,0,0,karaoke,毫不猶豫地踩下踏板
+Comment: 0,0:21:45.48,0:21:49.66,overtake ed cn,,0,0,0,karaoke,穿過孤獨的夜晚
+Comment: 0,0:21:49.82,0:21:55.23,overtake ed cn,,0,0,0,karaoke,承載著夢想  一股勁地像光一樣往前衝
+Comment: 0,0:21:55.23,0:22:00.21,overtake ed cn,,0,0,0,karaoke,去追逐我們的夢想吧
+Comment: 0,0:22:02.66,0:22:11.14,overtake ed cn,,0,0,0,karaoke,被無盡循環的日常悄然磨損著的內心
+Comment: 0,0:22:11.35,0:22:19.58,overtake ed cn,,0,0,0,karaoke,不論如何仍然相信  能把不可能化為現實
+Comment: 0,0:22:19.58,0:22:28.32,overtake ed cn,,0,0,0,karaoke,這不是平坦的道路  無法輕易回頭
+Comment: 0,0:22:28.32,0:22:37.44,overtake ed cn,,0,0,0,karaoke,你笑著說道「希望付出的努力能得到回報」
+Comment: 0,0:22:37.80,0:22:42.13,overtake ed cn,,0,0,0,karaoke,如果累了就到這裡來吧
+Comment: 0,0:22:42.13,0:22:50.90,overtake ed cn,,0,0,0,karaoke,你的目光照亮了彷徨著的早已疲憊的內心
+Comment: 0,0:22:50.90,0:22:56.65,overtake ed cn,,0,0,0,karaoke,去見證那一天許下的願望抵達的地方吧
+Comment: 0,0:22:56.66,0:23:01.93,overtake ed cn,,0,0,0,karaoke,那將仍然是莽撞的我們
+Dialogue: 0,0:23:06.01,0:23:10.17,overtake - text,,0,0,0,,怎麼說呢  老師您的文章優美
+Dialogue: 0,0:23:10.17,0:23:12.58,overtake - text,,0,0,0,,簡直就是妙筆生花
+Dialogue: 0,0:23:14.05,0:23:15.22,overtake - text,,0,0,0,,沒錯沒錯
+Dialogue: 0,0:23:15.65,0:23:17.27,overtake - text,,0,0,0,,那就幫大忙了
+Dialogue: 0,0:23:17.27,0:23:20.44,overtake - text,,0,0,0,,那明天早上  我恭候您的稿件
+Dialogue: 0,0:23:21.19,0:23:22.74,overtake - text,,0,0,0,,好  再見
+Dialogue: 0,0:23:22.74,0:23:24.29,overtake - text,,0,0,0,,開心幸運掰比
+Dialogue: 0,0:23:26.57,0:23:31.65,overtake - text,,0,0,0,,人是挺好的  但總有一股揮之不去昭和味
+Dialogue: 0,0:23:38.07,0:23:39.61,overtake - text,,0,0,0,,真不錯啊
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(190,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(102.5,152.5,\1a&HFF\3a&H00\4a&H00)\t(302.5,402.5,\1a&H00\3a&Hff\bord0\4a&H00)}B
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(220,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(117.5,167.5,\1a&HFF\3a&H00\4a&H00)\t(317.5,417.5,\1a&H00\3a&Hff\bord0\4a&H00)}l
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(250,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(132.5,182.5,\1a&HFF\3a&H00\4a&H00)\t(332.5,432.5,\1a&H00\3a&Hff\bord0\4a&H00)}o
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(280,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(147.5,197.5,\1a&HFF\3a&H00\4a&H00)\t(347.5,447.5,\1a&H00\3a&Hff\bord0\4a&H00)}w
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(310,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(162.5,212.5,\1a&HFF\3a&H00\4a&H00)\t(362.5,462.5,\1a&H00\3a&Hff\bord0\4a&H00)}i
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(340,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(177.5,227.5,\1a&HFF\3a&H00\4a&H00)\t(377.5,477.5,\1a&H00\3a&Hff\bord0\4a&H00)}n
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(370,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(192.5,242.5,\1a&HFF\3a&H00\4a&H00)\t(392.5,492.5,\1a&H00\3a&Hff\bord0\4a&H00)}g
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(400,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(207.5,257.5,\1a&HFF\3a&H00\4a&H00)\t(407.5,507.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(430,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(222.5,272.5,\1a&HFF\3a&H00\4a&H00)\t(422.5,522.5,\1a&H00\3a&Hff\bord0\4a&H00)}i
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(460,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(237.5,287.5,\1a&HFF\3a&H00\4a&H00)\t(437.5,537.5,\1a&H00\3a&Hff\bord0\4a&H00)}n
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(490,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(252.5,302.5,\1a&HFF\3a&H00\4a&H00)\t(452.5,552.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(520,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(267.5,317.5,\1a&HFF\3a&H00\4a&H00)\t(467.5,567.5,\1a&H00\3a&Hff\bord0\4a&H00)}t
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(550,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(282.5,332.5,\1a&HFF\3a&H00\4a&H00)\t(482.5,582.5,\1a&H00\3a&Hff\bord0\4a&H00)}h
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(580,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(297.5,347.5,\1a&HFF\3a&H00\4a&H00)\t(497.5,597.5,\1a&H00\3a&Hff\bord0\4a&H00)}e
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(610,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(312.5,362.5,\1a&HFF\3a&H00\4a&H00)\t(512.5,612.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(640,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(327.5,377.5,\1a&HFF\3a&H00\4a&H00)\t(527.5,627.5,\1a&H00\3a&Hff\bord0\4a&H00)}w
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(670,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(342.5,392.5,\1a&HFF\3a&H00\4a&H00)\t(542.5,642.5,\1a&H00\3a&Hff\bord0\4a&H00)}i
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(700,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(357.5,407.5,\1a&HFF\3a&H00\4a&H00)\t(557.5,657.5,\1a&H00\3a&Hff\bord0\4a&H00)}n
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(730,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(372.5,422.5,\1a&HFF\3a&H00\4a&H00)\t(572.5,672.5,\1a&H00\3a&Hff\bord0\4a&H00)}d
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(770,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(397.5,447.5,\1a&HFF\3a&H00\4a&H00)\t(597.5,697.5,\1a&H00\3a&Hff\bord0\4a&H00)}…
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(412.5,462.5,\1a&HFF\3a&H00\4a&H00)\t(612.5,712.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(840,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(427.5,477.5,\1a&HFF\3a&H00\4a&H00)\t(627.5,727.5,\1a&H00\3a&Hff\bord0\4a&H00)}w
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(870,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}a
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(900,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(457.5,507.5,\1a&HFF\3a&H00\4a&H00)\t(657.5,757.5,\1a&H00\3a&Hff\bord0\4a&H00)}i
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(930,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(472.5,522.5,\1a&HFF\3a&H00\4a&H00)\t(672.5,772.5,\1a&H00\3a&Hff\bord0\4a&H00)}t
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(487.5,537.5,\1a&HFF\3a&H00\4a&H00)\t(687.5,787.5,\1a&H00\3a&Hff\bord0\4a&H00)}i
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(990,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(502.5,552.5,\1a&HFF\3a&H00\4a&H00)\t(702.5,802.5,\1a&H00\3a&Hff\bord0\4a&H00)}n
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1020,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}g
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1050,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(532.5,582.5,\1a&HFF\3a&H00\4a&H00)\t(732.5,832.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1080,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(547.5,597.5,\1a&HFF\3a&H00\4a&H00)\t(747.5,847.5,\1a&H00\3a&Hff\bord0\4a&H00)}f
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(562.5,612.5,\1a&HFF\3a&H00\4a&H00)\t(762.5,862.5,\1a&H00\3a&Hff\bord0\4a&H00)}o
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1140,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(577.5,627.5,\1a&HFF\3a&H00\4a&H00)\t(777.5,877.5,\1a&H00\3a&Hff\bord0\4a&H00)}r
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1170,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1200,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(607.5,657.5,\1a&HFF\3a&H00\4a&H00)\t(807.5,907.5,\1a&H00\3a&Hff\bord0\4a&H00)}t
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1230,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(622.5,672.5,\1a&HFF\3a&H00\4a&H00)\t(822.5,922.5,\1a&H00\3a&Hff\bord0\4a&H00)}h
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1260,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(637.5,687.5,\1a&HFF\3a&H00\4a&H00)\t(837.5,937.5,\1a&H00\3a&Hff\bord0\4a&H00)}e
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1290,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(652.5,702.5,\1a&HFF\3a&H00\4a&H00)\t(852.5,952.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1320,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(667.5,717.5,\1a&HFF\3a&H00\4a&H00)\t(867.5,967.5,\1a&H00\3a&Hff\bord0\4a&H00)}t
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1350,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(682.5,732.5,\1a&HFF\3a&H00\4a&H00)\t(882.5,982.5,\1a&H00\3a&Hff\bord0\4a&H00)}i
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1380,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(697.5,747.5,\1a&HFF\3a&H00\4a&H00)\t(897.5,997.5,\1a&H00\3a&Hff\bord0\4a&H00)}m
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1410,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(712.5,762.5,\1a&HFF\3a&H00\4a&H00)\t(912.5,1012.5,\1a&H00\3a&Hff\bord0\4a&H00)}e
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1440,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(727.5,777.5,\1a&HFF\3a&H00\4a&H00)\t(927.5,1027.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1470,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(742.5,792.5,\1a&HFF\3a&H00\4a&H00)\t(942.5,1042.5,\1a&H00\3a&Hff\bord0\4a&H00)}t
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1500,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(757.5,807.5,\1a&HFF\3a&H00\4a&H00)\t(957.5,1057.5,\1a&H00\3a&Hff\bord0\4a&H00)}o
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1530,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(772.5,822.5,\1a&HFF\3a&H00\4a&H00)\t(972.5,1072.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1560,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(787.5,837.5,\1a&HFF\3a&H00\4a&H00)\t(987.5,1087.5,\1a&H00\3a&Hff\bord0\4a&H00)}s
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1590,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(802.5,852.5,\1a&HFF\3a&H00\4a&H00)\t(1002.5,1102.5,\1a&H00\3a&Hff\bord0\4a&H00)}t
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1620,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(817.5,867.5,\1a&HFF\3a&H00\4a&H00)\t(1017.5,1117.5,\1a&H00\3a&Hff\bord0\4a&H00)}a
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1650,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(832.5,882.5,\1a&HFF\3a&H00\4a&H00)\t(1032.5,1132.5,\1a&H00\3a&Hff\bord0\4a&H00)}r
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1680,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(847.5,897.5,\1a&HFF\3a&H00\4a&H00)\t(1047.5,1147.5,\1a&H00\3a&Hff\bord0\4a&H00)}t
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op jp,,0,0,0,fx,{\pos(1720,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(872.5,922.5,\1a&HFF\3a&H00\4a&H00)\t(1072.5,1172.5,\1a&H00\3a&Hff\bord0\4a&H00)}…
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(610,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(317.5,367.5,\1a&HFF\3a&H00\4a&H00)\t(517.5,617.5,\1a&H00\3a&Hff\bord0\4a&H00)}急
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(660,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(342.5,392.5,\1a&HFF\3a&H00\4a&H00)\t(542.5,642.5,\1a&H00\3a&Hff\bord0\4a&H00)}な
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(710,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(367.5,417.5,\1a&HFF\3a&H00\4a&H00)\t(567.5,667.5,\1a&H00\3a&Hff\bord0\4a&H00)}雨
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(760,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(392.5,442.5,\1a&HFF\3a&H00\4a&H00)\t(592.5,692.5,\1a&H00\3a&Hff\bord0\4a&H00)}に
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(417.5,467.5,\1a&HFF\3a&H00\4a&H00)\t(617.5,717.5,\1a&H00\3a&Hff\bord0\4a&H00)}遭
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(860,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}っ
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(910,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(467.5,517.5,\1a&HFF\3a&H00\4a&H00)\t(667.5,767.5,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(492.5,542.5,\1a&HFF\3a&H00\4a&H00)\t(692.5,792.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(1010,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}水
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(1060,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(542.5,592.5,\1a&HFF\3a&H00\4a&H00)\t(742.5,842.5,\1a&H00\3a&Hff\bord0\4a&H00)}平
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(567.5,617.5,\1a&HFF\3a&H00\4a&H00)\t(767.5,867.5,\1a&H00\3a&Hff\bord0\4a&H00)}線
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(1160,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}は
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(1210,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(617.5,667.5,\1a&HFF\3a&H00\4a&H00)\t(817.5,917.5,\1a&H00\3a&Hff\bord0\4a&H00)}煙
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(1260,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(642.5,692.5,\1a&HFF\3a&H00\4a&H00)\t(842.5,942.5,\1a&H00\3a&Hff\bord0\4a&H00)}っ
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op jp,,0,0,0,fx,{\pos(1310,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(667.5,717.5,\1a&HFF\3a&H00\4a&H00)\t(867.5,967.5,\1a&H00\3a&Hff\bord0\4a&H00)}た
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(710,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(367.5,417.5,\1a&HFF\3a&H00\4a&H00)\t(567.5,667.5,\1a&H00\3a&Hff\bord0\4a&H00)}見
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(760,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(392.5,442.5,\1a&HFF\3a&H00\4a&H00)\t(592.5,692.5,\1a&H00\3a&Hff\bord0\4a&H00)}果
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(417.5,467.5,\1a&HFF\3a&H00\4a&H00)\t(617.5,717.5,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(860,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}ぬ
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(910,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(467.5,517.5,\1a&HFF\3a&H00\4a&H00)\t(667.5,767.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(492.5,542.5,\1a&HFF\3a&H00\4a&H00)\t(692.5,792.5,\1a&H00\3a&Hff\bord0\4a&H00)}夢
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(1010,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}の
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(1060,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(542.5,592.5,\1a&HFF\3a&H00\4a&H00)\t(742.5,842.5,\1a&H00\3a&Hff\bord0\4a&H00)}か
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(567.5,617.5,\1a&HFF\3a&H00\4a&H00)\t(767.5,867.5,\1a&H00\3a&Hff\bord0\4a&H00)}た
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(1160,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}ち
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op jp,,0,0,0,fx,{\pos(1210,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(617.5,667.5,\1a&HFF\3a&H00\4a&H00)\t(817.5,917.5,\1a&H00\3a&Hff\bord0\4a&H00)}も
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(560,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(292.5,342.5,\1a&HFF\3a&H00\4a&H00)\t(492.5,592.5,\1a&H00\3a&Hff\bord0\4a&H00)}欠
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(610,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(317.5,367.5,\1a&HFF\3a&H00\4a&H00)\t(517.5,617.5,\1a&H00\3a&Hff\bord0\4a&H00)}け
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(660,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(342.5,392.5,\1a&HFF\3a&H00\4a&H00)\t(542.5,642.5,\1a&H00\3a&Hff\bord0\4a&H00)}た
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(710,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(367.5,417.5,\1a&HFF\3a&H00\4a&H00)\t(567.5,667.5,\1a&H00\3a&Hff\bord0\4a&H00)}な
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(760,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(392.5,442.5,\1a&HFF\3a&H00\4a&H00)\t(592.5,692.5,\1a&H00\3a&Hff\bord0\4a&H00)}に
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(417.5,467.5,\1a&HFF\3a&H00\4a&H00)\t(617.5,717.5,\1a&H00\3a&Hff\bord0\4a&H00)}か
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(860,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}を
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(910,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(467.5,517.5,\1a&HFF\3a&H00\4a&H00)\t(667.5,767.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(492.5,542.5,\1a&HFF\3a&H00\4a&H00)\t(692.5,792.5,\1a&H00\3a&Hff\bord0\4a&H00)}そ
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1010,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}れ
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1060,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(542.5,592.5,\1a&HFF\3a&H00\4a&H00)\t(742.5,842.5,\1a&H00\3a&Hff\bord0\4a&H00)}で
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(567.5,617.5,\1a&HFF\3a&H00\4a&H00)\t(767.5,867.5,\1a&H00\3a&Hff\bord0\4a&H00)}も
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1160,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}抱
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1210,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(617.5,667.5,\1a&HFF\3a&H00\4a&H00)\t(817.5,917.5,\1a&H00\3a&Hff\bord0\4a&H00)}く
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1260,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(642.5,692.5,\1a&HFF\3a&H00\4a&H00)\t(842.5,942.5,\1a&H00\3a&Hff\bord0\4a&H00)}期
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1310,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(667.5,717.5,\1a&HFF\3a&H00\4a&H00)\t(867.5,967.5,\1a&H00\3a&Hff\bord0\4a&H00)}待
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op jp,,0,0,0,fx,{\pos(1360,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(692.5,742.5,\1a&HFF\3a&H00\4a&H00)\t(892.5,992.5,\1a&H00\3a&Hff\bord0\4a&H00)}を
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(710,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(367.5,417.5,\1a&HFF\3a&H00\4a&H00)\t(567.5,667.5,\1a&H00\3a&Hff\bord0\4a&H00)}こ
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(760,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(392.5,442.5,\1a&HFF\3a&H00\4a&H00)\t(592.5,692.5,\1a&H00\3a&Hff\bord0\4a&H00)}の
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(417.5,467.5,\1a&HFF\3a&H00\4a&H00)\t(617.5,717.5,\1a&H00\3a&Hff\bord0\4a&H00)}手
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(860,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}に
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(910,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(467.5,517.5,\1a&HFF\3a&H00\4a&H00)\t(667.5,767.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(492.5,542.5,\1a&HFF\3a&H00\4a&H00)\t(692.5,792.5,\1a&H00\3a&Hff\bord0\4a&H00)}離
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(1010,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}さ
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(1060,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(542.5,592.5,\1a&HFF\3a&H00\4a&H00)\t(742.5,842.5,\1a&H00\3a&Hff\bord0\4a&H00)}ぬ
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(567.5,617.5,\1a&HFF\3a&H00\4a&H00)\t(767.5,867.5,\1a&H00\3a&Hff\bord0\4a&H00)}ま
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(1160,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}ま
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op jp,,0,0,0,fx,{\pos(1210,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(617.5,667.5,\1a&HFF\3a&H00\4a&H00)\t(817.5,917.5,\1a&H00\3a&Hff\bord0\4a&H00)}で
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(485,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(255,305,\1a&HFF\3a&H00\4a&H00)\t(455,555,\1a&H00\3a&Hff\bord0\4a&H00)}通
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(535,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(280,330,\1a&HFF\3a&H00\4a&H00)\t(480,580,\1a&H00\3a&Hff\bord0\4a&H00)}り
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(585,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(305,355,\1a&HFF\3a&H00\4a&H00)\t(505,605,\1a&H00\3a&Hff\bord0\4a&H00)}過
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(635,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(330,380,\1a&HFF\3a&H00\4a&H00)\t(530,630,\1a&H00\3a&Hff\bord0\4a&H00)}ぎ
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(685,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(355,405,\1a&HFF\3a&H00\4a&H00)\t(555,655,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(735,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(380,430,\1a&HFF\3a&H00\4a&H00)\t(580,680,\1a&H00\3a&Hff\bord0\4a&H00)}く
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(785,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(405,455,\1a&HFF\3a&H00\4a&H00)\t(605,705,\1a&H00\3a&Hff\bord0\4a&H00)}曖
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(835,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(430,480,\1a&HFF\3a&H00\4a&H00)\t(630,730,\1a&H00\3a&Hff\bord0\4a&H00)}昧
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(885,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(455,505,\1a&HFF\3a&H00\4a&H00)\t(655,755,\1a&H00\3a&Hff\bord0\4a&H00)}な
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(935,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(480,530,\1a&HFF\3a&H00\4a&H00)\t(680,780,\1a&H00\3a&Hff\bord0\4a&H00)}毎
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(985,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(505,555,\1a&HFF\3a&H00\4a&H00)\t(705,805,\1a&H00\3a&Hff\bord0\4a&H00)}日
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1035,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(530,580,\1a&HFF\3a&H00\4a&H00)\t(730,830,\1a&H00\3a&Hff\bord0\4a&H00)}も
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1085,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(555,605,\1a&HFF\3a&H00\4a&H00)\t(755,855,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1135,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(580,630,\1a&HFF\3a&H00\4a&H00)\t(780,880,\1a&H00\3a&Hff\bord0\4a&H00)}か
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1185,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(605,655,\1a&HFF\3a&H00\4a&H00)\t(805,905,\1a&H00\3a&Hff\bord0\4a&H00)}け
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1235,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(630,680,\1a&HFF\3a&H00\4a&H00)\t(830,930,\1a&H00\3a&Hff\bord0\4a&H00)}が
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1285,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(655,705,\1a&HFF\3a&H00\4a&H00)\t(855,955,\1a&H00\3a&Hff\bord0\4a&H00)}え
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1335,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(680,730,\1a&HFF\3a&H00\4a&H00)\t(880,980,\1a&H00\3a&Hff\bord0\4a&H00)}の
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1385,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(705,755,\1a&HFF\3a&H00\4a&H00)\t(905,1005,\1a&H00\3a&Hff\bord0\4a&H00)}な
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op jp,,0,0,0,fx,{\pos(1435,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(730,780,\1a&HFF\3a&H00\4a&H00)\t(930,1030,\1a&H00\3a&Hff\bord0\4a&H00)}い
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(635,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(330,380,\1a&HFF\3a&H00\4a&H00)\t(530,630,\1a&H00\3a&Hff\bord0\4a&H00)}軌
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(685,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(355,405,\1a&HFF\3a&H00\4a&H00)\t(555,655,\1a&H00\3a&Hff\bord0\4a&H00)}跡
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(735,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(380,430,\1a&HFF\3a&H00\4a&H00)\t(580,680,\1a&H00\3a&Hff\bord0\4a&H00)}だ
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(785,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(405,455,\1a&HFF\3a&H00\4a&H00)\t(605,705,\1a&H00\3a&Hff\bord0\4a&H00)}っ
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(835,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(430,480,\1a&HFF\3a&H00\4a&H00)\t(630,730,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(885,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(455,505,\1a&HFF\3a&H00\4a&H00)\t(655,755,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(935,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(480,530,\1a&HFF\3a&H00\4a&H00)\t(680,780,\1a&H00\3a&Hff\bord0\4a&H00)}も
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(985,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(505,555,\1a&HFF\3a&H00\4a&H00)\t(705,805,\1a&H00\3a&Hff\bord0\4a&H00)}う
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(1035,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(530,580,\1a&HFF\3a&H00\4a&H00)\t(730,830,\1a&H00\3a&Hff\bord0\4a&H00)}知
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(1085,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(555,605,\1a&HFF\3a&H00\4a&H00)\t(755,855,\1a&H00\3a&Hff\bord0\4a&H00)}っ
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(1135,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(580,630,\1a&HFF\3a&H00\4a&H00)\t(780,880,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(1185,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(605,655,\1a&HFF\3a&H00\4a&H00)\t(805,905,\1a&H00\3a&Hff\bord0\4a&H00)}る
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(1235,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(630,680,\1a&HFF\3a&H00\4a&H00)\t(830,930,\1a&H00\3a&Hff\bord0\4a&H00)}か
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op jp,,0,0,0,fx,{\pos(1285,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(655,705,\1a&HFF\3a&H00\4a&H00)\t(855,955,\1a&H00\3a&Hff\bord0\4a&H00)}ら
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(485,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(255,305,\1a&HFF\3a&H00\4a&H00)\t(455,555,\1a&H00\3a&Hff\bord0\4a&H00)}待
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(535,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(280,330,\1a&HFF\3a&H00\4a&H00)\t(480,580,\1a&H00\3a&Hff\bord0\4a&H00)}ち
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(585,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(305,355,\1a&HFF\3a&H00\4a&H00)\t(505,605,\1a&H00\3a&Hff\bord0\4a&H00)}続
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(635,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(330,380,\1a&HFF\3a&H00\4a&H00)\t(530,630,\1a&H00\3a&Hff\bord0\4a&H00)}け
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(685,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(355,405,\1a&HFF\3a&H00\4a&H00)\t(555,655,\1a&H00\3a&Hff\bord0\4a&H00)}る
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(735,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(380,430,\1a&HFF\3a&H00\4a&H00)\t(580,680,\1a&H00\3a&Hff\bord0\4a&H00)}よ
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(785,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(405,455,\1a&HFF\3a&H00\4a&H00)\t(605,705,\1a&H00\3a&Hff\bord0\4a&H00)}り
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(835,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(430,480,\1a&HFF\3a&H00\4a&H00)\t(630,730,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(885,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(455,505,\1a&HFF\3a&H00\4a&H00)\t(655,755,\1a&H00\3a&Hff\bord0\4a&H00)}手
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(935,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(480,530,\1a&HFF\3a&H00\4a&H00)\t(680,780,\1a&H00\3a&Hff\bord0\4a&H00)}を
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(985,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(505,555,\1a&HFF\3a&H00\4a&H00)\t(705,805,\1a&H00\3a&Hff\bord0\4a&H00)}伸
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1035,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(530,580,\1a&HFF\3a&H00\4a&H00)\t(730,830,\1a&H00\3a&Hff\bord0\4a&H00)}ば
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1085,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(555,605,\1a&HFF\3a&H00\4a&H00)\t(755,855,\1a&H00\3a&Hff\bord0\4a&H00)}せ
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1135,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(580,630,\1a&HFF\3a&H00\4a&H00)\t(780,880,\1a&H00\3a&Hff\bord0\4a&H00)}ば
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1185,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(605,655,\1a&HFF\3a&H00\4a&H00)\t(805,905,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1235,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(630,680,\1a&HFF\3a&H00\4a&H00)\t(830,930,\1a&H00\3a&Hff\bord0\4a&H00)}そ
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1285,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(655,705,\1a&HFF\3a&H00\4a&H00)\t(855,955,\1a&H00\3a&Hff\bord0\4a&H00)}こ
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1335,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(680,730,\1a&HFF\3a&H00\4a&H00)\t(880,980,\1a&H00\3a&Hff\bord0\4a&H00)}に
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1385,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(705,755,\1a&HFF\3a&H00\4a&H00)\t(905,1005,\1a&H00\3a&Hff\bord0\4a&H00)}未
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op jp,,0,0,0,fx,{\pos(1435,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(730,780,\1a&HFF\3a&H00\4a&H00)\t(930,1030,\1a&H00\3a&Hff\bord0\4a&H00)}来
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(285,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(155,205,\1a&HFF\3a&H00\4a&H00)\t(355,455,\1a&H00\3a&Hff\bord0\4a&H00)}さ
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(335,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(180,230,\1a&HFF\3a&H00\4a&H00)\t(380,480,\1a&H00\3a&Hff\bord0\4a&H00)}あ
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(385,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(205,255,\1a&HFF\3a&H00\4a&H00)\t(405,505,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(435,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(230,280,\1a&HFF\3a&H00\4a&H00)\t(430,530,\1a&H00\3a&Hff\bord0\4a&H00)}ど
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(485,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(255,305,\1a&HFF\3a&H00\4a&H00)\t(455,555,\1a&H00\3a&Hff\bord0\4a&H00)}ん
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(535,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(280,330,\1a&HFF\3a&H00\4a&H00)\t(480,580,\1a&H00\3a&Hff\bord0\4a&H00)}な
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(585,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(305,355,\1a&HFF\3a&H00\4a&H00)\t(505,605,\1a&H00\3a&Hff\bord0\4a&H00)}今
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(635,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(330,380,\1a&HFF\3a&H00\4a&H00)\t(530,630,\1a&H00\3a&Hff\bord0\4a&H00)}日
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(685,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(355,405,\1a&HFF\3a&H00\4a&H00)\t(555,655,\1a&H00\3a&Hff\bord0\4a&H00)}に
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(735,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(380,430,\1a&HFF\3a&H00\4a&H00)\t(580,680,\1a&H00\3a&Hff\bord0\4a&H00)}さ
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(785,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(405,455,\1a&HFF\3a&H00\4a&H00)\t(605,705,\1a&H00\3a&Hff\bord0\4a&H00)}え
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(835,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(430,480,\1a&HFF\3a&H00\4a&H00)\t(630,730,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(885,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(455,505,\1a&HFF\3a&H00\4a&H00)\t(655,755,\1a&H00\3a&Hff\bord0\4a&H00)}明
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(935,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(480,530,\1a&HFF\3a&H00\4a&H00)\t(680,780,\1a&H00\3a&Hff\bord0\4a&H00)}日
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(985,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(505,555,\1a&HFF\3a&H00\4a&H00)\t(705,805,\1a&H00\3a&Hff\bord0\4a&H00)}が
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1035,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(530,580,\1a&HFF\3a&H00\4a&H00)\t(730,830,\1a&H00\3a&Hff\bord0\4a&H00)}来
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1085,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(555,605,\1a&HFF\3a&H00\4a&H00)\t(755,855,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1135,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(580,630,\1a&HFF\3a&H00\4a&H00)\t(780,880,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1185,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(605,655,\1a&HFF\3a&H00\4a&H00)\t(805,905,\1a&H00\3a&Hff\bord0\4a&H00)}僕
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1235,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(630,680,\1a&HFF\3a&H00\4a&H00)\t(830,930,\1a&H00\3a&Hff\bord0\4a&H00)}ら
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1285,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(655,705,\1a&HFF\3a&H00\4a&H00)\t(855,955,\1a&H00\3a&Hff\bord0\4a&H00)}進
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1335,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(680,730,\1a&HFF\3a&H00\4a&H00)\t(880,980,\1a&H00\3a&Hff\bord0\4a&H00)}ん
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1385,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(705,755,\1a&HFF\3a&H00\4a&H00)\t(905,1005,\1a&H00\3a&Hff\bord0\4a&H00)}で
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1435,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(730,780,\1a&HFF\3a&H00\4a&H00)\t(930,1030,\1a&H00\3a&Hff\bord0\4a&H00)}き
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1485,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(755,805,\1a&HFF\3a&H00\4a&H00)\t(955,1055,\1a&H00\3a&Hff\bord0\4a&H00)}た
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1535,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(780,830,\1a&HFF\3a&H00\4a&H00)\t(980,1080,\1a&H00\3a&Hff\bord0\4a&H00)}だ
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1585,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(805,855,\1a&HFF\3a&H00\4a&H00)\t(1005,1105,\1a&H00\3a&Hff\bord0\4a&H00)}ろ
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op jp,,0,0,0,fx,{\pos(1635,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(830,880,\1a&HFF\3a&H00\4a&H00)\t(1030,1130,\1a&H00\3a&Hff\bord0\4a&H00)}う
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(360,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(192.5,242.5,\1a&HFF\3a&H00\4a&H00)\t(392.5,492.5,\1a&H00\3a&Hff\bord0\4a&H00)}曇
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(410,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(217.5,267.5,\1a&HFF\3a&H00\4a&H00)\t(417.5,517.5,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(460,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(242.5,292.5,\1a&HFF\3a&H00\4a&H00)\t(442.5,542.5,\1a&H00\3a&Hff\bord0\4a&H00)}の
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(510,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(267.5,317.5,\1a&HFF\3a&H00\4a&H00)\t(467.5,567.5,\1a&H00\3a&Hff\bord0\4a&H00)}日
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(560,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(292.5,342.5,\1a&HFF\3a&H00\4a&H00)\t(492.5,592.5,\1a&H00\3a&Hff\bord0\4a&H00)}々
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(610,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(317.5,367.5,\1a&HFF\3a&H00\4a&H00)\t(517.5,617.5,\1a&H00\3a&Hff\bord0\4a&H00)}だ
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(660,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(342.5,392.5,\1a&HFF\3a&H00\4a&H00)\t(542.5,642.5,\1a&H00\3a&Hff\bord0\4a&H00)}っ
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(710,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(367.5,417.5,\1a&HFF\3a&H00\4a&H00)\t(567.5,667.5,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(760,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(392.5,442.5,\1a&HFF\3a&H00\4a&H00)\t(592.5,692.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(417.5,467.5,\1a&HFF\3a&H00\4a&H00)\t(617.5,717.5,\1a&H00\3a&Hff\bord0\4a&H00)}終
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(860,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}わ
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(910,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(467.5,517.5,\1a&HFF\3a&H00\4a&H00)\t(667.5,767.5,\1a&H00\3a&Hff\bord0\4a&H00)}り
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(492.5,542.5,\1a&HFF\3a&H00\4a&H00)\t(692.5,792.5,\1a&H00\3a&Hff\bord0\4a&H00)}が
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1010,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}来
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1060,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(542.5,592.5,\1a&HFF\3a&H00\4a&H00)\t(742.5,842.5,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(567.5,617.5,\1a&HFF\3a&H00\4a&H00)\t(767.5,867.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1160,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}青
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1210,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(617.5,667.5,\1a&HFF\3a&H00\4a&H00)\t(817.5,917.5,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1260,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(642.5,692.5,\1a&HFF\3a&H00\4a&H00)\t(842.5,942.5,\1a&H00\3a&Hff\bord0\4a&H00)}が
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1310,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(667.5,717.5,\1a&HFF\3a&H00\4a&H00)\t(867.5,967.5,\1a&H00\3a&Hff\bord0\4a&H00)}の
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1360,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(692.5,742.5,\1a&HFF\3a&H00\4a&H00)\t(892.5,992.5,\1a&H00\3a&Hff\bord0\4a&H00)}ぞ
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1410,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(717.5,767.5,\1a&HFF\3a&H00\4a&H00)\t(917.5,1017.5,\1a&H00\3a&Hff\bord0\4a&H00)}く
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1460,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(742.5,792.5,\1a&HFF\3a&H00\4a&H00)\t(942.5,1042.5,\1a&H00\3a&Hff\bord0\4a&H00)}だ
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1510,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(767.5,817.5,\1a&HFF\3a&H00\4a&H00)\t(967.5,1067.5,\1a&H00\3a&Hff\bord0\4a&H00)}ろ
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op jp,,0,0,0,fx,{\pos(1560,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(792.5,842.5,\1a&HFF\3a&H00\4a&H00)\t(992.5,1092.5,\1a&H00\3a&Hff\bord0\4a&H00)}う
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(660,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(342.5,392.5,\1a&HFF\3a&H00\4a&H00)\t(542.5,642.5,\1a&H00\3a&Hff\bord0\4a&H00)}声
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(710,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(367.5,417.5,\1a&HFF\3a&H00\4a&H00)\t(567.5,667.5,\1a&H00\3a&Hff\bord0\4a&H00)}な
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(760,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(392.5,442.5,\1a&HFF\3a&H00\4a&H00)\t(592.5,692.5,\1a&H00\3a&Hff\bord0\4a&H00)}き
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(417.5,467.5,\1a&HFF\3a&H00\4a&H00)\t(617.5,717.5,\1a&H00\3a&Hff\bord0\4a&H00)}声
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(860,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}が
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(910,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(467.5,517.5,\1a&HFF\3a&H00\4a&H00)\t(667.5,767.5,\1a&H00\3a&Hff\bord0\4a&H00)}今
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(492.5,542.5,\1a&HFF\3a&H00\4a&H00)\t(692.5,792.5,\1a&H00\3a&Hff\bord0\4a&H00)}も
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(1010,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}聞
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(1060,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(542.5,592.5,\1a&HFF\3a&H00\4a&H00)\t(742.5,842.5,\1a&H00\3a&Hff\bord0\4a&H00)}こ
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(567.5,617.5,\1a&HFF\3a&H00\4a&H00)\t(767.5,867.5,\1a&H00\3a&Hff\bord0\4a&H00)}え
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(1160,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}て
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(1210,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(617.5,667.5,\1a&HFF\3a&H00\4a&H00)\t(817.5,917.5,\1a&H00\3a&Hff\bord0\4a&H00)}い
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op jp,,0,0,0,fx,{\pos(1260,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(642.5,692.5,\1a&HFF\3a&H00\4a&H00)\t(842.5,942.5,\1a&H00\3a&Hff\bord0\4a&H00)}る
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(710,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(367.5,417.5,\1a&HFF\3a&H00\4a&H00)\t(567.5,667.5,\1a&H00\3a&Hff\bord0\4a&H00)}名
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(760,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(392.5,442.5,\1a&HFF\3a&H00\4a&H00)\t(592.5,692.5,\1a&H00\3a&Hff\bord0\4a&H00)}も
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(810,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(417.5,467.5,\1a&HFF\3a&H00\4a&H00)\t(617.5,717.5,\1a&H00\3a&Hff\bord0\4a&H00)}な
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(860,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(442.5,492.5,\1a&HFF\3a&H00\4a&H00)\t(642.5,742.5,\1a&H00\3a&Hff\bord0\4a&H00)}き
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(910,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(467.5,517.5,\1a&HFF\3a&H00\4a&H00)\t(667.5,767.5,\1a&H00\3a&Hff\bord0\4a&H00)}風
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(960,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(492.5,542.5,\1a&HFF\3a&H00\4a&H00)\t(692.5,792.5,\1a&H00\3a&Hff\bord0\4a&H00)}が
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(1010,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(517.5,567.5,\1a&HFF\3a&H00\4a&H00)\t(717.5,817.5,\1a&H00\3a&Hff\bord0\4a&H00)}髪
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(1060,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(542.5,592.5,\1a&HFF\3a&H00\4a&H00)\t(742.5,842.5,\1a&H00\3a&Hff\bord0\4a&H00)}を
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(1110,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(567.5,617.5,\1a&HFF\3a&H00\4a&H00)\t(767.5,867.5,\1a&H00\3a&Hff\bord0\4a&H00)}揺
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(1160,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}ら
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op jp,,0,0,0,fx,{\pos(1210,30)\an5\1a&Hff\3a&HFF\4a&HFF\t(617.5,667.5,\1a&HFF\3a&H00\4a&H00)\t(817.5,917.5,\1a&H00\3a&Hff\bord0\4a&H00)}す
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(484,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(255.5,305.5,\1a&HFF\3a&H00\4a&H00)\t(455.5,555.5,\1a&H00\3a&Hff\bord0\4a&H00)}無
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(537,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(281.5,331.5,\1a&HFF\3a&H00\4a&H00)\t(481.5,581.5,\1a&H00\3a&Hff\bord0\4a&H00)}論
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(591,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(309,359,\1a&HFF\3a&H00\4a&H00)\t(509,609,\1a&H00\3a&Hff\bord0\4a&H00)}今
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(644,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(335.5,385.5,\1a&HFF\3a&H00\4a&H00)\t(535.5,635.5,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(697,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(362,412,\1a&HFF\3a&H00\4a&H00)\t(562,662,\1a&H00\3a&Hff\bord0\4a&H00)}如
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(750,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(388,438,\1a&HFF\3a&H00\4a&H00)\t(588,688,\1a&H00\3a&Hff\bord0\4a&H00)}何
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(783,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(394.5,444.5,\1a&HFF\3a&H00\4a&H00)\t(594.5,694.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(794,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(399.5,449.5,\1a&HFF\3a&H00\4a&H00)\t(599.5,699.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(827,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(427,477,\1a&HFF\3a&H00\4a&H00)\t(627,727,\1a&H00\3a&Hff\bord0\4a&H00)}明
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(880,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(453,503,\1a&HFF\3a&H00\4a&H00)\t(653,753,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(933,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(479.5,529.5,\1a&HFF\3a&H00\4a&H00)\t(679.5,779.5,\1a&H00\3a&Hff\bord0\4a&H00)}依
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(987,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(507,557,\1a&HFF\3a&H00\4a&H00)\t(707,807,\1a&H00\3a&Hff\bord0\4a&H00)}舊
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1040,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(533.5,583.5,\1a&HFF\3a&H00\4a&H00)\t(733.5,833.5,\1a&H00\3a&Hff\bord0\4a&H00)}到
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1093,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(560,610,\1a&HFF\3a&H00\4a&H00)\t(760,860,\1a&H00\3a&Hff\bord0\4a&H00)}來
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1126,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(566,616,\1a&HFF\3a&H00\4a&H00)\t(766,866,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1137,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(571.5,621.5,\1a&HFF\3a&H00\4a&H00)\t(771.5,871.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1170,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(598.5,648.5,\1a&HFF\3a&H00\4a&H00)\t(798.5,898.5,\1a&H00\3a&Hff\bord0\4a&H00)}我
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1223,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(625,675,\1a&HFF\3a&H00\4a&H00)\t(825,925,\1a&H00\3a&Hff\bord0\4a&H00)}們
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1276,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(651,701,\1a&HFF\3a&H00\4a&H00)\t(851,951,\1a&H00\3a&Hff\bord0\4a&H00)}仍
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1329,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(677.5,727.5,\1a&HFF\3a&H00\4a&H00)\t(877.5,977.5,\1a&H00\3a&Hff\bord0\4a&H00)}會
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1383,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(705,755,\1a&HFF\3a&H00\4a&H00)\t(905,1005,\1a&H00\3a&Hff\bord0\4a&H00)}前
+Dialogue: 0,0:01:35.16,0:01:42.07,overtake op cn,,0,0,0,fx,{\pos(1436,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(731.5,781.5,\1a&HFF\3a&H00\4a&H00)\t(931.5,1031.5,\1a&H00\3a&Hff\bord0\4a&H00)}進
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(602,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(314,364,\1a&HFF\3a&H00\4a&H00)\t(514,614,\1a&H00\3a&Hff\bord0\4a&H00)}突
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(655,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(340.5,390.5,\1a&HFF\3a&H00\4a&H00)\t(540.5,640.5,\1a&H00\3a&Hff\bord0\4a&H00)}然
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(709,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(368,418,\1a&HFF\3a&H00\4a&H00)\t(568,668,\1a&H00\3a&Hff\bord0\4a&H00)}降
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(762,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(394.5,444.5,\1a&HFF\3a&H00\4a&H00)\t(594.5,694.5,\1a&H00\3a&Hff\bord0\4a&H00)}下
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(815,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(420.5,470.5,\1a&HFF\3a&H00\4a&H00)\t(620.5,720.5,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(868,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(447,497,\1a&HFF\3a&H00\4a&H00)\t(647,747,\1a&H00\3a&Hff\bord0\4a&H00)}雨
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(901,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(453.5,503.5,\1a&HFF\3a&H00\4a&H00)\t(653.5,753.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(913,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(459.5,509.5,\1a&HFF\3a&H00\4a&H00)\t(659.5,759.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(945,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(486,536,\1a&HFF\3a&H00\4a&H00)\t(686,786,\1a&H00\3a&Hff\bord0\4a&H00)}讓
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(998,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(512,562,\1a&HFF\3a&H00\4a&H00)\t(712,812,\1a&H00\3a&Hff\bord0\4a&H00)}地
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(1052,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(539.5,589.5,\1a&HFF\3a&H00\4a&H00)\t(739.5,839.5,\1a&H00\3a&Hff\bord0\4a&H00)}平
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(1105,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(566,616,\1a&HFF\3a&H00\4a&H00)\t(766,866,\1a&H00\3a&Hff\bord0\4a&H00)}線
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(1158,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}模
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(1211,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(618.5,668.5,\1a&HFF\3a&H00\4a&H00)\t(818.5,918.5,\1a&H00\3a&Hff\bord0\4a&H00)}糊
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(1265,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(646,696,\1a&HFF\3a&H00\4a&H00)\t(846,946,\1a&H00\3a&Hff\bord0\4a&H00)}不
+Dialogue: 0,0:01:41.72,0:01:48.66,overtake op cn,,0,0,0,fx,{\pos(1318,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(672.5,722.5,\1a&HFF\3a&H00\4a&H00)\t(872.5,972.5,\1a&H00\3a&Hff\bord0\4a&H00)}清
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(641,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(334,384,\1a&HFF\3a&H00\4a&H00)\t(534,634,\1a&H00\3a&Hff\bord0\4a&H00)}一
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(694,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(360.5,410.5,\1a&HFF\3a&H00\4a&H00)\t(560.5,660.5,\1a&H00\3a&Hff\bord0\4a&H00)}併
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(747,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(387,437,\1a&HFF\3a&H00\4a&H00)\t(587,687,\1a&H00\3a&Hff\bord0\4a&H00)}模
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(800,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(413,463,\1a&HFF\3a&H00\4a&H00)\t(613,713,\1a&H00\3a&Hff\bord0\4a&H00)}糊
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(854,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(440.5,490.5,\1a&HFF\3a&H00\4a&H00)\t(640.5,740.5,\1a&H00\3a&Hff\bord0\4a&H00)}了
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(907,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(467,517,\1a&HFF\3a&H00\4a&H00)\t(667,767,\1a&H00\3a&Hff\bord0\4a&H00)}那
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(960,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(493.5,543.5,\1a&HFF\3a&H00\4a&H00)\t(693.5,793.5,\1a&H00\3a&Hff\bord0\4a&H00)}未
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(1013,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(519.5,569.5,\1a&HFF\3a&H00\4a&H00)\t(719.5,819.5,\1a&H00\3a&Hff\bord0\4a&H00)}曾
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(1066,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(546,596,\1a&HFF\3a&H00\4a&H00)\t(746,846,\1a&H00\3a&Hff\bord0\4a&H00)}實
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(1120,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(573.5,623.5,\1a&HFF\3a&H00\4a&H00)\t(773.5,873.5,\1a&H00\3a&Hff\bord0\4a&H00)}現
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(1173,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(600,650,\1a&HFF\3a&H00\4a&H00)\t(800,900,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(1226,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(626,676,\1a&HFF\3a&H00\4a&H00)\t(826,926,\1a&H00\3a&Hff\bord0\4a&H00)}夢
+Dialogue: 0,0:01:48.51,0:01:55.21,overtake op cn,,0,0,0,fx,{\pos(1279,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(652.5,702.5,\1a&HFF\3a&H00\4a&H00)\t(852.5,952.5,\1a&H00\3a&Hff\bord0\4a&H00)}想
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(576,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(301.5,351.5,\1a&HFF\3a&H00\4a&H00)\t(501.5,601.5,\1a&H00\3a&Hff\bord0\4a&H00)}即
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(629,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(328,378,\1a&HFF\3a&H00\4a&H00)\t(528,628,\1a&H00\3a&Hff\bord0\4a&H00)}便
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(682,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(354.5,404.5,\1a&HFF\3a&H00\4a&H00)\t(554.5,654.5,\1a&H00\3a&Hff\bord0\4a&H00)}缺
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(735,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(380.5,430.5,\1a&HFF\3a&H00\4a&H00)\t(580.5,680.5,\1a&H00\3a&Hff\bord0\4a&H00)}少
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(789,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(408,458,\1a&HFF\3a&H00\4a&H00)\t(608,708,\1a&H00\3a&Hff\bord0\4a&H00)}了
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(842,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(434.5,484.5,\1a&HFF\3a&H00\4a&H00)\t(634.5,734.5,\1a&H00\3a&Hff\bord0\4a&H00)}什
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(895,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(461,511,\1a&HFF\3a&H00\4a&H00)\t(661,761,\1a&H00\3a&Hff\bord0\4a&H00)}麼
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(928,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(467,517,\1a&HFF\3a&H00\4a&H00)\t(667,767,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(939,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(472.5,522.5,\1a&HFF\3a&H00\4a&H00)\t(672.5,772.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(972,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(499.5,549.5,\1a&HFF\3a&H00\4a&H00)\t(699.5,799.5,\1a&H00\3a&Hff\bord0\4a&H00)}但
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(1025,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(526,576,\1a&HFF\3a&H00\4a&H00)\t(726,826,\1a&H00\3a&Hff\bord0\4a&H00)}也
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(1078,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(552,602,\1a&HFF\3a&H00\4a&H00)\t(752,852,\1a&H00\3a&Hff\bord0\4a&H00)}依
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(1131,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(578.5,628.5,\1a&HFF\3a&H00\4a&H00)\t(778.5,878.5,\1a&H00\3a&Hff\bord0\4a&H00)}然
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(1185,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(606,656,\1a&HFF\3a&H00\4a&H00)\t(806,906,\1a&H00\3a&Hff\bord0\4a&H00)}抱
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(1238,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(632.5,682.5,\1a&HFF\3a&H00\4a&H00)\t(832.5,932.5,\1a&H00\3a&Hff\bord0\4a&H00)}有
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(1291,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(658.5,708.5,\1a&HFF\3a&H00\4a&H00)\t(858.5,958.5,\1a&H00\3a&Hff\bord0\4a&H00)}期
+Dialogue: 0,0:01:56.64,0:02:03.68,overtake op cn,,0,0,0,fx,{\pos(1344,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(685,735,\1a&HFF\3a&H00\4a&H00)\t(885,985,\1a&H00\3a&Hff\bord0\4a&H00)}待
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(641,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(334,384,\1a&HFF\3a&H00\4a&H00)\t(534,634,\1a&H00\3a&Hff\bord0\4a&H00)}緊
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(694,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(360.5,410.5,\1a&HFF\3a&H00\4a&H00)\t(560.5,660.5,\1a&H00\3a&Hff\bord0\4a&H00)}緊
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(747,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(387,437,\1a&HFF\3a&H00\4a&H00)\t(587,687,\1a&H00\3a&Hff\bord0\4a&H00)}抓
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(800,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(413,463,\1a&HFF\3a&H00\4a&H00)\t(613,713,\1a&H00\3a&Hff\bord0\4a&H00)}著
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(854,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(440.5,490.5,\1a&HFF\3a&H00\4a&H00)\t(640.5,740.5,\1a&H00\3a&Hff\bord0\4a&H00)}這
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(907,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(467,517,\1a&HFF\3a&H00\4a&H00)\t(667,767,\1a&H00\3a&Hff\bord0\4a&H00)}雙
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(960,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(493.5,543.5,\1a&HFF\3a&H00\4a&H00)\t(693.5,793.5,\1a&H00\3a&Hff\bord0\4a&H00)}手
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(1013,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(519.5,569.5,\1a&HFF\3a&H00\4a&H00)\t(719.5,819.5,\1a&H00\3a&Hff\bord0\4a&H00)}一
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(1066,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(546,596,\1a&HFF\3a&H00\4a&H00)\t(746,846,\1a&H00\3a&Hff\bord0\4a&H00)}刻
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(1120,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(573.5,623.5,\1a&HFF\3a&H00\4a&H00)\t(773.5,873.5,\1a&H00\3a&Hff\bord0\4a&H00)}不
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(1173,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(600,650,\1a&HFF\3a&H00\4a&H00)\t(800,900,\1a&H00\3a&Hff\bord0\4a&H00)}曾
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(1226,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(626,676,\1a&HFF\3a&H00\4a&H00)\t(826,926,\1a&H00\3a&Hff\bord0\4a&H00)}放
+Dialogue: 0,0:02:03.49,0:02:09.75,overtake op cn,,0,0,0,fx,{\pos(1279,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(652.5,702.5,\1a&HFF\3a&H00\4a&H00)\t(852.5,952.5,\1a&H00\3a&Hff\bord0\4a&H00)}開
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(549,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(288,338,\1a&HFF\3a&H00\4a&H00)\t(488,588,\1a&H00\3a&Hff\bord0\4a&H00)}共
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(602,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(314,364,\1a&HFF\3a&H00\4a&H00)\t(514,614,\1a&H00\3a&Hff\bord0\4a&H00)}同
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(655,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(340.5,390.5,\1a&HFF\3a&H00\4a&H00)\t(540.5,640.5,\1a&H00\3a&Hff\bord0\4a&H00)}度
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(709,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(368,418,\1a&HFF\3a&H00\4a&H00)\t(568,668,\1a&H00\3a&Hff\bord0\4a&H00)}過
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(762,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(394.5,444.5,\1a&HFF\3a&H00\4a&H00)\t(594.5,694.5,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(815,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(420.5,470.5,\1a&HFF\3a&H00\4a&H00)\t(620.5,720.5,\1a&H00\3a&Hff\bord0\4a&H00)}曖
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(868,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(447,497,\1a&HFF\3a&H00\4a&H00)\t(647,747,\1a&H00\3a&Hff\bord0\4a&H00)}昧
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(922,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(474.5,524.5,\1a&HFF\3a&H00\4a&H00)\t(674.5,774.5,\1a&H00\3a&Hff\bord0\4a&H00)}每
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(975,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(501,551,\1a&HFF\3a&H00\4a&H00)\t(701,801,\1a&H00\3a&Hff\bord0\4a&H00)}一
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1028,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(527,577,\1a&HFF\3a&H00\4a&H00)\t(727,827,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1061,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(533.5,583.5,\1a&HFF\3a&H00\4a&H00)\t(733.5,833.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1072,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(539,589,\1a&HFF\3a&H00\4a&H00)\t(739,839,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1105,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(566,616,\1a&HFF\3a&H00\4a&H00)\t(766,866,\1a&H00\3a&Hff\bord0\4a&H00)}同
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1158,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}樣
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1211,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(618.5,668.5,\1a&HFF\3a&H00\4a&H00)\t(818.5,918.5,\1a&H00\3a&Hff\bord0\4a&H00)}不
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1265,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(646,696,\1a&HFF\3a&H00\4a&H00)\t(846,946,\1a&H00\3a&Hff\bord0\4a&H00)}可
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1318,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(672.5,722.5,\1a&HFF\3a&H00\4a&H00)\t(872.5,972.5,\1a&H00\3a&Hff\bord0\4a&H00)}缺
+Dialogue: 0,0:02:09.79,0:02:16.64,overtake op cn,,0,0,0,fx,{\pos(1371,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(699,749,\1a&HFF\3a&H00\4a&H00)\t(899,999,\1a&H00\3a&Hff\bord0\4a&H00)}少
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(682,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(354.5,404.5,\1a&HFF\3a&H00\4a&H00)\t(554.5,654.5,\1a&H00\3a&Hff\bord0\4a&H00)}往
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(735,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(380.5,430.5,\1a&HFF\3a&H00\4a&H00)\t(580.5,680.5,\1a&H00\3a&Hff\bord0\4a&H00)}後
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(789,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(408,458,\1a&HFF\3a&H00\4a&H00)\t(608,708,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(842,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(434.5,484.5,\1a&HFF\3a&H00\4a&H00)\t(634.5,734.5,\1a&H00\3a&Hff\bord0\4a&H00)}軌
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(895,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(461,511,\1a&HFF\3a&H00\4a&H00)\t(661,761,\1a&H00\3a&Hff\bord0\4a&H00)}跡
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(928,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(467,517,\1a&HFF\3a&H00\4a&H00)\t(667,767,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(939,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(472.5,522.5,\1a&HFF\3a&H00\4a&H00)\t(672.5,772.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(972,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(499.5,549.5,\1a&HFF\3a&H00\4a&H00)\t(699.5,799.5,\1a&H00\3a&Hff\bord0\4a&H00)}其
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(1025,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(526,576,\1a&HFF\3a&H00\4a&H00)\t(726,826,\1a&H00\3a&Hff\bord0\4a&H00)}實
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(1078,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(552,602,\1a&HFF\3a&H00\4a&H00)\t(752,852,\1a&H00\3a&Hff\bord0\4a&H00)}早
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(1131,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(578.5,628.5,\1a&HFF\3a&H00\4a&H00)\t(778.5,878.5,\1a&H00\3a&Hff\bord0\4a&H00)}已
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(1185,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(606,656,\1a&HFF\3a&H00\4a&H00)\t(806,906,\1a&H00\3a&Hff\bord0\4a&H00)}知
+Dialogue: 0,0:02:16.38,0:02:19.59,overtake op cn,,0,0,0,fx,{\pos(1238,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(632.5,682.5,\1a&HFF\3a&H00\4a&H00)\t(832.5,932.5,\1a&H00\3a&Hff\bord0\4a&H00)}曉
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(576,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(301.5,351.5,\1a&HFF\3a&H00\4a&H00)\t(501.5,601.5,\1a&H00\3a&Hff\bord0\4a&H00)}與
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(629,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(328,378,\1a&HFF\3a&H00\4a&H00)\t(528,628,\1a&H00\3a&Hff\bord0\4a&H00)}其
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(682,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(354.5,404.5,\1a&HFF\3a&H00\4a&H00)\t(554.5,654.5,\1a&H00\3a&Hff\bord0\4a&H00)}一
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(735,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(380.5,430.5,\1a&HFF\3a&H00\4a&H00)\t(580.5,680.5,\1a&H00\3a&Hff\bord0\4a&H00)}直
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(789,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(408,458,\1a&HFF\3a&H00\4a&H00)\t(608,708,\1a&H00\3a&Hff\bord0\4a&H00)}等
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(842,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(434.5,484.5,\1a&HFF\3a&H00\4a&H00)\t(634.5,734.5,\1a&H00\3a&Hff\bord0\4a&H00)}待
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(874,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(440,490,\1a&HFF\3a&H00\4a&H00)\t(640,740,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(886,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(446,496,\1a&HFF\3a&H00\4a&H00)\t(646,746,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(918,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(472,522,\1a&HFF\3a&H00\4a&H00)\t(672,772,\1a&H00\3a&Hff\bord0\4a&H00)}不
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(972,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(499.5,549.5,\1a&HFF\3a&H00\4a&H00)\t(699.5,799.5,\1a&H00\3a&Hff\bord0\4a&H00)}如
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(1025,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(526,576,\1a&HFF\3a&H00\4a&H00)\t(726,826,\1a&H00\3a&Hff\bord0\4a&H00)}伸
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(1078,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(552,602,\1a&HFF\3a&H00\4a&H00)\t(752,852,\1a&H00\3a&Hff\bord0\4a&H00)}手
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(1131,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(578.5,628.5,\1a&HFF\3a&H00\4a&H00)\t(778.5,878.5,\1a&H00\3a&Hff\bord0\4a&H00)}去
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(1185,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(606,656,\1a&HFF\3a&H00\4a&H00)\t(806,906,\1a&H00\3a&Hff\bord0\4a&H00)}觸
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(1238,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(632.5,682.5,\1a&HFF\3a&H00\4a&H00)\t(832.5,932.5,\1a&H00\3a&Hff\bord0\4a&H00)}及
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(1291,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(658.5,708.5,\1a&HFF\3a&H00\4a&H00)\t(858.5,958.5,\1a&H00\3a&Hff\bord0\4a&H00)}未
+Dialogue: 0,0:02:19.24,0:02:27.03,overtake op cn,,0,0,0,fx,{\pos(1344,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(685,735,\1a&HFF\3a&H00\4a&H00)\t(885,985,\1a&H00\3a&Hff\bord0\4a&H00)}來
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(484,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(255.5,305.5,\1a&HFF\3a&H00\4a&H00)\t(455.5,555.5,\1a&H00\3a&Hff\bord0\4a&H00)}無
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(537,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(281.5,331.5,\1a&HFF\3a&H00\4a&H00)\t(481.5,581.5,\1a&H00\3a&Hff\bord0\4a&H00)}論
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(591,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(309,359,\1a&HFF\3a&H00\4a&H00)\t(509,609,\1a&H00\3a&Hff\bord0\4a&H00)}今
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(644,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(335.5,385.5,\1a&HFF\3a&H00\4a&H00)\t(535.5,635.5,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(697,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(362,412,\1a&HFF\3a&H00\4a&H00)\t(562,662,\1a&H00\3a&Hff\bord0\4a&H00)}如
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(750,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(388,438,\1a&HFF\3a&H00\4a&H00)\t(588,688,\1a&H00\3a&Hff\bord0\4a&H00)}何
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(783,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(394.5,444.5,\1a&HFF\3a&H00\4a&H00)\t(594.5,694.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(794,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(399.5,449.5,\1a&HFF\3a&H00\4a&H00)\t(599.5,699.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(827,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(427,477,\1a&HFF\3a&H00\4a&H00)\t(627,727,\1a&H00\3a&Hff\bord0\4a&H00)}明
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(880,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(453,503,\1a&HFF\3a&H00\4a&H00)\t(653,753,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(933,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(479.5,529.5,\1a&HFF\3a&H00\4a&H00)\t(679.5,779.5,\1a&H00\3a&Hff\bord0\4a&H00)}依
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(987,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(507,557,\1a&HFF\3a&H00\4a&H00)\t(707,807,\1a&H00\3a&Hff\bord0\4a&H00)}舊
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1040,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(533.5,583.5,\1a&HFF\3a&H00\4a&H00)\t(733.5,833.5,\1a&H00\3a&Hff\bord0\4a&H00)}到
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1093,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(560,610,\1a&HFF\3a&H00\4a&H00)\t(760,860,\1a&H00\3a&Hff\bord0\4a&H00)}來
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1126,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(566,616,\1a&HFF\3a&H00\4a&H00)\t(766,866,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1137,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(571.5,621.5,\1a&HFF\3a&H00\4a&H00)\t(771.5,871.5,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1170,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(598.5,648.5,\1a&HFF\3a&H00\4a&H00)\t(798.5,898.5,\1a&H00\3a&Hff\bord0\4a&H00)}我
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1223,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(625,675,\1a&HFF\3a&H00\4a&H00)\t(825,925,\1a&H00\3a&Hff\bord0\4a&H00)}們
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1276,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(651,701,\1a&HFF\3a&H00\4a&H00)\t(851,951,\1a&H00\3a&Hff\bord0\4a&H00)}仍
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1329,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(677.5,727.5,\1a&HFF\3a&H00\4a&H00)\t(877.5,977.5,\1a&H00\3a&Hff\bord0\4a&H00)}會
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1383,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(705,755,\1a&HFF\3a&H00\4a&H00)\t(905,1005,\1a&H00\3a&Hff\bord0\4a&H00)}前
+Dialogue: 0,0:02:26.68,0:02:34.40,overtake op cn,,0,0,0,fx,{\pos(1436,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(731.5,781.5,\1a&HFF\3a&H00\4a&H00)\t(931.5,1031.5,\1a&H00\3a&Hff\bord0\4a&H00)}進
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(576,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(301.5,351.5,\1a&HFF\3a&H00\4a&H00)\t(501.5,601.5,\1a&H00\3a&Hff\bord0\4a&H00)}陰
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(629,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(328,378,\1a&HFF\3a&H00\4a&H00)\t(528,628,\1a&H00\3a&Hff\bord0\4a&H00)}翳
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(682,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(354.5,404.5,\1a&HFF\3a&H00\4a&H00)\t(554.5,654.5,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(735,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(380.5,430.5,\1a&HFF\3a&H00\4a&H00)\t(580.5,680.5,\1a&H00\3a&Hff\bord0\4a&H00)}日
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(789,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(408,458,\1a&HFF\3a&H00\4a&H00)\t(608,708,\1a&H00\3a&Hff\bord0\4a&H00)}子
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(842,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(434.5,484.5,\1a&HFF\3a&H00\4a&H00)\t(634.5,734.5,\1a&H00\3a&Hff\bord0\4a&H00)}總
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(895,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(461,511,\1a&HFF\3a&H00\4a&H00)\t(661,761,\1a&H00\3a&Hff\bord0\4a&H00)}會
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(948,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(487,537,\1a&HFF\3a&H00\4a&H00)\t(687,787,\1a&H00\3a&Hff\bord0\4a&H00)}過
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1002,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(514.5,564.5,\1a&HFF\3a&H00\4a&H00)\t(714.5,814.5,\1a&H00\3a&Hff\bord0\4a&H00)}去
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1034,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(520,570,\1a&HFF\3a&H00\4a&H00)\t(720,820,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1046,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(526,576,\1a&HFF\3a&H00\4a&H00)\t(726,826,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1078,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(552,602,\1a&HFF\3a&H00\4a&H00)\t(752,852,\1a&H00\3a&Hff\bord0\4a&H00)}之
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1131,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(578.5,628.5,\1a&HFF\3a&H00\4a&H00)\t(778.5,878.5,\1a&H00\3a&Hff\bord0\4a&H00)}後
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1185,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(606,656,\1a&HFF\3a&H00\4a&H00)\t(806,906,\1a&H00\3a&Hff\bord0\4a&H00)}便
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1238,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(632.5,682.5,\1a&HFF\3a&H00\4a&H00)\t(832.5,932.5,\1a&H00\3a&Hff\bord0\4a&H00)}是
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1291,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(658.5,708.5,\1a&HFF\3a&H00\4a&H00)\t(858.5,958.5,\1a&H00\3a&Hff\bord0\4a&H00)}晴
+Dialogue: 0,0:02:34.22,0:02:42.00,overtake op cn,,0,0,0,fx,{\pos(1344,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(685,735,\1a&HFF\3a&H00\4a&H00)\t(885,985,\1a&H00\3a&Hff\bord0\4a&H00)}天
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(602,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(314,364,\1a&HFF\3a&H00\4a&H00)\t(514,614,\1a&H00\3a&Hff\bord0\4a&H00)}不
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(655,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(340.5,390.5,\1a&HFF\3a&H00\4a&H00)\t(540.5,640.5,\1a&H00\3a&Hff\bord0\4a&H00)}曾
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(709,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(368,418,\1a&HFF\3a&H00\4a&H00)\t(568,668,\1a&H00\3a&Hff\bord0\4a&H00)}發
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(762,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(394.5,444.5,\1a&HFF\3a&H00\4a&H00)\t(594.5,694.5,\1a&H00\3a&Hff\bord0\4a&H00)}出
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(815,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(420.5,470.5,\1a&HFF\3a&H00\4a&H00)\t(620.5,720.5,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(868,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(447,497,\1a&HFF\3a&H00\4a&H00)\t(647,747,\1a&H00\3a&Hff\bord0\4a&H00)}聲
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(922,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(474.5,524.5,\1a&HFF\3a&H00\4a&H00)\t(674.5,774.5,\1a&H00\3a&Hff\bord0\4a&H00)}音
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(954,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(480,530,\1a&HFF\3a&H00\4a&H00)\t(680,780,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(966,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(486,536,\1a&HFF\3a&H00\4a&H00)\t(686,786,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(998,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(512,562,\1a&HFF\3a&H00\4a&H00)\t(712,812,\1a&H00\3a&Hff\bord0\4a&H00)}如
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(1052,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(539.5,589.5,\1a&HFF\3a&H00\4a&H00)\t(739.5,839.5,\1a&H00\3a&Hff\bord0\4a&H00)}今
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(1105,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(566,616,\1a&HFF\3a&H00\4a&H00)\t(766,866,\1a&H00\3a&Hff\bord0\4a&H00)}也
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(1158,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}已
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(1211,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(618.5,668.5,\1a&HFF\3a&H00\4a&H00)\t(818.5,918.5,\1a&H00\3a&Hff\bord0\4a&H00)}經
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(1265,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(646,696,\1a&HFF\3a&H00\4a&H00)\t(846,946,\1a&H00\3a&Hff\bord0\4a&H00)}知
+Dialogue: 0,0:02:41.65,0:02:49.37,overtake op cn,,0,0,0,fx,{\pos(1318,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(672.5,722.5,\1a&HFF\3a&H00\4a&H00)\t(872.5,972.5,\1a&H00\3a&Hff\bord0\4a&H00)}曉
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(602,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(314,364,\1a&HFF\3a&H00\4a&H00)\t(514,614,\1a&H00\3a&Hff\bord0\4a&H00)}那
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(655,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(340.5,390.5,\1a&HFF\3a&H00\4a&H00)\t(540.5,640.5,\1a&H00\3a&Hff\bord0\4a&H00)}沒
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(709,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(368,418,\1a&HFF\3a&H00\4a&H00)\t(568,668,\1a&H00\3a&Hff\bord0\4a&H00)}有
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(762,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(394.5,444.5,\1a&HFF\3a&H00\4a&H00)\t(594.5,694.5,\1a&H00\3a&Hff\bord0\4a&H00)}名
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(815,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(420.5,470.5,\1a&HFF\3a&H00\4a&H00)\t(620.5,720.5,\1a&H00\3a&Hff\bord0\4a&H00)}字
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(868,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(447,497,\1a&HFF\3a&H00\4a&H00)\t(647,747,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(922,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(474.5,524.5,\1a&HFF\3a&H00\4a&H00)\t(674.5,774.5,\1a&H00\3a&Hff\bord0\4a&H00)}風
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(954,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(480,530,\1a&HFF\3a&H00\4a&H00)\t(680,780,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(966,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(486,536,\1a&HFF\3a&H00\4a&H00)\t(686,786,\1a&H00\3a&Hff\bord0\4a&H00)}
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(998,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(512,562,\1a&HFF\3a&H00\4a&H00)\t(712,812,\1a&H00\3a&Hff\bord0\4a&H00)}吹
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(1052,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(539.5,589.5,\1a&HFF\3a&H00\4a&H00)\t(739.5,839.5,\1a&H00\3a&Hff\bord0\4a&H00)}動
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(1105,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(566,616,\1a&HFF\3a&H00\4a&H00)\t(766,866,\1a&H00\3a&Hff\bord0\4a&H00)}著
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(1158,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(592.5,642.5,\1a&HFF\3a&H00\4a&H00)\t(792.5,892.5,\1a&H00\3a&Hff\bord0\4a&H00)}你
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(1211,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(618.5,668.5,\1a&HFF\3a&H00\4a&H00)\t(818.5,918.5,\1a&H00\3a&Hff\bord0\4a&H00)}的
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(1265,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(646,696,\1a&HFF\3a&H00\4a&H00)\t(846,946,\1a&H00\3a&Hff\bord0\4a&H00)}頭
+Dialogue: 0,0:02:49.20,0:02:57.30,overtake op cn,,0,0,0,fx,{\pos(1318,1050)\an5\1a&HFF\3a&HFF\4a&HFF\t(672.5,722.5,\1a&HFF\3a&H00\4a&H00)\t(872.5,972.5,\1a&H00\3a&Hff\bord0\4a&H00)}髮
+Dialogue: 0,0:21:36.61,0:21:40.87,overtake ed jp,,0,0,0,fx,{\fad(300,300)}シグナルが青に変わる
+Dialogue: 0,0:21:41.06,0:21:45.37,overtake ed jp,,0,0,0,fx,{\fad(300,300)}迷わずにアクセルを踏み込んで
+Dialogue: 0,0:21:45.48,0:21:49.66,overtake ed jp,,0,0,0,fx,{\fad(300,300)}駆け抜けた　孤独な夜
+Dialogue: 0,0:21:49.82,0:21:55.23,overtake ed jp,,0,0,0,fx,{\fad(300,300)}願いをのせた　一筋のShooting star light
+Dialogue: 0,0:21:55.23,0:22:00.21,overtake ed jp,,0,0,0,fx,{\fad(300,300)}追い掛ける　僕らの夢
+Dialogue: 0,0:22:02.66,0:22:11.14,overtake ed jp,,0,0,0,fx,{\fad(300,300)}ループする日常で知らずに擦り減らした心で
+Dialogue: 0,0:22:11.35,0:22:19.58,overtake ed jp,,0,0,0,fx,{\fad(300,300)}まだ信じたい　不可能を可能に　なりふり構わずに
+Dialogue: 0,0:22:19.58,0:22:28.32,overtake ed jp,,0,0,0,fx,{\fad(300,300)}平坦な道じゃない　後戻りをする事さえ容易じゃない
+Dialogue: 0,0:22:28.32,0:22:37.44,overtake ed jp,,0,0,0,fx,{\fad(300,300)}「頑張った分だけちゃんと報われるといいのにな」ってキミが笑う
+Dialogue: 0,0:22:37.80,0:22:42.13,overtake ed jp,,0,0,0,fx,{\fad(300,300)}疲れたらここへおいで
+Dialogue: 0,0:22:42.13,0:22:50.90,overtake ed jp,,0,0,0,fx,{\fad(300,300)}スペアのない心で彷徨った眼差しに光が射す
+Dialogue: 0,0:22:50.90,0:22:56.65,overtake ed jp,,0,0,0,fx,{\fad(300,300)}あの日の願いの行方を見届けよう
+Dialogue: 0,0:22:56.66,0:23:01.93,overtake ed jp,,0,0,0,fx,{\fad(300,300)}向こう見ずな僕らのまま
+Dialogue: 0,0:21:36.61,0:21:40.87,overtake ed cn,,0,0,0,fx,{\fad(300,300)}信號燈變為綠色
+Dialogue: 0,0:21:41.06,0:21:45.37,overtake ed cn,,0,0,0,fx,{\fad(300,300)}毫不猶豫地踩下踏板
+Dialogue: 0,0:21:45.48,0:21:49.66,overtake ed cn,,0,0,0,fx,{\fad(300,300)}穿過孤獨的夜晚
+Dialogue: 0,0:21:49.82,0:21:55.23,overtake ed cn,,0,0,0,fx,{\fad(300,300)}承載著夢想  一股勁地像光一樣往前衝
+Dialogue: 0,0:21:55.23,0:22:00.21,overtake ed cn,,0,0,0,fx,{\fad(300,300)}去追逐我們的夢想吧
+Dialogue: 0,0:22:02.66,0:22:11.14,overtake ed cn,,0,0,0,fx,{\fad(300,300)}被無盡循環的日常悄然磨損著的內心
+Dialogue: 0,0:22:11.35,0:22:19.58,overtake ed cn,,0,0,0,fx,{\fad(300,300)}不論如何仍然相信  能把不可能化為現實
+Dialogue: 0,0:22:19.58,0:22:28.32,overtake ed cn,,0,0,0,fx,{\fad(300,300)}這不是平坦的道路  無法輕易回頭
+Dialogue: 0,0:22:28.32,0:22:37.44,overtake ed cn,,0,0,0,fx,{\fad(300,300)}你笑著說道「希望付出的努力能得到回報」
+Dialogue: 0,0:22:37.80,0:22:42.13,overtake ed cn,,0,0,0,fx,{\fad(300,300)}如果累了就到這裡來吧
+Dialogue: 0,0:22:42.13,0:22:50.90,overtake ed cn,,0,0,0,fx,{\fad(300,300)}你的目光照亮了彷徨著的早已疲憊的內心
+Dialogue: 0,0:22:50.90,0:22:56.65,overtake ed cn,,0,0,0,fx,{\fad(300,300)}去見證那一天許下的願望抵達的地方吧
+Dialogue: 0,0:22:56.66,0:23:01.93,overtake ed cn,,0,0,0,fx,{\fad(300,300)}那將仍然是莽撞的我們

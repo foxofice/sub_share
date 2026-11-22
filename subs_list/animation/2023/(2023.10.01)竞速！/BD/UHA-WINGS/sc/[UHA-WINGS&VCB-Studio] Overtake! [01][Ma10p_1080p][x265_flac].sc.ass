@@ -1,0 +1,444 @@
+﻿[Script Info]
+Title: [UHA-WINGS&VCB-Studio] Overtake! [01][Ma10p_1080p][x265_flac].sc
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1920
+PlayResY: 1080
+LayoutResX: 1920
+LayoutResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: overtake op cn - 01-furigana,方正悠黑_GBK 508R,30,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,5,0,1,10,10,0,1
+Style: overtake op jp - 01-furigana,DFGothicP-W5,20,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,5,0,7,10,10,10,1
+Style: overtake phone-furigana,思源黑体 CN Bold,35,&H00F3EEF0,&H000000FF,&H00211A19,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake alive-furigana,方正舒体_GBK,45,&H00654F47,&H000000FF,&H00191310,&H00D5D2CE,-1,0,0,0,100,100,0,0,1,0,1.5,2,10,10,10,1
+Style: overtake newspaper-furigana,思源宋体 CN Heavy,25,&H001D1C1A,&H000000FF,&H009D9A94,&H00000000,0,0,0,0,100,100,0,0,1,2.5,0,2,10,10,10,1
+Style: overtake prize-2-furigana,思源宋体 CN Heavy,35,&H000E0E0E,&H000000FF,&H00756E6F,&H00756E6F,0,0,0,0,100,100,0,0,1,1.5,2,2,10,10,10,1
+Style: overtake prize-1-furigana,思源黑体 CN Medium,35,&H00847C7E,&H000000FF,&H00171616,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake sakura-furigana,方正兰亭特黑_GBK,50,&H001A1A1A,&H000000FF,&H00F6F6F6,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake banner-furigana,思源黑体 CN Heavy,25,&H00362D2C,&H000000FF,&H00FEFEFE,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,2,10,10,10,1
+Style: overtake - title1-furigana,方正兰亭黑长_GBK,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,1,0,2,15,15,15,1
+Style: overtake input-furigana,思源黑体 CN Medium,40,&H00000000,&H000000FF,&H00DDDEDF,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,15,15,15,1
+Style: overtake lost-furigana,华康少女文字W5,30,&H00FFFFFF,&H000000FF,&H00553145,&H00000000,-1,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake search-furigana,思源黑体 CN Medium,20,&H006E6F73,&H000000FF,&H00FEFEFD,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake notice-furigana,思源黑体 CN Medium,25,&H00E7E5E6,&H000000FF,&H006E6A6E,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake chat-furigana,思源黑体 CN Medium,22.5,&H00545259,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,2,10,10,10,1
+Style: overtake - title2-furigana,思源黑体 CN Bold,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake ed cn-furigana,方正悠黑_GBK 508R,25,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,1,0,2,10,10,8,1
+Style: overtake ed jp-furigana,DFGothicP-W5,17.5,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,1,0,2,10,10,65,1
+Style: overtake op cn-furigana,方正悠黑_GBK 508R,30,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,0,0,3,5,1,2,10,10,0,1
+Style: overtake op jp-furigana,DFGothicP-W5,20,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,10,0,3,10,1,8,10,10,10,1
+Style: overtake hero-furigana,思源黑体 Heavy,25,&H009733F9,&H000000FF,&H00F6F3F3,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake advertisement-furigana,思源黑体 CN Bold,20,&H003D3D3D,&H000000FF,&H00F4F3F3,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,2,10,10,10,1
+Style: overtake contacts-furigana,方正兰亭圆_GBK_中,30,&H00DAE2FC,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake stop-furigana,思源黑体 CN Medium,50,&H00171749,&H000000FF,&H00444253,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,10,10,10,1
+Style: overtake - staff-furigana,思源黑体 CN Bold,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,0,8,15,15,15,1
+Style: overtake - title-furigana,方正兰亭黑长_GBK,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,1,0,2,15,15,15,1
+Style: overtake - note-furigana,思源黑体 CN Bold,30,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0.75,0,7,15,15,10,1
+Style: overtake - text-furigana,思源黑体 CN Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,0,2,15,15,15,1
+Style: Default-furigana,Arial,10,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1,1,2,10,10,10,1
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: overtake - text,思源黑体 CN Bold,80,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,15,15,15,1
+Style: overtake - note,思源黑体 CN Bold,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,1.5,0,7,15,15,10,1
+Style: overtake - title,方正兰亭黑长_GBK,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,2,0,2,15,15,15,1
+Style: overtake - staff,思源黑体 CN Bold,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,8,15,15,15,1
+Style: overtake stop,思源黑体 CN Medium,100,&H00171749,&H000000FF,&H00444253,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake contacts,方正兰亭圆_GBK_中,60,&H00DAE2FC,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake advertisement,思源黑体 CN Bold,40,&H003D3D3D,&H000000FF,&H00F4F3F3,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake hero,思源黑体 Heavy,50,&H009733F9,&H000000FF,&H00F6F3F3,&H00000000,0,0,0,0,100,100,0,0,1,4,0,2,10,10,10,1
+Style: overtake op jp,DFGothicP-W5,40,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,10,0,3,20,2,8,10,10,10,1
+Style: overtake op cn,方正悠黑_GBK 508R,60,&H00FFFFFF,&H000000FF,&HFFFFFFFF,&H00626262,0,0,0,0,100,100,0,0,3,10,2,2,10,10,0,1
+Style: overtake ed jp,DFGothicP-W5,35,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,2,0,2,10,10,65,1
+Style: overtake ed cn,方正悠黑_GBK 508R,50,&H00020103,&H000000FF,&H00E8FAFB,&H00626262,-1,0,0,0,90,100,2,0,1,2,0,2,10,10,8,1
+Style: overtake - title2,思源黑体 CN Bold,40,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: overtake chat,思源黑体 CN Medium,45,&H00545259,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake notice,思源黑体 CN Medium,50,&H00E7E5E6,&H000000FF,&H006E6A6E,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake search,思源黑体 CN Medium,40,&H006E6F73,&H000000FF,&H00FEFEFD,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake lost,华康少女文字W5,60,&H00FFFFFF,&H000000FF,&H00553145,&H00000000,-1,0,0,0,100,100,0,0,1,6,0,2,10,10,10,1
+Style: overtake input,思源黑体 CN Medium,80,&H00000000,&H000000FF,&H00DDDEDF,&H00000000,0,0,0,0,100,100,0,0,1,0,0,2,15,15,15,1
+Style: overtake - title1,方正兰亭黑长_GBK,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,115,100,0,0,3,2,0,2,15,15,15,1
+Style: overtake banner,思源黑体 CN Heavy,50,&H00362D2C,&H000000FF,&H00FEFEFE,&H00000000,0,0,0,0,100,100,0,0,1,3,0,2,10,10,10,1
+Style: overtake sakura,方正兰亭特黑_GBK,100,&H001A1A1A,&H000000FF,&H00F6F6F6,&H00000000,0,0,0,0,100,100,0,0,1,4,0,2,10,10,10,1
+Style: overtake prize-1,思源黑体 CN Medium,70,&H00847C7E,&H000000FF,&H00171616,&H00000000,0,0,0,0,100,100,0,0,1,6,0,2,10,10,10,1
+Style: overtake prize-2,思源宋体 CN Heavy,70,&H000E0E0E,&H000000FF,&H00756E6F,&H00756E6F,0,0,0,0,100,100,0,0,1,3,4,2,10,10,10,1
+Style: overtake newspaper,思源宋体 CN Heavy,50,&H001D1C1A,&H000000FF,&H009D9A94,&H00000000,0,0,0,0,100,100,0,0,1,5,0,2,10,10,10,1
+Style: overtake alive,方正舒体_GBK,90,&H00654F47,&H000000FF,&H00191310,&H00D5D2CE,-1,0,0,0,100,100,0,0,1,0,3,2,10,10,10,1
+Style: overtake phone,思源黑体 CN Bold,70,&H00F3EEF0,&H000000FF,&H00211A19,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,10,10,10,1
+Style: overtake op jp - 01,DFGothicP-W5,45,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,10,0,7,10,10,10,1
+Style: overtake op cn - 01,方正悠黑_GBK 508R,60,&H00FFFFFF,&H000000FF,&H00000000,&H00626262,0,0,0,0,100,100,0,0,3,10,0,1,10,10,0,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:03.00,0:00:09.00,overtake - staff,,0,0,0,,{\fad(1000,1000)}本字幕由悠哈璃羽字幕社制作，仅用于日语交流使用\N请勿私自二次上传及用作商业用途
+Dialogue: 0,0:00:11.00,0:00:17.00,overtake - staff,,0,0,0,,{\fad(1000,1000)}翻译＆校对：cz@阿罗拖拉机  时后：萌新时刻准备摆烂
+Comment: 0,0:04:19.34,0:04:21.34,overtake op jp - 01,,0,0,0,template line,{\fad(200,200)}
+Comment: 0,0:04:19.34,0:04:21.34,overtake op cn - 01,,0,0,0,template line,{\fad(200,200)}
+Dialogue: 0,0:00:51.02,0:00:51.69,overtake - text,NTP,0,0,0,,喝咖啡吗
+Dialogue: 0,0:00:51.81,0:00:55.14,overtake - text,NTP,0,0,0,,我才不喝  你觉得是因为谁才迟到的
+Dialogue: 0,0:00:55.37,0:00:57.62,overtake - text,NTP,0,0,0,,我都去你家接你了  还一直不肯起床
+Dialogue: 0,0:00:58.45,0:01:00.42,overtake - text,NTP,0,0,0,,都是因为精修图的交稿期啦…
+Dialogue: 0,0:01:00.89,0:01:03.72,overtake - text,NTP,0,0,0,,光是准备器材就累坏了
+Dialogue: 0,0:01:09.62,0:01:10.36,overtake - text,NTP,0,0,0,,抱歉
+Dialogue: 0,0:01:11.20,0:01:13.50,overtake - text,NTP,0,0,0,,听说决赛氛围比较剑拔弩张
+Dialogue: 0,0:01:14.17,0:01:16.55,overtake - text,NTP,0,0,0,,今天就得把围场内的事情处理好
+Dialogue: 0,0:01:17.04,0:01:18.83,overtake - text,NTP,0,0,0,,我知道啦  小冴
+Dialogue: 0,0:01:19.11,0:01:19.85,overtake - text,NTP,0,0,0,,你的称呼
+Dialogue: 0,0:01:20.60,0:01:23.17,overtake - text,NTP,0,0,0,,你记得要叫我雪平小姐  至少得叫我冴子才行
+Dialogue: 0,0:01:23.51,0:01:25.15,overtake - text,NTP,0,0,0,,每次给你分配工作都被人说
+Dialogue: 0,0:01:25.41,0:01:28.13,overtake - text,NTP,0,0,0,,「你还惦记着他呢  小冴」
+Dialogue: 0,0:01:28.43,0:01:31.16,overtake - text,NTP,0,0,0,,那个死脂肪肝局长每次都啰啰嗦嗦的
+Dialogue: 0,0:01:31.53,0:01:35.37,overtake - text,NTP,0,0,0,,你的心声都说出口了哦  雪平总编
+Dialogue: 0,0:01:36.00,0:01:38.45,overtake - text,NTP,0,0,0,,资料你都看过没
+Dialogue: 0,0:01:38.89,0:01:39.57,overtake - text,NTP,0,0,0,,现在看
+Dialogue: 0,0:01:41.11,0:01:42.02,overtake - text,NTP,0,0,0,,真是的
+Dialogue: 0,0:01:44.93,0:01:46.59,overtake - text,NTP,0,0,0,,Super GT？
+Dialogue: 0,0:01:47.18,0:01:50.11,overtake - text,NTP,0,0,0,,没错  下个月要出一期特辑
+Dialogue: 0,0:01:51.34,0:01:54.85,overtake - text,NTP,0,0,0,,最近很多女孩子喜欢赛车运动呢
+Dialogue: 0,0:01:55.32,0:01:58.06,overtake - text,NTP,0,0,0,,是觉得拼上性命驾驶很帅气吧
+Dialogue: 0,0:02:00.59,0:02:02.67,overtake - text,NTP,0,0,0,,那这周末就拜托了
+Dialogue: 0,0:02:03.65,0:02:04.77,overtake - text,NTP,0,0,0,,反正你也有空吧
+Dialogue: 0,0:02:05.22,0:02:07.28,overtake - text,NTP,0,0,0,,日薪我会给你算高一点的
+Dialogue: 0,0:02:10.38,0:02:12.68,overtake - text,NTP,0,0,0,,不…别看我这样  我还是挺忙的
+Dialogue: 0,0:02:12.76,0:02:15.61,overtake - text,NTP,0,0,0,,我说你啊  今天的模特摄影呢
+Dialogue: 0,0:02:16.07,0:02:18.79,overtake - text,NTP,0,0,0,,我今天突然很想拍物体啦…
+Dialogue: 0,0:02:20.01,0:02:21.26,overtake - text,NTP,0,0,0,,所以拜托他们交换了
+Dialogue: 0,0:02:21.46,0:02:24.76,overtake - text,NTP,0,0,0,,你还好意思交换  这可是我专门给你安排的工作啊
+Dialogue: 0,0:02:26.82,0:02:29.42,overtake - text,NTP,0,0,0,,随便你了  总之就拜托了哦
+Dialogue: 0,0:02:30.27,0:02:31.12,overtake - text,NTP,0,0,0,,好
+Dialogue: 0,0:02:49.29,0:02:50.17,overtake - text,NTP,0,0,0,,到了
+Dialogue: 0,0:02:54.69,0:02:57.94,overtake - text,NTP,0,0,0,,{\an8\fs60}富士国际赛车场
+Dialogue: 0,0:03:00.18,0:03:03.28,overtake - text,NTP,0,0,0,,那我停好车后去跟他们的公关打声招呼
+Dialogue: 0,0:03:03.97,0:03:06.74,overtake - text,NTP,0,0,0,,你拍摄之前记得去接待处拿一下工作服
+Dialogue: 0,0:03:07.32,0:03:08.15,overtake - text,NTP,0,0,0,,工作服？
+Dialogue: 0,0:03:08.46,0:03:10.83,overtake - text,NTP,0,0,0,,是件背心  媒体穿的是粉色
+Dialogue: 0,0:03:11.30,0:03:13.64,overtake - text,NTP,0,0,0,,小冴…冴子小姐你呢
+Dialogue: 0,0:03:13.89,0:03:16.80,overtake - text,NTP,0,0,0,,因为你睡过头了  车子只能停到远处的停车场了
+Dialogue: 0,0:03:17.11,0:03:17.79,overtake - text,NTP,0,0,0,,你自己先走吧
+Dialogue: 0,0:03:18.17,0:03:18.93,overtake - text,NTP,0,0,0,,好
+Dialogue: 0,0:03:27.40,0:03:28.07,overtake - text,NTP,0,0,0,,小孝
+Dialogue: 0,0:03:30.25,0:03:33.75,overtake - text,NTP,0,0,0,,我不要求你时刻都这样  但是偶尔也得…
+Dialogue: 0,0:03:35.43,0:03:36.30,overtake - text,NTP,0,0,0,,加油啊
+Dialogue: 0,0:03:36.99,0:03:37.86,overtake - text,NTP,0,0,0,,你的称呼
+Dialogue: 0,0:03:38.46,0:03:41.04,overtake - text,NTP,0,0,0,,不是小孝  应该是孝哉才对吧
+Dialogue: 0,0:03:54.90,0:04:00.17,overtake - text,NTP,0,0,0,,该怎么努力…我早就忘得一干二净了
+Dialogue: 0,0:04:51.82,0:04:53.69,overtake - text,NTP,0,0,0,,这次排位赛您感觉状态如何？
+Dialogue: 0,0:04:54.07,0:04:56.69,overtake - text,NTP,0,0,0,,我想想  赛车的机械状态还不错
+Dialogue: 0,0:04:56.99,0:05:00.04,overtake - text,NTP,0,0,0,,应该能跑出令自己满意的成绩吧
+Dialogue: 0,0:05:12.95,0:05:14.94,overtake - text,NTP,0,0,0,,希望接下来的比赛也能延续这种状态
+Dialogue: 0,0:06:03.10,0:06:04.77,overtake - text,NTP,0,0,0,,好多赛车
+Dialogue: 0,0:06:07.55,0:06:08.78,overtake - text,NTP,0,0,0,,好多轮胎
+Dialogue: 0,0:06:10.50,0:06:11.72,overtake - text,NTP,0,0,0,,F1？
+Dialogue: 0,0:06:11.97,0:06:12.97,overtake - text,NTP,0,0,0,,借过一下
+Dialogue: 0,0:06:14.14,0:06:17.43,overtake - note,NTP,0,0,0,,注：哼的是教父主题曲「The Godfather」后续的玩笑也是教父里的经典场景
+Dialogue: 0,0:06:24.53,0:06:26.02,overtake - text,NTP,0,0,0,,锢太  丢死人了
+Dialogue: 0,0:06:26.33,0:06:29.23,overtake - text,NTP,0,0,0,,你说什么啦  悠  这调调多振奋啊
+Dialogue: 0,0:06:29.73,0:06:34.05,overtake - text,NTP,0,0,0,,赶紧都让开  不然第二天早上就会发现床上有马头的尸体哦
+Dialogue: 0,0:06:38.26,0:06:39.33,overtake - text,NTP,0,0,0,,什么情况
+Dialogue: 0,0:06:39.58,0:06:43.04,overtake - text,NTP,0,0,0,,真贺？你是真贺孝哉吗
+Dialogue: 0,0:06:44.53,0:06:45.50,overtake - text,NTP,0,0,0,,笑生先生
+Dialogue: 0,0:06:45.77,0:06:46.86,overtake - text,NTP,0,0,0,,果然是你啊
+Dialogue: 0,0:06:48.00,0:06:49.08,overtake - text,NTP,0,0,0,,久疏问候了
+Dialogue: 0,0:06:49.73,0:06:52.31,overtake - text,NTP,0,0,0,,好久不见  今天是来工作吗
+Dialogue: 0,0:06:52.59,0:06:55.54,overtake - text,NTP,0,0,0,,是的  是Super GT摄影相关的工作
+Dialogue: 0,0:06:56.77,0:07:00.97,overtake - text,NTP,0,0,0,,真贺你之前拍的咱们办公室的照片  大家评价很好哦
+Dialogue: 0,0:07:01.31,0:07:03.34,overtake - text,NTP,0,0,0,,真希望采访照片也交给你来拍
+Dialogue: 0,0:07:04.77,0:07:06.31,overtake - text,NTP,0,0,0,,不…
+Dialogue: 0,0:07:07.38,0:07:09.81,overtake - text,NTP,0,0,0,,话说回来  笑生先生怎么来这里了
+Dialogue: 0,0:07:10.79,0:07:11.69,overtake - text,NTP,0,0,0,,我没跟你说过吗
+Dialogue: 0,0:07:12.27,0:07:15.34,overtake - text,NTP,0,0,0,,其实我现在是这支车队的老板
+Dialogue: 0,0:07:16.76,0:07:19.35,overtake - text,NTP,0,0,0,,老板是…F1的吗
+Dialogue: 0,0:07:21.45,0:07:24.53,overtake - text,NTP,0,0,0,,不是F1  这里停着的车都是F4
+Dialogue: 0,0:07:24.90,0:07:26.85,overtake - text,NTP,0,0,0,,1234的4
+Dialogue: 0,0:07:28.11,0:07:29.21,overtake - text,NTP,0,0,0,,F4…
+Dialogue: 0,0:07:30.41,0:07:32.20,overtake - note,NTP,0,0,0,,{\pos(903,943.333)}Formula 4
+Dialogue: 0,0:07:30.41,0:07:32.20,overtake - text,NTP,0,0,0,,F4  四级方程式
+Dialogue: 0,0:07:32.70,0:07:34.72,overtake - text,NTP,0,0,0,,和F1是不同级别的赛车
+Dialogue: 0,0:07:35.31,0:07:39.05,overtake - text,NTP,0,0,0,,在这里是Super GT的垫赛  也就是暖场赛
+Dialogue: 0,0:07:39.61,0:07:41.73,overtake - text,NTP,0,0,0,,这场比赛比的就是F4
+Dialogue: 0,0:07:43.84,0:07:45.54,overtake - text,NTP,0,0,0,,这就是我的车队
+Dialogue: 0,0:07:46.97,0:07:48.29,overtake - text,NTP,0,0,0,,Belsorriso
+Dialogue: 0,0:07:50.76,0:07:54.18,overtake - text,NTP,0,0,0,,真厉害  赛车都闪闪发光的
+Dialogue: 0,0:07:54.46,0:07:58.29,overtake - text,NTP,0,0,0,,不好好抛光保养的话  车身上出现小划痕的时候就看不出来了
+Dialogue: 0,0:07:59.13,0:08:00.31,overtake - text,NTP,0,0,0,,早月
+Dialogue: 0,0:08:02.07,0:08:03.93,overtake - text,NTP,0,0,0,,早月  今天也要加油哦
+Dialogue: 0,0:08:04.17,0:08:05.71,overtake - text,NTP,0,0,0,,我会在大看台上注视你的哦
+Dialogue: 0,0:08:06.23,0:08:08.14,overtake - text,NTP,0,0,0,,感谢你们一直以来的加油
+Dialogue: 0,0:08:08.71,0:08:12.02,overtake - text,NTP,0,0,0,,今天我也会为了大家加油的哦  小猫咪们
+Dialogue: 0,0:08:15.46,0:08:16.42,overtake - text,NTP,0,0,0,,好帅
+Dialogue: 0,0:08:17.50,0:08:18.87,overtake - text,NTP,0,0,0,,早月
+Dialogue: 0,0:08:19.22,0:08:22.79,overtake - text,NTP,0,0,0,,不好意思  无关人士不能进入帐篷内…
+Dialogue: 0,0:08:23.25,0:08:24.78,overtake - text,NTP,0,0,0,,什么啦  看看又没事
+Dialogue: 0,0:08:24.99,0:08:25.97,overtake - text,NTP,0,0,0,,就是就是
+Dialogue: 0,0:08:27.20,0:08:30.01,overtake - text,NTP,0,0,0,,感觉像摇滚明星一样…
+Dialogue: 0,0:08:30.90,0:08:32.06,overtake - text,NTP,0,0,0,,他是我们的车手
+Dialogue: 0,0:08:34.26,0:08:35.11,overtake - text,NTP,0,0,0,,我来介绍吧
+Dialogue: 0,0:08:35.65,0:08:37.72,overtake - text,NTP,0,0,0,,这是一直关照我们的真贺孝哉先生
+Dialogue: 0,0:08:38.04,0:08:38.59,overtake - text,NTP,0,0,0,,你好
+Dialogue: 0,0:08:39.12,0:08:41.23,overtake - text,NTP,0,0,0,,这是我们的一号车手春永早月
+Dialogue: 0,0:08:41.99,0:08:44.52,overtake - text,NTP,0,0,0,,以及二号车手德丸俊轨
+Dialogue: 0,0:08:45.06,0:08:46.09,overtake - text,NTP,0,0,0,,这是我们的两名王牌
+Dialogue: 0,0:08:46.44,0:08:46.86,overtake - text,NTP,0,0,0,,你好
+Dialogue: 0,0:08:47.19,0:08:47.91,overtake - text,NTP,0,0,0,,初次见面
+Dialogue: 0,0:08:48.76,0:08:49.93,overtake - text,NTP,0,0,0,,你是摄影师吗
+Dialogue: 0,0:08:51.40,0:08:54.70,overtake - text,NTP,0,0,0,,是摄像师  我主要负责拍照片
+Dialogue: 0,0:08:55.98,0:09:00.66,overtake - text,NTP,0,0,0,,那请务必拍下我今天登上颁奖台的英姿哦
+Dialogue: 0,0:09:02.46,0:09:03.73,overtake - text,NTP,0,0,0,,喂  春永
+Dialogue: 0,0:09:04.06,0:09:06.02,overtake - text,NTP,0,0,0,,亚梨子也要好好看着哦
+Dialogue: 0,0:09:08.04,0:09:10.09,overtake - text,NTP,0,0,0,,真抱歉  虽然是个胡闹的家伙
+Dialogue: 0,0:09:10.41,0:09:11.64,overtake - text,NTP,0,0,0,,但是他驾驶技术不坏
+Dialogue: 0,0:09:12.30,0:09:15.48,overtake - text,NTP,0,0,0,,我们是让他以F3或是F2为目标来培养的
+Dialogue: 0,0:09:17.74,0:09:19.40,overtake - text,NTP,0,0,0,,感觉真厉害
+Dialogue: 0,0:09:20.92,0:09:21.56,overtake - text,NTP,0,0,0,,算是吧
+Dialogue: 0,0:09:22.40,0:09:23.12,overtake - text,NTP,0,0,0,,德丸
+Dialogue: 0,0:09:24.05,0:09:26.56,overtake - text,NTP,0,0,0,,麻烦你带真贺逛逛F4的围场吧
+Dialogue: 0,0:09:29.42,0:09:31.50,overtake - text,NTP,0,0,0,,真不好意思  你马上就要开始比赛了吧
+Dialogue: 0,0:09:31.82,0:09:32.88,overtake - text,NTP,0,0,0,,不耽误你准备比赛吗
+Dialogue: 0,0:09:33.60,0:09:36.71,overtake - text,NTP,0,0,0,,没事  我只要按指令跑就行了
+Dialogue: 0,0:09:37.22,0:09:41.46,overtake - text,NTP,0,0,0,,你是来拍Super GT的照片的吧  你很熟悉这方面的事吗
+Dialogue: 0,0:09:41.81,0:09:44.23,overtake - text,NTP,0,0,0,,不…其实我完全不懂
+Dialogue: 0,0:09:47.47,0:09:48.54,overtake - text,NTP,0,0,0,,又有轮胎
+Dialogue: 0,0:09:49.24,0:09:51.73,overtake - note,NTP,0,0,0,,注：赛车用的热熔胎是通过熔化轮胎形成凝胶状获取抓地力，所以需要先升温至工作温度。
+Dialogue: 0,0:09:49.24,0:09:51.73,overtake - text,NTP,0,0,0,,他们在给轮胎升温  为了提升抓地力
+Dialogue: 0,0:09:52.36,0:09:53.35,overtake - text,NTP,0,0,0,,也就是日光浴
+Dialogue: 0,0:09:54.84,0:09:55.90,overtake - text,NTP,0,0,0,,你真博学
+Dialogue: 0,0:09:56.64,0:09:58.81,overtake - text,NTP,0,0,0,,话说回来  人还真多啊
+Dialogue: 0,0:09:59.23,0:10:02.05,overtake - text,NTP,0,0,0,,今年总共有20支车队共计36名车手
+Dialogue: 0,0:10:02.94,0:10:05.17,overtake - text,NTP,0,0,0,,毕竟F4的门槛比较低嘛
+Dialogue: 0,0:10:05.64,0:10:09.61,overtake - text,NTP,0,0,0,,只需要国内A级赛照  国际B级及以下赛照
+Dialogue: 0,0:10:10.24,0:10:12.76,overtake - text,NTP,0,0,0,,或是国内限定A级赛照
+Dialogue: 0,0:10:13.62,0:10:16.32,overtake - text,NTP,0,0,0,,也就是…驾照之类的吗
+Dialogue: 0,0:10:16.71,0:10:20.55,overtake - note,NTP,0,0,0,,注：此处没有解释，但是驾照和赛照分类不同不能混为一谈
+Dialogue: 0,0:10:16.71,0:10:20.55,overtake - text,NTP,0,0,0,,也有一些其他的条件  但最关键的…
+Dialogue: 0,0:10:21.30,0:10:22.31,overtake - text,NTP,0,0,0,,还是钱吧
+Dialogue: 0,0:10:23.37,0:10:24.48,overtake - text,NTP,0,0,0,,钱？
+Dialogue: 0,0:10:24.78,0:10:29.32,overtake - text,NTP,0,0,0,,没错  毕竟各类维护和赛车整备都需要花钱
+Dialogue: 0,0:10:31.37,0:10:33.66,overtake - text,NTP,0,0,0,,技术和金钱都是必须具备的
+Dialogue: 0,0:10:34.34,0:10:38.67,overtake - text,NTP,0,0,0,,技术只要练习就能掌握个大概  但这也是需要花钱的
+Dialogue: 0,0:10:39.47,0:10:43.86,overtake - text,NTP,0,0,0,,所以既有投入大把金钱  以晋级F3F2  甚至是F1为目标
+Dialogue: 0,0:10:43.94,0:10:45.84,overtake - text,NTP,0,0,0,,这一类十分重视速度的车队
+Dialogue: 0,0:10:46.32,0:10:51.42,overtake - text,NTP,0,0,0,,也有舍得花钱  但主要是为了享受驾驶乐趣本身的私人车队
+Dialogue: 0,0:10:52.17,0:10:53.30,overtake - text,NTP,0,0,0,,也就是兴趣吗
+Dialogue: 0,0:10:53.79,0:10:55.41,overtake - text,NTP,0,0,0,,车手是公司社长
+Dialogue: 0,0:10:56.00,0:10:58.19,overtake - text,NTP,0,0,0,,他的梦想是在比赛上驾驶赛车
+Dialogue: 0,0:11:01.33,0:11:02.37,overtake - text,NTP,0,0,0,,原来如此
+Dialogue: 0,0:11:03.28,0:11:05.17,overtake - text,NTP,0,0,0,,还真有各种各样的参加者呢
+Dialogue: 0,0:11:05.63,0:11:06.75,overtake - text,NTP,0,0,0,,是啊
+Dialogue: 0,0:11:07.75,0:11:11.61,overtake - text,NTP,0,0,0,,但是最厉害的  是那种既没钱又没技术
+Dialogue: 0,0:11:11.91,0:11:13.82,overtake - text,NTP,0,0,0,,完全就是移动路障一样的存在
+Dialogue: 0,0:11:11.91,0:11:13.82,overtake - note,NTP,0,0,0,,注：此处的chicanes原意是指S弯，赛车比赛中也指路障
+Dialogue: 0,0:11:14.72,0:11:15.62,overtake - text,NTP,0,0,0,,路障？
+Dialogue: 0,0:11:15.91,0:11:17.38,overtake - text,NTP,0,0,0,,也就是障碍物
+Dialogue: 0,0:11:20.97,0:11:22.11,overtake - text,NTP,0,0,0,,柯里昂家族…
+Dialogue: 0,0:11:23.02,0:11:24.84,overtake - text,NTP,0,0,0,,什么？是你认识的人吗
+Dialogue: 0,0:11:25.21,0:11:28.21,overtake - text,NTP,0,0,0,,喂  喂喂喂喂喂
+Dialogue: 0,0:11:28.76,0:11:32.79,overtake - text,NTP,0,0,0,,每次开始比赛前都来找茬  你到底是有多闲
+Dialogue: 0,0:11:33.14,0:11:37.12,overtake - text,NTP,0,0,0,,总比你老是在这整备这一坨垃圾赛车来得好
+Dialogue: 0,0:11:37.64,0:11:39.59,overtake - text,NTP,0,0,0,,你说对吧  路障哥
+Dialogue: 0,0:11:48.52,0:11:53.14,overtake - text,NTP,0,0,0,,好吓人  开始比赛前的紧张感也太吓人了
+Dialogue: 0,0:11:55.25,0:11:58.16,overtake - text,NTP,0,0,0,,喂  今天别再被套圈挡住路了
+Dialogue: 0,0:11:59.45,0:12:01.49,overtake - text,NTP,0,0,0,,我只是遵照蓝旗让车而已
+Dialogue: 0,0:12:02.77,0:12:04.52,overtake - text,NTP,0,0,0,,是你自己着急冲过来
+Dialogue: 0,0:12:06.70,0:12:08.62,overtake - text,NTP,0,0,0,,好好好  到此为止到此为止
+Dialogue: 0,0:12:09.22,0:12:12.39,overtake - text,NTP,0,0,0,,马上开始比赛了吧  还是别在这争吵了
+Dialogue: 0,0:12:12.77,0:12:13.96,overtake - text,NTP,0,0,0,,对吗  对吗
+Dialogue: 0,0:12:20.55,0:12:23.56,overtake - text,NTP,0,0,0,,别再出现了  快撒盐除除晦气
+Dialogue: 0,0:12:25.53,0:12:26.64,overtake - text,NTP,0,0,0,,话说您哪位？
+Dialogue: 0,0:12:27.47,0:12:28.20,overtake - text,NTP,0,0,0,,是他朋友吗
+Dialogue: 0,0:12:28.35,0:12:31.06,overtake - text,NTP,0,0,0,,不…不过很抱歉
+Dialogue: 0,0:12:32.14,0:12:33.16,overtake - text,NTP,0,0,0,,你也是
+Dialogue: 0,0:12:34.15,0:12:36.68,overtake - text,NTP,0,0,0,,抱歉  那个…
+Dialogue: 0,0:12:37.40,0:12:39.70,overtake - text,NTP,0,0,0,,加油  我支持你
+Dialogue: 0,0:12:40.35,0:12:41.08,overtake - text,NTP,0,0,0,,不需要
+Dialogue: 0,0:12:42.93,0:12:44.42,overtake - text,NTP,0,0,0,,我不需要支持
+Dialogue: 0,0:12:45.02,0:12:45.91,overtake - text,NTP,0,0,0,,我…
+Dialogue: 0,0:12:47.01,0:12:48.42,overtake - text,NTP,0,0,0,,一个人也能跑
+Dialogue: 0,0:12:52.08,0:12:55.29,overtake - text,NTP,0,0,0,,喂  我买来午饭了
+Dialogue: 0,0:12:56.34,0:12:57.25,overtake - text,NTP,0,0,0,,怎么了？
+Dialogue: 0,0:13:03.34,0:13:05.73,overtake - text,NTP,0,0,0,,小牧Motors？
+Dialogue: 0,0:13:07.43,0:13:09.22,overtake - text,NTP,0,0,0,,这是哪位？
+Dialogue: 0,0:13:12.85,0:13:13.89,overtake - text,NTP,0,0,0,,你朋友？
+Dialogue: 0,0:13:25.34,0:13:27.07,overtake - text,NTP,0,0,0,,下次再努力就好了
+Dialogue: 0,0:13:27.50,0:13:29.51,overtake - text,NTP,0,0,0,,就当是先放个假吧
+Dialogue: 0,0:13:30.10,0:13:33.62,overtake - text,NTP,0,0,0,,我是不在意的  但是总编坚持要…
+Dialogue: 0,0:13:33.96,0:13:34.73,overtake - text,NTP,0,0,0,,抱歉
+Dialogue: 0,0:13:35.10,0:13:38.15,overtake - text,NTP,0,0,0,,没事的  事情很快就过去了
+Dialogue: 0,0:13:38.21,0:13:39.96,overtake - text,NTP,0,0,0,,{\fn微软雅黑\fs40\bord0\shad0\c&H543727&\pos(1209.43,478.143)}我可不想被拍成这样
+Dialogue: 0,0:13:38.21,0:13:39.96,overtake - text,NTP,0,0,0,,{\fn微软雅黑\fs40\bord0\shad0\c&H543727&\pos(1282.286,541.715)}给人拍照前是不是该做点什么？
+Dialogue: 0,0:13:38.21,0:13:39.96,overtake - text,NTP,0,0,0,,{\fn微软雅黑\fs40\bord0\shad0\c&H543727&\pos(1192,604.571)}别刊载这种玩意啊
+Dialogue: 0,0:13:38.21,0:13:39.96,overtake - text,NTP,0,0,0,,{\fn微软雅黑\fs40\bord0\shad0\c&H543727&\pos(1129.43,661)}自我陶醉
+Dialogue: 0,0:13:38.21,0:13:39.96,overtake - text,NTP,0,0,0,,{\fn微软雅黑\fs40\bord0\shad0\c&H543727&\pos(1127.144,722.714)}你救了他
+Dialogue: 0,0:13:38.68,0:13:39.92,overtake - text,NTP,0,0,0,,加油吧
+Dialogue: 0,0:13:41.14,0:13:43.21,overtake - text,NTP,0,0,0,,加油  我支持你
+Dialogue: 0,0:13:43.41,0:13:44.56,overtake - text,NTP,0,0,0,,我不需要支持
+Dialogue: 0,0:13:46.16,0:13:48.86,overtake - text,NTP,0,0,0,,我一个人也能跑
+Dialogue: 0,0:13:53.77,0:13:57.89,overtake - text,NTP,0,0,0,,也是啊  自己都不懂努力的家伙凭什么跟人家说加油
+Dialogue: 0,0:14:05.32,0:14:07.01,overtake - text,NTP,0,0,0,,小牧太先生
+Dialogue: 0,0:14:07.48,0:14:09.38,overtake - text,NTP,0,0,0,,嗯  刚才多谢你了
+Dialogue: 0,0:14:09.95,0:14:12.20,overtake - text,NTP,0,0,0,,听说你安抚了吵起来的他们
+Dialogue: 0,0:14:12.73,0:14:16.94,overtake - text,NTP,0,0,0,,不不  毕竟会过去帐篷那边也是因为我
+Dialogue: 0,0:14:17.37,0:14:18.14,overtake - text,NTP,0,0,0,,要吃吗
+Dialogue: 0,0:14:18.93,0:14:20.00,overtake - text,NTP,0,0,0,,不用了
+Dialogue: 0,0:14:22.98,0:14:24.61,overtake - text,NTP,0,0,0,,笑生是你的熟人吗
+Dialogue: 0,0:14:25.12,0:14:28.91,overtake - text,NTP,0,0,0,,对  但我也是今天才知道他还有一支车队
+Dialogue: 0,0:14:29.47,0:14:30.88,overtake - text,NTP,0,0,0,,被吓了一跳吧
+Dialogue: 0,0:14:31.91,0:14:36.26,overtake - text,NTP,0,0,0,,比起Belsorriso  我们这种私人车队简直就跟过家家一样
+Dialogue: 0,0:14:36.89,0:14:37.73,overtake - text,NTP,0,0,0,,怎么会
+Dialogue: 0,0:14:38.27,0:14:41.05,overtake - text,NTP,0,0,0,,当然我们也在以自己的方式在认真对待比赛
+Dialogue: 0,0:14:41.32,0:14:45.07,overtake - text,NTP,0,0,0,,特别是这一场状态特别好  我们在排位赛好好努力过了
+Dialogue: 0,0:14:47.14,0:14:49.08,overtake - text,NTP,0,0,0,,看得出来你很喜欢比赛
+Dialogue: 0,0:14:49.57,0:14:51.61,overtake - text,NTP,0,0,0,,你是在想「明明没什么钱」吧
+Dialogue: 0,0:14:52.09,0:14:53.05,overtake - text,NTP,0,0,0,,不不不
+Dialogue: 0,0:14:54.52,0:14:55.53,overtake - text,NTP,0,0,0,,不过啊
+Dialogue: 0,0:14:56.14,0:14:58.29,overtake - text,NTP,0,0,0,,这真的很有趣啊
+Dialogue: 0,0:15:01.43,0:15:05.17,overtake - text,NTP,0,0,0,,不论怎么努力都不会被大车队放在眼里
+Dialogue: 0,0:15:06.40,0:15:08.74,overtake - text,NTP,0,0,0,,还有人说我们是移动路障
+Dialogue: 0,0:15:09.71,0:15:13.97,overtake - text,NTP,0,0,0,,但是只要踏踏实实地在车子上下功夫  逐步提升名次
+Dialogue: 0,0:15:14.63,0:15:17.53,overtake - text,NTP,0,0,0,,总有一天我们会赢下比赛
+Dialogue: 0,0:15:18.17,0:15:21.64,overtake - text,NTP,0,0,0,,那一天  说不定就是今天
+Dialogue: 0,0:15:22.32,0:15:24.80,overtake - text,NTP,0,0,0,,所以才会努力  才会继续努力下去
+Dialogue: 0,0:15:25.83,0:15:26.85,overtake - text,NTP,0,0,0,,努力…
+Dialogue: 0,0:15:27.55,0:15:30.64,overtake - text,NTP,0,0,0,,抱歉  一不小心就说得太认真了
+Dialogue: 0,0:15:31.09,0:15:31.95,overtake - text,NTP,0,0,0,,打扰到你了
+Dialogue: 0,0:15:33.30,0:15:33.95,overtake - text,NTP,0,0,0,,那个
+Dialogue: 0,0:15:35.75,0:15:37.30,overtake - text,NTP,0,0,0,,能让我也看看吗
+Dialogue: 0,0:15:40.20,0:15:41.59,overtake - text,NTP,0,0,0,,这是内部通行证
+Dialogue: 0,0:15:42.04,0:15:43.95,overtake - text,NTP,0,0,0,,这一张是多出来的  你可以拿去用
+Dialogue: 0,0:15:44.45,0:15:46.97,overtake - text,NTP,0,0,0,,这样你就能进入GT围场了
+Dialogue: 0,0:15:47.66,0:15:49.35,overtake - text,NTP,0,0,0,,GT围场？
+Dialogue: 0,0:15:49.84,0:15:52.42,overtake - text,NTP,0,0,0,,就是能让你暂时  你叫…
+Dialogue: 0,0:15:52.76,0:15:54.84,overtake - text,NTP,0,0,0,,我叫真贺  真贺孝哉
+Dialogue: 0,0:15:55.32,0:15:59.17,overtake - text,NTP,0,0,0,,真贺你就暂时成为我们车队的一员了
+Dialogue: 0,0:16:02.50,0:16:04.34,overtake - text,NTP,0,0,0,,工作服和相机就留在外面吧
+Dialogue: 0,0:16:04.72,0:16:07.46,overtake - text,NTP,0,0,0,,一般记者是禁止进入的
+Dialogue: 0,0:16:09.52,0:16:10.78,overtake - text,NTP,0,0,0,,欢迎来到F4
+Dialogue: 0,0:16:11.14,0:16:12.24,overtake - text,NTP,0,0,0,,你说什么？
+Dialogue: 0,0:16:12.76,0:16:14.65,overtake - text,NTP,0,0,0,,欢迎来到F4！
+Dialogue: 0,0:16:35.81,0:16:37.09,overtake - text,NTP,0,0,0,,这就开始了吗
+Dialogue: 0,0:16:37.35,0:16:39.08,overtake - text,NTP,0,0,0,,加…加油！
+Dialogue: 0,0:16:40.67,0:16:43.46,overtake - text,NTP,0,0,0,,还没开始呢  现在是暖胎圈
+Dialogue: 0,0:16:44.07,0:16:46.42,overtake - text,NTP,0,0,0,,在比赛开始前  先在赛道上跑一圈
+Dialogue: 0,0:16:48.63,0:16:50.25,overtake - text,NTP,0,0,0,,这边  我带你看吧
+Dialogue: 0,0:16:52.35,0:16:53.11,overtake - text,NTP,0,0,0,,锢太郎
+Dialogue: 0,0:16:54.63,0:16:57.38,overtake - text,NTP,0,0,0,,这是我儿子锢太郎  是我们队的机械师
+Dialogue: 0,0:16:57.84,0:16:58.95,overtake - text,NTP,0,0,0,,那个…
+Dialogue: 0,0:16:59.37,0:17:00.94,overtake - text,NTP,0,0,0,,是那人的大叔朋友
+Dialogue: 0,0:17:05.75,0:17:06.83,overtake - text,NTP,0,0,0,,回来了
+Dialogue: 0,0:17:07.77,0:17:11.10,overtake - text,NTP,0,0,0,,他们为什么要像暴走族那样走蛇形
+Dialogue: 0,0:17:11.60,0:17:16.67,overtake - text,NTP,0,0,0,,穿行  让赛车左右摇摆前进  以此均匀摩擦轮胎进行升温
+Dialogue: 0,0:17:17.43,0:17:19.11,overtake - text,NTP,0,0,0,,看看头车
+Dialogue: 0,0:17:19.66,0:17:22.99,overtake - text,NTP,0,0,0,,杆位是Belsorriso的春永早月
+Dialogue: 0,0:17:23.66,0:17:25.77,overtake - text,NTP,0,0,0,,第二位是德丸俊轨
+Dialogue: 0,0:17:26.43,0:17:31.84,overtake - text,NTP,0,0,0,,我们队的悠是36名之中的第10名起步  位置还不错吧
+Dialogue: 0,0:17:32.68,0:17:33.54,overtake - text,NTP,0,0,0,,悠…
+Dialogue: 0,0:17:34.00,0:17:35.82,overtake - text,NTP,0,0,0,,没错  浅雏悠
+Dialogue: 0,0:17:36.34,0:17:39.18,overtake - text,NTP,0,0,0,,是我们小牧Motors引以为豪的王牌车手
+Dialogue: 0,0:17:39.56,0:17:41.41,overtake - text,NTP,0,0,0,,什么王牌  明明就只有一个人
+Dialogue: 0,0:17:41.96,0:17:45.14,overtake - text,NTP,0,0,0,,但是引以为豪是真的
+Dialogue: 0,0:17:49.39,0:17:51.38,overtake - text,NTP,0,0,0,,浅雏悠
+Dialogue: 0,0:18:15.98,0:18:16.92,overtake - text,NTP,0,0,0,,红灯熄灭起步
+Dialogue: 0,0:18:17.27,0:18:19.89,overtake - text,NTP,0,0,0,,春永早月朝着TGR弯前进
+Dialogue: 0,0:18:20.49,0:18:22.65,overtake - text,NTP,0,0,0,,德丸俊轨也紧随其后抢到了好位置
+Dialogue: 0,0:18:33.54,0:18:37.42,overtake - text,NTP,0,0,0,,不愧是Belsorriso  起步得真好
+Dialogue: 0,0:18:38.34,0:18:39.61,overtake - text,NTP,0,0,0,,场上出现了黄旗
+Dialogue: 0,0:18:40.91,0:18:41.90,overtake - text,NTP,0,0,0,,这是什么
+Dialogue: 0,0:18:42.45,0:18:46.61,overtake - text,NTP,0,0,0,,黄旗  是告知车手赛道上出现危险状况了
+Dialogue: 0,0:18:47.05,0:18:50.57,overtake - text,NTP,0,0,0,,安全车的提示板也出来了  是发生事故了吗
+Dialogue: 0,0:18:51.48,0:18:52.83,overtake - text,NTP,0,0,0,,是在TGR弯啊
+Dialogue: 0,0:18:53.24,0:18:56.67,overtake - text,NTP,0,0,0,,似乎是64号和84号发生了碰撞
+Dialogue: 0,0:18:59.76,0:19:02.78,overtake - text,NTP,0,0,0,,没有人受伤  我们也没有被波及
+Dialogue: 0,0:19:06.50,0:19:09.29,overtake - text,NTP,0,0,0,,为了防止发生事故  比赛暂时会由安全车带领
+Dialogue: 0,0:19:09.40,0:19:10.88,overtake - text,NTP,0,0,0,,直到确认赛道已经安全
+Dialogue: 0,0:19:11.29,0:19:12.86,overtake - text,NTP,0,0,0,,这会成为我们追赶的机会
+Dialogue: 0,0:19:13.47,0:19:14.29,overtake - text,NTP,0,0,0,,追赶？
+Dialogue: 0,0:19:14.63,0:19:18.89,overtake - text,NTP,0,0,0,,在黄旗期间  车手必须限制车速并且禁止超车
+Dialogue: 0,0:19:19.55,0:19:22.71,overtake - text,NTP,0,0,0,,也就是说  可以一下子缩短与头车的差距
+Dialogue: 0,0:19:29.61,0:19:32.56,overtake - text,NTP,0,0,0,,开始了开始了  比赛重新开始
+Dialogue: 0,0:19:36.64,0:19:39.86,overtake - text,NTP,0,0,0,,阿俊真是的  也太拼命了
+Dialogue: 0,0:19:42.21,0:19:47.65,overtake - text,NTP,0,0,0,,哎哟  第五名之后的四台赛车正在并排进入TGR弯道
+Dialogue: 0,0:20:00.16,0:20:04.42,overtake - text,NTP,0,0,0,,在这场竞争中胜出的是80号  浅雏悠
+Dialogue: 0,0:20:04.81,0:20:08.02,overtake - text,NTP,0,0,0,,好！看到了吗  不愧是悠
+Dialogue: 0,0:20:12.00,0:20:14.47,overtake - text,NTP,0,0,0,,真牛  又超车了
+Dialogue: 0,0:20:14.69,0:20:15.69,overtake - text,NTP,0,0,0,,第四名了
+Dialogue: 0,0:20:17.00,0:20:18.35,overtake - text,NTP,0,0,0,,说不定就是今天
+Dialogue: 0,0:20:18.99,0:20:20.42,overtake - text,NTP,0,0,0,,什么？
+Dialogue: 0,0:20:20.80,0:20:22.69,overtake - text,NTP,0,0,0,,今天就是那一天！
+Dialogue: 0,0:20:23.61,0:20:24.07,overtake - text,NTP,0,0,0,,走吧
+Dialogue: 0,0:20:24.60,0:20:27.11,overtake - text,NTP,0,0,0,,等下  是要去哪
+Dialogue: 0,0:20:30.65,0:20:31.87,overtake - text,NTP,0,0,0,,悠如果要进攻的话
+Dialogue: 0,0:20:32.19,0:20:35.32,overtake - text,NTP,0,0,0,,肯定会选择在下坡急刹缩短车距的时候超车
+Dialogue: 0,0:20:36.04,0:20:38.01,overtake - text,NTP,0,0,0,,就是这里  DUNLOP弯
+Dialogue: 0,0:20:50.89,0:20:52.43,overtake - text,NTP,0,0,0,,来了来了来了
+Dialogue: 0,0:20:58.11,0:20:58.88,overtake - text,NTP,0,0,0,,不需要
+Dialogue: 0,0:20:59.98,0:21:01.32,overtake - text,NTP,0,0,0,,我不需要支持
+Dialogue: 0,0:21:02.21,0:21:03.43,overtake - text,NTP,0,0,0,,一个人也能跑
+Dialogue: 0,0:21:07.31,0:21:08.09,overtake - text,NTP,0,0,0,,这样啊
+Dialogue: 0,0:21:12.01,0:21:13.02,overtake - text,NTP,0,0,0,,努力…
+Dialogue: 0,0:21:15.58,0:21:16.43,overtake - text,NTP,0,0,0,,原来是这个样子啊
+Dialogue: 0,0:21:18.96,0:21:19.99,overtake - text,NTP,0,0,0,,加油…
+Dialogue: 0,0:21:22.01,0:21:22.77,overtake - text,NTP,0,0,0,,加油
+Dialogue: 0,0:21:26.98,0:21:28.74,overtake - text,NTP,0,0,0,,加油！
+Dialogue: 0,0:21:35.89,0:21:38.98,overtake - text,NTP,0,0,0,,80号爆胎  冲出赛道
+Dialogue: 0,0:21:39.82,0:21:41.60,overtake - text,NTP,0,0,0,,到底是怎么回事！
+Dialogue: 0,0:21:41.70,0:21:43.33,overtake - text,NTP,0,0,0,,可能是压到了什么
+Dialogue: 0,0:21:43.98,0:21:47.06,overtake - text,NTP,0,0,0,,排位赛太拼命了  轮胎磨损得太厉害了
+Dialogue: 0,0:21:50.92,0:21:52.09,overtake - text,NTP,0,0,0,,真的假的
+Dialogue: 0,0:22:12.28,0:22:15.22,overtake - text,NTP,0,0,0,,耶  我成功了哦小猫咪们
+Dialogue: 0,0:23:12.65,0:23:15.33,overtake - text,NTP,0,0,0,,我说啊  你怎么在这里
+Dialogue: 0,0:23:16.14,0:23:17.09,overtake - text,NTP,0,0,0,,我拍到了
+Dialogue: 0,0:23:24.50,0:23:28.01,overtake - title1,NTP,0,0,0,,{\c&HFFFFFF&\pos(1552.286,622.286)}驾驶的男人
+Dialogue: 0,0:23:26.30,0:23:27.65,overtake - text,NTP,0,0,0,,我拍下来了
+Comment: 0,0:00:01.00,0:00:01.30,overtake - text,NTP,0,0,0,,——OP？——
+Comment: 0,0:23:29.47,0:23:36.03,overtake op jp - 01,,0,0,0,karaoke,Blowing in the wind… waiting for the time to start…
+Comment: 0,0:23:36.03,0:23:42.62,overtake op jp - 01,,0,0,0,karaoke,急な雨に遭って　水平線は煙った
+Comment: 0,0:23:42.82,0:23:49.17,overtake op jp - 01,,0,0,0,karaoke,見果てぬ　夢のかたちも
+Comment: 0,0:23:50.95,0:23:57.64,overtake op jp - 01,,0,0,0,karaoke,欠けたなにかを　それでも抱く期待を
+Comment: 0,0:23:57.80,0:24:03.71,overtake op jp - 01,,0,0,0,karaoke,この手に　離さぬままで
+Comment: 0,0:24:04.10,0:24:10.60,overtake op jp - 01,,0,0,0,karaoke,通り過ぎてく曖昧な毎日も　かけがえのない
+Comment: 0,0:24:10.69,0:24:13.55,overtake op jp - 01,,0,0,0,karaoke,軌跡だって　もう知ってるから
+Comment: 0,0:24:13.55,0:24:20.99,overtake op jp - 01,,0,0,0,karaoke,待ち続けるより　手を伸ばせば　そこに未来
+Comment: 0,0:24:20.99,0:24:28.36,overtake op jp - 01,,0,0,0,karaoke,さあ　どんな今日にさえ　明日が来て　僕ら進んできただろう
+Comment: 0,0:24:28.53,0:24:35.96,overtake op jp - 01,,0,0,0,karaoke,曇天の日々だって　終わりが来て　青天がのぞくだろう
+Comment: 0,0:24:35.96,0:24:43.33,overtake op jp - 01,,0,0,0,karaoke,声なき声が今も聞こえている
+Comment: 0,0:24:43.51,0:24:51.26,overtake op jp - 01,,0,0,0,karaoke,名もなき風が髪を揺らす
+Comment: 0,0:23:29.47,0:23:36.03,overtake op cn - 01,,0,0,0,karaoke,无论今天如何  明天依旧到来  我们仍会前进
+Comment: 0,0:23:36.03,0:23:42.62,overtake op cn - 01,,0,0,0,karaoke,突然降下的雨  让地平线模糊不清
+Comment: 0,0:23:42.82,0:23:49.17,overtake op cn - 01,,0,0,0,karaoke,一并模糊了那未曾实现的梦想
+Comment: 0,0:23:50.95,0:23:57.64,overtake op cn - 01,,0,0,0,karaoke,即便缺少了什么  但也依然抱有期待
+Comment: 0,0:23:57.80,0:24:03.71,overtake op cn - 01,,0,0,0,karaoke,紧紧抓着这双手一刻不曾放开
+Comment: 0,0:24:04.10,0:24:10.60,overtake op cn - 01,,0,0,0,karaoke,共同度过的暧昧每一天  同样不可缺少
+Comment: 0,0:24:10.69,0:24:13.55,overtake op cn - 01,,0,0,0,karaoke,往后的轨迹  其实早已知晓
+Comment: 0,0:24:13.55,0:24:20.99,overtake op cn - 01,,0,0,0,karaoke,与其一直等待  不如伸手去触及未来
+Comment: 0,0:24:20.99,0:24:28.36,overtake op cn - 01,,0,0,0,karaoke,无论今天如何  明天依旧到来  我们仍会前进
+Comment: 0,0:24:28.53,0:24:35.96,overtake op cn - 01,,0,0,0,karaoke,阴翳的日子总会过去  之后便是晴天
+Comment: 0,0:24:35.96,0:24:43.33,overtake op cn - 01,,0,0,0,karaoke,不曾发出的声音  如今也已经知晓
+Comment: 0,0:24:43.51,0:24:51.26,overtake op cn - 01,,0,0,0,karaoke,那没有名字的风  吹动着你的头发
+Dialogue: 0,0:24:59.85,0:25:00.73,overtake - text,NTP,0,0,0,,拜托了！
+Dialogue: 0,0:25:01.11,0:25:03.69,overtake - text,NTP,0,0,0,,请让我成为你们队伍的赞助！
+Dialogue: 0,0:25:05.14,0:25:06.80,overtake - text,NTP,0,0,0,,我想为你们加油！
+Dialogue: 0,0:23:29.47,0:23:36.03,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}Blowing in the wind… waiting for the time to start…
+Dialogue: 0,0:23:36.03,0:23:42.62,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}急な雨に遭って　水平線は煙った
+Dialogue: 0,0:23:42.82,0:23:49.17,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}見果てぬ　夢のかたちも
+Dialogue: 0,0:23:50.95,0:23:57.64,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}欠けたなにかを　それでも抱く期待を
+Dialogue: 0,0:23:57.80,0:24:03.71,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}この手に　離さぬままで
+Dialogue: 0,0:24:04.10,0:24:10.60,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}通り過ぎてく曖昧な毎日も　かけがえのない
+Dialogue: 0,0:24:10.69,0:24:13.55,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}軌跡だって　もう知ってるから
+Dialogue: 0,0:24:13.55,0:24:20.99,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}待ち続けるより　手を伸ばせば　そこに未来
+Dialogue: 0,0:24:20.99,0:24:28.36,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}さあ　どんな今日にさえ　明日が来て　僕ら進んできただろう
+Dialogue: 0,0:24:28.53,0:24:35.96,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}曇天の日々だって　終わりが来て　青天がのぞくだろう
+Dialogue: 0,0:24:35.96,0:24:43.33,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}声なき声が今も聞こえている
+Dialogue: 0,0:24:43.51,0:24:51.26,overtake op jp - 01,,0,0,0,fx,{\fad(200,200)}名もなき風が髪を揺らす
+Dialogue: 0,0:23:29.47,0:23:36.03,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}无论今天如何  明天依旧到来  我们仍会前进
+Dialogue: 0,0:23:36.03,0:23:42.62,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}突然降下的雨  让地平线模糊不清
+Dialogue: 0,0:23:42.82,0:23:49.17,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}一并模糊了那未曾实现的梦想
+Dialogue: 0,0:23:50.95,0:23:57.64,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}即便缺少了什么  但也依然抱有期待
+Dialogue: 0,0:23:57.80,0:24:03.71,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}紧紧抓着这双手一刻不曾放开
+Dialogue: 0,0:24:04.10,0:24:10.60,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}共同度过的暧昧每一天  同样不可缺少
+Dialogue: 0,0:24:10.69,0:24:13.55,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}往后的轨迹  其实早已知晓
+Dialogue: 0,0:24:13.55,0:24:20.99,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}与其一直等待  不如伸手去触及未来
+Dialogue: 0,0:24:20.99,0:24:28.36,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}无论今天如何  明天依旧到来  我们仍会前进
+Dialogue: 0,0:24:28.53,0:24:35.96,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}阴翳的日子总会过去  之后便是晴天
+Dialogue: 0,0:24:35.96,0:24:43.33,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}不曾发出的声音  如今也已经知晓
+Dialogue: 0,0:24:43.51,0:24:51.26,overtake op cn - 01,,0,0,0,fx,{\fad(200,200)}那没有名字的风  吹动着你的头发

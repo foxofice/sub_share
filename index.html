@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <!-- 顶部轻量微光进度条 -->
+  <div class="top-progress-bar" id="topProgressBar" aria-hidden="true"></div>
 
   <!-- SVG 图标精灵池 -->
   <svg width="0" height="0" style="position:absolute; display:none" aria-hidden="true">
@@ -169,12 +171,132 @@
 
     <!-- 卡片展示区 -->
     <section class="container">
-      <div class="main-loader" id="mainLoader">
-        <div class="spinner"></div>
+      <div class="main-loader" id="mainLoader" hidden></div>
         <span class="loader-text">正在载入字幕索引数据...</span>
       </div>
 
-      <div class="anime-grid" id="animeGrid"></div>
+      <div class="anime-grid" id="animeGrid">
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+        <div class="skeleton-card" aria-hidden="true">
+          <div class="skeleton-thumb"></div>
+          <div class="skeleton-body">
+            <div class="skeleton-line skeleton-line--title"></div>
+            <div class="skeleton-line skeleton-line--sub"></div>
+            <div class="skeleton-line skeleton-line--meta"></div>
+          </div>
+        </div>
+      </div>
 
       <!-- 分页栏 -->
       <nav class="pagination" id="pagination" aria-label="分页导航" hidden></nav>

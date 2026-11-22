@@ -1,0 +1,1154 @@
+﻿[Script Info]
+Title: Default Aegisub file
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.709
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,20,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+Style: OPJP,FOT-GMaruGo Pro B,50,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,0,0,0,0,100,100,2,0,1,0,0,2,10,10,20,1
+Style: OPCH,方正兰亭圆_GBK_中粗,45,&H00000000,&H000000FF,&H00FFFFFF,&H00000000,-1,0,0,0,100,100,2,0,1,0,0,8,10,10,10,1
+Style: EDJP,FOT-GMaruGo Pro B,45,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,5,0,1,1,3,2,10,10,10,1
+Style: EDCH,方正兰亭圆_GBK_中粗,45,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,-1,0,0,0,100,100,0,0,1,1,3,8,10,10,10,1
+Style: PZ,方正准圆_GBK,60,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,5,10,10,10,1
+Style: PZ - S,汉仪正圆-85S,55,&H00FFFFFF,&H000000FF,&H000165FE,&H00FFFFFF,0,0,0,0,100,100,1,0,1,3,0,7,10,10,5,1
+Style: Staff,汉仪正圆-85S,40,&H00FFFFFF,&H000000FF,&H000164FF,&H00FFFFFF,0,0,0,0,100,100,0,0,1,0,0,2,10,10,10,1
+Style: Sub-CH,汉仪正圆-85S,80,&H00FFFFFF,&H000000FF,&H000165FE,&H008C6859,0,0,0,0,100,100,2,0,1,4,0,2,10,10,15,1
+Style: Sub-CH - up,汉仪正圆-85S,60,&H00FFFFFF,&H000000FF,&H000165FE,&H00FFFFFF,0,0,0,0,100,100,0,0,1,3,0,8,10,10,5,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,Code
+Comment: 0,0:00:00.00,0:00:00.00,EDJP,,0,0,0,code,function  AutoTags(Intervalo,Dato1,Dato2)              local  RESULTADO=""      local  SUERTE  =  0      local  CONTADOR  =  0      local  ARREGLO  =  0                            local  count  =  math.ceil(line.duration/Intervalo)                  			ARREGLO  =  {Dato1,Dato2}    			              for  i  =  1,  count  do                CONTADOR  =  i    	    	    		if  Dato1  and  Dato2  then      					if  CONTADOR%2  ==0  then    								SUERTE  =  ARREGLO[1]    					else    								SUERTE  =  ARREGLO[2]    					end	    		end      				    	RESULTADO  =  RESULTADO  .."\\t("  ..(i-1)*Intervalo..  ","  ..i*Intervalo..  ",\\"  ..SUERTE..")"..""      			      end          		      return  RESULTADO	  	    	                end
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,Template
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,OP
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,OP-S
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,OP-S
+Dialogue: 0,0:00:16.41,0:00:19.74,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}目覚めた瞬間から気分爽快
+Dialogue: 0,0:00:19.74,0:00:23.67,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}予報より晴れ模様　Blue sky
+Dialogue: 0,0:00:23.67,0:00:26.75,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}忘れ物チェックして　On time
+Dialogue: 0,0:00:27.59,0:00:31.92,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}走り出したい気持ちで出発オーライ
+Dialogue: 0,0:00:31.92,0:00:34.38,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}今日のプランはどんな感じ
+Dialogue: 0,0:00:35.55,0:00:38.18,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}頭の中シミュレーション
+Dialogue: 0,0:00:39.39,0:00:40.01,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}あれも
+Dialogue: 0,0:00:41.22,0:00:41.77,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}これも
+Dialogue: 0,0:00:41.77,0:00:43.77,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}見たいし食べたいし
+Dialogue: 0,0:00:43.77,0:00:47.27,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}全部全部　よくばりたいの
+Dialogue: 0,0:00:48.52,0:00:49.23,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}らんらら
+Dialogue: 0,0:00:49.23,0:00:52.57,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}ゴキゲンなムードにノッて　Many merry memories
+Dialogue: 0,0:00:52.57,0:00:55.49,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}おしゃべり止まんない　もっと　Feel so high
+Dialogue: 0,0:00:56.49,0:01:00.16,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}思いつき道草だって　Many merry memories
+Dialogue: 0,0:01:00.16,0:01:02.95,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}行き当たりばったりでも　so fine
+Dialogue: 0,0:01:04.08,0:01:07.50,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}曇る心も吹き飛ぶような
+Dialogue: 0,0:01:07.50,0:01:11.75,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}最高のシャッターチャンス　待ってるから
+Dialogue: 0,0:01:11.75,0:01:15.34,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}わくわくがずっと　あふれ出しそう
+Dialogue: 0,0:01:15.34,0:01:16.93,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}記録しきれない
+Dialogue: 0,0:01:16.93,0:01:18.72,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}思い出を
+Dialogue: 0,0:01:18.72,0:01:20.97,OPJP,,0,0,0,,{\bord6\shad7\pos(960,1065)\3c&H010001&\4c&HFEA000&}見つけに行こう
+Dialogue: 0,0:00:16.41,0:00:19.74,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}目覚めた瞬間から気分爽快
+Dialogue: 0,0:00:19.74,0:00:23.67,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}予報より晴れ模様　Blue sky
+Dialogue: 0,0:00:23.67,0:00:26.75,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}忘れ物チェックして　On time
+Dialogue: 0,0:00:27.59,0:00:31.92,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}走り出したい気持ちで出発オーライ
+Dialogue: 0,0:00:31.92,0:00:34.38,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}今日のプランはどんな感じ
+Dialogue: 0,0:00:35.55,0:00:38.18,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}頭の中シミュレーション
+Dialogue: 0,0:00:39.39,0:00:40.01,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}あれも
+Dialogue: 0,0:00:41.22,0:00:41.77,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}これも
+Dialogue: 0,0:00:41.77,0:00:43.77,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}見たいし食べたいし
+Dialogue: 0,0:00:43.77,0:00:47.27,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}全部全部　よくばりたいの
+Dialogue: 0,0:00:48.52,0:00:49.23,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}らんらら
+Dialogue: 0,0:00:49.23,0:00:52.57,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}ゴキゲンなムードにノッて　Many merry memories
+Dialogue: 0,0:00:52.57,0:00:55.49,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}おしゃべり止まんない　もっと　Feel so high
+Dialogue: 0,0:00:56.49,0:01:00.16,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}思いつき道草だって　Many merry memories
+Dialogue: 0,0:01:00.16,0:01:02.95,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}行き当たりばったりでも　so fine
+Dialogue: 0,0:01:04.08,0:01:07.50,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}曇る心も吹き飛ぶような
+Dialogue: 0,0:01:07.50,0:01:11.75,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}最高のシャッターチャンス　待ってるから
+Dialogue: 0,0:01:11.75,0:01:15.34,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}わくわくがずっと　あふれ出しそう
+Dialogue: 0,0:01:15.34,0:01:16.93,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}記録しきれない
+Dialogue: 0,0:01:16.93,0:01:18.72,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}思い出を
+Dialogue: 0,0:01:18.72,0:01:20.97,OPJP,,0,0,0,,{\bord3\pos(960,1065)\3c&H0164FF&\c&HFFFFFF&}見つけに行こう
+Dialogue: 0,0:00:16.41,0:00:19.74,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}晨起大早 格外舒爽
+Dialogue: 0,0:00:19.74,0:00:23.67,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}比起預報 更加晴朗
+Dialogue: 0,0:00:23.67,0:00:26.75,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}及時清點 行李齊全
+Dialogue: 0,0:00:27.59,0:00:31.92,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}難掩激動 準備出發
+Dialogue: 0,0:00:31.92,0:00:34.38,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}今天有怎樣的計劃呢
+Dialogue: 0,0:00:35.55,0:00:38.18,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}腦海中花式預演
+Dialogue: 0,0:00:39.39,0:00:40.01,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}那個也
+Dialogue: 0,0:00:41.22,0:00:41.77,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}這個也
+Dialogue: 0,0:00:41.77,0:00:43.77,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}想看又想吃
+Dialogue: 0,0:00:43.77,0:00:47.27,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}一切的一切  變得貪得無厭啦
+Dialogue: 0,0:00:48.52,0:00:49.23,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}啦啦啦
+Dialogue: 0,0:00:49.23,0:00:52.57,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}乘著歡快的心情  Many merry memories
+Dialogue: 0,0:00:52.57,0:00:55.49,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}我們再多聊聊吧  停不下來  Feel so high
+Dialogue: 0,0:00:56.49,0:01:00.16,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}即便是隨性閒逛  Many merry memories
+Dialogue: 0,0:01:00.16,0:01:02.95,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}一起到世界的盡頭  so fine
+Dialogue: 0,0:01:04.08,0:01:07.50,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}好像要吹走心裡的陰霾那般
+Dialogue: 0,0:01:07.50,0:01:11.75,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}我會一直等待  按下快門的最佳瞬間
+Dialogue: 0,0:01:11.75,0:01:15.34,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}心情似乎也會如這般  一直悸動下去
+Dialogue: 0,0:01:15.34,0:01:16.93,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}一起尋找
+Dialogue: 0,0:01:16.93,0:01:18.72,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}記錄不完的那些
+Dialogue: 0,0:01:18.72,0:01:20.97,OPCH,,0,0,0,,{\bord6\shad7\pos(960,5)\3c&H010001&\4c&HFEA000&}精彩回憶吧
+Dialogue: 0,0:00:16.41,0:00:19.74,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}晨起大早 格外舒爽
+Dialogue: 0,0:00:19.74,0:00:23.67,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}比起預報 更加晴朗
+Dialogue: 0,0:00:23.67,0:00:26.75,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}及時清點 行李齊全
+Dialogue: 0,0:00:27.59,0:00:31.92,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}難掩激動 準備出發
+Dialogue: 0,0:00:31.92,0:00:34.38,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}今天有怎樣的計劃呢
+Dialogue: 0,0:00:35.55,0:00:38.18,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}腦海中花式預演
+Dialogue: 0,0:00:39.39,0:00:40.01,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}那個也
+Dialogue: 0,0:00:41.22,0:00:41.77,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}這個也
+Dialogue: 0,0:00:41.77,0:00:43.77,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}想看又想吃
+Dialogue: 0,0:00:43.77,0:00:47.27,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}一切的一切  變得貪得無厭啦
+Dialogue: 0,0:00:48.52,0:00:49.23,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}啦啦啦
+Dialogue: 0,0:00:49.23,0:00:52.57,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}乘著歡快的心情  Many merry memories
+Dialogue: 0,0:00:52.57,0:00:55.49,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}我們再多聊聊吧  停不下來  Feel so high
+Dialogue: 0,0:00:56.49,0:01:00.16,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}即便是隨性閒逛  Many merry memories
+Dialogue: 0,0:01:00.16,0:01:02.95,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}一起到世界的盡頭  so fine
+Dialogue: 0,0:01:04.08,0:01:07.50,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}好像要吹走心裡的陰霾那般
+Dialogue: 0,0:01:07.50,0:01:11.75,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}我會一直等待  按下快門的最佳瞬間
+Dialogue: 0,0:01:11.75,0:01:15.34,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}心情似乎也會如這般  一直悸動下去
+Dialogue: 0,0:01:15.34,0:01:16.93,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}一起尋找
+Dialogue: 0,0:01:16.93,0:01:18.72,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}記錄不完的那些
+Dialogue: 0,0:01:18.72,0:01:20.97,OPCH,,0,0,0,,{\bord3\pos(960,5)\3c&H0164FF&\c&HFFFFFF&}精彩回憶吧
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,ED
+Comment: 0,0:22:29.99,0:22:29.99,Default,,0,0,0,,ED-S
+Comment: 0,0:22:29.99,0:22:29.99,Default,,0,0,0,,ED-S
+Dialogue: 0,0:22:39.54,0:22:43.38,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}効率だとか　ナンセンスだとか
+Dialogue: 0,0:22:43.38,0:22:46.80,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}その辺は置いといて
+Dialogue: 0,0:22:46.80,0:22:49.22,EDJP,,0,0,0,,{\bord2\xshad-4\blur1\yshad0\3c&H411E10&\4c&HC7E9B8&}興味わくコト　気になるコト
+Dialogue: 0,0:22:49.22,0:22:51.18,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H411E10&\4c&H9FF7FB&}興味わくコト　気になるコト
+Dialogue: 0,0:22:51.18,0:22:54.77,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFEE7B4&}憧れで　やってみちゃおう直感だ
+Dialogue: 0,0:22:54.77,0:22:58.31,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HBFE8B9&}「楽しんだもん勝ち」とかいう
+Dialogue: 0,0:22:58.31,0:23:01.77,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H7F5856&}ステキな言葉があるじゃん
+Dialogue: 0,0:23:01.77,0:23:03.90,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HBFE8B9&}今日だって　なんだかんだ満足
+Dialogue: 0,0:23:03.90,0:23:06.19,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HBFE8B9&}よかった…
+Dialogue: 0,0:23:06.95,0:23:10.78,EDJP,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}360度の景色を撮って
+Dialogue: 0,0:23:10.78,0:23:14.66,EDJP,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}ずっと形に残せたらいいな
+Dialogue: 0,0:23:14.66,0:23:18.54,EDJP,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}だって振り向けば　君がいるし
+Dialogue: 0,0:23:18.54,0:23:22.42,EDJP,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}前向けば色んなフレーバーだ
+Dialogue: 0,0:23:22.42,0:23:24.55,EDJP,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}ウィークエンドロール
+Dialogue: 0,0:23:24.55,0:23:26.46,EDJP,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}思い出　残して
+Dialogue: 0,0:23:26.46,0:23:30.30,EDJP,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}来週は何して遊ぼうかな
+Dialogue: 0,0:23:34.06,0:23:38.06,EDJP,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}こんくらいがなんか丁度いい空気だ
+Dialogue: 0,0:23:41.81,0:23:45.82,EDJP,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}こんくらいがなんか居心地がいいよ
+Dialogue: 0,0:23:49.53,0:23:55.62,EDJP,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}ねえ　来週の天気　晴れるかな?
+Dialogue: 0,0:22:39.54,0:22:43.38,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}拋開所謂效率  何必管它荒唐
+Dialogue: 0,0:22:43.38,0:22:46.80,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}將條條框框  放置一旁
+Dialogue: 0,0:22:46.80,0:22:49.22,EDCH,,0,0,0,,{\bord2\xshad-4\blur1\yshad0\3c&H411E10&\4c&HC7E9B8&}隨著那份興趣  跟著那份好奇
+Dialogue: 0,0:22:49.22,0:22:51.18,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}隨著那份興趣  跟著那份好奇
+Dialogue: 0,0:22:51.18,0:22:54.77,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFEE7B4&}心懷憧憬  僅憑直覺大膽嘗試
+Dialogue: 0,0:22:54.77,0:22:58.31,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HBFE8B9&}不是有句超讚的話這樣說
+Dialogue: 0,0:22:58.31,0:23:01.77,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H7F5856&}「盡興而活  即是勝利」
+Dialogue: 0,0:23:01.77,0:23:03.90,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HBFE8B9&}今天一天  不經意間也已心滿意足
+Dialogue: 0,0:23:03.90,0:23:06.19,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HBFE8B9&}感覺真好…
+Dialogue: 0,0:23:06.95,0:23:10.78,EDCH,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}多想拍下這360度的風景
+Dialogue: 0,0:23:10.78,0:23:14.66,EDCH,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}讓此刻永遠  定格成形
+Dialogue: 0,0:23:14.66,0:23:18.54,EDCH,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}只因驀然回首  你就在我身旁
+Dialogue: 0,0:23:18.54,0:23:22.42,EDCH,,0,0,0,,{\bord2\xshad0\blur1\yshad4\3c&H582004&\4c&HFFAE00&}而抬頭遠望  萬千精彩各有芬芳
+Dialogue: 0,0:23:22.42,0:23:24.55,EDCH,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}Weekend  Roll
+Dialogue: 0,0:23:24.55,0:23:26.46,EDCH,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&H82F2F6&}將點滴回憶  悉心留存
+Dialogue: 0,0:23:26.46,0:23:30.30,EDCH,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}下週又該玩什麼新花樣呢
+Dialogue: 0,0:23:34.06,0:23:38.06,EDCH,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}像現在這樣  氣氛剛剛好
+Dialogue: 0,0:23:41.81,0:23:45.82,EDCH,,1000,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}像現在這樣  心頭沒煩惱
+Dialogue: 0,0:23:49.53,0:23:55.62,EDCH,,0,0,0,,{\bord2\xshad4\blur1\yshad0\3c&H582004&\4c&HFFFDFC&}你說  下週的天空  會放晴嗎?
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,PZ
+Dialogue: 0,0:00:00.00,0:00:00.00,PZ,,0,0,0,,
+Dialogue: 0,0:02:49.60,0:02:49.64,PZ,,0,0,0,,{=1}{\alpha&HD0&\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1104.14,660.09)\pos(1132.14,234.43)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.64,0:02:49.69,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1107.53,644.14)\pos(1135.53,218.48)\alpha&H9C&}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.69,0:02:49.73,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1110.2,633.24)\pos(1138.2,207.58)\alpha&H68&}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.73,0:02:49.77,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1112.85,622.52)\pos(1140.85,196.86)\alpha&H34&}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.77,0:02:49.81,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1115.44,612.15)\pos(1143.44,186.49)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.81,0:02:49.85,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1117.89,602.22)\pos(1145.89,176.56)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.85,0:02:49.89,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1120.14,592.97)\pos(1148.14,167.31)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.89,0:02:49.94,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1122.16,584.49)\pos(1150.16,158.83)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.94,0:02:49.98,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1123.88,576.99)\pos(1151.88,151.33)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:49.98,0:02:50.02,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1125.32,570.65)\pos(1153.32,144.99)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.02,0:02:50.06,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.33,565.89)\pos(1154.33,140.23)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.06,0:02:50.10,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,563.28)\pos(1154.67,137.62)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.10,0:02:50.14,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,561.99)\pos(1154.67,136.33)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.14,0:02:50.19,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,560.55)\pos(1154.67,134.89)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.19,0:02:50.23,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,559.29)\pos(1154.67,133.63)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.23,0:02:50.27,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,557.95)\pos(1154.67,132.29)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.27,0:02:50.31,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,556.54)\pos(1154.67,130.88)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.31,0:02:50.35,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,555.29)\pos(1154.67,129.63)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.35,0:02:50.39,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,553.93)\pos(1154.67,128.27)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.39,0:02:50.44,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,552.54)\pos(1154.67,126.88)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.44,0:02:50.48,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,551.29)\pos(1154.67,125.63)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.48,0:02:50.52,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,549.95)\pos(1154.67,124.29)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.52,0:02:50.56,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,548.54)\pos(1154.67,122.88)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.56,0:02:50.60,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,547.29)\pos(1154.67,121.63)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.60,0:02:50.64,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,545.97)\pos(1154.67,120.31)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.64,0:02:50.69,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,544.54)\pos(1154.67,118.88)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.69,0:02:50.73,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,543.29)\pos(1154.67,117.63)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.73,0:02:50.77,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,541.9)\pos(1154.67,116.24)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.77,0:02:50.81,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,540.55)\pos(1154.67,114.89)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.81,0:02:50.85,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,539.29)\pos(1154.67,113.63)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.85,0:02:50.90,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,537.95)\pos(1154.67,112.29)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.90,0:02:50.94,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.67,536.57)\pos(1154.67,110.91)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.94,0:02:50.98,PZ,,0,0,0,,{=1}{\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.72,535.29)\pos(1154.72,109.63)\alpha&H58&}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:02:50.98,0:02:51.02,PZ,,0,0,0,,{=1}{\alpha&HB0&\an2\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz350.346\fsp-50.03\org(1126.72,533.98)\pos(1154.72,108.32)}還{\frz344.131\fsp-50.03}裝{\frz337.915\fsp-50.03}有{\frz331.700\fsp-50.03}風{\frz325.485\fsp-50.03}扇{\frz319.269\fsp0.00}噢
+Dialogue: 0,0:03:20.59,0:03:20.63,PZ,,0,0,0,,{=3}{\alpha&HD0&\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1524.9,419.83)}再待　分鐘
+Dialogue: 0,0:03:20.63,0:03:20.67,PZ,,0,0,0,,{=3}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1543.53,416.14)\alpha&H9C&}再待　分鐘
+Dialogue: 0,0:03:20.67,0:03:20.72,PZ,,0,0,0,,{=3}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1561.57,412.37)\alpha&H68&}再待　分鐘
+Dialogue: 0,0:03:20.72,0:03:20.76,PZ,,0,0,0,,{=3}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1578.45,408.93)\alpha&H34&}再待　分鐘
+Dialogue: 0,0:03:20.76,0:03:20.80,PZ,,0,0,0,,{=3}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1593.51,405.81)}再待　分鐘
+Dialogue: 0,0:03:20.80,0:03:20.84,PZ,,0,0,0,,{=3}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1606.07,403.22)}再待　分鐘
+Dialogue: 0,0:03:20.84,0:03:20.88,PZ,,0,0,0,,{=3}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1615.04,401.39)}再待　分鐘
+Dialogue: 0,0:03:20.88,0:03:22.51,PZ,,0,0,0,,{=3}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz246.4\pos(1618.66,400.66)\fad(0,183)}再待　分鐘
+Dialogue: 0,0:03:20.59,0:03:20.63,PZ,,0,0,0,,{=2}{\alpha&HD0&\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1550.23,471.83)}30
+Dialogue: 0,0:03:20.63,0:03:20.67,PZ,,0,0,0,,{=2}{\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1568.86,468.14)\alpha&H9C&}30
+Dialogue: 0,0:03:20.67,0:03:20.72,PZ,,0,0,0,,{=2}{\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1586.9,464.37)\alpha&H68&}30
+Dialogue: 0,0:03:20.72,0:03:20.76,PZ,,0,0,0,,{=2}{\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1603.78,460.93)\alpha&H34&}30
+Dialogue: 0,0:03:20.76,0:03:20.80,PZ,,0,0,0,,{=2}{\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1618.84,457.81)}30
+Dialogue: 0,0:03:20.80,0:03:20.84,PZ,,0,0,0,,{=2}{\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1631.4,455.22)}30
+Dialogue: 0,0:03:20.84,0:03:20.88,PZ,,0,0,0,,{=2}{\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1640.37,453.39)}30
+Dialogue: 0,0:03:20.88,0:03:22.51,PZ,,0,0,0,,{=2}{\an2\fn何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz334.6\pos(1643.99,452.66)\fad(0,183)}30
+Dialogue: 0,0:03:21.34,0:03:21.38,PZ,,0,0,0,,{=4}{\alpha&HD0&\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(253.48,421.53)}就出發吧
+Dialogue: 0,0:03:21.38,0:03:21.43,PZ,,0,0,0,,{=4}{\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(231.98,413.86)\alpha&H9C&}就出發吧
+Dialogue: 0,0:03:21.43,0:03:21.47,PZ,,0,0,0,,{=4}{\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(210.71,406.88)\alpha&H68&}就出發吧
+Dialogue: 0,0:03:21.47,0:03:21.51,PZ,,0,0,0,,{=4}{\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(190.99,400.28)\alpha&H34&}就出發吧
+Dialogue: 0,0:03:21.51,0:03:21.55,PZ,,0,0,0,,{=4}{\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(173.38,394.46)}就出發吧
+Dialogue: 0,0:03:21.55,0:03:21.59,PZ,,0,0,0,,{=4}{\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(158.72,389.55)}就出發吧
+Dialogue: 0,0:03:21.59,0:03:21.63,PZ,,0,0,0,,{=4}{\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(148.25,386.09)}就出發吧
+Dialogue: 0,0:03:21.63,0:03:22.51,PZ,,0,0,0,,{=4}{\an8\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz293.7\pos(144,384.66)\fad(0,183)}就出發吧
+Dialogue: 0,0:03:24.60,0:03:24.64,PZ,,0,0,0,,{=5}{\alpha&HD0&\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(315.76,227.9)}咖啡好喝
+Dialogue: 0,0:03:24.64,0:03:24.68,PZ,,0,0,0,,{=5}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(306.71,219.09)\alpha&H9C&}咖啡好喝
+Dialogue: 0,0:03:24.68,0:03:24.72,PZ,,0,0,0,,{=5}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(297.37,209.87)\alpha&H68&}咖啡好喝
+Dialogue: 0,0:03:24.72,0:03:24.76,PZ,,0,0,0,,{=5}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(288.7,201.33)\alpha&H34&}咖啡好喝
+Dialogue: 0,0:03:24.76,0:03:24.80,PZ,,0,0,0,,{=5}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(280.91,193.61)}咖啡好喝
+Dialogue: 0,0:03:24.80,0:03:24.85,PZ,,0,0,0,,{=5}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(274.47,187.14)}咖啡好喝
+Dialogue: 0,0:03:24.85,0:03:24.89,PZ,,0,0,0,,{=5}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(269.81,182.48)}咖啡好喝
+Dialogue: 0,0:03:24.89,0:03:26.02,PZ,,0,0,0,,{=5}{\an2\fn@何某手寫-Regular\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz285.2\pos(268,180.66)\fad(0,190)}咖啡好喝
+Dialogue: 0,0:03:34.99,0:03:36.45,PZ,,0,0,0,,{\an7\fn@方正准圆_GBK\frz-90\fs70\bord3\c&H000000&\3c&HFFFFFF&\fad(350,193)\pos(1541.33,255.33)}與此同時\N　　　汽車組們——
+Dialogue: 0,0:04:08.73,0:04:11.19,PZ,,0,0,0,,{\an2\fn@方正准圆_GBK\frz-90\fsp10\bord3\c&H000000&\3c&HFFFFFF&\pos(316,393.66)}地獄的超絕大塞車
+Dialogue: 0,0:04:11.19,0:04:12.69,PZ,,0,0,0,,{\an8\fn@汉仪旗黑 65S\fs100\bord3\3c&HB7D438&\frz269.5\pos(233.34,507.32)}擁堵資訊
+Dialogue: 0,0:04:11.19,0:04:12.69,PZ,,0,0,0,,{\an2\fn汉仪旗黑 50S\fs90\bord3\c&H0303C1&\frz1.25\pos(1178.66,235.34)}請各位恢復速度
+Dialogue: 0,0:04:31.79,0:04:31.83,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1176.05,1121.69)\pos(1301.56,338.28)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:31.83,0:04:31.87,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1170.49,1118.95)\pos(1296,335.54)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:31.87,0:04:31.91,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1165.18,1116.16)\pos(1290.69,332.75)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:31.91,0:04:31.95,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1159.69,1113.32)\pos(1285.2,329.91)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:31.95,0:04:32.00,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1154.23,1110.58)\pos(1279.74,327.17)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.00,0:04:32.04,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1148.92,1107.81)\pos(1274.43,324.4)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.04,0:04:32.08,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1143.3,1105.14)\pos(1268.81,321.73)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.08,0:04:32.12,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1137.95,1102.34)\pos(1263.46,318.93)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.12,0:04:32.16,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1132.47,1099.53)\pos(1257.98,316.12)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.16,0:04:32.20,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1127.01,1096.78)\pos(1252.52,313.37)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.20,0:04:32.25,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1121.63,1093.87)\pos(1247.14,310.46)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.25,0:04:32.29,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1116.15,1091.2)\pos(1241.66,307.79)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.29,0:04:32.33,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1110.7,1088.48)\pos(1236.21,305.07)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.33,0:04:32.37,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1105.36,1085.67)\pos(1230.87,302.26)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.37,0:04:32.41,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1099.75,1082.97)\pos(1225.26,299.56)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.41,0:04:32.45,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1094.3,1080.25)\pos(1219.81,296.84)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.45,0:04:32.50,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1088.92,1077.39)\pos(1214.43,293.98)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.50,0:04:32.54,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1083.46,1074.61)\pos(1208.97,291.2)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.54,0:04:32.58,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1077.93,1071.96)\pos(1203.44,288.55)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.58,0:04:32.62,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1072.56,1069.14)\pos(1198.07,285.72)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.62,0:04:32.66,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1067.07,1066.31)\pos(1192.58,282.9)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.66,0:04:32.71,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1061.72,1063.59)\pos(1187.23,280.18)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.71,0:04:32.75,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1056.22,1060.93)\pos(1181.73,277.52)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.75,0:04:32.79,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1050.78,1058.1)\pos(1176.29,274.69)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.79,0:04:32.83,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1045.3,1055.33)\pos(1170.81,271.92)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.83,0:04:32.87,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1039.83,1052.54)\pos(1165.34,269.13)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.87,0:04:32.91,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1034.43,1049.83)\pos(1159.94,266.42)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.91,0:04:32.96,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1028.93,1047.04)\pos(1154.44,263.63)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:32.96,0:04:33.00,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1023.47,1044.27)\pos(1148.98,260.86)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.00,0:04:33.04,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1018.13,1041.47)\pos(1143.64,258.06)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.04,0:04:33.08,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1012.64,1038.76)\pos(1138.15,255.35)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.08,0:04:33.12,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1007.2,1036.03)\pos(1132.71,252.62)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.12,0:04:33.16,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(1001.69,1033.3)\pos(1127.2,249.89)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.16,0:04:33.21,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(996.3,1030.48)\pos(1121.81,247.07)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.21,0:04:33.25,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(990.85,1027.63)\pos(1116.36,244.22)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.25,0:04:33.29,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(985.4,1024.76)\pos(1110.91,241.35)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.29,0:04:33.33,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(979.91,1022.11)\pos(1105.42,238.7)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.33,0:04:33.37,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(974.46,1019.36)\pos(1099.97,235.95)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.37,0:04:33.41,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(968.99,1016.6)\pos(1094.5,233.19)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.41,0:04:33.46,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(963.67,1013.85)\pos(1089.18,230.44)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.46,0:04:33.50,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(958.2,1011.11)\pos(1083.71,227.7)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.50,0:04:33.54,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(952.69,1008.35)\pos(1078.2,224.94)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.54,0:04:33.58,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(947.31,1005.6)\pos(1072.82,222.18)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.58,0:04:33.62,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(941.82,1002.82)\pos(1067.33,219.41)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.62,0:04:33.66,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(936.35,1000.08)\pos(1061.86,216.67)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.66,0:04:33.71,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(930.91,997.28)\pos(1056.42,213.87)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.71,0:04:33.75,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(925.42,994.5)\pos(1050.93,211.09)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.75,0:04:33.79,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(920.07,991.74)\pos(1045.58,208.33)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.79,0:04:33.83,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(914.58,989)\pos(1040.09,205.59)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.83,0:04:33.87,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(909.09,986.27)\pos(1034.6,202.86)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.87,0:04:33.91,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(903.74,983.44)\pos(1029.25,200.03)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.91,0:04:33.96,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(898.21,980.62)\pos(1023.72,197.21)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:33.96,0:04:34.00,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(892.82,977.93)\pos(1018.33,194.52)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:34.00,0:04:34.04,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(887.36,975.15)\pos(1012.87,191.74)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:34.04,0:04:34.08,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(881.84,972.38)\pos(1007.35,188.97)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:34.08,0:04:34.12,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(876.49,969.61)\pos(1002,186.2)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:34.12,0:04:34.16,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(871.01,966.93)\pos(996.52,183.52)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:34.16,0:04:34.21,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(865.52,964.17)\pos(991.03,180.76)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:34.21,0:04:34.25,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(860.08,961.36)\pos(985.59,177.95)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:34.25,0:04:34.29,PZ,,0,0,0,,{=11=12}{\an2\fn霞鹜文楷 Medium\3c&H424242&\fscx71.44\fscy72.70\frz-0.1116\frx-0.4483\fry-2.9110\xbord1.14\ybord1.18\org(854.62,958.58)\pos(980.13,175.17)\c&HFCFBF3&}高速綠洲
+Dialogue: 0,0:04:36.55,0:04:40.30,PZ,,0,0,0,,{=13}{\clip()\fscx100\t(17,3730,\fscx94.88)\fscy100\t(17,3730,\fscy94.88)\an2\fn汉仪旗黑 65S\fs50\fsp10\bord1\t(17,3730,\bord0.95)\c&H8C968E&\3c&H000000&\move(442.67,174.01,469.25,192.79,17,3730)}回收處
+Dialogue: 0,0:04:47.01,0:04:47.05,PZ,,0,0,0,,{=14}{\fscx73.12\fscy73.12\an6\fn华康翩翩体W5-A\bord2.19\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1076.97,735.73)}癟
+Dialogue: 0,0:04:47.05,0:04:47.09,PZ,,0,0,0,,{=14}{\fscx75.15\fscy75.15\an6\fn华康翩翩体W5-A\bord2.25\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1071.46,734.55)}癟
+Dialogue: 0,0:04:47.09,0:04:47.14,PZ,,0,0,0,,{=14}{\fscx77.92\fscy77.92\an6\fn华康翩翩体W5-A\bord2.34\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1064.4,733.11)}癟
+Dialogue: 0,0:04:47.14,0:04:47.18,PZ,,0,0,0,,{=14}{\fscx80.62\fscy80.62\an6\fn华康翩翩体W5-A\bord2.42\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1056.98,731.54)}癟
+Dialogue: 0,0:04:47.18,0:04:47.22,PZ,,0,0,0,,{=14}{\fscx83.43\fscy83.43\an6\fn华康翩翩体W5-A\bord2.5\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1049.64,729.99)}癟
+Dialogue: 0,0:04:47.22,0:04:47.26,PZ,,0,0,0,,{=14}{\fscx85.85\fscy85.85\an6\fn华康翩翩体W5-A\bord2.58\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1042.72,728.53)}癟
+Dialogue: 0,0:04:47.26,0:04:47.30,PZ,,0,0,0,,{=14}{\fscx88.44\fscy88.44\an6\fn华康翩翩体W5-A\bord2.65\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1036.3,727.19)}癟
+Dialogue: 0,0:04:47.30,0:04:47.34,PZ,,0,0,0,,{=14}{\fscx90.51\fscy90.51\an6\fn华康翩翩体W5-A\bord2.72\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1030.55,725.98)}癟
+Dialogue: 0,0:04:47.34,0:04:47.39,PZ,,0,0,0,,{=14}{\fscx92.45\fscy92.45\an6\fn华康翩翩体W5-A\bord2.77\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1025.42,724.93)}癟
+Dialogue: 0,0:04:47.39,0:04:47.43,PZ,,0,0,0,,{=14}{\fscx94.16\fscy94.16\an6\fn华康翩翩体W5-A\bord2.82\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1020.88,723.93)}癟
+Dialogue: 0,0:04:47.43,0:04:47.47,PZ,,0,0,0,,{=14}{\fscx95.63\fscy95.63\an6\fn华康翩翩体W5-A\bord2.87\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1017.01,723.15)}癟
+Dialogue: 0,0:04:47.47,0:04:47.51,PZ,,0,0,0,,{=14}{\fscx96.87\fscy96.87\an6\fn华康翩翩体W5-A\bord2.91\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1013.71,722.44)}癟
+Dialogue: 0,0:04:47.51,0:04:47.55,PZ,,0,0,0,,{=14}{\fscx97.8\fscy97.8\an6\fn华康翩翩体W5-A\bord2.93\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1011.02,721.9)}癟
+Dialogue: 0,0:04:47.55,0:04:47.59,PZ,,0,0,0,,{=14}{\fscx98.74\fscy98.74\an6\fn华康翩翩体W5-A\bord2.96\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1008.8,721.42)}癟
+Dialogue: 0,0:04:47.59,0:04:47.64,PZ,,0,0,0,,{=14}{\fscx99.35\fscy99.35\an6\fn华康翩翩体W5-A\bord2.98\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1007.18,721.08)}癟
+Dialogue: 0,0:04:47.64,0:04:47.68,PZ,,0,0,0,,{=14}{\fscx99.8\fscy99.8\an6\fn华康翩翩体W5-A\bord2.99\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1006.01,720.82)}癟
+Dialogue: 0,0:04:47.68,0:04:47.80,PZ,,0,0,0,,{=14}{\fscx100\fscy100\an6\fn华康翩翩体W5-A\bord3\c&H000000&\3c&HFFFFFF&\frz347.1\pos(1005.33,720.67)}癟
+Dialogue: 0,0:04:47.80,0:04:47.85,PZ,,0,0,0,,{=15}{\fscx85.05\fscy85.05\an6\fn华康翩翩体W5-A\bord2.55\c&H000000&\3c&HFFFFFF&\frz347.1\pos(892.21,624.05)}癟
+Dialogue: 0,0:04:47.85,0:04:47.89,PZ,,0,0,0,,{=15}{\fscx73.24\fscy73.24\an6\fn华康翩翩体W5-A\bord2.2\c&H000000&\3c&HFFFFFF&\frz347.1\pos(805.34,547.96)}癟
+Dialogue: 0,0:04:47.89,0:04:47.93,PZ,,0,0,0,,{=15}{\fscx66.09\fscy66.09\an6\fn华康翩翩体W5-A\bord1.98\c&H000000&\3c&HFFFFFF&\frz347.1\pos(752.74,501.91)}癟
+Dialogue: 0,0:04:47.93,0:04:47.97,PZ,,0,0,0,,{=15}{\fscx61.97\fscy61.97\an6\fn华康翩翩体W5-A\bord1.86\c&H000000&\3c&HFFFFFF&\frz347.1\pos(722.34,475.39)}癟
+Dialogue: 0,0:04:47.97,0:04:48.01,PZ,,0,0,0,,{=15}{\fscx59.78\fscy59.78\an6\fn华康翩翩体W5-A\bord1.79\c&H000000&\3c&HFFFFFF&\frz347.1\pos(706.88,461.2)}癟
+Dialogue: 0,0:04:48.01,0:04:48.64,PZ,,0,0,0,,{=15}{\fscx59.14\t(27,611,\fscx58.31)\fscy59.14\t(27,611,\fscy58.31)\an6\fn华康翩翩体W5-A\bord1.77\t(27,611,\bord1.75)\c&H000000&\3c&HFFFFFF&\frz347.1\move(701.64,457.04,695.31,451.85,27,611)\fad(0,352)}癟
+Dialogue: 0,0:04:50.93,0:04:50.97,PZ,,0,0,0,,{=16}{\alpha&HA0&\fscx79.29\fscy79.29\an2\fn何某手寫-Regular\bord2.38\c&H000000&\3c&HFFFFFF&\frz344.1\pos(995.2,464.36)}喲
+Dialogue: 0,0:04:50.97,0:04:51.02,PZ,,0,0,0,,{=16}{\fscx80.86\fscy80.86\an2\fn何某手寫-Regular\bord2.43\c&H000000&\3c&HFFFFFF&\frz344.1\pos(997.78,459.24)\alpha&H50&}喲
+Dialogue: 0,0:04:51.02,0:04:51.06,PZ,,0,0,0,,{=16}{\fscx83.28\fscy83.28\an2\fn何某手寫-Regular\bord2.5\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1001.61,451.2)}喲
+Dialogue: 0,0:04:51.06,0:04:51.10,PZ,,0,0,0,,{=16}{\fscx86.41\fscy86.41\an2\fn何某手寫-Regular\bord2.59\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1006.49,441.12)}喲
+Dialogue: 0,0:04:51.10,0:04:51.14,PZ,,0,0,0,,{=16}{\fscx89.84\fscy89.84\an2\fn何某手寫-Regular\bord2.7\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1011.97,429.78)}喲
+Dialogue: 0,0:04:51.14,0:04:51.18,PZ,,0,0,0,,{=16}{\fscx93.43\fscy93.43\an2\fn何某手寫-Regular\bord2.8\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1017.66,418.1)}喲
+Dialogue: 0,0:04:51.18,0:04:51.22,PZ,,0,0,0,,{=16}{\fscx96.67\fscy96.67\an2\fn何某手寫-Regular\bord2.9\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1022.78,407.47)}喲
+Dialogue: 0,0:04:51.22,0:04:51.27,PZ,,0,0,0,,{=16}{\fscx99.11\fscy99.11\an2\fn何某手寫-Regular\bord2.97\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1026.53,399.67)}喲
+Dialogue: 0,0:04:51.27,0:04:52.10,PZ,,0,0,0,,{=16}{\fscx100\fscy100\an2\fn何某手寫-Regular\bord3\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1028,396.67)}喲
+Dialogue: 0,0:05:27.72,0:05:27.77,PZ,,0,0,0,,{\alpha&HA0&\fscx79.29\fscy79.29\an2\fn何某手寫-Regular\bord2.38\c&H000000&\3c&HFFFFFF&\frz344.1\pos(995.2,454.36)}喲
+Dialogue: 0,0:05:27.77,0:05:27.81,PZ,,0,0,0,,{\fscx80.86\fscy80.86\an2\fn何某手寫-Regular\bord2.43\c&H000000&\3c&HFFFFFF&\frz344.1\pos(997.78,449.24)\alpha&H50&}喲
+Dialogue: 0,0:05:27.81,0:05:27.85,PZ,,0,0,0,,{\fscx83.28\fscy83.28\an2\fn何某手寫-Regular\bord2.5\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1001.61,441.2)}喲
+Dialogue: 0,0:05:27.85,0:05:27.89,PZ,,0,0,0,,{\fscx86.41\fscy86.41\an2\fn何某手寫-Regular\bord2.59\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1006.49,431.12)}喲
+Dialogue: 0,0:05:27.89,0:05:27.93,PZ,,0,0,0,,{\fscx89.84\fscy89.84\an2\fn何某手寫-Regular\bord2.7\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1011.97,419.78)}喲
+Dialogue: 0,0:05:27.93,0:05:27.97,PZ,,0,0,0,,{\fscx93.43\fscy93.43\an2\fn何某手寫-Regular\bord2.8\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1017.66,408.1)}喲
+Dialogue: 0,0:05:27.97,0:05:28.02,PZ,,0,0,0,,{\fscx96.67\fscy96.67\an2\fn何某手寫-Regular\bord2.9\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1022.78,397.47)}喲
+Dialogue: 0,0:05:28.02,0:05:28.06,PZ,,0,0,0,,{\fscx99.11\fscy99.11\an2\fn何某手寫-Regular\bord2.97\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1026.53,389.67)}喲
+Dialogue: 0,0:05:28.06,0:05:28.68,PZ,,0,0,0,,{\fscx100\fscy100\an2\fn何某手寫-Regular\bord3\c&H000000&\3c&HFFFFFF&\frz344.1\pos(1028,386.67)}喲
+Dialogue: 0,0:06:33.37,0:06:34.04,PZ,,0,0,0,,{=110}{\an2\fn方正综艺_GBK\fs40\c&H442F16&\3c&HB3A919&\fscx100.94\fscy101.22\frz18.1704\frx-10.7838\fry10.0413\xbord2.03\ybord2.04\org(695.67,203.37)\pos(745.78,247.25)\3a&HFF&\t(0,189,\3a&H00&)}自動接送模式
+Dialogue: 0,0:06:33.46,0:06:34.04,PZ,,0,0,0,,{=117}{\an2\fn方正综艺_GBK\fs40\c&H442F16&\3c&HB3A919&\fscx139.99\fscy103.09\frz21.8603\frx-3.0810\fry11.3991\xbord2.80\ybord2.06\org(720.63,498.46)\pos(675.85,459.21)\3a&HFF&\t(0,189,\3a&H00&)}家
+Dialogue: 0,0:06:33.62,0:06:34.04,PZ,,0,0,0,,{=118}{\an2\fn方正综艺_GBK\fs40\c&H442F16&\3c&HB3A919&\fscx117.14\fscy102.16\frz17.3812\frx-3.2737\fry12.1231\xbord2.34\ybord2.04\org(870.79,296.4)\pos(917.92,391.48)\3a&HFF&\t(0,189,\3a&H00&)}當前位置
+Dialogue: 0,0:06:37.29,0:06:37.33,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1050.32,448.21)\alpha&HE0&}我來迎接您了
+Dialogue: 0,0:06:37.33,0:06:37.37,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1050.89,443.16)\alpha&HB3&}我來迎接您了
+Dialogue: 0,0:06:37.37,0:06:37.41,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1050.57,439.78)\alpha&H86&}我來迎接您了
+Dialogue: 0,0:06:37.41,0:06:37.45,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1050.59,436.19)\alpha&H59&}我來迎接您了
+Dialogue: 0,0:06:37.45,0:06:37.50,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1050.6,432.59)\alpha&H2C&}我來迎接您了
+Dialogue: 0,0:06:37.50,0:06:37.54,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1050.93,429)}我來迎接您了
+Dialogue: 0,0:06:37.54,0:06:37.58,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1051.57,425.31)}我來迎接您了
+Dialogue: 0,0:06:37.58,0:06:37.62,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1052.23,421.74)}我來迎接您了
+Dialogue: 0,0:06:37.62,0:06:37.66,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1052.83,418.06)}我來迎接您了
+Dialogue: 0,0:06:37.66,0:06:37.70,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1053.59,414.46)}我來迎接您了
+Dialogue: 0,0:06:37.70,0:06:37.75,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1054.24,410.76)}我來迎接您了
+Dialogue: 0,0:06:37.75,0:06:37.79,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1054.92,407.11)}我來迎接您了
+Dialogue: 0,0:06:37.79,0:06:37.83,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1055.54,403.55)}我來迎接您了
+Dialogue: 0,0:06:37.83,0:06:37.87,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1056.28,400.02)}我來迎接您了
+Dialogue: 0,0:06:37.87,0:06:37.91,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1056.83,396.37)}我來迎接您了
+Dialogue: 0,0:06:37.91,0:06:37.96,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1057.55,392.87)}我來迎接您了
+Dialogue: 0,0:06:37.96,0:06:38.00,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1058.09,389.36)}我來迎接您了
+Dialogue: 0,0:06:38.00,0:06:38.04,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1058.76,386.23)}我來迎接您了
+Dialogue: 0,0:06:38.04,0:06:38.08,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1059.25,383.3)}我來迎接您了
+Dialogue: 0,0:06:38.08,0:06:38.12,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1059.74,381)}我來迎接您了
+Dialogue: 0,0:06:38.12,0:06:38.16,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1060.04,379)}我來迎接您了
+Dialogue: 0,0:06:38.16,0:06:38.21,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1060.29,377.47)}我來迎接您了
+Dialogue: 0,0:06:38.21,0:06:38.25,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1060.52,376.18)}我來迎接您了
+Dialogue: 0,0:06:38.25,0:06:38.29,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1060.76,375.1)}我來迎接您了
+Dialogue: 0,0:06:38.29,0:06:38.33,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1060.93,374.23)}我來迎接您了
+Dialogue: 0,0:06:38.33,0:06:38.37,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.03,373.52)}我來迎接您了
+Dialogue: 0,0:06:38.37,0:06:38.41,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.18,372.95)}我來迎接您了
+Dialogue: 0,0:06:38.41,0:06:38.46,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.25,372.49)}我來迎接您了
+Dialogue: 0,0:06:38.46,0:06:38.50,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.28,372.12)}我來迎接您了
+Dialogue: 0,0:06:38.50,0:06:38.54,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.31,371.82)}我來迎接您了
+Dialogue: 0,0:06:38.54,0:06:38.58,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.35,371.54)}我來迎接您了
+Dialogue: 0,0:06:38.58,0:06:38.62,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.35,371.4)}我來迎接您了
+Dialogue: 0,0:06:38.62,0:06:38.66,PZ,,0,0,0,,{=17}{\an2\fn何某手寫-Regular\fs45\bord3\c&H000000&\3c&HFFFFFF&\frz346.6\pos(1061.34,371.33)}我來迎接您了
+Dialogue: 0,0:06:47.89,0:06:48.89,PZ,,0,0,0,,{\an2\fn汉仪旗黑 65S\fs100\bord3\3c&H5C6534&\pos(1048,167.33)}隧道資訊
+Dialogue: 0,0:06:47.89,0:06:48.89,PZ,,0,0,0,,{\an2\fn汉仪旗黑 65S\fs80\pos(1110.33,460.66)}行駛注意 塞車中
+Dialogue: 0,0:06:50.76,0:06:52.64,PZ,,0,0,0,,{\an8\fn@方正字迹-墨尘榜隶 简繁\frz-90\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\pos(1373.33,514)}地獄的
+Dialogue: 0,0:06:51.52,0:06:52.64,PZ,,0,0,0,,{\an2\fn@方正字迹-墨尘榜隶 简繁\frz-90\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\pos(681.33,663.33)}超絶大塞車
+Dialogue: 0,0:09:56.37,0:10:00.37,PZ,,0,0,0,,{\an8\fn@方正准圆_GBK\frz-90\bord3\c&H000000&\3c&HFFFFFF&\pos(121.33,319.33)}睡多了 站不穩
+Dialogue: 0,0:10:09.00,0:10:11.76,PZ,,0,0,0,,{\an8\fn@方正字迹-墨尘榜隶 简繁\frz-90\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\pos(1504,787.33)}小梨平食堂
+Dialogue: 0,0:10:10.13,0:10:11.76,PZ,,0,0,0,,{\an8\fn方正字迹-墨尘榜隶 简繁\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\frz356.5\pos(1179.33,582)}18點
+Dialogue: 0,0:10:10.76,0:10:11.76,PZ,,0,0,0,,{\an8\fn方正字迹-墨尘榜隶 简繁\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\frz10.69\pos(617.33,647.33)}營業結束
+Dialogue: 0,0:10:13.13,0:10:16.26,PZ,,0,0,0,,{\an8\fn@方正字迹-墨尘榜隶 简繁\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\frz275.9\pos(1334.67,691.33)}五千尺厨房
+Dialogue: 0,0:10:13.88,0:10:16.26,PZ,,0,0,0,,{\an8\fn方正字迹-墨尘榜隶 简繁\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\frz351.3\pos(999.33,544.67)}15點
+Dialogue: 0,0:10:14.76,0:10:16.26,PZ,,0,0,0,,{\an8\fn方正字迹-墨尘榜隶 简繁\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\frz10.69\pos(560,636.66)}營業結束
+Dialogue: 0,0:10:18.51,0:10:21.27,PZ,,0,0,0,,{\an8\fn@方正字迹-墨尘榜隶 简繁\frz-90\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\pos(1296,712.66)}上高地食堂
+Dialogue: 0,0:10:19.14,0:10:21.27,PZ,,0,0,0,,{\an8\fn方正字迹-墨尘榜隶 简繁\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\frz351.3\pos(1000.66,583.34)}16點
+Dialogue: 0,0:10:19.77,0:10:21.27,PZ,,0,0,0,,{\an8\fn方正字迹-墨尘榜隶 简繁\fs90\bord5\shad3\c&H000000&\3c&HFFFFFF&\frz10.69\pos(540,624.66)}營業結束
+Dialogue: 0,0:10:30.07,0:10:32.40,PZ,,0,0,0,,{\an8\fn华康翩翩体W5-A\fs40\bord3\c&H000000&\3c&H6D9490&\frz354.6\pos(769.34,324.66)}特產野澤菜
+Dialogue: 0,0:10:30.07,0:10:32.40,PZ,,0,0,0,,{\an8\fn华康翩翩体W5-A\fs40\bord3\c&H000000&\3c&H396A75&\frz354.6\pos(1392.01,388.67)}自家製雞火腿
+Dialogue: 0,0:10:30.07,0:10:32.40,PZ,,0,0,0,,{\an2\fn华康翩翩体W5-A\fs50\bord3\c&H000000&\3c&H72B2CA&\frz355.8\pos(1302.66,692.66)}芥末味{\fn何某手寫-Regular}柿種花生
+Dialogue: 0,0:10:30.98,0:10:32.40,PZ,,0,0,0,,{\an2\fs70\bord3\fsp5\c&H000000&\3c&HFFFFFF&\pos(945.33,874)\fad(108,0)}今日的晚餐
+Dialogue: 0,0:10:47.38,0:10:49.88,PZ,,0,0,0,,{\an2\fn何某手寫-Regular\fs80\bord5\c&H000000&\3c&H396A75&\frz337.5\pos(1044,421.34)}自家製雞火腿
+Dialogue: 0,0:10:47.88,0:10:49.88,PZ,,0,0,0,,{\an7\bord3\c&H000000&\3c&HFFFFFF&\pos(488.67,778)}部分火腿無法生食  食用前請留意產品說明
+Dialogue: 0,0:10:49.88,0:10:51.63,PZ,,0,0,0,,{=24}{\an2\fn方正字迹-墨尘榜隶 简繁\fs120\c&HE9F4FF&\fax-0.000001\fscx94.47\fscy109.28\frz27.4936\frx10.4538\fry-6.2712\xbord0.94\ybord1.09\org(915.38,177.2)\pos(925.34,243.41)}女湯
+Dialogue: 0,0:12:43.95,0:12:43.99,PZ,,0,0,0,,{=25}{\alpha&HC0&\fscx87.19\fscy87.19\an2\fn华康翩翩体W5-A\fs50\bord2.53\c&H000000&\3c&HFFFFFF&\frz14.92\pos(894.58,202.72)}拜了您
+Dialogue: 0,0:12:43.99,0:12:44.03,PZ,,0,0,0,,{=25}{\fscx89.49\fscy89.49\an2\fn华康翩翩体W5-A\fs50\bord2.68\c&H000000&\3c&HFFFFFF&\frz14.92\pos(893.19,199.08)\alpha&H90&}拜了您
+Dialogue: 0,0:12:44.03,0:12:44.07,PZ,,0,0,0,,{=25}{\fscx91.87\fscy91.87\an2\fn华康翩翩体W5-A\fs50\bord2.76\c&H000000&\3c&HFFFFFF&\frz14.92\pos(891.87,195.58)\alpha&H60&}拜了您
+Dialogue: 0,0:12:44.07,0:12:44.11,PZ,,0,0,0,,{=25}{\fscx93.42\fscy93.42\an2\fn华康翩翩体W5-A\fs50\bord2.8\c&H000000&\3c&HFFFFFF&\frz14.92\pos(890.51,192.03)\alpha&H30&}拜了您
+Dialogue: 0,0:12:44.11,0:12:44.15,PZ,,0,0,0,,{=25}{\fscx94.29\fscy94.29\an2\fn华康翩翩体W5-A\fs50\bord2.83\c&H000000&\3c&HFFFFFF&\frz14.92\pos(889.22,188.54)}拜了您
+Dialogue: 0,0:12:44.15,0:12:44.20,PZ,,0,0,0,,{=25}{\fscx94.71\fscy94.71\an2\fn华康翩翩体W5-A\fs50\bord2.84\c&H000000&\3c&HFFFFFF&\frz14.92\pos(887.97,185.19)}拜了您
+Dialogue: 0,0:12:44.20,0:12:44.24,PZ,,0,0,0,,{=25}{\fscx95.38\fscy95.38\an2\fn华康翩翩体W5-A\fs50\bord2.86\c&H000000&\3c&HFFFFFF&\frz14.92\pos(886.77,181.76)}拜了您
+Dialogue: 0,0:12:44.24,0:12:44.28,PZ,,0,0,0,,{=25}{\fscx96.07\fscy96.07\an2\fn华康翩翩体W5-A\fs50\bord2.88\c&H000000&\3c&HFFFFFF&\frz14.92\pos(885.61,178.47)}拜了您
+Dialogue: 0,0:12:44.28,0:12:44.32,PZ,,0,0,0,,{=25}{\fscx96.81\fscy96.81\an2\fn华康翩翩体W5-A\fs50\bord2.9\c&H000000&\3c&HFFFFFF&\frz14.92\pos(884.42,175.31)}拜了您
+Dialogue: 0,0:12:44.32,0:12:44.36,PZ,,0,0,0,,{=25}{\fscx97.52\fscy97.52\an2\fn华康翩翩体W5-A\fs50\bord2.93\c&H000000&\3c&HFFFFFF&\frz14.92\pos(883.33,172.23)}拜了您
+Dialogue: 0,0:12:44.36,0:12:44.40,PZ,,0,0,0,,{=25}{\fscx97.96\fscy97.96\an2\fn华康翩翩体W5-A\fs50\bord2.94\c&H000000&\3c&HFFFFFF&\frz14.92\pos(882.33,169.42)}拜了您
+Dialogue: 0,0:12:44.40,0:12:44.45,PZ,,0,0,0,,{=25}{\fscx98.4\fscy98.4\an2\fn华康翩翩体W5-A\fs50\bord2.95\c&H000000&\3c&HFFFFFF&\frz14.92\pos(881.37,166.79)}拜了您
+Dialogue: 0,0:12:44.45,0:12:44.49,PZ,,0,0,0,,{=25}{\fscx99.07\fscy99.07\an2\fn华康翩翩体W5-A\fs50\bord2.97\c&H000000&\3c&HFFFFFF&\frz14.92\pos(880.52,164.38)}拜了您
+Dialogue: 0,0:12:44.49,0:12:44.53,PZ,,0,0,0,,{=25}{\fscx99.35\fscy99.35\an2\fn华康翩翩体W5-A\fs50\bord2.98\c&H000000&\3c&HFFFFFF&\frz14.92\pos(879.8,162.38)}拜了您
+Dialogue: 0,0:12:44.53,0:12:44.57,PZ,,0,0,0,,{=25}{\fscx99.68\fscy99.68\an2\fn华康翩翩体W5-A\fs50\bord2.99\c&H000000&\3c&HFFFFFF&\frz14.92\pos(879.18,160.78)}拜了您
+Dialogue: 0,0:12:44.57,0:12:44.61,PZ,,0,0,0,,{=25}{\fscx99.9\fscy99.9\an2\fn华康翩翩体W5-A\fs50\bord3\c&H000000&\3c&HFFFFFF&\frz14.92\pos(878.82,159.7)}拜了您
+Dialogue: 0,0:12:44.61,0:12:45.24,PZ,,0,0,0,,{=25}{\fscx100\fscy100\an2\fn华康翩翩体W5-A\fs50\bord3\c&H000000&\3c&HFFFFFF&\frz14.92\pos(878.68,159.34)}拜了您
+Dialogue: 0,0:12:54.00,0:13:01.47,PZ,,0,0,0,,{\an2\fn汉仪正圆-85S\fs65\bord1\shad2\pos(816.67,228.66)}關電隧道
+Dialogue: 0,0:12:54.00,0:13:01.47,PZ,,0,0,0,,{\an2\fn汉仪正圆-85S\fs70\fsp10\bord1\shad2\pos(966.67,329.99)}扇澤站
+Dialogue: 0,0:12:54.00,0:12:55.38,PZ,遮罩太难做了放弃,0,0,0,,{\an2\fn方正兰亭圆_GBK_中粗\fs50\shad3\frz359.1\pos(690,807.67)\fad(0,200)}海拔 1425m
+Dialogue: 0,0:13:03.09,0:13:03.13,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\fscx30.68\fscy43.71\frz11.7878\frx-7.5388\fry-6.1656\org(831.16,1833.18)\pos(1331.26,1224.54)}扇澤      黑部大壩
+Dialogue: 0,0:13:03.13,0:13:03.17,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(830.96,1833.16)\pos(1331.06,1224.52)\fscx30.682\fscy43.712}扇澤      黑部大壩
+Dialogue: 0,0:13:03.17,0:13:03.22,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(830.49,1833.14)\pos(1330.59,1224.5)\fscx30.689\fscy43.719}扇澤      黑部大壩
+Dialogue: 0,0:13:03.22,0:13:03.26,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(829.76,1832.97)\pos(1329.86,1224.33)\fscx30.7\fscy43.73}扇澤      黑部大壩
+Dialogue: 0,0:13:03.26,0:13:03.30,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(828.6,1832.74)\pos(1328.7,1224.1)\fscx30.716\fscy43.746}扇澤      黑部大壩
+Dialogue: 0,0:13:03.30,0:13:03.34,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(827.11,1832.54)\pos(1327.21,1223.9)\fscx30.737\fscy43.767}扇澤      黑部大壩
+Dialogue: 0,0:13:03.34,0:13:03.38,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(825.13,1832.38)\pos(1325.23,1223.74)\fscx30.761\fscy43.791}扇澤      黑部大壩
+Dialogue: 0,0:13:03.38,0:13:03.42,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(822.87,1832.09)\pos(1322.97,1223.45)\fscx30.791\fscy43.821}扇澤      黑部大壩
+Dialogue: 0,0:13:03.42,0:13:03.47,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(820.17,1831.7)\pos(1320.27,1223.06)\fscx30.825\fscy43.855}扇澤      黑部大壩
+Dialogue: 0,0:13:03.47,0:13:03.51,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(817.04,1831.31)\pos(1317.14,1222.67)\fscx30.863\fscy43.893}扇澤      黑部大壩
+Dialogue: 0,0:13:03.51,0:13:03.55,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(813.55,1830.8)\pos(1313.65,1222.16)\fscx30.906\fscy43.936}扇澤      黑部大壩
+Dialogue: 0,0:13:03.55,0:13:03.59,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(809.47,1830.29)\pos(1309.57,1221.65)\fscx30.954\fscy43.984}扇澤      黑部大壩
+Dialogue: 0,0:13:03.59,0:13:03.63,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(804.93,1829.65)\pos(1305.03,1221.01)\fscx31.006\fscy44.036}扇澤      黑部大壩
+Dialogue: 0,0:13:03.63,0:13:03.67,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(799.93,1829.01)\pos(1300.03,1220.37)\fscx31.063\fscy44.093}扇澤      黑部大壩
+Dialogue: 0,0:13:03.67,0:13:03.72,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(794.4,1828.22)\pos(1294.5,1219.58)\fscx31.124\fscy44.154}扇澤      黑部大壩
+Dialogue: 0,0:13:03.72,0:13:03.76,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(788.16,1827.48)\pos(1288.26,1218.84)\fscx31.189\fscy44.219}扇澤      黑部大壩
+Dialogue: 0,0:13:03.76,0:13:03.80,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(781.43,1826.49)\pos(1281.53,1217.85)\fscx31.259\fscy44.289}扇澤      黑部大壩
+Dialogue: 0,0:13:03.80,0:13:03.84,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(774.05,1825.53)\pos(1274.15,1216.89)\fscx31.334\fscy44.364}扇澤      黑部大壩
+Dialogue: 0,0:13:03.84,0:13:03.88,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(765.98,1824.48)\pos(1266.08,1215.84)\fscx31.413\fscy44.443}扇澤      黑部大壩
+Dialogue: 0,0:13:03.88,0:13:03.92,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(757.2,1823.31)\pos(1257.3,1214.67)\fscx31.497\fscy44.527}扇澤      黑部大壩
+Dialogue: 0,0:13:03.92,0:13:03.97,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(747.69,1821.97)\pos(1247.79,1213.33)\fscx31.585\fscy44.615}扇澤      黑部大壩
+Dialogue: 0,0:13:03.97,0:13:04.01,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(737.44,1820.6)\pos(1237.54,1211.96)\fscx31.678\fscy44.708}扇澤      黑部大壩
+Dialogue: 0,0:13:04.01,0:13:04.05,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(726.26,1819.05)\pos(1226.36,1210.41)\fscx31.776\fscy44.806}扇澤      黑部大壩
+Dialogue: 0,0:13:04.05,0:13:04.09,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(714.22,1817.52)\pos(1214.32,1208.88)\fscx31.877\fscy44.907}扇澤      黑部大壩
+Dialogue: 0,0:13:04.09,0:13:04.13,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(701.16,1815.71)\pos(1201.26,1207.07)\fscx31.984\fscy45.014}扇澤      黑部大壩
+Dialogue: 0,0:13:04.13,0:13:04.17,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(687.08,1813.88)\pos(1187.18,1205.24)\fscx32.095\fscy45.125}扇澤      黑部大壩
+Dialogue: 0,0:13:04.17,0:13:04.22,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(671.97,1811.85)\pos(1172.07,1203.21)\fscx32.21\fscy45.24}扇澤      黑部大壩
+Dialogue: 0,0:13:04.22,0:13:04.26,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(655.65,1809.63)\pos(1155.75,1200.99)\fscx32.33\fscy45.36}扇澤      黑部大壩
+Dialogue: 0,0:13:04.26,0:13:04.30,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(638.12,1807.29)\pos(1138.22,1198.65)\fscx32.455\fscy45.485}扇澤      黑部大壩
+Dialogue: 0,0:13:04.30,0:13:04.34,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(619.25,1804.75)\pos(1119.35,1196.11)\fscx32.584\fscy45.614}扇澤      黑部大壩
+Dialogue: 0,0:13:04.34,0:13:04.38,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(598.99,1802.05)\pos(1099.09,1193.41)\fscx32.717\fscy45.747}扇澤      黑部大壩
+Dialogue: 0,0:13:04.38,0:13:04.42,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(577.14,1799.17)\pos(1077.24,1190.53)\fscx32.855\fscy45.885}扇澤      黑部大壩
+Dialogue: 0,0:13:04.42,0:13:04.47,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(553.8,1795.99)\pos(1053.9,1187.35)\fscx32.998\fscy46.028}扇澤      黑部大壩
+Dialogue: 0,0:13:04.47,0:13:04.51,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(528.68,1792.61)\pos(1028.78,1183.97)\fscx33.145\fscy46.175}扇澤      黑部大壩
+Dialogue: 0,0:13:04.51,0:13:04.55,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(501.7,1789.17)\pos(1001.8,1180.53)\fscx33.297\fscy46.327}扇澤      黑部大壩
+Dialogue: 0,0:13:04.55,0:13:04.59,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(472.97,1785.15)\pos(973.07,1176.51)\fscx33.453\fscy46.483}扇澤      黑部大壩
+Dialogue: 0,0:13:04.59,0:13:04.63,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(442.17,1781.04)\pos(942.27,1172.4)\fscx33.613\fscy46.643}扇澤      黑部大壩
+Dialogue: 0,0:13:04.63,0:13:04.67,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(409.35,1776.63)\pos(909.45,1167.99)\fscx33.779\fscy46.809}扇澤      黑部大壩
+Dialogue: 0,0:13:04.67,0:13:04.72,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(374.43,1771.93)\pos(874.53,1163.29)\fscx33.948\fscy46.978}扇澤      黑部大壩
+Dialogue: 0,0:13:04.72,0:13:04.76,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(337.34,1766.97)\pos(837.44,1158.33)\fscx34.123\fscy47.153}扇澤      黑部大壩
+Dialogue: 0,0:13:04.76,0:13:04.80,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(298.17,1761.73)\pos(798.27,1153.09)\fscx34.302\fscy47.332}扇澤      黑部大壩
+Dialogue: 0,0:13:04.80,0:13:04.84,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(256.98,1756.21)\pos(757.08,1147.57)\fscx34.485\fscy47.515}扇澤      黑部大壩
+Dialogue: 0,0:13:04.84,0:13:04.88,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(213.85,1750.46)\pos(713.96,1141.82)\fscx34.673\fscy47.703}扇澤      黑部大壩
+Dialogue: 0,0:13:04.88,0:13:04.93,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(169.12,1744.39)\pos(669.22,1135.75)\fscx34.865\fscy47.895}扇澤      黑部大壩
+Dialogue: 0,0:13:04.93,0:13:04.97,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(122.9,1738.22)\pos(623,1129.58)\fscx35.062\fscy48.092}扇澤      黑部大壩
+Dialogue: 0,0:13:04.97,0:13:05.01,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(75.63,1731.89)\pos(575.73,1123.25)\fscx35.264\fscy48.294}扇澤      黑部大壩
+Dialogue: 0,0:13:05.01,0:13:05.05,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\frz11.7878\frx-7.5388\fry-6.1656\org(27.58,1725.49)\pos(527.68,1116.85)\fscx35.469\fscy48.499}扇澤      黑部大壩
+Dialogue: 0,0:13:05.05,0:13:05.09,PZ,,0,0,0,,{=40=48}{\an2\fnZpix\c&H3687DD&\fax0.000003\fscx35.68\fscy48.71\frz11.7878\frx-7.5388\fry-6.1656\org(-20.77,1719.02)\pos(479.33,1110.38)}扇澤      黑部大壩
+Dialogue: 0,0:13:15.27,0:13:15.31,PZ,,0,0,0,,{=52}{\fscx100\fscy100\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1\c&H000000&\3c&H46EDFD&\pos(1772.96,514.48)}即將前往富山縣
+Dialogue: 0,0:13:15.31,0:13:15.35,PZ,,0,0,0,,{=52}{\fscx103.05\fscy103.05\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.03\c&H000000&\3c&H46EDFD&\pos(1769.54,513.59)}即將前往富山縣
+Dialogue: 0,0:13:15.35,0:13:15.39,PZ,,0,0,0,,{=52}{\fscx106.21\fscy106.21\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.06\c&H000000&\3c&H46EDFD&\pos(1765.77,512.67)}即將前往富山縣
+Dialogue: 0,0:13:15.39,0:13:15.44,PZ,,0,0,0,,{=52}{\fscx109.72\fscy109.72\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.1\c&H000000&\3c&H46EDFD&\pos(1761.57,511.56)}即將前往富山縣
+Dialogue: 0,0:13:15.44,0:13:15.48,PZ,,0,0,0,,{=52}{\fscx113.38\fscy113.38\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.13\c&H000000&\3c&H46EDFD&\pos(1756.94,510.54)}即將前往富山縣
+Dialogue: 0,0:13:15.48,0:13:15.52,PZ,,0,0,0,,{=52}{\fscx116.71\fscy116.71\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.17\c&H000000&\3c&H46EDFD&\pos(1751.7,509.44)}即將前往富山縣
+Dialogue: 0,0:13:15.52,0:13:15.56,PZ,,0,0,0,,{=52}{\fscx120.86\fscy120.86\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.21\c&H000000&\3c&H46EDFD&\pos(1746.23,508.2)}即將前往富山縣
+Dialogue: 0,0:13:15.56,0:13:15.60,PZ,,0,0,0,,{=52}{\fscx124.81\fscy124.81\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.25\c&H000000&\3c&H46EDFD&\pos(1740.01,507.08)}即將前往富山縣
+Dialogue: 0,0:13:15.60,0:13:15.64,PZ,,0,0,0,,{=52}{\fscx129.28\fscy129.28\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.29\c&H000000&\3c&H46EDFD&\pos(1733.32,505.74)}即將前往富山縣
+Dialogue: 0,0:13:15.64,0:13:15.69,PZ,,0,0,0,,{=52}{\fscx134.12\fscy134.12\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.34\c&H000000&\3c&H46EDFD&\pos(1726.14,504.27)}即將前往富山縣
+Dialogue: 0,0:13:15.69,0:13:15.73,PZ,,0,0,0,,{=52}{\fscx139.4\fscy139.4\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.39\c&H000000&\3c&H46EDFD&\pos(1718.33,502.65)}即將前往富山縣
+Dialogue: 0,0:13:15.73,0:13:15.77,PZ,,0,0,0,,{=52}{\fscx145.15\fscy145.15\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.45\c&H000000&\3c&H46EDFD&\pos(1709.9,501)}即將前往富山縣
+Dialogue: 0,0:13:15.77,0:13:15.81,PZ,,0,0,0,,{=52}{\fscx151.17\fscy151.17\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.51\c&H000000&\3c&H46EDFD&\pos(1700.55,499.09)}即將前往富山縣
+Dialogue: 0,0:13:15.81,0:13:15.85,PZ,,0,0,0,,{=52}{\fscx158.17\fscy158.17\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.58\c&H000000&\3c&H46EDFD&\pos(1690.56,496.92)}即將前往富山縣
+Dialogue: 0,0:13:15.85,0:13:15.89,PZ,,0,0,0,,{=52}{\fscx165.3\fscy165.3\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.65\c&H000000&\3c&H46EDFD&\pos(1679.59,494.82)}即將前往富山縣
+Dialogue: 0,0:13:15.89,0:13:15.94,PZ,,0,0,0,,{=52}{\fscx173.58\fscy173.58\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.74\c&H000000&\3c&H46EDFD&\pos(1667.7,492.35)}即將前往富山縣
+Dialogue: 0,0:13:15.94,0:13:15.98,PZ,,0,0,0,,{=52}{\fscx182.63\fscy182.63\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.83\c&H000000&\3c&H46EDFD&\pos(1654.73,489.6)}即將前往富山縣
+Dialogue: 0,0:13:15.98,0:13:16.02,PZ,,0,0,0,,{=52}{\fscx192.73\fscy192.73\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord1.93\c&H000000&\3c&H46EDFD&\pos(1640.5,486.61)}即將前往富山縣
+Dialogue: 0,0:13:16.02,0:13:16.06,PZ,,0,0,0,,{=52}{\fscx203.63\fscy203.63\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord2.04\c&H000000&\3c&H46EDFD&\pos(1624.8,483.44)}即將前往富山縣
+Dialogue: 0,0:13:16.06,0:13:16.10,PZ,,0,0,0,,{=52}{\fscx216.14\fscy216.14\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord2.16\c&H000000&\3c&H46EDFD&\pos(1607.4,479.73)}即將前往富山縣
+Dialogue: 0,0:13:16.10,0:13:16.14,PZ,,0,0,0,,{=52}{\fscx230.28\fscy230.28\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord2.3\c&H000000&\3c&H46EDFD&\pos(1588.05,475.58)}即將前往富山縣
+Dialogue: 0,0:13:16.14,0:13:16.19,PZ,,0,0,0,,{=52}{\fscx246.52\fscy246.52\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord2.47\c&H000000&\3c&H46EDFD&\pos(1566.46,470.92)}即將前往富山縣
+Dialogue: 0,0:13:16.19,0:13:16.23,PZ,,0,0,0,,{=52}{\fscx270.23\fscy270.23\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord2.63\c&H000000&\3c&H46EDFD&\pos(1541.76,465.63)}即將前往富山縣
+Dialogue: 0,0:13:16.23,0:13:16.27,PZ,,0,0,0,,{=52}{\fscx280.78\fscy280.78\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord2.79\c&H000000&\3c&H46EDFD&\pos(1512.72,459.24)}即將前往富山縣
+Dialogue: 0,0:13:16.27,0:13:16.31,PZ,,0,0,0,,{=52}{\fscx310.71\fscy310.71\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord2.93\c&H000000&\3c&H46EDFD&\pos(1483.43,451.53)}即將前往富山縣
+Dialogue: 0,0:13:16.31,0:13:16.35,PZ,,0,0,0,,{=52}{\fscx340.54\fscy340.54\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord3.21\c&H000000&\3c&H46EDFD&\pos(1444.9,443.13)}即將前往富山縣
+Dialogue: 0,0:13:16.35,0:13:16.39,PZ,,0,0,0,,{=52}{\fscx374.27\fscy374.27\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord3.54\c&H000000&\3c&H46EDFD&\pos(1404.53,433.02)}即將前往富山縣
+Dialogue: 0,0:13:16.39,0:13:16.44,PZ,,0,0,0,,{=52}{\fscx420.6\fscy420.6\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord3.96\c&H000000&\3c&H46EDFD&\pos(1356.72,420.78)}即將前往富山縣
+Dialogue: 0,0:13:16.44,0:13:16.48,PZ,,0,0,0,,{=52}{\fscx480.38\fscy480.38\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord4.13\c&H000000&\3c&H46EDFD&\pos(1296.21,402.82)}即將前往富山縣
+Dialogue: 0,0:13:16.48,0:13:16.52,PZ,,0,0,0,,{=52}{\fscx552.97\fscy552.97\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord4.75\c&H000000&\3c&H46EDFD&\pos(1226.95,381.83)}即將前往富山縣
+Dialogue: 0,0:13:16.52,0:13:16.56,PZ,,0,0,0,,{=52}{\fscx638.63\fscy638.63\an2\fn@汉仪旗黑 65S\frz-90\fs20\bord5.49\c&H000000&\3c&H46EDFD&\pos(1147.35,356.74)}即將前往富山縣
+Dialogue: 0,0:13:29.50,0:13:31.96,PZ,,0,0,0,,{\an2\fnZpix\fs40\bord1\c&H3687DD&\frz2.914\pos(450.66,100.67)}扇澤   黑部大壩
+Dialogue: 0,0:13:31.96,0:13:37.30,PZ,,0,0,0,,{\an2\fn汉仪旗黑 65S\fs90\c&H000000&\blur5\pos(839.99,104.67)}黑部大壩
+Dialogue: 0,0:13:53.81,0:13:55.81,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\move(814.67,137,766.2,137,23,1983)}黑部大壩
+Dialogue: 0,0:13:53.81,0:13:55.81,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\move(1736,931.33,1687.53,931.33,23,1983)}大壩展望台
+Dialogue: 0,0:14:00.07,0:14:00.99,PZ,,0,0,0,,{=59}{\clip()\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(191.99,84.67,-563.01,84.67,19,895)}立山·室堂方向
+Dialogue: 0,0:14:00.07,0:14:00.99,PZ,,0,0,0,,{=58}{\clip()\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(191.99,208.67,-563.01,208.67,19,895)}觀光船
+Dialogue: 0,0:14:00.07,0:14:00.99,PZ,,0,0,0,,{=57}{\clip()\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\move(464,488.67,-291,488.67,19,895)}黑部大壩休息區
+Dialogue: 0,0:14:00.07,0:14:00.99,PZ,,0,0,0,,{=56}{\clip()\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(413.34,620.67,-341.66,620.67,19,895)}餐廳茶館
+Dialogue: 0,0:14:00.07,0:14:00.99,PZ,,0,0,0,,{=55}{\clip()\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(719.73,620.67,-35.27,620.67,19,895)}商店
+Dialogue: 0,0:14:00.07,0:14:01.28,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\move(1863.61,137,856.87,137,19,1187)}黑部大壩
+Dialogue: 0,0:14:01.27,0:14:01.31,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(820.89,137)}黑部大壩
+Dialogue: 0,0:14:01.31,0:14:01.36,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(798.34,137)}黑部大壩
+Dialogue: 0,0:14:01.36,0:14:01.40,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(786.56,137)}黑部大壩
+Dialogue: 0,0:14:01.40,0:14:01.44,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(779.94,137)}黑部大壩
+Dialogue: 0,0:14:01.44,0:14:01.48,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(776.45,137)}黑部大壩
+Dialogue: 0,0:14:01.48,0:14:01.52,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(775.01,137)}黑部大壩
+Dialogue: 0,0:14:01.52,0:14:02.78,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(774.77,137)}黑部大壩
+Dialogue: 0,0:14:02.78,0:14:03.82,PZ,,0,0,0,,{=54}{\clip\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\move(774.77,137,1782.19,137,20,1021)}黑部大壩
+Dialogue: 0,0:14:03.82,0:14:03.86,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1824.17,137)}黑部大壩
+Dialogue: 0,0:14:03.86,0:14:03.90,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1838.52,137)}黑部大壩
+Dialogue: 0,0:14:03.90,0:14:03.94,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1846.09,137)}黑部大壩
+Dialogue: 0,0:14:03.94,0:14:03.98,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1851.17,137)}黑部大壩
+Dialogue: 0,0:14:03.98,0:14:04.03,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1854.88,137)}黑部大壩
+Dialogue: 0,0:14:04.03,0:14:04.07,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1857.69,137)}黑部大壩
+Dialogue: 0,0:14:04.07,0:14:04.11,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1859.77,137)}黑部大壩
+Dialogue: 0,0:14:04.11,0:14:04.15,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1861.26,137)}黑部大壩
+Dialogue: 0,0:14:04.15,0:14:04.19,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1862.39,137)}黑部大壩
+Dialogue: 0,0:14:04.19,0:14:04.23,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1863.07,137)}黑部大壩
+Dialogue: 0,0:14:04.23,0:14:05.82,PZ,,0,0,0,,{=54}{\an2\fn汉仪旗黑 95S\fs100\bord2\c&HFAFCF5&\pos(1863.48,137)}黑部大壩
+Dialogue: 0,0:14:00.07,0:14:01.28,PZ,,0,0,0,,{=53}{\clip()\an2\fn汉仪旗黑 65S\c&HD8D8D8&\move(2774.74,938,1768,938,19,1187)}大壩展望台
+Dialogue: 0,0:14:01.27,0:14:01.31,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1732.02,938)}大壩展望台
+Dialogue: 0,0:14:01.31,0:14:01.36,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1709.47,938)}大壩展望台
+Dialogue: 0,0:14:01.36,0:14:01.40,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1697.69,938)}大壩展望台
+Dialogue: 0,0:14:01.40,0:14:01.44,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1691.07,938)}大壩展望台
+Dialogue: 0,0:14:01.44,0:14:01.48,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1687.58,938)}大壩展望台
+Dialogue: 0,0:14:01.48,0:14:01.52,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1686.14,938)}大壩展望台
+Dialogue: 0,0:14:01.52,0:14:02.82,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1685.9,938)}大壩展望台
+Dialogue: 0,0:14:02.82,0:14:02.86,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1727.87,938)}大壩展望台
+Dialogue: 0,0:14:02.86,0:14:02.90,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1769.88,938)}大壩展望台
+Dialogue: 0,0:14:02.90,0:14:02.94,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1811.96,938)}大壩展望台
+Dialogue: 0,0:14:02.94,0:14:02.98,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1853.94,938)}大壩展望台
+Dialogue: 0,0:14:02.98,0:14:03.02,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1895.82,938)}大壩展望台
+Dialogue: 0,0:14:03.02,0:14:03.07,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1937.82,938)}大壩展望台
+Dialogue: 0,0:14:03.07,0:14:03.11,PZ,,0,0,0,,{=53}{\an2\fn汉仪旗黑 65S\c&HD8D8D8&\pos(1979.78,938)}大壩展望台
+Dialogue: 0,0:14:03.15,0:14:03.86,PZ,,0,0,0,,{=59}{\clip()\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(-518.97,84.67,152.68,84.67,25,693)}立山·室堂方向
+Dialogue: 0,0:14:03.15,0:14:03.86,PZ,,0,0,0,,{=58}{\clip()\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(-518.97,208.67,152.68,208.67,25,693)}觀光船
+Dialogue: 0,0:14:03.15,0:14:03.86,PZ,,0,0,0,,{=57}{\clip()\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\move(-246.97,488.67,424.69,488.67,25,693)}黑部大壩休息區
+Dialogue: 0,0:14:03.15,0:14:03.86,PZ,,0,0,0,,{=56}{\clip()\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(-297.63,620.67,374.03,620.67,25,693)}餐廳茶館
+Dialogue: 0,0:14:03.15,0:14:03.86,PZ,,0,0,0,,{=55}{\clip()\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\move(8.77,620.67,680.42,620.67,25,693)}商店
+Dialogue: 0,0:14:03.86,0:14:03.90,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(167.04,84.67)}立山·室堂方向
+Dialogue: 0,0:14:03.90,0:14:03.94,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(174.61,84.67)}立山·室堂方向
+Dialogue: 0,0:14:03.94,0:14:03.98,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(179.69,84.67)}立山·室堂方向
+Dialogue: 0,0:14:03.98,0:14:04.03,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(183.41,84.67)}立山·室堂方向
+Dialogue: 0,0:14:04.03,0:14:04.07,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(186.21,84.67)}立山·室堂方向
+Dialogue: 0,0:14:04.07,0:14:04.11,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(188.29,84.67)}立山·室堂方向
+Dialogue: 0,0:14:04.11,0:14:04.15,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(189.78,84.67)}立山·室堂方向
+Dialogue: 0,0:14:04.15,0:14:04.19,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(190.91,84.67)}立山·室堂方向
+Dialogue: 0,0:14:04.19,0:14:04.23,PZ,,0,0,0,,{=59}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(191.59,84.67)}立山·室堂方向
+Dialogue: 0,0:14:03.86,0:14:03.90,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(167.04,208.67)}觀光船
+Dialogue: 0,0:14:03.90,0:14:03.94,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(174.61,208.67)}觀光船
+Dialogue: 0,0:14:03.94,0:14:03.98,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(179.69,208.67)}觀光船
+Dialogue: 0,0:14:03.98,0:14:04.03,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(183.41,208.67)}觀光船
+Dialogue: 0,0:14:04.03,0:14:04.07,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(186.21,208.67)}觀光船
+Dialogue: 0,0:14:04.07,0:14:04.11,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(188.29,208.67)}觀光船
+Dialogue: 0,0:14:04.11,0:14:04.15,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(189.78,208.67)}觀光船
+Dialogue: 0,0:14:04.15,0:14:04.19,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(190.91,208.67)}觀光船
+Dialogue: 0,0:14:04.19,0:14:04.23,PZ,,0,0,0,,{=58}{\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(191.58,208.67)}觀光船
+Dialogue: 0,0:14:03.86,0:14:03.90,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(439.05,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:03.90,0:14:03.94,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(446.62,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:03.94,0:14:03.98,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(451.7,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:03.98,0:14:04.03,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(455.42,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:04.03,0:14:04.07,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(458.22,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:04.07,0:14:04.11,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(460.3,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:04.11,0:14:04.15,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(461.79,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:04.15,0:14:04.19,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(462.92,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:04.19,0:14:04.23,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(463.6,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:03.86,0:14:03.90,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(388.39,620.67)}餐廳茶館
+Dialogue: 0,0:14:03.90,0:14:03.94,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(395.96,620.67)}餐廳茶館
+Dialogue: 0,0:14:03.94,0:14:03.98,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(401.04,620.67)}餐廳茶館
+Dialogue: 0,0:14:03.98,0:14:04.03,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(404.76,620.67)}餐廳茶館
+Dialogue: 0,0:14:04.03,0:14:04.07,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(407.56,620.67)}餐廳茶館
+Dialogue: 0,0:14:04.07,0:14:04.11,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(409.64,620.67)}餐廳茶館
+Dialogue: 0,0:14:04.11,0:14:04.15,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(411.13,620.67)}餐廳茶館
+Dialogue: 0,0:14:04.15,0:14:04.19,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(412.26,620.67)}餐廳茶館
+Dialogue: 0,0:14:04.19,0:14:04.23,PZ,,0,0,0,,{=56}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(412.93,620.67)}餐廳茶館
+Dialogue: 0,0:14:03.86,0:14:03.90,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(694.78,620.67)}商店
+Dialogue: 0,0:14:03.90,0:14:03.94,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(702.35,620.67)}商店
+Dialogue: 0,0:14:03.94,0:14:03.98,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(707.43,620.67)}商店
+Dialogue: 0,0:14:03.98,0:14:04.03,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(711.15,620.67)}商店
+Dialogue: 0,0:14:04.03,0:14:04.07,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(713.95,620.67)}商店
+Dialogue: 0,0:14:04.07,0:14:04.11,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(716.03,620.67)}商店
+Dialogue: 0,0:14:04.11,0:14:04.15,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(717.52,620.67)}商店
+Dialogue: 0,0:14:04.15,0:14:04.19,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(718.65,620.67)}商店
+Dialogue: 0,0:14:04.19,0:14:04.23,PZ,,0,0,0,,{=55}{\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(719.33,620.67)}商店
+Dialogue: 0,0:14:04.24,0:14:05.82,PZ,,0,0,0,,{=59}{\clip()\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(191.99,84.67)}立山·室堂方向
+Dialogue: 0,0:14:04.24,0:14:05.82,PZ,,0,0,0,,{=58}{\clip()\an1\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(191.99,208.67)}觀光船
+Dialogue: 0,0:14:04.24,0:14:05.07,PZ,,0,0,0,,{=57}{\clip()\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(464,488.67)}黑部大壩休息區
+Dialogue: 0,0:14:05.07,0:14:05.82,PZ,,0,0,0,,{=57}{\an2\fn汉仪旗黑 95S\fs100\bord1\c&HFAFCF5&\pos(464,488.67)\iclip(m 599.67 410.65 l 603.81 433.33 601.65 434.05 603.27 449.71 609.22 451.16 608.86 458.9 600.03 469.88 601.29 473.66 660.88 474.02 663.4 470.78 649.72 458 650.26 452.96 655.48 451.52 657.82 444.85 658 434.77 653.5 432.07 656.92 409.75)}黑部大壩休息區
+Dialogue: 0,0:14:04.24,0:14:05.82,PZ,,0,0,0,,{=56}{\clip()\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(413.34,620.67)}餐廳茶館
+Dialogue: 0,0:14:04.24,0:14:05.82,PZ,,0,0,0,,{=55}{\clip()\an2\fn汉仪旗黑 65S\fs50\bord1\c&HFAFCF5&\pos(719.73,620.67)}商店
+Dialogue: 0,0:14:11.33,0:14:15.29,PZ,,0,0,0,,{=61}{\clip()\fscx87.35\t(20,3941,\fscx100)\fscy87.35\t(20,3941,\fscy100)\an8\fn方正字迹-墨尘榜隶 简繁\bord4.37\t(20,3941,\bord5)\shad1.75\t(20,3941,\shad2)\c&H78ACCA&\3c&HFFFFFF&\move(950.61,156.71,949.34,147.34,20,3941)}企劃WY\N{\fn腾祥伯当行楷GB18030\c&H2F3A40&\3c&HFFFFFF&}黑部大壩～男子漢的挑戰～
+Dialogue: 0,0:14:11.33,0:14:15.29,PZ,,0,0,0,,{=60}{\clip()\fscx87.35\t(20,3941,\fscx100)\fscy87.35\t(20,3941,\fscy100)\an8\fn方正字迹-墨尘榜隶 简繁\bord2.62\t(20,3941,\bord3)\shad1.75\t(20,3941,\shad2)\c&H78ACCA&\3c&HFFFFFF&\move(950.61,156.71,949.34,147.34,20,3941)}企劃WY\N{\fn腾祥伯当行楷GB18030\c&H2F3A40&\3c&H75ACC9&}黑部大壩～男子漢的挑戰～
+Dialogue: 0,0:14:22.79,0:14:22.84,PZ,,0,0,0,,{=62}{\fscx74.85\fscy74.85\an8\fn汉仪旗黑 65S\fs120\bord3.74\c&H000000&\3c&HB9C0CB&\pos(841.12,206.73)}電力不足常態化
+Dialogue: 0,0:14:22.84,0:14:22.88,PZ,,0,0,0,,{=62}{\fscx76.85\fscy76.85\an8\fn汉仪旗黑 65S\fs120\bord3.84\c&H000000&\3c&HB9C0CB&\pos(837.92,208.35)}電力不足常態化
+Dialogue: 0,0:14:22.88,0:14:22.92,PZ,,0,0,0,,{=62}{\fscx78.98\fscy78.98\an8\fn汉仪旗黑 65S\fs120\bord3.95\c&H000000&\3c&HB9C0CB&\pos(834.58,210.07)}電力不足常態化
+Dialogue: 0,0:14:22.92,0:14:22.96,PZ,,0,0,0,,{=62}{\fscx81.24\fscy81.24\an8\fn汉仪旗黑 65S\fs120\bord4.06\c&H000000&\3c&HB9C0CB&\pos(831.02,211.97)}電力不足常態化
+Dialogue: 0,0:14:22.96,0:14:23.00,PZ,,0,0,0,,{=62}{\fscx83.62\fscy83.62\an8\fn汉仪旗黑 65S\fs120\bord4.18\c&H000000&\3c&HB9C0CB&\pos(827.23,213.9)}電力不足常態化
+Dialogue: 0,0:14:23.00,0:14:23.04,PZ,,0,0,0,,{=62}{\fscx86.12\fscy86.12\an8\fn汉仪旗黑 65S\fs120\bord4.31\c&H000000&\3c&HB9C0CB&\pos(823.28,215.89)}電力不足常態化
+Dialogue: 0,0:14:23.04,0:14:23.09,PZ,,0,0,0,,{=62}{\fscx88.7\fscy88.7\an8\fn汉仪旗黑 65S\fs120\bord4.44\c&H000000&\3c&HB9C0CB&\pos(819.2,218.02)}電力不足常態化
+Dialogue: 0,0:14:23.09,0:14:23.13,PZ,,0,0,0,,{=62}{\fscx91.32\fscy91.32\an8\fn汉仪旗黑 65S\fs120\bord4.57\c&H000000&\3c&HB9C0CB&\pos(815.05,220.19)}電力不足常態化
+Dialogue: 0,0:14:23.13,0:14:23.17,PZ,,0,0,0,,{=62}{\fscx93.88\fscy93.88\an8\fn汉仪旗黑 65S\fs120\bord4.69\c&H000000&\3c&HB9C0CB&\pos(811,222.29)}電力不足常態化
+Dialogue: 0,0:14:23.17,0:14:23.21,PZ,,0,0,0,,{=62}{\fscx96.24\fscy96.24\an8\fn汉仪旗黑 65S\fs120\bord4.81\c&H000000&\3c&HB9C0CB&\pos(807.27,224.31)}電力不足常態化
+Dialogue: 0,0:14:23.21,0:14:23.25,PZ,,0,0,0,,{=62}{\fscx98.2\fscy98.2\an8\fn汉仪旗黑 65S\fs120\bord4.91\c&H000000&\3c&HB9C0CB&\pos(804.2,226)}電力不足常態化
+Dialogue: 0,0:14:23.25,0:14:23.30,PZ,,0,0,0,,{=62}{\fscx99.54\fscy99.54\an8\fn汉仪旗黑 65S\fs120\bord4.98\c&H000000&\3c&HB9C0CB&\pos(802.08,227.06)}電力不足常態化
+Dialogue: 0,0:14:23.30,0:14:24.30,PZ,,0,0,0,,{=62}{\fscx100\fscy100\an8\fn汉仪旗黑 65S\fs120\bord5\c&H000000&\3c&HB9C0CB&\pos(801.34,227.33)}電力不足常態化
+Dialogue: 0,0:15:17.90,0:15:22.86,PZ,,0,0,0,,{\an2\fn汉仪旗黑 65S\fs20\bord1\pos(999.44,26.28)}廁所
+Dialogue: 0,0:15:17.90,0:15:17.98,PZ,,0,0,0,,{\an2\fn汉仪旗黑 65S\fs20\bord1\pos(1089.96,26.28)}大壩展望台
+Dialogue: 0,0:15:18.02,0:15:22.86,PZ,,0,0,0,,{\an2\fn汉仪旗黑 65S\fs20\bord1\pos(1089.96,26.28)}大壩展望台
+Dialogue: 0,0:15:22.85,0:15:22.90,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx91.46\fscy110.66\frz1.1255\frx0.9053\fry-8.0550\xbord0.91\ybord1.11\org(1388.79,915.96)\pos(1361.89,744.67)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:22.90,0:15:22.94,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx91.35\fscy110.53\frz1.1255\frx0.9053\fry-8.0550\xbord0.91\ybord1.11\org(1388.37,916.39)\pos(1361.5,745.31)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:22.94,0:15:22.98,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx91.23\fscy110.38\frz1.1255\frx0.9053\fry-8.0550\xbord0.91\ybord1.11\org(1387.9,916.83)\pos(1361.07,745.98)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:22.98,0:15:23.02,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx91.16\fscy110.29\frz1.1255\frx0.9053\fry-8.0550\xbord0.91\ybord1.11\org(1387.47,917.34)\pos(1360.66,746.62)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.02,0:15:23.06,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx91.1\fscy110.22\frz1.1255\frx0.9053\fry-8.0550\xbord0.91\ybord1.11\org(1387.09,917.89)\pos(1360.3,747.28)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.06,0:15:23.10,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.93\fscy110.02\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1386.63,918.24)\pos(1359.89,747.94)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.10,0:15:23.15,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.83\fscy109.9\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1386.18,918.74)\pos(1359.47,748.63)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.15,0:15:23.19,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.76\fscy109.81\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1385.75,919.22)\pos(1359.05,749.24)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.19,0:15:23.23,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.69\fscy109.73\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1385.29,919.72)\pos(1358.62,749.87)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.23,0:15:23.27,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.58\fscy109.59\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1384.87,920.15)\pos(1358.23,750.51)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.27,0:15:23.31,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.43\fscy109.42\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1384.36,920.56)\pos(1357.76,751.2)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.31,0:15:23.36,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.4\fscy109.37\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1384.02,921.08)\pos(1357.44,751.78)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.36,0:15:23.40,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.32\fscy109.28\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.1\org(1383.59,921.6)\pos(1357.02,752.45)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.40,0:15:23.44,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.22\fscy109.16\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.09\org(1383.15,922.04)\pos(1356.62,753.08)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.44,0:15:23.48,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.14\fscy109.07\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.09\org(1382.73,922.52)\pos(1356.22,753.7)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.48,0:15:23.52,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx90.02\fscy108.92\frz1.1255\frx0.9053\fry-8.0550\xbord0.9\ybord1.09\org(1382.31,922.95)\pos(1355.83,754.35)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.52,0:15:23.56,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.89\fscy108.76\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.09\org(1381.92,923.4)\pos(1355.48,755.05)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.56,0:15:23.61,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.8\fscy108.65\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.09\org(1381.45,923.87)\pos(1355.04,755.7)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.61,0:15:23.65,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.74\fscy108.58\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.09\org(1381.04,924.34)\pos(1354.64,756.27)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.65,0:15:23.69,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.62\fscy108.43\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.09\org(1380.61,924.74)\pos(1354.25,756.9)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.69,0:15:23.73,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.51\fscy108.3\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.09\org(1380.18,925.2)\pos(1353.85,757.56)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.73,0:15:23.77,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.4\fscy108.16\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.08\org(1379.75,925.63)\pos(1353.46,758.2)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.77,0:15:23.81,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.3\fscy108.05\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.08\org(1379.34,926.1)\pos(1353.08,758.85)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.81,0:15:23.86,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.18\fscy107.9\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.08\org(1378.92,926.51)\pos(1352.69,759.49)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.86,0:15:23.90,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89.1\fscy107.8\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.08\org(1378.51,927.01)\pos(1352.3,760.14)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.90,0:15:23.94,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx89\fscy107.68\frz1.1255\frx0.9053\fry-8.0550\xbord0.89\ybord1.08\org(1378.05,927.44)\pos(1351.88,760.75)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.94,0:15:23.98,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.94\fscy107.61\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.08\org(1377.65,927.9)\pos(1351.49,761.32)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:23.98,0:15:24.02,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.83\fscy107.48\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.08\org(1377.25,928.34)\pos(1351.12,761.97)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.02,0:15:24.06,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.75\fscy107.38\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.08\org(1376.88,928.83)\pos(1350.78,762.61)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.06,0:15:24.11,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.64\fscy107.24\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.08\org(1376.43,929.22)\pos(1350.36,763.22)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.11,0:15:24.15,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.53\fscy107.12\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.07\org(1376.01,929.64)\pos(1349.97,763.83)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.15,0:15:24.19,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.43\fscy106.99\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.07\org(1375.61,930.09)\pos(1349.6,764.49)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.19,0:15:24.23,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.32\fscy106.86\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.07\org(1375.18,930.53)\pos(1349.21,765.12)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.23,0:15:24.27,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.26\fscy106.79\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.07\org(1374.8,931)\pos(1348.84,765.7)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.27,0:15:24.31,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.17\fscy106.67\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.07\org(1374.36,931.42)\pos(1348.43,766.3)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.31,0:15:24.36,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx88.07\fscy106.56\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.07\org(1373.91,931.89)\pos(1348.01,766.95)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.36,0:15:24.40,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.98\fscy106.45\frz1.1255\frx0.9053\fry-8.0550\xbord0.88\ybord1.07\org(1373.55,932.36)\pos(1347.67,767.58)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.40,0:15:24.44,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.87\fscy106.31\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.07\org(1373.11,932.74)\pos(1347.27,768.18)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.44,0:15:24.48,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.78\fscy106.21\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.07\org(1372.71,933.18)\pos(1346.9,768.78)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.48,0:15:24.52,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.71\fscy106.12\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1372.3,933.65)\pos(1346.5,769.39)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.52,0:15:24.56,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.58\fscy105.97\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1371.95,934.03)\pos(1346.19,770.01)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.56,0:15:24.61,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.49\fscy105.85\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1371.51,934.46)\pos(1345.78,770.61)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.61,0:15:24.65,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.4\fscy105.75\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1371.12,934.88)\pos(1345.41,771.19)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.65,0:15:24.69,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.27\fscy105.59\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1370.66,935.34)\pos(1344.99,771.89)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.69,0:15:24.73,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.21\fscy105.52\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1370.32,935.82)\pos(1344.67,772.49)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.73,0:15:24.77,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.12\fscy105.41\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1369.95,936.21)\pos(1344.32,773.05)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.77,0:15:24.81,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx87.05\fscy105.33\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1369.49,936.64)\pos(1343.89,773.6)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.81,0:15:24.86,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx86.95\fscy105.2\frz1.1255\frx0.9053\fry-8.0550\xbord0.87\ybord1.06\org(1369.07,937.06)\pos(1343.5,774.22)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.86,0:15:24.90,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx86.92\fscy105.17\frz1.1255\frx0.9053\fry-8.0550\xbord0.86\ybord1.05\org(1368.73,937.63)\pos(1343.17,774.85)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.90,0:15:24.94,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx86.79\fscy105.02\frz1.1255\frx0.9053\fry-8.0550\xbord0.86\ybord1.05\org(1368.33,937.94)\pos(1342.81,775.39)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.94,0:15:24.98,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx86.67\fscy104.87\frz1.1255\frx0.9053\fry-8.0550\xbord0.86\ybord1.05\org(1367.93,938.33)\pos(1342.44,776.01)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:24.98,0:15:25.02,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx86.54\fscy104.71\frz1.1255\frx0.9053\fry-8.0550\xbord0.86\ybord1.05\org(1367.5,938.72)\pos(1342.05,776.65)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:25.02,0:15:25.07,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx86.45\fscy104.59\frz1.1255\frx0.9053\fry-8.0550\xbord0.86\ybord1.05\org(1367.14,939.2)\pos(1341.71,777.3)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:25.07,0:15:25.11,PZ,,0,0,0,,{=72=75}{\an2\fn腾祥伯当行楷GB18030\fs30\fscx86.4\fscy104.54\frz1.1255\frx0.9053\fry-8.0550\xbord0.86\ybord1.05\org(1366.78,939.61)\pos(1341.37,777.79)}黑部大壩\N展望台休息處
+Dialogue: 0,0:15:22.85,0:15:22.90,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1804.04,1137)\pos(1885.85,796.22)}外側樓梯
+Dialogue: 0,0:15:22.90,0:15:22.94,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1803.12,1137.79)\pos(1884.93,797.01)}外側樓梯
+Dialogue: 0,0:15:22.94,0:15:22.98,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1802.24,1138.55)\pos(1884.05,797.77)}外側樓梯
+Dialogue: 0,0:15:22.98,0:15:23.02,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1801.33,1139.33)\pos(1883.14,798.55)}外側樓梯
+Dialogue: 0,0:15:23.02,0:15:23.06,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1800.31,1140.16)\pos(1882.12,799.38)}外側樓梯
+Dialogue: 0,0:15:23.06,0:15:23.10,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1799.38,1140.93)\pos(1881.19,800.15)}外側樓梯
+Dialogue: 0,0:15:23.10,0:15:23.15,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1798.47,1141.68)\pos(1880.28,800.9)}外側樓梯
+Dialogue: 0,0:15:23.15,0:15:23.19,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1797.62,1142.44)\pos(1879.43,801.66)}外側樓梯
+Dialogue: 0,0:15:23.19,0:15:23.23,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1796.63,1143.28)\pos(1878.44,802.5)}外側樓梯
+Dialogue: 0,0:15:23.23,0:15:23.27,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1795.73,1144.05)\pos(1877.54,803.28)}外側樓梯
+Dialogue: 0,0:15:23.27,0:15:23.31,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1794.81,1144.83)\pos(1876.62,804.05)}外側樓梯
+Dialogue: 0,0:15:23.31,0:15:23.36,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1793.89,1145.67)\pos(1875.7,804.89)}外側樓梯
+Dialogue: 0,0:15:23.36,0:15:23.40,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1793,1146.4)\pos(1874.81,805.62)}外側樓梯
+Dialogue: 0,0:15:23.40,0:15:23.44,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1792.11,1147.14)\pos(1873.92,806.36)}外側樓梯
+Dialogue: 0,0:15:23.44,0:15:23.48,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1791.23,1147.86)\pos(1873.04,807.08)}外側樓梯
+Dialogue: 0,0:15:23.48,0:15:23.52,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1790.28,1148.61)\pos(1872.09,807.83)}外側樓梯
+Dialogue: 0,0:15:23.52,0:15:23.56,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1789.37,1149.45)\pos(1871.18,808.67)}外側樓梯
+Dialogue: 0,0:15:23.56,0:15:23.61,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1788.45,1150.2)\pos(1870.26,809.42)}外側樓梯
+Dialogue: 0,0:15:23.61,0:15:23.65,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1787.59,1150.9)\pos(1869.4,810.12)}外側樓梯
+Dialogue: 0,0:15:23.65,0:15:23.69,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1786.69,1151.77)\pos(1868.5,810.99)}外側樓梯
+Dialogue: 0,0:15:23.69,0:15:23.73,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1785.76,1152.54)\pos(1867.57,811.76)}外側樓梯
+Dialogue: 0,0:15:23.73,0:15:23.77,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1784.87,1153.22)\pos(1866.68,812.44)}外側樓梯
+Dialogue: 0,0:15:23.77,0:15:23.81,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1784.03,1154)\pos(1865.84,813.22)}外側樓梯
+Dialogue: 0,0:15:23.81,0:15:23.86,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1783.11,1154.76)\pos(1864.92,813.98)}外側樓梯
+Dialogue: 0,0:15:23.86,0:15:23.90,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1782.23,1155.54)\pos(1864.04,814.76)}外側樓梯
+Dialogue: 0,0:15:23.90,0:15:23.94,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1781.33,1156.3)\pos(1863.14,815.52)}外側樓梯
+Dialogue: 0,0:15:23.94,0:15:23.98,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1780.45,1157.02)\pos(1862.26,816.24)}外側樓梯
+Dialogue: 0,0:15:23.98,0:15:24.02,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1779.55,1157.71)\pos(1861.36,816.93)}外側樓梯
+Dialogue: 0,0:15:24.02,0:15:24.06,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1778.68,1158.53)\pos(1860.49,817.75)}外側樓梯
+Dialogue: 0,0:15:24.06,0:15:24.11,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1777.82,1159.25)\pos(1859.63,818.47)}外側樓梯
+Dialogue: 0,0:15:24.11,0:15:24.15,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1776.9,1160.07)\pos(1858.71,819.29)}外側樓梯
+Dialogue: 0,0:15:24.15,0:15:24.19,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1776,1160.76)\pos(1857.81,819.98)}外側樓梯
+Dialogue: 0,0:15:24.19,0:15:24.23,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1775.13,1161.51)\pos(1856.94,820.73)}外側樓梯
+Dialogue: 0,0:15:24.23,0:15:24.27,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1774.32,1162.24)\pos(1856.13,821.46)}外側樓梯
+Dialogue: 0,0:15:24.27,0:15:24.31,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1773.42,1162.96)\pos(1855.23,822.18)}外側樓梯
+Dialogue: 0,0:15:24.31,0:15:24.36,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1772.54,1163.64)\pos(1854.35,822.86)}外側樓梯
+Dialogue: 0,0:15:24.36,0:15:24.40,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1771.68,1164.49)\pos(1853.49,823.71)}外側樓梯
+Dialogue: 0,0:15:24.40,0:15:24.44,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1770.79,1165.21)\pos(1852.6,824.43)}外側樓梯
+Dialogue: 0,0:15:24.44,0:15:24.48,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1769.94,1165.89)\pos(1851.75,825.11)}外側樓梯
+Dialogue: 0,0:15:24.48,0:15:24.52,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1769.13,1166.62)\pos(1850.94,825.84)}外側樓梯
+Dialogue: 0,0:15:24.52,0:15:24.56,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1768.21,1167.41)\pos(1850.02,826.63)}外側樓梯
+Dialogue: 0,0:15:24.56,0:15:24.61,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1767.3,1168.12)\pos(1849.11,827.34)}外側樓梯
+Dialogue: 0,0:15:24.61,0:15:24.65,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1766.49,1168.88)\pos(1848.3,828.1)}外側樓梯
+Dialogue: 0,0:15:24.65,0:15:24.69,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1765.62,1169.55)\pos(1847.43,828.77)}外側樓梯
+Dialogue: 0,0:15:24.69,0:15:24.73,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1764.78,1170.31)\pos(1846.59,829.53)}外側樓梯
+Dialogue: 0,0:15:24.73,0:15:24.77,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1763.95,1171)\pos(1845.76,830.22)}外側樓梯
+Dialogue: 0,0:15:24.77,0:15:24.81,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1763.04,1171.73)\pos(1844.85,830.95)}外側樓梯
+Dialogue: 0,0:15:24.81,0:15:24.86,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1762.18,1172.47)\pos(1843.99,831.69)}外側樓梯
+Dialogue: 0,0:15:24.86,0:15:24.90,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1761.36,1173.17)\pos(1843.17,832.39)}外側樓梯
+Dialogue: 0,0:15:24.90,0:15:24.94,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1760.5,1173.9)\pos(1842.31,833.12)}外側樓梯
+Dialogue: 0,0:15:24.94,0:15:24.98,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1759.67,1174.58)\pos(1841.48,833.8)}外側樓梯
+Dialogue: 0,0:15:24.98,0:15:25.02,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1758.8,1175.37)\pos(1840.61,834.59)}外側樓梯
+Dialogue: 0,0:15:25.02,0:15:25.07,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1757.96,1176.14)\pos(1839.77,835.36)}外側樓梯
+Dialogue: 0,0:15:25.07,0:15:25.11,PZ,,0,0,0,,{=68=77}{\an8\fn汉仪旗黑 65S\3c&H3B3642&\fax0.000001\fscx31.69\fscy48.06\frz-2.2674\frx-8.4783\fry-35.1971\xbord0.95\ybord1.44\org(1757.2,1176.81)\pos(1839.01,836.03)}外側樓梯
+Dialogue: 0,0:16:17.83,0:16:19.00,PZ,,0,0,0,,{=82}{\an8\fn霞鹜臻楷\fs70\fad(230,0)\fscx88.57\fscy83.73\frz-0.0494\frx0.7888\fry2.3604\xbord2.66\ybord2.52\org(388.52,953.55)\pos(408.46,864.72)}獻給偉大的頂梁柱們
+Dialogue: 0,0:16:25.50,0:16:25.54,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,1031.8)\pos(1834.92,765.96)}黑部大壩休息區
+Dialogue: 0,0:16:25.54,0:16:25.58,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,1028.43)\pos(1834.92,762.59)}黑部大壩休息區
+Dialogue: 0,0:16:25.58,0:16:25.63,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,1025.03)\pos(1834.92,759.19)}黑部大壩休息區
+Dialogue: 0,0:16:25.63,0:16:25.67,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,1021.65)\pos(1834.91,755.81)}黑部大壩休息區
+Dialogue: 0,0:16:25.67,0:16:25.71,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,1018.26)\pos(1834.91,752.42)}黑部大壩休息區
+Dialogue: 0,0:16:25.71,0:16:25.75,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.98,1014.99)\pos(1834.93,749.15)}黑部大壩休息區
+Dialogue: 0,0:16:25.75,0:16:25.79,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,1011.49)\pos(1834.92,745.65)}黑部大壩休息區
+Dialogue: 0,0:16:25.79,0:16:25.83,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,1008.21)\pos(1834.91,742.37)}黑部大壩休息區
+Dialogue: 0,0:16:25.83,0:16:25.88,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,1004.71)\pos(1834.92,738.87)}黑部大壩休息區
+Dialogue: 0,0:16:25.88,0:16:25.92,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1771.03,1001.36)\pos(1834.98,735.52)}黑部大壩休息區
+Dialogue: 0,0:16:25.92,0:16:25.96,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1771.01,998.03)\pos(1834.96,732.19)}黑部大壩休息區
+Dialogue: 0,0:16:25.96,0:16:26.00,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,994.66)\pos(1834.92,728.82)}黑部大壩休息區
+Dialogue: 0,0:16:26.00,0:16:26.04,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,991.39)\pos(1834.92,725.55)}黑部大壩休息區
+Dialogue: 0,0:16:26.04,0:16:26.08,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,987.97)\pos(1834.92,722.14)}黑部大壩休息區
+Dialogue: 0,0:16:26.08,0:16:26.13,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,984.62)\pos(1834.92,718.78)}黑部大壩休息區
+Dialogue: 0,0:16:26.13,0:16:26.17,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,981.23)\pos(1834.91,715.39)}黑部大壩休息區
+Dialogue: 0,0:16:26.17,0:16:26.21,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,977.85)\pos(1834.92,712.01)}黑部大壩休息區
+Dialogue: 0,0:16:26.21,0:16:26.25,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,974.43)\pos(1834.91,708.59)}黑部大壩休息區
+Dialogue: 0,0:16:26.25,0:16:26.29,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,971.03)\pos(1834.91,705.19)}黑部大壩休息區
+Dialogue: 0,0:16:26.29,0:16:26.33,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,967.73)\pos(1834.91,701.89)}黑部大壩休息區
+Dialogue: 0,0:16:26.33,0:16:26.38,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,964.22)\pos(1834.91,698.39)}黑部大壩休息區
+Dialogue: 0,0:16:26.38,0:16:26.42,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.97,960.92)\pos(1834.92,695.08)}黑部大壩休息區
+Dialogue: 0,0:16:26.42,0:16:26.46,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,957.49)\pos(1834.91,691.65)}黑部大壩休息區
+Dialogue: 0,0:16:26.46,0:16:26.50,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,954.09)\pos(1834.9,688.25)}黑部大壩休息區
+Dialogue: 0,0:16:26.50,0:16:26.54,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.96,950.71)\pos(1834.91,684.87)}黑部大壩休息區
+Dialogue: 0,0:16:26.54,0:16:26.58,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,947.37)\pos(1834.9,681.53)}黑部大壩休息區
+Dialogue: 0,0:16:26.58,0:16:26.63,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,943.97)\pos(1834.89,678.14)}黑部大壩休息區
+Dialogue: 0,0:16:26.63,0:16:26.67,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,940.6)\pos(1834.9,674.76)}黑部大壩休息區
+Dialogue: 0,0:16:26.67,0:16:26.71,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,937.23)\pos(1834.89,671.39)}黑部大壩休息區
+Dialogue: 0,0:16:26.71,0:16:26.75,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,933.87)\pos(1834.9,668.03)}黑部大壩休息區
+Dialogue: 0,0:16:26.75,0:16:26.79,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,930.56)\pos(1834.9,664.72)}黑部大壩休息區
+Dialogue: 0,0:16:26.79,0:16:26.84,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,927.14)\pos(1834.9,661.3)}黑部大壩休息區
+Dialogue: 0,0:16:26.84,0:16:26.88,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,923.79)\pos(1834.89,657.95)}黑部大壩休息區
+Dialogue: 0,0:16:26.88,0:16:26.92,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,920.31)\pos(1834.9,654.47)}黑部大壩休息區
+Dialogue: 0,0:16:26.92,0:16:26.96,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,916.94)\pos(1834.9,651.1)}黑部大壩休息區
+Dialogue: 0,0:16:26.96,0:16:27.00,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.95,913.55)\pos(1834.9,647.71)}黑部大壩休息區
+Dialogue: 0,0:16:27.00,0:16:27.04,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,910.14)\pos(1834.89,644.3)}黑部大壩休息區
+Dialogue: 0,0:16:27.04,0:16:27.09,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,906.8)\pos(1834.89,640.96)}黑部大壩休息區
+Dialogue: 0,0:16:27.09,0:16:27.13,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,903.48)\pos(1834.89,637.64)}黑部大壩休息區
+Dialogue: 0,0:16:27.13,0:16:27.17,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,900.01)\pos(1834.89,634.17)}黑部大壩休息區
+Dialogue: 0,0:16:27.17,0:16:27.21,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,896.75)\pos(1834.89,630.91)}黑部大壩休息區
+Dialogue: 0,0:16:27.21,0:16:27.25,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,893.32)\pos(1834.89,627.48)}黑部大壩休息區
+Dialogue: 0,0:16:27.25,0:16:27.29,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,889.91)\pos(1834.89,624.07)}黑部大壩休息區
+Dialogue: 0,0:16:27.29,0:16:27.34,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,886.53)\pos(1834.89,620.69)}黑部大壩休息區
+Dialogue: 0,0:16:27.34,0:16:27.38,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,883.2)\pos(1834.89,617.36)}黑部大壩休息區
+Dialogue: 0,0:16:27.38,0:16:27.42,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.94,879.81)\pos(1834.89,613.97)}黑部大壩休息區
+Dialogue: 0,0:16:27.42,0:16:27.46,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.93,876.37)\pos(1834.88,610.53)}黑部大壩休息區
+Dialogue: 0,0:16:27.46,0:16:27.50,PZ,,0,0,0,,{=91=101}{\an2\fn汉仪旗黑 65S\fs30\c&H000000&\3c&HFFFFFF&\fscx118.76\fscy146.65\frz6.6078\frx4.6575\fry13.1735\xbord3.56\ybord4.40\org(1770.93,872.91)\pos(1834.88,607.07)}黑部大壩休息區
+Dialogue: 0,0:16:25.50,0:16:25.54,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1674.11)\pos(1121.15,851.22)}黑部大壩休息區
+Dialogue: 0,0:16:25.54,0:16:25.58,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1670.74)\pos(1121.15,847.85)}黑部大壩休息區
+Dialogue: 0,0:16:25.58,0:16:25.63,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1667.34)\pos(1121.15,844.45)}黑部大壩休息區
+Dialogue: 0,0:16:25.63,0:16:25.67,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1663.96)\pos(1121.14,841.07)}黑部大壩休息區
+Dialogue: 0,0:16:25.67,0:16:25.71,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1660.57)\pos(1121.14,837.68)}黑部大壩休息區
+Dialogue: 0,0:16:25.71,0:16:25.75,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.87,1657.3)\pos(1121.16,834.41)}黑部大壩休息區
+Dialogue: 0,0:16:25.75,0:16:25.79,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1653.8)\pos(1121.15,830.91)}黑部大壩休息區
+Dialogue: 0,0:16:25.79,0:16:25.83,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1650.52)\pos(1121.14,827.63)}黑部大壩休息區
+Dialogue: 0,0:16:25.83,0:16:25.88,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1647.02)\pos(1121.15,824.13)}黑部大壩休息區
+Dialogue: 0,0:16:25.88,0:16:25.92,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.92,1643.67)\pos(1121.21,820.78)}黑部大壩休息區
+Dialogue: 0,0:16:25.92,0:16:25.96,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.9,1640.34)\pos(1121.19,817.45)}黑部大壩休息區
+Dialogue: 0,0:16:25.96,0:16:26.00,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1636.97)\pos(1121.15,814.08)}黑部大壩休息區
+Dialogue: 0,0:16:26.00,0:16:26.04,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1633.7)\pos(1121.15,810.81)}黑部大壩休息區
+Dialogue: 0,0:16:26.04,0:16:26.08,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1630.29)\pos(1121.15,807.39)}黑部大壩休息區
+Dialogue: 0,0:16:26.08,0:16:26.13,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1626.93)\pos(1121.15,804.04)}黑部大壩休息區
+Dialogue: 0,0:16:26.13,0:16:26.17,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1623.54)\pos(1121.14,800.65)}黑部大壩休息區
+Dialogue: 0,0:16:26.17,0:16:26.21,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1620.16)\pos(1121.15,797.27)}黑部大壩休息區
+Dialogue: 0,0:16:26.21,0:16:26.25,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1616.74)\pos(1121.14,793.85)}黑部大壩休息區
+Dialogue: 0,0:16:26.25,0:16:26.29,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1613.34)\pos(1121.14,790.45)}黑部大壩休息區
+Dialogue: 0,0:16:26.29,0:16:26.33,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1610.04)\pos(1121.14,787.15)}黑部大壩休息區
+Dialogue: 0,0:16:26.33,0:16:26.38,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1606.54)\pos(1121.14,783.64)}黑部大壩休息區
+Dialogue: 0,0:16:26.38,0:16:26.42,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.86,1603.23)\pos(1121.15,780.34)}黑部大壩休息區
+Dialogue: 0,0:16:26.42,0:16:26.46,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1599.8)\pos(1121.14,776.91)}黑部大壩休息區
+Dialogue: 0,0:16:26.46,0:16:26.50,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1596.4)\pos(1121.13,773.51)}黑部大壩休息區
+Dialogue: 0,0:16:26.50,0:16:26.54,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.85,1593.02)\pos(1121.14,770.13)}黑部大壩休息區
+Dialogue: 0,0:16:26.54,0:16:26.58,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1589.68)\pos(1121.13,766.79)}黑部大壩休息區
+Dialogue: 0,0:16:26.58,0:16:26.63,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1586.29)\pos(1121.12,763.39)}黑部大壩休息區
+Dialogue: 0,0:16:26.63,0:16:26.67,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1582.91)\pos(1121.13,760.02)}黑部大壩休息區
+Dialogue: 0,0:16:26.67,0:16:26.71,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1579.54)\pos(1121.12,756.65)}黑部大壩休息區
+Dialogue: 0,0:16:26.71,0:16:26.75,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1576.18)\pos(1121.13,753.29)}黑部大壩休息區
+Dialogue: 0,0:16:26.75,0:16:26.79,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1572.86)\pos(1121.13,749.97)}黑部大壩休息區
+Dialogue: 0,0:16:26.79,0:16:26.84,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1569.45)\pos(1121.13,746.56)}黑部大壩休息區
+Dialogue: 0,0:16:26.84,0:16:26.88,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1566.1)\pos(1121.12,743.21)}黑部大壩休息區
+Dialogue: 0,0:16:26.88,0:16:26.92,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1562.62)\pos(1121.13,739.73)}黑部大壩休息區
+Dialogue: 0,0:16:26.92,0:16:26.96,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1559.25)\pos(1121.13,736.36)}黑部大壩休息區
+Dialogue: 0,0:16:26.96,0:16:27.00,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.84,1555.86)\pos(1121.13,732.97)}黑部大壩休息區
+Dialogue: 0,0:16:27.00,0:16:27.04,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1552.45)\pos(1121.12,729.56)}黑部大壩休息區
+Dialogue: 0,0:16:27.04,0:16:27.09,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1549.11)\pos(1121.12,726.22)}黑部大壩休息區
+Dialogue: 0,0:16:27.09,0:16:27.13,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1545.79)\pos(1121.12,722.9)}黑部大壩休息區
+Dialogue: 0,0:16:27.13,0:16:27.17,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1542.32)\pos(1121.12,719.43)}黑部大壩休息區
+Dialogue: 0,0:16:27.17,0:16:27.21,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1539.06)\pos(1121.12,716.17)}黑部大壩休息區
+Dialogue: 0,0:16:27.21,0:16:27.25,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1535.63)\pos(1121.12,712.74)}黑部大壩休息區
+Dialogue: 0,0:16:27.25,0:16:27.29,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1532.22)\pos(1121.12,709.33)}黑部大壩休息區
+Dialogue: 0,0:16:27.29,0:16:27.34,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1528.84)\pos(1121.12,705.95)}黑部大壩休息區
+Dialogue: 0,0:16:27.34,0:16:27.38,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1525.51)\pos(1121.12,702.62)}黑部大壩休息區
+Dialogue: 0,0:16:27.38,0:16:27.42,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.83,1522.12)\pos(1121.12,699.23)}黑部大壩休息區
+Dialogue: 0,0:16:27.42,0:16:27.46,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.82,1518.68)\pos(1121.11,695.79)}黑部大壩休息區
+Dialogue: 0,0:16:27.46,0:16:27.50,PZ,,0,0,0,,{=99=100}{\an2\fn汉仪旗黑 65S\fs35\c&H000000&\3c&HFFFFFF&\fax-0.000002\fscx55.98\fscy82.59\frz3.1163\frx0.5395\fry-5.3180\org(1251.82,1515.22)\pos(1121.11,692.33)}黑部大壩休息區
+Dialogue: 0,0:16:27.51,0:16:36.52,PZ,,0,0,0,,{\an2\fs70\fsp5\bord5\c&H000000&\3c&HFFFFFF&\pos(971.43,907.14)}黑部大壩拉麵  1100日元
+Dialogue: 0,0:16:36.52,0:16:38.64,PZ,,0,0,0,,{\an2\fs80\fsp5\bord5\c&H000000&\3c&HFFFFFF&\fad(0,352)\pos(971.43,868.29)}黑部大壩咖哩飯  1300日元
+Dialogue: 0,0:17:26.86,0:17:32.61,PZ,,0,0,0,,{\an1\fn霞鹜漫黑\fs38\bord3\pos(592.74,157.87)\3c&H373041&}洩流觀景平台\N大壩展望台\N大壩新展望廣場\N免費休息處
+Dialogue: 0,0:18:37.39,0:18:43.02,PZ,,0,0,0,,{\an2\fn@方正准圆_GBK\frz-90\bord3\c&H000000&\3c&HFFFFFF&\pos(1620.57,287.14)}北安雲 滑雪跳台
+Dialogue: 0,0:19:15.88,0:19:18.34,PZ,,0,0,0,,{\an2\fn@方正准圆_GBK\fs80\frz-90\bord3\c&H000000&\3c&HFFFFFF&\pos(1764.57,492.86)}起點塔
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\p1\fscx800\fscy220\pos(502.58,231.71)\c&HF5F5F3&}m 0 0 l 50 0 50 50 0 50
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an2\fn汉仪旗黑 65S\fs140\bord0.5\c&H2A3677&\pos(704,358)}注意腳下
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\p1\fscx1500\fscy370\c&HF5F5F3&\pos(391.72,506)}m 0 0 l 50 0 50 50 0 50
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\fn汉仪旗黑 65S\fs115\c&H5B4A4E&\bord0.5\pos(405.44,498)}前方是高處
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\fn汉仪旗黑 65S\fs115\c&H5B4A4E&\bord0.5\pos(405.44,586.71)}十分危險!
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\p1\fscx1800\fscy340\c&HF5F5F3&\pos(391.72,691.14)}m 0 0 l 50 0 50 50 0 50
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\fn汉仪旗黑 65S\fs115\c&H5B4A4E&\bord0.5\pos(405.44,676.57)}請不要邊走邊玩手機。
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\fn汉仪旗黑 65S\fs70\c&H5B4A4E&\bord0.5\pos(398.58,799.57)}白馬村吉祥物
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\p1\fscx1820\fscy100\c&HF5F5F3&\pos(391.72,864.85)}m 0 0 l 50 0 50 50 0 50
+Dialogue: 0,0:19:43.37,0:19:45.87,PZ,,0,0,0,,{\an7\fn汉仪旗黑 65S\fs70\c&H5B4A4E&\bord0.5\pos(398.58,851.28)}維克托瓦爾 舍瓦布朗 村男三世
+Dialogue: 0,0:19:48.12,0:19:50.13,PZ,,0,0,0,,{\an2\fn@方正准圆_GBK\frz-90\fs80\bord3\c&H000000&\3c&HFFFFFF&\pos(1761.14,347.71)}大跳台
+Dialogue: 0,0:20:02.18,0:20:02.56,PZ,,0,0,0,,{=119}{\clip()\an8\fn汉仪旗黑 65S\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz14.28\move(1963.61,190,1041.44,190,21,354)}前往標準台
+Dialogue: 0,0:20:02.56,0:20:02.93,PZ,,0,0,0,,{=120}{\clip()\an8\fn汉仪旗黑 65S\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz14.28\move(928.11,190,5.94,190,16,350)}前往標準台
+Dialogue: 0,0:20:42.55,0:20:45.97,PZ,,0,0,0,,{\an8\fn@方正准圆_GBK\frz-90\fs80\bord3\c&H000000&\3c&HFFFFFF&\pos(1557.71,319.14)}大賽紀念展廳
+Dialogue: 0,0:22:04.34,0:22:04.39,PZ,,0,0,0,,{=102}{\an8\fn方正字迹-墨尘榜隶 简繁\fs80\bord3\c&H000000&\3c&HFFFFFF&\pos(1000.01,852.28)\clip(m 870.99 889.15 l 956.72 867.25 942.95 849.11 861.29 854.11)}淘汰者
+Dialogue: 0,0:22:04.39,0:22:04.43,PZ,,0,0,0,,{=102}{\an8\fn方正字迹-墨尘榜隶 简繁\fs80\bord3\c&H000000&\3c&HFFFFFF&\pos(925.72,797.42)\clip(m 802.6 873.68 l 812.12 797.24 1044.12 805.97 1040.15 847.49 931.96 874.74)}淘汰者
+Dialogue: 0,0:22:04.43,0:22:04.93,PZ,,0,0,0,,{=102}{\clip()\an8\fn方正字迹-墨尘榜隶 简繁\fs80\bord3\c&H000000&\3c&HFFFFFF&\move(859.43,743.71,97.81,165.46,18,476)}淘汰者
+Dialogue: 0,0:22:04.93,0:22:04.97,PZ,,0,0,0,,{=102}{\clip()\an8\fn方正字迹-墨尘榜隶 简繁\fs80\bord3\c&H000000&\3c&HFFFFFF&\pos(37.81,115.46)}淘汰者
+Dialogue: 0,0:22:04.97,0:22:05.01,PZ,,0,0,0,,{=102}{\clip()\an8\fn方正字迹-墨尘榜隶 简繁\fs80\bord3\c&H000000&\3c&HFFFFFF&\pos(-30.19,61.46)}淘汰者
+Dialogue: 0,0:22:08.43,0:22:08.81,PZ,,0,0,0,,{=103}{\an8\fn汉仪旗黑 65S\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz14.28\move(-25.46,191.33,905.33,191.33,22,355)}下一站戶隱
+Dialogue: 0,0:22:08.81,0:22:09.18,PZ,,0,0,0,,{=104}{\clip()\an8\fn汉仪旗黑 65S\fs80\bord3\c&H000000&\3c&HFFFFFF&\frz14.28\move(1022.33,191.33,1953.13,191.33,17,351)}下一站戶隱
+Dialogue: 0,0:01:34.95,0:01:40.66,PZ - S,,0,0,0,,伊勢高速 伊勢關出入口
+Dialogue: 0,0:03:55.63,0:03:58.59,PZ - S,,0,0,0,,位於上高地的代表景點河童橋南岸\N由上高地五千尺酒店運營
+Dialogue: 0,0:04:24.95,0:04:28.16,PZ - S,,0,0,0,,東海北陸高速 愛知岐阜縣界
+Dialogue: 0,0:04:31.79,0:04:34.30,PZ - S,,0,0,0,,東海北陸高速 川島停車區\N川島高速綠洲
+Dialogue: 0,0:07:36.56,0:07:45.28,PZ - S,,0,0,0,,小梨平露營場\N長野縣松本市安雲上高地4468
+Dialogue: 0,0:07:03.07,0:07:04.32,PZ - S,,0,0,0,,位於上高地遊客中心的特產店\N現實中不叫鏟子(shovel)而叫登山杖(pickel)
+Dialogue: 0,0:12:51.00,0:12:54.00,PZ - S,,0,0,0,,立山黑部阿爾卑斯路線 長野縣側扇澤站\N穿過隧道的電動公車由大壩所屬方關西電力運營
+Dialogue: 0,0:18:35.42,0:18:43.02,PZ - S,,0,0,0,,白馬跳台競技場\N長野縣北安雲郡白馬村北城3970
+Dialogue: 0,0:00:00.00,0:00:00.00,PZ,,0,0,0,,
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,Staff
+Dialogue: 0,0:01:24.73,0:01:29.98,Staff,,0,0,0,,{\fad(0,0)\an8\bord8\blur0\fs60\fsp2\pos(960,5)\shad7\3c&H010001&\4c&HFEA000&}本字幕由{\3c&H010001&}桜{\c}都字幕組製作 僅供交流試看之用 請於下載後24小時內刪除\N{\fs50}翻譯:{\3c&H010001&}懶源 奧利諾科之夢 掛件 燕燈{\c} 校對:{\3c&H010001&}名字普通{\c} 時軸:{\3c&H010001&}貪吃鬼的天空 Mekozoko{\c} 壓製:{\3c&H010001&}Chanter{\c\3c}
+Dialogue: 0,0:01:24.73,0:01:29.98,Staff,,0,0,0,,{\fad(0,0)\an8\bord3\blur0\fs60\fsp2\pos(960,5)}本字幕由{\3c&H9C53EF&}桜{\c\3c\4c}都字幕組製作 僅供交流試看之用 請於下載後24小時內刪除\N{\fs50}翻譯:{\3c&H0164FF&}懶源 奧利諾科之夢 掛件 燕燈{\c\3c\4c} 校對:{\3c&H0164FF&}名字普通{\c\3c\4c} 時軸:{\3c&H0164FF&}貪吃鬼的天空 Mekozoko{\c\3c\4c} 壓製:{\3c&H0164FF&}Chanter{\c\3c\4c}
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,Sub-CH
+Dialogue: 0,0:01:38.41,0:01:40.66,Sub-CH,,0,0,0,,糟糕了!
+Dialogue: 0,0:01:40.66,0:01:44.66,Sub-CH,,0,0,0,,想著小躺一下 沒想到一晃就過了六個鐘
+Dialogue: 0,0:01:45.06,0:01:47.06,Sub-CH,,0,0,0,,話說 太熱了吧
+Dialogue: 0,0:01:47.06,0:01:50.63,Sub-CH,,0,0,0,,太陽你也太全力以赴了吧 放點水可以嗎
+Dialogue: 0,0:01:52.14,0:01:54.27,Sub-CH,,0,0,0,,要是趕在早上出發的話
+Dialogue: 0,0:01:54.27,0:01:56.49,Sub-CH,,0,0,0,,就能在氣溫上升前趕到長野
+Dialogue: 0,0:01:56.49,0:02:00.09,Sub-CH,,0,0,0,,然後好好享受自由行的…
+Dialogue: 0,0:02:02.89,0:02:07.52,Sub-CH,,0,0,0,,彷彿面前有著一台 工業用空調外機…
+Dialogue: 0,0:02:11.80,0:02:13.78,Sub-CH,,0,0,0,,夏天對於騎手而言
+Dialogue: 0,0:02:13.78,0:02:16.06,Sub-CH,,0,0,0,,是最不容易的季節
+Dialogue: 0,0:02:16.83,0:02:18.53,Sub-CH,,0,0,0,,太陽的熱
+Dialogue: 0,0:02:18.72,0:02:20.49,Sub-CH,,0,0,0,,柏油路上的熱
+Dialogue: 0,0:02:20.76,0:02:22.98,Sub-CH,,0,0,0,,還有汽車尾氣的熱
+Dialogue: 0,0:02:23.77,0:02:27.66,Sub-CH,,0,0,0,,就連自己的摩托車 也是熱到爆炸
+Dialogue: 0,0:02:28.06,0:02:31.47,Sub-CH,,0,0,0,,順帶一提 引擎功率越大
+Dialogue: 0,0:02:31.79,0:02:33.62,Sub-CH,,0,0,0,,就越熱到爆炸
+Dialogue: 0,0:02:34.32,0:02:35.09,Sub-CH,,0,0,0,,好熱
+Dialogue: 0,0:02:35.60,0:02:38.00,Sub-CH,,0,0,0,,天啊 還堵上車了
+Dialogue: 0,0:02:38.64,0:02:43.39,Sub-CH,,0,0,0,,水冷式摩托車 是透過行駛時的風和冷卻水來進行冷卻的
+Dialogue: 0,0:02:43.39,0:02:47.51,Sub-CH,,0,0,0,,如果引擎沒熄火停車 導致水溫上升的話
+Dialogue: 0,0:02:47.51,0:02:49.82,Sub-CH,,0,0,0,,風冷風扇就會開始工作
+Dialogue: 0,0:02:52.08,0:02:54.61,Sub-CH,,0,0,0,,幾乎能熱死騎手
+Dialogue: 0,0:02:57.92,0:03:01.90,Sub-CH,,0,0,0,,但是要是因為熱 就穿這幅裝扮騎車的話
+Dialogue: 0,0:03:02.36,0:03:04.36,Sub-CH,,0,0,0,,摔車就完了
+Dialogue: 0,0:03:04.36,0:03:06.66,Sub-CH,,0,0,0,,得裝好防護才行
+Dialogue: 0,0:03:06.88,0:03:09.71,Sub-CH,,0,0,0,,果然比起夏天 還是冬天舒服啊
+Dialogue: 0,0:03:09.71,0:03:11.88,Sub-CH,,0,0,0,,穿著這套 還挺舒服的
+Dialogue: 0,0:03:12.25,0:03:13.84,Sub-CH,,0,0,0,,引擎也暖暖的
+Dialogue: 0,0:03:14.54,0:03:17.55,Sub-CH,,0,0,0,,雖說大雪或者道路凍結也不行
+Dialogue: 0,0:03:18.66,0:03:22.28,Sub-CH,,0,0,0,,就是出發前會很花時間
+Dialogue: 0,0:03:22.69,0:03:24.24,Sub-CH,,0,0,0,,一旦休息
+Dialogue: 0,0:03:24.24,0:03:26.10,Sub-CH,,0,0,0,,屁股就像長了根一樣久坐不動
+Dialogue: 0,0:03:26.49,0:03:29.81,Sub-CH,,0,0,0,,果然五月和十月才是最讚的季節啊
+Dialogue: 0,0:03:31.82,0:03:34.62,Sub-CH,,0,0,0,,快點到秋天吧
+Dialogue: 0,0:03:38.67,0:03:42.07,Sub-CH,,0,0,0,,抵達上高地啦
+Dialogue: 0,0:03:47.70,0:03:49.68,Sub-CH,,0,0,0,,好涼快
+Dialogue: 0,0:03:49.68,0:03:52.37,Sub-CH,,0,0,0,,據說現在氣溫只有24°C
+Dialogue: 0,0:03:52.59,0:03:54.74,Sub-CH,,0,0,0,,難怪涼快呀
+Dialogue: 0,0:03:54.74,0:03:55.63,Sub-CH,,0,0,0,,春姐
+Dialogue: 0,0:03:56.01,0:03:58.08,Sub-CH,,0,0,0,,那裡有上高地冰淇淋
+Dialogue: 0,0:04:02.35,0:04:05.22,Sub-CH,,0,0,0,,冰淇淋好好吃
+Dialogue: 0,0:04:05.82,0:04:08.72,Sub-CH,,0,0,0,,這裡是天堂嗎
+Dialogue: 0,0:04:14.65,0:04:17.07,Sub-CH,,0,0,0,,終於熬出來了
+Dialogue: 0,0:04:22.11,0:04:23.91,Sub-CH,,0,0,0,,彷彿騎友團一般
+Dialogue: 0,0:04:25.37,0:04:27.87,Sub-CH,,0,0,0,,進入岐阜縣啦
+Dialogue: 0,0:04:28.99,0:04:31.50,Sub-CH,,0,0,0,,是木曾川
+Dialogue: 0,0:04:36.92,0:04:40.30,Sub-CH,,0,0,0,,高速綠洲 太美味了
+Dialogue: 0,0:04:43.93,0:04:46.14,Sub-CH,,0,0,0,,振作起來啦
+Dialogue: 0,0:04:48.56,0:04:50.27,Sub-CH,,0,0,0,,超級爆胎啊
+Dialogue: 0,0:04:52.23,0:04:55.52,Sub-CH,,0,0,0,,不知在何處扎了個釘子嗎
+Dialogue: 0,0:04:56.69,0:04:59.15,Sub-CH,,0,0,0,,修輪胎工具包在哪…
+Dialogue: 0,0:05:01.70,0:05:05.74,Sub-CH,,0,0,0,,忘記塞到露營用背包裡了
+Dialogue: 0,0:05:06.18,0:05:07.69,Sub-CH,,0,0,0,,沒辦法了
+Dialogue: 0,0:05:07.69,0:05:10.34,Sub-CH,,0,0,0,,只好去旁邊的加油站修…
+Dialogue: 0,0:05:13.76,0:05:16.17,Sub-CH,,0,0,0,,這裡是沒有加油站的服務區啊
+Dialogue: 0,0:05:19.79,0:05:21.42,Sub-CH,,0,0,0,,這該怎麼辦好
+Dialogue: 0,0:05:24.97,0:05:26.41,Sub-CH,,0,0,0,,爆胎了吧
+Dialogue: 0,0:05:29.23,0:05:31.43,Sub-CH,,0,0,0,,真是幫大忙了
+Dialogue: 0,0:05:31.61,0:05:35.52,Sub-CH,,0,0,0,,這個電動打氣筒這麼袖珍 真不錯啊
+Dialogue: 0,0:05:36.57,0:05:38.21,Sub-CH,,0,0,0,,最近剛買的
+Dialogue: 0,0:05:38.67,0:05:41.33,Sub-CH,,0,0,0,,打氣筒也變得越來越方便了啊
+Dialogue: 0,0:05:41.98,0:05:44.01,Sub-CH,,0,0,0,,接下來要去摩托車露營嗎
+Dialogue: 0,0:05:44.01,0:05:44.86,Sub-CH,,0,0,0,,是的
+Dialogue: 0,0:05:44.86,0:05:46.97,Sub-CH,,0,0,0,,今天要去上高地住一晚
+Dialogue: 0,0:05:46.97,0:05:48.91,Sub-CH,,0,0,0,,明天要去到戶隱那邊
+Dialogue: 0,0:05:49.05,0:05:50.88,Sub-CH,,0,0,0,,在這高溫下
+Dialogue: 0,0:05:50.88,0:05:53.19,Sub-CH,,0,0,0,,大家都不約而同想到一塊去了
+Dialogue: 0,0:05:53.66,0:05:56.53,Sub-CH,,0,0,0,,我也打算到高山那邊避暑
+Dialogue: 0,0:05:58.36,0:05:59.96,Sub-CH,,0,0,0,,真不錯呢
+Dialogue: 0,0:06:06.46,0:06:09.51,Sub-CH,,0,0,0,,那麼 去上高地的路上多加小心
+Dialogue: 0,0:06:09.72,0:06:12.32,Sub-CH,,0,0,0,,好的 非常感謝
+Dialogue: 0,0:06:18.28,0:06:19.97,Sub-CH,,0,0,0,,我以後上了年紀之後
+Dialogue: 0,0:06:19.97,0:06:22.86,Sub-CH,,0,0,0,,也要成為那樣的騎手
+Dialogue: 0,0:06:23.69,0:06:26.99,Sub-CH,,0,0,0,,等我到那副模樣的時候
+Dialogue: 0,0:06:27.68,0:06:31.12,Sub-CH,,0,0,0,,說不定摩托車都以電動為主了呢
+Dialogue: 0,0:06:31.52,0:06:35.16,Sub-CH,,0,0,0,,或許有能自動駕駛來接我的摩托車
+Dialogue: 0,0:06:39.65,0:06:43.00,Sub-CH,,0,0,0,,好 輪胎也修好了
+Dialogue: 0,0:06:43.97,0:06:47.32,Sub-CH,,0,0,0,,一口氣衝到上高地囉
+Dialogue: 0,0:06:49.16,0:06:50.68,Sub-CH,,0,0,0,,要死人了!
+Dialogue: 0,0:06:55.04,0:06:57.85,Sub-CH,,0,0,0,,終於到上高地了
+Dialogue: 0,0:06:58.28,0:07:00.55,Sub-CH,,0,0,0,,春乃她們都等生氣了吧
+Dialogue: 0,0:07:00.82,0:07:03.06,Sub-CH,,0,0,0,,要買點什麼給她們賠禮吧
+Dialogue: 0,0:07:05.00,0:07:06.53,Sub-CH,,0,0,0,,自家製生火腿啊
+Dialogue: 0,0:07:06.99,0:07:08.58,Sub-CH,,0,0,0,,今晚要露營
+Dialogue: 0,0:07:08.58,0:07:11.28,Sub-CH,,0,0,0,,拿這個搞點小燒烤興許不錯
+Dialogue: 0,0:07:12.11,0:07:15.71,Sub-CH,,0,0,0,,大家都支好帳篷 悠哉起來了吧
+Dialogue: 0,0:07:18.35,0:07:21.58,Sub-CH,,0,0,0,,雖然這話由遲到的我來說不太對
+Dialogue: 0,0:07:23.05,0:07:26.01,Sub-CH,,0,0,0,,帳篷都沒支起來 你們在這悠哉個什麼勁啊
+Dialogue: 0,0:07:28.76,0:07:31.55,Sub-CH,,0,0,0,,華子 你太慢了啦
+Dialogue: 0,0:07:32.56,0:07:36.84,Sub-CH,,0,0,0,,就這樣 一邊感受著夢幻夏天的落幕
+Dialogue: 0,0:07:36.84,0:07:40.52,Sub-CH,,0,0,0,,一邊將穗高連峰的景色映入眼中
+Dialogue: 0,0:07:43.20,0:07:45.27,Sub-CH,,0,0,0,,這不是盡全力在偷懶嗎
+Dialogue: 0,0:07:45.44,0:07:49.28,Sub-CH,,0,0,0,,華子姐 這裡面是有很深的原因的
+Dialogue: 0,0:07:49.64,0:07:50.62,Sub-CH,,0,0,0,,原因?
+Dialogue: 0,0:07:52.86,0:07:55.63,Sub-CH,,0,0,0,,春姐 接下來要幹嘛呢
+Dialogue: 0,0:07:56.11,0:07:59.70,Sub-CH,,0,0,0,,去一個前面叫明神池的地方
+Dialogue: 0,0:08:00.25,0:08:02.42,Sub-CH,,0,0,0,,走過森林與濕地
+Dialogue: 0,0:08:02.57,0:08:06.92,Sub-CH,,0,0,0,,遠足間眺望梓川和穗高連峰
+Dialogue: 0,0:08:06.92,0:08:09.76,Sub-CH,,0,0,0,,時而偶遇野生動物
+Dialogue: 0,0:08:10.18,0:08:15.37,Sub-CH,,0,0,0,,遠足後還能吃到只山間獨有的樸素料理
+Dialogue: 0,0:08:15.95,0:08:18.04,Sub-CH,,0,0,0,,真棒啊
+Dialogue: 0,0:08:18.04,0:08:21.55,Sub-CH,,0,0,0,,原本打算這樣遠足一趟的…
+Dialogue: 0,0:08:26.72,0:08:28.65,Sub-CH,,0,0,0,,真好看
+Dialogue: 0,0:08:28.98,0:08:34.61,Sub-CH,,0,0,0,,結果遇到了一位堅持畫穗高連峰50年的畫師爺爺
+Dialogue: 0,0:08:35.00,0:08:41.58,Sub-CH,,0,0,0,,不過 一直畫同一座山…真的不會厭倦嗎
+Dialogue: 0,0:08:44.48,0:08:46.25,Sub-CH,,0,0,0,,厭倦嗎
+Dialogue: 0,0:08:46.68,0:08:51.59,Sub-CH,,0,0,0,,哪怕是同一座山 每日早中晚的景象也不盡相同哦
+Dialogue: 0,0:08:52.03,0:08:56.70,Sub-CH,,0,0,0,,而且我的畫 也會因我繪畫時的心情和狀態而有所不同
+Dialogue: 0,0:08:57.02,0:08:59.40,Sub-CH,,0,0,0,,聽說小姐姐你也是畫家?
+Dialogue: 0,0:08:59.40,0:09:01.38,Sub-CH,,0,0,0,,那你難道不理解嗎
+Dialogue: 0,0:09:01.85,0:09:05.60,Sub-CH,,0,0,0,,喜歡的東西不管畫多少遍都很幸福呀
+Dialogue: 0,0:09:06.98,0:09:10.32,Sub-CH,,0,0,0,,對啊 喜歡的東西不管畫多少次都很開心
+Dialogue: 0,0:09:10.32,0:09:12.61,Sub-CH,,0,0,0,,怎麼可能會厭倦呢!
+Dialogue: 0,0:09:13.92,0:09:21.04,Sub-CH,,0,0,0,,這位老爺爺持續50年都在進行畫者與畫物間的無盡交流
+Dialogue: 0,0:09:22.77,0:09:27.45,Sub-CH,,0,0,0,,抱歉了大家 我決定今天要嘗試和大山對話!
+Dialogue: 0,0:09:27.45,0:09:29.29,Sub-CH,,0,0,0,,欸!?
+Dialogue: 0,0:09:29.29,0:09:32.08,Sub-CH,,0,0,0,,如上所述 就變成了現在這樣了
+Dialogue: 0,0:09:32.08,0:09:33.64,Sub-CH,,0,0,0,,穗高連峰真漂亮呀
+Dialogue: 0,0:09:33.64,0:09:35.17,Sub-CH,,0,0,0,,一點開始就一直這樣!?
+Dialogue: 0,0:09:35.50,0:09:38.91,Sub-CH,,0,0,0,,雖然我們也可以丟下春姐 自己去玩
+Dialogue: 0,0:09:38.91,0:09:41.88,Sub-CH,,0,0,0,,但是稍微一躺 就成這樣了
+Dialogue: 0,0:09:41.88,0:09:44.93,Sub-CH,,0,0,0,,宜人的溫度會讓人懶惰呢
+Dialogue: 0,0:09:45.62,0:09:48.86,Sub-CH,,0,0,0,,再懶也該搭帳篷吃晚餐了哦
+Dialogue: 0,0:09:48.86,0:09:50.15,Sub-CH,,0,0,0,,已經晚上6點了
+Dialogue: 0,0:09:50.47,0:09:54.45,Sub-CH,,0,0,0,,也是呢 天也要黑了呢
+Dialogue: 0,0:09:58.58,0:10:00.00,Sub-CH,,0,0,0,,一群僵屍嗎
+Dialogue: 0,0:10:11.98,0:10:13.10,Sub-CH,,0,0,0,,這裡也…
+Dialogue: 0,0:10:21.60,0:10:24.62,Sub-CH,,0,0,0,,上高地的夜晚 格外早
+Dialogue: 0,0:10:28.66,0:10:31.20,Sub-CH,,0,0,0,,預備…上!
+Dialogue: 0,0:10:34.52,0:10:38.40,Sub-CH,,0,0,0,,{\an8}櫻子 淋到我了 淋到我了
+Dialogue: 0,0:10:37.60,0:10:39.40,Sub-CH,,0,0,0,,那個…烤爐在哪裡
+Dialogue: 0,0:10:39.67,0:10:43.93,Sub-CH,,0,0,0,,抱歉 我想著晚餐可以在外面吃就沒買
+Dialogue: 0,0:10:44.16,0:10:47.37,Sub-CH,,0,0,0,,那沒辦法了 火腿只好生啃吧
+Dialogue: 0,0:10:53.63,0:10:57.45,Sub-CH,,0,0,0,,能勉強來得及泡澡真是太好了
+Dialogue: 0,0:10:57.45,0:11:01.59,Sub-CH,,0,0,0,,對不起 都怪我沒提前調查清楚
+Dialogue: 0,0:11:02.30,0:11:04.59,Sub-CH,,0,0,0,,話說回來 乘鞍岳爬得怎麼樣?
+Dialogue: 0,0:11:04.59,0:11:07.04,Sub-CH,,0,0,0,,是個好地方哦
+Dialogue: 0,0:11:07.04,0:11:09.85,Sub-CH,,0,0,0,,我們登了個小山 散了一會步
+Dialogue: 0,0:11:10.22,0:11:13.57,Sub-CH,,0,0,0,,滑板山坡速降 真爽呢
+Dialogue: 0,0:11:13.57,0:11:17.72,Sub-CH,,0,0,0,,對對 我都拍下來了 晚點看看吧
+Dialogue: 0,0:11:17.72,0:11:22.16,Sub-CH,,0,0,0,,是嗎 要是我也能早點出發就好了
+Dialogue: 0,0:11:22.16,0:11:25.86,Sub-CH,,0,0,0,,差點沒被太陽曬死
+Dialogue: 0,0:11:26.36,0:11:28.22,Sub-CH,,0,0,0,,太誇張啦
+Dialogue: 0,0:11:28.22,0:11:32.17,Sub-CH,,0,0,0,,躺這懶懶散散的人才不懂啊
+Dialogue: 0,0:11:37.82,0:11:40.38,Sub-CH,,0,0,0,,華子 你睡著了嗎
+Dialogue: 0,0:11:40.38,0:11:43.34,Sub-CH,,0,0,0,,沒哦 差點就睡著了
+Dialogue: 0,0:11:43.74,0:11:49.14,Sub-CH,,0,0,0,,你最近一直在陪我 頻繁從三重縣往來
+Dialogue: 0,0:11:49.14,0:11:50.77,Sub-CH,,0,0,0,,會不會覺得很辛苦?
+Dialogue: 0,0:11:51.02,0:11:54.51,Sub-CH,,0,0,0,,不會啊 畢竟我是喜歡才這樣做的
+Dialogue: 0,0:11:56.42,0:11:59.69,Sub-CH,,0,0,0,,我還是喜歡和你們一起出去玩啦
+Dialogue: 0,0:11:59.96,0:12:01.39,Sub-CH,,0,0,0,,華子…
+Dialogue: 0,0:12:02.57,0:12:03.82,Sub-CH,,0,0,0,,謝謝你
+Dialogue: 0,0:12:07.22,0:12:08.71,Sub-CH,,0,0,0,,別肉麻了
+Dialogue: 0,0:12:15.47,0:12:17.96,Sub-CH,,0,0,0,,華子 快起床!
+Dialogue: 0,0:12:19.26,0:12:21.34,Sub-CH,,0,0,0,,不是還沒到7點嗎…
+Dialogue: 0,0:12:21.34,0:12:23.59,Sub-CH,,0,0,0,,巴士馬上要開走了
+Dialogue: 0,0:12:25.69,0:12:30.68,Sub-CH,,0,0,0,,快點快點 今天還要去黑部和白馬
+Dialogue: 0,0:12:41.69,0:12:44.05,Sub-CH,,0,0,0,,再見了 上高地
+Dialogue: 0,0:12:45.10,0:12:48.02,Sub-CH,,0,0,0,,結果我們根本沒逛成
+Dialogue: 0,0:12:54.37,0:12:59.92,Sub-CH,,0,0,0,,今天就先從櫻子的選擇 黑部大壩開始逛起
+Dialogue: 0,0:12:59.92,0:13:01.46,Sub-CH,,0,0,0,,好耶
+Dialogue: 0,0:13:05.09,0:13:07.74,Sub-CH,,0,0,0,,歡迎前來黑部大壩
+Dialogue: 0,0:13:07.74,0:13:09.92,Sub-CH,,0,0,0,,好多登山遊客啊
+Dialogue: 0,0:13:09.92,0:13:13.27,Sub-CH,,0,0,0,,畢竟是夏天 肯定有很多人想逃去涼快的山裡呀
+Dialogue: 0,0:13:16.56,0:13:18.27,Sub-CH,,0,0,0,,哇 是富山縣界
+Dialogue: 0,0:13:20.51,0:13:22.52,Sub-CH,,0,0,0,,我們進富山縣啦
+Dialogue: 0,0:13:24.49,0:13:28.23,Sub-CH,,0,0,0,,好想這樣慶祝 但是在巴士上要懂得克制
+Dialogue: 0,0:13:33.92,0:13:37.29,Sub-CH,,0,0,0,,黑部大壩 我終於來了
+Dialogue: 0,0:13:38.00,0:13:41.55,Sub-CH,,0,0,0,,來此目的除了參觀大壩還有一個…
+Dialogue: 0,0:13:42.06,0:13:46.44,Sub-CH,,0,0,0,,就是只能在水庫湖的休息區吃到的 黑部大壩咖哩!
+Dialogue: 0,0:13:46.44,0:13:51.69,Sub-CH,,0,0,0,,此番終於能一雪之前在南相木沒吃成咖哩的前恥了
+Dialogue: 0,0:13:51.69,0:13:53.81,Sub-CH,,0,0,0,,原來你一直心心念唸著那次呢
+Dialogue: 0,0:13:54.12,0:13:58.17,Sub-CH,,0,0,0,,展望台在上方 休息區在下面呢
+Dialogue: 0,0:13:58.68,0:14:00.06,Sub-CH,,0,0,0,,你想先去哪裡?
+Dialogue: 0,0:14:00.21,0:14:04.16,Sub-CH,,0,0,0,,先上大壩 回來時下坡應該更輕鬆吧
+Dialogue: 0,0:14:04.36,0:14:05.40,Sub-CH,,0,0,0,,也是呢
+Dialogue: 0,0:14:06.11,0:14:09.44,Sub-CH,,0,0,0,,啊 電視在播黑部大壩的紀錄片
+Dialogue: 0,0:14:09.44,0:14:10.94,Sub-CH,,0,0,0,,紀錄片?
+Dialogue: 0,0:14:16.43,0:14:19.79,Sub-CH,,0,0,0,,由於戰後經濟的高速發展
+Dialogue: 0,0:14:19.79,0:14:23.56,Sub-CH,,0,0,0,,關西曾面臨電力供給不足的危機
+Dialogue: 0,0:14:25.77,0:14:28.14,Sub-CH,,0,0,0,,在北阿爾卑斯山脈的黑部峽谷
+Dialogue: 0,0:14:28.65,0:14:33.81,Sub-CH,,0,0,0,,男子漢正準備在此挑戰世紀性的水壩建設
+Dialogue: 0,0:14:34.72,0:14:38.27,Sub-CH,,0,0,0,,欸? 難道她們打算看完這個影片?
+Dialogue: 0,0:14:39.10,0:14:42.41,Sub-CH,,0,0,0,,施工遠比想像的要困難
+Dialogue: 0,0:14:43.48,0:14:46.61,Sub-CH,,0,0,0,,要塌方了 撤退!
+Dialogue: 0,0:14:46.96,0:14:50.09,Sub-CH,,0,0,0,,迫近的伊勢灣颱風 曾一度將宿舍沖走
+Dialogue: 0,0:14:52.07,0:14:55.08,Sub-CH,,0,0,0,,據說在冬季 零下20℃的黑部
+Dialogue: 0,0:14:55.29,0:14:57.84,Sub-CH,,0,0,0,,連食物也會被凍成冰塊
+Dialogue: 0,0:14:58.73,0:15:00.70,Sub-CH,,0,0,0,,開工7年之後
+Dialogue: 0,0:15:01.31,0:15:04.15,Sub-CH,,0,0,0,,堆砌400萬噸的混凝土
+Dialogue: 0,0:15:04.51,0:15:10.43,Sub-CH,,0,0,0,,男子漢終於在黑部之谷上 築成了超級大壩
+Dialogue: 0,0:15:11.02,0:15:13.75,Sub-CH - up,,0,0,0,,萬歲 萬歲…
+Dialogue: 0,0:15:14.80,0:15:16.76,Sub-CH,,0,0,0,,大家太努力了
+Dialogue: 0,0:15:16.76,0:15:19.63,Sub-CH,,0,0,0,,大家太努力了啊
+Dialogue: 0,0:15:19.63,0:15:22.86,Sub-CH,,0,0,0,,冷靜一下呀 大家先冷靜一下
+Dialogue: 0,0:15:27.09,0:15:30.62,Sub-CH,,0,0,0,,雖然可以理解大家被紀錄片打動的心情…
+Dialogue: 0,0:15:31.99,0:15:35.70,Sub-CH,,0,0,0,,大家快看 這裡景色超級棒的! 快看呀!
+Dialogue: 0,0:15:36.72,0:15:38.20,Sub-CH,,0,0,0,,是呢
+Dialogue: 0,0:15:39.13,0:15:41.30,Sub-CH,,0,0,0,,咦? 霧山呢?
+Dialogue: 0,0:15:42.69,0:15:48.21,Sub-CH,,0,0,0,,這個就是搭建黑部大壩時 用到的混凝土搬運桶…
+Dialogue: 0,0:15:48.80,0:15:51.22,Sub-CH,,0,0,0,,不懂這哪裡有淚點了…
+Dialogue: 0,0:15:57.19,0:15:58.52,Sub-CH,,0,0,0,,太好哭了
+Dialogue: 0,0:15:58.52,0:16:02.13,Sub-CH,,0,0,0,,嗯 眼淚停不下來呢
+Dialogue: 0,0:16:02.84,0:16:06.29,Sub-CH,,0,0,0,,登山的人們都是從這個水壩上面走過去
+Dialogue: 0,0:16:06.29,0:16:08.44,Sub-CH,,0,0,0,,往立山方向走呢
+Dialogue: 0,0:16:08.78,0:16:12.16,Sub-CH,,0,0,0,,下次來的時候真想去富山那邊看看
+Dialogue: 0,0:16:12.86,0:16:17.87,Sub-CH,,0,0,0,,正是因為有他們的存在 大家才能走過這裡
+Dialogue: 0,0:16:21.30,0:16:25.50,Sub-CH,,0,0,0,,真是的 我知道了 我們去吃咖哩吧
+Dialogue: 0,0:16:28.24,0:16:32.20,Sub-CH,,0,0,0,,不只有大壩咖哩 原來還有大壩拉麵呀
+Dialogue: 0,0:16:32.20,0:16:36.51,Sub-CH,,0,0,0,,雖說湯底非常綠 好像味道還是鹽味拉麵的樣子
+Dialogue: 0,0:16:39.64,0:16:41.60,Sub-CH,,0,0,0,,我開動了
+Dialogue: 0,0:16:45.05,0:16:50.03,Sub-CH,,0,0,0,,是微辣的綠咖哩 裡面是不是還放了椰子呢
+Dialogue: 0,0:16:50.37,0:16:56.86,Sub-CH,,0,0,0,,說起來 從昨天山梨出發起 我還沒好好吃過飯
+Dialogue: 0,0:16:58.05,0:16:59.87,Sub-CH,,0,0,0,,真好吃啊
+Dialogue: 0,0:17:01.82,0:17:03.71,Sub-CH,,0,0,0,,多謝款待
+Dialogue: 0,0:17:05.04,0:17:07.85,Sub-CH,,0,0,0,,啊 為什麼大家都沒在吃?
+Dialogue: 0,0:17:08.48,0:17:12.55,Sub-CH,,0,0,0,,你看 我只要一用勺子舀飯
+Dialogue: 0,0:17:12.89,0:17:17.43,Sub-CH,,0,0,0,,就會浮現出建造黑部大壩的人們的面容
+Dialogue: 0,0:17:19.10,0:17:21.51,Sub-CH,,0,0,0,,怎麼能把大壩破壞掉
+Dialogue: 0,0:17:21.51,0:17:25.60,Sub-CH,,0,0,0,,不是 那個大壩是餐廳的店員們做出來的
+Dialogue: 0,0:17:28.57,0:17:30.44,Sub-CH,,0,0,0,,冷靜下來了嗎
+Dialogue: 0,0:17:30.75,0:17:32.61,Sub-CH,,0,0,0,,差不多吧
+Dialogue: 0,0:17:33.08,0:17:36.93,Sub-CH,,0,0,0,,俗話說肚子一空 人就容易落淚啊
+Dialogue: 0,0:17:36.93,0:17:40.08,Sub-CH,,0,0,0,,不 我從來沒聽說過這俗話
+Dialogue: 0,0:17:40.54,0:17:44.11,Sub-CH,,0,0,0,,那麼回去之前再拍一張吧
+Dialogue: 0,0:17:45.08,0:17:50.02,Sub-CH,,0,0,0,,這麼好的景色 只拍哭臉的話就太浪費了
+Dialogue: 0,0:17:51.00,0:17:51.91,Sub-CH,,0,0,0,,對啊
+Dialogue: 0,0:18:00.65,0:18:03.39,Sub-CH,,0,0,0,,田園風景真是悠閒呢
+Dialogue: 0,0:18:03.83,0:18:07.35,Sub-CH,,0,0,0,,我好喜歡這種景色呀
+Dialogue: 0,0:18:07.73,0:18:10.44,Sub-CH,,0,0,0,,從車窗裡往外看
+Dialogue: 0,0:18:10.44,0:18:15.07,Sub-CH,,0,0,0,,近處的田野這麼快 山又那麼慢
+Dialogue: 0,0:18:15.07,0:18:17.03,Sub-CH,,0,0,0,,看起來真舒服啊
+Dialogue: 0,0:18:17.49,0:18:20.36,Sub-CH,,0,0,0,,日本最大的田野是哪裡?
+Dialogue: 0,0:18:20.36,0:18:23.44,Sub-CH,,0,0,0,,是不是新潟 那裡大米很有名
+Dialogue: 0,0:18:23.44,0:18:26.50,Sub-CH,,0,0,0,,一說廣闊的田野 那肯定是北海道吧
+Dialogue: 0,0:18:26.87,0:18:30.23,Sub-CH,,0,0,0,,現在就去吧 北海道
+Dialogue: 0,0:18:30.23,0:18:31.27,Sub-CH,,0,0,0,,我們不去
+Dialogue: 0,0:18:32.98,0:18:35.42,Sub-CH,,0,0,0,,下一個巨大建築物是
+Dialogue: 0,0:18:35.80,0:18:37.54,Sub-CH,,0,0,0,,跳台哦
+Dialogue: 0,0:18:37.54,0:18:38.84,Sub-CH,,0,0,0,,好大
+Dialogue: 0,0:18:38.84,0:18:42.03,Sub-CH,,0,0,0,,這個值得拍張全景照
+Dialogue: 0,0:18:43.31,0:18:47.56,Sub-CH,,0,0,0,,這裡是98年冬奧滑雪大賽時使用的場地
+Dialogue: 0,0:18:47.56,0:18:50.90,Sub-CH,,0,0,0,,即使是夏天也有不少跳台滑雪選手會來
+Dialogue: 0,0:18:50.90,0:18:54.07,Sub-CH,,0,0,0,,似乎能看到他們練習的樣子哦
+Dialogue: 0,0:18:55.79,0:19:01.40,Sub-CH,,0,0,0,,這麼一說 確實能看到幾個帶著滑雪板像是選手一樣的人
+Dialogue: 0,0:19:03.67,0:19:05.30,Sub-CH,,0,0,0,,不 沒在說你們啦
+Dialogue: 0,0:19:06.01,0:19:09.64,Sub-CH,,0,0,0,,嘛 作為滑板愛好者就讓我們觀摩一下吧
+Dialogue: 0,0:19:11.32,0:19:13.00,Sub-CH,,0,0,0,,把自己當什麼了
+Dialogue: 0,0:19:21.05,0:19:22.96,Sub-CH,,0,0,0,,這裡視野真好呀
+Dialogue: 0,0:19:22.96,0:19:25.06,Sub-CH,,0,0,0,,有人在練習呢
+Dialogue: 0,0:19:25.31,0:19:28.14,Sub-CH,,0,0,0,,三樓好像可以去跳台上哦
+Dialogue: 0,0:19:28.14,0:19:29.73,Sub-CH,,0,0,0,,一起去吧
+Dialogue: 0,0:19:31.73,0:19:34.19,Sub-CH,,0,0,0,,底下都一覽無遺了
+Dialogue: 0,0:19:34.19,0:19:36.96,Sub-CH,,0,0,0,,這個相當可怕啊
+Dialogue: 0,0:19:36.96,0:19:39.11,Sub-CH,,0,0,0,,哎 你們兩個
+Dialogue: 0,0:19:39.38,0:19:43.37,Sub-CH,,0,0,0,,我好像變成新品種的半人馬一樣
+Dialogue: 0,0:19:48.47,0:19:50.45,Sub-CH,,0,0,0,,好高
+Dialogue: 0,0:19:50.45,0:19:53.10,Sub-CH,,0,0,0,,明明剛才還那麼裝模作樣
+Dialogue: 0,0:19:53.58,0:19:56.59,Sub-CH,,0,0,0,,那用標準台練習一下吧
+Dialogue: 0,0:19:57.03,0:19:59.63,Sub-CH,,0,0,0,,那邊比這裡更矮一些
+Dialogue: 0,0:19:59.63,0:20:01.81,Sub-CH,,0,0,0,,就 就這樣吧
+Dialogue: 0,0:20:04.72,0:20:06.73,Sub-CH,,0,0,0,,這邊也好嚇人
+Dialogue: 0,0:20:06.73,0:20:09.60,Sub-CH,,0,0,0,,到頭來兩邊都是大跳台嘛
+Dialogue: 0,0:20:11.63,0:20:14.80,Sub-CH,,0,0,0,,在練習的人都好年輕呀
+Dialogue: 0,0:20:15.23,0:20:19.19,Sub-CH,,0,0,0,,好像有當地的高中生也會來跳
+Dialogue: 0,0:20:19.19,0:20:22.16,Sub-CH,,0,0,0,,他們在那麼高的地方還笑得出來
+Dialogue: 0,0:20:22.37,0:20:24.95,Sub-CH,,0,0,0,,只有能夠克服這份恐怖的人
+Dialogue: 0,0:20:25.38,0:20:28.39,Sub-CH,,0,0,0,,才有資格站在那裡呢
+Dialogue: 0,0:20:28.39,0:20:31.58,Sub-CH,,0,0,0,,話說 如果跳起來的話更加嚇人哦
+Dialogue: 0,0:20:31.79,0:20:34.19,Sub-CH,,0,0,0,,那些人真是勇者
+Dialogue: 0,0:20:34.19,0:20:35.64,Sub-CH,,0,0,0,,沒錯
+Dialogue: 0,0:20:35.88,0:20:37.00,Sub-CH,,0,0,0,,他出發了
+Dialogue: 0,0:20:37.21,0:20:41.12,Sub-CH,,0,0,0,,去吧 勇者
+Dialogue: 0,0:20:41.12,0:20:42.55,Sub-CH,,0,0,0,,在喊些什麼啊
+Dialogue: 0,0:20:43.19,0:20:45.54,Sub-CH,,0,0,0,,啊 好可怕啊
+Dialogue: 0,0:20:46.25,0:20:48.52,Sub-CH,,0,0,0,,哇 是金牌
+Dialogue: 0,0:20:50.43,0:20:53.71,Sub-CH,,0,0,0,,這是什麼 選手的腳印嗎
+Dialogue: 0,0:20:54.41,0:20:56.15,Sub-CH,,0,0,0,,還有這種東西啊
+Dialogue: 0,0:20:56.15,0:21:00.57,Sub-CH,,0,0,0,,等春乃的漫畫大賣變成名人了 也留個腳印吧
+Dialogue: 0,0:21:00.57,0:21:03.70,Sub-CH,,0,0,0,,欸 從來沒聽說過有那種漫畫家
+Dialogue: 0,0:21:03.70,0:21:07.20,Sub-CH,,0,0,0,,不 如果是春姐的話 比起腳印
+Dialogue: 0,0:21:08.40,0:21:10.91,Sub-CH,,0,0,0,,感覺更應該是貓背印吧
+Dialogue: 0,0:21:10.91,0:21:13.02,Sub-CH,,0,0,0,,哈 我懂我懂
+Dialogue: 0,0:21:13.02,0:21:16.09,Sub-CH,,0,0,0,,好 等你作品大賣了做一個吧 貓背印
+Dialogue: 0,0:21:16.09,0:21:18.76,Sub-CH,,0,0,0,,絕對不要
+Dialogue: 0,0:21:21.97,0:21:26.12,Sub-CH,,0,0,0,,說起來 這裡是只用來跳台滑雪嗎
+Dialogue: 0,0:21:26.69,0:21:28.10,Sub-CH,,0,0,0,,是吧
+Dialogue: 0,0:21:28.29,0:21:31.32,Sub-CH,,0,0,0,,圓頂球場的話 也能用來開演唱會
+Dialogue: 0,0:21:31.32,0:21:33.82,Sub-CH,,0,0,0,,會舉行各式各樣的活動
+Dialogue: 0,0:21:33.82,0:21:36.31,Sub-CH,,0,0,0,,這裡只當作跳台的話不浪費嗎
+Dialogue: 0,0:21:36.31,0:21:39.89,Sub-CH,,0,0,0,,除了用來當跳台以外還能幹什麼呢
+Dialogue: 0,0:21:43.98,0:21:45.63,Sub-CH,,0,0,0,,流水素麵之類的
+Dialogue: 0,0:21:45.63,0:21:47.74,Sub-CH,,0,0,0,,半途就會飛出去的
+Dialogue: 0,0:21:47.74,0:21:48.90,Sub-CH,,0,0,0,,保齡球大賽
+Dialogue: 0,0:21:48.90,0:21:51.41,Sub-CH,,0,0,0,,也會飛出去的
+Dialogue: 0,0:21:51.41,0:21:52.94,Sub-CH,,0,0,0,,賽狗
+Dialogue: 0,0:21:52.94,0:21:57.00,Sub-CH,,0,0,0,,到頭來都會飛出去啊… 還帶著板子
+Dialogue: 0,0:21:57.28,0:22:01.18,Sub-CH,,0,0,0,,好像有活動是從底下往跳台上面攀登的
+Dialogue: 0,0:22:05.44,0:22:08.50,Sub-CH,,0,0,0,,那可不能飛出去
+Dialogue: 0,0:22:09.65,0:22:13.29,Sub-CH,,0,0,0,,接下來要去戶隱了
+Dialogue: 0,0:22:13.29,0:22:14.93,Sub-CH,,0,0,0,,噢
+Dialogue: 0,0:22:20.15,0:22:21.95,Sub-CH,,0,800,0,,都抓緊了
+Dialogue: 0,0:22:21.49,0:22:23.07,Sub-CH,,800,0,0,,好快
+Dialogue: 0,0:22:23.07,0:22:25.03,Sub-CH,,0,0,0,,要拿下了哦
+Dialogue: 0,0:22:25.31,0:22:26.98,Sub-CH,,0,0,0,,加油 上吧
+Dialogue: 0,0:22:26.98,0:22:29.01,Sub-CH,,0,0,0,,去拿金牌吧
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,END

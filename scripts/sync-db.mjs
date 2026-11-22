@@ -355,7 +355,12 @@ async function updateCovers() {
     const info = readInfo(showPath);
     const folder = scanRes.shows.get(showPath).show;
     const year = parseInt(scanRes.shows.get(showPath).year, 10);
-    const candidates = [info.chs, info.jp, cleanTitle(folder), folder.replace(/^\([^)]*\)/, '')]
+    const candidates = [
+      (info.chs || '').split('/')[0],
+      info.jp,
+      cleanTitle(folder),
+      folder.replace(/^\([^)]*\)/, ''),
+    ]
       .map(x => (x || '').trim())
       .filter((x, idx, arr) => x.length >= 2 && arr.indexOf(x) === idx)
       .slice(0, 2);

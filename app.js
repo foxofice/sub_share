@@ -3,11 +3,13 @@
  * 
  * 功能特性：
  * 1. 毫秒级多维度实时检索（支持中/日/英/罗马音/字幕组/格式/路径匹配，多关键词空格与检索）
- * 2. 靠用户浏览器直连主流番剧网站（首选国内免翻直连的 Bangumi API，含 CORS 支持与防盗链处理）
- * 3. 智能本地缓存与并发限流队列（IndexedDB / localStorage，视口懒加载，防 429 限流）
- * 4. 点击直接跳转 GitHub 仓库对应字幕目录（附带一键复制相对路径与稀疏检出命令）
- * 5. 优先展示最近更新（自动比对最新提交批次与逆序入库时间，高亮 NEW 标识）
- * 6. 番剧聚合视图（2,100+ 部）与单条字幕视图（4,750+ 条）自由切换
+ * 2. 彻底剔除 R18 内容检索，保障页面健康纯净
+ * 3. 国内极速封面加载引擎：
+ *    - 优先直连本仓库内置高清封面库（./covers/*.jpg，无跨域、免翻墙、100% 成功率）
+ *    - 针对远程图片自动通过多通道国内可用 CDN 反代（wsrv.nl / i0.wp.com 自动故障转移）
+ * 4. 智能并发限流与本地持久化缓存（IndexedDB / localStorage，视口懒加载）
+ * 5. 点击直接跳转 GitHub 仓库对应字幕目录（附带一键复制相对路径与稀疏检出命令）
+ * 6. 优先展示最近更新批次，聚合番剧海报视图与单条字幕视图自由切换
  */
 
 (function () {
@@ -23,35 +25,78 @@
   const STORAGE_KEY_THEME = 'subshare_theme';
   const STORAGE_KEY_VIEW = 'subshare_view_mode';
   const STORAGE_KEY_MIRROR = 'subshare_mirror_source';
-  const IDB_DB_NAME = 'subshare_bangumi_cache_v1';
+  const IDB_DB_NAME = 'subshare_bangumi_cache_v2';
   const IDB_STORE_NAME = 'anime_covers';
 
   // =============== 全局状态 ===============
   const state = {
-    rawList: [],        // 4,750 条单条字幕记录
-    animeList: [],      // 2,105 部聚合番剧
+    rawList: [],        // 4,749 条单条字幕记录（已彻底过滤 R18）
+    animeList: [],      // 2,104 部聚合番剧
     filteredAnime: [],  // 过滤后的番剧
     filteredFlat: [],   // 过滤后的单条记录
     viewMode: localStorage.getItem(STORAGE_KEY_VIEW) || 'group', // 'group' (聚合) | 'flat' (平铺)
     sortBy: 'recent',   // 'recent' | 'air_desc' | 'air_asc' | 'title_asc'
     filters: {
       keyword: '',
-      type: 'all',      // 'all' | 'animation' | 'movie' | 'R18'
+      type: 'all',      // 'all' | 'animation' | 'movie'
       source: 'all',    // 'all' | 'BD' | 'TV' | 'Web' ...
       ext: 'all',       // 'all' | 'ass' | 'srt'
-      year: 'all'       // 'all' | '2026' | '2025' ...
+      year: 'all'
     },
     pagination: {
       page: 1,
       pageSize: 36,
       total: 0
     },
-    seedCovers: {},     // 预填充封面
-    recentPaths: new Set(), // 最近几个提交变动的路径
+    seedCovers: {},     // 预填充封面（含本地 covers/ 路径）
+    recentPaths: new Set(),
     latestCommit: null,
     githubToken: localStorage.getItem(STORAGE_KEY_TOKEN) || '',
-    mirrorSource: localStorage.getItem(STORAGE_KEY_MIRROR) || 'local',
     idb: null
+  };
+
+  // =============== 国内多镜像 CDN 转换 ===============
+  function getSafeCoverUrl(meta) {
+    if (!meta) return null;
+    // 1. 本地仓库内置图片优先（最快、最稳、中国大陆 100% 直连）
+    if (meta.localCover) {
+      return './' + meta.localCover;
+    }
+    const raw = meta.cover;
+    if (!raw) return null;
+
+    // 2. 如果包含 lain.bgm.tv，通过国内可访问的 CDN 节点加速转接
+    if (raw.includes('lain.bgm.tv')) {
+      const cleanUrl = raw.replace(/^http:\/\//i, 'https://');
+      return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=360&output=jpg`;
+    }
+    return raw;
+  }
+
+  // 全局图片加载失败备用转移
+  window.handleCoverError = function (img, rawUrl) {
+    if (!img) return;
+    const step = parseInt(img.dataset.failStep || '0', 10);
+    if (!rawUrl) rawUrl = img.dataset.rawUrl || '';
+
+    if (step === 0 && rawUrl) {
+      // 切换到 WordPress Jetpack 全球 CDN 镜像
+      img.dataset.failStep = '1';
+      const cleanNoProto = rawUrl.replace(/^https?:\/\//i, '');
+      img.src = `https://i0.wp.com/${cleanNoProto}`;
+    } else if (step === 1 && rawUrl) {
+      // 切换到 i1.wp.com 镜像
+      img.dataset.failStep = '2';
+      const cleanNoProto = rawUrl.replace(/^https?:\/\//i, '');
+      img.src = `https://i1.wp.com/${cleanNoProto}`;
+    } else {
+      // 降级显示纯净色块卡片
+      img.style.display = 'none';
+      const thumb = img.closest('.poster-thumb');
+      if (thumb) {
+        thumb.classList.add('is-fallback');
+      }
+    }
   };
 
   // =============== IndexedDB 缓存管理器 ===============
@@ -115,15 +160,15 @@
     }
   }
 
-  // =============== Bangumi 浏览器端抓取器 ===============
+  // =============== 番剧元数据抓取器 ===============
   class BangumiScraper {
     constructor() {
       this.queue = [];
       this.running = 0;
-      this.maxConcurrent = 2; // 控制并发数，保护 Bangumi API
-      this.delayBetween = 250; // 间隔时间防 429
+      this.maxConcurrent = 2;
+      this.delayBetween = 200;
       this.observer = null;
-      this.callbacks = new Map(); // key -> [callback]
+      this.callbacks = new Map();
       this.initObserver();
     }
 
@@ -162,32 +207,26 @@
 
     cleanTitle(rawTitle) {
       if (!rawTitle) return '';
-      // 提取斜杠前的主标题：例如 "阿尔卑斯山的少女/海蒂/飘零燕" -> "阿尔卑斯山的少女"
       let t = rawTitle.split('/')[0].trim();
-      // 去除括号及括号内容
       t = t.replace(/（[^）]*）|\([^)]*\)|【[^】]*】|\[[^\]]*\]/g, ' ').trim();
-      // 去除季度尾缀如 "第一季" "第二部" "第1季" "S1" "TV" 等
       t = t.replace(/第[一二三四五六七八九十0-9]+[季部期]/g, '').trim();
       t = t.replace(/\b(S[0-9]+|Season\s*[0-9]+|TV)\b/gi, '').trim();
       return t;
     }
 
     async request(path, chs, jp, callback) {
-      // 1. 查缓存
       const cached = await getFromCache(path);
       if (cached) {
         callback(cached);
         return;
       }
 
-      // 2. 检查是否在队列中
       if (this.callbacks.has(path)) {
         this.callbacks.get(path).push(callback);
         return;
       }
       this.callbacks.set(path, [callback]);
 
-      // 3. 入队
       this.queue.push({ path, chs, jp });
       this.processNext();
     }
@@ -203,7 +242,6 @@
       try {
         let meta = await this.fetchFromBangumi(item.chs, item.jp);
         if (!meta) {
-          // 记录空缓存避免频繁重试
           meta = { notFound: true, name: item.chs };
         }
         await saveToCache(item.path, meta);
@@ -212,7 +250,7 @@
         cbs.forEach(cb => cb(meta));
         this.callbacks.delete(item.path);
       } catch (err) {
-        console.warn('Bangumi fetch error for:', item.chs, err);
+        console.warn('Metadata fetch warning:', item.chs, err);
       } finally {
         setTimeout(() => {
           this.running--;
@@ -222,7 +260,6 @@
     }
 
     async fetchFromBangumi(chs, jp) {
-      // 优先清洗后的中文名，若无则使用日文名
       const cleanChs = this.cleanTitle(chs);
       const queryList = [cleanChs, jp, chs].filter(Boolean);
 
@@ -236,12 +273,9 @@
 
     async doBangumiSearch(keyword) {
       try {
-        // Bangumi 原生开放 API，支持直接 CORS 跨域请求
         const url = `https://api.bgm.tv/search/subject/${encodeURIComponent(keyword)}?type=2&responseGroup=small`;
         const resp = await fetch(url, {
-          headers: {
-            'User-Agent': 'foxofice-subshare/2.0 (browser client)'
-          }
+          headers: { 'User-Agent': 'foxofice-subshare/3.0 (browser client)' }
         });
         if (!resp.ok) return null;
         const data = await resp.json();
@@ -258,9 +292,7 @@
             url: `https://bgm.tv/subject/${first.id}`
           };
         }
-      } catch (e) {
-        // 遇到网络异常静默处理
-      }
+      } catch (e) {}
       return null;
     }
 
@@ -269,21 +301,19 @@
       const imgWrap = $('.poster-thumb', cardEl);
       if (!imgWrap) return;
 
-      if (meta && meta.cover && !meta.notFound) {
-        const img = document.createElement('img');
-        img.className = 'poster-img';
-        img.src = meta.cover;
-        img.alt = meta.name_cn || meta.name || '';
-        img.loading = 'lazy';
-        img.referrerPolicy = 'no-referrer'; // 关键：防盗链与防 403
-        img.onload = () => {
-          imgWrap.innerHTML = '';
-          imgWrap.appendChild(img);
-          cardEl.classList.add('has-cover');
-        };
-        img.onerror = () => {
-          // 保持渐变占位符
-        };
+      const safeUrl = getSafeCoverUrl(meta);
+      if (safeUrl && !meta.notFound) {
+        imgWrap.innerHTML = `
+          <img class="poster-img"
+               src="${safeUrl}"
+               data-raw-url="${meta.cover || ''}"
+               alt="${escapeHtml(meta.name_cn || meta.name || '')}"
+               loading="lazy"
+               referrerpolicy="no-referrer"
+               onerror="handleCoverError(this, '${escapeHtml(meta.cover || '')}')"
+          >
+        `;
+        cardEl.classList.add('has-cover');
       }
       if (meta && meta.score) {
         const rateEl = $('.poster-score', cardEl);
@@ -297,11 +327,11 @@
 
   const scraper = new BangumiScraper();
 
-  // =============== 数据加载引擎 ===============
+  // =============== 数据载入引擎 ===============
   async function loadData() {
-    showLoading(true, '正在加载字幕索引数据库...');
+    showLoading(true, '正在载入字幕索引数据...');
 
-    // 1. 加载预置 seed 封面
+    // 1. 优先加载预置种子封面 (包含已下载到 covers/ 的本地高质量海报)
     try {
       const seedResp = await fetch('./seed_covers.json');
       if (seedResp.ok) {
@@ -309,7 +339,7 @@
       }
     } catch (e) {}
 
-    // 2. 加载字幕数据（优先本地 json，备选 XML 镜像）
+    // 2. 加载字幕数据（过滤 R18）
     let dataList = null;
     try {
       const jsonResp = await fetch('./subtitles.json');
@@ -319,7 +349,6 @@
     } catch (e) {}
 
     if (!dataList || dataList.length === 0) {
-      // 备用降级：从 db.xml 动态解析
       dataList = await fetchAndParseXml();
     }
 
@@ -329,13 +358,19 @@
       return;
     }
 
-    state.rawList = dataList;
+    // 严格过滤剔除任何 R18 内容
+    state.rawList = dataList.filter(item => {
+      const t = (item.type || '').toLowerCase();
+      const p = (item.path || '').toLowerCase();
+      return t !== 'r18' && !p.startsWith('r18');
+    });
+
     buildAnimeAggregation();
 
-    // 3. 异步尝试拉取 GitHub Commits 获取最新提交高亮
+    // 3. 拉取 GitHub Commits 动态
     fetchRecentCommits();
 
-    // 4. 初次渲染
+    // 4. 首次渲染
     applyFiltersAndSort();
     renderStats();
     showLoading(false);
@@ -371,7 +406,14 @@
         const el = node.getElementsByTagName(tag)[0];
         return el ? el.textContent.trim() : '';
       };
+      const type = getVal('type') || 'animation';
       const rawPath = getVal('path');
+
+      // 剔除 R18
+      if (type.toLowerCase() === 'r18' || rawPath.toLowerCase().startsWith('r18')) {
+        continue;
+      }
+
       result.push({
         id: i + 1,
         time: (getVal('time') || '').split('T')[0],
@@ -380,7 +422,7 @@
         jp: getVal('name_jp'),
         en: getVal('name_en'),
         rome: getVal('name_rome'),
-        type: getVal('type') || 'animation',
+        type: type,
         source: getVal('source') || 'BD',
         sub_name: getVal('sub_name') || '字幕组',
         extension: getVal('extension') || '.ass',
@@ -409,7 +451,7 @@
           type: item.type || 'animation',
           time: item.time,
           year: year,
-          orderIndex: index, // 原生在 XML 里的出现顺序，用于最近更新排序
+          orderIndex: index,
           versions: [],
           sources: new Set(),
           extensions: new Set(),
@@ -440,7 +482,7 @@
       if (state.githubToken) {
         headers['Authorization'] = `token ${state.githubToken}`;
       }
-      const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?per_page=15`, { headers });
+      const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?per_page=10`, { headers });
       if (!resp.ok) return;
       const commits = await resp.json();
       if (!commits || !commits.length) return;
@@ -448,23 +490,13 @@
       state.latestCommit = commits[0];
       renderCommitBanner(commits[0]);
 
-      // 获取最近几个 commit 修改过的文件列表，高亮最近更新的番剧目录
-      const recentPaths = new Set();
-      // 取前 3 个 commit
-      for (let i = 0; i < Math.min(commits.length, 3); i++) {
-        const c = commits[i];
-        // 尝试从 commit 详细中解析或者从 message 识别
-        if (c.commit && c.commit.message) {
-          // message 中如果有提到批次或番名
-        }
-      }
-      // 将 db.xml 最后 80 部番剧自动纳入“最新更新”
+      // 将最新入库的 80 部番剧标记为最新更新
       const totalCount = state.animeList.length;
       state.animeList.slice(Math.max(0, totalCount - 80)).forEach(a => {
         state.recentPaths.add(a.path);
       });
     } catch (e) {
-      console.warn('Commits fetch warning:', e);
+      console.warn('Commits warning:', e);
     }
   }
 
@@ -500,22 +532,17 @@
 
     // 1. 过滤番剧 (Grouped)
     state.filteredAnime = state.animeList.filter(anime => {
-      // 分类筛选
       if (typeFilter !== 'all') {
-        if (typeFilter === 'R18' && anime.type.toLowerCase() !== 'r18') return false;
-        if (typeFilter !== 'R18' && anime.type.toLowerCase() !== typeFilter.toLowerCase()) return false;
+        if (anime.type.toLowerCase() !== typeFilter.toLowerCase()) return false;
       }
-      // 来源筛选
       if (srcFilter !== 'all') {
         const hasSrc = Array.from(anime.sources).some(s => s.toLowerCase().includes(srcFilter.toLowerCase()));
         if (!hasSrc) return false;
       }
-      // 格式筛选
       if (extFilter !== 'all') {
         const hasExt = Array.from(anime.extensions).some(e => e.toLowerCase().includes(extFilter.toLowerCase()));
         if (!hasExt) return false;
       }
-      // 关键词多字段匹配（每个词都要在某字段中匹配）
       if (keywords.length > 0) {
         const searchCorpus = [
           anime.chs, anime.cht, anime.jp, anime.en, anime.rome, anime.path,
@@ -530,15 +557,13 @@
       return true;
     });
 
-    // 2. 排序
     sortAnimeList(state.filteredAnime, state.sortBy);
 
-    // 3. 过滤单条字幕 (Flat)
+    // 2. 过滤单条字幕 (Flat)
     if (state.viewMode === 'flat') {
       state.filteredFlat = state.rawList.filter(item => {
         if (typeFilter !== 'all') {
-          if (typeFilter === 'R18' && (item.type || '').toLowerCase() !== 'r18') return false;
-          if (typeFilter !== 'R18' && (item.type || '').toLowerCase() !== typeFilter.toLowerCase()) return false;
+          if ((item.type || '').toLowerCase() !== typeFilter.toLowerCase()) return false;
         }
         if (srcFilter !== 'all') {
           if (!(item.source || '').toLowerCase().includes(srcFilter.toLowerCase())) return false;
@@ -559,14 +584,12 @@
       sortFlatList(state.filteredFlat, state.sortBy);
     }
 
-    // 重置分页并渲染
     state.pagination.page = 1;
     renderCurrentPage();
   }
 
   function sortAnimeList(list, sortBy) {
     if (sortBy === 'recent') {
-      // 优先显示最近更新（XML末尾批次 orderIndex 越大代表越新，或在 recentPaths 集合中）
       list.sort((a, b) => {
         const aRecent = state.recentPaths.has(a.path) ? 1 : 0;
         const bRecent = state.recentPaths.has(b.path) ? 1 : 0;
@@ -639,8 +662,8 @@
     grid.innerHTML = '';
     grid.appendChild(frag);
 
-    // 观察本页卡片触发懒加载抓取封面
-    $$('.anime-card', grid).forEach(card => scraper.observeCard(card));
+    // 对尚未配置本地封面的卡片开启视口探测
+    $$('.anime-card:not(.has-cover)', grid).forEach(card => scraper.observeCard(card));
 
     renderPagination(page, pageSize, total);
   }
@@ -659,21 +682,45 @@
     const subGroups = Array.from(anime.subNames).slice(0, 2).join(' / ');
     const yearStr = anime.year > 0 ? anime.year : (anime.time || '').slice(0, 4);
 
+    // 核心优化：直接检查是否已有预置种子封面（无需等待异步请求即可直出封面）
+    const seedMeta = state.seedCovers[anime.path];
+    const initialCoverUrl = getSafeCoverUrl(seedMeta);
+
+    let thumbHtml = '';
+    if (initialCoverUrl) {
+      card.classList.add('has-cover');
+      thumbHtml = `
+        <img class="poster-img"
+             src="${initialCoverUrl}"
+             data-raw-url="${seedMeta.cover || ''}"
+             alt="${escapeHtml(anime.chs || anime.jp)}"
+             loading="lazy"
+             referrerpolicy="no-referrer"
+             onerror="handleCoverError(this, '${escapeHtml(seedMeta.cover || '')}')"
+        >
+      `;
+    } else {
+      thumbHtml = `
+        <div class="poster-placeholder">
+          <span class="pl-letter">${escapeHtml(firstLetter)}</span>
+          <span class="pl-title">${escapeHtml(anime.chs || anime.jp)}</span>
+        </div>
+      `;
+    }
+
     card.innerHTML = `
       <div class="poster-box">
         <div class="poster-thumb" data-letter="${escapeHtml(firstLetter)}">
-          <div class="poster-placeholder">
-            <span class="pl-letter">${escapeHtml(firstLetter)}</span>
-            <span class="pl-title">${escapeHtml(anime.chs || anime.jp)}</span>
-          </div>
+          ${thumbHtml}
         </div>
         <div class="poster-badges">
           ${isRecent ? '<span class="badge badge--new">🔥 最新更新</span>' : ''}
           ${anime.type === 'movie' ? '<span class="badge badge--gold">电影</span>' : ''}
-          ${anime.type === 'R18' ? '<span class="badge badge--hot">R18</span>' : ''}
           <span class="badge badge--dark">${yearStr || '经典'}</span>
         </div>
-        <span class="poster-score" hidden></span>
+        <span class="poster-score" ${seedMeta && seedMeta.score ? '' : 'hidden'}>
+          ${seedMeta && seedMeta.score ? '★ ' + seedMeta.score : ''}
+        </span>
       </div>
 
       <div class="anime-body">
@@ -705,13 +752,11 @@
       </div>
     `;
 
-    // 绑定详情点击
     $('.action-detail', card)?.addEventListener('click', (e) => {
       e.stopPropagation();
       openDetailModal(anime);
     });
 
-    // 点击卡片整体也可以打开详情
     card.addEventListener('click', (e) => {
       if (!e.target.closest('a, button')) {
         openDetailModal(anime);
@@ -778,7 +823,6 @@
 
     html += `<button class="page-btn" ${page <= 1 ? 'disabled' : ''} data-page="${page - 1}">‹ 上一页</button>`;
 
-    // 智能分页页码展示
     let pages = [];
     if (totalPages <= 7) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
@@ -801,7 +845,7 @@
     });
 
     html += `<button class="page-btn" ${page >= totalPages ? 'disabled' : ''} data-page="${page + 1}">下一页 ›</button>`;
-    html += `<span class="page-info">共 ${total} 条 / ${totalPages} 页</span>`;
+    html += `<span class="page-info">共 ${total} 部 / ${totalPages} 页</span>`;
 
     container.innerHTML = html;
 
@@ -825,7 +869,6 @@
     const repoUrl = GITHUB_TREE_BASE + encodeURI(anime.path);
     const gitSparseCmd = `git clone --filter=blob:none --sparse https://github.com/${GITHUB_REPO}.git && cd sub_share && git sparse-checkout set "subs_list/${anime.path}"`;
 
-    // 填充基本信息
     $('#modalTitle').textContent = anime.chs || anime.jp;
     $('#modalJpTitle').textContent = anime.jp ? `日文名：${anime.jp}` : '';
     $('#modalPathCode').textContent = `subs_list/${anime.path}`;
@@ -833,7 +876,6 @@
     $('#modalCopyPathBtn').setAttribute('data-copy', anime.path);
     $('#modalCopyCmdBtn').setAttribute('data-copy', gitSparseCmd);
 
-    // 填充版本列表
     const listBody = $('#modalVersionList');
     listBody.innerHTML = anime.versions.map(v => `
       <tr>
@@ -842,34 +884,33 @@
         <td><span class="chip chip--ext">${escapeHtml(v.extension || '.ass')}</span></td>
         <td>
           <a class="text-link" href="${repoUrl}" target="_blank" rel="noopener noreferrer">
-            打开文件 <svg class="icon"><use href="#i-external"/></svg>
+            打开目录 <svg class="icon"><use href="#i-external"/></svg>
           </a>
         </td>
       </tr>
     `).join('');
 
-    // 第三方主流平台检索链接
     const cleanSearchTitle = (anime.chs || anime.jp || '').split('/')[0].trim();
     $('#modalBgmLink').href = `https://bgm.tv/subject_search/${encodeURIComponent(cleanSearchTitle)}?cat=2`;
     $('#modalBiliLink').href = `https://search.bilibili.com/all?keyword=${encodeURIComponent(cleanSearchTitle)}`;
     $('#modalDoubanLink').href = `https://www.douban.com/search?cat=1002&q=${encodeURIComponent(cleanSearchTitle)}`;
     $('#modalTmdbLink').href = `https://www.themoviedb.org/search?query=${encodeURIComponent(cleanSearchTitle)}`;
 
-    // 封面与简介拉取
     const modalCoverImg = $('#modalCover');
     modalCoverImg.src = '';
     modalCoverImg.hidden = true;
-    $('#modalSummary').textContent = '正在检索 Bangumi 番剧数据...';
+    $('#modalSummary').textContent = '正在获取番剧数据...';
     $('#modalRating').hidden = true;
 
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
 
-    // 尝试获取元数据
     const meta = await getFromCache(anime.path) || await scraper.fetchFromBangumi(anime.chs, anime.jp);
     if (meta) {
-      if (meta.cover) {
-        modalCoverImg.src = meta.cover;
+      const safeUrl = getSafeCoverUrl(meta);
+      if (safeUrl) {
+        modalCoverImg.src = safeUrl;
+        modalCoverImg.dataset.rawUrl = meta.cover || '';
         modalCoverImg.hidden = false;
       }
       if (meta.summary) {
@@ -1041,7 +1082,6 @@
   }
 
   function bindEvents() {
-    // 搜索输入（防抖 200ms）
     let searchDebounce = null;
     const searchInput = $('#searchInput');
     if (searchInput) {
@@ -1052,7 +1092,6 @@
           applyFiltersAndSort();
         }, 180);
       });
-      // 键盘快捷键 '/' 聚焦搜索框
       window.addEventListener('keydown', (e) => {
         if (e.key === '/' && document.activeElement !== searchInput && !$('#detailModal:not([hidden])')) {
           e.preventDefault();
@@ -1061,7 +1100,6 @@
       });
     }
 
-    // 清空搜索
     $('#clearSearchBtn')?.addEventListener('click', () => {
       if (searchInput) {
         searchInput.value = '';
@@ -1071,7 +1109,6 @@
       }
     });
 
-    // 快捷热搜标签
     $$('.quick-tag').forEach(tag => {
       tag.addEventListener('click', () => {
         const kw = tag.dataset.kw;
@@ -1083,42 +1120,30 @@
       });
     });
 
-    // 分类切换 Tabs
     $$('.filter-tab').forEach(tab => {
       tab.addEventListener('click', () => {
-        const type = tab.dataset.type;
-        if (type === 'R18') {
-          // 成人内容安全提醒
-          if (!confirm('R18 分类包含成人内容字幕索引。是否确认查看？')) {
-            return;
-          }
-        }
         $$('.filter-tab').forEach(t => t.classList.remove('is-active'));
         tab.classList.add('is-active');
-        state.filters.type = type;
+        state.filters.type = tab.dataset.type;
         applyFiltersAndSort();
       });
     });
 
-    // 来源下拉
     $('#sourceSelect')?.addEventListener('change', (e) => {
       state.filters.source = e.target.value;
       applyFiltersAndSort();
     });
 
-    // 格式下拉
     $('#extSelect')?.addEventListener('change', (e) => {
       state.filters.ext = e.target.value;
       applyFiltersAndSort();
     });
 
-    // 排序下拉
     $('#sortSelect')?.addEventListener('change', (e) => {
       state.sortBy = e.target.value;
       applyFiltersAndSort();
     });
 
-    // 视图模式切换 (Grouped / Flat)
     $$('.view-mode-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         const mode = btn.dataset.mode;
@@ -1130,7 +1155,6 @@
       });
     });
 
-    // 全局复制代理
     document.addEventListener('click', (e) => {
       const copyBtn = e.target.closest('[data-copy]');
       if (copyBtn) {
@@ -1141,7 +1165,6 @@
       }
     });
 
-    // 模态弹窗关闭事件
     $$('[data-close-modal]').forEach(btn => {
       btn.addEventListener('click', () => {
         closeDetailModal();
@@ -1159,7 +1182,6 @@
       }
     });
 
-    // 设置与 Token
     $('#settingsBtn')?.addEventListener('click', openSettingsModal);
     $('#saveTokenBtn')?.addEventListener('click', () => {
       const token = $('#tokenInput').value.trim();
@@ -1175,7 +1197,6 @@
       fetchRecentCommits();
     });
 
-    // 本地 XML 文件拖拽导入
     const dropZone = $('#dropZone');
     if (dropZone) {
       dropZone.addEventListener('dragover', (e) => {
@@ -1211,7 +1232,6 @@
       });
     }
 
-    // 返回顶部
     const backtop = $('#backTop');
     if (backtop) {
       window.addEventListener('scroll', () => {

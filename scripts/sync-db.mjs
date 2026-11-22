@@ -280,7 +280,29 @@ function cleanTitle(raw) {
   return t;
 }
 
-async function bgmSearch(keyword) {
+function pickBest(list, query, year) {
+  const q = (query || '').trim().toLowerCase();
+  let best = null;
+  let bestScore = -1;
+  for (const it of list.slice(0, 8)) {
+    const names = [it.name, it.name_cn].filter(Boolean).map(x => x.toLowerCase());
+    let score = 0;
+    if (names.some(n => n === q)) score += 4;
+    else if (names.some(n => n.startsWith(q))) score += 2;
+    else if (names.some(n => n.includes(q))) score += 1;
+    const airYear = (it.air_date || '').slice(0, 4);
+    if (year && /^\d{4}$/.test(airYear)) {
+      const diff = Math.abs(parseInt(airYear, 10) - year);
+      if (diff === 0) score += 2;
+      else if (diff <= 1) score += 1;
+      else if (diff >= 8) score -= 1;
+    }
+    if (score > bestScore) { bestScore = score; best = it; }
+  }
+  return bestScore >= 0 ? best : null;
+}
+
+async function bgmSearch(keyword, year) {
   const url = 'https://api.bgm.tv/search/subject/' + encodeURIComponent(keyword) + '?type=2&responseGroup=small';
   const ac = new AbortController();
   const timer = setTimeout(() => ac.abort(), 5000);
@@ -291,7 +313,8 @@ async function bgmSearch(keyword) {
     });
     if (!resp.ok) return null;
     const data = await resp.json();
-    const first = (data.list || [])[0];
+    const list = data.list || [];
+    const first = pickBest(list, keyword, year);
     if (!first) return null;
     const images = first.images || {};
     const img = images.common || images.medium || images.large || '';
@@ -336,7 +359,7 @@ async function updateCovers() {
 
     let hit = null;
     for (const kw of candidates) {
-      hit = await bgmSearch(kw);
+      hit = await bgmSearch(kw, parseInt(scanRes.shows.get(showPath).year, 10));
       if (hit) break;
       await new Promise(r => setTimeout(r, 250));
     }

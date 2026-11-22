@@ -8,6 +8,7 @@
 2. 用 `git ls-tree` + `--filter=blob:none` 只读目录树，**不下载任何字幕文件**；
 3. 增量补齐 `db.xml`：只追加「新番剧 / 新字幕组」的记录，已存在记录原样保留；
 4. 生成 `db.json.zst`（客户端用）与 `subtitles.json`（站点用）；
+5. 为新番自动检索 Bangumi 封面，写入 `seed_covers.json`（每轮最多 20 部，取不到不阻塞）；
 5. 分别提交到 `master` 与 `gh-pages`，再由本工作流统一部署 Pages。
 
 提交信息带 `[skip ci]`，且 `GITHUB_TOKEN` 的推送不会触发新工作流，不会形成循环。
@@ -22,6 +23,7 @@
 
 ## 脚本行为
 
+- **封面**：只补 `seed_covers.json` 中不存在的条目，保留已有 `localCover`；接口不可达时本轮跳过，下次重试；
 - **只追加不删除**：`db.xml` 中有、但目录已不存在的记录只在报告里列出，需人工确认后删除，避免误删；
 - 名称优先读番剧目录下的 `info.txt`（`chs` / `cht` / `jp` / `en` / `rome`），缺失时回退为目录名；
 - 来源与字幕组按固定层级识别：`番剧/<source>/<字幕组>/文件`；无 source 目录时默认为 `BD`，第一层即字幕组；
@@ -54,7 +56,7 @@ node scripts/sync-db.mjs \
 
 ## 已知边界
 
-- 不自动抓取封面，`seed_covers.json` 仍按原逻辑维护；
 - 嵌套超过 6 层的目录会在报告中提示，不阻塞；
 - `zstd` 由工作流通过 `apt-get` 安装（runner 不保证预装）；
+- 工作流使用 Node 24 运行时（`actions/checkout@v7`、`setup-node@v7`、`upload-artifact@v7`、`download-artifact@v8`、`configure-pages@v6`、`upload-pages-artifact@v5`、`deploy-pages@v5`），不再触发 Node 20 弃用提示；
 - 若之后调整目录规范，请同步修改 `scripts/sync-db.mjs` 的层级识别规则。

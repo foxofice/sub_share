@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write     # 需要把生成的 db.xml / db.json.zst / subtitles.json 提交回去
+  contents: write
   pages: write
   id-token: write
 
@@ -25,11 +25,9 @@ jobs:
     name: 生成字幕数据库
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    outputs:
-      new_records: ${{ steps.sync.outputs.new_records }}
     steps:
       - name: 检出版本库（只取元数据，不下字幕内容）
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: master
           fetch-depth: 1
@@ -40,12 +38,22 @@ jobs:
             /Subtitles DataBase/Files/db.xml
             /Subtitles DataBase/Files/db.json.zst
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: 20
+          node-version: 24
 
-      - name: 扫描目录并补齐 db.xml
-        id: sync
+      - name: 取出站点封面缓存
+        run: |
+          set -euo pipefail
+          if git fetch --depth 1 origin gh-pages >/dev/null 2>&1 \
+             && git show FETCH_HEAD:seed_covers.json > seed_covers.json 2>/dev/null; then
+            echo "封面缓存 $(wc -c < seed_covers.json) 字节"
+          else
+            echo '{}' > seed_covers.json
+            echo "::warning::未能从 gh-pages 读取 seed_covers.json，本次从空缓存开始"
+          fi
+
+      - name: 扫描目录、补齐数据库、更新封面
         run: |
           set -euo pipefail
           node scripts/sync-db.mjs \
@@ -53,6 +61,8 @@ jobs:
             --db "Subtitles DataBase/Files/db.xml" \
             --json site/subtitles.json \
             --dbjson db.json \
+            --covers seed_covers.json \
+            --covers-limit 20 \
             --report "$GITHUB_STEP_SUMMARY"
 
       - name: 压缩 SubAtlas 用的 db.json.zst
@@ -83,11 +93,13 @@ jobs:
             fi
           fi
 
-      - name: 上传站点索引
-        uses: actions/upload-artifact@v4
+      - name: 上传站点数据
+        uses: actions/upload-artifact@v7
         with:
-          name: subtitles-json
-          path: site/subtitles.json
+          name: site-data
+          path: |
+            site/subtitles.json
+            seed_covers.json
           retention-days: 1
 
   publish:
@@ -97,33 +109,33 @@ jobs:
     timeout-minutes: 10
     steps:
       - name: 检出站点分支
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           ref: gh-pages
 
-      - name: 取回索引
-        uses: actions/download-artifact@v4
+      - name: 取回站点数据
+        uses: actions/download-artifact@v8
         with:
-          name: subtitles-json
+          name: site-data
           path: .
 
-      - name: 提交 subtitles.json
+      - name: 提交站点数据
         run: |
           set -euo pipefail
           git config user.name  'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add subtitles.json
+          git add subtitles.json seed_covers.json
           if git diff --cached --quiet; then
-            echo "站点索引无变化"
+            echo "站点数据无变化"
           else
-            git commit -m "chore(site): 更新 subtitles.json [skip ci]"
+            git commit -m "chore(site): 更新 subtitles.json 与 seed_covers.json [skip ci]"
             ok=0
             for i in 1 2 3; do
               if git pull --rebase --autostash origin gh-pages && git push origin HEAD:gh-pages; then ok=1; break; fi
               echo "第 $i 次推送失败，重试..."; sleep 3
             done
             if [ "$ok" != "1" ]; then
-              echo "::warning::站点索引已生成但推送失败，请检查 Workflow permissions"
+              echo "::warning::站点数据已生成但推送失败，请检查 Workflow permissions"
             fi
           fi
 
@@ -134,9 +146,9 @@ jobs:
           rsync -a --exclude='.git' --exclude='.github' --exclude='README.md' ./ _site/
           du -sh _site
 
-      - uses: actions/configure-pages@v5
+      - uses: actions/configure-pages@v6
 
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
 
@@ -166,4 +178,4 @@ jobs:
       - name: 发布
         id: deployment
         if: steps.preflight.outputs.ready == 'true'
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

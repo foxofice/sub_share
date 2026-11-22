@@ -34,6 +34,9 @@ const CHECK = argv.includes('--check');
 const TREE_FILE = arg('tree-file', null);
 const NO_GIT = argv.includes('--no-git') || !!TREE_FILE;
 const DBJSON_PATH = arg('dbjson', null);
+const COVERS_PATH = arg('covers', null);
+const COVERS_LIMIT = parseInt(arg('covers-limit', '20'), 10) || 20;
+const NO_COVERS = argv.includes('--no-covers');
 
 const SRC_TOKENS = new Set([
   'bd', 'dvd', 'tv', 'web', 'webrip', 'hdtv', 'ova', 'oad', 'psp', 'r3dvd',
@@ -264,6 +267,94 @@ if (JSON_PATH) {
   fs.mkdirSync(path.dirname(path.resolve(REPO, JSON_PATH)), { recursive: true });
   fs.writeFileSync(path.resolve(REPO, JSON_PATH), JSON.stringify(json));
 }
+
+/* ---------------- 7.5 新番封面（Bangumi） ---------------- */
+const coverStats = { added: 0, missing: 0, total: 0, remaining: 0 };
+
+function cleanTitle(raw) {
+  if (!raw) return '';
+  let t = raw.split('/')[0].trim();
+  t = t.replace(/（[^）]*）|\([^)]*\)|【[^】]*】|\[[^\]]*\]/g, ' ').trim();
+  t = t.replace(/第[一二三四五六七八九十0-9]+[季部期]/g, '').trim();
+  t = t.replace(/\b(S[0-9]+|Season\s*[0-9]+|TV)\b/gi, '').trim();
+  return t;
+}
+
+async function bgmSearch(keyword) {
+  const url = 'https://api.bgm.tv/search/subject/' + encodeURIComponent(keyword) + '?type=2&responseGroup=small';
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), 5000);
+  try {
+    const resp = await fetch(url, {
+      headers: { 'User-Agent': 'sub_share-db-sync/1.0 (https://github.com/foxofice/sub_share)' },
+      signal: ac.signal,
+    });
+    if (!resp.ok) return null;
+    const data = await resp.json();
+    const first = (data.list || [])[0];
+    if (!first) return null;
+    const images = first.images || {};
+    const img = images.common || images.medium || images.large || '';
+    return {
+      id: first.id,
+      name: first.name,
+      name_cn: first.name_cn || first.name,
+      cover: img ? String(img).replace(/^http:/i, 'https:') : null,
+    };
+  } catch (e) {
+    return null;
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
+async function updateCovers() {
+  const abs = path.resolve(REPO, COVERS_PATH);
+  let seed = {};
+  if (fs.existsSync(abs)) {
+    try { seed = JSON.parse(fs.readFileSync(abs, 'utf8')); } catch (e) { seed = {}; }
+  }
+  const keyOf = p => p.replace(/\//g, '\\');
+  const pending = [];
+  for (const [showPath, meta] of scanRes.shows) {
+    if (meta.type.toLowerCase() === 'r18') continue;
+    if (seed[keyOf(showPath)]) continue;
+    pending.push(showPath);
+  }
+  coverStats.total = Object.keys(seed).length;
+  coverStats.remaining = pending.length;
+  if (!pending.length) return;
+
+  const batch = pending.slice(0, COVERS_LIMIT);
+  for (const showPath of batch) {
+    const info = readInfo(showPath);
+    const folder = scanRes.shows.get(showPath).show;
+    const candidates = [info.chs, info.jp, cleanTitle(folder), folder.replace(/^\([^)]*\)/, '')]
+      .map(x => (x || '').trim())
+      .filter((x, i, arr) => x.length >= 2 && arr.indexOf(x) === i)
+      .slice(0, 2);
+
+    let hit = null;
+    for (const kw of candidates) {
+      hit = await bgmSearch(kw);
+      if (hit) break;
+      await new Promise(r => setTimeout(r, 250));
+    }
+    if (hit && hit.cover) {
+      seed[keyOf(showPath)] = hit;
+      coverStats.added++;
+    } else {
+      coverStats.missing++;
+    }
+    await new Promise(r => setTimeout(r, 150));
+  }
+  fs.mkdirSync(path.dirname(abs), { recursive: true });
+  fs.writeFileSync(abs, JSON.stringify(seed, null, 2) + '\n');
+  coverStats.total = Object.keys(seed).length;
+  coverStats.remaining = pending.length - batch.length;
+}
+
+if (COVERS_PATH && !NO_COVERS) await updateCovers();
 
 /* ---------------- 8. 诊断 ---------------- */
 const orphan = oldRecords.filter(r => !scanRes.shows.has(r.path));

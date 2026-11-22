@@ -88,6 +88,7 @@
   // =============== 数据加载并发控制 ===============
   let isLoading = false;          // 加载中重复点击防护锁
   let loadGeneration = 0;         // 请求序号：拖拽导入时自增，作废旧 zst 回调
+  let detailLoadGeneration = 0;   // 详情弹窗请求序号：切换番剧时作废过期简介回填
   let fzstdLoadPromise = null;    // fzstd 脚本预取缓存（失败后可重试）
   let activeGuard = null;         // 当前全局护栏 AbortController
 
@@ -346,6 +347,7 @@
             id: first.id,
             name: first.name,
             name_cn: first.name_cn || first.name,
+            // 搜索接口 responseGroup=small 不带简介，稍后用详情接口补全
             summary: first.summary || '',
             score: first.rating ? first.rating.score : null,
             cover: imgUrl ? imgUrl.replace(/^http:\/\//i, 'https://') : null,
@@ -354,6 +356,27 @@
         }
       } catch (e) {}
       return null;
+    }
+
+    // 用 Bangumi v0 条目详情接口补全简介（搜索接口不带 summary，CORS 全开）
+    async fetchSubjectSummary(id) {
+      if (!id) return '';
+      try {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 6000);
+        try {
+          const resp = await fetch(`https://api.bgm.tv/v0/subjects/${encodeURIComponent(id)}`, {
+            headers: { 'User-Agent': 'foxofice-subshare/3.0 (browser client)' },
+            signal: controller.signal
+          });
+          if (!resp.ok) return '';
+          const data = await resp.json();
+          return typeof data.summary === 'string' ? data.summary.trim() : '';
+        } finally {
+          clearTimeout(timer);
+        }
+      } catch (e) {}
+      return '';
     }
 
     updateCardCover(cardEl, meta) {
@@ -1344,7 +1367,20 @@
     modal.hidden = false;
     document.body.style.overflow = 'hidden';
 
-    const meta = await getFromCache(anime.path) || await scraper.fetchFromBangumi(anime.chs, anime.jp);
+    const detailGen = ++detailLoadGeneration;
+    let meta = await getFromCache(anime.path) || await scraper.fetchFromBangumi(anime.chs, anime.jp);
+    if (detailGen !== detailLoadGeneration) return; // 用户已切到别的番剧，丢弃过期结果
+
+    if (meta && !meta.summary && meta.id) {
+      // 简介缺失但已有 Bangumi id：同步补全（详情接口），保证本次打开就能看到简介
+      const summary = await scraper.fetchSubjectSummary(meta.id);
+      if (detailGen !== detailLoadGeneration) return;
+      if (summary) {
+        meta.summary = summary;
+        saveToCache(anime.path, meta); // 写回缓存，下次秒开
+      }
+    }
+
     if (meta) {
       const safeUrl = getSafeCoverUrl(meta);
       if (safeUrl) {
@@ -1721,41 +1757,93 @@
         dropZone.classList.add('is-dragover');
       });
       dropZone.addEventListener('dragleave', () => dropZone.classList.remove('is-dragover'));
-      dropZone.addEventListener('drop', (e) => {
+      dropZone.addEventListener('drop', async (e) => {
         e.preventDefault();
         dropZone.classList.remove('is-dragover');
-        if (e.dataTransfer.files && e.dataTransfer.files[0]) {
-          // 用户主动导入优先：自增请求序号 + 中断护栏，彻底作废旧 zst 回调
-          const wasLoading = isLoading;
-          loadGeneration += 1;
-          isLoading = false;
-          if (activeGuard) {
-            activeGuard.abort();
-            activeGuard = null;
-          }
-          if (wasLoading) showLoading(false); else setStage('');
+        if (!e.dataTransfer.files || !e.dataTransfer.files[0]) return;
 
-          const file = e.dataTransfer.files[0];
-          const reader = new FileReader();
-          reader.onload = (ev) => {
-            try {
-              const list = parseXmlData(ev.target.result);
-              if (list.length > 0) {
-                state.rawList = list;
-                buildAnimeAggregation();
-                applyFiltersAndSort();
-                renderStats();
-                showLoadedStats(list.length);
-                showToast(`成功本地解析导入 ${list.length} 条字幕记录！`, true);
-                closeSettingsModal();
-              } else {
-                showToast('无法解析该 XML 文件中的 <subs> 节点', false);
-              }
-            } catch (err) {
-              showToast('XML 解析失败：' + err.message, false);
+        // 用户主动导入优先：自增请求序号 + 中断护栏，彻底作废旧 zst 回调
+        const wasLoading = isLoading;
+        const gen = ++loadGeneration;
+        isLoading = false;
+        if (activeGuard) {
+          activeGuard.abort();
+          activeGuard = null;
+        }
+        if (wasLoading) showLoading(false); else setStage('');
+
+        const file = e.dataTransfer.files[0];
+        const name = (file.name || '').toLowerCase();
+        const isZst = name.endsWith('.zst') || name.endsWith('.zstd') || name.endsWith('.json.zst');
+        const isXml = name.endsWith('.xml');
+
+        if (!isZst && !isXml) {
+          showToast('仅支持 db.json.zst 或 db.xml 文件', false);
+          return;
+        }
+
+        let list = [];
+        try {
+          if (isZst) {
+            // zst：按需加载 fzstd（页面主链路可能未加载），解压后走字段适配
+            setStage('正在解压导入文件...');
+            const fzstd = await loadFzstdScript();
+            if (!fzstd) throw new Error('解压组件加载失败，请检查网络');
+            if (gen !== loadGeneration) return;
+            const arrayBuffer = await file.arrayBuffer();
+            if (gen !== loadGeneration) return;
+            const jsonText = decompressZst(arrayBuffer);
+            if (gen !== loadGeneration) return;
+            // 导入场景放宽条数下限：允许小样本/部分数据集，仅要求非空数组与字段合法
+            const rawParsed = JSON.parse(jsonText);
+            if (!Array.isArray(rawParsed) || rawParsed.length === 0) {
+              throw new Error('文件中没有可导入的字幕条目');
             }
-          };
-          reader.readAsText(file);
+            let missing = 0;
+            for (const raw of rawParsed) {
+              if (!raw || typeof raw !== 'object') { missing++; continue; }
+              const pathTail = typeof raw.path === 'string'
+                ? raw.path.replace(/\\/g, '/').split('/').filter(Boolean).pop() : '';
+              if (!(raw.name_chs || raw.name_jp || raw.name_en || pathTail) ||
+                  !(typeof raw.path === 'string' && raw.path.trim()) ||
+                  !(typeof raw.time === 'string' && raw.time.trim())) missing++;
+            }
+            if (rawParsed.length > 0 && missing / rawParsed.length > MAX_CORE_MISSING_RATIO) {
+              throw new Error('文件字段格式不符合字幕数据结构');
+            }
+            list = rawParsed
+              .map((raw, index) => adaptZstItem(raw || {}, index))
+              .filter(item => {
+                const t = (item.type || '').toLowerCase();
+                const p = (item.path || '').toLowerCase();
+                return t !== 'r18' && !p.startsWith('r18');
+              });
+            setStage('');
+          } else {
+            // xml：沿用原解析逻辑
+            const text = await file.text();
+            if (gen !== loadGeneration) return;
+            list = parseXmlData(text);
+          }
+        } catch (err) {
+          setStage('');
+          showToast((isZst ? 'ZST 导入失败：' : 'XML 导入失败：') + err.message, false);
+          return;
+        }
+
+        if (gen !== loadGeneration) return;
+        if (list.length > 0) {
+          state.rawList = list;
+          buildAnimeAggregation();
+          applyFiltersAndSort();
+          renderStats();
+          showLoadedStats(list.length);
+          showToast(`成功本地解析导入 ${list.length} 条字幕记录！`, true);
+          closeSettingsModal();
+        } else {
+          showToast(isZst
+            ? '未从该 ZST 文件中解析出有效字幕记录'
+            : '无法解析该 XML 文件中的 <subs> 节点', false);
         }
       });
     }

@@ -4,9 +4,10 @@
  * 功能特性：
  * 1. 毫秒级多维度实时检索（支持中/日/英/罗马音/字幕组/格式/路径匹配，多关键词空格与检索）
  * 2. 彻底剔除 R18 内容检索，保障页面健康纯净
- * 3. 国内极速封面加载引擎：
- *    - 优先直连本仓库内置高清封面库（./covers/*.jpg，无跨域、免翻墙、100% 成功率）
- *    - 针对远程图片自动通过多通道国内可用 CDN 反代（wsrv.nl / i0.wp.com 自动故障转移）
+ * 3. 国内极速封面加载引擎（在线优先）：
+ *    - 仓库内置封面走 jsDelivr 国内 CDN 在线加载（稳定、免防盗链、随仓库更新）
+ *    - 其余封面直连 Bangumi 官方图域 lain.bgm.tv（配合 no-referrer，覆盖全量番剧）
+ *    - 多级故障转移：wsrv.nl 反代 -> Jetpack CDN -> 同域本地封面 -> 色块占位
  * 4. 智能并发限流与本地持久化缓存（IndexedDB / localStorage，视口懒加载）
  * 5. 点击直接跳转 GitHub 仓库对应字幕目录（附带一键复制相对路径与稀疏检出命令）
  * 6. 优先展示最近更新批次，聚合番剧海报视图与单条字幕视图自由切换
@@ -74,42 +75,43 @@
     return null;
   }
 
-  // =============== 国内多镜像 CDN 转换 ===============
+  // =============== 在线封面地址解析（在线优先，国内可靠源） ===============
   function getSafeCoverUrl(meta) {
-    if (!meta) return null;
-    // 1. 本地仓库内置图片优先（最快、最稳、中国大陆 100% 直连）
+    if (!meta || meta.notFound) return null;
+    // 1. 仓库内置封面 -> jsDelivr 国内 CDN 在线加载（稳定、免防盗链、不依赖第三方图床存活）
     if (meta.localCover) {
-      return './' + meta.localCover;
+      const name = String(meta.localCover).replace(/\\/g, '/').split('/').pop();
+      if (name) return `https://cdn.jsdelivr.net/gh/${GITHUB_REPO}@gh-pages/covers/${name}`;
     }
+    // 2. 其余走 Bangumi 官方图域在线直连（配合 img 的 referrerpolicy=no-referrer 绕过防盗链）
     const raw = meta.cover;
-    if (!raw) return null;
-
-    // 2. 如果包含 lain.bgm.tv，通过国内可访问的 CDN 节点加速转接
-    if (raw.includes('lain.bgm.tv')) {
-      const cleanUrl = raw.replace(/^http:\/\//i, 'https://');
-      return `https://wsrv.nl/?url=${encodeURIComponent(cleanUrl)}&w=360&output=jpg`;
-    }
-    return raw;
+    if (raw) return String(raw).replace(/^http:\/\//i, 'https://');
+    return null;
   }
 
-  // 全局图片加载失败备用转移
+  // 全局图片加载失败备用转移（多级在线兜底）
   window.handleCoverError = function (img, rawUrl) {
     if (!img) return;
     const step = parseInt(img.dataset.failStep || '0', 10);
     if (!rawUrl) rawUrl = img.dataset.rawUrl || '';
+    const localCover = img.dataset.localCover || '';
+    const localName = localCover ? String(localCover).replace(/\\/g, '/').split('/').pop() : '';
+    const cleanUrl = String(rawUrl).replace(/^http:\/\//i, 'https://');
 
-    if (step === 0 && rawUrl) {
-      // 切换到 WordPress Jetpack 全球 CDN 镜像
+    if (step === 0 && cleanUrl) {
+      // 一级：wsrv.nl 反代 Bangumi 原图（剥离 Referer，绕过防盗链）
       img.dataset.failStep = '1';
-      const cleanNoProto = rawUrl.replace(/^https?:\/\//i, '');
-      img.src = `https://i0.wp.com/${cleanNoProto}`;
-    } else if (step === 1 && rawUrl) {
-      // 切换到 i1.wp.com 镜像
+      img.src = 'https://wsrv.nl/?url=' + encodeURIComponent(cleanUrl) + '&w=400&output=jpg';
+    } else if (step === 1 && cleanUrl) {
+      // 二级：Jetpack CDN
       img.dataset.failStep = '2';
-      const cleanNoProto = rawUrl.replace(/^https?:\/\//i, '');
-      img.src = `https://i1.wp.com/${cleanNoProto}`;
+      img.src = 'https://i0.wp.com/' + cleanUrl.replace(/^https?:\/\//i, '');
+    } else if (step === 2 && localName) {
+      // 三级：同域本地封面（线上 gh-pages 与本地预览均存在）
+      img.dataset.failStep = '3';
+      img.src = './covers/' + localName;
     } else {
-      // 降级显示纯净色块卡片
+      // 最终降级：纯净色块占位
       img.style.display = 'none';
       const thumb = img.closest('.poster-thumb');
       if (thumb) {
@@ -331,10 +333,11 @@
           <img class="poster-img"
                src="${safeUrl}"
                data-raw-url="${meta.cover || ''}"
+               data-local-cover="${meta.localCover || ''}"
                alt="${escapeHtml(meta.name_cn || meta.name || '')}"
                loading="lazy"
                referrerpolicy="no-referrer"
-               onerror="handleCoverError(this, '${escapeHtml(meta.cover || '')}')"
+               onerror="handleCoverError(this, this.dataset.rawUrl)"
           >
         `;
         cardEl.classList.add('has-cover');
@@ -717,10 +720,11 @@
         <img class="poster-img"
              src="${initialCoverUrl}"
              data-raw-url="${seedMeta.cover || ''}"
+             data-local-cover="${seedMeta.localCover || ''}"
              alt="${escapeHtml(anime.chs || anime.jp)}"
              loading="lazy"
              referrerpolicy="no-referrer"
-             onerror="handleCoverError(this, '${escapeHtml(seedMeta.cover || '')}')"
+             onerror="handleCoverError(this, this.dataset.rawUrl)"
         >
       `;
     } else {
@@ -959,8 +963,11 @@
     if (meta) {
       const safeUrl = getSafeCoverUrl(meta);
       if (safeUrl) {
-        modalCoverImg.src = safeUrl;
         modalCoverImg.dataset.rawUrl = meta.cover || '';
+        modalCoverImg.dataset.localCover = meta.localCover || '';
+        modalCoverImg.dataset.failStep = '0';
+        modalCoverImg.onerror = function () { window.handleCoverError(this, this.dataset.rawUrl); };
+        modalCoverImg.src = safeUrl;
         modalCoverImg.hidden = false;
       }
       if (meta.summary) {

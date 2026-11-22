@@ -349,32 +349,42 @@ async function updateCovers() {
   if (!pending.length) return;
 
   const batch = pending.slice(0, COVERS_LIMIT);
-  for (const showPath of batch) {
+  let consecutiveMiss = 0;
+  for (let i = 0; i < batch.length; i++) {
+    const showPath = batch[i];
     const info = readInfo(showPath);
     const folder = scanRes.shows.get(showPath).show;
+    const year = parseInt(scanRes.shows.get(showPath).year, 10);
     const candidates = [info.chs, info.jp, cleanTitle(folder), folder.replace(/^\([^)]*\)/, '')]
       .map(x => (x || '').trim())
-      .filter((x, i, arr) => x.length >= 2 && arr.indexOf(x) === i)
+      .filter((x, idx, arr) => x.length >= 2 && arr.indexOf(x) === idx)
       .slice(0, 2);
 
     let hit = null;
     for (const kw of candidates) {
-      hit = await bgmSearch(kw, parseInt(scanRes.shows.get(showPath).year, 10));
+      hit = await bgmSearch(kw, year);
       if (hit) break;
-      await new Promise(r => setTimeout(r, 250));
+      await new Promise(r => setTimeout(r, 150));
     }
     if (hit && hit.cover) {
       seed[keyOf(showPath)] = hit;
       coverStats.added++;
+      consecutiveMiss = 0;
     } else {
       coverStats.missing++;
+      consecutiveMiss++;
+      if (consecutiveMiss >= 3) {
+        console.log(`[WARN] 连续 ${consecutiveMiss} 部未命中，疑似 Bangumi 接口限流，提前结束本轮`);
+        coverStats.remaining = pending.length - (i + 1);
+        break;
+      }
     }
-    await new Promise(r => setTimeout(r, 150));
+    await new Promise(r => setTimeout(r, 250));
   }
   fs.mkdirSync(path.dirname(abs), { recursive: true });
   fs.writeFileSync(abs, JSON.stringify(seed, null, 2) + '\n');
   coverStats.total = Object.keys(seed).length;
-  coverStats.remaining = pending.length - batch.length;
+  console.log(`[INFO] 封面：新增 ${coverStats.added}，未匹配 ${coverStats.missing}，剩余 ${coverStats.remaining}`);
 }
 
 if (COVERS_PATH && !NO_COVERS) await updateCovers();
@@ -393,6 +403,7 @@ const lines = [
   `- 番剧目录：**${scanRes.shows.size}** 个，字幕组记录：**${scanRes.groups.size}** 条`,
   `- 本次新增番剧：**${newShows.length}** 个，新增记录：**${newRecords.length}** 条`,
   `- 数据库总记录：**${allRecords.length}** 条，站点索引条目：**${json.length}** 条`,
+  COVERS_PATH && !NO_COVERS ? `- 封面：新增 **${coverStats.added}**、未匹配 **${coverStats.missing}**、剩余待抓 **${coverStats.remaining}**（缓存共 ${coverStats.total} 条）` : '',
   '',
   orphan.length ? `### ⚠️ 数据库中存在、但目录已不存在（${orphan.length} 条，未自动删除）\n` +
     orphan.slice(0, 20).map(r => `- \`${r.path}\` (${r.source} / ${r.sub_name})`).join('\n') : '### ✅ 无失效记录',

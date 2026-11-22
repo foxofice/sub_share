@@ -55,6 +55,25 @@
     idb: null
   };
 
+  
+  // =============== 辅助路径与元数据匹配函数 ===============
+  function getRepoFolderUrl(path) {
+    if (!path) return `https://github.com/${GITHUB_REPO}/tree/master/subs_list`;
+    const cleanPath = path.replace(/[\\/]+/g, '/').replace(/^\/+/g, '');
+    const segments = cleanPath.split('/').map(seg => encodeURIComponent(seg)).join('/');
+    return `${GITHUB_TREE_BASE}${segments}`;
+  }
+
+  function findSeedMeta(path) {
+    if (!path || !state.seedCovers) return null;
+    if (state.seedCovers[path]) return state.seedCovers[path];
+    const forward = path.replace(/[\\/]+/g, '/');
+    if (state.seedCovers[forward]) return state.seedCovers[forward];
+    const backward = path.replace(/[\\/]+/g, '\\');
+    if (state.seedCovers[backward]) return state.seedCovers[backward];
+    return null;
+  }
+
   // =============== 国内多镜像 CDN 转换 ===============
   function getSafeCoverUrl(meta) {
     if (!meta) return null;
@@ -215,6 +234,11 @@
     }
 
     async request(path, chs, jp, callback) {
+      const seed = findSeedMeta(path);
+      if (seed) {
+        callback(seed);
+        return;
+      }
       const cached = await getFromCache(path);
       if (cached) {
         callback(cached);
@@ -676,14 +700,14 @@
     card.dataset.jp = anime.jp;
 
     const isRecent = state.recentPaths.has(anime.path);
-    const repoUrl = GITHUB_TREE_BASE + encodeURI(anime.path);
+    const repoUrl = getRepoFolderUrl(anime.path);
     const firstLetter = (anime.chs || anime.jp || '?')[0].toUpperCase();
     const verCount = anime.versions.length;
     const subGroups = Array.from(anime.subNames).slice(0, 2).join(' / ');
     const yearStr = anime.year > 0 ? anime.year : (anime.time || '').slice(0, 4);
 
     // 核心优化：直接检查是否已有预置种子封面（无需等待异步请求即可直出封面）
-    const seedMeta = state.seedCovers[anime.path];
+    const seedMeta = findSeedMeta(anime.path);
     const initialCoverUrl = getSafeCoverUrl(seedMeta);
 
     let thumbHtml = '';
@@ -773,7 +797,7 @@
     card.dataset.chs = item.chs;
     card.dataset.jp = item.jp;
 
-    const repoUrl = GITHUB_TREE_BASE + encodeURI(item.path);
+    const repoUrl = getRepoFolderUrl(item.path);
 
     card.innerHTML = `
       <div class="anime-body">
@@ -866,8 +890,8 @@
     const modal = $('#detailModal');
     if (!modal) return;
 
-    const repoUrl = GITHUB_TREE_BASE + encodeURI(anime.path);
-    const gitSparseCmd = `git clone --filter=blob:none --sparse https://github.com/${GITHUB_REPO}.git && cd sub_share && git sparse-checkout set "subs_list/${anime.path}"`;
+    const repoUrl = getRepoFolderUrl(anime.path);
+    const gitSparseCmd = `git clone --filter=blob:none --sparse https://github.com/${GITHUB_REPO}.git && cd sub_share && git sparse-checkout set "subs_list/${anime.path.replace(/[\\/]+/g, "/")}"`;
 
     $('#modalTitle').textContent = anime.chs || anime.jp;
     $('#modalJpTitle').textContent = anime.jp ? `日文名：${anime.jp}` : '';

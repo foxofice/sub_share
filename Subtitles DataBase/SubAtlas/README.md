@@ -55,6 +55,13 @@
 
 ---
 
+## 获取
+
+- **预编译版本**：本目录下的 [`SubAtlas.exe`](SubAtlas.exe)（Windows 10/11 x64，单文件免安装）
+- **源码**：`src/`、`Cargo.toml`，构建方式见下方「构建」
+
+---
+
 ## 运行
 
 1. 下载 / 构建 `SubAtlas.exe`；

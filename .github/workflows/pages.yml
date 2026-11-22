@@ -1,33 +1,169 @@
-name: Deploy GitHub Pages
+name: 同步数据库并发布 Pages
 
+# 只在内容变化时跑：新增/修改字幕目录，或手改数据库文件
 on:
   push:
-    branches: [master, gh-pages]
+    branches: [master]
+    paths:
+      - 'subs_list/**'
+      - 'Subtitles DataBase/Files/db.xml'
+      - '.github/workflows/pages.yml'
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write     # 需要把生成的 db.xml / db.json.zst / subtitles.json 提交回去
   pages: write
   id-token: write
 
+# 单一发布者：不再和 legacy "pages build and deployment" 抢锁，也不互相取消
 concurrency:
-  group: github-pages
-  cancel-in-progress: true
+  group: pages
+  cancel-in-progress: false
 
 jobs:
-  deploy:
+  sync:
+    name: 生成字幕数据库
     runs-on: ubuntu-latest
+    timeout-minutes: 20
+    outputs:
+      new_records: ${{ steps.sync.outputs.new_records }}
+    steps:
+      - name: 检出版本库（只取元数据，不下字幕内容）
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 1
+          filter: blob:none
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            /scripts/
+            /Subtitles DataBase/Files/db.xml
+            /Subtitles DataBase/Files/db.json.zst
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 扫描目录并补齐 db.xml
+        id: sync
+        run: |
+          set -euo pipefail
+          node scripts/sync-db.mjs \
+            --repo . \
+            --db "Subtitles DataBase/Files/db.xml" \
+            --json site/subtitles.json \
+            --dbjson db.json \
+            --report "$GITHUB_STEP_SUMMARY"
+
+      - name: 压缩 SubAtlas 用的 db.json.zst
+        run: |
+          set -euo pipefail
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq zstd
+          zstd -q -19 -f db.json -o "Subtitles DataBase/Files/db.json.zst"
+          ls -lh "Subtitles DataBase/Files/db.json.zst"
+
+      - name: 提交数据库变更
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "Subtitles DataBase/Files/db.xml" "Subtitles DataBase/Files/db.json.zst"
+          if git diff --cached --quiet; then
+            echo "数据库无变化，跳过提交"
+          else
+            git commit -m "chore(data): 自动同步字幕数据库 [skip ci]"
+            ok=0
+            for i in 1 2 3; do
+              if git pull --rebase --autostash origin master && git push origin HEAD:master; then ok=1; break; fi
+              echo "第 $i 次推送失败，重试..."; sleep 3
+            done
+            if [ "$ok" != "1" ]; then
+              echo "::warning::数据库已生成但推送失败，请检查 Settings → Actions → Workflow permissions 是否为 Read and write"
+            fi
+          fi
+
+      - name: 上传站点索引
+        uses: actions/upload-artifact@v4
+        with:
+          name: subtitles-json
+          path: site/subtitles.json
+          retention-days: 1
+
+  publish:
+    name: 更新站点数据
+    needs: sync
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: 检出站点分支
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: 取回索引
+        uses: actions/download-artifact@v4
+        with:
+          name: subtitles-json
+          path: .
+
+      - name: 提交 subtitles.json
+        run: |
+          set -euo pipefail
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add subtitles.json
+          if git diff --cached --quiet; then
+            echo "站点索引无变化"
+          else
+            git commit -m "chore(site): 更新 subtitles.json [skip ci]"
+            ok=0
+            for i in 1 2 3; do
+              if git pull --rebase --autostash origin gh-pages && git push origin HEAD:gh-pages; then ok=1; break; fi
+              echo "第 $i 次推送失败，重试..."; sleep 3
+            done
+            if [ "$ok" != "1" ]; then
+              echo "::warning::站点索引已生成但推送失败，请检查 Workflow permissions"
+            fi
+          fi
+
+      - name: 整理发布目录
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          rsync -a --exclude='.git' --exclude='.github' --exclude='README.md' ./ _site/
+          du -sh _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: 发布到 Pages
+    needs: publish
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-      - id: deployment
+      - name: 预检 Pages 发布方式
+        id: preflight
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          bt=$(gh api "repos/${GITHUB_REPOSITORY}/pages" --jq '.build_type' 2>/dev/null || echo unknown)
+          echo "Pages build_type = ${bt}"
+          if [ "${bt}" = "workflow" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::Pages 仍由分支构建（build_type=${bt}），本次跳过发布。请在 Settings → Pages 把 Source 切换为 GitHub Actions。"
+          fi
+
+      - name: 发布
+        id: deployment
+        if: steps.preflight.outputs.ready == 'true'
         uses: actions/deploy-pages@v4

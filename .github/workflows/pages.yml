@@ -1,11 +1,8 @@
-name: Deploy Pages (docs only)
+name: Deploy GitHub Pages
 
 on:
   push:
-    branches: [master]
-    paths:
-      - 'docs/**'
-      - '.github/workflows/pages.yml'
+    branches: [master, gh-pages]
   workflow_dispatch:
 
 permissions:
@@ -24,15 +21,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Fetch docs files (no full clone)
-        run: |
-          mkdir -p docs
-          for f in index.html styles.css app.js .nojekyll; do
-            curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/docs/${f}" -o "docs/${f}"
-          done
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: docs
+          path: .
       - id: deployment
         uses: actions/deploy-pages@v4

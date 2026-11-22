@@ -911,21 +911,44 @@
   }
 
   // =============== GitHub API Commits 实时检测 ===============
+  // 数据文件真实同步来源：只查询字幕数据文件的提交，不用代码提交冒充「同步」
+  const DATA_FILE_PATHS = [
+    'Subtitles%20DataBase/Files/db.json.zst',
+    'Subtitles%20DataBase/Files/db.xml'
+  ];
+
+  async function fetchDataCommit(path, headers) {
+    try {
+      const resp = await fetch(
+        `https://api.github.com/repos/${GITHUB_REPO}/commits?path=${path}&sha=master&per_page=1`,
+        { headers }
+      );
+      if (!resp.ok) return null;
+      const commits = await resp.json();
+      return (commits && commits.length) ? commits[0] : null;
+    } catch (e) {
+      return null;
+    }
+  }
+
   async function fetchRecentCommits() {
     try {
       const headers = { 'User-Agent': 'foxofice-subshare' };
       if (state.githubToken) {
         headers['Authorization'] = `token ${state.githubToken}`;
       }
-      const resp = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?per_page=10`, { headers });
-      if (!resp.ok) return;
-      const commits = await resp.json();
-      if (!commits || !commits.length) return;
+      // 并行取两个数据文件的最新提交，取时间更新的那个作为真实数据同步点
+      const results = await Promise.all(DATA_FILE_PATHS.map(p => fetchDataCommit(p, headers)));
+      const valid = results.filter(Boolean);
+      if (!valid.length) return;
+      valid.sort((a, b) => new Date(b.commit.author.date) - new Date(a.commit.author.date));
+      const latest = valid[0];
 
-      state.latestCommit = commits[0];
-      renderCommitBanner(commits[0]);
+      state.latestCommit = latest;
+      renderCommitBanner(latest);
+      renderStats(); // 用真实数据提交年份刷新「收录至」
 
-      // 将最新入库的 80 部番剧标记为最新更新
+      // 标记最新入库批次：db 数据本身按入库时序编排，末尾条目为最近新增
       const totalCount = state.animeList.length;
       state.animeList.slice(Math.max(0, totalCount - 80)).forEach(a => {
         state.recentPaths.add(a.path);
@@ -946,7 +969,7 @@
     banner.innerHTML = `
       <div class="commit-pill">
         <span class="commit-dot" aria-hidden="true"></span>
-        <span class="commit-tag">最新同步</span>
+        <span class="commit-tag">数据更新</span>
         <a class="commit-msg" href="${commit.html_url}" target="_blank" rel="noopener noreferrer" title="${msg}">
           ${escapeHtml(msg)}
         </a>
@@ -1439,7 +1462,23 @@
     if (statsTotal) statsTotal.textContent = state.rawList.length.toLocaleString();
     if (statsAnime) statsAnime.textContent = state.animeList.length.toLocaleString();
     if (statsUpdate && state.rawList.length > 0) {
-      statsUpdate.textContent = state.rawList[state.rawList.length - 1].time || '2026';
+      // 优先用真实数据提交的年份；无提交信息时从数据中最新的放送年份推导，绝不硬编码
+      let year = '';
+      if (state.latestCommit && state.latestCommit.commit && state.latestCommit.commit.author) {
+        year = String(state.latestCommit.commit.author.date).slice(0, 4);
+      }
+      if (!/^\d{4}$/.test(year)) {
+        let maxYear = 0;
+        for (const item of state.rawList) {
+          const m = /^(\d{4})/.exec(item.time || '');
+          if (m) {
+            const y = parseInt(m[1], 10);
+            if (y > maxYear) maxYear = y;
+          }
+        }
+        year = maxYear ? String(maxYear) : '';
+      }
+      if (year) statsUpdate.textContent = year;
     }
   }
 

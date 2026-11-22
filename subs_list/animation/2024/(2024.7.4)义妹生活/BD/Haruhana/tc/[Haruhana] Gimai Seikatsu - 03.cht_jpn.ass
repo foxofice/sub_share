@@ -1,0 +1,1516 @@
+﻿[Script Info]
+ScriptType: v4.00+
+PlayDepth: 0
+ScaledBorderAndShadow: yes
+PlayResX: 3840
+PlayResY: 2160
+LayoutResX: 1920
+LayoutResY: 1080
+WrapStyle: 2
+YCbCr Matrix: TV.709
+Title: Gimai Seikatsu
+Original Script: 拨雪寻春（Haruhana）
+Original Translation: 火树银花
+Original Timing: 混乱怪魔
+Script Updated By: 一星、Ronbogo、yuygfgg
+Update Details: 2024-12-01 BD ver.
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,方正屏显雅宋_GBK,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,0,0,7,10,10,10,1
+Style: Dial-CHI - retro2,方正屏显雅宋_GBK,103,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,10,0,1,4,2,8,40,40,302,1
+Style: Dial-CHI - retro,方正屏显雅宋_GBK,103,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,10,0,1,4,2,2,40,40,302,1
+Style: Dial-CHI,方正屏显雅宋_GBK,123,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,10,0,1,4,2,2,40,40,159,1
+Style: Dial-JPN - retro2,FOT-ModeMinALarge Std M,90,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,8,0,1,4,2,8,40,40,210,1
+Style: Dial-JPN - retro,FOT-ModeMinALarge Std M,90,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,8,0,1,4,2,2,40,40,210,1
+Style: Dial-JPN,FOT-ModeMinALarge Std M,104,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,8,0,1,4,2,2,40,40,50,1
+Style: ED3-CHI,方正屏显雅宋_GBK,103,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,10,0,1,4,2,9,720,720,302,1
+Style: ED3-JPN,FOT-ModeMinALarge Std M,90,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,8,0,1,4,2,9,725,725,210,1
+Style: Ruby,方正屏显雅宋_GBK,60,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,3,0,1,4,2,2,40,40,290,1
+Style: Ruby-pronounce,獅尾B2黑體SC-Bold,60,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,3,0,1,4,2,2,40,40,290,1
+Style: CHS-STAFF-OP,獅尾B2加糖宋體SC-Medium,123,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,0,0,1,0,0,7,40,40,159,1
+Style: CHS-Title,獅尾B2黑體SC-Medium,81,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,3,0,1,0,0,4,0,0,0,1
+Style: Screen,方正屏显雅宋_GBK,100,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,0,0,1,0,0,7,0,0,0,1
+Style: Note,方正屏显雅宋_GBK,88,&H00FFFFFF,&H000000FF,&H004C4C4C,&H9B4C4C4C,0,0,0,0,100,100,10,0,1,4,2,7,60,60,60,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,==========「STAFF」==========
+Dialogue: 0,0:00:00.00,0:00:05.49,CHS-STAFF-OP,,0,0,0,,{\fn獅尾B2加糖宋體SC-Medium\fad(0,2070)\3a&33\3c&0\blur5\be5\bord2.5\pos(1504.6,1474.2)}{\an1\fsp13\fs65\pos(2424,846)}譯製
+Dialogue: 0,0:00:00.00,0:00:05.49,CHS-STAFF-OP,,0,0,0,,{\fn獅尾B2加糖宋體SC-Medium\fad(0,2070)\3a&33\3c&0\blur5\be5\bord2.5\pos(1714.6,1476.2)}{\fscx\fsp3\pos(2634,848.4)\an1\fs80}撥雪尋春
+Dialogue: 0,0:00:00.00,0:00:05.49,CHS-STAFF-OP,,0,0,0,,{\fn獅尾B2加糖宋體SC-Medium\fad(0,2070)\3a&22\3c&0\blur5\be5\bord2.5\pos(1685.6,1492.2)}{\fs61\pos(2605,864)}（本字幕基{\fsp-20}於{\fsp}「AGPLv3通用協議{\fsp-20}」{\fsp}許可使用）
+Dialogue: 0,0:00:29.43,0:00:32.80,CHS-STAFF-OP,,0,0,0,,{\fad(517,768)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3067.3,1583.13)}{\an1\fsp16\fs65\pos(2424,846)}翻譯
+Dialogue: 0,0:00:29.43,0:00:32.80,CHS-STAFF-OP,,0,0,0,,{\fad(517,768)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3277.3,1585.13)}{\fscx103\fsp22.5\pos(2634,848.4)\an1\fs80}火樹銀花
+Dialogue: 0,0:00:36.06,0:00:40.06,CHS-STAFF-OP,,0,0,0,,{\alpha&ee\t(18,517,\1a&00\3a&11)\t(3521,3980,\alpha&ee)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3077.67,1662)}{\an1\fsp16\fs65\pos(2424,846)}軸效
+Dialogue: 0,0:00:36.06,0:00:40.06,CHS-STAFF-OP,,0,0,0,,{\alpha&ee\t(18,517,\1a&00\3a&11)\t(3521,3980,\alpha&ee)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3287.67,1664)}{\fscx103\fsp22.5\pos(2634,848.4)\an1\fs80}混亂怪魔
+Dialogue: 0,0:00:42.31,0:00:45.82,CHS-STAFF-OP,,0,0,0,,{\alpha&ee\t(18,517,\1a&00\3a&33)\t(2735,3486,\alpha&ee)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3078.2,1642.2)}{\an1\fsp16\fs65\pos(2424,846)}繁化
+Dialogue: 0,0:00:42.31,0:00:45.82,CHS-STAFF-OP,,0,0,0,,{\alpha&ee\t(18,517,\1a&00\3a&22)\t(2735,3486,\alpha&ee)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3288.2,1644.2)}{\fscx103\fsp22.5\pos(2634,848.4)\an1\fs80}一星
+Dialogue: 0,0:00:47.32,0:00:50.82,CHS-STAFF-OP,,0,0,0,,{\alpha&ee\t(18,517,\1a&00\3a&22)\t(2735,3486,\alpha&f2)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3077.82,1266.55)}{\an1\fsp16\fs65\pos(2424,846)}壓製
+Dialogue: 0,0:00:47.32,0:00:50.82,CHS-STAFF-OP,,0,0,0,,{\alpha&ee\t(18,517,\1a&00\3a&00)\t(2730,3481,\alpha&f2)\c&0\3c&ffffff\blur5\be5\bord2.5\pos(3287.82,1268.55)}{\fscx103\fsp-3\pos(2634,848.4)\an1\fs80}Ronbogo
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,==========「Dialogue」==========
+Dialogue: 1,0:00:18.50,0:00:19.67,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&4F6980\4c&4F6980}傳說中的哥哥
+Dialogue: 1,0:00:19.67,0:00:20.21,Dial-CHI,,0,0,0,,{\3c&396665\4c&396665\t(\3c&354266\4c&354266)}{\bord3}傳說中的哥哥
+Dialogue: 1,0:00:23.25,0:00:23.67,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&192F4C\4c&192F4C}抱歉
+Dialogue: 1,0:00:23.67,0:00:24.34,Dial-CHI,,0,0,0,,{\3c&3E4D66\4c&3E4D66}{\bord3}抱歉
+Dialogue: 1,0:00:24.34,0:00:25.92,Dial-CHI,,0,0,0,,{\3c&3E4D66\4c&3E4D66}{\bord3}真綾說想來我的新家玩
+Dialogue: 1,0:00:25.92,0:00:28.05,Dial-CHI,,0,0,0,,{\3c&484480\4c&484480}{\bord2.5}真綾說想來我的新家玩
+Dialogue: 1,0:00:28.51,0:00:31.30,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&808080\4c&808080\t(102,978,\3c&335866\4c&335866\bord3)}我沒有你的手機號碼
+Dialogue: 1,0:00:31.30,0:00:32.93,Dial-CHI,,0,0,0,,{\3c&335866\4c&335866}{\bord3}就打了家裡的電話
+Dialogue: 1,0:00:34.47,0:00:36.06,Dial-CHI,,0,0,0,,{\3c&335866\4c&335866}{\bord3}我那時可能在洗澡
+Dialogue: 1,0:00:36.72,0:00:37.77,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}還有
+Dialogue: 1,0:00:37.77,0:00:41.65,Dial-CHI,,0,911,0,,{\3c&333333\4c&333333}{\bord3}我把我們是兄妹告訴她了
+Dialogue: 1,0:00:41.65,0:00:42.31,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}我倒是不介意
+Dialogue: 1,0:00:42.31,0:00:42.52,Dial-CHI,,0,0,0,,{\bord3}{\3c&4C4B66\4c&4C4B66}我倒是不介意
+Dialogue: 1,0:00:42.52,0:00:46.32,Dial-CHI,,0,0,0,,{\bord3}{\3c&4C4B66\4c&4C4B66}網球課上，你走到我身邊時
+Dialogue: 1,0:00:46.61,0:00:48.40,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}好像被她看到了
+Dialogue: 1,0:00:49.70,0:00:52.74,Dial-CHI,,0,755,0,,{\3c&333333\4c&333333}{\bord3}還有剛才你把傘借給我的場面
+Dialogue: 1,0:00:56.37,0:00:59.21,Dial-CHI,,333,0,0,,{\bord2.5}{\3c&4C4B66\4c&4C4B66}抱歉，是我太輕率了
+Dialogue: 1,0:01:02.42,0:01:03.17,Dial-CHI,,0,0,0,,{\bord3}對了
+Dialogue: 1,0:01:05.46,0:01:07.21,Dial-CHI,,0,0,0,,{\3c&625980\4c&625980}{\bord2.5}能交換一下號碼嗎
+Dialogue: 1,0:01:14.01,0:01:14.76,Dial-CHI,,0,0,0,,{\bord3}{\3c&333333\4c&333333}咦
+Dialogue: 1,0:01:15.47,0:01:16.97,Dial-CHI,,0,0,0,,{\bord3}{\3c&333333\4c&333333}早安
+Dialogue: 1,0:01:16.97,0:01:17.85,Dial-CHI,,0,0,0,,{\bord3}{\3c&333333\4c&333333}早安
+Dialogue: 1,0:01:18.39,0:01:19.77,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}妳還不睡嗎
+Dialogue: 1,0:01:19.77,0:01:21.98,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}似乎沒什麼睡意
+Dialogue: 1,0:01:21.98,0:01:22.77,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}對了
+Dialogue: 1,0:01:22.77,0:01:25.94,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}太一說他今天會晚些出門
+Dialogue: 1,0:01:25.94,0:01:28.11,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}可以四個人一起吃早餐
+Dialogue: 1,0:01:29.03,0:01:29.82,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}我來幫忙
+Dialogue: 1,0:01:31.61,0:01:32.49,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}{\bord3}謝謝
+Dialogue: 1,0:01:33.91,0:01:36.78,Dial-CHI,,0,355,0,,{\3c&333333\4c&333333}{\bord3}很久沒有和沙季一起吃早餐了
+Dialogue: 1,0:01:43.04,0:01:44.46,Dial-CHI,,0,0,0,,{\3c&595157\4c&595157}{\bord3}好幸福啊
+Dialogue: 1,0:01:45.38,0:01:47.05,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}你太誇張了
+Dialogue: 1,0:01:47.75,0:01:48.34,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}好吃
+Dialogue: 1,0:01:51.72,0:01:52.88,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}真的很好吃
+Dialogue: 1,0:01:53.51,0:01:55.18,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}這是雞蛋卷嗎
+Dialogue: 1,0:01:56.05,0:01:57.31,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}是高湯蛋卷
+Dialogue: 1,0:01:57.76,0:01:58.47,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}高湯蛋卷
+Dialogue: 1,0:01:58.47,0:01:58.85,Dial-CHI,,0,0,0,,{\3c&1C222F\4c&1C222F}高湯蛋卷
+Dialogue: 1,0:01:59.31,0:02:01.02,Dial-CHI,,0,0,0,,{\3c&1C222F\4c&1C222F}裡面加了湯汁
+Dialogue: 1,0:02:02.48,0:02:03.77,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&1E2333\4c&1E2333}加的是蘸汁嗎
+Dialogue: 1,0:02:04.98,0:02:06.44,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&1E2333\4c&1E2333}我家通常是白汁
+Dialogue: 1,0:02:06.44,0:02:08.53,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&1E2333\4c&1E2333}沙季也會做哦
+Dialogue: 1,0:02:08.53,0:02:11.11,Dial-CHI,,0,0,0,,{\bord3}{\3c&342D40\4c&342D40}下次做給他嚐嚐吧
+Dialogue: 1,0:02:11.11,0:02:12.03,Dial-CHI,,0,0,0,,{\bord3}{\3c&342D40\4c&342D40}我做不出這麼鬆軟的口感
+Dialogue: 1,0:02:12.03,0:02:14.28,Dial-CHI,,0,0,0,,{\bord3}{\3c&3E364C\4c&3E364C}我做不出這麼鬆軟的口感
+Dialogue: 1,0:02:17.53,0:02:19.41,Dial-CHI,,0,0,0,,{\bord3}{\3c&25384C\4c&25384C}我挺喜歡吃煎蛋的
+Dialogue: 1,0:02:20.50,0:02:21.54,Dial-CHI,,0,0,0,,{\bord3}{\3c&25384C\4c&25384C}是嗎
+Dialogue: 1,0:02:22.21,0:02:24.33,Dial-CHI,,0,0,0,,{\bord3}{\3c&3E364C\4c&3E364C}等我哪天心血來潮吧
+Dialogue: 1,0:02:28.84,0:02:30.55,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}也要謝謝悠太
+Dialogue: 1,0:02:31.13,0:02:32.47,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}哪裡，小事一樁
+Dialogue: 1,0:02:33.97,0:02:35.43,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}這週洗衣服時
+Dialogue: 1,0:02:35.43,0:02:37.97,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}妳們的衣服也交給我來洗吧
+Dialogue: 1,0:02:38.76,0:02:39.64,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}這個嘛
+Dialogue: 1,0:02:40.31,0:02:41.56,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}這樣吧
+Dialogue: 1,0:02:41.56,0:02:44.35,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}要是悠太不嫌棄的話
+Dialogue: 1,0:02:44.35,0:02:47.15,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}衣服就全部交給我來洗吧
+Dialogue: 1,0:02:48.06,0:02:49.07,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}不，這怎麼好意思
+Dialogue: 1,0:02:49.07,0:02:49.98,Dial-CHI,,0,0,0,,{\bord3}不，這怎麼好意思
+Dialogue: 1,0:02:51.15,0:02:53.61,Dial-CHI,,0,0,0,,{\bord3}衣服的布料很脆弱
+Dialogue: 1,0:02:53.61,0:02:55.66,Dial-CHI,,0,0,0,,{\bord3}你會用洗衣袋嗎
+Dialogue: 1,0:02:56.20,0:02:57.07,Dial-CHI,,0,0,0,,{\bord3}洗衣袋?
+Dialogue: 1,0:02:57.82,0:03:01.66,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}是用來防止弄破衣服的網袋
+Dialogue: 1,0:03:02.33,0:03:03.33,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}炒…
+Dialogue: 1,0:03:04.75,0:03:06.33,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}解釋起來很麻煩
+Dialogue: 1,0:03:06.33,0:03:07.63,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}我還是自己洗吧
+Dialogue: 1,0:03:09.71,0:03:12.51,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}太一的內衣我會幫他洗
+Dialogue: 1,0:03:13.01,0:03:14.80,Dial-CHI,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}悠太的也交給我來洗吧
+Dialogue: 1,0:03:24.93,0:03:25.60,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&1A1A1A\4c&1A1A1A}等一下
+Dialogue: 1,0:03:27.15,0:03:28.31,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&1A1A1A\4c&1A1A1A}我們一起走
+Dialogue: 1,0:03:31.94,0:03:32.98,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&666666\4c&666666}對不起
+Dialogue: 1,0:03:34.36,0:03:36.28,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&666666\4c&666666}雖然只是一種假設
+Dialogue: 1,0:03:36.28,0:03:39.87,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&666666\4c&666666}但你穿女性內衣這種事
+Dialogue: 1,0:03:40.16,0:03:41.95,Dial-CHI,,0,0,0,,{\bord3}也不是沒有可能
+Dialogue: 1,0:03:43.83,0:03:44.25,Dial-CHI,,0,0,0,,{\bord3}我明明一直在否定固有的性別規範
+Dialogue: 1,0:03:44.25,0:03:48.12,Dial-CHI,,0,0,0,,{\bord3}{\3c&344C66\4c&344C66}我明明一直在否定固有的性別規範
+Dialogue: 1,0:03:48.12,0:03:48.75,Dial-CHI,,0,0,0,,{\bord3}{\3c&344C66\4c&344C66}卻先入為主地認為你不會洗衣服
+Dialogue: 1,0:03:48.75,0:03:50.54,Dial-CHI,,0,0,0,,{\bord3}卻先入為主地認為你不會洗衣服
+Dialogue: 1,0:03:50.54,0:03:51.75,Dial-CHI,,0,0,0,,{\bord3}綾瀨?
+Dialogue: 1,0:03:51.75,0:03:52.75,Dial-CHI,,0,0,0,,{\bord3}雖然沒見過你用唇膏和粉底
+Dialogue: 1,0:03:52.75,0:03:54.92,Dial-CHI,,0,0,0,,{\bord3}雖然沒見過你用唇膏和粉底
+Dialogue: 1,0:03:54.92,0:03:58.01,Dial-CHI,,0,0,0,,{\bord3}但你也有可能偷偷地打扮自己
+Dialogue: 1,0:03:58.01,0:03:58.93,Dial-CHI,,0,0,0,,{\bord3}等一下
+Dialogue: 1,0:03:58.93,0:04:00.47,Dial-CHI,,0,0,0,,{\bord3}妳冷靜一下，綾瀨
+Dialogue: 1,0:04:12.57,0:04:14.03,Dial-CHI,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}我冷靜下來了
+Dialogue: 1,0:04:15.90,0:04:17.86,Dial-CHI,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}就算對女裝感興趣
+Dialogue: 1,0:04:17.86,0:04:20.37,Dial-CHI,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}也不代表在現實中會穿吧
+Dialogue: 1,0:04:22.45,0:04:24.45,Dial-CHI,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}我不穿女裝
+Dialogue: 1,0:04:24.45,0:04:26.87,Dial-CHI,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}也不會偷偷地打扮自己
+Dialogue: 1,0:04:26.87,0:04:29.92,Dial-CHI,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}可是你的眉毛很漂亮
+Dialogue: 1,0:04:31.42,0:04:32.96,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}你肯定打理過吧
+Dialogue: 1,0:04:32.96,0:04:34.34,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}比如去美容院
+Dialogue: 1,0:04:34.34,0:04:35.46,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}理髮店而已
+Dialogue: 1,0:04:36.55,0:04:38.84,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}那你的眉毛是天生的嗎
+Dialogue: 1,0:04:39.72,0:04:40.64,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}是啊
+Dialogue: 1,0:04:42.05,0:04:43.51,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}有點嫉妒你
+Dialogue: 1,0:04:47.68,0:04:51.56,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}性別或許不能簡單歸結為男女兩種
+Dialogue: 1,0:04:52.52,0:04:53.77,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}說得也是
+Dialogue: 1,0:04:54.73,0:04:57.53,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}然而在那一瞬間
+Dialogue: 1,0:04:57.53,0:05:01.20,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}我的腦海裡完全沒有這個想法
+Dialogue: 1,0:05:02.32,0:05:04.20,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}我真的沒放在心上
+Dialogue: 1,0:05:06.62,0:05:07.41,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}謝謝
+Dialogue: 1,0:05:08.20,0:05:10.92,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}可是我無法原諒自己
+Dialogue: 1,0:05:11.42,0:05:13.00,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}所以想向你道歉
+Dialogue: 1,0:05:18.34,0:05:19.88,Dial-CHI,,0,0,0,,{\bord3}{\3c&403729\4c&403729}妳知道反射吧
+Dialogue: 1,0:05:20.43,0:05:21.59,Dial-CHI,,0,0,0,,{\bord3}{\3c&403729\4c&403729}反射?
+Dialogue: 1,0:05:21.59,0:05:22.76,Dial-CHI,,0,0,0,,{\bord3}{\3c&403729\4c&403729}光的反射?
+Dialogue: 1,0:05:22.76,0:05:23.85,Dial-CHI,,0,0,0,,{\bord3}{\3c&403729\4c&403729}不是那個
+Dialogue: 1,0:05:24.26,0:05:25.85,Dial-CHI,,0,0,0,,{\bord3}{\3c&403729\4c&403729}我指的是條件反射
+Dialogue: 1,0:05:28.81,0:05:30.77,Dial-CHI,,0,0,0,,{\bord3}{\3c&373640\4c&373640}比如不小心脫口而出
+Dialogue: 1,0:05:30.77,0:05:32.48,Dial-CHI,,0,0,0,,{\bord3}{\3c&373640\4c&373640}之所以會這樣
+Dialogue: 1,0:05:32.48,0:05:34.65,Dial-CHI,,0,0,0,,{\bord3}{\3c&373640\4c&373640}應該是有難以抗拒的原因
+Dialogue: 1,0:05:35.23,0:05:36.65,Dial-CHI,,0,0,0,,{\bord3}{\3c&373640\4c&373640}這種反射行為近乎本能
+Dialogue: 1,0:05:36.65,0:05:37.73,Dial-CHI,,0,0,0,,{\bord3}{\3c&333333\4c&333333}這種反射行為近乎本能
+Dialogue: 1,0:05:37.73,0:05:40.03,Dial-CHI,,0,0,0,,{\bord3}{\3c&333333\4c&333333}行為人必定會從中受益
+Dialogue: 1,0:05:40.78,0:05:41.91,Dial-CHI,,0,0,0,,{\bord3}{\3c&333333\4c&333333}但是
+Dialogue: 1,0:05:41.91,0:05:43.74,Dial-CHI,,0,0,0,,{\bord3}{\3c&373640\4c&373640}偏見會造成歧視
+Dialogue: 1,0:05:47.08,0:05:49.12,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}所以才需要重新審視
+Dialogue: 1,0:06:01.01,0:06:05.09,Dial-CHI,,0,0,0,,{\bord3}妳已經重新審視和反省了自己的行為
+Dialogue: 1,0:06:05.68,0:06:06.93,Dial-CHI,,0,0,0,,{\bord3}既然如此
+Dialogue: 1,0:06:06.93,0:06:09.85,Dial-CHI,,0,0,0,,{\bord3}就沒必要再煩惱了吧
+Dialogue: 1,0:06:12.85,0:06:13.81,Dial-CHI,,0,0,0,,{\bord3.5}{\3c&302C45\4c&302C45}知道嗎
+Dialogue: 1,0:06:14.60,0:06:19.23,Dial-CHI,,0,0,0,,{\3c&302C45\4c&302C45}{\bord3}我不認為妳是那種不知悔改的人
+Dialogue: 1,0:06:29.74,0:06:30.66,Dial-CHI,,0,0,0,,{\3c&2A2F0E\4c&2A2F0E}綾瀨?
+Dialogue: 1,0:06:35.04,0:06:36.50,Dial-CHI,,0,0,0,,{\3c&25281C\4c&25281C}淺村
+Dialogue: 1,0:06:36.92,0:06:38.00,Dial-CHI,,0,0,0,,{\3c&2A2F0E\4c&2A2F0E}你對我…
+Dialogue: 1,0:07:01.44,0:07:02.28,Dial-CHI,,0,0,0,,{\bord3}{\3c&2B2921\4c&2B2921}我們快走吧
+Dialogue: 1,0:07:23.21,0:07:23.42,Dial-CHI,,0,0,0,,{\bord0\shad0}你回來啦
+Dialogue: 1,0:07:23.42,0:07:24.30,Dial-CHI,,0,0,0,,{\bord3}{\3c&2B2236\4c&2B2236}你回來啦
+Dialogue: 1,0:07:26.97,0:07:27.72,Dial-CHI,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}怎麼了
+Dialogue: 1,0:07:28.26,0:07:29.97,Dial-CHI,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}不，沒什麼
+Dialogue: 1,0:07:29.97,0:07:31.01,Dial-CHI,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}真的沒什麼
+Dialogue: 1,0:07:31.01,0:07:31.72,Dial-CHI,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}是嗎
+Dialogue: 1,0:07:32.18,0:07:33.77,Dial-CHI,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}我今天還要打工
+Dialogue: 1,0:07:46.20,0:07:47.07,Dial-CHI,,0,0,0,,{\3c&333333\4c&333333}於是
+Dialogue: 1,0:07:47.53,0:07:50.37,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}你被晾著的內衣吸引了視線
+Dialogue: 1,0:07:50.37,0:07:52.37,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}而我突然出聲叫你
+Dialogue: 1,0:07:52.37,0:07:54.33,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}你就慌忙逃跑了
+Dialogue: 1,0:07:55.16,0:07:59.13,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}擔心我懷疑你要偷內衣嗎
+Dialogue: 1,0:07:59.63,0:08:01.92,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}算是這樣吧
+Dialogue: 1,0:08:02.96,0:08:05.05,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}明明那是妹妹的東西
+Dialogue: 1,0:08:05.05,0:08:07.84,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}話是這麼說…
+Dialogue: 1,0:08:09.30,0:08:10.18,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}抱歉
+Dialogue: 1,0:08:10.18,0:08:11.89,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}那麼說並不公平
+Dialogue: 1,0:08:13.64,0:08:15.06,Dial-CHI,,0,0,0,,{\3c&2D3D4C\4c&2D3D4C}給，熱可可
+Dialogue: 1,0:08:16.23,0:08:16.81,Dial-CHI,,0,0,0,,{\3c&2D3D4C\4c&2D3D4C}不喜歡嗎
+Dialogue: 1,0:08:17.35,0:08:19.02,Dial-CHI,,0,0,0,,{\3c&616680\4c&616680}{\bord2.5}那我就拿走了
+Dialogue: 1,0:08:19.02,0:08:20.02,Dial-CHI,,0,0,0,,{\3c&616680\4c&616680}{\bord2.5}不
+Dialogue: 1,0:08:21.19,0:08:22.11,Dial-CHI,,0,0,0,,{\3c&616680\4c&616680}{\bord2.5}我不討厭
+Dialogue: 1,0:08:24.82,0:08:25.94,Dial-CHI,,0,0,0,,{\bord0\shad0}這樣吧
+Dialogue: 1,0:08:25.94,0:08:27.49,Dial-CHI,,0,533,0,,{\bord0\shad0}我們就算扯平了
+Dialogue: 1,0:08:28.95,0:08:30.99,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&616680\4c&616680}被內衣吸引
+Dialogue: 1,0:08:30.99,0:08:33.37,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&616680\4c&616680}也是一種反射行為
+Dialogue: 1,0:08:34.24,0:08:35.33,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&616680\4c&616680}而你並不是不知悔改的人
+Dialogue: 1,0:08:35.33,0:08:39.42,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&665852\4c&665852}而你並不是不知悔改的人
+Dialogue: 1,0:08:43.17,0:08:45.38,Dial-CHI,,0,0,0,,{\bord3}{\3c&424866\4c&424866}謝謝妳能這麼說
+Dialogue: 1,0:08:46.51,0:08:47.34,Dial-CHI,,0,0,0,,{\bord3}{\3c&424866\4c&424866}話說回來
+Dialogue: 1,0:08:47.97,0:08:52.18,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}這表示我的內衣有令人著迷的魅力嗎
+Dialogue: 1,0:08:52.18,0:08:54.18,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}我可沒有這麼說
+Dialogue: 1,0:08:54.18,0:08:56.27,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}那就是沒有魅力
+Dialogue: 1,0:08:58.23,0:09:00.94,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}妳是在捉弄我嗎
+Dialogue: 1,0:09:01.40,0:09:02.86,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}這個嘛，誰知道呢
+Dialogue: 1,0:09:04.02,0:09:08.32,Dial-CHI,,0,0,0,,{\bord3}{\3c&665852\4c&665852}看來你並不是沒有拿走內衣的想法
+Dialogue: 1,0:09:08.78,0:09:12.03,Dial-CHI,,0,0,0,,{\bord3}{\3c&665852\4c&665852}如果說毫無欲望，那是自欺欺人
+Dialogue: 1,0:09:12.49,0:09:13.87,Dial-CHI,,0,0,0,,{\bord3}{\3c&665852\4c&665852}可即便如此，我也不會那麼做
+Dialogue: 1,0:09:13.87,0:09:14.45,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}可即便如此，我也不會那麼做
+Dialogue: 1,0:09:16.79,0:09:18.37,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}原來你有欲望啊
+Dialogue: 1,0:09:19.21,0:09:20.37,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}心有所欲
+Dialogue: 1,0:09:20.37,0:09:21.12,Dial-CHI,,0,0,0,,{\bord3}{\3c&616680\4c&616680}心有所欲
+Dialogue: 1,0:09:21.12,0:09:23.71,Dial-CHI,,577,0,0,,{\bord3}{\3c&616680\4c&616680}和縱情恣欲是兩回事
+Dialogue: 1,0:09:26.88,0:09:28.13,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}說的也是
+Dialogue: 1,0:09:28.13,0:09:28.97,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}抱歉
+Dialogue: 1,0:09:28.97,0:09:30.80,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}這件事就到此為止吧
+Dialogue: 1,0:09:31.38,0:09:34.89,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}我已經吃過飯，洗過澡了
+Dialogue: 1,0:09:38.43,0:09:39.02,Dial-CHI,,0,0,0,,{\bord3}{\3c&665852\4c&665852}晚安
+Dialogue: 1,0:09:40.89,0:09:41.77,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}晚安
+Dialogue: 1,0:09:55.66,0:09:57.16,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&525880\4c&525880}這位哥哥
+Dialogue: 1,0:09:58.45,0:10:00.12,Dial-CHI,,0,0,0,,{\3c&525880\4c&525880}{\bord3}現在可是在學校裡啊
+Dialogue: 1,0:10:00.12,0:10:01.83,Dial-CHI,,0,0,0,,{\3c&525880\4c&525880}{\bord3}沙季她怎麼了
+Dialogue: 1,0:10:02.46,0:10:02.79,Dial-CHI,,0,0,0,,{\3c&525880\4c&525880}{\bord3}感覺從早上開始就是那副樣子
+Dialogue: 1,0:10:02.79,0:10:06.21,Dial-CHI,,0,0,0,,{\3c&525880\4c&525880}{\bord2.5}感覺從早上開始就是那副樣子
+Dialogue: 1,0:10:17.43,0:10:18.18,Dial-CHI,,0,0,0,,{\bord2.5}走吧
+Dialogue: 1,0:10:28.48,0:10:31.24,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}老爸他只趕得上末班車嗎
+Dialogue: 1,0:11:14.11,0:11:17.28,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}高薪的打工還是沒什麼頭緒
+Dialogue: 1,0:11:18.24,0:11:20.87,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}我也不指望能馬上找到
+Dialogue: 1,0:11:20.87,0:11:22.83,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}可是這樣下去的話
+Dialogue: 1,0:11:22.83,0:11:26.71,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}就變成妳單方面給我做飯了
+Dialogue: 1,0:11:27.38,0:11:29.29,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}要是需要我幫忙的話
+Dialogue: 1,0:11:29.29,0:11:30.30,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}還請告訴我
+Dialogue: 1,0:11:31.67,0:11:32.17,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}嗯
+Dialogue: 1,0:13:35.55,0:13:36.46,Dial-CHI,,0,0,0,,{\bord0\shad0}{\c&CCCCCC}淺村
+Dialogue: 2,0:18:24.00,0:18:25.00,Dial-CHI,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,2001)}他對我理解得太透徹了
+Dialogue: 1,0:18:24.00,0:18:25.00,Dial-CHI,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,2003)}{\c&2F2838}他對我理解得太透徹了
+Dialogue: 1,0:18:25.08,0:18:25.12,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1920,2001)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.12,0:18:25.16,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1921.46,1993.18)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.16,0:18:25.21,Dial-CHI,,0,0,0,,{\fscx99.99\fscy99.99\pos(1922.71,1999.76)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.21,0:18:25.25,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1924.06,1997.92)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.25,0:18:25.29,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1925.24,1996.63)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.29,0:18:25.33,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1926.22,1998.86)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.33,0:18:25.37,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1927.36,1999.87)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.37,0:18:25.41,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1928.15,1999.85)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.41,0:18:25.46,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1928.85,1999.22)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.46,0:18:25.50,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1929.93,1998.07)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.50,0:18:25.54,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1931,1995.73)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.54,0:18:25.58,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1931.76,1996.3)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.58,0:18:25.62,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1932.87,1998.51)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.62,0:18:25.66,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1933.78,1999.17)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.66,0:18:25.71,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1934.66,2000.07)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.71,0:18:25.75,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1935.34,1997.45)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.75,0:18:25.79,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1935.81,1997.73)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.79,0:18:25.83,Dial-CHI,,0,0,0,,{\fscx100.01\fscy100.01\pos(1936.72,1998.09)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.83,0:18:25.87,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1936.87,1997.34)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.87,0:18:25.91,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1937.24,1997.82)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.91,0:18:25.96,Dial-CHI,,0,0,0,,{\fscx100.01\fscy100.01\pos(1937.29,1997.08)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:25.96,0:18:26.00,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1937.48,1998.12)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.00,0:18:26.04,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1937.41,1993.36)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.04,0:18:26.08,Dial-CHI,,0,0,0,,{\fscx99.99\fscy99.99\pos(1937.61,1993.84)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.08,0:18:26.12,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1937.35,1990.96)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.12,0:18:26.16,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1936.9,1990.24)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.16,0:18:26.21,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1936.21,1991.46)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.21,0:18:26.25,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.67,1990.89)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.25,0:18:26.29,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.09,1991.61)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.29,0:18:26.33,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.74,1993.26)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.33,0:18:26.37,Dial-CHI,,0,0,0,,{\fscx99.99\fscy99.99\pos(1934.57,1991.66)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.37,0:18:26.41,Dial-CHI,,0,0,0,,{\fscx99.99\fscy99.99\pos(1934.58,1988.8)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.41,0:18:26.46,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.44,1989.93)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.46,0:18:26.50,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.67,1992.36)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.50,0:18:26.54,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.57,1990.63)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.54,0:18:26.58,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.57,1995.79)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.58,0:18:26.62,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.82,1990.43)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.62,0:18:26.66,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.14,1993.26)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.66,0:18:26.71,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.96,1991.73)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.71,0:18:26.75,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.09,1994.55)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.75,0:18:26.79,Dial-CHI,,0,0,0,,{\fscx99.99\fscy99.99\pos(1935.18,1996.48)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.79,0:18:26.83,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.05,1993.36)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.83,0:18:26.87,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.87,1996.49)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.87,0:18:26.92,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1934.56,1999.47)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.92,0:18:26.96,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1934.33,2000.23)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:26.96,0:18:27.00,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1933.8,1999.49)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.00,0:18:27.04,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1933.35,1998.29)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.04,0:18:27.08,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1932.6,1999.62)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.08,0:18:27.12,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1931.7,2000.32)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.12,0:18:27.17,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1931.13,2002.35)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.17,0:18:27.21,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1930.06,2002.78)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.21,0:18:27.25,Dial-CHI,,0,0,0,,{\fscx99.96\fscy99.96\pos(1929.17,2003.28)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.25,0:18:27.29,Dial-CHI,,0,0,0,,{\fscx99.96\fscy99.96\pos(1928.16,2000.78)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.29,0:18:27.33,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1927.19,2001.81)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.33,0:18:27.37,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1926.46,2002.09)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.37,0:18:27.42,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1925.55,2004.56)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.42,0:18:27.46,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1924.89,2002.37)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:27.46,0:18:27.50,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1924.23,2007.43)\bord0\shad0\blur0.7\be0.7}他對我理解得太透徹了
+Dialogue: 1,0:18:31.17,0:18:31.21,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1920,2001)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.21,0:18:31.25,Dial-CHI,,0,0,0,,{\fscx100.01\fscy100.01\pos(1920.85,2004.92)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.25,0:18:31.29,Dial-CHI,,0,0,0,,{\fscx100.02\fscy100.02\pos(1922.16,2002)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.29,0:18:31.34,Dial-CHI,,0,0,0,,{\fscx100.03\fscy100.03\pos(1923.3,1997.82)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.34,0:18:31.38,Dial-CHI,,0,0,0,,{\fscx100.05\fscy100.05\pos(1924.78,1997.81)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.38,0:18:31.42,Dial-CHI,,0,0,0,,{\fscx100.06\fscy100.06\pos(1926.48,1996.75)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.42,0:18:31.46,Dial-CHI,,0,0,0,,{\fscx100.06\fscy100.06\pos(1927.55,1997.27)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.46,0:18:31.50,Dial-CHI,,0,0,0,,{\fscx100.05\fscy100.05\pos(1928.98,1997.4)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.50,0:18:31.54,Dial-CHI,,0,0,0,,{\fscx100.05\fscy100.05\pos(1930.71,1999.95)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.54,0:18:31.59,Dial-CHI,,0,0,0,,{\fscx100.03\fscy100.03\pos(1932.96,2001.7)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.59,0:18:31.63,Dial-CHI,,0,0,0,,{\fscx100.02\fscy100.02\pos(1934.85,2004.52)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.63,0:18:31.67,Dial-CHI,,0,0,0,,{\fscx100.02\fscy100.02\pos(1936.81,2002.21)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.67,0:18:31.71,Dial-CHI,,0,0,0,,{\fscx100.02\fscy100.02\pos(1938.59,2004.72)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.71,0:18:31.75,Dial-CHI,,0,0,0,,{\fscx100.03\fscy100.03\pos(1939.43,2007.83)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.75,0:18:31.79,Dial-CHI,,0,0,0,,{\fscx100.02\fscy100.02\pos(1939.83,2004.62)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.79,0:18:31.84,Dial-CHI,,0,0,0,,{\fscx100.03\fscy100.03\pos(1940,2008.63)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.84,0:18:31.88,Dial-CHI,,0,0,0,,{\fscx100.04\fscy100.04\pos(1939.48,2004.64)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.88,0:18:31.92,Dial-CHI,,0,0,0,,{\fscx100.05\fscy100.05\pos(1938.42,2009.09)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.92,0:18:31.96,Dial-CHI,,0,0,0,,{\fscx100.06\fscy100.06\pos(1937.06,2008.14)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:31.96,0:18:32.00,Dial-CHI,,0,0,0,,{\fscx100.08\fscy100.08\pos(1935.56,2009.42)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.00,0:18:32.05,Dial-CHI,,0,0,0,,{\fscx100.09\fscy100.09\pos(1934,2009.76)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.05,0:18:32.09,Dial-CHI,,0,0,0,,{\fscx100.08\fscy100.08\pos(1932.64,2010.01)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.09,0:18:32.13,Dial-CHI,,0,0,0,,{\fscx100.07\fscy100.07\pos(1931.33,2006.59)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.13,0:18:32.17,Dial-CHI,,0,0,0,,{\fscx100.07\fscy100.07\pos(1930.4,2008.59)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.17,0:18:32.21,Dial-CHI,,0,0,0,,{\fscx100.06\fscy100.06\pos(1929.36,2010.77)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.21,0:18:32.25,Dial-CHI,,0,0,0,,{\fscx100.05\fscy100.05\pos(1928.59,2008.38)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.25,0:18:32.30,Dial-CHI,,0,0,0,,{\fscx100.05\fscy100.05\pos(1927.55,2004.1)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.30,0:18:32.34,Dial-CHI,,0,0,0,,{\fscx100.06\fscy100.06\pos(1927,2005.48)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.34,0:18:32.38,Dial-CHI,,0,0,0,,{\fscx100.06\fscy100.06\pos(1926.29,2004.65)\bord0\shad0\blur0.9\be0.9}綾瀨
+Dialogue: 1,0:18:32.38,0:18:32.42,Dial-CHI,,0,0,0,,{\fscx100\fscy100\pos(1920,2001)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.42,0:18:32.46,Dial-CHI,,0,0,0,,{\fscx99.99\fscy99.99\pos(1919.15,1995.88)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.46,0:18:32.50,Dial-CHI,,0,0,0,,{\fscx99.98\fscy99.98\pos(1918.36,1995.37)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.50,0:18:32.55,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1917.3,1998.02)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.55,0:18:32.59,Dial-CHI,,0,0,0,,{\fscx99.96\fscy99.96\pos(1915.85,1995.2)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.59,0:18:32.63,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1914.3,1998.54)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.63,0:18:32.67,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1912.3,1996.54)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.67,0:18:32.71,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1910.08,1992.79)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.71,0:18:32.75,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1907.84,1991.91)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.75,0:18:32.80,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1905.8,1994.39)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.80,0:18:32.84,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1903.85,1991.92)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.84,0:18:32.88,Dial-CHI,,0,0,0,,{\fscx99.95\fscy99.95\pos(1902.75,1993.55)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.88,0:18:32.92,Dial-CHI,,0,0,0,,{\fscx99.96\fscy99.96\pos(1901.01,1992.97)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.92,0:18:32.96,Dial-CHI,,0,0,0,,{\fscx99.96\fscy99.96\pos(1900.33,1989.83)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:32.96,0:18:33.00,Dial-CHI,,0,0,0,,{\fscx99.97\fscy99.97\pos(1899.16,1992.25)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.00,0:18:33.05,Dial-CHI,,0,0,0,,{\fscx99.96\fscy99.96\pos(1898.21,1990.31)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.05,0:18:33.09,Dial-CHI,,0,0,0,,{\fscx99.93\fscy99.93\pos(1897.18,1991.16)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.09,0:18:33.13,Dial-CHI,,0,0,0,,{\fscx99.89\fscy99.89\pos(1896.15,1993.01)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.13,0:18:33.17,Dial-CHI,,0,0,0,,{\fscx99.86\fscy99.86\pos(1895.17,1990.09)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.17,0:18:33.21,Dial-CHI,,0,0,0,,{\fscx99.83\fscy99.83\pos(1893.99,1995.23)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.21,0:18:33.25,Dial-CHI,,0,0,0,,{\fscx99.79\fscy99.79\pos(1892.78,1989.34)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.25,0:18:33.30,Dial-CHI,,0,0,0,,{\fscx99.78\fscy99.78\pos(1891.51,1991.51)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.30,0:18:33.34,Dial-CHI,,0,0,0,,{\fscx99.78\fscy99.78\pos(1890.09,1988.27)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.34,0:18:33.38,Dial-CHI,,0,0,0,,{\fscx99.77\fscy99.77\pos(1888.54,1989.82)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.38,0:18:33.42,Dial-CHI,,0,0,0,,{\fscx99.76\fscy99.76\pos(1887.22,1988.86)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.42,0:18:33.46,Dial-CHI,,0,0,0,,{\fscx99.75\fscy99.75\pos(1886.61,1988.29)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:33.46,0:18:33.50,Dial-CHI,,0,0,0,,{\fscx99.75\fscy99.75\pos(1886.84,1986.16)\bord0\shad0\blur1.1\be1.1}這種人
+Dialogue: 1,0:18:34.14,0:18:36.80,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}是我最討厭的類型
+Dialogue: 1,0:18:41.31,0:18:43.52,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}只會把美貌當作賺錢的資本
+Dialogue: 1,0:18:43.52,0:18:44.60,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}只會把美貌當作賺錢的資本
+Dialogue: 1,0:18:44.60,0:18:46.40,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}妳不是很討厭別人這麼說嗎
+Dialogue: 1,0:18:47.98,0:18:50.99,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}如果不採取無關男女的做法
+Dialogue: 1,0:18:50.99,0:18:52.53,Dial-CHI,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}妳爭了這口氣又有什麼意義
+Dialogue: 1,0:18:52.53,0:18:53.03,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\3c&231820\4c&231820}妳爭了這口氣又有什麼意義
+Dialogue: 1,0:18:55.66,0:18:56.78,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\3c&1A1A1A\4c&1A1A1A}{\bord2.5}可是
+Dialogue: 1,0:18:57.37,0:18:58.58,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&231820\4c&231820}如果對象是你…
+Dialogue: 1,0:18:59.08,0:19:00.50,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&231820\4c&231820}畢竟你對這些心知肚明
+Dialogue: 1,0:19:00.50,0:19:02.37,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&231820\4c&231820}跟是不是我沒有關係
+Dialogue: 1,0:19:04.08,0:19:04.67,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\3c&231820\4c&231820}我說的
+Dialogue: 1,0:19:07.17,0:19:08.84,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}是妳的事啊
+Dialogue: 1,0:19:19.31,0:19:21.22,Dial-CHI,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}對不起
+Dialogue: 1,0:19:27.19,0:19:27.69,Dial-CHI,,0,0,0,,{\bord3}{\3c&283538\4c&283538}我記得父親曾經是很溫柔的人
+Dialogue: 1,0:19:27.69,0:19:31.53,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}我記得父親曾經是很溫柔的人
+Dialogue: 1,0:19:32.36,0:19:33.03,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}可是
+Dialogue: 1,0:19:33.49,0:19:35.15,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}在經營公司失敗後
+Dialogue: 1,0:19:35.15,0:19:36.28,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}就不信任別人了
+Dialogue: 1,0:19:37.70,0:19:39.99,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}媽媽付出了兩個人的辛勞
+Dialogue: 1,0:19:40.74,0:19:42.66,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}才把我拉拔長大
+Dialogue: 1,0:19:43.75,0:19:47.71,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}但這件事，似乎讓他更為不悅
+Dialogue: 1,0:19:50.17,0:19:51.50,Dial-CHI,,0,0,0,,{\3c&2A2F4C\4c&2A2F4C}{\bord2.5}他說媽媽
+Dialogue: 1,0:19:52.38,0:19:54.88,Dial-CHI,,0,0,0,,{\3c&2A2F4C\4c&2A2F4C}{\bord2.5}不過是個陪酒賣笑的
+Dialogue: 1,0:19:56.26,0:19:56.97,Dial-CHI,,0,0,0,,{\3c&2A2F4C\4c&2A2F4C}{\bord2.5}諷刺她只會用身體招攬客人
+Dialogue: 1,0:19:56.97,0:19:59.85,Dial-CHI,,0,0,0,,{\3c&45363A\4c&45363A}諷刺她只會用身體招攬客人
+Dialogue: 1,0:20:01.35,0:20:04.23,Dial-CHI,,0,0,0,,{\3c&45363A\4c&45363A}就算父親他飽嘗辛酸
+Dialogue: 1,0:20:05.52,0:20:08.56,Dial-CHI,,0,0,0,,{\bord3}{\3c&4D4669\4c&4D4669}也不該這樣對待媽媽
+Dialogue: 1,0:20:14.19,0:20:15.70,Dial-CHI,,0,0,0,,{\bord3}{\3c&1A1F38\4c&1A1F38}妳說得沒錯
+Dialogue: 1,0:20:18.20,0:20:21.53,Dial-CHI,,0,0,0,,{\bord3}{\3c&151738\4c&151738}其實，我家的情況也差不多
+Dialogue: 1,0:20:22.87,0:20:25.37,Dial-CHI,,0,0,0,,{\bord3}{\3c&151738\4c&151738}老爸因為媽媽搞外遇
+Dialogue: 1,0:20:25.37,0:20:28.54,Dial-CHI,,0,0,0,,{\bord3}{\3c&151738\4c&151738}有段時間似乎得了女性恐懼症
+Dialogue: 1,0:20:28.96,0:20:30.17,Dial-CHI,,0,0,0,,{\bord3}{\3c&151738\4c&151738}你爸爸嗎
+Dialogue: 1,0:20:37.30,0:20:39.18,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&524882\4c&524882}說不定你也…
+Dialogue: 1,0:20:45.81,0:20:48.27,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&151738\4c&151738}我們兩個還真像啊
+Dialogue: 1,0:20:50.15,0:20:51.94,Dial-CHI,,0,0,0,,{\bord3}{\3c&2B2338\4c&2B2338}就連不幸也很相似
+Dialogue: 1,0:20:54.90,0:20:56.07,Dial-CHI,,0,0,0,,{\bord3}{\3c&2B2338\4c&2B2338}或許吧
+Dialogue: 1,0:20:58.95,0:21:00.82,Dial-CHI,,0,0,0,,{\bord3}{\3c&293666\4c&293666}包括這些不幸的地方
+Dialogue: 1,0:21:01.37,0:21:04.20,Dial-CHI,,0,0,0,,{\bord3}{\3c&293666\4c&293666}我們盡量好好相處吧
+Dialogue: 1,0:21:08.29,0:21:09.96,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&564866\4c&564866}作為哥哥和妹妹
+Dialogue: 1,0:21:18.51,0:21:20.55,Dial-CHI,,0,0,0,,{\bord3}{\3c&28234D\4c&28234D}對了，比如說稱呼
+Dialogue: 1,0:21:20.55,0:21:22.89,Dial-CHI,,0,0,0,,{\bord3}{\3c&28234D\4c&28234D}妳也可以叫我哥哥
+Dialogue: 1,0:21:34.98,0:21:35.86,Dial-CHI,,0,0,0,,{\3c&151C30\4c&151C30}謝謝你
+Dialogue: 1,0:21:38.95,0:21:39.82,Dial-CHI,,0,0,0,,{\3c&151C30\4c&151C30}綾瀨
+Dialogue: 1,0:21:44.20,0:21:45.58,Dial-CHI,,0,0,0,,{\bord2.5}{\3c&514C8B\4c&514C8B}今後也請多多關照
+Dialogue: 1,0:21:46.58,0:21:47.45,Dial-CHI,,0,0,0,,{\bord0\shad0}淺村
+Dialogue: 2,0:14:37.44,0:14:38.27,Dial-CHI - retro,,0,0,0,,{\c&HA19CBA&\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月7日，星期日
+Dialogue: 2,0:14:38.27,0:14:38.86,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月7日，星期日
+Dialogue: 1,0:14:38.27,0:14:38.86,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&333333}6月7日，星期日
+Dialogue: 2,0:14:38.86,0:14:40.11,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月7日，星期日
+Dialogue: 1,0:14:38.86,0:14:40.11,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3C434C}6月7日，星期日
+Dialogue: 2,0:14:44.95,0:14:46.07,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}我放心了
+Dialogue: 1,0:14:44.95,0:14:46.07,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&4B5670}我放心了
+Dialogue: 2,0:14:46.78,0:14:48.28,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}這是真心話
+Dialogue: 1,0:14:46.78,0:14:48.28,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&333333}這是真心話
+Dialogue: 2,0:14:48.91,0:14:51.16,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他並不是什麼壞人
+Dialogue: 1,0:14:48.91,0:14:51.16,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&586270}他並不是什麼壞人
+Dialogue: 2,0:14:51.16,0:14:51.37,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}剛見面的時候我就明白了
+Dialogue: 1,0:14:51.16,0:14:51.37,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&586270}剛見面的時候我就明白了
+Dialogue: 2,0:14:51.37,0:14:53.29,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}剛見面的時候我就明白了
+Dialogue: 1,0:14:51.37,0:14:53.29,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&606A80}剛見面的時候我就明白了
+Dialogue: 2,0:14:54.17,0:14:54.37,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他很會照顧人
+Dialogue: 1,0:14:54.17,0:14:54.37,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&606A80}他很會照顧人
+Dialogue: 2,0:14:54.42,0:14:57.09,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他很會照顧人
+Dialogue: 1,0:14:54.42,0:14:57.09,Dial-CHI - retro,shad,0,0,0,,{\c&H4C4C4C&}{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}他很會照顧人
+Dialogue: 2,0:14:58.67,0:15:00.76,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}我等一下要洗澡
+Dialogue: 1,0:14:58.67,0:15:00.76,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&828275}我等一下要洗澡
+Dialogue: 2,0:15:00.80,0:15:02.63,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他會特意為我放好熱水
+Dialogue: 1,0:15:00.80,0:15:02.63,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&1A1A1A}他會特意為我放好熱水
+Dialogue: 2,0:15:02.67,0:15:03.68,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他會特意為我放好熱水
+Dialogue: 1,0:15:02.67,0:15:03.68,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&495678}他會特意為我放好熱水
+Dialogue: 2,0:15:05.18,0:15:08.89,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}沒想到他也在水星高中
+Dialogue: 1,0:15:05.18,0:15:08.89,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1860)}沒想到他也在水星高中
+Dialogue: 2,0:15:15.06,0:15:16.27,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)\c&H87BB92&}6月8日，星期一
+Dialogue: 2,0:15:16.31,0:15:17.52,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月8日，星期一
+Dialogue: 1,0:15:16.31,0:15:17.52,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&596D70}6月8日，星期一
+Dialogue: 2,0:15:18.31,0:15:18.77,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}淺村在學校向我搭話
+Dialogue: 1,0:15:18.31,0:15:18.77,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&596D70}淺村在學校向我搭話
+Dialogue: 2,0:15:18.82,0:15:21.36,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}淺村在學校向我搭話
+Dialogue: 1,0:15:18.82,0:15:21.36,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&44465B}淺村在學校向我搭話
+Dialogue: 2,0:15:22.32,0:15:23.99,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}出人意料的是
+Dialogue: 1,0:15:22.32,0:15:23.99,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&44603B}出人意料的是
+Dialogue: 2,0:15:24.32,0:15:26.28,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他待人毫無偏見
+Dialogue: 1,0:15:24.32,0:15:26.28,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&414354}他待人毫無偏見
+Dialogue: 2,0:15:27.87,0:15:29.41,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}我很擔心他輕信了我的流言
+Dialogue: 1,0:15:27.87,0:15:29.41,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&5C6170}我很擔心他輕信了我的流言
+Dialogue: 2,0:15:29.45,0:15:31.91,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}我很擔心他輕信了我的流言
+Dialogue: 1,0:15:29.45,0:15:31.91,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3D585A}我很擔心他輕信了我的流言
+Dialogue: 2,0:15:32.62,0:15:33.54,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}這也是沒有辦法的事
+Dialogue: 1,0:15:32.62,0:15:33.54,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&5C6170}這也是沒有辦法的事
+Dialogue: 2,0:15:33.58,0:15:34.62,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}這也是沒有辦法的事
+Dialogue: 1,0:15:33.58,0:15:34.62,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&383021}這也是沒有辦法的事
+Dialogue: 2,0:15:36.25,0:15:37.54,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}畢竟我知道別人是如何看待我的
+Dialogue: 2,0:15:37.58,0:15:38.88,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}畢竟我知道別人是如何看待我的
+Dialogue: 1,0:15:37.58,0:15:38.88,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3B3954}畢竟我知道別人是如何看待我的
+Dialogue: 2,0:15:40.25,0:15:42.55,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}可是，他會生氣
+Dialogue: 1,0:15:40.25,0:15:42.55,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&595F70}可是，他會生氣
+Dialogue: 2,0:15:43.30,0:15:44.55,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}會認同我的憤慨
+Dialogue: 1,0:15:43.30,0:15:44.55,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&1A1A1A}會認同我的憤慨
+Dialogue: 2,0:15:44.55,0:15:45.80,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}會認同我的憤慨
+Dialogue: 1,0:15:44.55,0:15:45.80,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&595F70}會認同我的憤慨
+Dialogue: 2,0:15:46.68,0:15:47.30,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}不怕麻煩
+Dialogue: 1,0:15:46.68,0:15:47.30,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&1A1A1A}不怕麻煩
+Dialogue: 2,0:15:47.34,0:15:48.51,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}不怕麻煩
+Dialogue: 1,0:15:47.34,0:15:48.51,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3E5770}不怕麻煩
+Dialogue: 2,0:15:48.97,0:15:49.18,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}願意與我磨合的人
+Dialogue: 1,0:15:48.97,0:15:49.18,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3E5770}願意與我磨合的人
+Dialogue: 2,0:15:49.26,0:15:51.14,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}願意與我磨合的人
+Dialogue: 1,0:15:49.26,0:15:51.14,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&445966}願意與我磨合的人
+Dialogue: 2,0:15:51.14,0:15:52.22,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他或許是第一個
+Dialogue: 1,0:15:51.14,0:15:52.22,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&445966}他或許是第一個
+Dialogue: 2,0:15:55.19,0:15:56.19,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)\c&5EBEE0&}6月9日，星期二
+Dialogue: 2,0:15:56.19,0:15:57.60,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月9日，星期二
+Dialogue: 1,0:15:56.19,0:15:57.60,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&686D70}6月9日，星期二
+Dialogue: 2,0:15:58.35,0:15:58.98,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}筆記
+Dialogue: 1,0:15:58.35,0:15:58.98,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&686D70}筆記
+Dialogue: 2,0:15:59.48,0:16:02.32,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}淺村吃煎蛋習慣蘸醬油
+Dialogue: 1,0:15:59.48,0:16:02.32,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&686D70}淺村吃煎蛋習慣蘸醬油
+Dialogue: 2,0:16:04.11,0:16:05.53,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}我從今天起負責下廚
+Dialogue: 1,0:16:04.11,0:16:05.53,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1860)}我從今天起負責下廚
+Dialogue: 2,0:16:05.95,0:16:09.78,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}因為他會幫我找高薪的打工
+Dialogue: 1,0:16:05.95,0:16:09.78,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1860)}因為他會幫我找高薪的打工
+Dialogue: 2,0:16:10.24,0:16:11.20,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}這點小事，我自然應該做好
+Dialogue: 1,0:16:10.24,0:16:11.20,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1860)}這點小事，我自然應該做好
+Dialogue: 2,0:16:11.20,0:16:12.20,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}這點小事，我自然應該做好
+Dialogue: 1,0:16:11.20,0:16:12.20,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&5B7C8C}這點小事，我自然應該做好
+Dialogue: 2,0:16:12.24,0:16:13.20,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}這點小事，我自然應該做好
+Dialogue: 1,0:16:12.24,0:16:13.20,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&1A1A1A}這點小事，我自然應該做好
+Dialogue: 2,0:16:15.96,0:16:18.46,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他說沒有找到合適的工作
+Dialogue: 1,0:16:15.96,0:16:18.46,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3D486E}他說沒有找到合適的工作
+Dialogue: 2,0:16:18.75,0:16:19.21,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}臉上寫滿了內疚
+Dialogue: 1,0:16:18.75,0:16:19.21,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3D486E}臉上寫滿了內疚
+Dialogue: 2,0:16:19.25,0:16:20.59,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}臉上寫滿了內疚
+Dialogue: 1,0:16:19.25,0:16:20.59,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&616F80}臉上寫滿了內疚
+Dialogue: 2,0:16:21.88,0:16:22.59,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}其實我…
+Dialogue: 1,0:16:21.88,0:16:22.59,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&445270}其實我…
+Dialogue: 2,0:16:23.50,0:16:25.59,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}也不覺得能輕易地找到
+Dialogue: 1,0:16:23.50,0:16:25.59,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&536152}也不覺得能輕易地找到
+Dialogue: 2,0:16:25.63,0:16:26.67,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}也不覺得能輕易地找到
+Dialogue: 1,0:16:25.63,0:16:26.67,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&6C778C}也不覺得能輕易地找到
+Dialogue: 2,0:16:29.39,0:16:31.10,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}要擅長依靠他人嗎
+Dialogue: 1,0:16:29.39,0:16:31.10,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&816439}要擅長依靠他人嗎
+Dialogue: 2,0:16:31.14,0:16:32.60,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}要擅長依靠他人嗎
+Dialogue: 1,0:16:31.14,0:16:32.60,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&34170E}要擅長依靠他人嗎
+Dialogue: 2,0:16:32.64,0:16:33.06,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}要擅長依靠他人嗎
+Dialogue: 1,0:16:32.64,0:16:33.06,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&706248}要擅長依靠他人嗎
+Dialogue: 2,0:16:34.27,0:16:37.10,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}要是能做到就好了
+Dialogue: 1,0:16:34.27,0:16:37.10,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&706248}要是能做到就好了
+Dialogue: 2,0:16:53.95,0:16:56.12,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月10日，星期三
+Dialogue: 1,0:16:53.95,0:16:56.12,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&5F6070}6月10日，星期三
+Dialogue: 2,0:16:56.16,0:16:56.83,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月10日，星期三
+Dialogue: 1,0:16:56.16,0:16:56.83,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&706D53}6月10日，星期三
+Dialogue: 2,0:17:15.39,0:17:16.64,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}真綾來我的新家玩了
+Dialogue: 1,0:17:15.39,0:17:16.64,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&333333}真綾來我的新家玩了
+Dialogue: 2,0:17:16.68,0:17:17.81,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}真綾來我的新家玩了
+Dialogue: 1,0:17:16.68,0:17:17.81,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&70643D}真綾來我的新家玩了
+Dialogue: 2,0:17:18.73,0:17:20.35,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}三個人一起玩
+Dialogue: 2,0:17:20.35,0:17:20.85,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}充滿了歡聲笑語
+Dialogue: 2,0:17:20.98,0:17:21.77,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}充滿了歡聲笑語
+Dialogue: 2,0:17:22.69,0:17:24.65,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}很久沒有笑得這麼開心了
+Dialogue: 1,0:17:22.69,0:17:24.65,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&70643D}很久沒有笑得這麼開心了
+Dialogue: 2,0:17:27.15,0:17:27.65,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}還交換了聯絡方式
+Dialogue: 1,0:17:27.15,0:17:27.65,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&5E6580}還交換了聯絡方式
+Dialogue: 2,0:17:27.74,0:17:29.24,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}還交換了聯絡方式
+Dialogue: 2,0:17:30.24,0:17:33.66,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}淺村的頭像是風景照
+Dialogue: 1,0:17:30.24,0:17:33.66,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3C3F54}淺村的頭像是風景照
+Dialogue: 2,0:17:33.70,0:17:34.16,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}淺村的頭像是風景照
+Dialogue: 1,0:17:33.70,0:17:34.16,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&7D888C}淺村的頭像是風景照
+Dialogue: 2,0:17:34.16,0:17:35.16,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}很有他的風格
+Dialogue: 1,0:17:34.16,0:17:35.16,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&7D888C}很有他的風格
+Dialogue: 2,0:17:37.00,0:17:38.16,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)\c&H8190BB&}6月11日，星期四
+Dialogue: 2,0:17:38.20,0:17:39.66,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}6月11日，星期四
+Dialogue: 2,0:17:41.08,0:17:42.67,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}他說他不會那麼做
+Dialogue: 1,0:17:41.08,0:17:42.67,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&2F291C}他說他不會那麼做
+Dialogue: 2,0:17:43.59,0:17:45.21,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}還說心有所欲
+Dialogue: 1,0:17:43.59,0:17:45.21,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3A4C47}還說心有所欲
+Dialogue: 2,0:17:45.46,0:17:47.63,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}和縱情恣欲是兩回事
+Dialogue: 1,0:17:45.46,0:17:47.63,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&3A4C47}和縱情恣欲是兩回事
+Dialogue: 2,0:17:47.67,0:17:48.63,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}和縱情恣欲是兩回事
+Dialogue: 1,0:17:47.67,0:17:48.63,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1860)}和縱情恣欲是兩回事
+Dialogue: 2,0:17:48.63,0:17:49.17,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}和縱情恣欲是兩回事
+Dialogue: 1,0:17:48.63,0:17:49.17,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&5E6370}和縱情恣欲是兩回事
+Dialogue: 2,0:17:51.51,0:17:53.97,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}我也是這麼認為的
+Dialogue: 1,0:17:51.51,0:17:53.97,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&251C14}我也是這麼認為的
+Dialogue: 2,0:17:55.01,0:17:56.89,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}聽了淺村的想法後
+Dialogue: 1,0:17:55.01,0:17:56.89,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&251C14}聽了淺村的想法後
+Dialogue: 2,0:17:57.31,0:17:58.89,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}我發現在很多事情上
+Dialogue: 1,0:17:57.31,0:17:58.89,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&251C14}我發現在很多事情上
+Dialogue: 2,0:17:58.89,0:17:59.98,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}自己的觀點都和他十分相近
+Dialogue: 1,0:17:58.89,0:17:59.98,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&251C14}自己的觀點都和他十分相近
+Dialogue: 2,0:18:00.06,0:18:02.06,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}自己的觀點都和他十分相近
+Dialogue: 1,0:18:00.06,0:18:02.06,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&251C14}自己的觀點都和他十分相近
+Dialogue: 2,0:18:04.73,0:18:04.98,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}所以才會感到輕鬆吧
+Dialogue: 1,0:18:04.73,0:18:04.98,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&251C14}所以才會感到輕鬆吧
+Dialogue: 2,0:18:05.02,0:18:08.78,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}所以才會感到輕鬆吧
+Dialogue: 1,0:18:05.02,0:18:08.78,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&382D21}所以才會感到輕鬆吧
+Dialogue: 2,0:18:20.37,0:18:21.00,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}淺村他很危險
+Dialogue: 1,0:18:20.37,0:18:21.00,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&806C74}淺村他很危險
+Dialogue: 2,0:18:21.04,0:18:23.00,Dial-CHI - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1858)}淺村他很危險
+Dialogue: 1,0:18:21.04,0:18:23.00,Dial-CHI - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1860)}{\c&594B51}淺村他很危險
+Dialogue: 1,0:21:51.83,0:21:54.54,Dial-CHI - retro,shad,0,0,0,,{\c&3C343B\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}6月13日，星期六
+Dialogue: 2,0:21:51.83,0:21:54.54,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}6月13日，星期六
+Dialogue: 1,0:21:55.42,0:21:58.84,Dial-CHI - retro,shad,0,0,0,,{\c&3C343B\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}晚上只有我和淺村兩個人吃晚餐
+Dialogue: 2,0:21:55.42,0:21:58.84,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}晚上只有我和淺村兩個人吃晚餐
+Dialogue: 1,0:22:06.35,0:22:08.39,Dial-CHI - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}這是淺村的提議
+Dialogue: 2,0:22:06.35,0:22:08.39,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}這是淺村的提議
+Dialogue: 1,0:21:59.67,0:22:04.22,Dial-CHI - retro,shad,0,0,0,,{\c&3C343B\blur1.5\be1.5\bord0\shad0\pos(2342,1860)}因為我們讓父母出門共進晚餐了
+Dialogue: 2,0:21:59.67,0:22:04.22,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(2340,1858)}因為我們讓父母出門共進晚餐了
+Dialogue: 1,0:22:09.27,0:22:13.02,Dial-CHI - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}他真是個細心體貼的人
+Dialogue: 2,0:22:09.27,0:22:13.02,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}他真是個細心體貼的人
+Dialogue: 1,0:22:24.82,0:22:25.74,Dial-CHI - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}正因為如此
+Dialogue: 2,0:22:24.82,0:22:25.74,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}正因為如此
+Dialogue: 1,0:22:27.04,0:22:29.25,Dial-CHI - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(2022,1860)}我才不能叫他哥哥
+Dialogue: 2,0:22:27.04,0:22:29.25,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(2020,1858)}我才不能叫他哥哥
+Dialogue: 1,0:22:31.21,0:22:33.12,Dial-CHI - retro,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}一旦我這樣叫了
+Dialogue: 2,0:22:31.21,0:22:33.12,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}一旦我這樣叫了
+Dialogue: 1,0:22:34.00,0:22:37.75,Dial-CHI - retro,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}他一定會把我寵到天上去
+Dialogue: 2,0:22:34.00,0:22:37.75,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}他一定會把我寵到天上去
+Dialogue: 1,0:22:38.34,0:22:40.13,Dial-CHI - retro,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}只有這件事絕對不行
+Dialogue: 2,0:22:38.34,0:22:40.13,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}只有這件事絕對不行
+Dialogue: 1,0:22:51.43,0:22:53.44,Dial-CHI - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}心底總會湧現一種
+Dialogue: 2,0:22:51.43,0:22:53.44,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}心底總會湧現一種
+Dialogue: 1,0:22:53.44,0:22:56.02,Dial-CHI - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}和叫他哥哥不一樣的
+Dialogue: 2,0:22:53.44,0:22:56.02,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}和叫他哥哥不一樣的
+Dialogue: 1,0:22:56.02,0:22:58.40,Dial-CHI - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}某種難以名狀的感情
+Dialogue: 2,0:22:56.02,0:22:58.40,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}某種難以名狀的感情
+Dialogue: 1,0:23:00.28,0:23:02.82,Dial-CHI - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}因為從未體會過
+Dialogue: 2,0:23:00.28,0:23:02.82,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}因為從未體會過
+Dialogue: 1,0:23:03.66,0:23:03.91,Dial-CHI - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1700,1860)}我也不知道該如何形容
+Dialogue: 2,0:23:03.66,0:23:03.91,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1698,1858)}我也不知道該如何形容
+Dialogue: 1,0:23:03.95,0:23:06.95,Dial-CHI - retro,shad,0,0,0,,{\c&765C80\blur1.5\be1.5\bord0\shad0\pos(1700,1860)}我也不知道該如何形容
+Dialogue: 2,0:23:03.95,0:23:06.95,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1698,1858)}我也不知道該如何形容
+Dialogue: 1,0:23:08.08,0:23:08.91,Dial-CHI - retro,shad,0,0,0,,{\c&765C80\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}等回過神來
+Dialogue: 2,0:23:08.08,0:23:08.91,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}等回過神來
+Dialogue: 1,0:23:09.29,0:23:11.12,Dial-CHI - retro,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}我總會不自覺地在意他
+Dialogue: 2,0:23:09.29,0:23:11.12,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}我總會不自覺地在意他
+Dialogue: 1,0:23:11.96,0:23:13.04,Dial-CHI - retro,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}心裡很煩躁
+Dialogue: 2,0:23:11.96,0:23:13.04,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}心裡很煩躁
+Dialogue: 1,0:23:13.96,0:23:14.42,Dial-CHI - retro,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}最近就算蓋上被子
+Dialogue: 2,0:23:13.96,0:23:14.42,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}最近就算蓋上被子
+Dialogue: 1,0:23:14.50,0:23:15.88,Dial-CHI - retro,shad,0,0,0,,{\c&352F2A\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}最近就算蓋上被子
+Dialogue: 2,0:23:14.50,0:23:15.88,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}最近就算蓋上被子
+Dialogue: 1,0:23:15.88,0:23:17.21,Dial-CHI - retro,shad,0,0,0,,{\c&352F2A\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}也很難入睡
+Dialogue: 2,0:23:15.88,0:23:17.21,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}也很難入睡
+Dialogue: 1,0:23:18.17,0:23:21.09,Dial-CHI - retro,shad,0,0,0,,{\c&363638\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}明明說了要自食其力
+Dialogue: 2,0:23:18.17,0:23:21.09,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}明明說了要自食其力
+Dialogue: 1,0:23:21.09,0:23:22.92,Dial-CHI - retro,shad,0,0,0,,{\c&363638\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}我都替自己感到難為情了
+Dialogue: 2,0:23:21.09,0:23:22.92,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}我都替自己感到難為情了
+Dialogue: 1,0:23:22.97,0:23:23.59,Dial-CHI - retro,shad,0,0,0,,{\c&394854\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}我都替自己感到難為情了
+Dialogue: 2,0:23:22.97,0:23:23.59,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}我都替自己感到難為情了
+Dialogue: 1,0:23:24.63,0:23:26.68,Dial-CHI - retro,shad,0,0,0,,{\c&394854\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}這到底是怎麼回事
+Dialogue: 2,0:23:24.63,0:23:26.68,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}這到底是怎麼回事
+Dialogue: 1,0:23:26.72,0:23:27.22,Dial-CHI - retro,shad,0,0,0,,{\c&394854\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}這到底是怎麼回事
+Dialogue: 2,0:23:26.72,0:23:27.22,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}這到底是怎麼回事
+Dialogue: 1,0:23:31.60,0:23:32.60,Dial-CHI - retro,shad,0,0,0,,{\c&3F4C63\blur1.5\be1.5\bord0\shad0\pos(1922,1860)}我真的…
+Dialogue: 2,0:23:31.60,0:23:32.60,Dial-CHI - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1858)}我真的…
+Dialogue: 2,0:16:59.33,0:17:00.63,Dial-CHI - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,302)}好丟人
+Dialogue: 1,0:16:59.33,0:17:00.63,Dial-CHI - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,304)}{\c&666370}好丟人
+Dialogue: 2,0:17:01.54,0:17:02.38,Dial-CHI - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,302)}沒想到他會追根究柢
+Dialogue: 1,0:17:01.54,0:17:02.38,Dial-CHI - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,304)}{\c&828DA8}沒想到他會追根究柢
+Dialogue: 2,0:17:02.42,0:17:03.55,Dial-CHI - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,302)}沒想到他會追根究柢
+Dialogue: 1,0:17:02.42,0:17:03.55,Dial-CHI - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,304)}{\c&352E39}沒想到他會追根究柢
+Dialogue: 2,0:17:05.00,0:17:06.63,Dial-CHI - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,302)}我努力的樣子
+Dialogue: 1,0:17:05.00,0:17:06.63,Dial-CHI - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,304)}{\c&2D3538}我努力的樣子
+Dialogue: 2,0:17:07.34,0:17:08.47,Dial-CHI - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,302)}太遜了
+Dialogue: 1,0:17:07.34,0:17:08.47,Dial-CHI - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,304)}{\c&828DA8}太遜了
+Dialogue: 2,0:17:08.47,0:17:09.13,Dial-CHI - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,302)}不想被別人看到
+Dialogue: 1,0:17:08.47,0:17:09.13,Dial-CHI - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,304)}{\c&828DA8}不想被別人看到
+Dialogue: 2,0:17:09.18,0:17:10.39,Dial-CHI - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,302)}不想被別人看到
+Dialogue: 1,0:17:09.18,0:17:10.39,Dial-CHI - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,304)}{\c&2D3538}不想被別人看到
+Dialogue: 2,0:22:42.43,0:22:43.97,Dial-CHI - retro2,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,302)}抱歉，淺村
+Dialogue: 1,0:22:42.43,0:22:43.97,Dial-CHI - retro2,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,304)}抱歉，淺村
+Dialogue: 2,0:22:47.26,0:22:47.89,Dial-CHI - retro2,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,302)}不過
+Dialogue: 1,0:22:47.26,0:22:47.89,Dial-CHI - retro2,shad,0,0,0,,{\c&7B6881\blur1.5\be1.5\bord0\shad0\pos(1922,304)}不過
+Dialogue: 2,0:22:48.68,0:22:51.39,Dial-CHI - retro2,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,302)}我每次叫他淺村時
+Dialogue: 1,0:22:48.68,0:22:51.39,Dial-CHI - retro2,shad,0,0,0,,{\c&7B6881\blur1.5\be1.5\bord0\shad0\pos(1922,304)}我每次叫他淺村時
+Dialogue: 0,0:00:18.50,0:00:19.67,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&4F6980\4c&4F6980}噂のお兄さん
+Dialogue: 0,0:00:19.67,0:00:20.21,Dial-JPN,,0,0,0,,{\3c&396665\4c&396665\t(\3c&354266\4c&354266)}{\bord3}噂のお兄さん
+Dialogue: 0,0:00:23.25,0:00:23.67,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&192F4C\4c&192F4C}ごめん
+Dialogue: 0,0:00:23.67,0:00:24.34,Dial-JPN,,0,0,0,,{\3c&3E4D66\4c&3E4D66}{\bord3}ごめん
+Dialogue: 0,0:00:24.34,0:00:25.92,Dial-JPN,,0,0,0,,{\3c&3E4D66\4c&3E4D66}{\bord3}真綾　新しいおうちに遊びに行きたいって言いだして
+Dialogue: 0,0:00:25.92,0:00:28.05,Dial-JPN,,0,0,0,,{\3c&484480\4c&484480}{\bord2.5}真綾　新しいおうちに遊びに行きたいって言いだして
+Dialogue: 0,0:00:28.51,0:00:31.30,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&808080\4c&808080\t(102,978,\3c&335866\4c&335866\bord3)}浅村君の携帯とか知らなかったから
+Dialogue: 0,0:00:31.30,0:00:32.93,Dial-JPN,,0,0,0,,{\3c&335866\4c&335866}{\bord3}うちにかけたんだけど
+Dialogue: 0,0:00:34.47,0:00:36.06,Dial-JPN,,0,0,0,,{\3c&335866\4c&335866}{\bord3}シャワー浴びてたかも
+Dialogue: 0,0:00:36.72,0:00:37.77,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}あと
+Dialogue: 0,0:00:37.77,0:00:41.65,Dial-JPN,,0,911,0,,{\3c&333333\4c&333333}{\bord3}真綾に浅村君と兄妹だって話したことなんだけど
+Dialogue: 0,0:00:41.65,0:00:42.31,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}別に俺は
+Dialogue: 0,0:00:42.31,0:00:42.52,Dial-JPN,,0,0,0,,{\bord3}{\3c&4C4B66\4c&4C4B66}別に俺は
+Dialogue: 0,0:00:42.52,0:00:46.32,Dial-JPN,,0,0,0,,{\bord3}{\3c&4C4B66\4c&4C4B66}テニスで　浅村君が私の近くまで来た時
+Dialogue: 0,0:00:46.61,0:00:48.40,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}真綾見てたみたいで
+Dialogue: 0,0:00:49.70,0:00:52.74,Dial-JPN,,0,755,0,,{\3c&333333\4c&333333}{\bord3}さっき傘　貸してくれたところも
+Dialogue: 0,0:00:56.37,0:00:59.21,Dial-JPN,,333,0,0,,{\bord2.5}{\3c&4C4B66\4c&4C4B66}ごめん　俺が軽はずみだった
+Dialogue: 0,0:01:02.42,0:01:03.17,Dial-JPN,,0,0,0,,{\bord3}でさ
+Dialogue: 0,0:01:05.46,0:01:07.21,Dial-JPN,,0,0,0,,{\3c&625980\4c&625980}{\bord2.5}交換　いいかな
+Dialogue: 0,0:01:14.01,0:01:14.76,Dial-JPN,,0,0,0,,{\bord3}{\3c&333333\4c&333333}あれ
+Dialogue: 0,0:01:15.47,0:01:16.97,Dial-JPN,,0,0,0,,{\bord3}{\3c&333333\4c&333333}おはよう
+Dialogue: 0,0:01:16.97,0:01:17.85,Dial-JPN,,0,0,0,,{\bord3}{\3c&333333\4c&333333}おはよう
+Dialogue: 0,0:01:18.39,0:01:19.77,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}まだ寝ないの?
+Dialogue: 0,0:01:19.77,0:01:21.98,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}なんだか寝つけなくてね
+Dialogue: 0,0:01:21.98,0:01:22.77,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}でもほら
+Dialogue: 0,0:01:22.77,0:01:25.94,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}太一さん　今日は出るの遅めって言ってたから
+Dialogue: 0,0:01:25.94,0:01:28.11,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}４人で食べれるかなって
+Dialogue: 0,0:01:29.03,0:01:29.82,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}手伝う
+Dialogue: 0,0:01:31.61,0:01:32.49,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}{\bord3}ありがとう
+Dialogue: 0,0:01:33.91,0:01:36.78,Dial-JPN,,0,355,0,,{\3c&333333\4c&333333}{\bord3}沙季と朝ごはん食べるのも久しぶりね
+Dialogue: 0,0:01:43.04,0:01:44.46,Dial-JPN,,0,0,0,,{\3c&595157\4c&595157}{\bord3}幸せだな
+Dialogue: 0,0:01:45.38,0:01:47.05,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}大げさですよ
+Dialogue: 0,0:01:47.75,0:01:48.34,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}うまっ
+Dialogue: 0,0:01:51.72,0:01:52.88,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}ほんとだ　うまっ
+Dialogue: 0,0:01:53.51,0:01:55.18,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}これ　卵焼き?
+Dialogue: 0,0:01:56.05,0:01:57.31,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}だし巻き卵
+Dialogue: 0,0:01:57.76,0:01:58.47,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&3D5C66\4c&3D5C66}だし巻き
+Dialogue: 0,0:01:58.47,0:01:58.85,Dial-JPN,,0,0,0,,{\3c&1C222F\4c&1C222F}だし巻き
+Dialogue: 0,0:01:59.31,0:02:01.02,Dial-JPN,,0,0,0,,{\3c&1C222F\4c&1C222F}おだしを入れて作ってる
+Dialogue: 0,0:02:02.48,0:02:03.77,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&1E2333\4c&1E2333}麺つゆとか
+Dialogue: 0,0:02:04.98,0:02:06.44,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&1E2333\4c&1E2333}うちは白だし
+Dialogue: 0,0:02:06.44,0:02:08.53,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&1E2333\4c&1E2333}沙季も作れるわよ
+Dialogue: 0,0:02:08.53,0:02:11.11,Dial-JPN,,0,0,0,,{\bord3}{\3c&342D40\4c&342D40}今度　作ってあげたら?
+Dialogue: 0,0:02:11.11,0:02:12.03,Dial-JPN,,0,0,0,,{\bord3}{\3c&342D40\4c&342D40}私だと　こんなにふわっとしない
+Dialogue: 0,0:02:12.03,0:02:14.28,Dial-JPN,,0,0,0,,{\bord3}{\3c&3E364C\4c&3E364C}私だと　こんなにふわっとしない
+Dialogue: 0,0:02:17.53,0:02:19.41,Dial-JPN,,0,0,0,,{\bord3}{\3c&25384C\4c&25384C}俺　目玉焼き好きだから
+Dialogue: 0,0:02:20.50,0:02:21.54,Dial-JPN,,0,0,0,,{\bord3}{\3c&25384C\4c&25384C}そう
+Dialogue: 0,0:02:22.21,0:02:24.33,Dial-JPN,,0,0,0,,{\bord3}{\3c&3E364C\4c&3E364C}まあ　気が向いたら作る
+Dialogue: 0,0:02:28.84,0:02:30.55,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}悠太君もありがとね
+Dialogue: 0,0:02:31.13,0:02:32.47,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}いえ　これくらい
+Dialogue: 0,0:02:33.97,0:02:35.43,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}今週の洗濯
+Dialogue: 0,0:02:35.43,0:02:37.97,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}２人のもまとめて洗っていいんですよね
+Dialogue: 0,0:02:38.76,0:02:39.64,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}それは
+Dialogue: 0,0:02:40.31,0:02:41.56,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}えっとね
+Dialogue: 0,0:02:41.56,0:02:44.35,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}もし悠太君が嫌じゃなければ
+Dialogue: 0,0:02:44.35,0:02:47.15,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}お洗濯は全部私がやってあげるわよ
+Dialogue: 0,0:02:48.06,0:02:49.07,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}いや　それは悪いですよ
+Dialogue: 0,0:02:49.07,0:02:49.98,Dial-JPN,,0,0,0,,{\bord3}いや　それは悪いですよ
+Dialogue: 0,0:02:51.15,0:02:53.61,Dial-JPN,,0,0,0,,{\bord3}生地とか結構繊細だから
+Dialogue: 0,0:02:53.61,0:02:55.66,Dial-JPN,,0,0,0,,{\bord3}ネットの使い方とか知ってる?
+Dialogue: 0,0:02:56.20,0:02:57.07,Dial-JPN,,0,0,0,,{\bord3}ネット?
+Dialogue: 0,0:02:57.82,0:03:01.66,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}傷めたりしないよう専用のネットがあるのよ
+Dialogue: 0,0:03:02.33,0:03:03.33,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}炒め…
+Dialogue: 0,0:03:04.75,0:03:06.33,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}いろいろ複雑だから
+Dialogue: 0,0:03:06.33,0:03:07.63,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}自分で洗います
+Dialogue: 0,0:03:09.71,0:03:12.51,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}太一さんの下着は私が洗うわね
+Dialogue: 0,0:03:13.01,0:03:14.80,Dial-JPN,,0,0,0,,{\bord3}{\3c&3A5B68\4c&3A5B68}悠太君のも一緒に洗う
+Dialogue: 0,0:03:24.93,0:03:25.60,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&1A1A1A\4c&1A1A1A}待って
+Dialogue: 0,0:03:27.15,0:03:28.31,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&1A1A1A\4c&1A1A1A}一緒に行くから
+Dialogue: 0,0:03:31.94,0:03:32.98,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&666666\4c&666666}ごめんなさい
+Dialogue: 0,0:03:34.36,0:03:36.28,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&666666\4c&666666}可能性の１つとして
+Dialogue: 0,0:03:36.28,0:03:39.87,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&666666\4c&666666}浅村君が女性用の下着を身に着けていることだって
+Dialogue: 0,0:03:40.16,0:03:41.95,Dial-JPN,,0,0,0,,{\bord3}ありえないことじゃないのに
+Dialogue: 0,0:03:43.83,0:03:44.25,Dial-JPN,,0,0,0,,{\bord3}私　凝り固まったジェンダーロールを否定してきたのに
+Dialogue: 0,0:03:44.25,0:03:48.12,Dial-JPN,,0,0,0,,{\bord3}{\3c&344C66\4c&344C66}私　凝り固まったジェンダーロールを否定してきたのに
+Dialogue: 0,0:03:48.12,0:03:48.75,Dial-JPN,,0,0,0,,{\bord3}{\3c&344C66\4c&344C66}洗濯できないって決めつけて
+Dialogue: 0,0:03:48.75,0:03:50.54,Dial-JPN,,0,0,0,,{\bord3}洗濯できないって決めつけて
+Dialogue: 0,0:03:50.54,0:03:51.75,Dial-JPN,,0,0,0,,{\bord3}綾瀬さん?
+Dialogue: 0,0:03:51.75,0:03:52.75,Dial-JPN,,0,0,0,,{\bord3}リップやファンデをしてるところは見たことないけど
+Dialogue: 0,0:03:52.75,0:03:54.92,Dial-JPN,,0,0,0,,{\bord3}リップやファンデをしてるところは見たことないけど
+Dialogue: 0,0:03:54.92,0:03:58.01,Dial-JPN,,0,0,0,,{\bord3}見えない所でおしゃれするタイプって可能性も
+Dialogue: 0,0:03:58.01,0:03:58.93,Dial-JPN,,0,0,0,,{\bord3}待って
+Dialogue: 0,0:03:58.93,0:04:00.47,Dial-JPN,,0,0,0,,{\bord3}冷静になって　綾瀬さん
+Dialogue: 0,0:04:12.57,0:04:14.03,Dial-JPN,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}冷静になりました
+Dialogue: 0,0:04:15.90,0:04:17.86,Dial-JPN,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}女装を好むからといって
+Dialogue: 0,0:04:17.86,0:04:20.37,Dial-JPN,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}リアルにそうしてるとは限らないわよね
+Dialogue: 0,0:04:22.45,0:04:24.45,Dial-JPN,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}女装はしてないし
+Dialogue: 0,0:04:24.45,0:04:26.87,Dial-JPN,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}見えない所でおしゃれもしてないから
+Dialogue: 0,0:04:26.87,0:04:29.92,Dial-JPN,,0,0,0,,{\bord3}{\3c&402C24\4c&402C24}でも浅村君　眉の形きれいだし
+Dialogue: 0,0:04:31.42,0:04:32.96,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}整えてるんだよね
+Dialogue: 0,0:04:32.96,0:04:34.34,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}美容院とか
+Dialogue: 0,0:04:34.34,0:04:35.46,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}床屋だよ
+Dialogue: 0,0:04:36.55,0:04:38.84,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}じゃあ　その眉って天然なの?
+Dialogue: 0,0:04:39.72,0:04:40.64,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}そうだけど
+Dialogue: 0,0:04:42.05,0:04:43.51,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&403930\4c&403930}なんか悔しい
+Dialogue: 0,0:04:47.68,0:04:51.56,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}性別ってそもそも２つになんて収まらないじゃない?
+Dialogue: 0,0:04:52.52,0:04:53.77,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}まあ　そうだね
+Dialogue: 0,0:04:54.73,0:04:57.53,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}なのに　あの瞬間だけ
+Dialogue: 0,0:04:57.53,0:05:01.20,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}私はそのことを頭の片隅にも上らせなかった
+Dialogue: 0,0:05:02.32,0:05:04.20,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}俺は全然気にしてないから
+Dialogue: 0,0:05:06.62,0:05:07.41,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}ありがとう
+Dialogue: 0,0:05:08.20,0:05:10.92,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}でも　私は自分が許せないの
+Dialogue: 0,0:05:11.42,0:05:13.00,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&333333\4c&333333}だから謝りたかった
+Dialogue: 0,0:05:18.34,0:05:19.88,Dial-JPN,,0,0,0,,{\bord3}{\3c&403729\4c&403729}反射ってあるよね
+Dialogue: 0,0:05:20.43,0:05:21.59,Dial-JPN,,0,0,0,,{\bord3}{\3c&403729\4c&403729}反射?
+Dialogue: 0,0:05:21.59,0:05:22.76,Dial-JPN,,0,0,0,,{\bord3}{\3c&403729\4c&403729}ピカピカ?
+Dialogue: 0,0:05:22.76,0:05:23.85,Dial-JPN,,0,0,0,,{\bord3}{\3c&403729\4c&403729}そっちじゃない
+Dialogue: 0,0:05:24.26,0:05:25.85,Dial-JPN,,0,0,0,,{\bord3}{\3c&403729\4c&403729}条件反射とかのほう
+Dialogue: 0,0:05:28.81,0:05:30.77,Dial-JPN,,0,0,0,,{\bord3}{\3c&373640\4c&373640}とっさに言ってしまった
+Dialogue: 0,0:05:30.77,0:05:32.48,Dial-JPN,,0,0,0,,{\bord3}{\3c&373640\4c&373640}こうしてしまったには
+Dialogue: 0,0:05:32.48,0:05:34.65,Dial-JPN,,0,0,0,,{\bord3}{\3c&373640\4c&373640}しかたない部分もあると思うんだ
+Dialogue: 0,0:05:35.23,0:05:36.65,Dial-JPN,,0,0,0,,{\bord3}{\3c&373640\4c&373640}そういう反射的な行動ができるから
+Dialogue: 0,0:05:36.65,0:05:37.73,Dial-JPN,,0,0,0,,{\bord3}{\3c&333333\4c&333333}そういう反射的な行動ができるから
+Dialogue: 0,0:05:37.73,0:05:40.03,Dial-JPN,,0,0,0,,{\bord3}{\3c&333333\4c&333333}得をする場面だってきっとあるんだよ
+Dialogue: 0,0:05:40.78,0:05:41.91,Dial-JPN,,0,0,0,,{\bord3}{\3c&333333\4c&333333}でも
+Dialogue: 0,0:05:41.91,0:05:43.74,Dial-JPN,,0,0,0,,{\bord3}{\3c&373640\4c&373640}偏見は差別を生む
+Dialogue: 0,0:05:47.08,0:05:49.12,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}だから　見直すんでしょ
+Dialogue: 0,0:06:01.01,0:06:05.09,Dial-JPN,,0,0,0,,{\bord3}綾瀬さんは　自分の行動を見直して反省した
+Dialogue: 0,0:06:05.68,0:06:06.93,Dial-JPN,,0,0,0,,{\bord3}それなら
+Dialogue: 0,0:06:06.93,0:06:09.85,Dial-JPN,,0,0,0,,{\bord3}もうそれ以上は悩む必要はないんじゃないかな
+Dialogue: 0,0:06:12.85,0:06:13.81,Dial-JPN,,0,0,0,,{\bord3.5}{\3c&302C45\4c&302C45}俺はさ
+Dialogue: 0,0:06:14.60,0:06:19.23,Dial-JPN,,0,0,0,,{\3c&302C45\4c&302C45}{\bord3}綾瀬さんが見直して修正できない人間だとは思わないよ
+Dialogue: 0,0:06:29.74,0:06:30.66,Dial-JPN,,0,0,0,,{\3c&2A2F0E\4c&2A2F0E}綾瀬さん?
+Dialogue: 0,0:06:35.04,0:06:36.50,Dial-JPN,,0,0,0,,{\3c&25281C\4c&25281C}浅村君は
+Dialogue: 0,0:06:36.92,0:06:38.00,Dial-JPN,,0,0,0,,{\3c&2A2F0E\4c&2A2F0E}私のことを…
+Dialogue: 0,0:07:01.44,0:07:02.28,Dial-JPN,,0,0,0,,{\bord3}{\3c&2B2921\4c&2B2921}ほら　行くよ
+Dialogue: 0,0:07:23.21,0:07:23.42,Dial-JPN,,0,0,0,,{\bord0\shad0}戻ってたんだ
+Dialogue: 0,0:07:23.42,0:07:24.30,Dial-JPN,,0,0,0,,{\bord3}{\3c&2B2236\4c&2B2236}戻ってたんだ
+Dialogue: 0,0:07:26.97,0:07:27.72,Dial-JPN,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}何?
+Dialogue: 0,0:07:28.26,0:07:29.97,Dial-JPN,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}いや　別に何も
+Dialogue: 0,0:07:29.97,0:07:31.01,Dial-JPN,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}なんでもないよ
+Dialogue: 0,0:07:31.01,0:07:31.72,Dial-JPN,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}そう
+Dialogue: 0,0:07:32.18,0:07:33.77,Dial-JPN,,0,0,0,,{\3c&1A1A1A\4c&1A1A1A}俺　今日はバイトだから
+Dialogue: 0,0:07:46.20,0:07:47.07,Dial-JPN,,0,0,0,,{\3c&333333\4c&333333}それで
+Dialogue: 0,0:07:47.53,0:07:50.37,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}干してあった下着に目を奪われていたら
+Dialogue: 0,0:07:50.37,0:07:52.37,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}急に声をかけられたので
+Dialogue: 0,0:07:52.37,0:07:54.33,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}とっさに逃げてしまったと
+Dialogue: 0,0:07:55.16,0:07:59.13,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}盗みに入ろうとした瞬間だと思われるとでも
+Dialogue: 0,0:07:59.63,0:08:01.92,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}まあ　そうかな
+Dialogue: 0,0:08:02.96,0:08:05.05,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}妹の物なのに
+Dialogue: 0,0:08:05.05,0:08:07.84,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}それは確かにそうなんだけど
+Dialogue: 0,0:08:09.30,0:08:10.18,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}ごめん
+Dialogue: 0,0:08:10.18,0:08:11.89,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}今のはアンフェアだった
+Dialogue: 0,0:08:13.64,0:08:15.06,Dial-JPN,,0,0,0,,{\3c&2D3D4C\4c&2D3D4C}はい　ココアあっ
+Dialogue: 0,0:08:16.23,0:08:16.81,Dial-JPN,,0,0,0,,{\3c&2D3D4C\4c&2D3D4C}嫌い?
+Dialogue: 0,0:08:17.35,0:08:19.02,Dial-JPN,,0,0,0,,{\3c&616680\4c&616680}{\bord2.5}だったら引き取るけど
+Dialogue: 0,0:08:19.02,0:08:20.02,Dial-JPN,,0,0,0,,{\3c&616680\4c&616680}{\bord2.5}いや
+Dialogue: 0,0:08:21.19,0:08:22.11,Dial-JPN,,0,0,0,,{\3c&616680\4c&616680}{\bord2.5}嫌いじゃない
+Dialogue: 0,0:08:24.82,0:08:25.94,Dial-JPN,,0,0,0,,{\bord0\shad0}まあ
+Dialogue: 0,0:08:25.94,0:08:27.49,Dial-JPN,,0,533,0,,{\bord0\shad0}これでおあいこじゃない?
+Dialogue: 0,0:08:28.95,0:08:30.99,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&616680\4c&616680}下着に目を奪われたのも
+Dialogue: 0,0:08:30.99,0:08:33.37,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&616680\4c&616680}一種の反射的行動だと思う
+Dialogue: 0,0:08:34.24,0:08:35.33,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&616680\4c&616680}浅村君が反射的行動を見直しできない人間だとは思わないしね
+Dialogue: 0,0:08:35.33,0:08:39.42,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&665852\4c&665852}浅村君が反射的行動を見直しできない人間だとは思わないしね
+Dialogue: 0,0:08:43.17,0:08:45.38,Dial-JPN,,0,0,0,,{\bord3}{\3c&424866\4c&424866}それはうれしいね
+Dialogue: 0,0:08:46.51,0:08:47.34,Dial-JPN,,0,0,0,,{\bord3}{\3c&424866\4c&424866}ところで
+Dialogue: 0,0:08:47.97,0:08:52.18,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}私の下着は視線を奪われるほど魅力的だったと
+Dialogue: 0,0:08:52.18,0:08:54.18,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}そこまでは言ってない
+Dialogue: 0,0:08:54.18,0:08:56.27,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}じゃあ　魅力なしと
+Dialogue: 0,0:08:58.23,0:09:00.94,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}俺　もしかしてからかわれてる?
+Dialogue: 0,0:09:01.40,0:09:02.86,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}さあ　どうだろうね
+Dialogue: 0,0:09:04.02,0:09:08.32,Dial-JPN,,0,0,0,,{\bord3}{\3c&665852\4c&665852}私の下着を持っていきたくなるような気分はないわけじゃないんだ
+Dialogue: 0,0:09:08.78,0:09:12.03,Dial-JPN,,0,0,0,,{\bord3}{\3c&665852\4c&665852}そういう欲望がないと言えば　うそになるかな
+Dialogue: 0,0:09:12.49,0:09:13.87,Dial-JPN,,0,0,0,,{\bord3}{\3c&665852\4c&665852}だからといって　何もしないけどね
+Dialogue: 0,0:09:13.87,0:09:14.45,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}だからといって　何もしないけどね
+Dialogue: 0,0:09:16.79,0:09:18.37,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}欲望はあるんだ
+Dialogue: 0,0:09:19.21,0:09:20.37,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}欲望があることと
+Dialogue: 0,0:09:20.37,0:09:21.12,Dial-JPN,,0,0,0,,{\bord3}{\3c&616680\4c&616680}欲望があることと
+Dialogue: 0,0:09:21.12,0:09:23.71,Dial-JPN,,577,0,0,,{\bord3}{\3c&616680\4c&616680}欲望のままに行動することは違う
+Dialogue: 0,0:09:26.88,0:09:28.13,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}そうだね
+Dialogue: 0,0:09:28.13,0:09:28.97,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}ごめん
+Dialogue: 0,0:09:28.97,0:09:30.80,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}この話はここまでにしよう
+Dialogue: 0,0:09:31.38,0:09:34.89,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}私　ごはんとお風呂もう済ませたから
+Dialogue: 0,0:09:38.43,0:09:39.02,Dial-JPN,,0,0,0,,{\bord3}{\3c&665852\4c&665852}おやすみ
+Dialogue: 0,0:09:40.89,0:09:41.77,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}おやすみ
+Dialogue: 0,0:09:55.66,0:09:57.16,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&525880\4c&525880}ねえお兄ちゃん
+Dialogue: 0,0:09:58.45,0:10:00.12,Dial-JPN,,0,0,0,,{\3c&525880\4c&525880}{\bord3}いや　それ　学校では
+Dialogue: 0,0:10:00.12,0:10:01.83,Dial-JPN,,0,0,0,,{\3c&525880\4c&525880}{\bord3}沙季　何かあった?
+Dialogue: 0,0:10:02.46,0:10:02.79,Dial-JPN,,0,0,0,,{\3c&525880\4c&525880}{\bord3}なんか朝からずっとあんな感じなんだよね
+Dialogue: 0,0:10:02.79,0:10:06.21,Dial-JPN,,0,0,0,,{\3c&525880\4c&525880}{\bord2.5}なんか朝からずっとあんな感じなんだよね
+Dialogue: 0,0:10:17.43,0:10:18.18,Dial-JPN,,0,0,0,,{\bord2.5}いくぞ
+Dialogue: 0,0:10:28.48,0:10:31.24,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1A1A\4c&1A1A1A}おやじ　結局終電になるって
+Dialogue: 0,0:11:14.11,0:11:17.28,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}高額バイト　なかなか見つからなくてさ
+Dialogue: 0,0:11:18.24,0:11:20.87,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}すぐ見つかると思ってなかったし
+Dialogue: 0,0:11:20.87,0:11:22.83,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}でも　このままじゃ
+Dialogue: 0,0:11:22.83,0:11:26.71,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}一方的に綾瀬さんに料理を作ってもらってることになっちゃうからさ
+Dialogue: 0,0:11:27.38,0:11:29.29,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}もっと手伝ったほうがいいなら
+Dialogue: 0,0:11:29.29,0:11:30.30,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}言ってほしいな
+Dialogue: 0,0:11:31.67,0:11:32.17,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}うん
+Dialogue: 0,0:13:35.55,0:13:36.46,Dial-JPN,,0,0,0,,{\bord0\shad0}{\c&CCCCCC}浅村君
+Dialogue: 1,0:18:24.00,0:18:25.00,Dial-JPN,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,2110)}私をわかってくれ過ぎる
+Dialogue: 0,0:18:24.00,0:18:25.00,Dial-JPN,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,2112)}{\c&2F2838}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.08,0:18:25.12,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1920,2110)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.12,0:18:25.16,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1921.46,2102.18)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.16,0:18:25.21,Dial-JPN,,0,0,0,,{\fscx99.99\fscy99.99\pos(1922.71,2108.75)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.21,0:18:25.25,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1924.06,2106.92)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.25,0:18:25.29,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1925.24,2105.63)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.29,0:18:25.33,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1926.22,2107.86)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.33,0:18:25.37,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1927.36,2108.87)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.37,0:18:25.41,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1928.15,2108.86)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.41,0:18:25.46,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1928.85,2108.21)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.46,0:18:25.50,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1929.93,2107.07)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.50,0:18:25.54,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1931,2104.73)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.54,0:18:25.58,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1931.76,2105.3)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.58,0:18:25.62,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1932.87,2107.51)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.62,0:18:25.66,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1933.78,2108.17)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.66,0:18:25.71,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1934.66,2109.07)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.71,0:18:25.75,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1935.34,2106.45)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.75,0:18:25.79,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1935.81,2106.73)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.79,0:18:25.83,Dial-JPN,,0,0,0,,{\fscx100.01\fscy100.01\pos(1936.72,2107.1)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.83,0:18:25.87,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1936.87,2106.34)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.87,0:18:25.91,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1937.24,2106.82)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.91,0:18:25.96,Dial-JPN,,0,0,0,,{\fscx100.01\fscy100.01\pos(1937.29,2106.09)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:25.96,0:18:26.00,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1937.48,2107.12)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.00,0:18:26.04,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1937.41,2102.36)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.04,0:18:26.08,Dial-JPN,,0,0,0,,{\fscx99.99\fscy99.99\pos(1937.61,2102.83)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.08,0:18:26.12,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1937.35,2099.95)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.12,0:18:26.16,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1936.9,2099.22)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.16,0:18:26.21,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1936.21,2100.44)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.21,0:18:26.25,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.67,2099.86)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.25,0:18:26.29,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.09,2100.59)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.29,0:18:26.33,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.74,2102.24)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.33,0:18:26.37,Dial-JPN,,0,0,0,,{\fscx99.99\fscy99.99\pos(1934.57,2100.65)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.37,0:18:26.41,Dial-JPN,,0,0,0,,{\fscx99.99\fscy99.99\pos(1934.58,2097.79)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.41,0:18:26.46,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.44,2098.91)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.46,0:18:26.50,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.67,2101.34)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.50,0:18:26.54,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.57,2099.61)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.54,0:18:26.58,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.57,2104.77)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.58,0:18:26.62,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.82,2099.41)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.62,0:18:26.66,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.14,2102.24)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.66,0:18:26.71,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.96,2100.7)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.71,0:18:26.75,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.09,2103.53)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.75,0:18:26.79,Dial-JPN,,0,0,0,,{\fscx99.99\fscy99.99\pos(1935.18,2105.47)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.79,0:18:26.83,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1935.05,2102.34)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.83,0:18:26.87,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1934.87,2105.46)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.87,0:18:26.92,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1934.56,2108.44)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.92,0:18:26.96,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1934.33,2109.2)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:26.96,0:18:27.00,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1933.8,2108.47)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.00,0:18:27.04,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1933.35,2107.27)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.04,0:18:27.08,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1932.6,2108.58)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.08,0:18:27.12,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1931.7,2109.28)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.12,0:18:27.17,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1931.13,2111.32)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.17,0:18:27.21,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1930.06,2111.74)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.21,0:18:27.25,Dial-JPN,,0,0,0,,{\fscx99.96\fscy99.96\pos(1929.17,2112.23)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.25,0:18:27.29,Dial-JPN,,0,0,0,,{\fscx99.96\fscy99.96\pos(1928.16,2109.73)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.29,0:18:27.33,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1927.19,2110.76)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.33,0:18:27.37,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1926.46,2111.04)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.37,0:18:27.42,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1925.55,2113.5)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.42,0:18:27.46,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1924.89,2111.32)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:27.46,0:18:27.50,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1924.23,2116.37)\bord0\shad0\blur0.7\be0.7}私をわかってくれ過ぎる
+Dialogue: 0,0:18:31.17,0:18:31.21,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1920,2110)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.21,0:18:31.25,Dial-JPN,,0,0,0,,{\fscx100.01\fscy100.01\pos(1920.85,2113.92)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.25,0:18:31.29,Dial-JPN,,0,0,0,,{\fscx100.02\fscy100.02\pos(1922.16,2111.02)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.29,0:18:31.34,Dial-JPN,,0,0,0,,{\fscx100.03\fscy100.03\pos(1923.3,2106.85)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.34,0:18:31.38,Dial-JPN,,0,0,0,,{\fscx100.05\fscy100.05\pos(1924.78,2106.86)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.38,0:18:31.42,Dial-JPN,,0,0,0,,{\fscx100.06\fscy100.06\pos(1926.48,2105.81)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.42,0:18:31.46,Dial-JPN,,0,0,0,,{\fscx100.06\fscy100.06\pos(1927.55,2106.34)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.46,0:18:31.50,Dial-JPN,,0,0,0,,{\fscx100.05\fscy100.05\pos(1928.98,2106.46)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.50,0:18:31.54,Dial-JPN,,0,0,0,,{\fscx100.05\fscy100.05\pos(1930.71,2109)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.54,0:18:31.59,Dial-JPN,,0,0,0,,{\fscx100.03\fscy100.03\pos(1932.96,2110.73)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.59,0:18:31.63,Dial-JPN,,0,0,0,,{\fscx100.02\fscy100.02\pos(1934.85,2113.54)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.63,0:18:31.67,Dial-JPN,,0,0,0,,{\fscx100.02\fscy100.02\pos(1936.82,2111.23)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.67,0:18:31.71,Dial-JPN,,0,0,0,,{\fscx100.02\fscy100.02\pos(1938.59,2113.74)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.71,0:18:31.75,Dial-JPN,,0,0,0,,{\fscx100.03\fscy100.03\pos(1939.43,2116.86)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.75,0:18:31.79,Dial-JPN,,0,0,0,,{\fscx100.02\fscy100.02\pos(1939.83,2113.65)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.79,0:18:31.84,Dial-JPN,,0,0,0,,{\fscx100.03\fscy100.03\pos(1940,2117.66)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.84,0:18:31.88,Dial-JPN,,0,0,0,,{\fscx100.04\fscy100.04\pos(1939.48,2113.68)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.88,0:18:31.92,Dial-JPN,,0,0,0,,{\fscx100.05\fscy100.05\pos(1938.42,2118.14)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.92,0:18:31.96,Dial-JPN,,0,0,0,,{\fscx100.06\fscy100.06\pos(1937.06,2117.21)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:31.96,0:18:32.00,Dial-JPN,,0,0,0,,{\fscx100.08\fscy100.08\pos(1935.56,2118.51)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.00,0:18:32.05,Dial-JPN,,0,0,0,,{\fscx100.09\fscy100.09\pos(1934,2118.85)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.05,0:18:32.09,Dial-JPN,,0,0,0,,{\fscx100.08\fscy100.08\pos(1932.64,2119.09)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.09,0:18:32.13,Dial-JPN,,0,0,0,,{\fscx100.07\fscy100.07\pos(1931.33,2115.67)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.13,0:18:32.17,Dial-JPN,,0,0,0,,{\fscx100.07\fscy100.07\pos(1930.4,2117.67)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.17,0:18:32.21,Dial-JPN,,0,0,0,,{\fscx100.06\fscy100.06\pos(1929.36,2119.84)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.21,0:18:32.25,Dial-JPN,,0,0,0,,{\fscx100.05\fscy100.05\pos(1928.59,2117.43)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.25,0:18:32.30,Dial-JPN,,0,0,0,,{\fscx100.05\fscy100.05\pos(1927.55,2113.15)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.30,0:18:32.34,Dial-JPN,,0,0,0,,{\fscx100.06\fscy100.06\pos(1927,2114.54)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.34,0:18:32.38,Dial-JPN,,0,0,0,,{\fscx100.06\fscy100.06\pos(1926.29,2113.72)\bord0\shad0\blur0.9\be0.9}綾瀬さん
+Dialogue: 0,0:18:32.38,0:18:32.42,Dial-JPN,,0,0,0,,{\fscx100\fscy100\pos(1920,2110)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.42,0:18:32.46,Dial-JPN,,0,0,0,,{\fscx99.99\fscy99.99\pos(1919.15,2104.87)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.46,0:18:32.50,Dial-JPN,,0,0,0,,{\fscx99.98\fscy99.98\pos(1918.36,2104.35)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.50,0:18:32.55,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1917.3,2106.99)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.55,0:18:32.59,Dial-JPN,,0,0,0,,{\fscx99.96\fscy99.96\pos(1915.85,2104.15)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.59,0:18:32.63,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1914.3,2107.49)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.63,0:18:32.67,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1912.3,2105.48)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.67,0:18:32.71,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1910.08,2101.73)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.71,0:18:32.75,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1907.84,2100.85)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.75,0:18:32.80,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1905.8,2103.33)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.80,0:18:32.84,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1903.85,2100.87)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.84,0:18:32.88,Dial-JPN,,0,0,0,,{\fscx99.95\fscy99.95\pos(1902.75,2102.5)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.88,0:18:32.92,Dial-JPN,,0,0,0,,{\fscx99.96\fscy99.96\pos(1901.01,2101.92)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.92,0:18:32.96,Dial-JPN,,0,0,0,,{\fscx99.96\fscy99.96\pos(1900.33,2098.79)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:32.96,0:18:33.00,Dial-JPN,,0,0,0,,{\fscx99.97\fscy99.97\pos(1899.16,2101.21)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.00,0:18:33.05,Dial-JPN,,0,0,0,,{\fscx99.96\fscy99.96\pos(1898.21,2099.26)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.05,0:18:33.09,Dial-JPN,,0,0,0,,{\fscx99.93\fscy99.93\pos(1897.18,2100.08)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.09,0:18:33.13,Dial-JPN,,0,0,0,,{\fscx99.89\fscy99.89\pos(1896.15,2101.89)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.13,0:18:33.17,Dial-JPN,,0,0,0,,{\fscx99.86\fscy99.86\pos(1895.17,2098.94)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.17,0:18:33.21,Dial-JPN,,0,0,0,,{\fscx99.83\fscy99.83\pos(1893.99,2104.04)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.21,0:18:33.25,Dial-JPN,,0,0,0,,{\fscx99.79\fscy99.79\pos(1892.78,2098.11)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.25,0:18:33.30,Dial-JPN,,0,0,0,,{\fscx99.78\fscy99.78\pos(1891.51,2100.28)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.30,0:18:33.34,Dial-JPN,,0,0,0,,{\fscx99.78\fscy99.78\pos(1890.09,2097.03)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.34,0:18:33.38,Dial-JPN,,0,0,0,,{\fscx99.77\fscy99.77\pos(1888.54,2098.57)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.38,0:18:33.42,Dial-JPN,,0,0,0,,{\fscx99.76\fscy99.76\pos(1887.22,2097.6)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.42,0:18:33.46,Dial-JPN,,0,0,0,,{\fscx99.75\fscy99.75\pos(1886.61,2097.02)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:33.46,0:18:33.50,Dial-JPN,,0,0,0,,{\fscx99.75\fscy99.75\pos(1886.84,2094.89)\bord0\shad0\blur1.1\be1.1}それ
+Dialogue: 0,0:18:34.14,0:18:36.80,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}俺がいちばん嫌いなタイプの人間だよ
+Dialogue: 0,0:18:41.31,0:18:43.52,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}見た目のよさだけを武器にして稼いでるって
+Dialogue: 0,0:18:43.52,0:18:44.60,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}見た目のよさだけを武器にして稼いでるって
+Dialogue: 0,0:18:44.60,0:18:46.40,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}言われたくないんじゃなかったっけ?
+Dialogue: 0,0:18:47.98,0:18:50.99,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}男だとか女だとか関係ない方法で
+Dialogue: 0,0:18:50.99,0:18:52.53,Dial-JPN,,0,0,0,,{\c&CCCCCC}{\bord0\shad0}見返してやらなきゃ意味ないだろ
+Dialogue: 0,0:18:52.53,0:18:53.03,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\3c&231820\4c&231820}見返してやらなきゃ意味ないだろ
+Dialogue: 0,0:18:55.66,0:18:56.78,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\3c&1A1A1A\4c&1A1A1A}{\bord2.5}でも
+Dialogue: 0,0:18:57.37,0:18:58.58,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&231820\4c&231820}浅村君なら…
+Dialogue: 0,0:18:59.08,0:19:00.50,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&231820\4c&231820}それもわかったうえで…
+Dialogue: 0,0:19:00.50,0:19:02.37,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord3}{\3c&231820\4c&231820}俺だからとか関係ない
+Dialogue: 0,0:19:04.08,0:19:04.67,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\3c&231820\4c&231820}これは
+Dialogue: 0,0:19:07.17,0:19:08.84,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}綾瀬さんの話だ
+Dialogue: 0,0:19:19.31,0:19:21.22,Dial-JPN,,0,0,0,,{\c&E6E6E6}{\bord0\shad0}ごめんなさい
+Dialogue: 0,0:19:27.19,0:19:27.69,Dial-JPN,,0,0,0,,{\bord3}{\3c&283538\4c&283538}父は昔は優しい人だったように思う
+Dialogue: 0,0:19:27.69,0:19:31.53,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}父は昔は優しい人だったように思う
+Dialogue: 0,0:19:32.36,0:19:33.03,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}でも
+Dialogue: 0,0:19:33.49,0:19:35.15,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}会社で失敗してから
+Dialogue: 0,0:19:35.15,0:19:36.28,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}人間不信に
+Dialogue: 0,0:19:37.70,0:19:39.99,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}お母さんは人一倍働いて
+Dialogue: 0,0:19:40.74,0:19:42.66,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}私を養ってくれて
+Dialogue: 0,0:19:43.75,0:19:47.71,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1B2D\4c&1A1B2D}でも　それがまた気に入らなかったみたいで
+Dialogue: 0,0:19:50.17,0:19:51.50,Dial-JPN,,0,0,0,,{\3c&2A2F4C\4c&2A2F4C}{\bord2.5}お母さんのこと
+Dialogue: 0,0:19:52.38,0:19:54.88,Dial-JPN,,0,0,0,,{\3c&2A2F4C\4c&2A2F4C}{\bord2.5}所詮は水商売のくせにとか
+Dialogue: 0,0:19:56.26,0:19:56.97,Dial-JPN,,0,0,0,,{\3c&2A2F4C\4c&2A2F4C}{\bord2.5}女を使って客を取ってるって貶めたり
+Dialogue: 0,0:19:56.97,0:19:59.85,Dial-JPN,,0,0,0,,{\3c&45363A\4c&45363A}女を使って客を取ってるって貶めたり
+Dialogue: 0,0:20:01.35,0:20:04.23,Dial-JPN,,0,0,0,,{\3c&45363A\4c&45363A}いくら自分が辛い目に遭ったからって
+Dialogue: 0,0:20:05.52,0:20:08.56,Dial-JPN,,0,0,0,,{\bord3}{\3c&4D4669\4c&4D4669}お母さんに当たっていいことにはならないのに
+Dialogue: 0,0:20:14.19,0:20:15.70,Dial-JPN,,0,0,0,,{\bord3}{\3c&1A1F38\4c&1A1F38}そのとおりだな
+Dialogue: 0,0:20:18.20,0:20:21.53,Dial-JPN,,0,0,0,,{\bord3}{\3c&151738\4c&151738}まあ　うちも似たようなもんだったからさ
+Dialogue: 0,0:20:22.87,0:20:25.37,Dial-JPN,,0,0,0,,{\bord3}{\3c&151738\4c&151738}おやじ　母親の浮気で
+Dialogue: 0,0:20:25.37,0:20:28.54,Dial-JPN,,0,0,0,,{\bord3}{\3c&151738\4c&151738}一時は女性恐怖症みたいになってたしね
+Dialogue: 0,0:20:28.96,0:20:30.17,Dial-JPN,,0,0,0,,{\bord3}{\3c&151738\4c&151738}お義父さんが
+Dialogue: 0,0:20:37.30,0:20:39.18,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&524882\4c&524882}もしかしてあなたも…
+Dialogue: 0,0:20:45.81,0:20:48.27,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&151738\4c&151738}私たち　似てるね
+Dialogue: 0,0:20:50.15,0:20:51.94,Dial-JPN,,0,0,0,,{\bord3}{\3c&2B2338\4c&2B2338}だめなところも含めて
+Dialogue: 0,0:20:54.90,0:20:56.07,Dial-JPN,,0,0,0,,{\bord3}{\3c&2B2338\4c&2B2338}そうかもね
+Dialogue: 0,0:20:58.95,0:21:00.82,Dial-JPN,,0,0,0,,{\bord3}{\3c&293666\4c&293666}そういうところも含めて
+Dialogue: 0,0:21:01.37,0:21:04.20,Dial-JPN,,0,0,0,,{\bord3}{\3c&293666\4c&293666}俺たちはうまくやっていけるんじゃないかな
+Dialogue: 0,0:21:08.29,0:21:09.96,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&564866\4c&564866}兄と妹としてさ
+Dialogue: 0,0:21:18.51,0:21:20.55,Dial-JPN,,0,0,0,,{\bord3}{\3c&28234D\4c&28234D}ほら　呼び方とかも
+Dialogue: 0,0:21:20.55,0:21:22.89,Dial-JPN,,0,0,0,,{\bord3}{\3c&28234D\4c&28234D}兄さんとか呼んでくれてもいいんだよ
+Dialogue: 0,0:21:34.98,0:21:35.86,Dial-JPN,,0,0,0,,{\3c&151C30\4c&151C30}ありがとう
+Dialogue: 0,0:21:38.95,0:21:39.82,Dial-JPN,,0,0,0,,{\3c&151C30\4c&151C30}綾瀬さん
+Dialogue: 0,0:21:44.20,0:21:45.58,Dial-JPN,,0,0,0,,{\bord2.5}{\3c&514C8B\4c&514C8B}これからもよろしく
+Dialogue: 0,0:21:46.58,0:21:47.45,Dial-JPN,,0,0,0,,{\bord0\shad0}浅村君
+Dialogue: 1,0:14:37.44,0:14:38.27,Dial-JPN - retro,,0,0,0,,{\c&HA19CBA&\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月７日　日曜日
+Dialogue: 1,0:14:38.27,0:14:38.86,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月７日　日曜日
+Dialogue: 0,0:14:38.27,0:14:38.86,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&333333}６月７日　日曜日
+Dialogue: 1,0:14:38.86,0:14:40.11,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月７日　日曜日
+Dialogue: 0,0:14:38.86,0:14:40.11,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3C434C}６月７日　日曜日
+Dialogue: 1,0:14:44.95,0:14:46.07,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}ほっとした
+Dialogue: 0,0:14:44.95,0:14:46.07,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&4B5670}ほっとした
+Dialogue: 1,0:14:46.78,0:14:48.28,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}というのが本音
+Dialogue: 0,0:14:46.78,0:14:48.28,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&333333}というのが本音
+Dialogue: 1,0:14:48.91,0:14:51.16,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}悪い人ではないというのは
+Dialogue: 0,0:14:48.91,0:14:51.16,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&586270}悪い人ではないというのは
+Dialogue: 1,0:14:51.16,0:14:51.37,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}顔合わせのときにわかっていた
+Dialogue: 0,0:14:51.16,0:14:51.37,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&586270}顔合わせのときにわかっていた
+Dialogue: 1,0:14:51.37,0:14:53.29,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}顔合わせのときにわかっていた
+Dialogue: 0,0:14:51.37,0:14:53.29,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&606A80}顔合わせのときにわかっていた
+Dialogue: 1,0:14:54.17,0:14:54.37,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}気を配れる人だなというのも
+Dialogue: 0,0:14:54.17,0:14:54.37,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&606A80}気を配れる人だなというのも
+Dialogue: 1,0:14:54.42,0:14:57.09,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}気を配れる人だなというのも
+Dialogue: 0,0:14:54.42,0:14:57.09,Dial-JPN - retro,shad,0,0,0,,{\c&H4C4C4C&}{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}気を配れる人だなというのも
+Dialogue: 1,0:14:58.67,0:15:00.76,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}あとに入る私のために
+Dialogue: 0,0:14:58.67,0:15:00.76,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&828275}あとに入る私のために
+Dialogue: 1,0:15:00.80,0:15:02.63,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}わざわざ湯を張り直してくれるような人
+Dialogue: 0,0:15:00.80,0:15:02.63,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&1A1A1A}わざわざ湯を張り直してくれるような人
+Dialogue: 1,0:15:02.67,0:15:03.68,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}わざわざ湯を張り直してくれるような人
+Dialogue: 0,0:15:02.67,0:15:03.68,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&495678}わざわざ湯を張り直してくれるような人
+Dialogue: 1,0:15:05.18,0:15:08.89,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}まさか水星だとは思わなかったな
+Dialogue: 0,0:15:05.18,0:15:08.89,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1952)}まさか水星だとは思わなかったな
+Dialogue: 1,0:15:15.06,0:15:16.27,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)\c&H87BB92}６月８日　月曜日
+Dialogue: 1,0:15:16.31,0:15:17.52,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月８日　月曜日
+Dialogue: 0,0:15:16.31,0:15:17.52,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&596D70}６月８日　月曜日
+Dialogue: 1,0:15:18.31,0:15:18.77,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君に学校で話しかけられる
+Dialogue: 0,0:15:18.31,0:15:18.77,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&596D70}浅村君に学校で話しかけられる
+Dialogue: 1,0:15:18.82,0:15:21.36,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君に学校で話しかけられる
+Dialogue: 0,0:15:18.82,0:15:21.36,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&44465B}浅村君に学校で話しかけられる
+Dialogue: 1,0:15:22.32,0:15:23.99,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}想像以上に
+Dialogue: 0,0:15:22.32,0:15:23.99,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&44603B}想像以上に
+Dialogue: 1,0:15:24.32,0:15:26.28,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君はフラットな人だ
+Dialogue: 0,0:15:24.32,0:15:26.28,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&414354}浅村君はフラットな人だ
+Dialogue: 1,0:15:27.87,0:15:29.41,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}私の噂を信じ込んでいたのはどうかと思うけど
+Dialogue: 0,0:15:27.87,0:15:29.41,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&5C6170}私の噂を信じ込んでいたのはどうかと思うけど
+Dialogue: 1,0:15:29.45,0:15:31.91,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}私の噂を信じ込んでいたのはどうかと思うけど
+Dialogue: 0,0:15:29.45,0:15:31.91,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3D585A}私の噂を信じ込んでいたのはどうかと思うけど
+Dialogue: 1,0:15:32.62,0:15:33.54,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}しかたないかもとも思う
+Dialogue: 0,0:15:32.62,0:15:33.54,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&5C6170}しかたないかもとも思う
+Dialogue: 1,0:15:33.58,0:15:34.62,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}しかたないかもとも思う
+Dialogue: 0,0:15:33.58,0:15:34.62,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&383021}しかたないかもとも思う
+Dialogue: 1,0:15:36.25,0:15:37.54,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}自分がどう見られているか知ってるしね
+Dialogue: 1,0:15:37.58,0:15:38.88,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}自分がどう見られているか知ってるしね
+Dialogue: 0,0:15:37.58,0:15:38.88,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3B3954}自分がどう見られているか知ってるしね
+Dialogue: 1,0:15:40.25,0:15:42.55,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}でも　怒って
+Dialogue: 0,0:15:40.25,0:15:42.55,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&595F70}でも　怒って
+Dialogue: 1,0:15:43.30,0:15:44.55,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}怒っていることを認めてくれて
+Dialogue: 0,0:15:43.30,0:15:44.55,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&1A1A1A}怒っていることを認めてくれて
+Dialogue: 1,0:15:44.55,0:15:45.80,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}怒っていることを認めてくれて
+Dialogue: 0,0:15:44.55,0:15:45.80,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&595F70}怒っていることを認めてくれて
+Dialogue: 1,0:15:46.68,0:15:47.30,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}そこでめんどくさがらずに
+Dialogue: 0,0:15:46.68,0:15:47.30,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&1A1A1A}そこでめんどくさがらずに
+Dialogue: 1,0:15:47.34,0:15:48.51,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}そこでめんどくさがらずに
+Dialogue: 0,0:15:47.34,0:15:48.51,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3E5770}そこでめんどくさがらずに
+Dialogue: 1,0:15:48.97,0:15:49.18,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}すり合わせてくれた人は
+Dialogue: 0,0:15:48.97,0:15:49.18,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3E5770}すり合わせてくれた人は
+Dialogue: 1,0:15:49.26,0:15:51.14,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}すり合わせてくれた人は
+Dialogue: 0,0:15:49.26,0:15:51.14,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&445966}すり合わせてくれた人は
+Dialogue: 1,0:15:51.14,0:15:52.22,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}初めてかも
+Dialogue: 0,0:15:51.14,0:15:52.22,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&445966}初めてかも
+Dialogue: 1,0:15:55.19,0:15:56.19,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)\c&5EBEE0}６月９日　火曜日
+Dialogue: 1,0:15:56.19,0:15:57.60,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月９日　火曜日
+Dialogue: 0,0:15:56.19,0:15:57.60,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&686D70}６月９日　火曜日
+Dialogue: 1,0:15:58.35,0:15:58.98,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}メモ
+Dialogue: 0,0:15:58.35,0:15:58.98,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&686D70}メモ
+Dialogue: 1,0:15:59.48,0:16:02.32,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君は目玉焼きはしょうゆ
+Dialogue: 0,0:15:59.48,0:16:02.32,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&686D70}浅村君は目玉焼きはしょうゆ
+Dialogue: 1,0:16:04.11,0:16:05.53,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}今日から炊事をする
+Dialogue: 0,0:16:04.11,0:16:05.53,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1952)}今日から炊事をする
+Dialogue: 1,0:16:05.95,0:16:09.78,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君に高額バイトを探してもらっているのだから
+Dialogue: 0,0:16:05.95,0:16:09.78,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1952)}浅村君に高額バイトを探してもらっているのだから
+Dialogue: 1,0:16:10.24,0:16:11.20,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}これくらいは　私が受け持つべきだろう
+Dialogue: 0,0:16:10.24,0:16:11.20,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1952)}これくらいは　私が受け持つべきだろう
+Dialogue: 1,0:16:11.20,0:16:12.20,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}これくらいは　私が受け持つべきだろう
+Dialogue: 0,0:16:11.20,0:16:12.20,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&5B7C8C}これくらいは　私が受け持つべきだろう
+Dialogue: 1,0:16:12.24,0:16:13.20,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}これくらいは　私が受け持つべきだろう
+Dialogue: 0,0:16:12.24,0:16:13.20,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&1A1A1A}これくらいは　私が受け持つべきだろう
+Dialogue: 1,0:16:15.96,0:16:18.46,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}バイト先は見つけられなかったと
+Dialogue: 0,0:16:15.96,0:16:18.46,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3D486E}バイト先は見つけられなかったと
+Dialogue: 1,0:16:18.75,0:16:19.21,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}すまなそうに言ってくれたけれど
+Dialogue: 0,0:16:18.75,0:16:19.21,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3D486E}すまなそうに言ってくれたけれど
+Dialogue: 1,0:16:19.25,0:16:20.59,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}すまなそうに言ってくれたけれど
+Dialogue: 0,0:16:19.25,0:16:20.59,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&616F80}すまなそうに言ってくれたけれど
+Dialogue: 1,0:16:21.88,0:16:22.59,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}私だって…
+Dialogue: 0,0:16:21.88,0:16:22.59,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&445270}私だって…
+Dialogue: 1,0:16:23.50,0:16:25.59,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}そんなに簡単に見つかると思ってないよ
+Dialogue: 0,0:16:23.50,0:16:25.59,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&536152}そんなに簡単に見つかると思ってないよ
+Dialogue: 1,0:16:25.63,0:16:26.67,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}そんなに簡単に見つかると思ってないよ
+Dialogue: 0,0:16:25.63,0:16:26.67,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&6C778C}そんなに簡単に見つかると思ってないよ
+Dialogue: 1,0:16:29.39,0:16:31.10,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}上手に他人に頼ることか
+Dialogue: 0,0:16:29.39,0:16:31.10,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&816439}上手に他人に頼ることか
+Dialogue: 1,0:16:31.14,0:16:32.60,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}上手に他人に頼ることか
+Dialogue: 0,0:16:31.14,0:16:32.60,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&34170E}上手に他人に頼ることか
+Dialogue: 1,0:16:32.64,0:16:33.06,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}上手に他人に頼ることか
+Dialogue: 0,0:16:32.64,0:16:33.06,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&706248}上手に他人に頼ることか
+Dialogue: 1,0:16:34.27,0:16:37.10,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}それができたらね
+Dialogue: 0,0:16:34.27,0:16:37.10,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&706248}それができたらね
+Dialogue: 1,0:16:53.95,0:16:56.12,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月10日　水曜日
+Dialogue: 0,0:16:53.95,0:16:56.12,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&5F6070}６月10日　水曜日
+Dialogue: 1,0:16:56.16,0:16:56.83,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月10日　水曜日
+Dialogue: 0,0:16:56.16,0:16:56.83,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&706D53}６月10日　水曜日
+Dialogue: 1,0:17:15.39,0:17:16.64,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}真綾が新しい家に遊びに来た
+Dialogue: 0,0:17:15.39,0:17:16.64,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&333333}真綾が新しい家に遊びに来た
+Dialogue: 1,0:17:16.68,0:17:17.81,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}真綾が新しい家に遊びに来た
+Dialogue: 0,0:17:16.68,0:17:17.81,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&70643D}真綾が新しい家に遊びに来た
+Dialogue: 1,0:17:18.73,0:17:20.35,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}３人で遊んで
+Dialogue: 1,0:17:20.35,0:17:20.85,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}いっぱい笑って
+Dialogue: 1,0:17:20.98,0:17:21.77,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}いっぱい笑って
+Dialogue: 1,0:17:22.69,0:17:24.65,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}こんなに笑ったのはいつぶりだろう
+Dialogue: 0,0:17:22.69,0:17:24.65,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&70643D}こんなに笑ったのはいつぶりだろう
+Dialogue: 1,0:17:27.15,0:17:27.65,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}連絡先の交換もした
+Dialogue: 0,0:17:27.15,0:17:27.65,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&5E6580}連絡先の交換もした
+Dialogue: 1,0:17:27.74,0:17:29.24,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}連絡先の交換もした
+Dialogue: 1,0:17:30.24,0:17:33.66,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君　アイコンが風景写真っていうのも
+Dialogue: 0,0:17:30.24,0:17:33.66,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3C3F54}浅村君　アイコンが風景写真っていうのも
+Dialogue: 1,0:17:33.70,0:17:34.16,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君　アイコンが風景写真っていうのも
+Dialogue: 0,0:17:33.70,0:17:34.16,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&7D888C}浅村君　アイコンが風景写真っていうのも
+Dialogue: 1,0:17:34.16,0:17:35.16,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}らしいね
+Dialogue: 0,0:17:34.16,0:17:35.16,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&7D888C}らしいね
+Dialogue: 1,0:17:37.00,0:17:38.16,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)\c&H8190BB}６月11日　木曜日
+Dialogue: 1,0:17:38.20,0:17:39.66,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}６月11日　木曜日
+Dialogue: 1,0:17:41.08,0:17:42.67,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}しないって言ってた
+Dialogue: 0,0:17:41.08,0:17:42.67,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&2F291C}しないって言ってた
+Dialogue: 1,0:17:43.59,0:17:45.21,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}欲望を持つことと
+Dialogue: 0,0:17:43.59,0:17:45.21,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3A4C47}欲望を持つことと
+Dialogue: 1,0:17:45.46,0:17:47.63,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}それを行動に移すかどうかは別問題だって
+Dialogue: 0,0:17:45.46,0:17:47.63,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&3A4C47}それを行動に移すかどうかは別問題だって
+Dialogue: 1,0:17:47.67,0:17:48.63,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}それを行動に移すかどうかは別問題だって
+Dialogue: 0,0:17:47.67,0:17:48.63,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5\c&H4C4C4C&}{\bord0\shad0\pos(1922,1952)}それを行動に移すかどうかは別問題だって
+Dialogue: 1,0:17:48.63,0:17:49.17,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}それを行動に移すかどうかは別問題だって
+Dialogue: 0,0:17:48.63,0:17:49.17,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&5E6370}それを行動に移すかどうかは別問題だって
+Dialogue: 1,0:17:51.51,0:17:53.97,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}全くもって　私も同感だ
+Dialogue: 0,0:17:51.51,0:17:53.97,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&251C14}全くもって　私も同感だ
+Dialogue: 1,0:17:55.01,0:17:56.89,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君の意見を聞くと
+Dialogue: 0,0:17:55.01,0:17:56.89,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&251C14}浅村君の意見を聞くと
+Dialogue: 1,0:17:57.31,0:17:58.89,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}いつもいちいち
+Dialogue: 0,0:17:57.31,0:17:58.89,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&251C14}いつもいちいち
+Dialogue: 1,0:17:58.89,0:17:59.98,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}私の共感できることばかりだと気付かされる
+Dialogue: 0,0:17:58.89,0:17:59.98,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&251C14}私の共感できることばかりだと気付かされる
+Dialogue: 1,0:18:00.06,0:18:02.06,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}私の共感できることばかりだと気付かされる
+Dialogue: 0,0:18:00.06,0:18:02.06,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&251C14}私の共感できることばかりだと気付かされる
+Dialogue: 1,0:18:04.73,0:18:04.98,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}だから　こんなに楽なんだろう
+Dialogue: 0,0:18:04.73,0:18:04.98,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&251C14}だから　こんなに楽なんだろう
+Dialogue: 1,0:18:05.02,0:18:08.78,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}だから　こんなに楽なんだろう
+Dialogue: 0,0:18:05.02,0:18:08.78,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&382D21}だから　こんなに楽なんだろう
+Dialogue: 1,0:18:20.37,0:18:21.00,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君は危険だ
+Dialogue: 0,0:18:20.37,0:18:21.00,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&806C74}浅村君は危険だ
+Dialogue: 1,0:18:21.04,0:18:23.00,Dial-JPN - retro,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,1950)}浅村君は危険だ
+Dialogue: 0,0:18:21.04,0:18:23.00,Dial-JPN - retro,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,1952)}{\c&594B51}浅村君は危険だ
+Dialogue: 0,0:21:51.83,0:21:54.54,Dial-JPN - retro,shad,0,0,0,,{\c&3C343B\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}６月13日　土曜日
+Dialogue: 1,0:21:51.83,0:21:54.54,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}６月13日　土曜日
+Dialogue: 0,0:21:55.42,0:21:58.84,Dial-JPN - retro,shad,0,0,0,,{\c&3C343B\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}夜は浅村君と２人きりで夕食だった
+Dialogue: 1,0:21:55.42,0:21:58.84,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}夜は浅村君と２人きりで夕食だった
+Dialogue: 0,0:22:06.35,0:22:08.39,Dial-JPN - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}言いだしたのは浅村君で
+Dialogue: 1,0:22:06.35,0:22:08.39,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}言いだしたのは浅村君で
+Dialogue: 0,0:21:59.67,0:22:01.55,Dial-JPN - retro,shad,0,0,0,,{\c&3C343B\blur1.5\be1.5\bord0\shad0\pos(2342,1952)}お母さんとお義父さんを
+Dialogue: 1,0:21:59.67,0:22:01.55,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(2340,1950)}お母さんとお義父さんを
+Dialogue: 0,0:22:01.55,0:22:04.22,Dial-JPN - retro,shad,0,0,0,,{\c&3C343B\blur1.5\be1.5\bord0\shad0\pos(2342,1952)}ディナーに送り出すことに成功したから
+Dialogue: 1,0:22:01.55,0:22:04.22,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(2340,1950)}ディナーに送り出すことに成功したから
+Dialogue: 0,0:22:09.27,0:22:13.02,Dial-JPN - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}彼は本当に細やかな気遣いをする人だ
+Dialogue: 1,0:22:09.27,0:22:13.02,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}彼は本当に細やかな気遣いをする人だ
+Dialogue: 0,0:22:24.82,0:22:25.74,Dial-JPN - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}だからこそ
+Dialogue: 1,0:22:24.82,0:22:25.74,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}だからこそ
+Dialogue: 0,0:22:27.04,0:22:29.25,Dial-JPN - retro,shad,0,0,0,,{\c&382E26\blur1.5\be1.5\bord0\shad0\pos(2022,1952)}彼を兄さんと呼ぶわけにはいかない
+Dialogue: 1,0:22:27.04,0:22:29.25,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(2020,1950)}彼を兄さんと呼ぶわけにはいかない
+Dialogue: 0,0:22:31.21,0:22:33.12,Dial-JPN - retro,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}一度でも呼んでしまえば
+Dialogue: 1,0:22:31.21,0:22:33.12,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}一度でも呼んでしまえば
+Dialogue: 0,0:22:34.00,0:22:37.75,Dial-JPN - retro,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}私は彼に無限に甘えてしまうだろう
+Dialogue: 1,0:22:34.00,0:22:37.75,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}私は彼に無限に甘えてしまうだろう
+Dialogue: 0,0:22:38.34,0:22:40.13,Dial-JPN - retro,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}それだけは絶対にだめだ
+Dialogue: 1,0:22:38.34,0:22:40.13,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}それだけは絶対にだめだ
+Dialogue: 0,0:22:51.43,0:22:53.44,Dial-JPN - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}心の奥底から
+Dialogue: 1,0:22:51.43,0:22:53.44,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}心の奥底から
+Dialogue: 0,0:22:53.44,0:22:56.02,Dial-JPN - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}兄と呼ぶのとは別の何か
+Dialogue: 1,0:22:53.44,0:22:56.02,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}兄と呼ぶのとは別の何か
+Dialogue: 0,0:22:56.02,0:22:58.40,Dial-JPN - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}言いようのない感情が込み上げてくる
+Dialogue: 1,0:22:56.02,0:22:58.40,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}言いようのない感情が込み上げてくる
+Dialogue: 0,0:23:00.28,0:23:02.82,Dial-JPN - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}今まで感じたことのない気持ちで
+Dialogue: 1,0:23:00.28,0:23:02.82,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}今まで感じたことのない気持ちで
+Dialogue: 0,0:23:03.66,0:23:03.91,Dial-JPN - retro,shad,0,0,0,,{\c&3A2D25\blur1.5\be1.5\bord0\shad0\pos(1700,1952)}自分でも感情に名前は付けられない
+Dialogue: 1,0:23:03.66,0:23:03.91,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1698,1950)}自分でも感情に名前は付けられない
+Dialogue: 0,0:23:03.95,0:23:06.95,Dial-JPN - retro,shad,0,0,0,,{\c&765C80\blur1.5\be1.5\bord0\shad0\pos(1700,1952)}自分でも感情に名前は付けられない
+Dialogue: 1,0:23:03.95,0:23:06.95,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1698,1950)}自分でも感情に名前は付けられない
+Dialogue: 0,0:23:08.08,0:23:08.91,Dial-JPN - retro,shad,0,0,0,,{\c&765C80\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}気付いたら
+Dialogue: 1,0:23:08.08,0:23:08.91,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}気付いたら
+Dialogue: 0,0:23:09.29,0:23:11.12,Dial-JPN - retro,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}浅村君を意識してる
+Dialogue: 1,0:23:09.29,0:23:11.12,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}浅村君を意識してる
+Dialogue: 0,0:23:11.96,0:23:13.04,Dial-JPN - retro,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}もやもやする
+Dialogue: 1,0:23:11.96,0:23:13.04,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}もやもやする
+Dialogue: 0,0:23:13.96,0:23:14.42,Dial-JPN - retro,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}最近は布団をかぶっても
+Dialogue: 1,0:23:13.96,0:23:14.42,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}最近は布団をかぶっても
+Dialogue: 0,0:23:14.50,0:23:15.88,Dial-JPN - retro,shad,0,0,0,,{\c&352F2A\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}最近は布団をかぶっても
+Dialogue: 1,0:23:14.50,0:23:15.88,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}最近は布団をかぶっても
+Dialogue: 0,0:23:15.88,0:23:17.21,Dial-JPN - retro,shad,0,0,0,,{\c&352F2A\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}なかなか寝つけない
+Dialogue: 1,0:23:15.88,0:23:17.21,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}なかなか寝つけない
+Dialogue: 0,0:23:18.17,0:23:21.09,Dial-JPN - retro,shad,0,0,0,,{\c&363638\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}自立して生きようとしてるくせにって
+Dialogue: 1,0:23:18.17,0:23:21.09,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}自立して生きようとしてるくせにって
+Dialogue: 0,0:23:21.09,0:23:22.92,Dial-JPN - retro,shad,0,0,0,,{\c&363638\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}自分で自分が情けない気持ちになる
+Dialogue: 1,0:23:21.09,0:23:22.92,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}自分で自分が情けない気持ちになる
+Dialogue: 0,0:23:22.97,0:23:23.59,Dial-JPN - retro,shad,0,0,0,,{\c&394854\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}自分で自分が情けない気持ちになる
+Dialogue: 1,0:23:22.97,0:23:23.59,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}自分で自分が情けない気持ちになる
+Dialogue: 0,0:23:24.63,0:23:26.68,Dial-JPN - retro,shad,0,0,0,,{\c&394854\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}これってなんなんだろう
+Dialogue: 1,0:23:24.63,0:23:26.68,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}これってなんなんだろう
+Dialogue: 0,0:23:26.72,0:23:27.22,Dial-JPN - retro,shad,0,0,0,,{\c&394854\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}これってなんなんだろう
+Dialogue: 1,0:23:26.72,0:23:27.22,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}これってなんなんだろう
+Dialogue: 0,0:23:31.60,0:23:32.60,Dial-JPN - retro,shad,0,0,0,,{\c&3F4C63\blur1.5\be1.5\bord0\shad0\pos(1922,1952)}ほんとに…
+Dialogue: 1,0:23:31.60,0:23:32.60,Dial-JPN - retro,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,1950)}ほんとに…
+Dialogue: 1,0:16:59.33,0:17:00.63,Dial-JPN - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,210)}恥ずかしい
+Dialogue: 0,0:16:59.33,0:17:00.63,Dial-JPN - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,212)}{\c&666370}恥ずかしい
+Dialogue: 1,0:17:01.54,0:17:02.38,Dial-JPN - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,210)}まさか聞かれちゃうなんて
+Dialogue: 0,0:17:01.54,0:17:02.38,Dial-JPN - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,212)}{\c&828DA8}まさか聞かれちゃうなんて
+Dialogue: 1,0:17:02.42,0:17:03.55,Dial-JPN - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,210)}まさか聞かれちゃうなんて
+Dialogue: 0,0:17:02.42,0:17:03.55,Dial-JPN - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,212)}{\c&352E39}まさか聞かれちゃうなんて
+Dialogue: 1,0:17:05.00,0:17:06.63,Dial-JPN - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,210)}努力してるとこ
+Dialogue: 0,0:17:05.00,0:17:06.63,Dial-JPN - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,212)}{\c&2D3538}努力してるとこ
+Dialogue: 1,0:17:07.34,0:17:08.47,Dial-JPN - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,210)}かっこ悪いから
+Dialogue: 0,0:17:07.34,0:17:08.47,Dial-JPN - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,212)}{\c&828DA8}かっこ悪いから
+Dialogue: 1,0:17:08.47,0:17:09.13,Dial-JPN - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,210)}見られたくないんだけどな
+Dialogue: 0,0:17:08.47,0:17:09.13,Dial-JPN - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,212)}{\c&828DA8}見られたくないんだけどな
+Dialogue: 1,0:17:09.18,0:17:10.39,Dial-JPN - retro2,,0,0,0,,{\blur0.7\be0.7}{\bord0\shad0\pos(1920,210)}見られたくないんだけどな
+Dialogue: 0,0:17:09.18,0:17:10.39,Dial-JPN - retro2,shad,0,0,0,,{\blur1.5\be1.5}{\bord0\shad0\pos(1922,212)}{\c&2D3538}見られたくないんだけどな
+Dialogue: 0,0:22:42.43,0:22:43.97,Dial-JPN - retro2,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(1922,212)}ごめん　浅村君
+Dialogue: 1,0:22:42.43,0:22:43.97,Dial-JPN - retro2,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,210)}ごめん　浅村君
+Dialogue: 0,0:22:47.26,0:22:47.89,Dial-JPN - retro2,shad,0,0,0,,{\c&7B6881\blur1.5\be1.5\bord0\shad0\pos(1922,212)}でも
+Dialogue: 1,0:22:47.26,0:22:47.89,Dial-JPN - retro2,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,210)}でも
+Dialogue: 0,0:22:48.68,0:22:51.39,Dial-JPN - retro2,shad,0,0,0,,{\c&7B6881\blur1.5\be1.5\bord0\shad0\pos(1922,212)}浅村君と呼ぶたびに
+Dialogue: 1,0:22:48.68,0:22:51.39,Dial-JPN - retro2,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(1920,210)}浅村君と呼ぶたびに
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,==========「Note」==========
+Dialogue: 1,0:03:02.33,0:03:03.33,Note,,0,0,0,,{\bord2.5}{\3c&3A5B68\4c&3A5B68}“弄破”和“炒”的日語發音一致
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,==========「Title」==========
+Dialogue: 0,0:01:44.96,0:01:49.46,CHS-Title,,0,0,0,,{\fscx70\fscy70\fad(775,775)\t(3736,4028,\alpha&H44&)\fs115\fn獅尾B2黑體SC-Regular\c&HCBC333&\fsp9\pos(648,1610)}反射{\fsp11}與{\fn方正屏显雅宋_GBK\fs130\c&HA756F5&}修{\c&HCBC333&\fs115\fn獅尾B2黑體SC-Regular}正
+Dialogue: 0,0:23:46.49,0:23:49.99,CHS-Title,,0,0,0,,{\fscx90\fscy90\fs115\fn獅尾B2黑體SC-Regular\c&H79CF99&\fsp5\pos(1760,1250)}{\fsp11}傾{\fn方正宋刻本秀楷 简繁 M\fs130\c&H4EA7F2&}向{\c&H79CF99&\fs115\fn獅尾B2黑體SC-Regular\fsp5}與對策
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,==========「Screen」==========
+Dialogue: 0,0:00:10.74,0:00:13.45,Screen,,0,0,0,,{\an8\fsp33\alpha&00\t(1397,2690,\alpha&ef)\fs145\fn獅尾B2宋朝SC-Medium\pos(3384.42,1021.14)}星{\fsp30}期{\fscx85}四
+Dialogue: 0,0:06:45.51,0:06:45.55,Screen,blur,0,0,0,,{\fscx101.14\fscy101.14\blur20.23\1a&HFF&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.25,1279.68)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.55,0:06:45.59,Screen,blur,0,0,0,,{\fscx100.82\fscy100.82\blur18.92\1a&HE7&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.01,1278.95)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.59,0:06:45.63,Screen,blur,0,0,0,,{\fscx100.59\fscy100.59\blur17.61\1a&HD0&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.71,1278.4)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.63,0:06:45.67,Screen,blur,0,0,0,,{\fscx100.39\fscy100.39\blur16.31\1a&HB8&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.55,1277.89)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.67,0:06:45.71,Screen,blur,0,0,0,,{\fscx100.25\fscy100.25\blur15.05\1a&HA1&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.68,1277.36)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.71,0:06:45.76,Screen,blur,0,0,0,,{\fscx100.12\fscy100.12\blur13.77\1a&H8A&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.44,1277.06)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.76,0:06:45.80,Screen,blur,0,0,0,,{\fscx100.03\fscy100.03\blur12.5\1a&H72&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.15,1275.39)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.80,0:06:45.84,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur11.26\1a&H5B&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.16,1275.32)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.84,0:06:45.92,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.19,1275.93)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.92,0:06:46.01,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.15,1277.94)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.01,0:06:46.05,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.22,1276.17)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.05,0:06:46.09,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.23,1276.17)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.09,0:06:46.13,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.32,1276.32)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.13,0:06:46.17,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.33,1276.32)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.17,0:06:46.26,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.48,1275.55)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.26,0:06:46.30,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922,1275.66)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.30,0:06:46.34,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922,1275.67)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.34,0:06:46.42,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.64,1276.96)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.42,0:06:46.51,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.69,1276.61)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.51,0:06:46.55,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.12,1277.4)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.55,0:06:46.59,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.11,1277.4)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.59,0:06:46.63,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.25,1277.71)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.63,0:06:46.67,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.24,1277.72)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.67,0:06:46.71,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.93,1277.85)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.71,0:06:46.76,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.92,1277.85)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.76,0:06:46.84,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.38,1276.66)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.84,0:06:46.92,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.92,1277.34)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.92,0:06:47.01,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.16,1276.48)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.01,0:06:47.05,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.65,1277.66)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.05,0:06:47.09,Screen,blur,0,0,0,,{\fscx100.01\fscy100.01\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.65,1277.67)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.09,0:06:47.13,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.98,1275.74)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.13,0:06:47.17,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.97,1275.73)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.17,0:06:47.26,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.28,1276.81)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.26,0:06:47.30,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.58,1276.35)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.30,0:06:47.34,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.58,1276.36)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.34,0:06:47.38,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.37,1276.17)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.38,0:06:47.42,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.37,1276.18)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.42,0:06:47.51,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.23,1277.63)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.51,0:06:47.55,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.86,1277.14)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.55,0:06:47.59,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.86,1277.15)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.59,0:06:47.63,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.74,1277.25)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.63,0:06:47.67,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.74,1277.24)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.67,0:06:47.72,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.55,1276.08)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.72,0:06:47.76,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.55,1276.07)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.76,0:06:47.84,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.32,1276.81)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.84,0:06:47.92,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.47,1276)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.92,0:06:47.97,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.97,1276.48)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.97,0:06:48.01,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.96,1276.48)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.01,0:06:48.09,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.95,1276.77)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.09,0:06:48.13,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.9,1276.23)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.13,0:06:48.17,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.9,1276.24)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.17,0:06:48.26,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.41,1276.05)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.26,0:06:48.30,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.53,1276.3)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.30,0:06:48.34,Screen,blur,0,0,0,,{\fscx99.99\fscy99.99\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.52,1276.31)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.34,0:06:48.38,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.84,1276.23)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.38,0:06:48.42,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.83,1276.22)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.42,0:06:48.51,Screen,blur,0,0,0,,{\fscx100\fscy100\blur10\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920,1277)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.51,0:06:45.55,Screen,,0,0,0,,{\fscx101.14\fscy101.14\blur10.11\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.25,1279.68)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.55,0:06:45.59,Screen,,0,0,0,,{\fscx100.82\fscy100.82\blur8.84\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.01,1278.95)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.59,0:06:45.63,Screen,,0,0,0,,{\fscx100.59\fscy100.59\blur7.55\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.71,1278.4)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.63,0:06:45.67,Screen,,0,0,0,,{\fscx100.39\fscy100.39\blur6.27\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.55,1277.89)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.67,0:06:45.71,Screen,,0,0,0,,{\fscx100.25\fscy100.25\blur5.03\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.68,1277.36)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.71,0:06:45.76,Screen,,0,0,0,,{\fscx100.12\fscy100.12\blur3.76\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.44,1277.06)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.76,0:06:45.80,Screen,,0,0,0,,{\fscx100.03\fscy100.03\blur2.49\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.15,1275.39)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.80,0:06:45.84,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur1.26\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.16,1275.32)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.84,0:06:45.92,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.19,1275.93)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:45.92,0:06:46.01,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.15,1277.94)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.01,0:06:46.05,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.22,1276.17)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.05,0:06:46.09,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.23,1276.17)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.09,0:06:46.13,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.32,1276.32)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.13,0:06:46.17,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.33,1276.32)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.17,0:06:46.26,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.48,1275.55)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.26,0:06:46.30,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922,1275.66)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.30,0:06:46.34,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922,1275.67)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.34,0:06:46.42,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.64,1276.96)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.42,0:06:46.51,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.69,1276.61)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.51,0:06:46.55,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.12,1277.4)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.55,0:06:46.59,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.11,1277.4)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.59,0:06:46.63,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.25,1277.71)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.63,0:06:46.67,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.24,1277.72)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.67,0:06:46.71,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.93,1277.85)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.71,0:06:46.76,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.92,1277.85)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.76,0:06:46.84,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.38,1276.66)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.84,0:06:46.92,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.92,1277.34)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:46.92,0:06:47.01,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.16,1276.48)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.01,0:06:47.05,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.65,1277.66)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.05,0:06:47.09,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.65,1277.67)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.09,0:06:47.13,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.98,1275.74)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.13,0:06:47.17,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.97,1275.73)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.17,0:06:47.26,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.28,1276.81)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.26,0:06:47.30,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.58,1276.35)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.30,0:06:47.34,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.58,1276.36)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.34,0:06:47.38,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.37,1276.17)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.38,0:06:47.42,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.37,1276.18)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.42,0:06:47.51,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.23,1277.63)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.51,0:06:47.55,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.86,1277.14)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.55,0:06:47.59,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.86,1277.15)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.59,0:06:47.63,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.74,1277.25)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.63,0:06:47.67,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.74,1277.24)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.67,0:06:47.72,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.55,1276.08)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.72,0:06:47.76,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.55,1276.07)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.76,0:06:47.84,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.32,1276.81)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.84,0:06:47.92,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.47,1276)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.92,0:06:47.97,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.97,1276.48)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:47.97,0:06:48.01,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.96,1276.48)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.01,0:06:48.09,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.95,1276.77)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.09,0:06:48.13,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.9,1276.23)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.13,0:06:48.17,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.9,1276.24)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.17,0:06:48.26,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.41,1276.05)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.26,0:06:48.30,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.53,1276.3)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.30,0:06:48.34,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.52,1276.31)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.34,0:06:48.38,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.84,1276.23)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.38,0:06:48.42,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.83,1276.22)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:06:48.42,0:06:48.51,Screen,,0,0,0,,{\fscx100\fscy100\blur0\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920,1277)\c&HECF2F6&}理解得太透徹了
+Dialogue: 0,0:07:43.57,0:07:47.07,Screen,,0,0,0,,{\fsp5\fs90\fn方正中雅宋_GBK\c&H847021&\pos(830,730)}你果然看到了吧
+Dialogue: 0,0:09:46.27,0:09:49.28,Screen,,0,0,0,,{\an7\fsp20\alpha&00\t(2110,2986,\alpha&ef)\fs140\fn獅尾B2黑體SC-Regular\pos(2928,1094)\c&HEAEBEC&}星{\fsp30}期{\fscx85}五
+Dialogue: 0,0:10:11.97,0:10:14.43,Screen,,0,0,0,,{\alpha&fdd\t(17,226,\alpha&00)\an8\fsp20\fs90\fn獅尾B2黑體SC-Regular\c&H4E63CB&\pos(1958.43,1727)}妳看起來有些消沉  怎麼了
+Dialogue: 0,0:10:22.14,0:10:25.02,Screen,,0,0,0,,{\fsp5\fs90\fn方正中雅宋_GBK\c&H847021&\t(1859,2860,\c&0A1012)\pos(1113,676)}沒什麼
+Dialogue: 0,0:13:39.96,0:13:40.00,Screen,,0,0,0,,{\fscx100\fscy100\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920,1200)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.00,0:13:40.04,Screen,,0,0,0,,{\fscx100\fscy100\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920,1199.99)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.04,0:13:40.09,Screen,,0,0,0,,{\fscx100\fscy100\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.7,1200.16)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.09,0:13:40.13,Screen,,0,0,0,,{\fscx100\fscy100\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.71,1200.16)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.13,0:13:40.21,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.62,1200.14)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.21,0:13:40.25,Screen,,0,0,0,,{\fscx100\fscy100\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.33,1199.57)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.25,0:13:40.30,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.33,1199.57)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.30,0:13:40.34,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.15,1198.8)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.34,0:13:40.38,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.16,1198.81)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.38,0:13:40.46,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1917.21,1198.61)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.46,0:13:40.55,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1917.42,1198.67)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.55,0:13:40.59,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.25,1198.85)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.59,0:13:40.63,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.25,1198.86)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.63,0:13:40.71,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.17,1199.75)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.71,0:13:40.75,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.73,1201.09)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.75,0:13:40.80,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.74,1201.09)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.80,0:13:40.84,Screen,,0,0,0,,{\fscx100.02\fscy100.02\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.93,1202.84)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.84,0:13:40.88,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.91,1202.85)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.88,0:13:40.92,Screen,,0,0,0,,{\fscx100\fscy100\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.84,1203.36)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.92,0:13:40.96,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.82,1203.36)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:40.96,0:13:41.00,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.58,1202.64)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.00,0:13:41.05,Screen,,0,0,0,,{\fscx99.97\fscy99.97\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.56,1202.66)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.05,0:13:41.09,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.49,1201.23)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.09,0:13:41.13,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.48,1201.17)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.13,0:13:41.17,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.55,1200.64)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.17,0:13:41.21,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.54,1200.56)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.21,0:13:41.25,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.77,1200.73)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.25,0:13:41.30,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.77,1200.72)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.30,0:13:41.34,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.21,1201.27)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.34,0:13:41.38,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.21,1201.26)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.38,0:13:41.42,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.37,1200.97)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.42,0:13:41.46,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.38,1200.97)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.46,0:13:41.50,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.72,1200.54)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.50,0:13:41.55,Screen,,0,0,0,,{\fscx99.97\fscy99.97\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.72,1200.53)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.55,0:13:41.59,Screen,,0,0,0,,{\fscx99.98\fscy99.98\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1923.15,1200.73)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.59,0:13:41.63,Screen,,0,0,0,,{\fscx99.97\fscy99.97\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1923.15,1200.71)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.63,0:13:41.67,Screen,,0,0,0,,{\fscx99.97\fscy99.97\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.77,1201.06)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.67,0:13:41.71,Screen,,0,0,0,,{\fscx99.97\fscy99.97\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.76,1201.07)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.71,0:13:41.75,Screen,,0,0,0,,{\fscx99.96\fscy99.96\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.56,1200.71)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.75,0:13:41.80,Screen,,0,0,0,,{\fscx99.95\fscy99.95\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.54,1200.71)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.80,0:13:41.84,Screen,,0,0,0,,{\fscx99.95\fscy99.95\blur9.99\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.99,1200.37)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.84,0:13:41.88,Screen,,0,0,0,,{\fscx99.95\fscy99.95\blur9.99\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.99,1200.38)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.88,0:13:41.92,Screen,,0,0,0,,{\fscx99.96\fscy99.96\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.61,1200.53)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.92,0:13:41.96,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.67,1200.58)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:41.96,0:13:42.01,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.76,1200.91)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.01,0:13:42.05,Screen,,0,0,0,,{\fscx100.03\fscy100.03\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.83,1200.95)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.05,0:13:42.09,Screen,,0,0,0,,{\fscx100.05\fscy100.05\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.52,1201.31)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.09,0:13:42.13,Screen,,0,0,0,,{\fscx100.04\fscy100.04\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.55,1201.3)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.13,0:13:42.17,Screen,,0,0,0,,{\fscx100.04\fscy100.04\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.12,1200.99)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.17,0:13:42.21,Screen,,0,0,0,,{\fscx100.04\fscy100.04\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.15,1200.98)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.21,0:13:42.26,Screen,,0,0,0,,{\fscx100.05\fscy100.05\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.82,1200.13)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.26,0:13:42.30,Screen,,0,0,0,,{\fscx100.04\fscy100.04\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.84,1200.11)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.30,0:13:42.34,Screen,,0,0,0,,{\fscx100.05\fscy100.05\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.65,1198.88)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.34,0:13:42.38,Screen,,0,0,0,,{\fscx100.06\fscy100.06\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1922.63,1198.89)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.38,0:13:42.42,Screen,,0,0,0,,{\fscx100.07\fscy100.07\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.58,1198.43)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.42,0:13:42.46,Screen,,0,0,0,,{\fscx100.07\fscy100.07\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1921.56,1198.43)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.46,0:13:42.51,Screen,,0,0,0,,{\fscx100.07\fscy100.07\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.07,1198.85)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.51,0:13:42.55,Screen,,0,0,0,,{\fscx100.07\fscy100.07\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.06,1198.85)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.55,0:13:42.59,Screen,,0,0,0,,{\fscx100.07\fscy100.07\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.86,1199.05)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.59,0:13:42.63,Screen,,0,0,0,,{\fscx100.08\fscy100.08\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.87,1199.05)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.63,0:13:42.67,Screen,,0,0,0,,{\fscx100.06\fscy100.06\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.59,1198.88)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.67,0:13:42.71,Screen,,0,0,0,,{\fscx100.07\fscy100.07\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.59,1198.88)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.71,0:13:42.76,Screen,,0,0,0,,{\fscx100.05\fscy100.05\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.96,1198.89)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.76,0:13:42.80,Screen,,0,0,0,,{\fscx100.05\fscy100.05\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.98,1198.85)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.80,0:13:42.84,Screen,,0,0,0,,{\fscx100.05\fscy100.05\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.78,1199.12)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.84,0:13:42.88,Screen,,0,0,0,,{\fscx100.05\fscy100.05\blur10.01\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1919.79,1199.09)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.88,0:13:42.92,Screen,,0,0,0,,{\fscx100.04\fscy100.04\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.47,1198.66)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.92,0:13:42.96,Screen,,0,0,0,,{\fscx100.04\fscy100.04\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.46,1198.66)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:42.96,0:13:43.01,Screen,,0,0,0,,{\fscx100.02\fscy100.02\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.84,1197.86)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.01,0:13:43.05,Screen,,0,0,0,,{\fscx100.02\fscy100.02\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.84,1197.87)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.05,0:13:43.09,Screen,,0,0,0,,{\fscx100.02\fscy100.02\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.97,1197.29)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.09,0:13:43.13,Screen,,0,0,0,,{\fscx100.02\fscy100.02\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.98,1197.29)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.13,0:13:43.17,Screen,,0,0,0,,{\fscx100.01\fscy100.01\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.34,1198.03)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.17,0:13:43.21,Screen,,0,0,0,,{\fscx99.99\fscy99.99\blur10\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1920.25,1198.05)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.21,0:13:43.26,Screen,,0,0,0,,{\fscx99.78\fscy99.78\blur9.98\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.76,1199.48)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.26,0:13:43.30,Screen,,0,0,0,,{\fscx99.76\fscy99.76\blur9.98\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.67,1199.5)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.30,0:13:43.38,Screen,,0,0,0,,{\fscx99.73\fscy99.73\blur9.97\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.33,1200.79)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.38,0:13:43.42,Screen,,0,0,0,,{\fscx99.55\fscy99.55\blur9.96\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.41,1201.3)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:43.42,0:13:43.46,Screen,,0,0,0,,{\fscx99.55\fscy99.55\blur9.96\3a&H44&\c&D7C290\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.4,1201.3)\3c&D7C290&\bord1}我的身體…
+Dialogue: 0,0:13:47.23,0:13:48.98,Screen,,0,0,0,,{\blur10\3a&H44&\c&F9D9A5&\fs133\fsp20\an8\fn獅尾B2加糖宋體SC-Medium\pos(1918.4,1230)\3c&ffffff&\bord5}你要買嗎
+Dialogue: 0,0:16:57.62,0:16:57.66,Screen,,0,0,0,,{\blur0.7\be0.7\an8\fs100\fn獅尾B2加糖宋體SC-SemiBold\fsp10\pos(1920,1845)\c&HF7F6EF&}聽得太專注了
+Dialogue: 0,0:16:57.66,0:17:00.63,Screen,,0,0,0,,{\blur0.7\be0.7\an8\fs100\fn獅尾B2加糖宋體SC-SemiBold\fsp10\pos(1920,1845)\c&HCEB9A5&}聽得太專注了
+Dialogue: 0,0:17:00.63,0:17:00.67,Screen,,0,0,0,,{\blur0.7\be0.7\an8\fs100\fn獅尾B2加糖宋體SC-SemiBold\fsp10\pos(1920,1885)\c&HD0CFCB&}我不該這麼大意
+Dialogue: 0,0:17:00.67,0:17:02.38,Screen,,0,0,0,,{\3c&ffffff\bord1\blur5\3a&cc\1a&ff\an8\fs100\fn獅尾B2加糖宋體SC-SemiBold\fsp10\pos(1920,1885)\c&HC8BBA9&}我不該這麼大意
+Dialogue: 0,0:17:00.67,0:17:02.38,Screen,,0,0,0,,{\3c&ffffff\blur0.7\be0.7\an8\fs100\fn獅尾B2加糖宋體SC-SemiBold\fsp10\pos(1920,1885)\c&HC7BAAA&}我不該這麼大意
+Dialogue: 0,0:17:04.67,0:17:06.63,Screen,,0,0,0,,{\3c&ffffff\bord1\blur5\3a&cc\1a&ff\an8\fs100\fn獅尾B2黑體SC-Medium\fsp10\pos(1920,1885)\c&H848BBB&}英語對話?
+Dialogue: 0,0:17:04.67,0:17:06.63,Screen,,0,0,0,,{\blur0.7\be0.7\an8\fs100\fn獅尾B2黑體SC-Medium\fsp10\pos(1920,1885)\c&H848BBB&}英語對話?
+Dialogue: 0,0:17:06.68,0:17:09.13,Screen,,0,0,0,,{\3c&ffffff\bord1\blur5\3a&cc\1a&ff\an8\fs100\fn獅尾B2加糖宋體SC-SemiBold\fsp10\pos(1920,1885)\c&HC8BBA9&}有，有什麼問題嗎
+Dialogue: 0,0:17:06.68,0:17:09.13,Screen,,0,0,0,,{\3c&ffffff\blur0.7\be0.7\an8\fs100\fn獅尾B2加糖宋體SC-SemiBold\fsp10\pos(1920,1885)\c&HAE9678&}有，有什麼問題嗎
+Dialogue: 0,0:22:41.89,0:22:44.39,Screen,,0,0,0,,{\3c&ffffff\bord1\blur15\3a&\1a&ff\an8\fs80\fn獅尾B2宋朝SC-Regular\fsp10\pos(1920,1905)\c&H988068&}雖然高湯蛋卷配烤麵包有點奇怪
+Dialogue: 0,0:22:41.89,0:22:44.39,Screen,,0,0,0,,{\3c&ffffff\blur0.7\be0.7\an8\fs80\fn獅尾B2宋朝SC-Regular\fsp10\pos(1920,1905)\c&H988068&}雖然高湯蛋卷配烤麵包有點奇怪
+Dialogue: 0,0:22:44.64,0:22:46.39,Screen,,0,0,0,,{\3c&ffffff\bord1\blur15\3a&44\1a&ff\an8\fs80\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1905)\c&H35457C&}這並不奇怪，綾瀨
+Dialogue: 0,0:22:44.64,0:22:46.39,Screen,,0,0,0,,{\3c&ffffff\blur0.7\be0.7\an8\fs80\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1905)\c&H35457C&}這並不奇怪，綾瀨
+Dialogue: 0,0:22:46.47,0:22:47.51,Screen,,0,0,0,,{\3c&ffffff\bord1\blur10\3a&44\1a&ff\an8\fs100\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1865)\c&H848DBA&}我很開心
+Dialogue: 0,0:22:46.47,0:22:47.51,Screen,,0,0,0,,{\blur0.7\be0.7\an8\fs100\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1865)\c&H848DBA&}我很開心
+Dialogue: 0,0:22:47.76,0:22:50.27,Screen,,0,0,0,,{\3c&ffffff\bord1\blur20\3a&\1a&ff\an8\fs100\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1865)\c&H6D65A3&}好棒啊  悠太~
+Dialogue: 0,0:22:47.76,0:22:50.27,Screen,,0,0,0,,{\blur0.7\be0.7\an8\fs100\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1865)\c&H6D65A3&}好棒啊  悠太~
+Dialogue: 0,0:22:50.27,0:22:51.39,Screen,,0,0,0,,{\3c&ffffff\bord1\blur20\3a&\1a&ff\an8\fs100\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1865)\c&H6D65A3&}能不能給爸爸分一點~
+Dialogue: 0,0:22:50.27,0:22:51.39,Screen,,0,0,0,,{\blur0.7\be0.7\an8\fs100\fn獅尾B2黑體SC-Regular\fsp10\pos(1920,1865)\c&H6D65A3&}能不能給爸爸分一點~
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,==========ED「水槽のブランコ」==========
+Dialogue: 2,0:22:01.97,0:22:06.56,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}如果只是萍水相逢
+Dialogue: 1,0:22:01.97,0:22:06.56,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}如果只是萍水相逢
+Dialogue: 2,0:22:06.56,0:22:14.06,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}應該忘得差不多了吧
+Dialogue: 1,0:22:06.56,0:22:14.06,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}應該忘得差不多了吧
+Dialogue: 2,0:22:14.06,0:22:18.74,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}倘若只是擦肩而過
+Dialogue: 1,0:22:14.06,0:22:18.74,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}倘若只是擦肩而過
+Dialogue: 2,0:22:18.74,0:22:26.16,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(720,302)}{\an7}{\fad(500,500)}想必不會留下約定吧
+Dialogue: 1,0:22:18.74,0:22:26.16,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(722,304)}{\an7}{\fad(500,500)}想必不會留下約定吧
+Dialogue: 2,0:22:32.04,0:22:35.00,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}斷句填滿了心房
+Dialogue: 1,0:22:32.04,0:22:35.00,ED3-CHI,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}斷句填滿了心房
+Dialogue: 2,0:22:35.00,0:22:37.59,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}暗夜吞噬了天光
+Dialogue: 1,0:22:35.00,0:22:37.59,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}暗夜吞噬了天光
+Dialogue: 2,0:22:37.59,0:22:42.55,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}新月迷失了方向
+Dialogue: 1,0:22:37.59,0:22:42.55,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}新月迷失了方向
+Dialogue: 2,0:22:44.09,0:22:47.06,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}卻透過纖薄的門
+Dialogue: 1,0:22:44.09,0:22:47.06,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}卻透過纖薄的門
+Dialogue: 2,0:22:47.06,0:22:50.48,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}呼喚著遠方的你
+Dialogue: 1,0:22:47.06,0:22:50.48,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}呼喚著遠方的你
+Dialogue: 2,0:22:50.48,0:22:53.27,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}聲音婉轉如故
+Dialogue: 1,0:22:50.48,0:22:53.27,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}聲音婉轉如故
+Dialogue: 2,0:22:53.27,0:22:58.32,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}雙瞳剪水如初
+Dialogue: 1,0:22:53.27,0:22:58.32,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}雙瞳剪水如初
+Dialogue: 2,0:22:58.32,0:23:01.53,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}這沒什麼大不了的
+Dialogue: 1,0:22:58.32,0:23:01.53,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}這沒什麼大不了的
+Dialogue: 2,0:23:01.53,0:23:05.82,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}更沒什麼好在意的
+Dialogue: 1,0:23:01.53,0:23:05.82,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}更沒什麼好在意的
+Dialogue: 2,0:23:05.82,0:23:08.91,ED3-CHI,,0,0,0,,{\an7\pos(720,302)}{\bord0\shad0\blur0.7\be0.7}{\fad(500,0)}如今方才垂落的水珠
+Dialogue: 1,0:23:05.82,0:23:08.91,ED3-CHI,shad,0,0,0,,{\an7\pos(722,304)}{\c&000000\blur1.5\be1.5\bord0\shad0}{\fad(500,0)}如今方才垂落的水珠
+Dialogue: 2,0:23:08.95,0:23:10.33,ED3-CHI,,0,0,0,,{\an7\pos(720,302)}{\bord0\shad0\blur0.7\be0.7}{\fad(0,1000)}如今方才垂落的水珠
+Dialogue: 1,0:23:08.95,0:23:10.33,ED3-CHI,shad,0,0,0,,{\an7\pos(722,304)}{\c&6D4C70\blur1.5\be1.5\bord0\shad0}{\fad(0,1000)}如今方才垂落的水珠
+Dialogue: 2,0:23:10.33,0:23:13.54,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}一邊勸導著迷茫的我
+Dialogue: 1,0:23:10.33,0:23:13.54,ED3-CHI,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}一邊勸導著迷茫的我
+Dialogue: 2,0:23:13.54,0:23:19.05,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}一邊泛起明天的漣漪
+Dialogue: 1,0:23:13.54,0:23:14.42,ED3-CHI,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,0)}一邊泛起明天的漣漪
+Dialogue: 1,0:23:14.50,0:23:19.05,ED3-CHI,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(0,1000)}一邊泛起明天的漣漪
+Dialogue: 2,0:23:19.05,0:23:23.55,ED3-CHI,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3120,302)}{\fad(500,1000)}能多盪漾片刻時光嗎?
+Dialogue: 1,0:23:19.05,0:23:23.55,ED3-CHI,shad,0,0,0,,{\c&363638\blur1.5\be1.5\bord0\shad0\pos(3122,304)}{\fad(500,1000)}能多盪漾片刻時光嗎?
+Dialogue: 1,0:22:01.97,0:22:06.56,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}どこかの誰かなら
+Dialogue: 0,0:22:01.97,0:22:06.56,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}どこかの誰かなら
+Dialogue: 1,0:22:06.56,0:22:14.06,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}思い出も忘れるほどだったでしょう
+Dialogue: 0,0:22:06.56,0:22:14.06,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}思い出も忘れるほどだったでしょう
+Dialogue: 1,0:22:14.06,0:22:18.74,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}通りすがりならば
+Dialogue: 0,0:22:14.06,0:22:18.74,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}通りすがりならば
+Dialogue: 1,0:22:18.74,0:22:26.16,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(720,210)}{\an7}{\fad(500,500)}約束も交わさずいられたでしょう
+Dialogue: 0,0:22:18.74,0:22:26.16,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(724,214)}{\an7}{\fad(500,500)}約束も交わさずいられたでしょう
+Dialogue: 1,0:22:32.04,0:22:35.00,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}書きかけの言葉たちと
+Dialogue: 0,0:22:32.04,0:22:35.00,ED3-JPN,shad,0,0,0,,{\c&66484F\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}書きかけの言葉たちと
+Dialogue: 1,0:22:35.00,0:22:37.59,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}夜に吸い込まれながら
+Dialogue: 0,0:22:35.00,0:22:37.59,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}夜に吸い込まれながら
+Dialogue: 1,0:22:37.59,0:22:42.55,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}行き場を失う三日月
+Dialogue: 0,0:22:37.59,0:22:42.55,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}行き場を失う三日月
+Dialogue: 1,0:22:44.09,0:22:47.06,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}薄い扉の向こうから
+Dialogue: 0,0:22:44.09,0:22:47.06,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}薄い扉の向こうから
+Dialogue: 1,0:22:47.06,0:22:50.48,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}遠い遠い君が呼んだ
+Dialogue: 0,0:22:47.06,0:22:50.48,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}遠い遠い君が呼んだ
+Dialogue: 1,0:22:50.48,0:22:53.27,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}変わらぬ声で
+Dialogue: 0,0:22:50.48,0:22:53.27,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}変わらぬ声で
+Dialogue: 1,0:22:53.27,0:22:58.32,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}変わらぬ瞳で
+Dialogue: 0,0:22:53.27,0:22:58.32,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}変わらぬ瞳で
+Dialogue: 1,0:22:58.32,0:23:01.53,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}ああなんともないから
+Dialogue: 0,0:22:58.32,0:23:01.53,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}ああなんともないから
+Dialogue: 1,0:23:01.53,0:23:05.82,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}さらさらないんだから
+Dialogue: 0,0:23:01.53,0:23:05.82,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}さらさらないんだから
+Dialogue: 1,0:23:05.82,0:23:08.91,ED3-JPN,,0,0,0,,{\an7\pos(725,210)}{\bord0\shad0\blur0.7\be0.7}{\fad(500,0)}今さらこぼれ落ちた雫
+Dialogue: 0,0:23:05.82,0:23:08.91,ED3-JPN,shad,0,0,0,,{\an7\pos(727,212)}{\c&000000\blur1.5\be1.5\bord0\shad0}{\fad(500,0)}今さらこぼれ落ちた雫
+Dialogue: 1,0:23:08.95,0:23:10.33,ED3-JPN,,0,0,0,,{\an7\pos(725,210)}{\bord0\shad0\blur0.7\be0.7}{\fad(0,1000)}今さらこぼれ落ちた雫
+Dialogue: 0,0:23:08.95,0:23:10.33,ED3-JPN,shad,0,0,0,,{\an7\pos(727,212)}{\c&6D4C70\blur1.5\be1.5\bord0\shad0}{\fad(0,1000)}今さらこぼれ落ちた雫
+Dialogue: 1,0:23:10.33,0:23:13.54,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}言い聞かせながら
+Dialogue: 0,0:23:10.33,0:23:13.54,ED3-JPN,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}言い聞かせながら
+Dialogue: 1,0:23:13.54,0:23:19.05,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}密かな明日を漕ぐ
+Dialogue: 0,0:23:13.54,0:23:14.42,ED3-JPN,shad,0,0,0,,{\c&6D4C70\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,0)}密かな明日を漕ぐ
+Dialogue: 0,0:23:14.50,0:23:19.05,ED3-JPN,shad,0,0,0,,{\c&000000\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(0,1000)}密かな明日を漕ぐ
+Dialogue: 1,0:23:19.05,0:23:23.55,ED3-JPN,,0,0,0,,{\bord0\shad0\blur0.7\be0.7\pos(3115,210)}{\fad(500,1000)}少しだけ　少しだけ　いいよね?
+Dialogue: 0,0:23:19.05,0:23:23.55,ED3-JPN,shad,0,0,0,,{\c&363638\blur1.5\be1.5\bord0\shad0\pos(3117,212)}{\fad(500,1000)}少しだけ　少しだけ　いいよね?
+Comment: 0,0:00:00.00,0:00:00.00,Default,,0,0,0,,==========「END」==========

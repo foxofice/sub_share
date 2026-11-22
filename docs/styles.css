@@ -48,8 +48,8 @@
   --surface: #FFFFFF;
   --surface-2: #F0EDE4;
   --surface-hover: #E7E3D8;
-  --line: #E2DFD6;
-  --line-strong: #CFCABF;
+  --line: #D8D4C8;
+  --line-strong: #BFB9A8;
   
   --ink: #1B2230;
   --ink-dim: #6B7385;
@@ -64,8 +64,35 @@
   --hot-glow: rgba(217, 69, 61, 0.15);
   --blue: #2A56C6;
   
-  --shadow-card: 0 4px 16px rgba(27, 34, 48, 0.06);
-  --shadow-hover: 0 12px 28px rgba(27, 34, 48, 0.12);
+  --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.14);
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #F7F5F0;
+    --bg-trans: rgba(247, 245, 240, 0.88);
+    --surface: #FFFFFF;
+    --surface-2: #F0EDE4;
+    --surface-hover: #E7E3D8;
+    --line: #D8D4C8;
+    --line-strong: #BFB9A8;
+    --ink: #1B2230;
+    --ink-dim: #6B7385;
+    --ink-muted: #959CA8;
+    --accent: #12736B;
+    --accent-glow: rgba(18, 115, 107, 0.15);
+    --accent-dark: #09403B;
+    --gold: #B8860B;
+    --gold-glow: rgba(184, 134, 11, 0.15);
+    --hot: #D9453D;
+    --hot-glow: rgba(217, 69, 61, 0.15);
+    --blue: #2A56C6;
+    --shadow-card: 0 2px 10px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.14);
+  }
 }
 
 /* Base Reset */
@@ -86,7 +113,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  transition: background var(--transition), color var(--transition);
+  /* instant background paint */
 }
 
 a {
@@ -571,7 +598,7 @@ button, input, select {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* ================== Anime Grid & Cards (Strictly Aligned) ================== */
+/* ================== Anime Grid & Cards (Strict Alignment) ================== */
 .anime-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -588,10 +615,11 @@ button, input, select {
   display: flex;
   flex-direction: column;
   height: 100%;
+  box-shadow: var(--shadow-card);
   transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
   cursor: pointer;
-  box-shadow: var(--shadow-card);
-  animation: cardEnter 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  position: relative;
+  animation: cardEnter 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
 
 .anime-card:hover {
@@ -601,7 +629,7 @@ button, input, select {
 }
 
 .anime-card:hover .poster-img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 /* Poster Box (Strict 3:4 Aspect Ratio) */
@@ -630,6 +658,7 @@ button, input, select {
   height: 100%;
   object-fit: cover;
   object-position: center top;
+  display: block;
   transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 

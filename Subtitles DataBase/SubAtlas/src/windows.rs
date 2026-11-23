@@ -11,11 +11,12 @@ use gpui_component::{
     checkbox::Checkbox,
     input::{Input, InputState},
     radio::{Radio, RadioGroup},
-    ActiveTheme as _, button::ButtonVariants as _, Icon, Sizable as _, StyledExt as _, h_flex,
-    v_flex,
+    ActiveTheme as _, button::ButtonVariants as _, Disableable as _, Icon, Sizable as _,
+    StyledExt as _, h_flex, v_flex,
 };
 use gpui_kit::assets::IconName;
 use gpui::prelude::FluentBuilder as _;
+use std::path::PathBuf;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::{Arc, Mutex};
 
@@ -105,10 +106,12 @@ pub fn log_page(cx: &gpui::App) -> gpui::AnyElement {
 // About window
 // ---------------------------------------------------------------------------
 
-pub const VERSION: &str = "v0.24 · SubAtlas";
+pub const VERSION: &str = "v0.25 · SubAtlas";
 
 /// Changelog for this Rust + GPUI rewrite (shown above the upstream log).
-pub const REWRITE_CHANGELOG: &str = "v0.24 · SubAtlas（Rust + GPUI） - 2026.11.22\n\
+pub const REWRITE_CHANGELOG: &str = "v0.25 · SubAtlas - 2026.11.23\n\
+\t[ + ] 数据库保存位置默认为程序目录，可在更新页手动选择（切换时自动复制现有库）\n\n\
+v0.24 · SubAtlas（Rust + GPUI） - 2026.11.22\n\
 \t[ ! ] 使用 Rust + GPUI 完全重写，单文件 exe\n\
 \t[ ! ] 全新现代化界面：FlClash 风格侧边栏 + 卡片式页面\n\
 \t[ + ] 深色 / 浅色主题一键切换（默认浅色）\n\
@@ -1205,6 +1208,151 @@ impl UpdateView {
             )
     }
 
+    /// "Database location" card on the remote-sync page.
+    fn render_db_location(&self, cx: &mut Context<Self>) -> impl IntoElement {
+        let dark = cx.theme().mode.is_dark();
+        let sf = crate::theme::surfaces(dark);
+        let view = cx.entity().downgrade();
+        let running = self.running.load(Ordering::Relaxed) || self.job.lock().unwrap().running;
+        let custom = !Globals::global(cx)
+            .config
+            .lock()
+            .unwrap()
+            .db_path
+            .trim()
+            .is_empty();
+        let path_text = app::db_dir().display().to_string();
+        let sub = if custom {
+            path_text
+        } else {
+            format!("{} · {}", path_text, app::t(cx, 596))
+        };
+
+        v_flex()
+            .gap_2()
+            .child(Self::label(cx, 592))
+            .child(
+                v_flex()
+                    .p_3()
+                    .gap_2()
+                    .rounded(px(12.))
+                    .bg(gpui::rgb(sf.hover))
+                    .child(
+                        h_flex()
+                            .gap_2()
+                            .items_center()
+                            .child(
+                                Icon::new(IconName::Folder)
+                                    .size(px(14.))
+                                    .text_color(cx.theme().muted_foreground),
+                            )
+                            .child(
+                                div()
+                                    .flex_1()
+                                    .min_w_0()
+                                    .text_size(px(12.))
+                                    .child(SharedString::from(sub)),
+                            )
+                            .child(
+                                Button::new("db-loc-pick")
+                                    .label(app::t(cx, 593))
+                                    .ghost()
+                                    .with_size(gpui_component::Size::Small)
+                                    .disabled(running)
+                                    .on_click({
+                                        let view = view.clone();
+                                        move |_, _, cx| {
+                                            let _ = view.update(cx, |v, cx| v.choose_db_dir(cx));
+                                        }
+                                    }),
+                            )
+                            .when(custom, |el| {
+                                el.child(
+                                    Button::new("db-loc-reset")
+                                        .label(app::t(cx, 594))
+                                        .ghost()
+                                        .with_size(gpui_component::Size::Small)
+                                        .disabled(running)
+                                        .on_click({
+                                            let view = view.clone();
+                                            move |_, _, cx| {
+                                                let _ = view.update(cx, |v, cx| {
+                                                    v.apply_db_dir(app::files_dir(), cx)
+                                                });
+                                            }
+                                        }),
+                                )
+                            }),
+                    )
+                    .child(
+                        div()
+                            .text_size(px(11.))
+                            .text_color(cx.theme().muted_foreground)
+                            .child(SharedString::from(app::t(cx, 597))),
+                    ),
+            )
+    }
+
+    fn choose_db_dir(&mut self, cx: &mut Context<Self>) {
+        let picked = rfd::FileDialog::new()
+            .set_title(app::t(cx, 592))
+            .set_directory(app::db_dir())
+            .pick_folder();
+        if let Some(dir) = picked {
+            self.apply_db_dir(dir, cx);
+        }
+    }
+
+    /// Switch the database directory: copy existing files, persist `db.path`,
+    /// reload the store and refresh the main table.
+    fn apply_db_dir(&mut self, dir: PathBuf, cx: &mut Context<Self>) {
+        let old = app::db_dir();
+        if dir == old {
+            return;
+        }
+        if let Err(e) = std::fs::create_dir_all(&dir) {
+            app::log(
+                cx,
+                format!("create database dir failed: {e}"),
+                LogLevel::Error,
+            );
+            return;
+        }
+        for name in ["db.json.zst", "db.xml"] {
+            let src = old.join(name);
+            let dst = dir.join(name);
+            if src.exists() && src != dst && !dst.exists() {
+                let _ = std::fs::copy(&src, &dst);
+            }
+        }
+
+        let (db, config, lang) = {
+            let g = Globals::global(cx);
+            (g.db.clone(), g.config.clone(), g.lang.read(cx).clone())
+        };
+        let mut cfg = config.lock().unwrap().clone();
+        cfg.db_path = if dir == app::files_dir() {
+            String::new()
+        } else {
+            dir.display().to_string()
+        };
+        if let Err(e) = crate::config::save_config(&app::config_path(), &cfg, &lang) {
+            app::log(cx, format!("save config: {e}"), LogLevel::Error);
+        }
+        *config.lock().unwrap() = cfg;
+
+        app::set_db_dir(dir.clone());
+        {
+            let mut store = db.0.write().unwrap();
+            let _ = store.load_from_file(&app::db_xml_path());
+        }
+        self.last = None;
+        let msg = app::fmt1(cx, 595, dir.display().to_string());
+        app::log(cx, msg, LogLevel::Success);
+        notify_main_reload(cx);
+        cx.notify();
+    }
+
     fn render_progress_panel(&self, cx: &mut Context<Self>) -> gpui::AnyElement {
         let job = self.job.lock().unwrap().clone();
         let running = self.running.load(Ordering::Relaxed) || job.running;
@@ -1372,6 +1520,7 @@ impl Render for UpdateView {
             } else {
                 self.render_remote(cx).into_any_element()
             })
+            .child(self.render_db_location(cx))
             .child(self.render_progress_panel(cx))
             .child(
                 h_flex()

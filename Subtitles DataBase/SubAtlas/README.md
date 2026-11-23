@@ -85,6 +85,18 @@
 cargo build --release
 # 产物：target\release\SubAtlas.exe（约 26 MB，静态依赖）
 ```
+**路径脱敏构建（推荐用于分发）**：Rust 会把依赖源码路径写入 panic 元数据，
+因此二进制中可能带有构建机的用户名/缓存路径。发布前可用编译器前缀重映射抹除：
+
+```powershell
+$env:RUSTFLAGS = @(
+  "--remap-path-prefix=$env:USERPROFILE/.cargo/registry=cargo/registry",
+  "--remap-path-prefix=$env:USERPROFILE/.cargo/git=cargo/git",
+  "--remap-path-prefix=$PWD=subatlas",
+  "--remap-path-prefix=$env:USERPROFILE=~"
+) -join ' '
+cargo build --release
+```
 
 依赖要点：
 

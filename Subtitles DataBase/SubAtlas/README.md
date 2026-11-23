@@ -37,6 +37,7 @@
 - 进度面板：已下载/总量 · 实时速度 · 百分比
 - 完成态：绿色结果卡（例：`✓ 更新完成 · 4957 条记录 · db.json.zst · 221 KB · 0.0s`），失败为红色错误卡
 - 日志明确记录实际同步的文件与大小
+- **数据库保存位置**：默认在程序目录 `Files\`，也可在更新页点击「选择文件夹…」指定其他目录；切换时自动复制现有数据库（`db.json.zst` / `db.xml`），「恢复默认」可切回程序目录。位置记录在 `config.txt` 的 `db.path`
 
 ![远程同步](docs/sync.jpg)
 
@@ -72,7 +73,9 @@
 | --- | --- | --- |
 | `Files\db.json.zst` | **首选**数据库（zstd 压缩的 JSON） | 可选（缺失时自动下载） |
 | `Files\db.xml` | 兼容格式（.NET DataTable XML，供原版工具使用） | 可选 |
-| `Files\config.txt` | 窗口位置/大小、列宽、字幕库路径 | 自动生成 |
+| `Files\config.txt` | 窗口位置/大小、列宽、字幕库路径、数据库保存位置（`db.path`） | 自动生成 |
+
+> 数据库保存位置可通过「更新数据库 → 数据库保存位置 → 选择文件夹…」更改（默认 `Files\`，切换时自动复制现有数据库）。
 
 环境要求：Windows 10/11（x64）。无需安装 .NET / 运行库。
 
@@ -89,11 +92,12 @@ cargo build --release
 因此二进制中可能带有构建机的用户名/缓存路径。发布前可用编译器前缀重映射抹除：
 
 ```powershell
+# 注意：rustc 对同一路径取「最后一条匹配」的规则，因此通用规则放最前、具体规则放最后。
 $env:RUSTFLAGS = @(
+  "--remap-path-prefix=$env:USERPROFILE=~",
   "--remap-path-prefix=$env:USERPROFILE/.cargo/registry=cargo/registry",
   "--remap-path-prefix=$env:USERPROFILE/.cargo/git=cargo/git",
-  "--remap-path-prefix=$PWD=subatlas",
-  "--remap-path-prefix=$env:USERPROFILE=~"
+  "--remap-path-prefix=$PWD=subatlas"
 ) -join ' '
 cargo build --release
 ```

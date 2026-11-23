@@ -8,6 +8,8 @@ pub const CONFIG_FILE: &str = "Files\\config.txt";
 #[derive(Debug, Clone)]
 pub struct Config {
     pub subs_path: String,
+    /// Where db.json.zst / db.xml live. Empty = default (Files/ next to exe).
+    pub db_path: String,
     pub last_update_time: Option<chrono::NaiveDateTime>,
     pub window_width: i32,
     pub window_height: i32,
@@ -21,6 +23,7 @@ impl Default for Config {
     fn default() -> Self {
         Self {
             subs_path: "..\\subs_list".to_string(),
+            db_path: String::new(),
             last_update_time: None,
             window_width: 0,
             window_height: 0,
@@ -62,6 +65,7 @@ pub fn read_config(path: &Path) -> Config {
         let value = line[idx + 1..].trim();
         match key.to_ascii_lowercase().as_str() {
             "subs.path" => cfg.subs_path = value.to_string(),
+            "db.path" => cfg.db_path = value.to_string(),
             "subs.last_update_time" => {
                 if let Ok(dt) = chrono::NaiveDateTime::parse_from_str(value, "%Y/%m/%d %H:%M:%S")
                 {
@@ -88,6 +92,7 @@ pub fn read_config(path: &Path) -> Config {
 pub fn save_config(path: &Path, cfg: &Config, lang: &i18n::LangStore) -> std::io::Result<()> {
     let mut s = String::with_capacity(2048);
     s.push_str(&format!("// {}\r\nsubs.path: {}\r\n\r\n", lang.txt(20), cfg.subs_path));
+    s.push_str(&format!("// {}\r\ndb.path: {}\r\n\r\n", lang.txt(592), cfg.db_path));
     let lut = cfg
         .last_update_time
         .map(|d| d.format("%Y/%m/%d %H:%M:%S").to_string())

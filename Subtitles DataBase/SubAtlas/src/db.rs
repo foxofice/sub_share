@@ -441,7 +441,12 @@ mod tests {
 
     #[test]
     fn roundtrip_real_db() {
-        let src = std::path::Path::new(r"D:\下载\ces\Files\db.xml");
+        // Optional integration data: set SUBATLAS_TEST_DB to a real db.xml
+        // (or place one at ./Files/db.xml). Skipped when absent.
+        let src = std::env::var("SUBATLAS_TEST_DB")
+            .map(std::path::PathBuf::from)
+            .unwrap_or_else(|_| std::path::PathBuf::from("Files/db.xml"));
+        let src = src.as_path();
         if !src.exists() {
             eprintln!("real db.xml not present; skipped");
             return;

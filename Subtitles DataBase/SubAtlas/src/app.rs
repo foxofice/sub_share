@@ -20,8 +20,30 @@ pub fn files_dir() -> PathBuf {
     base_dir().join("Files")
 }
 
+/// Default database directory: Files/ next to the exe.
+pub fn default_db_dir() -> PathBuf {
+    files_dir()
+}
+
+static DB_DIR: std::sync::RwLock<Option<PathBuf>> = std::sync::RwLock::new(None);
+
+/// Active database directory (config `db.path`; defaults to exe_dir/Files).
+pub fn db_dir() -> PathBuf {
+    DB_DIR
+        .read()
+        .ok()
+        .and_then(|g| g.clone())
+        .unwrap_or_else(default_db_dir)
+}
+
+pub fn set_db_dir(dir: PathBuf) {
+    if let Ok(mut g) = DB_DIR.write() {
+        *g = Some(dir);
+    }
+}
+
 pub fn db_xml_path() -> PathBuf {
-    files_dir().join("db.xml")
+    db_dir().join("db.xml")
 }
 
 pub fn config_path() -> PathBuf {
@@ -29,7 +51,7 @@ pub fn config_path() -> PathBuf {
 }
 
 pub fn db_json_path() -> PathBuf {
-    files_dir().join("db.json.zst")
+    db_dir().join("db.json.zst")
 }
 
 pub fn local_offset() -> FixedOffset {
@@ -140,6 +162,16 @@ pub fn init_globals(cx: &mut App) {
     lang.set_language("zh-CN");
 
     let cfg = crate::config::read_config(&config_path());
+
+    // Database location: user override from config, else next to the exe.
+    let db_dir = if cfg.db_path.trim().is_empty() {
+        default_db_dir()
+    } else {
+        PathBuf::from(cfg.db_path.trim())
+    };
+    // Make sure a configured directory still exists before downloads land there.
+    let _ = std::fs::create_dir_all(&db_dir);
+    set_db_dir(db_dir);
 
     let mut db_store = crate::db::DbStore::default();
     let startup_msg = match db_store.load_from_file(&db_xml_path()) {
